@@ -1,0 +1,17 @@
+# Mesurer la proximité de points dans un espace
+
+## Pourquoi mesurer sur un ensemble
+
+Pour parler de proximité entre les éléments d'un ensemble, il faut le munir d'une façon de mesurer les écarts. Ce choix impose une géométrie à l'espace — la forme des boules, la régularité des courbes, les opérations isométriques. Avant même de poser un problème d'optimisation, la mesure choisie détermine ce qui est proche, ce qui est simple, et quels outils mathématiques sont disponibles : peut-on seulement parler de voisinage, ou aussi de taille, de direction, d'angle ?
+
+Il existe trois niveaux de mesure, du plus simple au plus riche :
+
+- **Distance** : associe un nombre positif à chaque paire d'éléments. On peut dire "proche" ou "loin", rien de plus. Aucune structure algébrique n'est requise — les éléments n'ont pas besoin d'être des vecteurs. La distance suffit déjà à donner une forme à l'espace : elle détermine les boules, les voisinages, et donc la topologie.
+- **Norme** : mesure la taille d'un vecteur, de façon compatible avec l'algèbre linéaire. Dilater par λ multiplie la taille par |λ|. La norme garantit que la distance qu'elle induit est invariante par translation : d(x+z, y+z) = ‖x−y‖ — une propriété que la distance seule n'assure pas. On peut poser le problème du plus proche point dans un sous-espace, mais selon la norme choisie, le plus proche point peut ne pas être unique, et même quand il l'est, l'application qui à chaque point associe son plus proche point n'est en général pas linéaire.
+- **Produit scalaire** : mesure l'angle entre deux vecteurs et définit l'orthogonalité. La norme qui en découle rend la boule unité ellipsoïdale — strictement convexe, à courbure quadratique (c'est-à-dire que la frontière de la boule est décrite par une équation du second degré, xᵀMx = 1, et non par une courbe de forme plus complexe). C'est le seul cadre où le plus proche point est à la fois unique et où l'application qui le calcule — la projection orthogonale — est linéaire (voir *Quand est-ce qu'une projection donne le plus proche point ?*).
+
+**Quand est-ce qu'une projection donne le plus proche point ?** **Projeter** sur V parallèlement à un supplémentaire W, c'est envoyer chaque point sur V en suivant la direction de W — la même pour tous les points. Trouver le **plus proche point**, c'est gonfler la boule unité autour de x jusqu'à ce qu'elle touche V : le point de contact est x₀, et la direction x → x₀ est celle qui réalise le minimum.
+
+Si la boule n'est pas quadratique (sa frontière n'est pas décrite par une équation xᵀMx = 1), la direction x → x₀ tourne de façon non linéaire quand x se déplace. Un supplémentaire fixe impose une direction unique : il ne peut pas suivre. Si la boule est quadratique — décrite par une forme ⟨x,y⟩ = xᵀMy constante — la direction vers le plus proche point est toujours perpendiculaire à V au sens de M, quel que soit x. Le supplémentaire V⊥ au sens de M est fixe, et la projection correspondante est linéaire.
+
+**Exiger que projection et plus proche point coïncident pour tout sous-espace, c'est exiger que la boule soit quadratique — c'est-à-dire que la norme provienne d'un produit scalaire.
