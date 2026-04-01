@@ -1,0 +1,105 @@
+# Projection orthogonale et produit scalaire
+
+## Cadre
+
+On travaille dans un espace vectoriel E (sur ℝ ou ℂ) muni d'un **produit scalaire** ⟨·,·⟩. Tout ce qui suit est valable en dimension finie comme en dimension infinie, à condition que l'espace soit **complet** (toute suite de Cauchy converge dans E) et que les sous-espaces considérés soient **fermés**. Un tel espace est appelé espace de Hilbert. En dimension finie, complétude et fermeture sont automatiques.
+
+**Pourquoi ces conditions.** La complétude garantit qu'on peut passer à la limite sans sortir de l'espace : sans elle, une suite d'approximations de plus en plus proches d'un optimum pourrait converger vers un point qui n'appartient pas à E. La fermeture d'un sous-espace V garantit que la limite reste dans V. En dimension infinie, ces deux conditions doivent être vérifiées ; en dimension finie, elles sont gratuites. Dans toute la suite, "sous-espace" signifie sous-espace fermé.
+
+**Terminologie.** Un espace vectoriel réel de dimension finie muni d'un produit scalaire est un espace euclidien. La généralisation à la dimension infinie et/ou au corps ℂ est un espace de Hilbert.
+
+## Produit scalaire
+
+Un **produit scalaire** sur E est une application ⟨·,·⟩ : E × E → 𝕂 (où 𝕂 = ℝ ou ℂ) qui vérifie :
+
+- **Sesquilinéarité** : linéaire en une variable, conjugué-linéaire en l'autre. Sur ℝ, la conjugaison est triviale et cela se réduit à la bilinéarité.
+- **Symétrie hermitienne** : ⟨x,y⟩ = $\overline{⟨y,x⟩}$. Sur ℝ, cela se réduit à la symétrie ⟨x,y⟩ = ⟨y,x⟩. En conséquence, ⟨x,x⟩ = $\overline{⟨x,x⟩}$, donc ⟨x,x⟩ est toujours réel.
+- **Positivité** : ⟨x,x⟩ ≥ 0 pour tout x.
+- **Défini positif** : ⟨x,x⟩ = 0 ⟹ x = 0.
+
+**Convention de linéarité.** En mathématiques, le produit est conventionnellement linéaire en la seconde variable et conjugué-linéaire en la première : ⟨λx, y⟩ = $\bar{λ}$⟨x, y⟩ et ⟨x, λy⟩ = λ⟨x, y⟩. La convention inverse est courante en physique.
+
+**Représentation matricielle.** En dimension finie, un produit scalaire s'écrit ⟨x,y⟩ = x*My, où x* est le transposé conjugué de x et M est une matrice définie positive. Sur ℝ, M est symétrique réelle (M = Mᵀ) ; sur ℂ, M est hermitienne (M = $\overline{M}^T$).
+
+La condition "défini positif" admet une formulation équivalente, plus naturelle en algèbre linéaire :
+
+- **(Non dégénéré positif)** : ⟨x,x⟩ ≥ 0 pour tout x, et si ⟨x,y⟩ = 0 pour tout y, alors x = 0.
+
+La première formulation regarde le signe : la forme ne s'annule qu'en zéro. La seconde regarde le noyau : aucun vecteur non nul n'est orthogonal à tout l'espace — autrement dit, l'application x ↦ ⟨x,·⟩ est injective. C'est l'analogue du théorème de représentation de Riesz (trivial en dimension finie, profond en dimension infinie).
+
+**Pourquoi ces deux conditions sont équivalentes.** Définie positive ⟹ non dégénérée : si ⟨x,y⟩ = 0 pour tout y, en particulier pour y = x, donc ⟨x,x⟩ = 0, donc x = 0. Non dégénérée ⟹ définie positive : supposons ⟨x,x⟩ = 0 avec x ≠ 0. Par Cauchy-Schwarz (qui ne requiert que sesquilinéarité, symétrie hermitienne et positivité), |⟨x,y⟩|² ≤ ⟨x,x⟩⟨y,y⟩ = 0 pour tout y. Donc ⟨x,y⟩ = 0 pour tout y, ce qui contredit la non-dégénérescence.
+
+## Pythagore
+
+Si x = p + e avec ⟨p,e⟩ = 0, alors :
+
+‖x‖² = ⟨p + e, p + e⟩ = ⟨p,p⟩ + ⟨p,e⟩ + ⟨e,p⟩ + ⟨e,e⟩ = ‖p‖² + ‖e‖²
+
+(Les termes croisés ⟨p,e⟩ et ⟨e,p⟩ = $\overline{⟨p,e⟩}$ sont tous deux nuls dès que l'un l'est.)
+
+C'est tout. Pythagore n'est pas un théorème de géométrie ajouté au produit scalaire — c'est une conséquence directe de la sesquilinéarité. Développer le carré d'une somme dans un produit scalaire, c'est exactement la même opération que développer (a+b)² = a² + 2ab + b² : les termes croisés apparaissent, et l'orthogonalité les fait disparaître.
+
+## La projection orthogonale est la meilleure estimation
+
+Soit V un sous-espace fermé de E et x ∈ E. On cherche le point de V le plus proche de x : le vecteur p ∈ V qui minimise ‖x − p‖.
+
+**La décomposition existe.** Posons e = x − p. On veut p ∈ V et e ⊥ V. L'orthogonal de V, noté V⊥ = {z ∈ E : ⟨z,v⟩ = 0 pour tout v ∈ V}, est lui-même un sous-espace fermé. En dimension finie, tout sous-espace admet un supplémentaire orthogonal : E = V ⊕ V⊥, et tout vecteur se décompose de façon unique en une composante dans V et une composante dans V⊥. En dimension infinie, c'est le théorème de projection dans les espaces de Hilbert — qui repose sur la complétude de E et la fermeture de V — qui garantit cette décomposition. Dans les deux cas, x = p + e avec p ∈ V et e ∈ V⊥ est bien défini et unique.
+
+**Cette décomposition donne le minimum.** Pour tout autre candidat v ∈ V :
+
+‖x − v‖² = ‖(p − v) + e‖²
+
+Le vecteur p − v est dans V, et e est orthogonal à V, donc ⟨p − v, e⟩ = 0. Par Pythagore :
+
+‖x − v‖² = ‖p − v‖² + ‖e‖²
+
+Ce terme est minimal quand ‖p − v‖² = 0, c'est-à-dire v = p. Le minimum est ‖e‖², atteint uniquement en p.
+
+**Ce qu'on vient de montrer.** La projection orthogonale p est le meilleur estimateur de x dans V. L'erreur e = x − p est orthogonale à V — elle ne contient aucune composante dans la direction de V qu'on aurait pu exploiter pour réduire la distance. Pythagore garantit que composante utile (dans V) et erreur résiduelle (orthogonale à V) ne se mélangent pas : leurs contributions au carré de la norme s'additionnent indépendamment.
+
+**Pourquoi le produit scalaire est nécessaire.** La preuve repose entièrement sur deux ingrédients : l'orthogonalité (pour définir e ⊥ V) et Pythagore (pour séparer les termes). Les deux viennent du produit scalaire. Sans lui, on ne peut ni décomposer x en composantes indépendantes, ni garantir que l'erreur est incompressible.
+
+## La règle du parallélogramme
+
+Pour tout x, y dans E :
+
+‖x + y‖² + ‖x − y‖² = 2(‖x‖² + ‖y‖²)
+
+**Preuve.** En développant par sesquilinéarité :
+- ‖x + y‖² = ‖x‖² + ⟨x,y⟩ + ⟨y,x⟩ + ‖y‖² = ‖x‖² + 2 Re⟨x,y⟩ + ‖y‖²
+- ‖x − y‖² = ‖x‖² − ⟨x,y⟩ − ⟨y,x⟩ + ‖y‖² = ‖x‖² − 2 Re⟨x,y⟩ + ‖y‖²
+
+En sommant, les termes croisés s'annulent. (Sur ℝ, Re⟨x,y⟩ = ⟨x,y⟩.)
+
+**Interprétation géométrique.** Dans un parallélogramme de côtés x et y, la somme des carrés des diagonales (‖x+y‖ et ‖x−y‖) égale la somme des carrés des quatre côtés. C'est une contrainte rigide sur la forme de la boule unité : elle interdit les boules trop plates ou trop pointues.
+
+**Pourquoi c'est une caractérisation.** La règle du parallélogramme est non seulement nécessaire (on vient de la prouver) mais aussi suffisante : si une norme la vérifie, alors la formule de polarisation permet de reconstruire un produit scalaire dont la norme associée est la norme de départ. Sur ℝ :
+
+⟨x,y⟩ = ¼(‖x + y‖² − ‖x − y‖²)
+
+Sur ℂ, il faut quatre termes pour récupérer aussi la partie imaginaire :
+
+⟨x,y⟩ = ¼(‖x + y‖² − ‖x − y‖² + i‖x + iy‖² − i‖x − iy‖²)
+
+C'est le théorème de Jordan–von Neumann. Autrement dit : **une norme vient d'un produit scalaire si et seulement si elle vérifie la règle du parallélogramme.**
+
+## Les normes Lᵖ et pourquoi seule L² a un produit scalaire
+
+Les normes Lᵖ (pour 1 ≤ p ≤ ∞) sont définies sur des espaces de fonctions (ou de vecteurs en dimension finie) par :
+
+‖f‖ₚ = (∫|f|ᵖ)^(1/p)
+
+Chaque valeur de p donne une géométrie différente — c'est-à-dire une forme de boule unité différente.
+
+**Seule L² vérifie la règle du parallélogramme.** Prenons f et g à supports disjoints (fg = 0 presque partout). Alors :
+
+- ‖f + g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ
+- ‖f − g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ
+
+Donc ‖f + g‖ₚ = ‖f − g‖ₚ. La règle du parallélogramme exige alors :
+
+2‖f + g‖² = 2(‖f‖² + ‖g‖²)
+
+soit ‖f + g‖² = ‖f‖² + ‖g‖². Mais on sait aussi que ‖f + g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ, c'est-à-dire que la puissance p "additionne" les normes. Pour que la puissance 2 les additionne aussi, il faut p = 2. Pour tout autre p, la règle du parallélogramme est violée, et aucun produit scalaire ne peut engendrer la norme Lᵖ.
+
+**Lien avec la géométrie de la boule.** La note précédente (voir *Mesurer la proximité de points dans un espace*) montrait que le produit scalaire rend la boule unité quadratique — sa frontière est un niveau de ⟨x,x⟩ = 1. En dimension finie, c'est une ellipsoïde. La boule L² est la seule boule Lᵖ qui soit une ellipsoïde : pour p < 2, la boule est pincée (concave sur les diagonales) ; pour p > 2, elle est gonflée (convexe mais trop arrondie aux coins). Seule l'ellipsoïde a la courbure quadratique qui permet projection = plus proche point pour tout sous-espace.
