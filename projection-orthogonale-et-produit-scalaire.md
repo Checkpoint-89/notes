@@ -14,8 +14,7 @@ Un **produit scalaire** sur E est une application ⟨·,·⟩ : E × E → 𝕂 
 
 - **Sesquilinéarité** : linéaire en une variable, conjugué-linéaire en l'autre. Sur ℝ, la conjugaison est triviale et cela se réduit à la bilinéarité.
 - **Symétrie hermitienne** : ⟨x,y⟩ = $\overline{⟨y,x⟩}$. Sur ℝ, cela se réduit à la symétrie ⟨x,y⟩ = ⟨y,x⟩. En conséquence, ⟨x,x⟩ = $\overline{⟨x,x⟩}$, donc ⟨x,x⟩ est toujours réel.
-- **Positivité** : ⟨x,x⟩ ≥ 0 pour tout x.
-- **Défini positif** : ⟨x,x⟩ = 0 ⟹ x = 0.
+- **Défini positif** : ⟨x,x⟩ ≥ 0 pour tout x et ⟨x,x⟩ = 0 ⟹ x = 0.
 
 **Convention de linéarité.** En mathématiques, le produit est conventionnellement linéaire en la seconde variable et conjugué-linéaire en la première : ⟨λx, y⟩ = $\bar{λ}$⟨x, y⟩ et ⟨x, λy⟩ = λ⟨x, y⟩. La convention inverse est courante en physique.
 
@@ -59,21 +58,21 @@ Ce terme est minimal quand ‖p − v‖² = 0, c'est-à-dire v = p. Le minimum 
 
 **Pourquoi le produit scalaire est nécessaire.** La preuve repose entièrement sur deux ingrédients : l'orthogonalité (pour définir e ⊥ V) et Pythagore (pour séparer les termes). Les deux viennent du produit scalaire. Sans lui, on ne peut ni décomposer x en composantes indépendantes, ni garantir que l'erreur est incompressible.
 
-## La règle du parallélogramme
+## La règle du parallélogramme (théorème de Jordan–von Neumann)
 
-Pour tout x, y dans E :
+**Une norme vient d'un produit scalaire si et seulement si elle vérifie la règle du parallélogramme** :
 
 ‖x + y‖² + ‖x − y‖² = 2(‖x‖² + ‖y‖²)
 
-**Preuve.** En développant par sesquilinéarité :
-- ‖x + y‖² = ‖x‖² + ⟨x,y⟩ + ⟨y,x⟩ + ‖y‖² = ‖x‖² + 2 Re⟨x,y⟩ + ‖y‖²
-- ‖x − y‖² = ‖x‖² − ⟨x,y⟩ − ⟨y,x⟩ + ‖y‖² = ‖x‖² − 2 Re⟨x,y⟩ + ‖y‖²
+**Interprétation géométrique.** Dans un parallélogramme de côtés x et y, la somme des carrés des diagonales (‖x+y‖ et ‖x−y‖) égale la somme des carrés des quatre côtés.
+
+**Sens direct (produit scalaire ⟹ règle).** En développant par sesquilinéarité :
+- ‖x + y‖² = ‖x‖² + 2 Re⟨x,y⟩ + ‖y‖²
+- ‖x − y‖² = ‖x‖² − 2 Re⟨x,y⟩ + ‖y‖²
 
 En sommant, les termes croisés s'annulent. (Sur ℝ, Re⟨x,y⟩ = ⟨x,y⟩.)
 
-**Interprétation géométrique.** Dans un parallélogramme de côtés x et y, la somme des carrés des diagonales (‖x+y‖ et ‖x−y‖) égale la somme des carrés des quatre côtés. C'est une contrainte rigide sur la forme de la boule unité : elle interdit les boules trop plates ou trop pointues.
-
-**Pourquoi c'est une caractérisation.** La règle du parallélogramme est non seulement nécessaire (on vient de la prouver) mais aussi suffisante : si une norme la vérifie, alors la formule de polarisation permet de reconstruire un produit scalaire dont la norme associée est la norme de départ. Sur ℝ :
+**Sens réciproque (règle ⟹ produit scalaire).** Si une norme vérifie la règle, alors la formule de polarisation reconstruit un produit scalaire dont la norme associée est la norme de départ. Sur ℝ :
 
 ⟨x,y⟩ = ¼(‖x + y‖² − ‖x − y‖²)
 
@@ -81,7 +80,7 @@ Sur ℂ, il faut quatre termes pour récupérer aussi la partie imaginaire :
 
 ⟨x,y⟩ = ¼(‖x + y‖² − ‖x − y‖² + i‖x + iy‖² − i‖x − iy‖²)
 
-C'est le théorème de Jordan–von Neumann. Autrement dit : **une norme vient d'un produit scalaire si et seulement si elle vérifie la règle du parallélogramme.**
+**La règle du parallélogramme impose à la boule unité d'être une ellipsoïde.** Si Q(x) = ‖x‖² vérifie la règle, alors Q est nécessairement une forme quadratique (somme de termes de degré 2, sans puissances supérieures). Et réciproquement si Q est une forme quadratique, elle respecte la règle.
 
 ## Les normes Lᵖ et pourquoi seule L² a un produit scalaire
 
