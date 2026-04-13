@@ -4,8 +4,6 @@ title: "Accueil"
 
 # Notes
 
-Ce site publie l'arborescence principale du projet en excluant les documents de travail du dossier `pronostics`.
-
 ## Probabilités
 
 - [0000. Syllabus](probabilités/0000. syllabus.md)
