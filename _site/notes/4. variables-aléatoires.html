@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>variables-aléatoires – Notes</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../notes/3. projection-orthogonale-et-produit-scalaire.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-f670ab49fb9634e9dab58972b11477cb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Notes</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1. representation-geometrie-et-resolution.html">Notes</a></li><li class="breadcrumb-item"><a href="../notes/4. variables-aléatoires.html">4. Variables aleatoires</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Probabilités</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0000. syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0100. tribus-et-espaces-mesurables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0100. Tribus et espaces mesurables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0110. lemme-de-factorisation-doob.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0110. Lemme de factorisation de Doob</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0120. nombres-transfinis-et-ordinaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0120. Nombres transfinis et ordinaux</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0121. strictité-de-la-hiérarchie-borélienne.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0121. Strictité de la hiérarchie borélienne</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0200.mesures-et-probabilités.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0200. Mesures et probabilités</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Representation geometrie et resolution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/2. mesurer-la-proximite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Mesurer la proximite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Projection orthogonale et produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">4. Variables aleatoires</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#variables-aléatoires-et-géométrie-de-l2" id="toc-variables-aléatoires-et-géométrie-de-l2" class="nav-link active" data-scroll-target="#variables-aléatoires-et-géométrie-de-l2"><span class="header-section-number">1</span> Variables aléatoires et géométrie de <span class="math inline">\(L^2\)</span></a>
+  <ul class="collapse">
+  <li><a href="#variable-aléatoire" id="toc-variable-aléatoire" class="nav-link" data-scroll-target="#variable-aléatoire"><span class="header-section-number">1.1</span> Variable aléatoire</a></li>
+  <li><a href="#l2omega-mathcala-p-espace-et-norme" id="toc-l2omega-mathcala-p-espace-et-norme" class="nav-link" data-scroll-target="#l2omega-mathcala-p-espace-et-norme"><span class="header-section-number">1.2</span> <span class="math inline">\(L^2(\Omega, \mathcal{A}, P)\)</span> : espace et norme</a></li>
+  <li><a href="#lespérance-comme-produit-hermitien" id="toc-lespérance-comme-produit-hermitien" class="nav-link" data-scroll-target="#lespérance-comme-produit-hermitien"><span class="header-section-number">1.3</span> L’espérance comme produit hermitien</a></li>
+  <li><a href="#projections-dans-l2" id="toc-projections-dans-l2" class="nav-link" data-scroll-target="#projections-dans-l2"><span class="header-section-number">1.4</span> Projections dans <span class="math inline">\(L^2\)</span></a>
+  <ul class="collapse">
+  <li><a href="#projection-sur-les-constantes-ex" id="toc-projection-sur-les-constantes-ex" class="nav-link" data-scroll-target="#projection-sur-les-constantes-ex"><span class="header-section-number">1.4.1</span> Projection sur les constantes : <span class="math inline">\(E(X)\)</span></a></li>
+  <li><a href="#projection-sur-les-variables-affines-en-y-la-régression-linéaire" id="toc-projection-sur-les-variables-affines-en-y-la-régression-linéaire" class="nav-link" data-scroll-target="#projection-sur-les-variables-affines-en-y-la-régression-linéaire"><span class="header-section-number">1.4.2</span> Projection sur les variables affines en <span class="math inline">\(Y\)</span> : la régression linéaire</a></li>
+  <li><a href="#projection-sur-les-fonctions-de-y-ex-mid-y" id="toc-projection-sur-les-fonctions-de-y-ex-mid-y" class="nav-link" data-scroll-target="#projection-sur-les-fonctions-de-y-ex-mid-y"><span class="header-section-number">1.4.3</span> Projection sur les fonctions de <span class="math inline">\(Y\)</span> : <span class="math inline">\(E(X \mid Y)\)</span></a></li>
+  <li><a href="#indépendance-en-moyenne-et-complète" id="toc-indépendance-en-moyenne-et-complète" class="nav-link" data-scroll-target="#indépendance-en-moyenne-et-complète"><span class="header-section-number">1.4.4</span> Indépendance en moyenne et complète</a></li>
+  <li><a href="#hiérarchie" id="toc-hiérarchie" class="nav-link" data-scroll-target="#hiérarchie"><span class="header-section-number">1.4.5</span> Hiérarchie</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1. representation-geometrie-et-resolution.html">Notes</a></li><li class="breadcrumb-item"><a href="../notes/4. variables-aléatoires.html">4. Variables aleatoires</a></li></ol></nav></header>
+
+
+
+
+<section id="variables-aléatoires-et-géométrie-de-l2" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Variables aléatoires et géométrie de <span class="math inline">\(L^2\)</span></h1>
+<section id="variable-aléatoire" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="variable-aléatoire"><span class="header-section-number">1.1</span> Variable aléatoire</h2>
+<p>Une <strong>variable aléatoire</strong> à valeurs dans <span class="math inline">\(\mathbb{K}\)</span> (<span class="math inline">\(\mathbb{R}\)</span> ou <span class="math inline">\(\mathbb{C}\)</span>) est une application mesurable <span class="math inline">\(X : (\Omega, \mathcal{A}, P) \to (\mathbb{K}, \mathcal{B}(\mathbb{K}))\)</span>, où <span class="math inline">\((\Omega, \mathcal{A}, P)\)</span> est un espace probabilisé. La mesurabilité garantit que les préimages de boréliens appartiennent à <span class="math inline">\(\mathcal{A}\)</span> et ont donc une probabilité bien définie. Sur <span class="math inline">\(\mathbb{C}\)</span>, une base de boréliens est donnée par les boules ouvertes : il suffit d’exiger <span class="math inline">\(\{|X - z| &lt; r\} \in \mathcal{A}\)</span> pour tout <span class="math inline">\(z \in \mathbb{C}\)</span>, <span class="math inline">\(r &gt; 0\)</span> — ce qui revient à demander que <span class="math inline">\(\operatorname{Re}(X)\)</span> et <span class="math inline">\(\operatorname{Im}(X)\)</span> soient simultanément mesurables. Sur <span class="math inline">\(\mathbb{R}\)</span>, la topologie d’ordre suffit et la condition se réduit à <span class="math inline">\(\{X \leq t\} \in \mathcal{A}\)</span> pour tout <span class="math inline">\(t\)</span>.</p>
+</section>
+<section id="l2omega-mathcala-p-espace-et-norme" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="l2omega-mathcala-p-espace-et-norme"><span class="header-section-number">1.2</span> <span class="math inline">\(L^2(\Omega, \mathcal{A}, P)\)</span> : espace et norme</h2>
+<p><strong><span class="math inline">\(L^2\)</span> comme norme.</strong> La norme <span class="math inline">\(L^2\)</span> d’une variable aléatoire est <span class="math inline">\(\|X\|_2 = \sqrt{E(|X|^2)}\)</span>. Elle appartient à la famille des normes <span class="math inline">\(L^p\)</span> : <span class="math inline">\(\|X\|_p = E(|X|^p)^{1/p}\)</span>. Chaque valeur de <span class="math inline">\(p\)</span> donne une géométrie différente sur l’espace des variables aléatoires.</p>
+<p><strong><span class="math inline">\(L^2\)</span> comme espace.</strong> <span class="math inline">\(L^2(\Omega, \mathcal{A}, P)\)</span> est l’espace des variables aléatoires de carré intégrable :</p>
+<p><span class="math display">\[L^2(\Omega, \mathcal{A}, P) = \{ X \text{ variable aléatoire} : E(|X|^2) &lt; +\infty \}\]</span></p>
+<p>(À strictement parler, les éléments de <span class="math inline">\(L^2\)</span> sont des classes d’équivalence de variables aléatoires égales presque sûrement.)</p>
+<p>C’est un espace vectoriel sur <span class="math inline">\(\mathbb{K}\)</span> (si <span class="math inline">\(X\)</span> et <span class="math inline">\(Y\)</span> sont dans <span class="math inline">\(L^2\)</span>, alors <span class="math inline">\(aX + bY\)</span> aussi, car <span class="math inline">\(|aX+bY|^2 \leq 2|a|^2|X|^2 + 2|b|^2|Y|^2\)</span>, d’où <span class="math inline">\(E(|aX+bY|^2) \leq 2|a|^2 E(|X|^2) + 2|b|^2 E(|Y|^2) &lt; \infty\)</span>). On peut montrer que cet espace est <strong>complet</strong> pour la norme <span class="math inline">\(\|\cdot\|_2\)</span> (théorème de Riesz-Fischer) : c’est un espace de Banach.</p>
+<p><strong><span class="math inline">\(L^2\)</span> est le seul <span class="math inline">\(L^p\)</span> qui soit un espace de Hilbert.</strong> Sa norme est la seule de la famille à provenir d’un produit scalaire / hermitien — ce qu’on peut montrer par la règle du parallélogramme. Tous les autres <span class="math inline">\(L^p\)</span> (<span class="math inline">\(p \neq 2\)</span>) sont des espaces de Banach mais pas de Hilbert.</p>
+</section>
+<section id="lespérance-comme-produit-hermitien" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="lespérance-comme-produit-hermitien"><span class="header-section-number">1.3</span> L’espérance comme produit hermitien</h2>
+<p>Sur <span class="math inline">\(L^2(\Omega, \mathcal{A}, P)\)</span> (réel ou complexe), on définit :</p>
+<p><span class="math inline">\(\langle X, Y \rangle = E(\bar{X}\,Y)\)</span></p>
+<p>C’est un <strong>produit hermitien</strong>.</p>
+<ul>
+<li><strong>Sesquilinéarité</strong> : conjugué-linéaire en <span class="math inline">\(X\)</span> (<span class="math inline">\(\langle aX, Y \rangle = \bar{a}\,\langle X,Y \rangle\)</span>), linéaire en <span class="math inline">\(Y\)</span> (<span class="math inline">\(\langle X, aY \rangle = a\,\langle X,Y \rangle\)</span>). Cela découle directement de la linéarité de l’espérance : <span class="math inline">\(E(\overline{aX} \cdot Y) = \bar{a}\, E(\bar{X}\, Y)\)</span>. Sur <span class="math inline">\(\mathbb{R}\)</span>, la conjugaison est triviale et cela se réduit à la bilinéarité.</li>
+<li><strong>Symétrie hermitienne</strong> : <span class="math inline">\(\langle X,Y \rangle = \overline{\langle Y,X \rangle}\)</span>, car <span class="math inline">\(E(\bar{X}\, Y) = \overline{E(\bar{Y}\,X)}\)</span>. Sur <span class="math inline">\(\mathbb{R}\)</span>, cela se réduit à la symétrie ordinaire <span class="math inline">\(E(XY) = E(YX)\)</span>.</li>
+<li><strong>Défini positif</strong> : <span class="math inline">\(\langle X,X \rangle = E(|X|^2) \geq 0\)</span>, et <span class="math inline">\(E(|X|^2) = 0 \implies X = 0\)</span> presque sûrement. Sur <span class="math inline">\(\mathbb{C}\)</span>, <span class="math inline">\(|X|^2 = X \cdot \bar{X}\)</span>, qui est bien réel et positif ; sur <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\(|X|^2 = X^2\)</span>.</li>
+</ul>
+<p>La norme associée est <span class="math inline">\(\|X\|_2 = \sqrt{\langle X,X \rangle} = \sqrt{E(|X|^2)}\)</span>. L’<strong>orthogonalité</strong> au sens de ce produit hermitien est <span class="math inline">\(\langle X,Y \rangle = 0\)</span>, c’est-à-dire <span class="math inline">\(E(\bar{X}\, Y) = 0\)</span>.</p>
+<p>Muni de ce produit hermitien, <strong><span class="math inline">\(L^2(\Omega, \mathcal{A}, P)\)</span> est un espace de Hilbert</strong>. Tout le formalisme de la projection orthogonale — existence, unicité, caractérisation par l’orthogonalité du résidu — s’applique directement.</p>
+</section>
+<section id="projections-dans-l2" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="projections-dans-l2"><span class="header-section-number">1.4</span> Projections dans <span class="math inline">\(L^2\)</span></h2>
+<p><span class="math inline">\(L^2\)</span> contient des sous-espaces fermés naturels, emboîtés les uns dans les autres :</p>
+<p><strong>Variables constantes</strong> <span class="math inline">\(\subset\)</span> <strong>Variables affines en <span class="math inline">\(Y\)</span></strong> <span class="math inline">\(\subset\)</span> <strong>Variables mesurables par rapport à <span class="math inline">\(Y\)</span></strong></p>
+<p>Projeter <span class="math inline">\(X\)</span> sur chacun de ces sous-espaces répond à la question : “quelle est la meilleure approximation de <span class="math inline">\(X\)</span>, sachant ce qu’on connaît de <span class="math inline">\(Y\)</span> ?”</p>
+<section id="projection-sur-les-constantes-ex" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="projection-sur-les-constantes-ex"><span class="header-section-number">1.4.1</span> Projection sur les constantes : <span class="math inline">\(E(X)\)</span></h3>
+<p>Le sous-espace <span class="math inline">\(V_0 = \{ \omega \mapsto c : c \in \mathbb{K} \}\)</span> des variables aléatoires constantes est un sous-espace fermé de dimension 1. En identifiant une constante <span class="math inline">\(c\)</span> à la variable constante <span class="math inline">\(\omega \mapsto c\)</span>, la projection de <span class="math inline">\(X\)</span> sur <span class="math inline">\(V_0\)</span> minimise <span class="math inline">\(\|X - c\|_2^2 = E(|X - c|^2)\)</span>. La condition d’orthogonalité du résidu exige, pour tout <span class="math inline">\(c_0 \in \mathbb{K}\)</span> :</p>
+<p><span class="math display">\[\langle c_0, X - c \rangle = \bar{c}_0 \cdot E(X - c) = 0 \implies c = E(X)\]</span></p>
+<blockquote class="blockquote">
+<p><strong>L’espérance <span class="math inline">\(E(X)\)</span> est la projection orthogonale de <span class="math inline">\(X\)</span> sur l’espace des constantes.</strong> Le résidu <span class="math inline">\(X - E(X)\)</span> est centré et orthogonal à toute constante.</p>
+</blockquote>
+</section>
+<section id="projection-sur-les-variables-affines-en-y-la-régression-linéaire" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="projection-sur-les-variables-affines-en-y-la-régression-linéaire"><span class="header-section-number">1.4.2</span> Projection sur les variables affines en <span class="math inline">\(Y\)</span> : la régression linéaire</h3>
+<p>Le sous-espace <span class="math inline">\(V_1 = \{ aY + b : a, b \in \mathbb{K} \}\)</span> est un sous-espace fermé de dimension au plus 2 (en supposant <span class="math inline">\(Y \in L^2\)</span> non dégénérée). La condition d’orthogonalité du résidu — que <span class="math inline">\(X - (a^*Y + b^*)\)</span> soit orthogonal à tout élément de <span class="math inline">\(V_1\)</span>, c’est-à-dire <span class="math inline">\(\langle v, X - a^*Y - b^* \rangle = 0\)</span> pour tout <span class="math inline">\(v \in V_1\)</span> — donne le système :</p>
+<ul>
+<li><span class="math inline">\(\langle 1, X - a^*Y - b^* \rangle = 0 \implies b^* = E(X) - a^* E(Y)\)</span></li>
+<li><span class="math inline">\(\langle Y, X - a^*Y - b^* \rangle = 0 \implies a^* = \text{Cov}(Y, X) / \text{Var}(Y) = \overline{\text{Cov}(X,Y)} / \text{Var}(Y)\)</span></li>
+</ul>
+<p>où <strong><span class="math inline">\(\text{Cov}(X,Y) = E(\overline{(X-EX)} \cdot (Y-EY))\)</span></strong> est la covariance complexe (hermitienne : <span class="math inline">\(\text{Cov}(X,Y) = \overline{\text{Cov}(Y,X)}\)</span>) et <strong><span class="math inline">\(\text{Var}(Y) = E(|Y-EY|^2)\)</span></strong> est réelle.</p>
+<blockquote class="blockquote">
+<p>Le projecteur est donc :</p>
+<p><span class="math display">\[\hat{X}^{\text{lin}} = E(X) + \frac{\text{Cov}(Y,X)}{\text{Var}(Y)}\,(Y - E(Y)) = E(X) + \frac{\overline{\text{Cov}(X,Y)}}{\text{Var}(Y)}\,(Y - E(Y))\]</span></p>
+<p>C’est le <strong>meilleur prédicteur linéaire</strong> de <span class="math inline">\(X\)</span> par <span class="math inline">\(Y\)</span> — obtenu comme projection orthogonale sur <span class="math inline">\(V_1\)</span> dans la géométrie hermitienne de <span class="math inline">\(L^2\)</span>.</p>
+</blockquote>
+<p>En notant <span class="math inline">\(X_c = X-E(X)\)</span> et <span class="math inline">\(Y_c = Y-E(Y)\)</span>, on peut aussi écrire la partie centrée du projecteur sous la forme</p>
+<p><span class="math display">\[\hat{X}^{\text{lin}} - E(X) = \left\langle \frac{Y_c}{\|Y_c\|_2}, X_c \right\rangle \frac{Y_c}{\|Y_c\|_2}\]</span></p>
+<p>ce qui rend explicite qu’il s’agit de la projection orthogonale de <span class="math inline">\(X_c\)</span> sur la droite engendrée par <span class="math inline">\(Y_c\)</span>.</p>
+<p>En particulier, si <span class="math inline">\(\text{Cov}(X,Y) = 0\)</span>, alors <span class="math inline">\(a^* = 0\)</span> et le projecteur se réduit à <span class="math inline">\(E(X)\)</span> : l’absence de corrélation linéaire signifie exactement que connaître <span class="math inline">\(Y\)</span> ne permet pas d’améliorer la prédiction constante.</p>
+<p><strong>Lien avec les moindres carrés sur un échantillon.</strong> La formule <span class="math inline">\(a^* = \text{Cov}(Y,X)/\text{Var}(Y)\)</span> est l’analogue « en population » de la formule matricielle <span class="math inline">\(\hat{\beta} = (\mathbf{Z}^T\mathbf{Z})^{-1}\mathbf{Z}^T\mathbf{x}\)</span> des moindres carrés ordinaires — même principe de projection orthogonale, mais dans <span class="math inline">\(\mathbb{R}^n\)</span> muni du produit scalaire euclidien au lieu de <span class="math inline">\(L^2\)</span>.</p>
+<p><strong>Remarque de convention (statistiques/ML).</strong> En statistique appliquée, en traitement du signal ou en machine learning, on rencontre souvent la convention hermitienne inverse, linéaire en la première variable et conjugué-linéaire en la seconde : <span class="math inline">\(\langle X,Y\rangle = E(X\overline{Y})\)</span>. Avec cette convention, la même projection s’écrit naturellement avec le coefficient <span class="math inline">\(\text{Cov}(X,Y)/\text{Var}(Y)\)</span>, ce qui explique la forme la plus fréquente dans ces ouvrages.</p>
+</section>
+<section id="projection-sur-les-fonctions-de-y-ex-mid-y" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="projection-sur-les-fonctions-de-y-ex-mid-y"><span class="header-section-number">1.4.3</span> Projection sur les fonctions de <span class="math inline">\(Y\)</span> : <span class="math inline">\(E(X \mid Y)\)</span></h3>
+<p>Le sous-espace des variables aléatoires de <span class="math inline">\(L^2\)</span> qui dépendent seulement de <span class="math inline">\(Y\)</span> est</p>
+<p><span class="math display">\[
+V_2 = \{ \text{variables de } L^2 \text{ qui dépendent seulement de } Y \}.
+\]</span></p>
+<p><span class="math inline">\(E(X \mid Y)\)</span> est une fonction de <span class="math inline">\(Y\)</span> : elle attribue à chaque valeur possible de <span class="math inline">\(Y\)</span> la meilleure estimation ponctuelle de <span class="math inline">\(X\)</span>.</p>
+<p><strong>Pourquoi c’est une projection.</strong> Le résidu <span class="math inline">\(X - E(X \mid Y)\)</span> a, par construction, une moyenne conditionnelle nulle dans chaque tranche <span class="math inline">\(Y = y\)</span>. Pour tester l’orthogonalité avec un élément quelconque <span class="math inline">\(g(Y) \in V_2\)</span>, on conditionne sur <span class="math inline">\(Y\)</span> :</p>
+<p><span class="math display">\[
+\langle g(Y),\, X - E(X\mid Y) \rangle
+= \int \overline{g(y)}\;\underbrace{E(X - E(X\mid Y) \mid Y\!=\!y)}_{=\,0}\;dP_Y(y)
+= 0.
+\]</span></p>
+<p>Le résidu est donc orthogonal à tout <span class="math inline">\(V_2\)</span>.</p>
+<blockquote class="blockquote">
+<p><strong><span class="math inline">\(E(X \mid Y)\)</span> est la projection orthogonale de <span class="math inline">\(X\)</span> sur <span class="math inline">\(V_2\)</span>.</strong> C’est le meilleur prédicteur de <span class="math inline">\(X\)</span> à partir de <span class="math inline">\(Y\)</span> au sens de l’erreur quadratique.</p>
+</blockquote>
+<p><strong>Note.</strong> La preuve complète repose sur la <span class="math inline">\(\sigma(Y)\)</span>-mesurabilité (<span class="math inline">\(V_2 = \{f(Y) : f \text{ borélienne}, f(Y) \in L^2\}\)</span>), la fermeture de <span class="math inline">\(V_2\)</span> dans <span class="math inline">\(L^2\)</span>, et le théorème de projection hilbertien — voir <em>Espérance conditionnelle et projection : preuve complète</em> (note à écrire).</p>
+</section>
+<section id="indépendance-en-moyenne-et-complète" class="level3" data-number="1.4.4">
+<h3 data-number="1.4.4" class="anchored" data-anchor-id="indépendance-en-moyenne-et-complète"><span class="header-section-number">1.4.4</span> Indépendance en moyenne et complète</h3>
+<p>Si <span class="math inline">\(E(X \mid Y) = E(X)\)</span>, la projection sur <span class="math inline">\(V_2\)</span> se réduit à la constante <span class="math inline">\(E(X)\)</span> : aucune fonction de <span class="math inline">\(Y\)</span> ne prédit mieux <span class="math inline">\(X\)</span> que sa moyenne. C’est l’<strong>indépendance en moyenne</strong> : la moyenne conditionnelle de <span class="math inline">\(X\)</span> sachant <span class="math inline">\(Y\)</span> ne dépend pas de <span class="math inline">\(Y\)</span>. Cela n’empêche pas <span class="math inline">\(Y\)</span> d’informer sur d’autres aspects de la loi de <span class="math inline">\(X\)</span> (variance, moments d’ordre supérieur…), d’où le qualificatif « en moyenne » — c’est strictement plus faible que l’indépendance complète.</p>
+<p>L’<strong>indépendance complète</strong> <span class="math inline">\(X \perp\!\!\!\perp Y\)</span> renforce la condition en l’imposant à toute fonction de <span class="math inline">\(X\)</span> :</p>
+<p><span class="math display">\[E(f(X) \mid Y) = E(f(X)) \qquad \text{pour toute } f.\]</span></p>
+<p>L’indépendance en moyenne ne teste que <span class="math inline">\(X\)</span> (i.e.&nbsp;<span class="math inline">\(f = \text{id}\)</span>) contre <span class="math inline">\(Y\)</span> ; l’indépendance complète teste toute <span class="math inline">\(f(X)\)</span>. C’est pour cela qu’une relation de type <span class="math inline">\(X = Y^2 Z\)</span> (avec <span class="math inline">\(Z\)</span> indépendant de <span class="math inline">\(Y\)</span>, de moyenne nulle) peut vérifier <span class="math inline">\(E(X \mid Y) = 0 = E(X)\)</span> tout en rendant <span class="math inline">\(X^2 = Y^4 Z^2\)</span> entièrement prévisible à partir de <span class="math inline">\(Y\)</span>.</p>
+<p><strong>Équivalence avec la factorisation des probabilités.</strong> En prenant <span class="math inline">\(f = \mathbf{1}_A\)</span> (<span class="math inline">\(A\)</span> borélien), la condition devient <span class="math inline">\(P(X \in A \mid Y) = P(X \in A)\)</span>. En intégrant contre <span class="math inline">\(\mathbf{1}_B(Y)\)</span> :</p>
+<p><span class="math display">\[P(X \in A,\, Y \in B) = P(X \in A)\,P(Y \in B) \qquad \text{pour tous boréliens } A, B\]</span></p>
+<p>qui est la définition usuelle de l’indépendance. Réciproquement, cette factorisation entraîne que la loi conditionnelle de <span class="math inline">\(X\)</span> sachant <span class="math inline">\(Y\)</span> est la loi marginale de <span class="math inline">\(X\)</span>, d’où <span class="math inline">\(E(f(X) \mid Y) = E(f(X))\)</span> pour toute <span class="math inline">\(f\)</span> intégrable.</p>
+<p><strong>Équivalence avec l’orthogonalité dans <span class="math inline">\(L^2\)</span>.</strong> L’indépendance complète équivaut aussi à ce que les sous-espaces des fonctions centrées de <span class="math inline">\(X\)</span> et de <span class="math inline">\(Y\)</span> soient <strong>orthogonaux</strong> dans <span class="math inline">\(L^2\)</span> :</p>
+<p><span class="math display">\[\langle f(X) - E(f(X)),\; g(Y) - E(g(Y)) \rangle = 0 \qquad \text{pour tous } f, g.\]</span></p>
+<p><span class="math inline">\((\Rightarrow)\)</span> Par la loi des espérances itérées et la <span class="math inline">\(\sigma(Y)\)</span>-mesurabilité de <span class="math inline">\(g(Y)\)</span> :</p>
+<p><span class="math display">\[E\!\Big[\overline{\big(f(X) - E(f(X))\big)} \cdot \big(g(Y) - E(g(Y))\big)\Big] = E\!\Big[(g(Y) - E(g(Y))) \cdot \underbrace{E\!\big(\overline{f(X) - E(f(X))} \mid Y\big)}_{= 0}\Big] = 0\]</span></p>
+<p>puisque l’indépendance donne <span class="math inline">\(E(h(X) \mid Y) = E(h(X))\)</span> pour toute <span class="math inline">\(h\)</span>, donc en particulier pour <span class="math inline">\(h = \bar{f}\)</span>.</p>
+<p><span class="math inline">\((\Leftarrow)\)</span> En développant le produit hermitien :</p>
+<p><span class="math display">\[\langle f(X) - E(f(X)),\; g(Y) - E(g(Y)) \rangle = E\!\big[\overline{f(X)} \cdot g(Y)\big] - E\!\big[\overline{f(X)}\big] \cdot E\!\big[g(Y)\big]\]</span></p>
+<p>La condition « pour tous <span class="math inline">\(f, g\)</span> » donne <span class="math inline">\(E[\overline{f(X)} \cdot g(Y)] = E[\overline{f(X)}] \cdot E[g(Y)]\)</span>. En prenant <span class="math inline">\(f = \overline{\mathbf{1}_A}\)</span> et <span class="math inline">\(g = \mathbf{1}_B\)</span>, on retrouve <span class="math inline">\(P(X \in A,\, Y \in B) = P(X \in A)\,P(Y \in B)\)</span>.</p>
+</section>
+<section id="hiérarchie" class="level3" data-number="1.4.5">
+<h3 data-number="1.4.5" class="anchored" data-anchor-id="hiérarchie"><span class="header-section-number">1.4.5</span> Hiérarchie</h3>
+<p>La hiérarchie des projections triviales résume le tout :</p>
+<ul>
+<li><span class="math inline">\(\text{Cov}(X,Y) = 0\)</span> (pas de lien linéaire) <span class="math inline">\(\implies\)</span> proj sur <span class="math inline">\(V_1 = E(X)\)</span></li>
+<li><span class="math inline">\(E(X \mid Y) = E(X)\)</span> (pas de lien en moyenne) <span class="math inline">\(\implies\)</span> proj sur <span class="math inline">\(V_2 = E(X)\)</span></li>
+<li><span class="math inline">\(X \perp\!\!\!\perp Y\)</span> (indépendance) <span class="math inline">\(\implies\)</span> proj de <strong><span class="math inline">\(f(X)\)</span></strong> sur <span class="math inline">\(V_2 = E(f(X))\)</span> pour tout <span class="math inline">\(f\)</span></li>
+</ul>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../notes/3. projection-orthogonale-et-produit-scalaire.html" class="pagination-link" aria-label="3. Projection orthogonale et produit scalaire">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">3. Projection orthogonale et produit scalaire</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

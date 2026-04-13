@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>mesures-et-probabilités – Notes</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../notes/1. representation-geometrie-et-resolution.html" rel="next">
+<link href="../probabilités/0121. strictité-de-la-hiérarchie-borélienne.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-f670ab49fb9634e9dab58972b11477cb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Notes</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../probabilités/0000. syllabus.html">Probabilités</a></li><li class="breadcrumb-item"><a href="../probabilités/0200.mesures-et-probabilités.html">0200. Mesures et probabilités</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Probabilités</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0000. syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0100. tribus-et-espaces-mesurables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0100. Tribus et espaces mesurables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0110. lemme-de-factorisation-doob.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0110. Lemme de factorisation de Doob</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0120. nombres-transfinis-et-ordinaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0120. Nombres transfinis et ordinaux</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0121. strictité-de-la-hiérarchie-borélienne.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0121. Strictité de la hiérarchie borélienne</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0200.mesures-et-probabilités.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">0200. Mesures et probabilités</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Representation geometrie et resolution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/2. mesurer-la-proximite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Mesurer la proximite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Projection orthogonale et produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Variables aleatoires</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#probabilités" id="toc-probabilités" class="nav-link active" data-scroll-target="#probabilités"><span class="header-section-number">1</span> Probabilités</a>
+  <ul class="collapse">
+  <li><a href="#ii.-mesures-et-probabilités" id="toc-ii.-mesures-et-probabilités" class="nav-link" data-scroll-target="#ii.-mesures-et-probabilités"><span class="header-section-number">1.1</span> II. Mesures et probabilités</a>
+  <ul class="collapse">
+  <li><a href="#mesures-positives-définition-et-propriétés" id="toc-mesures-positives-définition-et-propriétés" class="nav-link" data-scroll-target="#mesures-positives-définition-et-propriétés"><span class="header-section-number">1.1.1</span> 1. Mesures positives : définition et propriétés</a></li>
+  <li><a href="#mesure-de-lebesgue-sur-ℝ" id="toc-mesure-de-lebesgue-sur-ℝ" class="nav-link" data-scroll-target="#mesure-de-lebesgue-sur-ℝ"><span class="header-section-number">1.1.2</span> 2. Mesure de Lebesgue sur ℝ</a></li>
+  <li><a href="#probabilités-axiomes-de-kolmogorov" id="toc-probabilités-axiomes-de-kolmogorov" class="nav-link" data-scroll-target="#probabilités-axiomes-de-kolmogorov"><span class="header-section-number">1.1.3</span> 3. Probabilités : axiomes de Kolmogorov</a></li>
+  <li><a href="#densité-et-mesure-absolument-continue" id="toc-densité-et-mesure-absolument-continue" class="nav-link" data-scroll-target="#densité-et-mesure-absolument-continue"><span class="header-section-number">1.1.4</span> 4. Densité et mesure absolument continue</a></li>
+  <li><a href="#mesures-produit-et-théorème-de-fubini" id="toc-mesures-produit-et-théorème-de-fubini" class="nav-link" data-scroll-target="#mesures-produit-et-théorème-de-fubini"><span class="header-section-number">1.1.5</span> 5. Mesures produit et théorème de Fubini</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../probabilités/0000. syllabus.html">Probabilités</a></li><li class="breadcrumb-item"><a href="../probabilités/0200.mesures-et-probabilités.html">0200. Mesures et probabilités</a></li></ol></nav></header>
+
+
+
+
+<section id="probabilités" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Probabilités</h1>
+<section id="ii.-mesures-et-probabilités" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="ii.-mesures-et-probabilités"><span class="header-section-number">1.1</span> II. Mesures et probabilités</h2>
+<p><strong>Vue d’ensemble.</strong> Ce chapitre formalise la notion de mesure, esquissée au chapitre I, en cinq étapes.</p>
+<ol type="1">
+<li>On définit rigoureusement ce qu’est une mesure positive sur un espace mesurable <span class="math inline">\((\Omega, \mathcal A)\)</span> : une application <span class="math inline">\(m : \mathcal A \to [0,+\infty]\)</span> vérifiant <span class="math inline">\(m(\emptyset) = 0\)</span> et la σ-additivité. On en déduit les propriétés de base — monotonie, σ-sous-additivité, continuité monotone — qui sont les outils de travail quotidiens du calcul des mesures.</li>
+<li>La mesure de Lebesgue sur <span class="math inline">\(\mathbb R\)</span> est l’exemple central : c’est la mesure qui prolonge la longueur des intervalles à toute la tribu borélienne <span class="math inline">\(\mathcal B(\mathbb R)\)</span>, tout en restant σ-additive et invariante par translation. Le théorème de Carathéodory garantit l’existence et l’unicité d’un tel prolongement. On en profite pour distinguer la tribu de Lebesgue de la tribu borélienne et pour introduire les ensembles de mesure nulle.</li>
+<li>Une probabilité est simplement une mesure de masse totale 1. Les axiomes de Kolmogorov ne sont rien d’autre que la σ-additivité appliquée à ce cadre. On retrouve les règles de calcul classiques — complémentaire, union, inclusion-exclusion — comme conséquences immédiates des propriétés générales des mesures. On introduit la probabilité conditionnelle et la formule de Bayes.</li>
+<li>Étant donné deux mesures <span class="math inline">\(\mu\)</span> et <span class="math inline">\(\nu\)</span> sur le même espace, on peut se demander si <span class="math inline">\(\mu\)</span> est « exprimable » en fonction de <span class="math inline">\(\nu\)</span>. La continuité absolue (<span class="math inline">\(\mu \ll \nu\)</span>) et le théorème de Radon-Nikodym formalisent cette idée : sous des hypothèses raisonnables, <span class="math inline">\(\mu\)</span> s’écrit comme l’intégrale d’une densité par rapport à <span class="math inline">\(\nu\)</span>.</li>
+<li>Pour travailler sur des espaces produits <span class="math inline">\(\Omega_1 \times \Omega_2\)</span>, on construit la mesure produit, qui permet de mesurer des « pavés » <span class="math inline">\(A_1 \times A_2\)</span> par le produit <span class="math inline">\(m_1(A_1) \cdot m_2(A_2)\)</span>. Le théorème de Fubini-Tonelli permet alors de calculer les intégrales sur un espace produit par itération.</li>
+</ol>
+<section id="mesures-positives-définition-et-propriétés" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="mesures-positives-définition-et-propriétés"><span class="header-section-number">1.1.1</span> 1. Mesures positives : définition et propriétés</h3>
+<section id="définition" class="level4" data-number="1.1.1.1">
+<h4 data-number="1.1.1.1" class="anchored" data-anchor-id="définition"><span class="header-section-number">1.1.1.1</span> Définition</h4>
+<p>Le chapitre I a introduit la notion d’espace mesurable <span class="math inline">\((\Omega, \mathcal A)\)</span> et motivé la σ-additivité. On peut maintenant formaliser.</p>
+<p><strong>Définition.</strong> Soit <span class="math inline">\((\Omega, \mathcal A)\)</span> un espace mesurable. Une <strong>mesure positive</strong> (ou simplement <strong>mesure</strong>) sur <span class="math inline">\((\Omega, \mathcal A)\)</span> est une application</p>
+<p><span class="math display">\[m : \mathcal A \to [0, +\infty]\]</span></p>
+<p>vérifiant :</p>
+<ol type="1">
+<li><span class="math inline">\(m(\emptyset) = 0\)</span></li>
+<li><strong>σ-additivité.</strong> Pour toute suite <span class="math inline">\((A_n)_{n \geq 1}\)</span> d’éléments de <span class="math inline">\(\mathcal A\)</span> <strong>deux à deux disjoints</strong>,</li>
+</ol>
+<p><span class="math display">\[m\Bigl(\bigcup_{n=1}^{\infty} A_n\Bigr) = \sum_{n=1}^{\infty} m(A_n).\]</span></p>
+<p>Le triplet <span class="math inline">\((\Omega, \mathcal A, m)\)</span> s’appelle un <strong>espace mesuré</strong>.</p>
+<p><em>Remarque.</em> La σ-additivité entraîne l’additivité finie (poser <span class="math inline">\(A_n = \emptyset\)</span> pour <span class="math inline">\(n\)</span> assez grand). La réciproque est fausse, comme on l’a vu au chapitre I avec l’exemple des parties finies ou cofinies de <span class="math inline">\(\mathbb N\)</span>.</p>
+</section>
+<section id="vocabulaire" class="level4" data-number="1.1.1.2">
+<h4 data-number="1.1.1.2" class="anchored" data-anchor-id="vocabulaire"><span class="header-section-number">1.1.1.2</span> Vocabulaire</h4>
+<ul>
+<li><span class="math inline">\(m\)</span> est <strong>finie</strong> si <span class="math inline">\(m(\Omega) &lt; \infty\)</span>.</li>
+<li><span class="math inline">\(m\)</span> est <strong>σ-finie</strong> s’il existe une suite <span class="math inline">\((E_n)\)</span> d’éléments de <span class="math inline">\(\mathcal A\)</span> telle que <span class="math inline">\(\Omega = \bigcup_n E_n\)</span> et <span class="math inline">\(m(E_n) &lt; \infty\)</span> pour tout <span class="math inline">\(n\)</span>. Autrement dit, on peut découper <span class="math inline">\(\Omega\)</span> en morceaux de mesure finie. C’est une hypothèse technique fréquente, vérifiée dans la plupart des situations concrètes.</li>
+</ul>
+<p><em>Exemples.</em> La mesure de Lebesgue sur <span class="math inline">\((\mathbb R, \mathcal B(\mathbb R))\)</span> est σ-finie (prendre <span class="math inline">\(E_n = [-n, n]\)</span>) mais pas finie. Toute probabilité est finie (donc σ-finie). La mesure de comptage sur <span class="math inline">\((\mathbb R, \mathcal P(\mathbb R))\)</span> n’est pas σ-finie : tout ensemble de mesure finie est fini, et <span class="math inline">\(\mathbb R\)</span> n’est pas union dénombrable d’ensembles finis.</p>
+</section>
+<section id="propriétés-fondamentales" class="level4" data-number="1.1.1.3">
+<h4 data-number="1.1.1.3" class="anchored" data-anchor-id="propriétés-fondamentales"><span class="header-section-number">1.1.1.3</span> Propriétés fondamentales</h4>
+<p>Les propriétés suivantes découlent directement de la définition. Soit <span class="math inline">\(m\)</span> une mesure sur <span class="math inline">\((\Omega, \mathcal A)\)</span>.</p>
+<p><strong>1. Monotonie.</strong> Si <span class="math inline">\(A \subset B\)</span>, alors <span class="math inline">\(m(A) \leq m(B)\)</span>.</p>
+<p><em>Preuve.</em> <span class="math inline">\(B = A \cup (B \setminus A)\)</span>, union disjointe. Par additivité, <span class="math inline">\(m(B) = m(A) + m(B \setminus A) \geq m(A)\)</span>. ∎</p>
+<p><strong>2. Différence.</strong> Si <span class="math inline">\(A \subset B\)</span> et <span class="math inline">\(m(A) &lt; \infty\)</span>, alors <span class="math inline">\(m(B \setminus A) = m(B) - m(A)\)</span>.</p>
+<p><em>Preuve.</em> Même décomposition. On peut soustraire <span class="math inline">\(m(A)\)</span> car il est fini. ∎</p>
+<p><strong>3. σ-sous-additivité.</strong> Pour toute suite <span class="math inline">\((A_n)\)</span> (pas nécessairement disjointe),</p>
+<p><span class="math display">\[m\Bigl(\bigcup_{n=1}^{\infty} A_n\Bigr) \leq \sum_{n=1}^{\infty} m(A_n).\]</span></p>
+<p><em>Preuve.</em> On pose <span class="math inline">\(B_1 = A_1\)</span> et <span class="math inline">\(B_n = A_n \setminus \bigcup_{k &lt; n} A_k\)</span> pour <span class="math inline">\(n \geq 2\)</span>. Les <span class="math inline">\(B_n\)</span> sont disjoints, de même union que les <span class="math inline">\(A_n\)</span>, et <span class="math inline">\(B_n \subset A_n\)</span>, donc <span class="math inline">\(m(B_n) \leq m(A_n)\)</span>. Par σ-additivité appliquée aux <span class="math inline">\(B_n\)</span>, puis monotonie :</p>
+<p><span class="math display">\[m\Bigl(\bigcup_n A_n\Bigr) = \sum_n m(B_n) \leq \sum_n m(A_n). \quad ∎\]</span></p>
+<p><strong>4. Continuité monotone croissante (par en bas).</strong> Si <span class="math inline">\(A_1 \subset A_2 \subset \cdots\)</span> (on note <span class="math inline">\(A_n \uparrow A\)</span> avec <span class="math inline">\(A = \bigcup_n A_n\)</span>), alors</p>
+<p><span class="math display">\[m(A) = \lim_{n \to \infty} m(A_n).\]</span></p>
+<p><em>Preuve.</em> On pose <span class="math inline">\(B_1 = A_1\)</span> et <span class="math inline">\(B_n = A_n \setminus A_{n-1}\)</span> pour <span class="math inline">\(n \geq 2\)</span>. Les <span class="math inline">\(B_n\)</span> sont disjoints et <span class="math inline">\(\bigcup_n B_n = A\)</span>. Par σ-additivité,</p>
+<p><span class="math display">\[m(A) = \sum_{n=1}^{\infty} m(B_n) = \lim_{N \to \infty} \sum_{n=1}^{N} m(B_n) = \lim_{N \to \infty} m(A_N)\]</span></p>
+<p>la dernière égalité venant de l’additivité finie appliquée à <span class="math inline">\(A_N = B_1 \cup \cdots \cup B_N\)</span>. ∎</p>
+<p><strong>5. Continuité monotone décroissante (par en haut).</strong> Si <span class="math inline">\(A_1 \supset A_2 \supset \cdots\)</span> et <strong><span class="math inline">\(m(A_1) &lt; \infty\)</span></strong> (on note <span class="math inline">\(A_n \downarrow A\)</span> avec <span class="math inline">\(A = \bigcap_n A_n\)</span>), alors</p>
+<p><span class="math display">\[m(A) = \lim_{n \to \infty} m(A_n).\]</span></p>
+<p><em>Preuve.</em> On applique la continuité croissante aux complémentaires relatifs <span class="math inline">\(A_1 \setminus A_n \uparrow A_1 \setminus A\)</span>. On obtient <span class="math inline">\(m(A_1 \setminus A_n) \to m(A_1 \setminus A)\)</span>, soit <span class="math inline">\(m(A_1) - m(A_n) \to m(A_1) - m(A)\)</span>. La soustraction est licite car <span class="math inline">\(m(A_1) &lt; \infty\)</span>. ∎</p>
+<p><em>Remarque.</em> L’hypothèse <span class="math inline">\(m(A_1) &lt; \infty\)</span> est indispensable : on a vu au chapitre I que sans elle, on peut avoir <span class="math inline">\(A_n \downarrow \emptyset\)</span> et <span class="math inline">\(m(A_n) = 1\)</span> pour tout <span class="math inline">\(n\)</span>.</p>
+</section>
+<section id="exemples-de-mesures" class="level4" data-number="1.1.1.4">
+<h4 data-number="1.1.1.4" class="anchored" data-anchor-id="exemples-de-mesures"><span class="header-section-number">1.1.1.4</span> Exemples de mesures</h4>
+<p>Des mesures ont déjà été rencontrées au chapitre I. On les rassemble ici, avec quelques compléments.</p>
+<ul>
+<li><p><strong>Mesure de Dirac</strong> <span class="math inline">\(\delta_{x_0}\)</span> en un point <span class="math inline">\(x_0 \in \Omega\)</span> : <span class="math inline">\(\delta_{x_0}(A) = \mathbf{1}_{x_0 \in A}\)</span>. C’est une mesure finie sur <span class="math inline">\((\Omega, \mathcal A)\)</span> pour toute tribu <span class="math inline">\(\mathcal A\)</span> telle que <span class="math inline">\(\{x_0\} \in \mathcal A\)</span>. On a <span class="math inline">\(\delta_{x_0}(\Omega) = 1\)</span>, c’est donc une probabilité.</p></li>
+<li><p><strong>Mesure de comptage</strong> <span class="math inline">\(\#\)</span> : <span class="math inline">\(\#(A) = |A|\)</span> si <span class="math inline">\(A\)</span> est fini, <span class="math inline">\(+\infty\)</span> sinon. Mesure sur <span class="math inline">\((\Omega, \mathcal P(\Omega))\)</span> pour tout <span class="math inline">\(\Omega\)</span>.</p></li>
+<li><p><strong>Mesure nulle</strong> : <span class="math inline">\(m(A) = 0\)</span> pour tout <span class="math inline">\(A\)</span>. C’est la plus petite mesure possible. Elle est σ-additive de façon triviale.</p></li>
+<li><p><strong>Combinaison linéaire.</strong> Si <span class="math inline">\(m_1, m_2\)</span> sont des mesures sur <span class="math inline">\((\Omega, \mathcal A)\)</span> et <span class="math inline">\(\alpha, \beta \geq 0\)</span>, alors <span class="math inline">\(\alpha m_1 + \beta m_2\)</span> est une mesure. Plus généralement, pour une suite de mesures <span class="math inline">\((m_n)\)</span> et de coefficients <span class="math inline">\((\alpha_n) \subset [0,+\infty)\)</span>, la somme <span class="math inline">\(m = \sum_n \alpha_n m_n\)</span> est une mesure (la σ-additivité se transmet car on peut intervertir deux sommes de termes positifs).</p></li>
+</ul>
+<p><em>Exemple.</em> Toute combinaison <span class="math inline">\(\sum_{i} \alpha_i \delta_{x_i}\)</span> avec <span class="math inline">\(\alpha_i \geq 0\)</span> est une mesure. Si de plus <span class="math inline">\(\sum_i \alpha_i = 1\)</span>, c’est une probabilité. On retrouve ainsi les lois discrètes.</p>
+</section>
+</section>
+<section id="mesure-de-lebesgue-sur-ℝ" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="mesure-de-lebesgue-sur-ℝ"><span class="header-section-number">1.1.2</span> 2. Mesure de Lebesgue sur ℝ</h3>
+<section id="objectif" class="level4" data-number="1.1.2.1">
+<h4 data-number="1.1.2.1" class="anchored" data-anchor-id="objectif"><span class="header-section-number">1.1.2.1</span> Objectif</h4>
+<p>L’objectif est de construire la mesure qui résout le problème de la mesure posé au chapitre I — dans le cadre restreint de la tribu borélienne. Concrètement, on cherche une mesure <span class="math inline">\(\lambda\)</span> sur <span class="math inline">\((\mathbb R, \mathcal B(\mathbb R))\)</span> qui :</p>
+<ul>
+<li>prolonge la longueur : <span class="math inline">\(\lambda([a,b]) = b - a\)</span> ;</li>
+<li>soit invariante par translation : <span class="math inline">\(\lambda(A + t) = \lambda(A)\)</span> ;</li>
+<li>soit σ-additive (c’est dans la définition de mesure).</li>
+</ul>
+<p>Le théorème de Vitali nous dit que ces trois propriétés sont incompatibles sur <span class="math inline">\(\mathcal P(\mathbb R)\)</span>, mais le passage à <span class="math inline">\(\mathcal B(\mathbb R)\)</span> rend la construction possible.</p>
+</section>
+<section id="le-théorème-de-carathéodory-idée" class="level4" data-number="1.1.2.2">
+<h4 data-number="1.1.2.2" class="anchored" data-anchor-id="le-théorème-de-carathéodory-idée"><span class="header-section-number">1.1.2.2</span> Le théorème de Carathéodory (idée)</h4>
+<p>La construction repose sur un résultat général : le <strong>théorème d’extension de Carathéodory</strong>. L’idée est la suivante.</p>
+<p>On part d’une « pré-mesure » définie sur une famille simple d’ensembles — ici, la longueur sur les intervalles. On l’étend d’abord en une <strong>mesure extérieure</strong> <span class="math inline">\(\lambda^*\)</span> définie sur toutes les parties de <span class="math inline">\(\mathbb R\)</span> :</p>
+<p><span class="math display">\[\lambda^*(A) = \inf \Bigl\{ \sum_{n=1}^{\infty} (b_n - a_n) : A \subset \bigcup_{n=1}^{\infty} (a_n, b_n) \Bigr\}\]</span></p>
+<p>On recouvre <span class="math inline">\(A\)</span> par des intervalles ouverts et on prend la borne inférieure des sommes des longueurs de ces recouvrements. Cette mesure extérieure est définie sur <span class="math inline">\(\mathcal P(\mathbb R)\)</span> tout entier, mais elle n’est pas σ-additive en général (seulement σ-sous-additive). Le théorème de Carathéodory identifie alors une σ-algèbre — la tribu de Lebesgue <span class="math inline">\(\mathcal L\)</span> — sur laquelle <span class="math inline">\(\lambda^*\)</span> est σ-additive. La restriction de <span class="math inline">\(\lambda^*\)</span> à <span class="math inline">\(\mathcal L\)</span> est la <strong>mesure de Lebesgue</strong>.</p>
+</section>
+<section id="énoncé" class="level4" data-number="1.1.2.3">
+<h4 data-number="1.1.2.3" class="anchored" data-anchor-id="énoncé"><span class="header-section-number">1.1.2.3</span> Énoncé</h4>
+<p><strong>Théorème (existence et unicité).</strong> Il existe une unique mesure <span class="math inline">\(\lambda\)</span> sur <span class="math inline">\((\mathbb R, \mathcal B(\mathbb R))\)</span> telle que <span class="math inline">\(\lambda([a,b]) = b - a\)</span> pour tout intervalle <span class="math inline">\([a,b]\)</span>.</p>
+<p>L’unicité vient du fait que les intervalles engendrent <span class="math inline">\(\mathcal B(\mathbb R)\)</span> et forment un système « suffisamment stable » (un π-système). Le lemme de classe monotone (ou le théorème d’unicité des mesures) garantit qu’une mesure σ-finie est entièrement déterminée par ses valeurs sur un π-système qui engendre la tribu.</p>
+</section>
+<section id="tribu-de-lebesgue-vs-tribu-borélienne" class="level4" data-number="1.1.2.4">
+<h4 data-number="1.1.2.4" class="anchored" data-anchor-id="tribu-de-lebesgue-vs-tribu-borélienne"><span class="header-section-number">1.1.2.4</span> Tribu de Lebesgue vs tribu borélienne</h4>
+<p>La construction de Carathéodory produit en fait une tribu <span class="math inline">\(\mathcal L\)</span> plus grande que <span class="math inline">\(\mathcal B(\mathbb R)\)</span> :</p>
+<p><span class="math display">\[\mathcal B(\mathbb R) \subsetneq \mathcal L \subsetneq \mathcal P(\mathbb R).\]</span></p>
+<p>La tribu de Lebesgue <span class="math inline">\(\mathcal L\)</span> contient <span class="math inline">\(\mathcal B(\mathbb R)\)</span> et tous les sous-ensembles d’ensembles de mesure nulle (on dit qu’elle est <strong>complète</strong>). La tribu borélienne, elle, n’est pas complète.</p>
+<p><em>Exemple.</em> L’ensemble de Cantor <span class="math inline">\(C\)</span> est borélien (c’est un fermé) et vérifie <span class="math inline">\(\lambda(C) = 0\)</span>. Or <span class="math inline">\(C\)</span> a la puissance du continu : il contient autant de points que <span class="math inline">\(\mathbb R\)</span>. Tout sous-ensemble de <span class="math inline">\(C\)</span> est Lebesgue-mesurable (de mesure nulle), mais il en existe qui ne sont pas boréliens. Cela fournit un exemple d’ensemble Lebesgue-mesurable non borélien.</p>
+<p>En pratique, la distinction importe rarement : on travaille presque toujours sur <span class="math inline">\(\mathcal B(\mathbb R)\)</span>, et les ensembles qu’on rencontre sont boréliens.</p>
+</section>
+<section id="propriétés-de-la-mesure-de-lebesgue" class="level4" data-number="1.1.2.5">
+<h4 data-number="1.1.2.5" class="anchored" data-anchor-id="propriétés-de-la-mesure-de-lebesgue"><span class="header-section-number">1.1.2.5</span> Propriétés de la mesure de Lebesgue</h4>
+<p><strong>1. Invariance par translation.</strong> <span class="math inline">\(\lambda(A + t) = \lambda(A)\)</span> pour tout borélien <span class="math inline">\(A\)</span> et tout <span class="math inline">\(t \in \mathbb R\)</span>. C’est la propriété géométrique fondamentale, celle-là même qui posait problème sur <span class="math inline">\(\mathcal P(\mathbb R)\)</span>.</p>
+<p><strong>2. Comportement par changement d’échelle.</strong> <span class="math inline">\(\lambda(\alpha A) = |\alpha| \lambda(A)\)</span> pour tout <span class="math inline">\(\alpha \in \mathbb R\)</span>, où <span class="math inline">\(\alpha A = \{\alpha x : x \in A\}\)</span>. Dilater un ensemble par un facteur <span class="math inline">\(\alpha\)</span> multiplie sa mesure par <span class="math inline">\(|\alpha|\)</span>.</p>
+<p><strong>3. Tout dénombrable est négligeable.</strong> Si <span class="math inline">\(A\)</span> est dénombrable, <span class="math inline">\(\lambda(A) = 0\)</span>. En effet, <span class="math inline">\(A = \bigcup_n \{a_n\}\)</span> et <span class="math inline">\(\lambda(\{a_n\}) = 0\)</span> pour tout <span class="math inline">\(n\)</span>. En particulier, <span class="math inline">\(\lambda(\mathbb Q) = 0\)</span> : les rationnels, bien que denses dans <span class="math inline">\(\mathbb R\)</span>, ont une mesure nulle.</p>
+<p><strong>4. Tout ouvert non vide a une mesure strictement positive.</strong> Un ouvert non vide contient un intervalle <span class="math inline">\((a,b)\)</span> avec <span class="math inline">\(a &lt; b\)</span>, donc sa mesure est au moins <span class="math inline">\(b - a &gt; 0\)</span>.</p>
+<p><strong>5. σ-finitude.</strong> <span class="math inline">\(\lambda\)</span> est σ-finie : <span class="math inline">\(\mathbb R = \bigcup_{n \geq 1} [-n, n]\)</span> et <span class="math inline">\(\lambda([-n,n]) = 2n &lt; \infty\)</span>.</p>
+</section>
+<section id="ensembles-de-mesure-nulle-et-ensembles-négligeables" class="level4" data-number="1.1.2.6">
+<h4 data-number="1.1.2.6" class="anchored" data-anchor-id="ensembles-de-mesure-nulle-et-ensembles-négligeables"><span class="header-section-number">1.1.2.6</span> Ensembles de mesure nulle et ensembles négligeables</h4>
+<p><strong>Définition.</strong> Un ensemble <span class="math inline">\(A\)</span> est <strong>négligeable</strong> (pour la mesure <span class="math inline">\(m\)</span>) si <span class="math inline">\(m(A) = 0\)</span>.Un ensemble est <strong><span class="math inline">\(m\)</span>-négligeable</strong> s’il est contenu dans un ensemble mesurable de mesure nulle.</p>
+<p>Les propriétés « qui sont vraies sauf sur un ensemble négligeable » jouent un rôle central en théorie de la mesure. On dit qu’une propriété est vraie <strong>presque partout</strong> (abrégé p.p., ou <strong>presque sûrement</strong> en probabilités, abrégé p.s.) si l’ensemble des points où elle est fausse est négligeable.</p>
+<p><em>Propriétés des ensembles négligeables.</em> Toute partie d’un ensemble négligeable est négligeable (dans la tribu de Lebesgue ; pas nécessairement dans <span class="math inline">\(\mathcal B(\mathbb R)\)</span> — c’est la question de la complétude). Toute union dénombrable d’ensembles négligeables est négligeable (par σ-sous-additivité).</p>
+</section>
+</section>
+<section id="probabilités-axiomes-de-kolmogorov" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="probabilités-axiomes-de-kolmogorov"><span class="header-section-number">1.1.3</span> 3. Probabilités : axiomes de Kolmogorov</h3>
+<section id="dune-mesure-à-une-probabilité" class="level4" data-number="1.1.3.1">
+<h4 data-number="1.1.3.1" class="anchored" data-anchor-id="dune-mesure-à-une-probabilité"><span class="header-section-number">1.1.3.1</span> D’une mesure à une probabilité</h4>
+<p>Une probabilité est une mesure de masse totale 1. C’est un cas particulier de la théorie générale, mais c’est le cas le plus important pour ce cours.</p>
+<p><strong>Définition.</strong> Soit <span class="math inline">\((\Omega, \mathcal A)\)</span> un espace mesurable. Une <strong>probabilité</strong> sur <span class="math inline">\((\Omega, \mathcal A)\)</span> est une mesure <span class="math inline">\(P : \mathcal A \to [0, 1]\)</span> telle que <span class="math inline">\(P(\Omega) = 1\)</span>.</p>
+<p>Le triplet <span class="math inline">\((\Omega, \mathcal A, P)\)</span> s’appelle un <strong>espace probabilisé</strong> (ou espace de probabilité). Les éléments de <span class="math inline">\(\Omega\)</span> s’appellent les <strong>issues</strong> (ou résultats, ou états du monde), les éléments de <span class="math inline">\(\mathcal A\)</span> les <strong>événements</strong>, et <span class="math inline">\(P(A)\)</span> la <strong>probabilité de l’événement</strong> <span class="math inline">\(A\)</span>.</p>
+</section>
+<section id="les-axiomes-de-kolmogorov" class="level4" data-number="1.1.3.2">
+<h4 data-number="1.1.3.2" class="anchored" data-anchor-id="les-axiomes-de-kolmogorov"><span class="header-section-number">1.1.3.2</span> Les axiomes de Kolmogorov</h4>
+<p>La définition ci-dessus constitue, en substance, les axiomes posés par Kolmogorov en 1933. Pour les rendre explicites :</p>
+<p><strong>Axiomes.</strong> Un espace de probabilité est un triplet <span class="math inline">\((\Omega, \mathcal A, P)\)</span> où :</p>
+<ol type="1">
+<li><span class="math inline">\(\Omega\)</span> est un ensemble non vide (l’univers) ;</li>
+<li><span class="math inline">\(\mathcal A\)</span> est une σ-algèbre sur <span class="math inline">\(\Omega\)</span> (les événements) ;</li>
+<li><span class="math inline">\(P : \mathcal A \to [0,1]\)</span> est une application vérifiant :
+<ul>
+<li><span class="math inline">\(P(\Omega) = 1\)</span> (normalisation),</li>
+<li>pour toute suite <span class="math inline">\((A_n)\)</span> d’événements deux à deux disjoints, <span class="math inline">\(P\bigl(\bigcup_n A_n\bigr) = \sum_n P(A_n)\)</span> (σ-additivité).</li>
+</ul></li>
+</ol>
+<p>L’axiomatisation de Kolmogorov fonde les probabilités sur la théorie de la mesure. C’est l’analogue, pour les probabilités, de ce qu’a fait Euclide pour la géométrie : un petit nombre de principes à partir desquels tout le reste se déduit.</p>
+</section>
+<section id="propriétés-élémentaires" class="level4" data-number="1.1.3.3">
+<h4 data-number="1.1.3.3" class="anchored" data-anchor-id="propriétés-élémentaires"><span class="header-section-number">1.1.3.3</span> Propriétés élémentaires</h4>
+<p>Toutes les propriétés des mesures (section 1) s’appliquent. On les reformule dans le langage probabiliste.</p>
+<p><strong>1. Complémentaire.</strong> <span class="math inline">\(P(A^c) = 1 - P(A)\)</span>.</p>
+<p><em>Preuve.</em> <span class="math inline">\(\Omega = A \cup A^c\)</span>, union disjointe. Par additivité, <span class="math inline">\(1 = P(A) + P(A^c)\)</span>. ∎</p>
+<p><strong>2. Monotonie.</strong> Si <span class="math inline">\(A \subset B\)</span>, alors <span class="math inline">\(P(A) \leq P(B)\)</span>.</p>
+<p><strong>3. Sous-additivité (union bound).</strong> <span class="math inline">\(P(A \cup B) \leq P(A) + P(B)\)</span>. Plus généralement, pour toute suite,</p>
+<p><span class="math display">\[P\Bigl(\bigcup_{n} A_n\Bigr) \leq \sum_n P(A_n).\]</span></p>
+<p><strong>4. Formule d’inclusion-exclusion.</strong> Pour deux événements :</p>
+<p><span class="math display">\[P(A \cup B) = P(A) + P(B) - P(A \cap B).\]</span></p>
+<p>Pour <span class="math inline">\(n\)</span> événements :</p>
+<p><span class="math display">\[P\Bigl(\bigcup_{i=1}^n A_i\Bigr) = \sum_i P(A_i) - \sum_{i &lt; j} P(A_i \cap A_j) + \sum_{i &lt; j &lt; k} P(A_i \cap A_j \cap A_k) - \cdots + (-1)^{n+1} P(A_1 \cap \cdots \cap A_n).\]</span></p>
+<p><strong>5. Continuité.</strong> Si <span class="math inline">\(A_n \uparrow A\)</span>, alors <span class="math inline">\(P(A_n) \to P(A)\)</span>. Si <span class="math inline">\(A_n \downarrow A\)</span>, alors <span class="math inline">\(P(A_n) \to P(A)\)</span>. (L’hypothèse <span class="math inline">\(m(A_1) &lt; \infty\)</span> de la continuité décroissante est automatiquement vérifiée car <span class="math inline">\(P(A_1) \leq 1\)</span>.)</p>
+</section>
+<section id="exemples-despaces-probabilisés" class="level4" data-number="1.1.3.4">
+<h4 data-number="1.1.3.4" class="anchored" data-anchor-id="exemples-despaces-probabilisés"><span class="header-section-number">1.1.3.4</span> Exemples d’espaces probabilisés</h4>
+<p><strong>Espaces finis.</strong> <span class="math inline">\(\Omega = \{\omega_1, \dots, \omega_n\}\)</span>, <span class="math inline">\(\mathcal A = \mathcal P(\Omega)\)</span>, <span class="math inline">\(P\)</span> définie par des poids <span class="math inline">\(p_i = P(\{\omega_i\})\)</span> avec <span class="math inline">\(p_i \geq 0\)</span> et <span class="math inline">\(\sum_i p_i = 1\)</span>. Si tous les poids sont égaux (<span class="math inline">\(p_i = 1/n\)</span>), on parle de <strong>probabilité uniforme</strong>.</p>
+<p><strong>Espaces dénombrables.</strong> <span class="math inline">\(\Omega = \mathbb N\)</span>, <span class="math inline">\(\mathcal A = \mathcal P(\mathbb N)\)</span>, <span class="math inline">\(P(\{n\}) = p_n\)</span> avec <span class="math inline">\(\sum_n p_n = 1\)</span>. C’est le cadre des lois discrètes (Bernoulli, binomiale, Poisson, géométrique, etc.).</p>
+<p><strong>Espaces continus.</strong> <span class="math inline">\(\Omega = \mathbb R\)</span> (ou un sous-ensemble), <span class="math inline">\(\mathcal A = \mathcal B(\mathbb R)\)</span>, <span class="math inline">\(P\)</span> définie par une densité <span class="math inline">\(f \geq 0\)</span> avec <span class="math inline">\(\int_{\mathbb R} f \, d\lambda = 1\)</span> :</p>
+<p><span class="math display">\[P(A) = \int_A f(x) \, dx.\]</span></p>
+<p>C’est le cadre des lois continues (uniforme, exponentielle, gaussienne, etc.). La notion de densité sera précisée à la section 4.</p>
+</section>
+<section id="probabilité-conditionnelle" class="level4" data-number="1.1.3.5">
+<h4 data-number="1.1.3.5" class="anchored" data-anchor-id="probabilité-conditionnelle"><span class="header-section-number">1.1.3.5</span> Probabilité conditionnelle</h4>
+<p><strong>Définition.</strong> Soit <span class="math inline">\(B\)</span> un événement avec <span class="math inline">\(P(B) &gt; 0\)</span>. La <strong>probabilité conditionnelle</strong> de <span class="math inline">\(A\)</span> sachant <span class="math inline">\(B\)</span> est</p>
+<p><span class="math display">\[P(A \mid B) = \frac{P(A \cap B)}{P(B)}.\]</span></p>
+<p>Pour <span class="math inline">\(B\)</span> fixé, l’application <span class="math inline">\(A \mapsto P(A \mid B)\)</span> est une probabilité sur <span class="math inline">\((\Omega, \mathcal A)\)</span>. Intuitivement, on restreint l’univers à <span class="math inline">\(B\)</span> et on renormalise.</p>
+<p><strong>Formule des probabilités totales.</strong> Si <span class="math inline">\((B_n)_{n \geq 1}\)</span> est une partition de <span class="math inline">\(\Omega\)</span> en événements de probabilité strictement positive (i.e.&nbsp;<span class="math inline">\(B_n\)</span> deux à deux disjoints, <span class="math inline">\(\bigcup_n B_n = \Omega\)</span>, <span class="math inline">\(P(B_n) &gt; 0\)</span>), alors pour tout événement <span class="math inline">\(A\)</span> :</p>
+<p><span class="math display">\[P(A) = \sum_{n=1}^{\infty} P(A \mid B_n) P(B_n).\]</span></p>
+<p><em>Preuve.</em> <span class="math inline">\(A = \bigcup_n (A \cap B_n)\)</span>, union disjointe. Par σ-additivité, <span class="math inline">\(P(A) = \sum_n P(A \cap B_n) = \sum_n P(A \mid B_n) P(B_n)\)</span>. ∎</p>
+<p><strong>Formule de Bayes.</strong> Sous les mêmes hypothèses, pour tout <span class="math inline">\(k\)</span> :</p>
+<p><span class="math display">\[P(B_k \mid A) = \frac{P(A \mid B_k) P(B_k)}{\sum_n P(A \mid B_n) P(B_n)}.\]</span></p>
+<p><em>Preuve.</em> Appliquer la définition de <span class="math inline">\(P(B_k \mid A) = P(A \cap B_k) / P(A)\)</span>, puis exprimer le numérateur et le dénominateur. ∎</p>
+<p>La formule de Bayes « inverse » le conditionnement : connaissant les probabilités des causes <span class="math inline">\(B_k\)</span> et les vraisemblances <span class="math inline">\(P(A \mid B_k)\)</span> de l’observation <span class="math inline">\(A\)</span> sous chaque cause, on en déduit les probabilités révisées <span class="math inline">\(P(B_k \mid A)\)</span> des causes à la lumière de l’observation.</p>
+</section>
+</section>
+<section id="densité-et-mesure-absolument-continue" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="densité-et-mesure-absolument-continue"><span class="header-section-number">1.1.4</span> 4. Densité et mesure absolument continue</h3>
+<section id="motivation" class="level4" data-number="1.1.4.1">
+<h4 data-number="1.1.4.1" class="anchored" data-anchor-id="motivation"><span class="header-section-number">1.1.4.1</span> Motivation</h4>
+<p>On rencontre souvent des probabilités sur <span class="math inline">\((\mathbb R, \mathcal B(\mathbb R))\)</span> décrites par une fonction <span class="math inline">\(f \geq 0\)</span> avec <span class="math inline">\(\int f \, d\lambda = 1\)</span> : on pose <span class="math inline">\(P(A) = \int_A f \, d\lambda\)</span>. La fonction <span class="math inline">\(f\)</span> est la <strong>densité</strong> de <span class="math inline">\(P\)</span> par rapport à la mesure de Lebesgue. On veut comprendre quand un tel <span class="math inline">\(f\)</span> existe, et dans quel cadre général.</p>
+</section>
+<section id="mesure-absolument-continue" class="level4" data-number="1.1.4.2">
+<h4 data-number="1.1.4.2" class="anchored" data-anchor-id="mesure-absolument-continue"><span class="header-section-number">1.1.4.2</span> Mesure absolument continue</h4>
+<p><strong>Définition.</strong> Soient <span class="math inline">\(\mu\)</span> et <span class="math inline">\(\nu\)</span> deux mesures sur <span class="math inline">\((\Omega, \mathcal A)\)</span>. On dit que <span class="math inline">\(\mu\)</span> est <strong>absolument continue</strong> par rapport à <span class="math inline">\(\nu\)</span>, et on écrit <span class="math inline">\(\mu \ll \nu\)</span>, si</p>
+<p><span class="math display">\[\forall A \in \mathcal A, \quad \nu(A) = 0 \implies \mu(A) = 0.\]</span></p>
+<p>Autrement dit, <span class="math inline">\(\mu\)</span> ne charge pas les ensembles <span class="math inline">\(\nu\)</span>-négligeables : tout ce qui est invisible pour <span class="math inline">\(\nu\)</span> l’est aussi pour <span class="math inline">\(\mu\)</span>.</p>
+<p><em>Exemples.</em></p>
+<ul>
+<li>Si <span class="math inline">\(P(A) = \int_A f \, d\lambda\)</span> pour une densité <span class="math inline">\(f \geq 0\)</span>, alors <span class="math inline">\(P \ll \lambda\)</span>. En effet, si <span class="math inline">\(\lambda(A) = 0\)</span>, l’intégrale de <span class="math inline">\(f\)</span> sur <span class="math inline">\(A\)</span> est nulle.</li>
+<li>La mesure de Dirac <span class="math inline">\(\delta_0\)</span> n’est pas absolument continue par rapport à <span class="math inline">\(\lambda\)</span> : <span class="math inline">\(\lambda(\{0\}) = 0\)</span> mais <span class="math inline">\(\delta_0(\{0\}) = 1\)</span>.</li>
+<li><span class="math inline">\(\lambda\)</span> n’est pas absolument continue par rapport à <span class="math inline">\(\delta_0\)</span> : <span class="math inline">\(\delta_0(\{0\}^c) = 0\)</span> mais <span class="math inline">\(\lambda(\{0\}^c) = +\infty\)</span>.</li>
+</ul>
+</section>
+<section id="le-théorème-de-radon-nikodym" class="level4" data-number="1.1.4.3">
+<h4 data-number="1.1.4.3" class="anchored" data-anchor-id="le-théorème-de-radon-nikodym"><span class="header-section-number">1.1.4.3</span> Le théorème de Radon-Nikodym</h4>
+<p><strong>Théorème (Radon-Nikodym).</strong> Soient <span class="math inline">\(\mu\)</span> et <span class="math inline">\(\nu\)</span> deux mesures σ-finies sur <span class="math inline">\((\Omega, \mathcal A)\)</span>, avec <span class="math inline">\(\mu \ll \nu\)</span>. Alors il existe une fonction mesurable <span class="math inline">\(f : \Omega \to [0, +\infty)\)</span> telle que</p>
+<p><span class="math display">\[\forall A \in \mathcal A, \quad \mu(A) = \int_A f \, d\nu.\]</span></p>
+<p>La fonction <span class="math inline">\(f\)</span> est unique <span class="math inline">\(\nu\)</span>-presque partout. On l’appelle la <strong>dérivée de Radon-Nikodym</strong> (ou <strong>densité</strong>) de <span class="math inline">\(\mu\)</span> par rapport à <span class="math inline">\(\nu\)</span>, et on la note <span class="math inline">\(\frac{d\mu}{d\nu}\)</span>.</p>
+<p>La preuve complète sera possible après le chapitre III (Intégration). On admet ici l’énoncé.</p>
+<p><em>Remarques.</em></p>
+<ul>
+<li>L’hypothèse de σ-finitude est essentielle : sans elle, le théorème est faux.</li>
+<li>La notation <span class="math inline">\(\frac{d\mu}{d\nu}\)</span> est suggestive : elle se comporte comme une « dérivée » au sens où <span class="math inline">\(d\mu = f \, d\nu\)</span>, et les règles de chaîne s’appliquent. Si <span class="math inline">\(\mu \ll \nu \ll \rho\)</span>, alors <span class="math inline">\(\frac{d\mu}{d\rho} = \frac{d\mu}{d\nu} \cdot \frac{d\nu}{d\rho}\)</span> (presque partout).</li>
+<li>En probabilités, la densité d’une loi est toujours relative à une mesure de référence (le plus souvent la mesure de Lebesgue). Dire qu’une variable aléatoire « a une densité » signifie que sa loi est absolument continue par rapport à <span class="math inline">\(\lambda\)</span>.</li>
+</ul>
+</section>
+<section id="mesures-singulières" class="level4" data-number="1.1.4.4">
+<h4 data-number="1.1.4.4" class="anchored" data-anchor-id="mesures-singulières"><span class="header-section-number">1.1.4.4</span> Mesures singulières</h4>
+<p><strong>Définition.</strong> Deux mesures <span class="math inline">\(\mu\)</span> et <span class="math inline">\(\nu\)</span> sur <span class="math inline">\((\Omega, \mathcal A)\)</span> sont <strong>mutuellement singulières</strong>, noté <span class="math inline">\(\mu \perp \nu\)</span>, s’il existe <span class="math inline">\(A \in \mathcal A\)</span> tel que <span class="math inline">\(\mu(A) = 0\)</span> et <span class="math inline">\(\nu(A^c) = 0\)</span>. Autrement dit, elles « vivent » sur des ensembles disjoints.</p>
+<p><em>Exemple.</em> <span class="math inline">\(\delta_0 \perp \lambda\)</span> : prendre <span class="math inline">\(A = \{0\}^c\)</span>. On a <span class="math inline">\(\delta_0(A) = 0\)</span> et <span class="math inline">\(\lambda(A^c) = \lambda(\{0\}) = 0\)</span>.</p>
+<p><strong>Décomposition de Lebesgue.</strong> Toute mesure σ-finie <span class="math inline">\(\mu\)</span> se décompose de façon unique en <span class="math inline">\(\mu = \mu_{ac} + \mu_s\)</span> où <span class="math inline">\(\mu_{ac} \ll \nu\)</span> et <span class="math inline">\(\mu_s \perp \nu\)</span>. C’est la « partie absolument continue » et la « partie singulière » de <span class="math inline">\(\mu\)</span> par rapport à <span class="math inline">\(\nu\)</span>.</p>
+</section>
+</section>
+<section id="mesures-produit-et-théorème-de-fubini" class="level3" data-number="1.1.5">
+<h3 data-number="1.1.5" class="anchored" data-anchor-id="mesures-produit-et-théorème-de-fubini"><span class="header-section-number">1.1.5</span> 5. Mesures produit et théorème de Fubini</h3>
+<section id="motivation-1" class="level4" data-number="1.1.5.1">
+<h4 data-number="1.1.5.1" class="anchored" data-anchor-id="motivation-1"><span class="header-section-number">1.1.5.1</span> Motivation</h4>
+<p>On veut mesurer des ensembles dans un espace produit <span class="math inline">\(\Omega_1 \times \Omega_2\)</span>. Par exemple, pour deux lancers de dé indépendants, l’espace est <span class="math inline">\(\{1,\dots,6\}^2\)</span> ; pour un point aléatoire dans le plan, c’est <span class="math inline">\(\mathbb R^2\)</span>. La question est : comment construire une mesure sur le produit à partir des mesures sur les facteurs ?</p>
+</section>
+<section id="tribu-produit" class="level4" data-number="1.1.5.2">
+<h4 data-number="1.1.5.2" class="anchored" data-anchor-id="tribu-produit"><span class="header-section-number">1.1.5.2</span> Tribu produit</h4>
+<p>Au chapitre I, on a vu que <span class="math inline">\(\mathcal B(\mathbb R^n) = \mathcal B(\mathbb R)^{\otimes n}\)</span>. On généralise.</p>
+<p><strong>Définition.</strong> Soient <span class="math inline">\((\Omega_1, \mathcal A_1)\)</span> et <span class="math inline">\((\Omega_2, \mathcal A_2)\)</span> deux espaces mesurables. La <strong>tribu produit</strong> est</p>
+<p><span class="math display">\[\mathcal A_1 \otimes \mathcal A_2 = \sigma\bigl(\{A_1 \times A_2 : A_1 \in \mathcal A_1, \, A_2 \in \mathcal A_2\}\bigr).\]</span></p>
+<p>C’est la tribu engendrée par les « rectangles mesurables ». L’espace mesurable produit est <span class="math inline">\((\Omega_1 \times \Omega_2, \, \mathcal A_1 \otimes \mathcal A_2)\)</span>.</p>
+</section>
+<section id="mesure-produit" class="level4" data-number="1.1.5.3">
+<h4 data-number="1.1.5.3" class="anchored" data-anchor-id="mesure-produit"><span class="header-section-number">1.1.5.3</span> Mesure produit</h4>
+<p><strong>Théorème (existence et unicité de la mesure produit).</strong> Soient <span class="math inline">\((Ω_1, \mathcal A_1, m_1)\)</span> et <span class="math inline">\((\Omega_2, \mathcal A_2, m_2)\)</span> deux espaces mesurés σ-finis. Il existe une unique mesure <span class="math inline">\(m_1 \otimes m_2\)</span> sur <span class="math inline">\((\Omega_1 \times \Omega_2, \, \mathcal A_1 \otimes \mathcal A_2)\)</span> telle que</p>
+<p><span class="math display">\[\forall A_1 \in \mathcal A_1, \, \forall A_2 \in \mathcal A_2, \quad (m_1 \otimes m_2)(A_1 \times A_2) = m_1(A_1) \cdot m_2(A_2).\]</span></p>
+<p>L’unicité repose, comme pour la mesure de Lebesgue, sur le fait que les rectangles mesurables forment un π-système qui engendre la tribu produit, et le théorème d’unicité des mesures s’applique (les mesures étant σ-finies).</p>
+<p><em>Exemple.</em> La mesure de Lebesgue sur <span class="math inline">\(\mathbb R^2\)</span> est <span class="math inline">\(\lambda \otimes \lambda\)</span> : l’aire d’un rectangle <span class="math inline">\([a,b] \times [c,d]\)</span> est <span class="math inline">\((b-a)(d-c) = \lambda([a,b]) \cdot \lambda([c,d])\)</span>.</p>
+</section>
+<section id="le-théorème-de-fubini-tonelli" class="level4" data-number="1.1.5.4">
+<h4 data-number="1.1.5.4" class="anchored" data-anchor-id="le-théorème-de-fubini-tonelli"><span class="header-section-number">1.1.5.4</span> Le théorème de Fubini-Tonelli</h4>
+<p>C’est l’outil qui permet de calculer les intégrales doubles par intégrales itérées.</p>
+<p><strong>Théorème (Tonelli).</strong> Soient <span class="math inline">\((Ω_1, \mathcal A_1, m_1)\)</span> et <span class="math inline">\((\Omega_2, \mathcal A_2, m_2)\)</span> deux espaces mesurés σ-finis, et <span class="math inline">\(f : \Omega_1 \times \Omega_2 \to [0, +\infty]\)</span> une fonction mesurable positive. Alors :</p>
+<p><span class="math display">\[\int_{\Omega_1 \times \Omega_2} f \, d(m_1 \otimes m_2) = \int_{\Omega_1} \Bigl(\int_{\Omega_2} f(\omega_1, \omega_2) \, dm_2(\omega_2)\Bigr) dm_1(\omega_1) = \int_{\Omega_2} \Bigl(\int_{\Omega_1} f(\omega_1, \omega_2) \, dm_1(\omega_1)\Bigr) dm_2(\omega_2).\]</span></p>
+<p>Les trois quantités sont égales (éventuellement infinies). Aucune hypothèse d’intégrabilité n’est nécessaire : pour les fonctions positives, on peut toujours intervertir les intégrales.</p>
+<p><strong>Théorème (Fubini).</strong> Si de plus <span class="math inline">\(f\)</span> est intégrable (i.e.&nbsp;<span class="math inline">\(\int |f| \, d(m_1 \otimes m_2) &lt; \infty\)</span>), alors les trois intégrales ci-dessus sont finies et égales.</p>
+<p><em>Usage pratique.</em> Pour calculer <span class="math inline">\(\int f \, d(m_1 \otimes m_2)\)</span> :</p>
+<ol type="1">
+<li>Si <span class="math inline">\(f \geq 0\)</span> : appliquer directement Tonelli, l’interversion est toujours licite.</li>
+<li>Si <span class="math inline">\(f\)</span> change de signe : vérifier d’abord que <span class="math inline">\(\int |f| &lt; \infty\)</span> (en appliquant Tonelli à <span class="math inline">\(|f|\)</span>), puis appliquer Fubini.</li>
+</ol>
+<p>Le piège classique est d’intervertir les intégrales pour une fonction qui n’est pas de signe constant et qui n’est pas intégrable : on peut alors obtenir des résultats différents selon l’ordre d’intégration.</p>
+
+
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../probabilités/0121. strictité-de-la-hiérarchie-borélienne.html" class="pagination-link" aria-label="0121. Strictité de la hiérarchie borélienne">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">0121. Strictité de la hiérarchie borélienne</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../notes/1. representation-geometrie-et-resolution.html" class="pagination-link" aria-label="1. Representation geometrie et resolution">
+        <span class="nav-page-text">1. Representation geometrie et resolution</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

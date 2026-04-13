@@ -1,0 +1,54 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "index.qmd"
+    - "notes/*.md"
+    - "probabilités/*.md"
+    - "probabilités/*.qmd"
+    - "!pronostics/"
+    - "!probabilités/0100. tribus-et-espaces-mesurables.md"
+
+website:
+  title: "Notes"
+  page-navigation: true
+  bread-crumbs: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Accueil
+  sidebar:
+    style: docked
+    search: true
+    contents:
+      - section: "Probabilités"
+        contents:
+          - href: probabilités/0000. syllabus.md
+            text: Syllabus
+          - href: probabilités/0100. tribus-et-espaces-mesurables.qmd
+            text: "0100. Tribus et espaces mesurables"
+          - href: probabilités/0110. lemme-de-factorisation-doob.md
+            text: "0110. Lemme de factorisation de Doob"
+          - href: probabilités/0120. nombres-transfinis-et-ordinaux.md
+            text: "0120. Nombres transfinis et ordinaux"
+          - href: probabilités/0121. strictité-de-la-hiérarchie-borélienne.md
+            text: "0121. Strictité de la hiérarchie borélienne"
+          - href: probabilités/0200.mesures-et-probabilités.md
+            text: "0200. Mesures et probabilités"
+      - section: "Notes"
+        contents:
+          - href: notes/1. representation-geometrie-et-resolution.md
+            text: "1. Representation geometrie et resolution"
+          - href: notes/2. mesurer-la-proximite.md
+            text: "2. Mesurer la proximite"
+          - href: notes/3. projection-orthogonale-et-produit-scalaire.md
+            text: "3. Projection orthogonale et produit scalaire"
+          - href: notes/4. variables-aléatoires.md
+            text: "4. Variables aleatoires"
+
+format:
+  html:
+    toc: true
+    number-sections: true
+    html-math-method: mathjax
+    theme: cosmo

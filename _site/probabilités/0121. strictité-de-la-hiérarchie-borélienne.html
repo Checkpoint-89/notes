@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>strictité-de-la-hiérarchie-borélienne – Notes</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../probabilités/0200.mesures-et-probabilités.html" rel="next">
+<link href="../probabilités/0120. nombres-transfinis-et-ordinaux.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-f670ab49fb9634e9dab58972b11477cb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Notes</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../probabilités/0000. syllabus.html">Probabilités</a></li><li class="breadcrumb-item"><a href="../probabilités/0121. strictité-de-la-hiérarchie-borélienne.html">0121. Strictité de la hiérarchie borélienne</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Probabilités</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0000. syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0100. tribus-et-espaces-mesurables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0100. Tribus et espaces mesurables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0110. lemme-de-factorisation-doob.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0110. Lemme de factorisation de Doob</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0120. nombres-transfinis-et-ordinaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0120. Nombres transfinis et ordinaux</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0121. strictité-de-la-hiérarchie-borélienne.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">0121. Strictité de la hiérarchie borélienne</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0200.mesures-et-probabilités.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0200. Mesures et probabilités</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Representation geometrie et resolution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/2. mesurer-la-proximite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Mesurer la proximite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Projection orthogonale et produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Variables aleatoires</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#strictité-de-la-hiérarchie-borélienne" id="toc-strictité-de-la-hiérarchie-borélienne" class="nav-link active" data-scroll-target="#strictité-de-la-hiérarchie-borélienne"><span class="header-section-number">1</span> Strictité de la hiérarchie borélienne</a>
+  <ul class="collapse">
+  <li><a href="#énoncé" id="toc-énoncé" class="nav-link" data-scroll-target="#énoncé"><span class="header-section-number">1.1</span> Énoncé</a></li>
+  <li><a href="#la-notation-sigma0_alpha-pi0_alpha" id="toc-la-notation-sigma0_alpha-pi0_alpha" class="nav-link" data-scroll-target="#la-notation-sigma0_alpha-pi0_alpha"><span class="header-section-number">1.2</span> La notation <span class="math inline">\(\Sigma^0_\alpha\)</span>, <span class="math inline">\(\Pi^0_\alpha\)</span></a></li>
+  <li><a href="#ensembles-universels" id="toc-ensembles-universels" class="nav-link" data-scroll-target="#ensembles-universels"><span class="header-section-number">1.3</span> Ensembles universels</a>
+  <ul class="collapse">
+  <li><a href="#définition" id="toc-définition" class="nav-link" data-scroll-target="#définition"><span class="header-section-number">1.3.1</span> Définition</a></li>
+  <li><a href="#existence" id="toc-existence" class="nav-link" data-scroll-target="#existence"><span class="header-section-number">1.3.2</span> Existence</a></li>
+  </ul></li>
+  <li><a href="#largument-diagonal" id="toc-largument-diagonal" class="nav-link" data-scroll-target="#largument-diagonal"><span class="header-section-number">1.4</span> L’argument diagonal</a></li>
+  <li><a href="#exemples-concrets-aux-premiers-niveaux" id="toc-exemples-concrets-aux-premiers-niveaux" class="nav-link" data-scroll-target="#exemples-concrets-aux-premiers-niveaux"><span class="header-section-number">1.5</span> Exemples concrets aux premiers niveaux</a></li>
+  <li><a href="#application-bigcup_n-mathcale_n-nest-pas-une-σ-algèbre" id="toc-application-bigcup_n-mathcale_n-nest-pas-une-σ-algèbre" class="nav-link" data-scroll-target="#application-bigcup_n-mathcale_n-nest-pas-une-σ-algèbre"><span class="header-section-number">1.6</span> Application : <span class="math inline">\(\bigcup_n \mathcal{E}_n\)</span> n’est pas une σ-algèbre</a></li>
+  <li><a href="#conditions-de-validité-quand-sigmamathcale-nécessite-omega_1-étapes" id="toc-conditions-de-validité-quand-sigmamathcale-nécessite-omega_1-étapes" class="nav-link" data-scroll-target="#conditions-de-validité-quand-sigmamathcale-nécessite-omega_1-étapes"><span class="header-section-number">1.7</span> Conditions de validité : quand <span class="math inline">\(\sigma(\mathcal{E})\)</span> nécessite <span class="math inline">\(\omega_1\)</span> étapes</a>
+  <ul class="collapse">
+  <li><a href="#quand-la-hiérarchie-ne-nécessite-pas-omega_1-étapes" id="toc-quand-la-hiérarchie-ne-nécessite-pas-omega_1-étapes" class="nav-link" data-scroll-target="#quand-la-hiérarchie-ne-nécessite-pas-omega_1-étapes"><span class="header-section-number">1.7.1</span> Quand la hiérarchie ne nécessite pas <span class="math inline">\(\omega_1\)</span> étapes</a></li>
+  </ul></li>
+  <li><a href="#remarque-pratique" id="toc-remarque-pratique" class="nav-link" data-scroll-target="#remarque-pratique"><span class="header-section-number">1.8</span> Remarque pratique</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../probabilités/0000. syllabus.html">Probabilités</a></li><li class="breadcrumb-item"><a href="../probabilités/0121. strictité-de-la-hiérarchie-borélienne.html">0121. Strictité de la hiérarchie borélienne</a></li></ol></nav></header>
+
+
+
+
+<section id="strictité-de-la-hiérarchie-borélienne" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Strictité de la hiérarchie borélienne</h1>
+<section id="énoncé" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="énoncé"><span class="header-section-number">1.1</span> Énoncé</h2>
+<p>Soit <span class="math inline">\(\Omega\)</span> un <strong>espace polonais non dénombrable</strong> (espace topologique séparable et complètement métrisable — par exemple <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\(\mathbb{R}^n\)</span>, <span class="math inline">\([0,1]\)</span>, <span class="math inline">\(\mathbb{R}^\mathbb{N}\)</span>, tout espace de Banach séparable) et <span class="math inline">\(\mathcal{E}\)</span> la famille des ouverts. On construit la hiérarchie <span class="math inline">\((\mathcal{E}_\alpha)_{\alpha &lt; \omega_1}\)</span> par récurrence transfinite (cf.&nbsp;note 012) :</p>
+<p><span class="math display">\[\mathcal{E}_0 = \mathcal{E} \cup \{\emptyset, \Omega\}, \qquad \mathcal{E}_{\alpha+1} = \text{complémentaires et unions dénombrables d'éléments de } \mathcal{E}_\alpha, \qquad \mathcal{E}_\lambda = \bigcup_{\alpha &lt; \lambda} \mathcal{E}_\alpha\]</span></p>
+<p><strong>Théorème.</strong> La hiérarchie est <strong>stricte</strong> : <span class="math inline">\(\mathcal{E}_\alpha \subsetneq \mathcal{E}_{\alpha+1}\)</span> pour tout <span class="math inline">\(\alpha &lt; \omega_1\)</span>.</p>
+<p>La preuve utilise le même ressort que la preuve de Cantor de l’indénombrabilité de <span class="math inline">\(\mathbb{R}\)</span> : on construit un objet qui, par construction, ne peut pas figurer dans la liste. On illustre sur <span class="math inline">\(\Omega = \mathbb{R}\)</span>.</p>
+</section>
+<section id="la-notation-sigma0_alpha-pi0_alpha" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="la-notation-sigma0_alpha-pi0_alpha"><span class="header-section-number">1.2</span> La notation <span class="math inline">\(\Sigma^0_\alpha\)</span>, <span class="math inline">\(\Pi^0_\alpha\)</span></h2>
+<p>Les premiers niveaux de la hiérarchie ont des noms classiques :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Niveau</th>
+<th>Notation</th>
+<th>Contenu</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td><span class="math inline">\(\Sigma^0_1\)</span></td>
+<td>Ouverts</td>
+</tr>
+<tr class="even">
+<td>0 (dual)</td>
+<td><span class="math inline">\(\Pi^0_1\)</span></td>
+<td>Fermés (= complémentaires d’ouverts)</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td><span class="math inline">\(\Sigma^0_2\)</span></td>
+<td><span class="math inline">\(F_\sigma\)</span> : unions dénombrables de fermés</td>
+</tr>
+<tr class="even">
+<td>1 (dual)</td>
+<td><span class="math inline">\(\Pi^0_2\)</span></td>
+<td><span class="math inline">\(G_\delta\)</span> : intersections dénombrables d’ouverts</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td><span class="math inline">\(\Sigma^0_3\)</span></td>
+<td><span class="math inline">\(G_{\delta\sigma}\)</span> : unions dénombrables de <span class="math inline">\(G_\delta\)</span></td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\alpha\)</span></td>
+<td><span class="math inline">\(\Sigma^0_{\alpha+1}\)</span></td>
+<td>Unions dénombrables d’éléments de <span class="math inline">\(\Pi^0_\alpha\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\alpha\)</span> (dual)</td>
+<td><span class="math inline">\(\Pi^0_{\alpha+1}\)</span></td>
+<td>Complémentaires des <span class="math inline">\(\Sigma^0_{\alpha+1}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>À chaque niveau, <span class="math inline">\(\Sigma^0_\alpha\)</span> est la « moitié union » et <span class="math inline">\(\Pi^0_\alpha\)</span> la « moitié complémentaire ». L’ensemble <span class="math inline">\(\mathcal{E}_\alpha\)</span> contient à la fois <span class="math inline">\(\Sigma^0_\alpha\)</span> et <span class="math inline">\(\Pi^0_\alpha\)</span>.</p>
+</section>
+<section id="ensembles-universels" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="ensembles-universels"><span class="header-section-number">1.3</span> Ensembles universels</h2>
+<section id="définition" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="définition"><span class="header-section-number">1.3.1</span> Définition</h3>
+<p>Pour chaque <span class="math inline">\(\alpha &lt; \omega_1\)</span>, il existe un ensemble <span class="math inline">\(U_\alpha \subseteq \mathbb{R} \times \mathbb{R}\)</span>, lui-même de classe <span class="math inline">\(\Sigma^0_\alpha\)</span>, qui <strong>paramétrise</strong> toute la classe : pour tout <span class="math inline">\(A \in \Sigma^0_\alpha(\mathbb{R})\)</span>, il existe <span class="math inline">\(y \in \mathbb{R}\)</span> tel que</p>
+<p><span class="math display">\[A = \{x \in \mathbb{R} : (x, y) \in U_\alpha\}\]</span></p>
+<p>On dit que <span class="math inline">\(U_\alpha\)</span> est <strong>universel</strong> pour <span class="math inline">\(\Sigma^0_\alpha\)</span>. Intuitivement, c’est un catalogue : chaque « tranche » <span class="math inline">\((U_\alpha)_y = \{x : (x,y) \in U_\alpha\}\)</span> est un ensemble de la classe, et tout ensemble de la classe apparaît comme tranche.</p>
+</section>
+<section id="existence" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="existence"><span class="header-section-number">1.3.2</span> Existence</h3>
+<p>La clé : les ensembles boréliens admettent des descriptions <em>dénombrables</em> — on peut les « coder » par un réel.</p>
+<p><strong>Niveau de base : les ouverts (<span class="math inline">\(\alpha = 1\)</span>).</strong> Tout ouvert de <span class="math inline">\(\mathbb{R}\)</span> est une union dénombrable d’intervalles à bornes rationnelles, donc décrit par un sous-ensemble de <span class="math inline">\(\mathbb{Q} \times \mathbb{Q}\)</span> (les paires de bornes), qu’on encode par un réel <span class="math inline">\(y\)</span>. L’ensemble <span class="math inline">\(U_1 = \{(x, y) : x \in O_y\}\)</span> (où <span class="math inline">\(O_y\)</span> est l’ouvert codé par <span class="math inline">\(y\)</span>) est ouvert dans <span class="math inline">\(\mathbb{R}^2\)</span> et universel pour les ouverts.</p>
+<p><strong>Récurrence transfinite.</strong> Un ensemble de niveau <span class="math inline">\(\alpha + 1\)</span> est construit à partir d’une suite dénombrable d’ensembles de niveau <span class="math inline">\(\alpha\)</span>, chacun codé par un réel via l’universel <span class="math inline">\(U_\alpha\)</span>. Il suffit de coder une suite de réels par un seul réel (par entrelacement des décimales), et l’ensemble universel <span class="math inline">\(U_{\alpha+1}\)</span> se construit à partir de <span class="math inline">\(U_\alpha\)</span>.</p>
+</section>
+</section>
+<section id="largument-diagonal" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="largument-diagonal"><span class="header-section-number">1.4</span> L’argument diagonal</h2>
+<p>Fixons <span class="math inline">\(\alpha &lt; \omega_1\)</span> et soit <span class="math inline">\(U_\alpha\)</span> un ensemble universel pour <span class="math inline">\(\Sigma^0_\alpha\)</span>. Posons :</p>
+<p><span class="math display">\[D_\alpha = \{x \in \mathbb{R} : (x, x) \notin U_\alpha\}\]</span></p>
+<p>L’application <span class="math inline">\(x \mapsto (x, x)\)</span> est continue, et les classes <span class="math inline">\(\Sigma^0_\alpha\)</span> sont stables par image réciproque continue. Donc <span class="math inline">\(\{x : (x,x) \in U_\alpha\} \in \Sigma^0_\alpha\)</span>, et son complémentaire <span class="math inline">\(D_\alpha \in \Pi^0_\alpha\)</span>.</p>
+<p>Mais <span class="math inline">\(D_\alpha \notin \Sigma^0_\alpha\)</span>. En effet, supposons <span class="math inline">\(D_\alpha \in \Sigma^0_\alpha\)</span>. Par universalité, <span class="math inline">\(D_\alpha = (U_\alpha)_{y_0}\)</span> pour un certain <span class="math inline">\(y_0 \in \mathbb{R}\)</span>. Alors :</p>
+<p><span class="math display">\[y_0 \in D_\alpha \iff (y_0, y_0) \notin U_\alpha \iff y_0 \notin (U_\alpha)_{y_0} = D_\alpha\]</span></p>
+<p>Contradiction : <span class="math inline">\(y_0 \in D_\alpha \iff y_0 \notin D_\alpha\)</span>. Donc <span class="math inline">\(D_\alpha \in \Pi^0_\alpha \setminus \Sigma^0_\alpha\)</span>.</p>
+<p>En particulier, <span class="math inline">\(D_\alpha \in \mathcal{E}_{\alpha+1} \setminus \mathcal{E}_\alpha\)</span> : <strong>chaque niveau apporte genuinement de nouveaux ensembles</strong>.</p>
+</section>
+<section id="exemples-concrets-aux-premiers-niveaux" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="exemples-concrets-aux-premiers-niveaux"><span class="header-section-number">1.5</span> Exemples concrets aux premiers niveaux</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Niveau</th>
+<th>Exemple d’ensemble genuinement nouveau</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\Pi^0_1\)</span> (fermés)</td>
+<td><span class="math inline">\(\{x\}\)</span> : fermé mais pas ouvert</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Pi^0_2\)</span> (<span class="math inline">\(G_\delta\)</span>)</td>
+<td><span class="math inline">\(\mathbb{R} \setminus \mathbb{Q}\)</span> : intersection dénombrable d’ouverts, mais ni ouvert ni fermé</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\Sigma^0_2\)</span> (<span class="math inline">\(F_\sigma\)</span>)</td>
+<td><span class="math inline">\(\mathbb{Q}\)</span> : union dénombrable de fermés <span class="math inline">\(\{q\}\)</span>, mais pas <span class="math inline">\(G_\delta\)</span> (par le théorème de Baire)</td>
+</tr>
+</tbody>
+</table>
+<p>À partir du niveau 3, les exemples explicites deviennent plus techniques, mais l’argument de diagonalisation garantit l’existence d’ensembles nouveaux à chaque niveau. Les <span class="math inline">\(\omega_1\)</span> étapes sont <strong>toutes nécessaires</strong> : aucune ne peut être sautée.</p>
+</section>
+<section id="application-bigcup_n-mathcale_n-nest-pas-une-σ-algèbre" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="application-bigcup_n-mathcale_n-nest-pas-une-σ-algèbre"><span class="header-section-number">1.6</span> Application : <span class="math inline">\(\bigcup_n \mathcal{E}_n\)</span> n’est pas une σ-algèbre</h2>
+<p>En appliquant l’argument diagonal avec <span class="math inline">\(\alpha = \omega\)</span> (la réunion de tous les niveaux finis), on obtient <span class="math inline">\(D_\omega \in \mathcal{E}_{\omega+1} \setminus \mathcal{E}_\omega\)</span>. Or <span class="math inline">\(\mathcal{E}_\omega = \bigcup_n \mathcal{E}_n\)</span> et <span class="math inline">\(\mathcal{E}_{\omega+1}\)</span> contient les complémentaires et unions dénombrables d’éléments de <span class="math inline">\(\mathcal{E}_\omega\)</span>. Donc il existe des unions dénombrables d’éléments de <span class="math inline">\(\bigcup_n \mathcal{E}_n\)</span> qui n’appartiennent à aucun <span class="math inline">\(\mathcal{E}_m\)</span> : la collection <span class="math inline">\(\bigcup_n \mathcal{E}_n\)</span> n’est pas une σ-algèbre. Le même phénomène se reproduit à chaque niveau — d’où le besoin des ordinaux (cf.&nbsp;note 012).</p>
+</section>
+<section id="conditions-de-validité-quand-sigmamathcale-nécessite-omega_1-étapes" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="conditions-de-validité-quand-sigmamathcale-nécessite-omega_1-étapes"><span class="header-section-number">1.7</span> Conditions de validité : quand <span class="math inline">\(\sigma(\mathcal{E})\)</span> nécessite <span class="math inline">\(\omega_1\)</span> étapes</h2>
+<p>La preuve repose sur deux ingrédients, chacun lié à une hypothèse sur <span class="math inline">\((\Omega, \mathcal{E})\)</span> :</p>
+<ol type="1">
+<li><p><strong>Codage dénombrable</strong> (→ existence d’ensembles universels). Il faut pouvoir décrire chaque générateur par un objet dénombrable, c’est-à-dire le « coder » par un réel. C’est ce que garantit la <strong>séparabilité</strong> : un espace polonais possède une base dénombrable d’ouverts, et tout ouvert est union dénombrable d’éléments de cette base. Ce codage se propage à tous les niveaux par récurrence.</p></li>
+<li><p><strong>Diagonalisation</strong> (→ strictité). Il faut que l’espace des codes soit assez riche pour qu’on puisse évaluer la diagonale <span class="math inline">\(x \mapsto (x,x)\)</span> sur tout l’espace. C’est l’<strong>indénombrabilité</strong> de <span class="math inline">\(\Omega\)</span> qui le fournit : sur un espace dénombrable, toute famille de parties est au plus de puissance <span class="math inline">\(2^{\aleph_0}\)</span>, mais la paramétrisation par <span class="math inline">\(\Omega\)</span> ne couvre pas assez de points pour permettre la contradiction diagonale.</p></li>
+</ol>
+<p>La condition précise est donc :</p>
+<blockquote class="blockquote">
+<p>La hiérarchie <span class="math inline">\(\sigma(\mathcal{E})\)</span> nécessite exactement <span class="math inline">\(\omega_1\)</span> étapes <strong>si et seulement si</strong> <span class="math inline">\(\Omega\)</span> est un espace polonais <strong>non dénombrable</strong> et <span class="math inline">\(\mathcal{E}\)</span> engendre la tribu borélienne de <span class="math inline">\(\Omega\)</span>.</p>
+</blockquote>
+<p>Toute famille <span class="math inline">\(\mathcal{E}\)</span> engendrant la même tribu (ouverts, fermés, compacts, intervalles à bornes rationnelles, etc.) donne la même hiérarchie stricte — seule compte la tribu engendrée, pas le choix des générateurs.</p>
+<section id="quand-la-hiérarchie-ne-nécessite-pas-omega_1-étapes" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="quand-la-hiérarchie-ne-nécessite-pas-omega_1-étapes"><span class="header-section-number">1.7.1</span> Quand la hiérarchie ne nécessite pas <span class="math inline">\(\omega_1\)</span> étapes</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Situation</th>
+<th>Stabilisation</th>
+<th>Raison</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\Omega\)</span> fini</td>
+<td>En un nombre fini d’étapes</td>
+<td><span class="math inline">\(\mathcal{P}(\Omega)\)</span> est fini</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Omega = \mathbb{N}\)</span> (topologie discrète)</td>
+<td>En 0 étapes</td>
+<td>Tout singleton est ouvert, donc <span class="math inline">\(\Sigma^0_1 = \mathcal{P}(\Omega)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\Omega = \mathbb{Q}\)</span> (topologie usuelle)</td>
+<td>En 2 étapes</td>
+<td>Tout sous-ensemble est <span class="math inline">\(F_\sigma\)</span> (union dénombrable de singletons fermés)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathcal{E}\)</span> déjà une σ-algèbre</td>
+<td>En 0 étapes</td>
+<td>Rien à construire</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathcal{E} = \{\{x\} : x \in \mathbb{R}\}\)</span> (singletons)</td>
+<td>En 2 étapes</td>
+<td><span class="math inline">\(\sigma(\mathcal{E})\)</span> = tribu co-dénombrable, pas la tribu borélienne</td>
+</tr>
+</tbody>
+</table>
+<p>Dans tous ces cas, le codage dénombrable ou la diagonalisation échoue : soit l’espace est trop petit, soit <span class="math inline">\(\mathcal{E}\)</span> engendre une tribu plus pauvre que les boréliens.</p>
+</section>
+</section>
+<section id="remarque-pratique" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="remarque-pratique"><span class="header-section-number">1.8</span> Remarque pratique</h2>
+<p>En probabilités et en analyse courante, on ne rencontre presque jamais de boréliens au-delà des premiers niveaux. Les ensembles qu’on manipule (ouverts, fermés, <span class="math inline">\(G_\delta\)</span>, <span class="math inline">\(F_\sigma\)</span>) vivent dans les tout premiers niveaux. Le fait que la construction nécessite <span class="math inline">\(\omega_1\)</span> étapes est un phénomène de théorie des ensembles, pas d’analyse appliquée.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../probabilités/0120. nombres-transfinis-et-ordinaux.html" class="pagination-link" aria-label="0120. Nombres transfinis et ordinaux">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">0120. Nombres transfinis et ordinaux</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../probabilités/0200.mesures-et-probabilités.html" class="pagination-link" aria-label="0200. Mesures et probabilités">
+        <span class="nav-page-text">0200. Mesures et probabilités</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

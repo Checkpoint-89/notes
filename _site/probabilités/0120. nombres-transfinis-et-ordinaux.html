@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>nombres-transfinis-et-ordinaux – Notes</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../probabilités/0121. strictité-de-la-hiérarchie-borélienne.html" rel="next">
+<link href="../probabilités/0110. lemme-de-factorisation-doob.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-f670ab49fb9634e9dab58972b11477cb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Notes</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../probabilités/0000. syllabus.html">Probabilités</a></li><li class="breadcrumb-item"><a href="../probabilités/0120. nombres-transfinis-et-ordinaux.html">0120. Nombres transfinis et ordinaux</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Probabilités</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0000. syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0100. tribus-et-espaces-mesurables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0100. Tribus et espaces mesurables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0110. lemme-de-factorisation-doob.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0110. Lemme de factorisation de Doob</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0120. nombres-transfinis-et-ordinaux.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">0120. Nombres transfinis et ordinaux</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0121. strictité-de-la-hiérarchie-borélienne.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0121. Strictité de la hiérarchie borélienne</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0200.mesures-et-probabilités.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0200. Mesures et probabilités</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Representation geometrie et resolution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/2. mesurer-la-proximite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Mesurer la proximite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Projection orthogonale et produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Variables aleatoires</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#nombres-transfinis-et-ordinaux" id="toc-nombres-transfinis-et-ordinaux" class="nav-link active" data-scroll-target="#nombres-transfinis-et-ordinaux"><span class="header-section-number">1</span> Nombres transfinis et ordinaux</a>
+  <ul class="collapse">
+  <li><a href="#ordres-et-bons-ordres" id="toc-ordres-et-bons-ordres" class="nav-link" data-scroll-target="#ordres-et-bons-ordres"><span class="header-section-number">1.1</span> 1. Ordres et bons ordres</a>
+  <ul class="collapse">
+  <li><a href="#ordre-total" id="toc-ordre-total" class="nav-link" data-scroll-target="#ordre-total"><span class="header-section-number">1.1.1</span> Ordre total</a></li>
+  <li><a href="#isomorphisme-et-type-dordre" id="toc-isomorphisme-et-type-dordre" class="nav-link" data-scroll-target="#isomorphisme-et-type-dordre"><span class="header-section-number">1.1.2</span> Isomorphisme et type d’ordre</a></li>
+  <li><a href="#bon-ordre" id="toc-bon-ordre" class="nav-link" data-scroll-target="#bon-ordre"><span class="header-section-number">1.1.3</span> Bon ordre</a></li>
+  <li><a href="#exemples" id="toc-exemples" class="nav-link" data-scroll-target="#exemples"><span class="header-section-number">1.1.4</span> Exemples</a></li>
+  </ul></li>
+  <li><a href="#les-ordinaux" id="toc-les-ordinaux" class="nav-link" data-scroll-target="#les-ordinaux"><span class="header-section-number">1.2</span> 2. Les ordinaux</a>
+  <ul class="collapse">
+  <li><a href="#le-problème-représenter-les-types-dordre" id="toc-le-problème-représenter-les-types-dordre" class="nav-link" data-scroll-target="#le-problème-représenter-les-types-dordre"><span class="header-section-number">1.2.1</span> Le problème : représenter les types d’ordre</a></li>
+  <li><a href="#la-solution-la-convention-de-von-neumann" id="toc-la-solution-la-convention-de-von-neumann" class="nav-link" data-scroll-target="#la-solution-la-convention-de-von-neumann"><span class="header-section-number">1.2.2</span> La solution : la convention de von Neumann</a></li>
+  <li><a href="#définition" id="toc-définition" class="nav-link" data-scroll-target="#définition"><span class="header-section-number">1.2.3</span> Définition</a></li>
+  <li><a href="#au-delà-des-entiers-les-nombres-transfinis" id="toc-au-delà-des-entiers-les-nombres-transfinis" class="nav-link" data-scroll-target="#au-delà-des-entiers-les-nombres-transfinis"><span class="header-section-number">1.2.4</span> Au-delà des entiers : les nombres transfinis</a></li>
+  <li><a href="#successeurs-et-limites" id="toc-successeurs-et-limites" class="nav-link" data-scroll-target="#successeurs-et-limites"><span class="header-section-number">1.2.5</span> Successeurs et limites</a></li>
+  </ul></li>
+  <li><a href="#ordinaux-et-bons-ordres" id="toc-ordinaux-et-bons-ordres" class="nav-link" data-scroll-target="#ordinaux-et-bons-ordres"><span class="header-section-number">1.3</span> 3. Ordinaux et bons ordres</a>
+  <ul class="collapse">
+  <li><a href="#théorème-de-classification" id="toc-théorème-de-classification" class="nav-link" data-scroll-target="#théorème-de-classification"><span class="header-section-number">1.3.1</span> Théorème de classification</a></li>
+  <li><a href="#ordinaux-dénombrables-comme-bons-ordres-sur-mathbbn" id="toc-ordinaux-dénombrables-comme-bons-ordres-sur-mathbbn" class="nav-link" data-scroll-target="#ordinaux-dénombrables-comme-bons-ordres-sur-mathbbn"><span class="header-section-number">1.3.2</span> Ordinaux dénombrables comme bons ordres sur <span class="math inline">\(\mathbb{N}\)</span></a></li>
+  </ul></li>
+  <li><a href="#le-premier-ordinal-indénombrable-omega_1" id="toc-le-premier-ordinal-indénombrable-omega_1" class="nav-link" data-scroll-target="#le-premier-ordinal-indénombrable-omega_1"><span class="header-section-number">1.4</span> 4. Le premier ordinal indénombrable : <span class="math inline">\(\omega_1\)</span></a>
+  <ul class="collapse">
+  <li><a href="#définition-1" id="toc-définition-1" class="nav-link" data-scroll-target="#définition-1"><span class="header-section-number">1.4.1</span> Définition</a></li>
+  <li><a href="#pourquoi-omega_1-est-indénombrable" id="toc-pourquoi-omega_1-est-indénombrable" class="nav-link" data-scroll-target="#pourquoi-omega_1-est-indénombrable"><span class="header-section-number">1.4.2</span> Pourquoi <span class="math inline">\(\omega_1\)</span> est indénombrable</a></li>
+  <li><a href="#la-clé-stabilité-par-supremum-dénombrable" id="toc-la-clé-stabilité-par-supremum-dénombrable" class="nav-link" data-scroll-target="#la-clé-stabilité-par-supremum-dénombrable"><span class="header-section-number">1.4.3</span> La clé : stabilité par supremum dénombrable</a></li>
+  </ul></li>
+  <li><a href="#la-récurrence-transfinite" id="toc-la-récurrence-transfinite" class="nav-link" data-scroll-target="#la-récurrence-transfinite"><span class="header-section-number">1.5</span> 5. La récurrence transfinite</a>
+  <ul class="collapse">
+  <li><a href="#récurrence-ordinaire" id="toc-récurrence-ordinaire" class="nav-link" data-scroll-target="#récurrence-ordinaire"><span class="header-section-number">1.5.1</span> Récurrence ordinaire</a></li>
+  <li><a href="#récurrence-transfinite" id="toc-récurrence-transfinite" class="nav-link" data-scroll-target="#récurrence-transfinite"><span class="header-section-number">1.5.2</span> Récurrence transfinite</a></li>
+  </ul></li>
+  <li><a href="#application-construction-de-sigmamathcale" id="toc-application-construction-de-sigmamathcale" class="nav-link" data-scroll-target="#application-construction-de-sigmamathcale"><span class="header-section-number">1.6</span> 6. Application : construction de <span class="math inline">\(\sigma(\mathcal{E})\)</span></a>
+  <ul class="collapse">
+  <li><a href="#le-problème" id="toc-le-problème" class="nav-link" data-scroll-target="#le-problème"><span class="header-section-number">1.6.1</span> Le problème</a></li>
+  <li><a href="#strictité-de-la-hiérarchie-et-conclusion" id="toc-strictité-de-la-hiérarchie-et-conclusion" class="nav-link" data-scroll-target="#strictité-de-la-hiérarchie-et-conclusion"><span class="header-section-number">1.6.2</span> Strictité de la hiérarchie et conclusion</a></li>
+  <li><a href="#la-construction-transfinite" id="toc-la-construction-transfinite" class="nav-link" data-scroll-target="#la-construction-transfinite"><span class="header-section-number">1.6.3</span> La construction transfinite</a></li>
+  <li><a href="#pourquoi-mathcalf-est-une-σ-algèbre" id="toc-pourquoi-mathcalf-est-une-σ-algèbre" class="nav-link" data-scroll-target="#pourquoi-mathcalf-est-une-σ-algèbre"><span class="header-section-number">1.6.4</span> Pourquoi <span class="math inline">\(\mathcal{F}\)</span> est une σ-algèbre</a></li>
+  <li><a href="#pourquoi-ça-ne-marchait-pas-avant" id="toc-pourquoi-ça-ne-marchait-pas-avant" class="nav-link" data-scroll-target="#pourquoi-ça-ne-marchait-pas-avant"><span class="header-section-number">1.6.5</span> Pourquoi ça ne marchait pas avant</a></li>
+  <li><a href="#pourquoi-mathcalf-sigmamathcale" id="toc-pourquoi-mathcalf-sigmamathcale" class="nav-link" data-scroll-target="#pourquoi-mathcalf-sigmamathcale"><span class="header-section-number">1.6.6</span> Pourquoi <span class="math inline">\(\mathcal{F} = \sigma(\mathcal{E})\)</span></a></li>
+  </ul></li>
+  <li><a href="#la-hiérarchie-borélienne" id="toc-la-hiérarchie-borélienne" class="nav-link" data-scroll-target="#la-hiérarchie-borélienne"><span class="header-section-number">1.7</span> 7. La hiérarchie borélienne</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../probabilités/0000. syllabus.html">Probabilités</a></li><li class="breadcrumb-item"><a href="../probabilités/0120. nombres-transfinis-et-ordinaux.html">0120. Nombres transfinis et ordinaux</a></li></ol></nav></header>
+
+
+
+
+<section id="nombres-transfinis-et-ordinaux" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Nombres transfinis et ordinaux</h1>
+<section id="ordres-et-bons-ordres" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="ordres-et-bons-ordres"><span class="header-section-number">1.1</span> 1. Ordres et bons ordres</h2>
+<section id="ordre-total" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="ordre-total"><span class="header-section-number">1.1.1</span> Ordre total</h3>
+<p>Un <strong>ordre total</strong> sur un ensemble <span class="math inline">\(E\)</span> est une relation <span class="math inline">\(\leq\)</span> réflexive, antisymétrique, transitive, et telle que pour tous <span class="math inline">\(a, b \in E\)</span>, on a <span class="math inline">\(a \leq b\)</span> ou <span class="math inline">\(b \leq a\)</span>.</p>
+</section>
+<section id="isomorphisme-et-type-dordre" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="isomorphisme-et-type-dordre"><span class="header-section-number">1.1.2</span> Isomorphisme et type d’ordre</h3>
+<p>Deux ensembles ordonnés <span class="math inline">\((E, \leq_E)\)</span> et <span class="math inline">\((F, \leq_F)\)</span> sont <strong>isomorphes</strong> s’il existe une bijection <span class="math inline">\(f : E \to F\)</span> qui préserve l’ordre : <span class="math inline">\(a \leq_E b \iff f(a) \leq_F f(b)\)</span>.</p>
+<p>Le <strong>type d’ordre</strong> d’un ensemble ordonné est sa « forme » indépendamment des éléments concrets : <span class="math inline">\(\{a, b, c\}\)</span> avec <span class="math inline">\(a &lt; b &lt; c\)</span> et <span class="math inline">\(\{7, 42, 100\}\)</span> avec <span class="math inline">\(7 &lt; 42 &lt; 100\)</span> ont le même type d’ordre — trois éléments en ligne. Formellement, c’est la classe d’équivalence pour la relation d’isomorphisme : deux ordres ont le même type d’ordre si et seulement s’ils sont isomorphes.</p>
+</section>
+<section id="bon-ordre" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="bon-ordre"><span class="header-section-number">1.1.3</span> Bon ordre</h3>
+<p>Un ordre total ne suffit pas pour faire de la récurrence. Le raisonnement par récurrence suppose aussi un « premier » élément sur lequel débuter la récurrence. La notion de bon ordre garantit l’existence de celui-ci.</p>
+<p>Un <strong>bon ordre</strong> sur <span class="math inline">\(E\)</span> est un ordre total tel que <strong>toute partie non vide de <span class="math inline">\(E\)</span> a un plus petit élément</strong>.</p>
+</section>
+<section id="exemples" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="exemples"><span class="header-section-number">1.1.4</span> Exemples</h3>
+<ul>
+<li>L’ordre habituel sur <span class="math inline">\(\mathbb{N}\)</span> (<span class="math inline">\(0 &lt; 1 &lt; 2 &lt; \ldots\)</span>) est un bon ordre.</li>
+<li>L’ordre habituel sur <span class="math inline">\(\mathbb{Z}\)</span> n’en est <strong>pas</strong> un : <span class="math inline">\(\mathbb{Z}\)</span> n’a pas de minimum.</li>
+<li>L’ordre <span class="math inline">\(1, 3, 5, 7, \ldots, 0, 2, 4, 6, \ldots\)</span> (impairs croissants, puis pairs croissants) <strong>est</strong> un bon ordre sur <span class="math inline">\(\mathbb{N}\)</span> — mais il est structurellement différent de l’ordre habituel : il a « deux blocs infinis bout à bout ».</li>
+</ul>
+</section>
+</section>
+<section id="les-ordinaux" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="les-ordinaux"><span class="header-section-number">1.2</span> 2. Les ordinaux</h2>
+<section id="le-problème-représenter-les-types-dordre" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="le-problème-représenter-les-types-dordre"><span class="header-section-number">1.2.1</span> Le problème : représenter les types d’ordre</h3>
+<p>Chaque bon ordre a un type d’ordre. On voudrait un <strong>représentant canonique</strong> pour chaque type — un objet concret qui incarne la « forme » du bon ordre, et avec lequel on puisse travailler.<br>
+L’idée naturelle serait de prendre la classe d’équivalence elle-même : le type d’ordre de <span class="math inline">\((\mathbb{N}, \leq)\)</span> serait « la collection de tous les bons ordres isomorphes à <span class="math inline">\((\mathbb{N}, \leq)\)</span> ». Mais cette collection est <strong>trop vaste</strong> pour être un ensemble.<br>
+En effet, on peut construire au moins autant de bons ordres isomorphes à <span class="math inline">\(\mathbb{N}\)</span> qu’il y a d’ensembles : pour chaque ensemble <span class="math inline">\(S\)</span>, on construit le bon ordre isomorphe à <span class="math inline">\((\mathbb{N}, \leq)\)</span> donné par <span class="math inline">\(S, \{S\}, \{S, \{S\}\}, \ldots\)</span> Cette collection de bons ordres contient autant d’éléments qu’il y a d’ensembles. Elle ne peut pas être un ensemble elle-même : si elle en était un, sa réunion contiendrait tout ensemble <span class="math inline">\(S\)</span> — ce serait « l’ensemble de tous les ensembles », dont l’existence mène à une contradiction (paradoxe de Russell).<br>
+En théorie des ensembles, on parle de <strong>classe propre</strong> : une collection descriptible par une formule, mais qui n’est pas un ensemble et ne peut donc pas servir d’élément dans d’autres constructions.</p>
+<p><strong>Pourquoi est-ce un problème ?</strong> En mathématiques modernes (axiomes <strong>ZFC</strong> : Zermelo–Fraenkel avec Choix), seuls les <strong>ensembles</strong> sont des objets manipulables — on peut les mettre dans d’autres ensembles, quantifier sur eux, leur appliquer les axiomes. Une classe propre ne peut servir ni d’élément, ni de point de départ d’une construction. Il faut donc trouver une autre façon de représenter les types d’ordre — par des <strong>ensembles ordinaires</strong>. C’est l’objet de la convention de von Neumann.</p>
+</section>
+<section id="la-solution-la-convention-de-von-neumann" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="la-solution-la-convention-de-von-neumann"><span class="header-section-number">1.2.2</span> La solution : la convention de von Neumann</h3>
+<p>Puisque les classes d’équivalence sont trop grosses, il faut trouver un moyen d’<strong>isoler un unique représentant</strong> par type d’ordre. L’idée de von Neumann : imposer deux contraintes — exiger que l’ordre soit porté par <span class="math inline">\(\in\)</span> et que l’ensemble soit <strong>transitif</strong> — si restrictives qu’il ne survit qu’un seul représentant par type d’ordre. On n’a alors plus besoin de la classe : on travaille directement avec ce représentant, qui est un ensemble ordinaire de ZFC.</p>
+<p>Un ensemble <span class="math inline">\(A\)</span> est <strong>transitif</strong> si tout élément de <span class="math inline">\(A\)</span> est aussi un sous-ensemble de <span class="math inline">\(A\)</span> : <span class="math inline">\(x \in A \Rightarrow x \subseteq A\)</span>.</p>
+<p>Concrètement, on identifie chaque entier naturel à l’ensemble de ses prédécesseurs :</p>
+<p><span class="math display">\[0 = \emptyset, \quad 1 = \{0\}, \quad 2 = \{0, 1\}, \quad 3 = \{0, 1, 2\}, \quad \ldots\]</span></p>
+<p>Chaque entier <span class="math inline">\(n\)</span> est un ensemble à <span class="math inline">\(n\)</span> éléments, et la relation <span class="math inline">\(\in\)</span> joue le rôle de <span class="math inline">\(&lt;\)</span> : <span class="math inline">\(n &lt; m\)</span> si et seulement si <span class="math inline">\(n \in m\)</span>.</p>
+<p><strong>Pourquoi l’unicité du représentant est garantie ?</strong> Parce que la transitivité force chaque élément à être exactement l’ensemble de ses prédécesseurs — il n’y a aucune liberté de choix. Le plus petit élément n’a pas de prédécesseur, donc c’est <span class="math inline">\(\emptyset\)</span>. Le suivant a un seul prédécesseur (<span class="math inline">\(\emptyset\)</span>), donc c’est <span class="math inline">\(\{\emptyset\}\)</span>. Le suivant a deux prédécesseurs (<span class="math inline">\(\emptyset\)</span> et <span class="math inline">\(\{\emptyset\}\)</span>), donc c’est <span class="math inline">\(\{\emptyset, \{\emptyset\}\}\)</span>. À chaque rang, l’élément est <strong>déterminé</strong> par ce qui précède. Deux ensembles transitifs bien ordonnés par <span class="math inline">\(\in\)</span> et isomorphes sont donc nécessairement égaux.</p>
+</section>
+<section id="définition" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="définition"><span class="header-section-number">1.2.3</span> Définition</h3>
+<p>Un <strong>ordinal</strong> est un ensemble <span class="math inline">\(\alpha\)</span> qui vérifie deux propriétés :</p>
+<ol type="1">
+<li><strong>Transitivité</strong> : <span class="math inline">\(\alpha\)</span> est un ensemble transitif (chaque élément est l’ensemble de ses prédécesseurs).</li>
+<li><strong>Bon ordre par <span class="math inline">\(\in\)</span></strong> : la relation <span class="math inline">\(\in\)</span> est un bon ordre sur les éléments de <span class="math inline">\(\alpha\)</span>.</li>
+</ol>
+<p>Les entiers de von Neumann sont des ordinaux : <span class="math inline">\(2 = \{0, 1\}\)</span> est transitif et bien ordonné par <span class="math inline">\(\in\)</span>. Chaque ordinal <strong>est</strong> un bon ordre — pas « isomorphe à » un bon ordre, mais littéralement un ensemble qui porte son bon ordre en lui (donné par <span class="math inline">\(\in\)</span>).</p>
+</section>
+<section id="au-delà-des-entiers-les-nombres-transfinis" class="level3" data-number="1.2.4">
+<h3 data-number="1.2.4" class="anchored" data-anchor-id="au-delà-des-entiers-les-nombres-transfinis"><span class="header-section-number">1.2.4</span> Au-delà des entiers : les nombres transfinis</h3>
+<p>Les ordinaux qui dépassent tous les entiers naturels sont appelés <strong>nombres transfinis</strong> (ou <strong>ordinaux transfinis</strong>). Le premier d’entre eux est :</p>
+<p><span class="math display">\[\omega = \{0, 1, 2, 3, \ldots\} = \mathbb{N}\]</span></p>
+<p>C’est l’ensemble de tous les entiers naturels. Il vient « après » tous les entiers : il n’est égal à aucun <span class="math inline">\(n\)</span>, mais contient chaque <span class="math inline">\(n\)</span>.</p>
+<p>Ensuite :</p>
+<ul>
+<li><span class="math inline">\(\omega + 1 = \{0, 1, 2, \ldots, \omega\}\)</span></li>
+<li><span class="math inline">\(\omega + 2 = \{0, 1, 2, \ldots, \omega, \omega{+}1\}\)</span></li>
+<li><span class="math inline">\(\omega \cdot 2 = \omega + \omega\)</span> : on met bout à bout deux copies de <span class="math inline">\(\mathbb{N}\)</span></li>
+</ul>
+<p>Et on continue :</p>
+<p><span class="math display">\[\omega \cdot 3, \quad \ldots, \quad \omega^2, \quad \ldots, \quad \omega^\omega, \quad \ldots, \quad \omega^{\omega^\omega}, \quad \ldots\]</span></p>
+<p>Chacun de ces ordinaux est <strong>dénombrable</strong> : même si sa structure d’ordre est plus riche que celle de <span class="math inline">\(\mathbb{N}\)</span>, il reste en bijection avec <span class="math inline">\(\mathbb{N}\)</span>.</p>
+</section>
+<section id="successeurs-et-limites" class="level3" data-number="1.2.5">
+<h3 data-number="1.2.5" class="anchored" data-anchor-id="successeurs-et-limites"><span class="header-section-number">1.2.5</span> Successeurs et limites</h3>
+<p>Tout ordinal <span class="math inline">\(\alpha &gt; 0\)</span> est de l’un des deux types :</p>
+<ul>
+<li><strong>Successeur</strong> : <span class="math inline">\(\alpha = \beta + 1\)</span> pour un certain <span class="math inline">\(\beta\)</span>. On l’obtient en ajoutant un élément « au bout ». Exemples : <span class="math inline">\(1, 2, 3, \ldots, \omega{+}1, \omega{+}2, \ldots\)</span></li>
+<li><strong>Limite</strong> : <span class="math inline">\(\alpha \neq 0\)</span> et <span class="math inline">\(\alpha\)</span> n’est le successeur d’aucun ordinal. Équivalemment, <span class="math inline">\(\alpha = \sup_{\beta &lt; \alpha} \beta\)</span>. Exemples : <span class="math inline">\(\omega, \omega \cdot 2, \omega^2, \omega^\omega, \ldots\)</span></li>
+</ul>
+<p>Un ordinal limite est comme un horizon : on peut s’en approcher indéfiniment sans jamais l’atteindre en un nombre fini de pas.</p>
+</section>
+</section>
+<section id="ordinaux-et-bons-ordres" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="ordinaux-et-bons-ordres"><span class="header-section-number">1.3</span> 3. Ordinaux et bons ordres</h2>
+<section id="théorème-de-classification" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="théorème-de-classification"><span class="header-section-number">1.3.1</span> Théorème de classification</h3>
+<p>Le résultat fondamental (démontrable dans ZFC) est :</p>
+<blockquote class="blockquote">
+<p><strong>Tout ensemble bien ordonné est isomorphe à exactement un ordinal.</strong></p>
+</blockquote>
+<p>Les ordinaux sont donc les <strong>représentants canoniques</strong> des bons ordres : au lieu de parler du bon ordre <span class="math inline">\(1, 3, 5, \ldots, 0, 2, 4, \ldots\)</span> sur <span class="math inline">\(\mathbb{N}\)</span>, on dit que c’est un bon ordre <strong>de type <span class="math inline">\(\omega \cdot 2\)</span></strong>, parce qu’il est isomorphe à l’ordinal <span class="math inline">\(\omega \cdot 2\)</span>. Deux bons ordres sont isomorphes si et seulement s’ils ont le même type ordinal.</p>
+</section>
+<section id="ordinaux-dénombrables-comme-bons-ordres-sur-mathbbn" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="ordinaux-dénombrables-comme-bons-ordres-sur-mathbbn"><span class="header-section-number">1.3.2</span> Ordinaux dénombrables comme bons ordres sur <span class="math inline">\(\mathbb{N}\)</span></h3>
+<p>Un ordinal dénombrable est, de manière équivalente, le type d’isomorphisme d’un bon ordre sur <span class="math inline">\(\mathbb{N}\)</span> (ou sur une partie de <span class="math inline">\(\mathbb{N}\)</span>). Quelques exemples :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bon ordre sur <span class="math inline">\(\mathbb{N}\)</span></th>
+<th>Type ordinal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(0, 1, 2, 3, \ldots\)</span> (ordre habituel)</td>
+<td><span class="math inline">\(\omega\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1, 3, 5, \ldots, 0, 2, 4, \ldots\)</span> (impairs puis pairs)</td>
+<td><span class="math inline">\(\omega \cdot 2\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(2, 4, 6, \ldots, 1, 5, 9, \ldots, 3, 7, 11, \ldots, 0\)</span> (trois blocs puis un dernier)</td>
+<td><span class="math inline">\(\omega \cdot 3 + 1\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="le-premier-ordinal-indénombrable-omega_1" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="le-premier-ordinal-indénombrable-omega_1"><span class="header-section-number">1.4</span> 4. Le premier ordinal indénombrable : <span class="math inline">\(\omega_1\)</span></h2>
+<section id="définition-1" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="définition-1"><span class="header-section-number">1.4.1</span> Définition</h3>
+<p>Tous les ordinaux listés ci-dessus (<span class="math inline">\(\omega, \omega^2, \omega^\omega\)</span>, …) sont <strong>dénombrables</strong> : ils sont en bijection avec <span class="math inline">\(\mathbb{N}\)</span>. Leur ensemble — la collection de <em>tous</em> les ordinaux dénombrables — s’appelle <span class="math inline">\(\omega_1\)</span>. C’est le <strong>premier ordinal indénombrable</strong>.</p>
+<p>Cette collection est bien un ensemble (et non une classe propre) précisément grâce à la convention de von Neumann. La démonstration s’appuie sur l’<strong>axiome de remplacement</strong> de ZFC qui garantit formellement que cette collection est un ensemble.</p>
+</section>
+<section id="pourquoi-omega_1-est-indénombrable" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="pourquoi-omega_1-est-indénombrable"><span class="header-section-number">1.4.2</span> Pourquoi <span class="math inline">\(\omega_1\)</span> est indénombrable</h3>
+<p>Supposons par l’absurde que l’on puisse lister tous les ordinaux dénombrables : <span class="math inline">\(\alpha_0, \alpha_1, \alpha_2, \ldots\)</span> Le supremum <span class="math inline">\(\beta = \sup_n \alpha_n\)</span> est une réunion dénombrable d’ordinaux dénombrables, donc <span class="math inline">\(\beta\)</span> est dénombrable. Alors <span class="math inline">\(\beta + 1\)</span> est aussi un ordinal dénombrable, et il est strictement plus grand que chaque <span class="math inline">\(\alpha_n\)</span> — il devrait donc figurer dans la liste, mais aucun <span class="math inline">\(\alpha_n\)</span> ne lui est égal. Contradiction.</p>
+</section>
+<section id="la-clé-stabilité-par-supremum-dénombrable" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="la-clé-stabilité-par-supremum-dénombrable"><span class="header-section-number">1.4.3</span> La clé : stabilité par supremum dénombrable</h3>
+<p>Le ressort de la preuve repose sur deux ingrédients simultanés :</p>
+<ol type="1">
+<li><strong>Croissance</strong> : le supremum d’une suite est strictement plus grand que chaque terme — il n’est pas déjà dans la liste.</li>
+<li><strong>Stabilité</strong> : un sup dénombrable d’ordinaux dénombrables est encore dénombrable — il ne sort pas de la catégorie.</li>
+</ol>
+<p>C’est la coexistence des deux qui crée la contradiction : le sup <strong>reste dans la catégorie</strong> mais <strong>dépasse tout ce qu’on a listé</strong>.</p>
+<p>Pourquoi le même argument ne marche-t-il pas pour les entiers ? Parce que la catégorie « ordinal fini » n’est <strong>pas stable</strong> par supremum dénombrable : <span class="math inline">\(\sup(0, 1, 2, \ldots) = \omega\)</span>, qui est infini. Le sup <strong>sort</strong> de la catégorie — pas de contradiction, et <span class="math inline">\(\omega\)</span> est simplement dénombrable.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Catégorie</th>
+<th>Stable par sup dénombrable ?</th>
+<th>Conséquence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ordinaux finis</td>
+<td><strong>Non</strong> : le sup sort (devient infini)</td>
+<td><span class="math inline">\(\omega\)</span> est dénombrable</td>
+</tr>
+<tr class="even">
+<td>Ordinaux dénombrables</td>
+<td><strong>Oui</strong> : le sup reste dénombrable</td>
+<td><span class="math inline">\(\omega_1\)</span> est indénombrable</td>
+</tr>
+</tbody>
+</table>
+<p>Ce schéma rappelle les <strong>raisonnements diagonaux</strong> : on construit un objet qui reste dans la classe considérée tout en échappant à toute liste supposée exhaustive.</p>
+</section>
+</section>
+<section id="la-récurrence-transfinite" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="la-récurrence-transfinite"><span class="header-section-number">1.5</span> 5. La récurrence transfinite</h2>
+<section id="récurrence-ordinaire" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="récurrence-ordinaire"><span class="header-section-number">1.5.1</span> Récurrence ordinaire</h3>
+<p>La récurrence sur <span class="math inline">\(\mathbb{N}\)</span> repose sur deux ingrédients :</p>
+<ol type="1">
+<li><strong>Cas de base</strong> : on définit l’objet au rang 0.</li>
+<li><strong>Cas successeur</strong> : connaissant l’objet au rang <span class="math inline">\(n\)</span>, on le définit au rang <span class="math inline">\(n+1\)</span>.</li>
+</ol>
+<p>Par le principe de récurrence, l’objet est défini pour tout <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+</section>
+<section id="récurrence-transfinite" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="récurrence-transfinite"><span class="header-section-number">1.5.2</span> Récurrence transfinite</h3>
+<p>La récurrence transfinite étend ce principe à tous les ordinaux, en ajoutant un troisième cas :</p>
+<ol type="1">
+<li><strong>Cas de base</strong> : on définit l’objet au rang 0.</li>
+<li><strong>Cas successeur</strong> : connaissant l’objet au rang <span class="math inline">\(\alpha\)</span>, on le définit au rang <span class="math inline">\(\alpha + 1\)</span>.</li>
+<li><strong>Cas limite</strong> : si <span class="math inline">\(\lambda\)</span> est un ordinal limite, et qu’on connaît l’objet à tous les rangs <span class="math inline">\(\alpha &lt; \lambda\)</span>, on le définit au rang <span class="math inline">\(\lambda\)</span>. En pratique, on fournit une seule règle uniforme pour tous les cas limites (par exemple « prendre l’union de tout ce qui précède ») — c’est la même formule partout, mais appliquée à des entrées de plus en plus riches.</li>
+</ol>
+<p>Le <strong>théorème de récurrence transfinie</strong> (démontrable dans ZFC) affirme que c’est suffisant pour définir l’objet à tout ordinal. Il ne dit pas qu’on « exécute » le processus étape par étape — il garantit l’existence et l’unicité de la construction à chaque rang.</p>
+<p>La récurrence transfinie est un outil purement <strong>ordinal</strong> : elle repose sur la structure d’ordre (quel élément vient après quel autre), pas sur la taille des ensembles. Les cardinaux ne portent pas d’ordre canonique — ℵ₀ dit qu’un ensemble a la taille de <span class="math inline">\(\mathbb{N}\)</span>, mais ne dit pas dans quel ordre le parcourir. Pour faire une récurrence, il faut un bon ordre, c’est-à-dire un ordinal.</p>
+</section>
+</section>
+<section id="application-construction-de-sigmamathcale" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="application-construction-de-sigmamathcale"><span class="header-section-number">1.6</span> 6. Application : construction de <span class="math inline">\(\sigma(\mathcal{E})\)</span></h2>
+<section id="le-problème" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="le-problème"><span class="header-section-number">1.6.1</span> Le problème</h3>
+<p>Soit <span class="math inline">\(\Omega\)</span> un ensemble et <span class="math inline">\(\mathcal{E}\)</span> une famille de parties de <span class="math inline">\(\Omega\)</span>. On veut construire <span class="math inline">\(\sigma(\mathcal{E})\)</span> — la plus petite σ-algèbre contenant <span class="math inline">\(\mathcal{E}\)</span> — « par le bas », en appliquant itérativement les opérations de complémentaire et d’union dénombrable.</p>
+<p>On part de <span class="math inline">\(\mathcal{E}_0 = \mathcal{E} \cup \{\emptyset, \Omega\}\)</span> et on pose <span class="math inline">\(\mathcal{E}_{n+1}\)</span> = la famille obtenue en prenant les complémentaires des éléments de <span class="math inline">\(\mathcal{E}_n\)</span> et les unions dénombrables de suites d’éléments de <span class="math inline">\(\mathcal{E}_n\)</span>. <strong>La question : <span class="math inline">\(\bigcup_{n \in \mathbb{N}} \mathcal{E}_n\)</span> est-elle une σ-algèbre ?</strong></p>
+<p><strong>Pas en général.</strong> L’enchaînement complémentaire puis union dénombrable puis complémentaire, etc., peut produire des ensembles genuinement nouveaux à chaque niveau. Cela dépend de <span class="math inline">\(\Omega\)</span> et de <span class="math inline">\(\mathcal{E}\)</span> :</p>
+<ul>
+<li><p>Sur <span class="math inline">\(\Omega = \{1,2,3,4\}\)</span> avec <span class="math inline">\(\mathcal{E} = \{\{1\}\}\)</span>, la hiérarchie stabilise dès l’étape 1 :<span class="math inline">\(\mathcal{E}_0 = \{\{1\}, \emptyset, \Omega\}\)</span> puis <span class="math inline">\(\mathcal{E}_1 = \{\emptyset, \{1\}, \{2,3,4\}, \Omega\}\)</span>. <span class="math inline">\(\mathcal{E}_1\)</span> est déjà stable par opération ensembliste et est donc une σ-algèbre.</p></li>
+<li><p>Mais, sur <span class="math inline">\(\Omega = \mathbb{R}\)</span> avec <span class="math inline">\(\mathcal{E}\)</span> = ouverts, la hiérarchie est <strong>stricte</strong> : <span class="math inline">\(\mathcal{E}_n \subsetneq \mathcal{E}_{n+1}\)</span> pour tout <span class="math inline">\(n\)</span> (voir section 7). Pour voir pourquoi <span class="math inline">\(\bigcup_n \mathcal{E}_n\)</span> n’est alors pas une σ-algèbre, notons <span class="math inline">\(A_k\)</span> un ensemble de <span class="math inline">\(\mathcal{E}_k \setminus \mathcal{E}_{k-1}\)</span> (il existe par strictité). Schématiquement :</p>
+<ul>
+<li><span class="math inline">\(\mathcal{E}_0\)</span> contient les ouverts, <span class="math inline">\(\emptyset\)</span>, <span class="math inline">\(\Omega\)</span></li>
+<li><span class="math inline">\(\mathcal{E}_1 \supseteq \mathcal{E}_0\)</span> et contient en plus <span class="math inline">\(A_1\)</span> (et les complémentaires/unions d’éléments de <span class="math inline">\(\mathcal{E}_0\)</span>)</li>
+<li><span class="math inline">\(\mathcal{E}_2 \supseteq \mathcal{E}_1\)</span> et contient en plus <span class="math inline">\(A_2\)</span>, ainsi que <span class="math inline">\(A_1 \cup A_2\)</span> (union d’éléments de <span class="math inline">\(\mathcal{E}_1\)</span>)</li>
+<li><span class="math inline">\(\mathcal{E}_n \supseteq \mathcal{E}_{n-1}\)</span> et contient en plus <span class="math inline">\(A_n\)</span>, ainsi que <span class="math inline">\(\bigcup_{k \leq n} A_k\)</span></li>
+</ul>
+<p>Chaque <span class="math inline">\(\mathcal{E}_n\)</span> « rattrape » les unions finies précédentes, mais introduit un nouvel ensemble <span class="math inline">\(A_n\)</span> inaccessible aux niveaux antérieurs. Pour produire <span class="math inline">\(\bigcup_{k=0}^{\infty} A_k\)</span> <strong>directement</strong>, il faudrait un niveau <span class="math inline">\(\mathcal{E}_m\)</span> contenant <strong>tous</strong> les <span class="math inline">\(A_k\)</span> — or pour tout <span class="math inline">\(m\)</span> fini, <span class="math inline">\(A_{m+1} \notin \mathcal{E}_m\)</span>. Aucun niveau fini ne contient tous les ingrédients.</p>
+<p>Cela ne suffit pas encore à conclure : le fait que <span class="math inline">\(\bigcup_{k \leq n} A_k \notin \mathcal{E}_n\)</span> pour tout <span class="math inline">\(n\)</span> fini n’implique pas que <span class="math inline">\(\bigcup_{k=0}^{\infty} A_k \notin \bigcup_n \mathcal{E}_n\)</span> — le passage à la limite n’est pas automatique (« <span class="math inline">\(\forall n, P(n)\)</span>» n’entraîne pas « <span class="math inline">\(P(\infty)\)</span>»). On pourrait aussi imaginer que <span class="math inline">\(\bigcup_{k=0}^{\infty} A_k\)</span> coïncide, en tant qu’ensemble, avec un élément déjà présent dans un <span class="math inline">\(\mathcal{E}_m\)</span> par une autre construction. La preuve rigoureuse repose sur un argument de diagonalisation.</p></li>
+</ul>
+</section>
+<section id="strictité-de-la-hiérarchie-et-conclusion" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="strictité-de-la-hiérarchie-et-conclusion"><span class="header-section-number">1.6.2</span> Strictité de la hiérarchie et conclusion</h3>
+<p>La hiérarchie est <strong>stricte</strong> : <span class="math inline">\(\mathcal{E}_\alpha \subsetneq \mathcal{E}_{\alpha+1}\)</span> pour tout <span class="math inline">\(\alpha &lt; \omega_1\)</span>, dès que <span class="math inline">\(\Omega\)</span> est un espace polonais non dénombrable et <span class="math inline">\(\mathcal{E}\)</span> engendre la tribu borélienne de <span class="math inline">\(\Omega\)</span> (ouverts, fermés, compacts, intervalles rationnels — seule compte la tribu engendrée, pas le choix des générateurs). La preuve repose sur un argument de diagonalisation développé dans la note 0121 : on construit des <strong>ensembles universels</strong> (catalogues paramétrés par un réel) et on diagonalise pour exhiber un ensemble de niveau <span class="math inline">\(\alpha+1\)</span> absent du niveau <span class="math inline">\(\alpha\)</span>. Les conditions précises de validité et les cas où la hiérarchie stabilise plus tôt sont détaillés dans la même note.</p>
+<p>En appliquant cet argument avec <span class="math inline">\(\alpha = \omega\)</span> (la réunion de tous les niveaux finis), on obtient <span class="math inline">\(D_\omega \in \mathcal{E}_{\omega+1} \setminus \mathcal{E}_\omega\)</span>. Or <span class="math inline">\(\mathcal{E}_\omega = \bigcup_n \mathcal{E}_n\)</span> et <span class="math inline">\(\mathcal{E}_{\omega+1}\)</span> contient les complémentaires et unions dénombrables d’éléments de <span class="math inline">\(\mathcal{E}_\omega\)</span>. Donc il existe des unions dénombrables d’éléments de <span class="math inline">\(\bigcup_n \mathcal{E}_n\)</span> qui n’appartiennent à aucun <span class="math inline">\(\mathcal{E}_m\)</span> : la collection <span class="math inline">\(\bigcup_n \mathcal{E}_n\)</span> n’est pas une σ-algèbre. Et s’arrêter à <span class="math inline">\(\omega\)</span> ne résout rien : le même argument de diagonalisation donne <span class="math inline">\(D_{\omega+\omega} \in \mathcal{E}_{\omega \cdot 2 + 1} \setminus \mathcal{E}_{\omega \cdot 2}\)</span>, puis <span class="math inline">\(D_{\omega^2}\)</span>, etc. Quel que soit l’ordinal dénombrable <span class="math inline">\(\gamma\)</span> où l’on s’arrête, <span class="math inline">\(\bigcup_{\alpha &lt; \gamma} \mathcal{E}_\alpha\)</span> n’est pas une σ-algèbre. Il faut aller jusqu’à <span class="math inline">\(\omega_1\)</span> — le premier ordinal qu’aucune suite dénombrable ne peut atteindre — pour que l’union devienne stable (cf.&nbsp;« Pourquoi <span class="math inline">\(\mathcal{F}\)</span> est une σ-algèbre » ci-dessous).</p>
+</section>
+<section id="la-construction-transfinite" class="level3" data-number="1.6.3">
+<h3 data-number="1.6.3" class="anchored" data-anchor-id="la-construction-transfinite"><span class="header-section-number">1.6.3</span> La construction transfinite</h3>
+<p>On définit par récurrence transfinite, pour chaque ordinal <span class="math inline">\(\alpha &lt; \omega_1\)</span> :</p>
+<p><strong>Cas de base :</strong></p>
+<p><span class="math display">\[\mathcal{E}_0 = \mathcal{E} \cup \{\emptyset, \Omega\}\]</span></p>
+<p><strong>Cas successeur :</strong></p>
+<p><span class="math display">\[\mathcal{E}_{\alpha+1} = \Bigl\{ \bigcup_{n \geq 1} A_n : A_n \in \mathcal{E}_\alpha \Bigr\} \cup \bigl\{ A^c : A \in \mathcal{E}_\alpha \bigr\}\]</span></p>
+<p><strong>Cas limite :</strong></p>
+<p><span class="math display">\[\mathcal{E}_\lambda = \bigcup_{\alpha &lt; \lambda} \mathcal{E}_\alpha\]</span></p>
+<p>Puis on pose :</p>
+<p><span class="math display">\[\mathcal{F} = \bigcup_{\alpha &lt; \omega_1} \mathcal{E}_\alpha\]</span></p>
+</section>
+<section id="pourquoi-mathcalf-est-une-σ-algèbre" class="level3" data-number="1.6.4">
+<h3 data-number="1.6.4" class="anchored" data-anchor-id="pourquoi-mathcalf-est-une-σ-algèbre"><span class="header-section-number">1.6.4</span> Pourquoi <span class="math inline">\(\mathcal{F}\)</span> est une σ-algèbre</h3>
+<p>Le seul point non trivial est la stabilité par union dénombrable. Soit <span class="math inline">\((A_k)_{k \geq 1}\)</span> une suite dans <span class="math inline">\(\mathcal{F}\)</span>. Chaque <span class="math inline">\(A_k\)</span> vient d’un niveau <span class="math inline">\(\alpha_k &lt; \omega_1\)</span>. Le supremum <span class="math inline">\(\beta = \sup_k \alpha_k\)</span> est un supremum dénombrable d’ordinaux dénombrables, donc :</p>
+<p><span class="math display">\[\beta &lt; \omega_1\]</span></p>
+<p>Tous les <span class="math inline">\(A_k\)</span> sont dans <span class="math inline">\(\mathcal{E}_\beta\)</span>, leur union est dans <span class="math inline">\(\mathcal{E}_{\beta+1} \subset \mathcal{F}\)</span>.</p>
+</section>
+<section id="pourquoi-ça-ne-marchait-pas-avant" class="level3" data-number="1.6.5">
+<h3 data-number="1.6.5" class="anchored" data-anchor-id="pourquoi-ça-ne-marchait-pas-avant"><span class="header-section-number">1.6.5</span> Pourquoi ça ne marchait pas avant</h3>
+<p>L’argument ci-dessus repose sur le fait que <span class="math inline">\(\beta = \sup_k \alpha_k\)</span> reste <strong>strictement inférieur à la borne</strong> de la collection. Pour <span class="math inline">\(\bigcup_{n &lt; \omega} \mathcal{E}_n\)</span>, on peut prendre <span class="math inline">\(A_k \in \mathcal{E}_k\)</span> : le sup des niveaux est <span class="math inline">\(\omega\)</span>, qui n’est pas inférieur à <span class="math inline">\(\omega\)</span> — les <span class="math inline">\(A_k\)</span> ne tiennent dans aucun <span class="math inline">\(\mathcal{E}_n\)</span>. Même problème si l’on s’arrête à <span class="math inline">\(\omega \cdot 2\)</span>, <span class="math inline">\(\omega^2\)</span>, ou n’importe quel ordinal dénombrable. Avec <span class="math inline">\(\omega_1\)</span>, en revanche, tout sup dénombrable d’ordinaux dénombrables reste strictement inférieur à <span class="math inline">\(\omega_1\)</span> : c’est exactement ce qu’il faut pour qu’une union dénombrable ne puisse plus sortir de la collection.</p>
+</section>
+<section id="pourquoi-mathcalf-sigmamathcale" class="level3" data-number="1.6.6">
+<h3 data-number="1.6.6" class="anchored" data-anchor-id="pourquoi-mathcalf-sigmamathcale"><span class="header-section-number">1.6.6</span> Pourquoi <span class="math inline">\(\mathcal{F} = \sigma(\mathcal{E})\)</span></h3>
+<ul>
+<li><span class="math inline">\(\mathcal{F}\)</span> est une σ-algèbre contenant <span class="math inline">\(\mathcal{E}\)</span>, donc <span class="math inline">\(\sigma(\mathcal{E}) \subseteq \mathcal{F}\)</span>.</li>
+<li>Toute σ-algèbre <span class="math inline">\(\mathcal{A}\)</span> contenant <span class="math inline">\(\mathcal{E}\)</span> contient chaque <span class="math inline">\(\mathcal{E}_\alpha\)</span> (par récurrence transfinite : si <span class="math inline">\(\mathcal{E}_\alpha \subseteq \mathcal{A}\)</span>, alors <span class="math inline">\(\mathcal{E}_{\alpha+1} \subseteq \mathcal{A}\)</span> car <span class="math inline">\(\mathcal{A}\)</span> est stable par complémentaire et union dénombrable ; et aux limites, c’est une union). Donc <span class="math inline">\(\mathcal{F} \subseteq \mathcal{A}\)</span>.</li>
+<li>En particulier, <span class="math inline">\(\mathcal{F} \subseteq \sigma(\mathcal{E})\)</span>.</li>
+</ul>
+<p>D’où <span class="math inline">\(\mathcal{F} = \sigma(\mathcal{E})\)</span>.</p>
+</section>
+</section>
+<section id="la-hiérarchie-borélienne" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="la-hiérarchie-borélienne"><span class="header-section-number">1.7</span> 7. La hiérarchie borélienne</h2>
+<p>La notation <span class="math inline">\(\Sigma^0_\alpha / \Pi^0_\alpha\)</span>, la strictité à chaque niveau, les exemples concrets et la preuve par diagonalisation sont développés dans la note 0121.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../probabilités/0110. lemme-de-factorisation-doob.html" class="pagination-link" aria-label="0110. Lemme de factorisation de Doob">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">0110. Lemme de factorisation de Doob</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../probabilités/0121. strictité-de-la-hiérarchie-borélienne.html" class="pagination-link" aria-label="0121. Strictité de la hiérarchie borélienne">
+        <span class="nav-page-text">0121. Strictité de la hiérarchie borélienne</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

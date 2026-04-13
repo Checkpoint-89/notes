@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>tribus-et-espaces-mesurables – Notes</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../probabilités/0110. lemme-de-factorisation-doob.html" rel="next">
+<link href="../probabilités/0000. syllabus.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-f670ab49fb9634e9dab58972b11477cb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Notes</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../probabilités/0000. syllabus.html">Probabilités</a></li><li class="breadcrumb-item"><a href="../probabilités/0100. tribus-et-espaces-mesurables.html">0100. Tribus et espaces mesurables</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Probabilités</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0000. syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0100. tribus-et-espaces-mesurables.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">0100. Tribus et espaces mesurables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0110. lemme-de-factorisation-doob.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0110. Lemme de factorisation de Doob</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0120. nombres-transfinis-et-ordinaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0120. Nombres transfinis et ordinaux</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0121. strictité-de-la-hiérarchie-borélienne.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0121. Strictité de la hiérarchie borélienne</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0200.mesures-et-probabilités.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0200. Mesures et probabilités</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Representation geometrie et resolution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/2. mesurer-la-proximite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Mesurer la proximite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Projection orthogonale et produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Variables aleatoires</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#probabilités" id="toc-probabilités" class="nav-link active" data-scroll-target="#probabilités"><span class="header-section-number">1</span> Probabilités</a>
+  <ul class="collapse">
+  <li><a href="#i.-tribus-et-espaces-mesurables" id="toc-i.-tribus-et-espaces-mesurables" class="nav-link" data-scroll-target="#i.-tribus-et-espaces-mesurables"><span class="header-section-number">1.1</span> I. Tribus et espaces mesurables</a>
+  <ul class="collapse">
+  <li><a href="#le-problème-de-la-mesure" id="toc-le-problème-de-la-mesure" class="nav-link" data-scroll-target="#le-problème-de-la-mesure"><span class="header-section-number">1.1.1</span> 1. Le problème de la mesure</a></li>
+  <li><a href="#σ-algèbres-définition-et-premières-propriétés" id="toc-σ-algèbres-définition-et-premières-propriétés" class="nav-link" data-scroll-target="#σ-algèbres-définition-et-premières-propriétés"><span class="header-section-number">1.1.2</span> 2. σ-algèbres : définition et premières propriétés</a></li>
+  <li><a href="#tribu-engendrée-par-une-famille-de-parties" id="toc-tribu-engendrée-par-une-famille-de-parties" class="nav-link" data-scroll-target="#tribu-engendrée-par-une-famille-de-parties"><span class="header-section-number">1.1.3</span> 3. Tribu engendrée par une famille de parties</a></li>
+  <li><a href="#tribu-borélienne-sur-ℝ-et-sur-ℝⁿ" id="toc-tribu-borélienne-sur-ℝ-et-sur-ℝⁿ" class="nav-link" data-scroll-target="#tribu-borélienne-sur-ℝ-et-sur-ℝⁿ"><span class="header-section-number">1.1.4</span> 4. Tribu borélienne sur ℝ et sur ℝⁿ</a></li>
+  <li><a href="#tribu-engendrée-par-une-application" id="toc-tribu-engendrée-par-une-application" class="nav-link" data-scroll-target="#tribu-engendrée-par-une-application"><span class="header-section-number">1.1.5</span> 5. Tribu engendrée par une application</a></li>
+  <li><a href="#approfondissement-pourquoi-transporter-la-mesure-et-le-cadre-général" id="toc-approfondissement-pourquoi-transporter-la-mesure-et-le-cadre-général" class="nav-link" data-scroll-target="#approfondissement-pourquoi-transporter-la-mesure-et-le-cadre-général"><span class="header-section-number">1.1.6</span> Approfondissement : pourquoi transporter la mesure, et le cadre général</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../probabilités/0000. syllabus.html">Probabilités</a></li><li class="breadcrumb-item"><a href="../probabilités/0100. tribus-et-espaces-mesurables.html">0100. Tribus et espaces mesurables</a></li></ol></nav></header>
+
+
+
+
+<section id="probabilités" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Probabilités</h1>
+<section id="i.-tribus-et-espaces-mesurables" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="i.-tribus-et-espaces-mesurables"><span class="header-section-number">1.1</span> I. Tribus et espaces mesurables</h2>
+<p><strong>Vue d’ensemble.</strong> Ce chapitre construit la notion de tribu en six étapes. 1. La σ-additivité est une propriété essentielle d’une mesure, indispensable pour garantir les raisonnements de passage à la limite. L’exemple des parties finies ou cofinies montre que sans σ-additivité, on peut avoir des comportements pathologiques à la limite. 2. Le théorème de Vitali montre qu’on ne peut pas définir sur <span class="math inline">\(\mathcal P(\mathbb R)\)</span> une mesure satisfaisant simultanément le prolongement de la longueur, l’invariance par translation et la σ-additivité. Il illustre qu’une mesure, pour respecter les contraintes qu’on lui impose, peut devoir restreindre les parties qu’elle se propose de mesurer. C’est le rôle des tribus. 3. Les exemples des mesures de Dirac et de comptage montrent que ce n’est pas l’ensemble sous-jacent qui force à restreindre à une tribu, mais les propriétés qu’on exige de la mesure. Ces deux mesures portent sur <span class="math inline">\(\mathbb R\)</span> et restent cohérentes sur <span class="math inline">\(\mathcal P(\mathbb R)\)</span> entier. 4. La notion de tribu étant motivée, on peut définir formellement un espace mesurable comme un couple <span class="math inline">\((\Omega, \mathcal A)\)</span> où <span class="math inline">\(\mathcal A\)</span> est une tribu sur <span class="math inline">\(\Omega\)</span>. Une mesure sur cet espace est une application <span class="math inline">\(m : \mathcal A \to [0,+\infty]\)</span> telle que <span class="math inline">\(m(\emptyset)=0\)</span> et <span class="math inline">\(m\)</span> soit σ-additive ; le triplet <span class="math inline">\((\Omega, \mathcal A, m)\)</span> est alors un espace mesuré. 5. En pratique, on construit une tribu à partir d’une famille génératrice. L’exemple principal est la tribu borélienne, engendrée par les ouverts de <span class="math inline">\(\mathbb R\)</span> (ou, de façon équivalente, par les intervalles ouverts, les demi-droites fermées ou ouvertes, etc.). Sur <span class="math inline">\(\mathbb R^n\)</span>, la tribu borélienne coïncide avec la tribu produit <span class="math inline">\(\mathcal B(\mathbb R)^{\otimes n}\)</span>. 6. Une tribu peut aussi être définie par une application <span class="math inline">\(f : \Omega \to (E, \mathcal E)\)</span> en tirant en arrière les parties mesurables de <span class="math inline">\(E\)</span> par <span class="math inline">\(f^{-1}\)</span>. Cette construction mène au lemme de factorisation de Doob : <span class="math inline">\(g\)</span> est <span class="math inline">\(\sigma(f)\)</span>-mesurable si et seulement si <span class="math inline">\(g\)</span> se factorise à travers <span class="math inline">\(f\)</span>, c’est-à-dire <span class="math inline">\(g = \varphi \circ f\)</span> pour une certaine fonction mesurable <span class="math inline">\(\varphi\)</span>.</p>
+<section id="le-problème-de-la-mesure" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="le-problème-de-la-mesure"><span class="header-section-number">1.1.1</span> 1. Le problème de la mesure</h3>
+<section id="cadre-du-problème" class="level4" data-number="1.1.1.1">
+<h4 data-number="1.1.1.1" class="anchored" data-anchor-id="cadre-du-problème"><span class="header-section-number">1.1.1.1</span> Cadre du problème</h4>
+<p>Le point de départ est une question simple : peut-on attribuer une « mesure » à tous les sous-ensembles de ℝ ?</p>
+<p>On connaît la longueur d’un intervalle : la longueur de [a, b] est b − a. On voudrait étendre cette notion à des ensembles plus compliqués de ℝ — des unions d’intervalles, des ensembles de Cantor (ensembles fermés, très découpés, non dénombrables, mais de longueur nulle), etc. — sous forme d’une fonction m définie sur les parties de ℝ, à valeurs dans [0, +∞], qui respecte des propriétés raisonnables.</p>
+<p>La question qu’on se pose est donc une <strong>question géométrique sur ℝ.</strong> Peut-on définir sur les parties de ℝ une notion de mesure qui prolonge la longueur usuelle des intervalles ?</p>
+<p>La <strong>question générale</strong> sous-jacente est : sur un ensemble quelconque Ω, peut-on définir une mesure sur une famille convenable de parties de Ω ?</p>
+<p>Sur ℝ, la question est géométrique car on souhaite que la mesure respecte des exigences liées à la géométrie de ℝ. Ce qu’on demande à m, <strong>au minimum</strong> :</p>
+<ul>
+<li><strong>Additivité.</strong> Si A et B sont disjoints, m(A ∪ B) = m(A) + m(B).</li>
+<li><strong>Prolongement.</strong> m([a, b]) = b − a pour tout intervalle.</li>
+<li><strong>Invariance par translation.</strong> m(A + t) = m(A) pour tout t ∈ ℝ. (Déplacer un ensemble ne change pas sa taille.)</li>
+</ul>
+<p>L’idée d’additivité, puis de σ-additivité, appartient à la notion abstraite de mesure. Les deux dernières exigences en revanche sont spécifiques au problème géométrique d’une mesure sur ℝ : on veut que la mesure construite reflète la longueur usuelle.</p>
+</section>
+<section id="nécessité-de-la-σ-additivité-ladditivité-finie-ne-garantit-pas-les-convergences" class="level4" data-number="1.1.1.2">
+<h4 data-number="1.1.1.2" class="anchored" data-anchor-id="nécessité-de-la-σ-additivité-ladditivité-finie-ne-garantit-pas-les-convergences"><span class="header-section-number">1.1.1.2</span> Nécessité de la σ-additivité : l’additivité finie ne garantit pas les convergences</h4>
+<p>L’additivité finie (pour deux ensembles, ou pour un nombre fini d’ensembles) est naturelle mais insuffisante pour faire de l’analyse. On a besoin d’une propriété plus forte.</p>
+<p><strong>σ-additivité (additivité dénombrable).</strong> Si <span class="math inline">\((A_n)_{n \geq 1}\)</span> est une suite d’ensembles <strong>deux à deux disjoints</strong>, alors :</p>
+<p><span class="math display">\[m\Bigl(\bigcup_{n=1}^{\infty} A_n\Bigr) = \sum_{n=1}^{\infty} m(A_n)\]</span></p>
+<p><strong>Pourquoi cette propriété est-elle indispensable ?</strong> En analyse et en probabilité, on passe constamment à la limite sur des suites d’ensembles. Voici quatre situations typiques, qui toutes reposent sur des opérations dénombrables.</p>
+<ul>
+<li><em>1. Limite inférieure d’ensembles.</em> L’expression</li>
+</ul>
+<p><span class="math display">\[\bigcup_{N=1}^{\infty}\bigcap_{n\ge N} A_n\]</span></p>
+<p>signifie « l’ensemble des <span class="math inline">\(\omega\)</span> tels qu’il existe un rang <span class="math inline">\(N\)</span> à partir duquel, pour tout <span class="math inline">\(n \geq N\)</span>, on a <span class="math inline">\(\omega \in A_n\)</span> ».</p>
+<ul>
+<li><em>2. Limite supérieure d’ensembles.</em> L’expression</li>
+</ul>
+<p><span class="math display">\[\bigcap_{N=1}^{\infty}\bigcup_{n\ge N} A_n\]</span></p>
+<p>signifie « l’ensemble des <span class="math inline">\(\omega\)</span> tels que <span class="math inline">\(\omega \in A_n\)</span> pour une infinité de valeurs de <span class="math inline">\(n\)</span> ».</p>
+<p>Ces deux expressions réapparaîtront plus loin, par exemple dans l’étude des convergences et des lemmes de Borel-Cantelli.</p>
+<ul>
+<li><em>3. Continuité par en bas</em> (suite croissante). On approche un ensemble par morceaux de plus en plus grands comme au 1 ci-dessus. Si: <span class="math display">\[A_1 \subset A_2 \subset \cdots \quad \text{et} \quad A = \bigcup_{n=1}^{\infty} A_n,\]</span></li>
+</ul>
+<p>alors on s’attend à ce que la mesure de <span class="math inline">\(A\)</span> soit la limite des mesures des approximations <span class="math inline">\(A_n\)</span>, autrement dit que mesure et limite commutent :</p>
+<p><span class="math display">\[m(A) = m\Bigl(\underbrace{\bigcup_n A_n}_{\text{limite ensembliste}}\Bigr) = \underbrace{\lim_n m(A_n)}_{\text{limite numérique}}.\]</span></p>
+<p>C’est exactement ce que garantit la σ-additivité : elle autorise à permuter mesure et limite. Pour des <span class="math inline">\(B_n\)</span> disjoints (les « nouvelles parties » ajoutées à chaque étape), la réunion <span class="math inline">\(\bigcup_{n=1}^\infty B_n\)</span> est la limite croissante des réunions partielles <span class="math inline">\(\bigcup_{n=1}^N B_n\)</span>, et la σ-additivité dit précisément que</p>
+<p><span class="math display">\[m\!\left(\lim_{N\to\infty} \bigcup_{n=1}^{N} B_n\right) = \lim_{N\to\infty}\, m\!\left(\bigcup_{n=1}^{N} B_n\right).\]</span></p>
+<ul>
+<li><em>4. Continuité par en haut</em> (suite décroissante). On approche un ensemble par des ensembles de plus en plus petits comme au 2 ci-dessus. Si</li>
+</ul>
+<p><span class="math display">\[A_1 \supset A_2 \supset \cdots \quad \text{et} \quad A = \bigcap_{n=1}^{\infty} A_n,\]</span></p>
+<p>alors on s’attend à ce que <span class="math inline">\(m(A_n)\)</span> tende vers <span class="math inline">\(m(A)\)</span>. C’est encore vrai, à condition que <span class="math inline">\(m(A_1) &lt; \infty\)</span> :</p>
+<p><span class="math display">\[m(A) = m\Bigl(\bigcap_n A_n\Bigr) = \lim_n m(A_n).\]</span></p>
+<p>L’hypothèse <span class="math inline">\(m(A_1)&lt;\infty\)</span> évite les soustractions indéterminées du type <span class="math inline">\(+\infty-+\infty\)</span>.</p>
+<p>Sans σ-additivité, la mesure ne se comporterait pas bien vis-à-vis de ces deux types de limites. En particulier, on pourrait avoir <span class="math inline">\(A_n \downarrow \emptyset\)</span> et pourtant <span class="math inline">\(m(A_n)\)</span> ne tendant pas vers 0 (voir l’exemple plus bas).</p>
+<p><em>Exemple.</em> Sur l’algèbre des parties <strong>finies ou cofinies</strong> de <span class="math inline">\(\mathbb{N}\)</span>, définissons</p>
+<p><span class="math display">\[
+m(A)=
+\begin{cases}
+0 &amp; \text{si } A \text{ est fini},\\
+1 &amp; \text{si } A^c \text{ est fini.}
+\end{cases}
+\]</span></p>
+<p>Cette fonction est additive finie : si <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> sont disjoints et dans l’algèbre, ils ne peuvent pas être tous deux cofinis (sinon <span class="math inline">\(A^c\)</span> et <span class="math inline">\(B^c\)</span> seraient finis, donc <span class="math inline">\((A \cap B)^c = A^c \cup B^c\)</span> serait fini, donc <span class="math inline">\(A \cap B\)</span> serait cofini, en particulier infini, donc non vide — contredisant la disjonction). Donc au plus l’un des deux est cofini ; les deux cas se vérifient directement : - <em>Les deux sont finis</em> : <span class="math inline">\(m(A)=m(B)=0\)</span>, <span class="math inline">\(A\cup B\)</span> est fini donc <span class="math inline">\(m(A\cup B)=0=0+0\)</span>. ✓ - <em>L’un est cofini, l’autre est fini</em> : par exemple <span class="math inline">\(A\)</span> cofinid, <span class="math inline">\(B\)</span> fini. Alors <span class="math inline">\((A\cup B)^c = A^c\cap B^c\subseteq A^c\)</span> est fini, donc <span class="math inline">\(A\cup B\)</span> est cofini et <span class="math inline">\(m(A\cup B)=1=1+0\)</span>. ✓</p>
+<p>En revanche, <span class="math inline">\(m\)</span> n’est pas <span class="math inline">\(\sigma\)</span>-additive : les singletons <span class="math inline">\(B_n = \{n\}\)</span> sont deux à deux disjoints, chacun est fini donc <span class="math inline">\(m(B_n)=0\)</span>, mais <span class="math inline">\(\bigcup_n B_n = \mathbb{N}\)</span> est cofini (de complémentaire <span class="math inline">\(\emptyset\)</span>) donc <span class="math inline">\(m(\mathbb{N})=1 \neq 0 = \sum_n m(B_n)\)</span>. Cette défaillance se manifeste concrètement par un échec de la <strong>continuité par en haut</strong>, que la σ-additivité aurait garantie : pour <span class="math inline">\(A_n = \{n,n+1,n+2,\dots\}\)</span>, la suite est décroissante et <span class="math inline">\(\bigcap_n A_n = \emptyset\)</span> (tout entier fixé <span class="math inline">\(k\)</span> sort de <span class="math inline">\(A_n\)</span> dès que <span class="math inline">\(n &gt; k\)</span>), donc <span class="math inline">\(A_n \downarrow \emptyset\)</span>. Pourtant <span class="math inline">\(m(A_n)=1\)</span> pour tout <span class="math inline">\(n\)</span>, tandis que <span class="math inline">\(m(\emptyset)=0\)</span> : la mesure ne suit pas la limite.</p>
+<p><em>Remarque.</em> La famille des parties finies ou cofinies de <span class="math inline">\(\mathbb N\)</span> est une <strong>algèbre</strong> (stable par complémentaire et par union finie) mais <strong>pas une σ-algèbre</strong> : l’ensemble <span class="math inline">\(\{2,4,6,\dots\} = \bigcup_n \{2n\}\)</span> est une union dénombrable d’ensembles finis (chaque <span class="math inline">\(\{2n\}\)</span> est dans la famille), mais n’est lui-même ni fini ni cofini.</p>
+</section>
+<section id="le-théorème-de-vitali-on-ne-peut-pas-toujours-mesurer-mathcal-pomega" class="level4" data-number="1.1.1.3">
+<h4 data-number="1.1.1.3" class="anchored" data-anchor-id="le-théorème-de-vitali-on-ne-peut-pas-toujours-mesurer-mathcal-pomega"><span class="header-section-number">1.1.1.3</span> Le théorème de Vitali : on ne peut pas toujours mesurer <span class="math inline">\(\mathcal P(\Omega)\)</span></h4>
+<p>Vitali (1905) a montré qu’aucune fonction <span class="math inline">\(m\)</span> définie sur <em>tous</em> les sous-ensembles de ℝ ne peut satisfaire simultanément le prolongement, l’invariance par translation et la σ-additivité.</p>
+<p>L’idée de la construction est la suivante.</p>
+<p>On définit sur <span class="math inline">\([0,1)\)</span> la relation <span class="math inline">\(x \sim y \iff x-y \in \mathbb Q\)</span>. C’est une relation d’équivalence. Par l’axiome du choix, on sélectionne exactement un représentant dans chaque classe d’équivalence : soit <span class="math inline">\(V\)</span> l’ensemble obtenu.</p>
+<p>Pour chaque rationnel <span class="math inline">\(q \in \mathbb Q \cap [0,1)\)</span>, on forme le translaté <span class="math inline">\(V+q \pmod{1} = \{(v+q)\bmod 1 : v \in V\}\)</span>. Ces translatés sont :</p>
+<ul>
+<li><strong>deux à deux disjoints</strong> : si <span class="math inline">\(x \in (V+q) \cap (V+q')\)</span> avec <span class="math inline">\(q \neq q'\)</span>, alors <span class="math inline">\(x = v_1 + q = v_2 + q' \pmod{1}\)</span> avec <span class="math inline">\(v_1, v_2 \in V\)</span>, donc <span class="math inline">\(v_1 - v_2 = q' - q \in \mathbb Q\)</span>, ce qui signifie <span class="math inline">\(v_1 \sim v_2\)</span> ; comme <span class="math inline">\(V\)</span> contient un seul représentant par classe, <span class="math inline">\(v_1 = v_2\)</span>, d’où <span class="math inline">\(q = q'\)</span>, contradiction.</li>
+<li><strong>de réunion <span class="math inline">\([0,1)\)</span></strong> : tout <span class="math inline">\(x \in [0,1)\)</span> est dans une classe d’équivalence, donc <span class="math inline">\(x \sim v\)</span> pour un unique <span class="math inline">\(v \in V\)</span>, c’est-à-dire <span class="math inline">\(x - v = r \in \mathbb Q\)</span>. Puisque <span class="math inline">\(x, v \in [0,1)\)</span>, on a <span class="math inline">\(r \in (-1,1)\)</span>, mais <span class="math inline">\(r\)</span> peut être négatif. On pose <span class="math inline">\(q = r \bmod 1 \in \mathbb Q \cap [0,1)\)</span>. Alors <span class="math inline">\(x = v + r \equiv v + q \pmod{1}\)</span>, i.e.&nbsp;<span class="math inline">\(x = (v+q)\bmod 1\)</span>, donc <span class="math inline">\(x \in V+q \pmod{1}\)</span>.</li>
+</ul>
+<p>Supposons <span class="math inline">\(V\)</span> mesurable, de mesure <span class="math inline">\(m(V)\)</span>. Par invariance par translation, tous les ensembles <span class="math inline">\(V+q\)</span> ont même mesure. Par σ-additivité,</p>
+<p><span class="math display">\[1 = m\bigl([0,1)\bigr) = \sum_{q \in \mathbb{Q} \cap [0,1)} m(V).\]</span></p>
+<p>Le membre de droite est une somme dénombrable d’un terme constant. Si <span class="math inline">\(m(V)=0\)</span>, la somme vaut 0 ; si <span class="math inline">\(m(V)&gt;0\)</span>, la somme vaut <span class="math inline">\(+\infty\)</span>. Dans les deux cas, on obtient une contradiction.</p>
+<p><strong>Conséquence.</strong> On ne peut donc pas mesurer toutes les parties de ℝ avec une notion de longueur satisfaisant ces propriétés. Il faut choisir une sous-famille de <span class="math inline">\(\mathcal P(\mathbb R)\)</span> — suffisamment riche pour contenir tous les ensembles qu’on utilise en pratique, mais pas trop grosse pour que la mesure géométrique reste cohérente. C’est précisément le rôle de la <strong>σ-algèbre</strong>.</p>
+<p><em>Remarque culturelle.</em> En dimension 3, le paradoxe de Banach-Tarski affirme, très schématiquement, qu’on peut découper une boule en un nombre fini de morceaux très pathologiques puis, en les déplaçant seulement par rotations et translations, reconstituer deux boules identiques à la première. Le point décisif est que, si ces morceaux avaient tous un volume géométrique bien défini, invariant par déplacement et additif, on obtiendrait qu’une boule a le même volume que deux copies d’elle-même, ce qui est absurde. Le paradoxe ne contredit donc pas le volume usuel ; il montre qu’on ne peut pas attribuer un volume raisonnable à toutes les parties de l’espace. Comme pour Vitali, il motive la nécessité de restreindre la mesure à une famille convenable d’ensembles.</p>
+<p><strong>Des mesures existent tout de même sur <span class="math inline">\(\mathcal P(\mathbb R)\)</span>.</strong> Le théorème de Vitali ne dit donc pas qu’aucune mesure n’existe sur <span class="math inline">\(\mathcal P(\mathbb R)\)</span>. Il dit seulement qu’on ne peut pas y définir une mesure satisfaisant simultanément les exigences géométriques imposées plus haut. Autrement dit, la difficulté dépend des propriétés qu’on exige de la mesure.</p>
+<p>Au sens de mesure qui sera formalisé à la section suivante, il existe bien des mesures sur <span class="math inline">\(\mathcal P(\mathbb R)\)</span>. Deux exemples importants sont les suivants.</p>
+<ul>
+<li><strong>Mesure de Dirac en <span class="math inline">\(x_0\)</span></strong>, notée <span class="math inline">\(\delta_{x_0}\)</span> :</li>
+</ul>
+<p><span class="math display">\[
+\delta_{x_0}(A)=
+\begin{cases}
+1 &amp; \text{si } x_0 \in A,\\
+0 &amp; \text{si } x_0 \notin A.
+\end{cases}
+\]</span></p>
+<p>Elle est bien définie sur toute <span class="math inline">\(\mathcal P(\mathbb R)\)</span>. Intuitivement, elle ne mesure pas la longueur d’un ensemble : elle regarde seulement si <span class="math inline">\(x_0\)</span> appartient ou non à cet ensemble. C’est pourquoi <span class="math inline">\(\delta_{x_0}([0,2])\)</span> vaut 0 ou 1, alors que la longueur de <span class="math inline">\([0,2]\)</span> vaut 2.</p>
+<ul>
+<li><strong>Mesure de comptage</strong> :</li>
+</ul>
+<p><span class="math display">\[
+\#(A)=
+\begin{cases}
+|A| &amp; \text{si } A \text{ est fini},\\
++\infty &amp; \text{si } A \text{ est infini.}
+\end{cases}
+\]</span></p>
+<p>Elle aussi est définie sur toute <span class="math inline">\(\mathcal P(\mathbb R)\)</span>. Elle ne mesure pas la longueur mais le nombre de points : un intervalle comme <span class="math inline">\([0,1]\)</span> a alors mesure <span class="math inline">\(+\infty\)</span>. Elle est même invariante par translation, ce qui montre bien que ce n’est pas cette propriété seule qui pose problème.</p>
+<p>Ces exemples mettent donc en évidence le point essentiel : <strong>la sous-famille de <span class="math inline">\(\mathcal P(\mathbb R)\)</span> sur laquelle une mesure peut être définie dépend des exigences qu’on lui impose</strong>.</p>
+</section>
+</section>
+<section id="σ-algèbres-définition-et-premières-propriétés" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="σ-algèbres-définition-et-premières-propriétés"><span class="header-section-number">1.1.2</span> 2. σ-algèbres : définition et premières propriétés</h3>
+<section id="définition" class="level4" data-number="1.1.2.1">
+<h4 data-number="1.1.2.1" class="anchored" data-anchor-id="définition"><span class="header-section-number">1.1.2.1</span> Définition</h4>
+<p>Soit Ω un ensemble quelconque. On note 𝒫(Ω) l’ensemble de toutes les parties de Ω.</p>
+<p><strong>Définition.</strong> Une <strong>σ-algèbre</strong> (ou <strong>tribu</strong>) sur Ω est une famille 𝒜 ⊂ 𝒫(Ω) qui vérifie :</p>
+<ol type="1">
+<li>Ω ∈ 𝒜 (l’ensemble « total » est mesurable)</li>
+<li>Si A ∈ 𝒜, alors Aᶜ ∈ 𝒜 (stabilité par passage au complémentaire)</li>
+<li>Si <span class="math inline">\((A_n)_{n \geq 1}\)</span> est une suite d’éléments de 𝒜, alors <span class="math inline">\(\bigcup_{n=1}^{\infty} A_n \in \mathcal{A}\)</span> (stabilité par union dénombrable)</li>
+</ol>
+<p>Le couple (Ω, 𝒜) s’appelle un <strong>espace mesurable</strong>. Les éléments de 𝒜 sont les ensembles sur lesquels une mesure pourra être définie — on les appelle les <strong>ensembles mesurables</strong>, ou en probabilités, les <strong>événements</strong>.</p>
+<p>Attention au vocabulaire : « mesurable » ici veut dire <strong>mesurable relativement à la tribu 𝒜</strong>. Cela ne veut pas encore dire qu’une mesure m est déjà définie sur 𝒜, ni, a fortiori, qu’elle possède des propriétés géométriques particulières comme le prolongement de la longueur sur ℝ ou l’invariance par translation.</p>
+</section>
+<section id="mesure-et-espace-mesuré" class="level4" data-number="1.1.2.2">
+<h4 data-number="1.1.2.2" class="anchored" data-anchor-id="mesure-et-espace-mesuré"><span class="header-section-number">1.1.2.2</span> Mesure et espace mesuré</h4>
+<p>Une <strong>mesure</strong> sur un espace mesurable <span class="math inline">\((\Omega, \mathcal A)\)</span> est une application</p>
+<p><span class="math display">\[m : \mathcal A \to [0,+\infty]\]</span></p>
+<p>telle que <span class="math inline">\(m(\emptyset)=0\)</span> et telle que <span class="math inline">\(m\)</span> soit σ-additive. Le triplet <span class="math inline">\((\Omega, \mathcal A, m)\)</span> s’appelle alors un <strong>espace mesuré</strong>.</p>
+<p><em>Remarque.</em> La σ-additivité fait intervenir <span class="math inline">\(m\bigl(\bigcup_n A_n\bigr)\)</span> : pour que cette expression ait un sens, il faut que <span class="math inline">\(\bigcup_n A_n\)</span> appartienne au domaine de <span class="math inline">\(m\)</span>, c’est-à-dire à la tribu <span class="math inline">\(\mathcal A\)</span>. C’est exactement ce que garantit l’axiome (3) de la définition de σ-algèbre. Ainsi, la stabilité par union dénombrable est taillée pour que la σ-additivité puisse pleinement opérer.</p>
+</section>
+<section id="conséquences-immédiates" class="level4" data-number="1.1.2.3">
+<h4 data-number="1.1.2.3" class="anchored" data-anchor-id="conséquences-immédiates"><span class="header-section-number">1.1.2.3</span> Conséquences immédiates</h4>
+<ul>
+<li>∅ ∈ 𝒜 (appliquer (2) à Ω : ∅ = Ωᶜ).</li>
+<li>Stabilité par <strong>intersection dénombrable</strong> : par les lois de De Morgan, <span class="math inline">\(\bigcap_n A_n = \bigl(\bigcup_n A_n^c\bigr)^c\)</span>. Le complémentaire des <span class="math inline">\(A_n\)</span> est dans 𝒜 par (2), leur union par (3), le complémentaire de cette union par (2) à nouveau.</li>
+<li>Stabilité par <strong>différence</strong> : A &nbsp;B = A ∩ Bᶜ.</li>
+<li>Stabilité par union ou intersection <strong>finies</strong> (cas particulier du dénombrable, en complétant la suite par des ∅).</li>
+</ul>
+<p>En résumé, une σ-algèbre est stable par toute opération ensembliste dénombrable.</p>
+</section>
+<section id="exemples" class="level4" data-number="1.1.2.4">
+<h4 data-number="1.1.2.4" class="anchored" data-anchor-id="exemples"><span class="header-section-number">1.1.2.4</span> Exemples</h4>
+<p><strong>Exemples extrêmes.</strong> - La plus petite tribu sur Ω : {∅, Ω}. On l’appelle la tribu <strong>grossière</strong>. Elle ne distingue rien. - La plus grande tribu sur Ω : 𝒫(Ω). On l’appelle la tribu <strong>discrète</strong>. Elle distingue tout. En particulier, 𝒫(Ω) est toujours une σ-algèbre, quel que soit Ω. - Toute σ-algèbre est comprise entre ces deux extrêmes : {∅, Ω} ⊂ 𝒜 ⊂ 𝒫(Ω).</p>
+<p>Remarque: il n’y a pas de contradiction avec Vitali : lorsque Ω = ℝ, 𝒫(ℝ) est bien une σ-algèbre. On peut même définir sur 𝒫(ℝ) certaines mesures, comme les mesures de Dirac ou la mesure de comptage. Ce que Vitali montre, c’est qu’on ne peut pas y définir une mesure qui prolonge la longueur, soit invariante par translation et soit σ-additive.</p>
+<p><strong>Exemple concret.</strong> Ω = {1, 2, 3, 4} (un dé à 4 faces). On peut choisir la tribu 𝒜 = {∅, {1,2}, {3,4}, Ω}. Avec cette tribu, on peut distinguer « pair ou impair » (au sens 1,2 vs 3,4) mais pas les faces individuelles. Ajouter {1} à la tribu forcerait à y mettre aussi {1}ᶜ = {2,3,4}, puis {1} ∪ {3,4} = {1,3,4}, puis {1,3,4}ᶜ = {2}, etc. — la tribu s’enrichit par les axiomes.</p>
+</section>
+<section id="pourquoi-dénombrable" class="level4" data-number="1.1.2.5">
+<h4 data-number="1.1.2.5" class="anchored" data-anchor-id="pourquoi-dénombrable"><span class="header-section-number">1.1.2.5</span> Pourquoi dénombrable</h4>
+<p><strong>Pourquoi dénombrable et pas fini, ni quelconque ?</strong> La question <em>pourquoi pas fini</em> a déjà été traitée : l’additivité finie est insuffisante pour contrôler les passages à la limite, comme le montre l’exemple de l’algèbre des parties finies ou cofinies. Il reste la question <em>pourquoi pas quelconque</em>.</p>
+<p>Le dénombrable est le régime naturel de l’analyse : tous les raisonnements de passage à la limite — convergence monotone, limsup, liminf, Borel-Cantelli — reposent sur des opérations dénombrables (suites, séries). La stabilité par union dénombrable est donc suffisante pour garantir ces raisonnements, et exiger davantage serait sans contrepartie utile.</p>
+<p><em>Illustration sur <span class="math inline">\(\mathbb R\)</span>.</em> On peut voir concrètement que la stabilité par union quelconque serait trop forte : tout singleton <span class="math inline">\(\{x\}\)</span> est dans la tribu borélienne (section 4), et avec des unions quelconques on pourrait former <span class="math inline">\(\bigcup_{x \in A}\{x\} = A\)</span> pour n’importe quel <span class="math inline">\(A \subset \mathbb{R}\)</span> — on retomberait sur <span class="math inline">\(\mathcal{P}(\mathbb{R})\)</span> entier, et l’on perdrait tout contrôle géométrique.</p>
+</section>
+</section>
+<section id="tribu-engendrée-par-une-famille-de-parties" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="tribu-engendrée-par-une-famille-de-parties"><span class="header-section-number">1.1.3</span> 3. Tribu engendrée par une famille de parties</h3>
+<section id="idée-générale" class="level4" data-number="1.1.3.1">
+<h4 data-number="1.1.3.1" class="anchored" data-anchor-id="idée-générale"><span class="header-section-number">1.1.3.1</span> Idée générale</h4>
+<p>En pratique, on ne construit jamais une tribu en listant tous ses éléments (elle en a en général beaucoup trop — souvent autant que 𝒫(ℝ)). On part d’une famille « simple » d’ensembles et on laisse les axiomes faire le travail.</p>
+</section>
+<section id="définition-1" class="level4" data-number="1.1.3.2">
+<h4 data-number="1.1.3.2" class="anchored" data-anchor-id="définition-1"><span class="header-section-number">1.1.3.2</span> Définition</h4>
+<p><strong>Définition.</strong> Soit ℰ ⊂ 𝒫(Ω) une famille quelconque de parties. La <strong>tribu engendrée</strong> par ℰ, notée σ(ℰ), est la plus petite σ-algèbre contenant ℰ :</p>
+<p><span class="math display">\[\sigma(\mathcal{E}) = \bigcap \bigl\{ \mathcal{A} \subset \mathcal{P}(\Omega) : \mathcal{A} \text{ est une σ-algèbre et } \mathcal{E} \subset \mathcal{A} \bigr\}\]</span></p>
+<p>Autrement dit, on prend l’intersection de toutes les σ-algèbres qui contiennent ℰ.</p>
+</section>
+<section id="pourquoi-cela-marche" class="level4" data-number="1.1.3.3">
+<h4 data-number="1.1.3.3" class="anchored" data-anchor-id="pourquoi-cela-marche"><span class="header-section-number">1.1.3.3</span> Pourquoi cela marche</h4>
+<p><strong>Pourquoi ça marche.</strong> - L’intersection est bien définie car il existe au moins une σ-algèbre contenant ℰ, à savoir 𝒫(Ω). - Une intersection quelconque (même non dénombrable) de σ-algèbres est encore une σ-algèbre. Vérification : si Ω est dans chaque 𝒜ᵢ, il est dans leur intersection ; si A est dans toutes les 𝒜ᵢ, Aᶜ l’est aussi ; si chaque <span class="math inline">\(A_n\)</span> est dans toutes les 𝒜ᵢ, leur union l’est aussi. - Donc σ(ℰ) est une σ-algèbre, et c’est la plus petite par construction (elle est incluse dans toute σ-algèbre contenant ℰ).</p>
+<p><em>Remarque.</em> Ce raisonnement n’a rien de spécifique aux σ-algèbres : il repose sur un principe général de <strong>système de fermeture</strong> (ou famille de Moore). Une famille <span class="math inline">\(\mathcal F \subseteq \mathcal P(X)\)</span> qui contient <span class="math inline">\(X\)</span> et est stable par intersection quelconque permet de définir, pour tout <span class="math inline">\(G \subseteq X\)</span>, l’objet engendré <span class="math inline">\(\langle G \rangle = \bigcap\{F \in \mathcal F : G \subseteq F\}\)</span>, qui est le plus petit élément de <span class="math inline">\(\mathcal F\)</span> contenant <span class="math inline">\(G\)</span>. Les σ-algèbres, les topologies, les sous-espaces vectoriels, les sous-groupes sont tous des systèmes de fermeture ; la construction de <span class="math inline">\(\sigma(\mathcal E)\)</span> par intersection en est une instance.</p>
+</section>
+<section id="intuition" class="level4" data-number="1.1.3.4">
+<h4 data-number="1.1.3.4" class="anchored" data-anchor-id="intuition"><span class="header-section-number">1.1.3.4</span> Intuition</h4>
+<p><strong>Ce que σ(ℰ) contient.</strong> Intuitivement : tous les éléments de ℰ, leurs complémentaires, les unions dénombrables de ces éléments, les complémentaires de ces unions, les unions de ces complémentaires, etc. — toutes les combinaisons dénombrables d’opérations ensemblistes appliquées aux éléments de ℰ.</p>
+<p><em>Approfondissement.</em> La définition ci-dessus construit <span class="math inline">\(\sigma(\mathcal E)\)</span> <strong>par le haut</strong> (intersection de toutes les σ-algèbres contenant <span class="math inline">\(\mathcal E\)</span>). On peut aussi la construire <strong>par le bas</strong>, en itérant les opérations (complémentaire, union dénombrable) de façon transfinale : on pose <span class="math inline">\(\mathcal E_0 = \mathcal E \cup \{\Omega\}\)</span>, puis <span class="math inline">\(\mathcal E_{\alpha+1}\)</span> ajoute les complémentaires et unions dénombrables d’éléments de <span class="math inline">\(\mathcal E_\alpha\)</span>, et <span class="math inline">\(\mathcal E_\lambda = \bigcup_{\alpha &lt; \lambda} \mathcal E_\alpha\)</span> aux ordinaux limites. Cette construction se stabilise exactement à <span class="math inline">\(\omega_1\)</span> (le premier ordinal non dénombrable) : <span class="math inline">\(\mathcal E_{\omega_1} = \sigma(\mathcal E)\)</span>. La preuve repose sur la <strong>régularité de <span class="math inline">\(\omega_1\)</span></strong> : le sup d’une famille dénombrable d’ordinaux dénombrables est encore dénombrable, donc <span class="math inline">\(&lt; \omega_1\)</span>. Voir les notes sur les <a href="../probabilités/0120. nombres-transfinis-et-ordinaux.html">nombres transfinis et ordinaux</a>. La <strong>strictité</strong> de la hiérarchie <span class="math inline">\(\mathcal E_\alpha \subsetneq \mathcal E_{\alpha+1}\)</span> à chaque niveau <span class="math inline">\(\alpha &lt; \omega_1\)</span> (dans le cas borélien) est un théorème à part entière (Lebesgue-Hausdorff) ; voir la note sur la <a href="../probabilités/0121. strictité-de-la-hiérarchie-borélienne.html">strictité de la hiérarchie borélienne</a>. En pratique, la construction par le haut suffit et la hiérarchie transfinale n’est pas nécessaire.</p>
+</section>
+<section id="propriété-utile" class="level4" data-number="1.1.3.5">
+<h4 data-number="1.1.3.5" class="anchored" data-anchor-id="propriété-utile"><span class="header-section-number">1.1.3.5</span> Propriété utile</h4>
+<p><strong>Propriété utile.</strong> Si ℰ₁ ⊂ ℰ₂, alors σ(ℰ₁) ⊂ σ(ℰ₂). Plus les générateurs sont nombreux, plus la tribu engendrée est riche. Réciproquement, si ℰ₁ ⊂ σ(ℰ₂) et ℰ₂ ⊂ σ(ℰ₁), alors σ(ℰ₁) = σ(ℰ₂) : deux familles qui s’engendrent mutuellement donnent la même tribu.</p>
+</section>
+</section>
+<section id="tribu-borélienne-sur-ℝ-et-sur-ℝⁿ" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="tribu-borélienne-sur-ℝ-et-sur-ℝⁿ"><span class="header-section-number">1.1.4</span> 4. Tribu borélienne sur ℝ et sur ℝⁿ</h3>
+<section id="définition-2" class="level4" data-number="1.1.4.1">
+<h4 data-number="1.1.4.1" class="anchored" data-anchor-id="définition-2"><span class="header-section-number">1.1.4.1</span> Définition</h4>
+<p>C’est la tribu la plus importante en pratique. Elle capture « tout ce qu’on rencontre en analyse » sans tomber dans les pathologies de Vitali.</p>
+<p><strong>Définition.</strong> La <strong>tribu borélienne</strong> de ℝ, notée ℬ(ℝ), est la tribu engendrée par les ouverts de ℝ :</p>
+<p><span class="math display">\[\mathcal{B}(\mathbb{R}) = \sigma\bigl(\{O \subset \mathbb{R} : O \text{ ouvert}\}\bigr)\]</span></p>
+</section>
+<section id="contenu" class="level4" data-number="1.1.4.2">
+<h4 data-number="1.1.4.2" class="anchored" data-anchor-id="contenu"><span class="header-section-number">1.1.4.2</span> Contenu</h4>
+<p><strong>Ce qu’elle contient.</strong> Les ouverts, les fermés (complémentaires d’ouverts), les intersections dénombrables d’ouverts (ensembles Gδ), les unions dénombrables de fermés (ensembles Fσ), et ainsi de suite en alternant. Les singletons {x} sont boréliens (comme intersections <span class="math inline">\(\{x\} = \bigcap_n (x - 1/n, x + 1/n)\)</span>). Les intervalles de toute forme sont boréliens. Tous les ensembles qu’on manipule en analyse courante sont boréliens. (Construire un ensemble non borélien requiert l’axiome du choix, comme dans Vitali.)</p>
+</section>
+<section id="générateurs-équivalents" class="level4" data-number="1.1.4.3">
+<h4 data-number="1.1.4.3" class="anchored" data-anchor-id="générateurs-équivalents"><span class="header-section-number">1.1.4.3</span> Générateurs équivalents</h4>
+<p><strong>Générateurs équivalents.</strong> Les familles suivantes engendrent toutes ℬ(ℝ) :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Famille de générateurs</th>
+<th>Pourquoi elle suffit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ouverts de ℝ</td>
+<td>Définition</td>
+</tr>
+<tr class="even">
+<td>Intervalles ouverts (a, b)</td>
+<td>Tout ouvert de ℝ est union dénombrable d’intervalles ouverts (car ℚ est dense dans ℝ : pour chaque point d’un ouvert, on trouve un intervalle à bornes rationnelles contenu dans l’ouvert)</td>
+</tr>
+<tr class="odd">
+<td>Demi-droites (−∞, t], t ∈ ℝ</td>
+<td>(a, b) = ⋃ₙ ( (−∞, b − 1/n] &nbsp;(−∞, a] ), et réciproquement (−∞, t] = ⋂ₙ (−∞, t + 1/n)</td>
+</tr>
+<tr class="even">
+<td>Demi-droites (−∞, t), t ∈ ℝ</td>
+<td>(−∞, t] = ⋂ₙ (−∞, t + 1/n), et (−∞, t) = ⋃ₙ (−∞, t − 1/n]</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="cas-de-mathbbrn" class="level4" data-number="1.1.4.4">
+<h4 data-number="1.1.4.4" class="anchored" data-anchor-id="cas-de-mathbbrn"><span class="header-section-number">1.1.4.4</span> Cas de <span class="math inline">\(\mathbb{R}^n\)</span></h4>
+<p><strong>Sur ℝⁿ.</strong> La tribu borélienne ℬ(ℝⁿ) est engendrée par les ouverts de ℝⁿ. On peut aussi l’engendrer par les « pavés » <span class="math inline">\(A_1 \times \cdots \times A_n\)</span> où chaque <span class="math inline">\(A_i \in \mathcal{B}(\mathbb{R})\)</span> — on parle de <strong>tribu produit</strong> :</p>
+<p><span class="math display">\[\mathcal{B}(\mathbb{R}^n) = \mathcal{B}(\mathbb{R}) \otimes \cdots \otimes \mathcal{B}(\mathbb{R})\]</span></p>
+<p>Autrement dit, la tribu borélienne du produit est le produit des tribus boréliennes. (C’est un fait non trivial. L’inclusion <span class="math inline">\(\mathcal{B}(\mathbb{R})^{\otimes n} \subseteq \mathcal{B}(\mathbb{R}^n)\)</span> est facile : les projections <span class="math inline">\(\pi_i\)</span> sont continues donc mesurables, et les pavés sont des intersections finies de préimages. L’inclusion réciproque utilise la base dénombrable : tout ouvert de <span class="math inline">\(\mathbb{R}^n\)</span> est union dénombrable de pavés ouverts à coordonnées rationnelles, donc tout ouvert est dans <span class="math inline">\(\mathcal{B}(\mathbb{R})^{\otimes n}\)</span>. Pour des espaces topologiques sans base dénombrable, l’égalité peut être fausse.)</p>
+</section>
+</section>
+<section id="tribu-engendrée-par-une-application" class="level3" data-number="1.1.5">
+<h3 data-number="1.1.5" class="anchored" data-anchor-id="tribu-engendrée-par-une-application"><span class="header-section-number">1.1.5</span> 5. Tribu engendrée par une application</h3>
+<section id="définition-3" class="level4" data-number="1.1.5.1">
+<h4 data-number="1.1.5.1" class="anchored" data-anchor-id="définition-3"><span class="header-section-number">1.1.5.1</span> Définition</h4>
+<p>Soient <span class="math inline">\((\Omega, \mathcal{A})\)</span> et <span class="math inline">\((E, \mathcal{E})\)</span> deux espaces mesurables, et <span class="math inline">\(f : \Omega \to E\)</span> une application.</p>
+<p><strong>Fonction mesurable.</strong> <span class="math inline">\(f\)</span> est dite <strong>mesurable</strong> (ou <span class="math inline">\(\mathcal{A}/\mathcal{E}\)</span>-mesurable) si</p>
+<p><span class="math display">\[\forall B \in \mathcal{E},\quad f^{-1}(B) \in \mathcal{A}.\]</span></p>
+<p><strong>Tribu engendrée.</strong> La <strong>tribu engendrée par f</strong> est <span class="math inline">\(\sigma(f) = f^{-1}(\mathcal{E}) = \{ f^{-1}(B) : B \in \mathcal{E} \}\)</span> : on « tire en arrière » par <span class="math inline">\(f\)</span> tous les ensembles mesurables de <span class="math inline">\(E\)</span>. C’est une tribu car les préimages commutent avec toutes les opérations ensemblistes.</p>
+<p><span class="math inline">\(f\)</span> est <span class="math inline">\(\mathcal{A}/\mathcal{E}\)</span>-mesurable si et seulement si <span class="math inline">\(\sigma(f) \subseteq \mathcal{A}\)</span>. La mesurabilité est donc une condition sur la tribu du départ — elle doit être assez riche pour contenir toutes les préimages dictées par la tribu de l’arrivée. En particulier, <span class="math inline">\(\sigma(f)\)</span> est toujours plus grossière (ou égale) que <span class="math inline">\(\mathcal{A}\)</span> : elle ne discerne jamais plus finement que la tribu ambiante.</p>
+<p><strong>Pourquoi la condition porte sur les préimages — pas sur les images.</strong> Le terme « mesurable » est trompeur : on pourrait croire qu’il s’agit de mesurer les valeurs de <span class="math inline">\(f\)</span>, donc de mesurer quelque chose dans l’arrivée <span class="math inline">\(E\)</span>. C’est l’inverse. En pratique, la mesure qu’on souhaite exploiter est définie sur l’espace de départ <span class="math inline">\((\Omega, \mathcal{A})\)</span> — c’est là qu’on sait mesurer. L’espace d’arrivée <span class="math inline">\((E, \mathcal{E})\)</span> n’est muni que d’une tribu, pas nécessairement d’une mesure. La condition <span class="math inline">\(f^{-1}(B) \in \mathcal{A}\)</span> dit : chaque question posable dans l’arrivée (« <span class="math inline">\(f(\omega) \in B\)</span> ? ») se traduit en une question posable dans le départ (« <span class="math inline">\(\omega \in f^{-1}(B)\)</span> ? ») — là où la mesure opère. La tribu <span class="math inline">\(\mathcal{E}\)</span> fournit le vocabulaire des questions ; la mesurabilité garantit que ce vocabulaire est traduisible dans <span class="math inline">\(\mathcal{A}\)</span>. Le flux est :</p>
+<p><span class="math display">\[\mathcal{E} \xrightarrow{f^{-1}} \mathcal{A} \xrightarrow{m} [0, +\infty]\]</span></p>
+<p>C’est ce mécanisme qui permet de transporter <span class="math inline">\(m\)</span> vers l’arrivée : on pose <span class="math inline">\((m \circ f^{-1})(B) = m(f^{-1}(B))\)</span>, ce qui définit la <strong>mesure image</strong> (ou <strong>loi</strong> de <span class="math inline">\(f\)</span> en probabilités) — une mesure sur <span class="math inline">\((E, \mathcal{E})\)</span> construite à partir de la mesure sur <span class="math inline">\((\Omega, \mathcal{A})\)</span>. Mais ce transport n’est possible que si <span class="math inline">\(f^{-1}(B) \in \mathcal{A}\)</span> pour tout <span class="math inline">\(B \in \mathcal{E}\)</span>, c’est-à-dire si <span class="math inline">\(f\)</span> est mesurable. En résumé, « mesurable » signifie « compatible avec la mesure du départ », pas « dont on peut mesurer les valeurs ».</p>
+</section>
+<section id="analogie-recommandation-musicale-et-embeddings." class="level4" data-number="1.1.5.2">
+<h4 data-number="1.1.5.2" class="anchored" data-anchor-id="analogie-recommandation-musicale-et-embeddings."><span class="header-section-number">1.1.5.2</span> Analogie : recommandation musicale et embeddings.</h4>
+<p>Soit <span class="math inline">\(\Omega\)</span> l’ensemble des utilisateurs d’une plateforme de streaming musical. La plateforme enregistre pour chaque utilisateur des données comportementales : historique d’écoute, taux de skip, playlists créées, appareil utilisé, heure d’écoute. La tribu <span class="math inline">\(\mathcal{A}\)</span> représente la borne supérieure de ce que la plateforme peut <em>en principe</em> distinguer à partir de ces logs : ses éléments sont les sous-ensembles d’utilisateurs définissables par des conditions sur les données enregistrées — par exemple « les utilisateurs ayant écouté du jazz après 22h sur mobile ». L’ensemble « les utilisateurs qui sont musiciens professionnels » n’est pas dans <span class="math inline">\(\mathcal{A}\)</span> : cette information ne figure dans aucun log. En pratique, <span class="math inline">\(\mathcal{A}\)</span> n’est pas construite atome par atome ; c’est une borne conceptuelle, la plus grande tribu que les données permettraient d’engendrer.</p>
+<ul>
+<li>La fonction <span class="math inline">\(f : \Omega \to \mathbb{R}^d\)</span> est un <strong>modèle d’embedding</strong> (filtrage collaboratif ou réseau profond) qui projette chaque utilisateur dans <span class="math inline">\(\mathbb{R}^d\)</span> à partir de son historique d’écoute.</li>
+<li>La tribu <span class="math inline">\(\mathcal{E}\)</span> sur <span class="math inline">\(\mathbb{R}^d\)</span> encode la <strong>granularité du clustering</strong> : un <span class="math inline">\(k\)</span>-means en <span class="math inline">\(k = 100\)</span> clusters donne <span class="math inline">\(\mathcal{E} = \sigma(\{C_1, \ldots, C_{100}\})\)</span>, la σ-algèbre engendrée par la partition en cellules de Voronoï. Cette tribu est délibérément plus grossière que la tribu borélienne <span class="math inline">\(\mathcal{B}(\mathbb{R}^d)\)</span> : elle ne distingue que 100 régions. Prendre <span class="math inline">\(\mathcal{E} = \mathcal{B}(\mathbb{R}^d)\)</span> conserverait toute l’information de l’embedding ; le choix d’un clustering grossier est une compression supplémentaire, volontaire.</li>
+</ul>
+<p>Alors <span class="math inline">\(\sigma(f) = f^{-1}(\mathcal{E})\)</span> est une tribu sur <span class="math inline">\(\Omega\)</span> dont les éléments sont les groupes d’utilisateurs que le couple (embedding, clustering) permet de distinguer. Par exemple, <span class="math inline">\(f^{-1}(C_{42})\)</span> est le « segment 42 » : l’ensemble des utilisateurs dont l’embedding tombe dans la cellule <span class="math inline">\(C_{42}\)</span>.</p>
+<p><strong>Minimalité de <span class="math inline">\(\sigma(f)\)</span>.</strong> La tribu <span class="math inline">\(\sigma(f)\)</span> n’est pas une tribu commode parmi d’autres : c’est <em>la plus petite</em> tribu sur <span class="math inline">\(\Omega\)</span> rendant <span class="math inline">\(f\)</span> mesurable. Chaque élément de <span class="math inline">\(\sigma(f)\)</span> est de la forme <span class="math inline">\(f^{-1}(B)\)</span> pour un <span class="math inline">\(B \in \mathcal{E}\)</span> — il y figure parce que <span class="math inline">\(f\)</span> l’exige, et rien d’autre n’y figure — <span class="math inline">\(\sigma(f)\)</span> ne contient aucun ensemble qu’on ne pourrait pas obtenir comme <span class="math inline">\(f^{-1}(B)\)</span> pour un <span class="math inline">\(B \in \mathcal{E}\)</span>.</p>
+<p>Concrètement, comparons trois ensembles d’utilisateurs : - <span class="math inline">\(f^{-1}(C_{42})\)</span> (le segment 42) est dans <span class="math inline">\(\sigma(f)\)</span>. Non par choix de modélisation, mais parce que <span class="math inline">\(C_{42} \in \mathcal{E}\)</span> et que toute tribu rendant <span class="math inline">\(f\)</span> mesurable <em>doit</em> contenir <span class="math inline">\(f^{-1}(C_{42})\)</span>. - « Les utilisateurs ayant écouté du jazz après 22h » est dans <span class="math inline">\(\mathcal{A}\)</span> (les logs le permettent), mais pas dans <span class="math inline">\(\sigma(f)\)</span> : aucun ensemble de <span class="math inline">\(\mathcal{E}\)</span> ne produit ce groupe par préimage. L’embedding ne voit pas cette distinction — la tribu <span class="math inline">\(\sigma(f)\)</span> l’ignore non par limitation technique, mais parce que <span class="math inline">\(f\)</span> n’en a structurellement pas besoin. - « Les utilisateurs musiciens professionnels » n’est ni dans <span class="math inline">\(\sigma(f)\)</span> ni dans <span class="math inline">\(\mathcal{A}\)</span> : il échappe au système tout entier.</p>
+<p>Autrement dit, <span class="math inline">\(\sigma(f)\)</span> sépare deux éléments <span class="math inline">\(\omega_1, \omega_2 \in \Omega\)</span> (il existe <span class="math inline">\(A \in \sigma(f)\)</span> contenant l’un mais pas l’autre) si et seulement s’il existe <span class="math inline">\(B \in \mathcal{E}\)</span> tel que <span class="math inline">\(f(\omega_1) \in B\)</span> et <span class="math inline">\(f(\omega_2) \notin B\)</span>.</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(\sigma(f)\)</span> encode exactement le pouvoir de distinction de <span class="math inline">\(f\)</span> sur <span class="math inline">\(\omega\)</span> vue à travers <span class="math inline">\(\mathcal{E}\)</span> — ni plus, ni moins. Ou autrement dit: <span class="math inline">\(\sigma(f)\)</span> est la partition de <span class="math inline">\(\Omega\)</span> induite par <span class="math inline">\(f\)</span> à la résolution <span class="math inline">\(\mathcal{E}\)</span></p>
+</blockquote>
+<p>(Le mot « partition » est ici un raccourci : <span class="math inline">\(\sigma(f)\)</span> n’est pas une partition mais une σ-algèbre. Ce qu’on veut dire, c’est que les <em>atomes</em> de <span class="math inline">\(\sigma(f)\)</span> — les plus petits ensembles non vides de <span class="math inline">\(\sigma(f)\)</span> — forment une partition de <span class="math inline">\(\Omega\)</span>, dont chaque bloc regroupe les <span class="math inline">\(\omega\)</span> que le couple <span class="math inline">\((f, \mathcal{E})\)</span> ne peut pas distinguer. La σ-algèbre <span class="math inline">\(\sigma(f)\)</span> est alors l’ensemble de toutes les unions de ces blocs.)</p>
+<p><strong>Mesurabilité.</strong> L’embedding est calculé à partir de l’historique d’écoute, qui figure dans les logs : <span class="math inline">\(\sigma(f) \subseteq \mathcal{A}\)</span>, donc <span class="math inline">\(f\)</span> est <span class="math inline">\(\mathcal{A}\)</span>-mesurable. En revanche, la fonction <span class="math inline">\(g : \Omega \to \{0,1\}\)</span> définie par « est musicien professionnel » n’est pas <span class="math inline">\(\mathcal{A}\)</span>-mesurable : <span class="math inline">\(g^{-1}(\{1\}) \notin \mathcal{A}\)</span>, car la plateforme n’enregistre pas ce statut.</p>
+<p><strong>Indiscernabilité.</strong> Deux sources se cumulent, et il est utile de les hiérarchiser : - <strong>Perte due à <span class="math inline">\(f\)</span>.</strong> Deux utilisateurs aux goûts musicaux très différents mais dont les patterns d’écoute (mêmes heures, mêmes taux de skip) produisent le même embedding sont confondus par <span class="math inline">\(f\)</span>. Cette perte est intrinsèque au modèle : même en remplaçant le clustering par la tribu borélienne <span class="math inline">\(\mathcal{B}(\mathbb{R}^d)\)</span> entière, ces deux utilisateurs resteraient indiscernables dans <span class="math inline">\(\sigma(f)\)</span>. - <strong>Perte due à <span class="math inline">\(\mathcal{E}\)</span>.</strong> Deux utilisateurs d’embeddings distincts mais tombant dans le même cluster <span class="math inline">\(C_j\)</span> sont confondus par <span class="math inline">\(\mathcal{E}\)</span>. Cette perte est due au choix d’un clustering grossier et disparaîtrait si l’on prenait <span class="math inline">\(\mathcal{E} = \mathcal{B}(\mathbb{R}^d)\)</span>.</p>
+<p><strong>Mesure et mesure image.</strong> La mesure <span class="math inline">\(m\)</span> vit sur <span class="math inline">\(\Omega\)</span> : c’est par exemple la distribution empirique des utilisateurs (chaque utilisateur a le même poids <span class="math inline">\(1/N\)</span>, ou un poids proportionnel à son activité). La plateforme ne dispose pas <em>a priori</em> d’une mesure sur l’espace d’embedding <span class="math inline">\(\mathbb{R}^d\)</span> — cet espace est un artefact du modèle, pas un espace qu’on observe directement. Pourtant, elle veut répondre à des questions comme « quelle fraction d’utilisateurs tombe dans le cluster <span class="math inline">\(C_{42}\)</span> ? ». La réponse est <span class="math inline">\(m(f^{-1}(C_{42}))\)</span> : on ramène la question dans <span class="math inline">\(\Omega\)</span> via la préimage, puis on mesure avec <span class="math inline">\(m\)</span>. C’est exactement le flux <span class="math inline">\(\mathcal{E} \xrightarrow{f^{-1}} \mathcal{A} \xrightarrow{m} [0,+\infty]\)</span>. La fonction <span class="math inline">\(B \mapsto m(f^{-1}(B))\)</span> définit la <strong>mesure image</strong> <span class="math inline">\(m \circ f^{-1}\)</span> sur <span class="math inline">\((\mathbb{R}^d, \mathcal{E})\)</span> : c’est la distribution des utilisateurs vue à travers l’embedding. Elle n’existe sur l’arrivée que <em>parce qu’on</em> l’a transportée depuis le départ — et ce transport exige que <span class="math inline">\(f\)</span> soit mesurable.</p>
+<p><strong>Enrichissement.</strong> En ajoutant d’autres embeddings (<span class="math inline">\(f_1\)</span> = historique d’écoute, <span class="math inline">\(f_2\)</span> = structure des playlists, <span class="math inline">\(f_3\)</span> = graphe social, …) on enrichit progressivement la tribu <span class="math inline">\(\sigma(f_1, f_2, \ldots)\)</span> sur <span class="math inline">\(\Omega\)</span>, sans nécessairement atteindre <span class="math inline">\(\mathcal{A}\)</span> entière. (Attention : <span class="math inline">\(\sigma(f_1, f_2, \ldots)\)</span> n’est pas la simple union des <span class="math inline">\(\sigma(f_i)\)</span> — une union de tribus n’est en général pas une tribu. C’est la plus petite tribu contenant tous les <span class="math inline">\(\sigma(f_i)\)</span>, c’est-à-dire <span class="math inline">\(\sigma\bigl(\bigcup_i f_i^{-1}(\mathcal{E}_i)\bigr)\)</span>. Elle contient donc aussi toutes les combinaisons d’événements provenant de features <em>différentes</em>, comme <span class="math inline">\(f_1^{-1}(B_1) \cap f_3^{-1}(B_3)\)</span> — « les utilisateurs dont l’écoute tombe dans <span class="math inline">\(B_1\)</span> <em>et</em> dont le graphe social tombe dans <span class="math inline">\(B_3\)</span> ».) Certains sous-ensembles de <span class="math inline">\(\mathcal{A}\)</span> — par exemple les utilisateurs définis par un pattern de skip très fin — peuvent n’appartenir à aucun des <span class="math inline">\(\sigma(f_i)\)</span>, et donc pas à <span class="math inline">\(\sigma(f_1, f_2, \ldots)\)</span> non plus : un générateur absent de la famille ne peut pas engendrer les ensembles qui en dépendent.</p>
+</section>
+<section id="exemple-concret-le-dé-et-la-parité" class="level4" data-number="1.1.5.3">
+<h4 data-number="1.1.5.3" class="anchored" data-anchor-id="exemple-concret-le-dé-et-la-parité"><span class="header-section-number">1.1.5.3</span> Exemple concret : le dé et la parité</h4>
+<p>Vérifions la mécanique sur un cas fini où tout est calculable.</p>
+<ul>
+<li><strong>Ensemble de départ.</strong> <span class="math inline">\(\Omega = \{1,2,3,4,5,6\}\)</span> (les faces d’un dé).</li>
+<li><strong>Ensemble d’arrivée.</strong> <span class="math inline">\(E = \{0,1\}\)</span> (pair ou impair).</li>
+<li><strong>Application.</strong> <span class="math inline">\(f(\omega) = \omega \bmod 2\)</span> : elle envoie chaque face sur sa parité.</li>
+<li><strong>Tribu sur <span class="math inline">\(E\)</span>.</strong> <span class="math inline">\(\mathcal{E} = \mathcal{P}(E) = \{\emptyset, \{0\}, \{1\}, \{0,1\}\}\)</span> (toutes les parties — on ne perd rien côté arrivée).</li>
+<li><strong>Tribu engendrée par <span class="math inline">\(f\)</span>.</strong> <span class="math inline">\(\sigma(f) = f^{-1}(\mathcal{E}) = \{\emptyset, \{1,3,5\}, \{2,4,6\}, \Omega\}\)</span>, obtenue en tirant en arrière chaque élément de <span class="math inline">\(\mathcal{E}\)</span> : <span class="math inline">\(f^{-1}(\emptyset) = \emptyset\)</span>, <span class="math inline">\(f^{-1}(\{1\}) = \{1,3,5\}\)</span>, <span class="math inline">\(f^{-1}(\{0\}) = \{2,4,6\}\)</span>, <span class="math inline">\(f^{-1}(\{0,1\}) = \Omega\)</span>.</li>
+</ul>
+<p>La tribu <span class="math inline">\(\sigma(f)\)</span> sépare pair et impair, mais pas les faces individuelles. L’événement <span class="math inline">\(\{1,2\} \notin \sigma(f)\)</span> : aucun <span class="math inline">\(B \in \mathcal{E}\)</span> ne donne <span class="math inline">\(f^{-1}(B) = \{1,2\}\)</span>, car 1 est impair et 2 est pair — ils ne sont pas du même côté de <span class="math inline">\(f\)</span>.</p>
+</section>
+<section id="lemme-de-factorisation-de-doob" class="level4" data-number="1.1.5.4">
+<h4 data-number="1.1.5.4" class="anchored" data-anchor-id="lemme-de-factorisation-de-doob"><span class="header-section-number">1.1.5.4</span> Lemme de factorisation (de Doob)</h4>
+<p>Soit <span class="math inline">\((\Omega, \mathcal{A})\)</span> un espace mesurable, <span class="math inline">\(f : \Omega \to (E, \mathcal{E})\)</span> une application, et <span class="math inline">\(g : \Omega \to (\mathbb{R}, \mathcal{B}(\mathbb{R}))\)</span>. Alors <span class="math inline">\(g\)</span> est <span class="math inline">\(\sigma(f)\)</span>-mesurable si et seulement s’il existe une fonction mesurable <span class="math inline">\(\varphi : (E, \mathcal{E}) \to (\mathbb{R}, \mathcal{B}(\mathbb{R}))\)</span> telle que <span class="math inline">\(g = \varphi \circ f\)</span>.</p>
+<p><strong>Intuition.</strong> On lance un dé, mais on est derrière un rideau : un assistant regarde le résultat et nous communique seulement la valeur de <span class="math inline">\(f(\omega)\)</span>, par exemple la parité. On veut calculer une quantité <span class="math inline">\(g(\omega)\)</span>, par exemple un gain, un score. Le lemme dit : <strong>c’est possible si et seulement si <span class="math inline">\(g\)</span> ne dépend de <span class="math inline">\(\omega\)</span> qu’à travers <span class="math inline">\(f(\omega)\)</span></strong>, c’est-à-dire <span class="math inline">\(g = \varphi \circ f\)</span> pour une certaine fonction <span class="math inline">\(\varphi\)</span>.</p>
+<ul>
+<li>Si le gain ne dépend que de la parité (<span class="math inline">\(+3\)</span>€ si impair, <span class="math inline">\(-1\)</span>€ si pair) : on pose <span class="math inline">\(\varphi(1)=3\)</span>, <span class="math inline">\(\varphi(0)=-1\)</span>, et <span class="math inline">\(g = \varphi \circ f\)</span>. Le gain est calculable.</li>
+<li>Si le gain est la face elle-même (<span class="math inline">\(g(\omega) = \omega\)</span>) : impossible de l’écrire comme <span class="math inline">\(\varphi \circ f\)</span>, car <span class="math inline">\(\varphi(1)\)</span> devrait valoir à la fois 1, 3 et 5. Le gain n’est pas calculable à partir de la parité seule.</li>
+</ul>
+<p>Dans l’analogie de streaming musical : on veut prédire le taux de désabonnement <span class="math inline">\(g(\omega)\)</span> d’un utilisateur <span class="math inline">\(\omega\)</span>. Si ce taux ne dépend de <span class="math inline">\(\omega\)</span> qu’à travers son segment <span class="math inline">\(f(\omega) \in \{C_1, \ldots, C_{100}\}\)</span>, alors <span class="math inline">\(g = \varphi \circ f\)</span> pour une fonction de scoring <span class="math inline">\(\varphi\)</span> définie sur les segments, et <span class="math inline">\(g\)</span> est <span class="math inline">\(\sigma(f)\)</span>-mesurable. Si en revanche le taux dépend d’un pattern fin (heure d’écoute) que l’embedding ne capture pas, <span class="math inline">\(g\)</span> n’est pas <span class="math inline">\(\sigma(f)\)</span>-mesurable : aucune fonction <span class="math inline">\(\varphi\)</span> ne peut compenser l’information perdue par <span class="math inline">\(f\)</span>.</p>
+<p>On dit que « <span class="math inline">\(g\)</span> est une fonction de <span class="math inline">\(f\)</span> » quand <span class="math inline">\(g = \varphi \circ f\)</span>. La tribu <span class="math inline">\(\sigma(f)\)</span> formalise cette idée : un événement <span class="math inline">\(A \subseteq \Omega\)</span> appartient à <span class="math inline">\(\sigma(f)\)</span> si et seulement si, pour décider si <span class="math inline">\(\omega \in A\)</span>, il suffit de connaître <span class="math inline">\(f(\omega)\)</span> — sans avoir besoin de savoir quel <span class="math inline">\(\omega\)</span> particulier a produit cette valeur. Dans l’exemple du dé : « le résultat est impair » (<span class="math inline">\(A = \{1,3,5\}\)</span>) est dans <span class="math inline">\(\sigma(f)\)</span>, car il suffit de connaître la parité <span class="math inline">\(f(\omega)\)</span> pour trancher. En revanche, « le résultat est <span class="math inline">\(\leq 2\)</span> » (<span class="math inline">\(A = \{1,2\}\)</span>) n’est pas dans <span class="math inline">\(\sigma(f)\)</span> : connaître la parité ne suffit pas.</p>
+<blockquote class="blockquote">
+<p>Dire que <span class="math inline">\(g\)</span> est <span class="math inline">\(\sigma(f)\)</span>-mesurable, c’est dire que <span class="math inline">\(g\)</span> ne requiert pas plus d’information que ce que <span class="math inline">\(f\)</span> fournit : pour chaque <span class="math inline">\(\omega\)</span>, la valeur <span class="math inline">\(g(\omega)\)</span> est entièrement déterminée par <span class="math inline">\(f(\omega)\)</span>. En termes de discernabilité : <span class="math inline">\(\sigma(g) \subseteq \sigma(f)\)</span>, c’est-à-dire que <span class="math inline">\(f\)</span> discerne au moins aussi finement que <span class="math inline">\(g\)</span>.</p>
+</blockquote>
+<p>(Rappel : les tribus d’arrivée sont implicites dans cette notation. Ici <span class="math inline">\(f : \Omega \to (E, \mathcal{E})\)</span> et <span class="math inline">\(g : \Omega \to (F, \mathcal{F})\)</span>, donc <span class="math inline">\(\sigma(f) = f^{-1}(\mathcal{E})\)</span> et <span class="math inline">\(\sigma(g) = g^{-1}(\mathcal{F})\)</span>. L’inclusion <span class="math inline">\(\sigma(g) \subseteq \sigma(f)\)</span> signifie <span class="math inline">\(g^{-1}(\mathcal{F}) \subseteq f^{-1}(\mathcal{E})\)</span> : toute question posable via <span class="math inline">\(g\)</span> et <span class="math inline">\(\mathcal{F}\)</span> est déjà posable via <span class="math inline">\(f\)</span> et <span class="math inline">\(\mathcal{E}\)</span>.)</p>
+<p>En probabilités, ce lemme est la clé du conditionnement. L’espérance conditionnelle <span class="math inline">\(\mathbb{E}[X \mid f]\)</span> est définie comme une variable aléatoire <span class="math inline">\(\sigma(f)\)</span>-mesurable. Être <span class="math inline">\(\sigma(f)\)</span>-mesurable, c’est — d’après ce qu’on vient de voir — ne dépendre de <span class="math inline">\(\omega\)</span> qu’à travers <span class="math inline">\(f(\omega)\)</span>. Le lemme de Doob rend cette dépendance explicite : il garantit qu’il existe une fonction <span class="math inline">\(\varphi\)</span> telle que <span class="math inline">\(\mathbb{E}[X \mid f](\omega) = \varphi(f(\omega))\)</span>. Autrement dit, pour calculer l’espérance conditionnelle, il suffit de connaître la valeur de <span class="math inline">\(f\)</span> — on n’a pas besoin du <span class="math inline">\(\omega\)</span> sous-jacent. La démonstration est donnée dans la note sur le <a href="../probabilités/0110. lemme-de-factorisation-doob.html">lemme de factorisation de Doob</a>.</p>
+</section>
+<section id="scope-de-lénoncé" class="level4" data-number="1.1.5.5">
+<h4 data-number="1.1.5.5" class="anchored" data-anchor-id="scope-de-lénoncé"><span class="header-section-number">1.1.5.5</span> Scope de l’énoncé</h4>
+<p>L’énoncé se formule avec <span class="math inline">\(g\)</span> à valeurs dans <span class="math inline">\(\mathbb R\)</span> : c’est le cas des variables aléatoires en probabilités.</p>
+<p>Le lemme se généralise à <span class="math inline">\(g\)</span> à valeurs dans un espace d’arrivée plus général que <span class="math inline">\(\mathbb R\)</span> (par exemple <span class="math inline">\(\mathbb R^n\)</span> pour un vecteur aléatoire), pourvu que sa tribu ne soit « pas trop grosse » (techniquement, engendrée par une famille dénombrable). Cette condition est automatiquement satisfaite pour tous les espaces qu’on rencontre en probabilités (<span class="math inline">\(\mathbb R^n\)</span>, espaces de fonctions, espaces de suites, etc.), donc on n’a jamais à s’en soucier. Elle ne devient un vrai sujet que dans des domaines comme la théorie descriptive des ensembles ou la théorie ergodique.</p>
+</section>
+<section id="famille-dapplications" class="level4" data-number="1.1.5.6">
+<h4 data-number="1.1.5.6" class="anchored" data-anchor-id="famille-dapplications"><span class="header-section-number">1.1.5.6</span> Famille d’applications</h4>
+<p><strong>Tribu engendrée par une famille d’applications.</strong> Si <span class="math inline">\((f_i)_{i \in I}\)</span> est une famille d’applications <span class="math inline">\(f_i : \Omega \to (E_i, \mathcal{E}_i)\)</span>, on pose :</p>
+<p><span class="math display">\[\sigma\bigl((f_i)_{i \in I}\bigr) = \sigma\Bigl(\bigcup_{i \in I} f_i^{-1}(\mathcal{E}_i)\Bigr)\]</span></p>
+<p>C’est la plus petite tribu rendant toutes les <span class="math inline">\(f_i\)</span> mesurables simultanément. Elle encode l’information conjointe de toutes les <span class="math inline">\(f_i\)</span> : un événement A ∈ σ((fᵢ)) est un événement qu’on peut déterminer en observant les valeurs de toutes les <span class="math inline">\(f_i\)</span>.</p>
+</section>
+</section>
+<section id="approfondissement-pourquoi-transporter-la-mesure-et-le-cadre-général" class="level3" data-number="1.1.6">
+<h3 data-number="1.1.6" class="anchored" data-anchor-id="approfondissement-pourquoi-transporter-la-mesure-et-le-cadre-général"><span class="header-section-number">1.1.6</span> Approfondissement : pourquoi transporter la mesure, et le cadre général</h3>
+<p>On a vu que la mesurabilité de <span class="math inline">\(f\)</span> permet de transporter la mesure <span class="math inline">\(m\)</span> de <span class="math inline">\((\Omega, \mathcal{A})\)</span> vers l’arrivée <span class="math inline">\((E, \mathcal{E})\)</span> via la mesure image <span class="math inline">\(m \circ f^{-1}\)</span>. Deux questions naturelles se posent alors : pourquoi vouloir transporter la mesure si on sait déjà mesurer dans <span class="math inline">\(\Omega\)</span> ? Et que se passe-t-il quand l’arrivée porte elle aussi une mesure ?</p>
+<section id="pourquoi-passer-dans-un-autre-espace-si-on-sait-déjà-mesurer-dans-ω" class="level4" data-number="1.1.6.1">
+<h4 data-number="1.1.6.1" class="anchored" data-anchor-id="pourquoi-passer-dans-un-autre-espace-si-on-sait-déjà-mesurer-dans-ω"><span class="header-section-number">1.1.6.1</span> Pourquoi passer dans un autre espace si on sait déjà mesurer dans Ω ?</h4>
+<p>La construction de la mesure image peut sembler paradoxale : si la mesure <span class="math inline">\(m\)</span> est déjà définie sur <span class="math inline">\((\Omega, \mathcal{A})\)</span>, pourquoi se donner la peine de la transporter vers un espace d’arrivée <span class="math inline">\(E\)</span> ? La réponse est qu’on ne passe pas dans <span class="math inline">\(E\)</span> pour y <em>mesurer</em> — on y passe pour y <em>calculer</em>.</p>
+<p>L’espace de départ <span class="math inline">\(\Omega\)</span> peut être un ensemble énorme et amorphe : l’ensemble de tous les utilisateurs, l’ensemble de tous les résultats possibles d’une expérience, l’ensemble de toutes les trajectoires d’un processus stochastique. On sait y mesurer (on a <span class="math inline">\(m\)</span>), mais Ω n’a en général <strong>aucune géométrie</strong> : pas de distance, pas de voisinage, pas de direction. On peut calculer <span class="math inline">\(m(A)\)</span> pour n’importe quel <span class="math inline">\(A \in \mathcal{A}\)</span>, mais on ne peut pas répondre à « quels éléments de Ω se <em>ressemblent</em> ? » ni « quelle <em>structure</em> sous-tend les données ? ».</p>
+<p>L’application <span class="math inline">\(f : \Omega \to E\)</span> (un embedding, une statistique, une variable aléatoire) projette <span class="math inline">\(\Omega\)</span> dans un espace <span class="math inline">\(E\)</span> — typiquement <span class="math inline">\(\mathbb{R}^d\)</span> — qui est muni d’une <strong>géométrie</strong> : distances, coordonnées, notions de continuité, de convexité, de gradient. La mesure image <span class="math inline">\(m \circ f^{-1}\)</span> sur <span class="math inline">\(E\)</span> est alors une <strong>représentation compacte et structurée</strong> de l’information contenue dans <span class="math inline">\(m\)</span> : elle dit <em>où</em> se concentre la masse, quelles régions sont denses ou rares, comment la distribution se décompose spatialement. C’est cette structure géométrique qui rend possibles les opérations de l’analyse et de l’apprentissage : intégration, optimisation, approximation, classification, recommandation.</p>
+<p>La formule de transfert résume ce gain :</p>
+<p><span class="math display">\[\int_\Omega h(f(\omega))\, dm(\omega) = \int_E h(x)\, d(m \circ f^{-1})(x)\]</span></p>
+<p>Le membre de gauche est un calcul dans Ω — espace potentiellement énorme et sans structure. Le membre de droite est le même calcul, reformulé dans <span class="math inline">\(E\)</span> — espace de faible dimension et géométriquement riche. L’égalité dit qu’on peut remplacer l’un par l’autre sans perte. C’est un gain de <em>praticité</em>, pas de <em>mesurabilité</em>.</p>
+<p>Dans l’analogie du streaming musical : la distribution uniforme <span class="math inline">\(m\)</span> sur les <span class="math inline">\(N\)</span> utilisateurs est triviale à calculer dans Ω (compter). Mais pour regrouper les utilisateurs par goûts similaires, il faut une notion de proximité — qui n’existe pas dans Ω. L’embedding <span class="math inline">\(f : \Omega \to \mathbb{R}^d\)</span> la fournit : deux utilisateurs proches dans <span class="math inline">\(\mathbb{R}^d\)</span> ont des comportements voisins. La mesure image <span class="math inline">\(m \circ f^{-1}\)</span> — la distribution des utilisateurs dans l’espace d’embedding — est l’objet qu’on exploite réellement : les clusters sont ses zones de forte masse, la géométrie de l’espace d’embedding (distances, directions) donne un sens spatial à cette distribution, et ses modes indiquent les profils dominants. Ce sont ces propriétés de la distribution qui nourrissent les algorithmes de recommandation.</p>
+</section>
+<section id="le-cadre-général-mesures-des-deux-côtés" class="level4" data-number="1.1.6.2">
+<h4 data-number="1.1.6.2" class="anchored" data-anchor-id="le-cadre-général-mesures-des-deux-côtés"><span class="header-section-number">1.1.6.2</span> Le cadre général : mesures des deux côtés</h4>
+<p>Le cadre présenté dans cette note — mesure sur le départ <span class="math inline">\((\Omega, \mathcal{A}, m)\)</span>, tribu seule sur l’arrivée <span class="math inline">\((E, \mathcal{E})\)</span> — est le cadre de base. Mais en pratique, l’espace d’arrivée est très souvent muni lui aussi d’une mesure. Voici les trois configurations principales.</p>
+<p><strong>1. Mesure de référence et densité.</strong> L’espace d’arrivée <span class="math inline">\(E = \mathbb{R}\)</span> (ou <span class="math inline">\(\mathbb{R}^n\)</span>) porte une mesure de référence canonique : la <strong>mesure de Lebesgue</strong> <span class="math inline">\(\lambda\)</span> (la « longueur », l’« aire », le « volume »). Quand on transporte <span class="math inline">\(m\)</span> vers <span class="math inline">\(E\)</span> via <span class="math inline">\(f\)</span>, on obtient la mesure image <span class="math inline">\(m \circ f^{-1}\)</span>. La question naturelle est alors : comment cette mesure image se compare-t-elle à <span class="math inline">\(\lambda\)</span> ? Si <span class="math inline">\(m \circ f^{-1}\)</span> est <strong>absolument continue</strong> par rapport à <span class="math inline">\(\lambda\)</span> (c’est-à-dire : tout ensemble de longueur nulle reçoit aussi une masse nulle), il existe une fonction <span class="math inline">\(p \geq 0\)</span> telle que</p>
+<p><span class="math display">\[(m \circ f^{-1})(B) = \int_B p(x)\, d\lambda(x) \quad \text{pour tout } B \in \mathcal{B}(\mathbb{R})\]</span></p>
+<p>La fonction <span class="math inline">\(p\)</span> est la <strong>densité de probabilité</strong> — c’est l’objet central des probabilités et de la statistique.<br>
+Remarquons ce qui se passe : il y a maintenant <em>deux</em> mesures sur <span class="math inline">\(E\)</span> — la mesure de Lebesgue <span class="math inline">\(\lambda\)</span> (référence, fixe) et la mesure image <span class="math inline">\(m \circ f^{-1}\)</span> (ce qu’on veut décrire) — et la densité <span class="math inline">\(p\)</span> exprime la seconde en fonction de la première. Et une fois <span class="math inline">\(p\)</span> connue, on n’a plus besoin de revenir à <span class="math inline">\(\Omega\)</span> ni à <span class="math inline">\(m\)</span> : toute espérance se calcule directement dans <span class="math inline">\(E\)</span> par <span class="math inline">\(\mathbb{E}[h(f)] = \int_E h(x)\,p(x)\,d\lambda(x)\)</span>.<br>
+Le passage de <span class="math inline">\(\Omega\)</span> à <span class="math inline">\(E\)</span> ne fournit donc pas seulement une géométrie — il fournit un <strong>cadre probabiliste autonome</strong> : la densité <span class="math inline">\(p\)</span> et la mesure de Lebesgue <span class="math inline">\(\lambda\)</span> suffisent à faire des probabilités dans <span class="math inline">\(E\)</span>, sans référence à l’espace de départ. C’est ce que font les probabilités et la statistique en pratique : dès qu’on connaît la loi d’une variable aléatoire — c’est-à-dire sa densité <span class="math inline">\(p\)</span> — on calcule dans <span class="math inline">\(E\)</span> sans jamais revenir à <span class="math inline">\(\Omega\)</span>.<br>
+En pratique, la densité <span class="math inline">\(p\)</span> est rarement <em>déduite</em> d’une mesure <span class="math inline">\(m\)</span> connue sur <span class="math inline">\(\Omega\)</span>. En statistique, elle est <em>estimée</em> à partir de données (échantillons poussés dans <span class="math inline">\(E\)</span> via <span class="math inline">\(f\)</span>, puis estimation par maximum de vraisemblance, noyaux, etc.) ; en modélisation probabiliste, elle est <em>postulée</em> directement comme hypothèse — « <span class="math inline">\(X \sim \mathcal{N}(\mu, \sigma^2)\)</span> » — sans jamais construire <span class="math inline">\(\Omega\)</span> ni <span class="math inline">\(m\)</span>.<br>
+Le cadre abstrait <span class="math inline">\((\Omega, \mathcal{A}, m)\)</span> fournit la garantie fondationnelle qu’une telle densité est bien fondée sur un espace de probabilité — les théorèmes d’existence de Kolmogorov garantissent qu’il existe un espace <span class="math inline">\(\Omega\)</span> cohérent dès qu’on se donne des distributions marginales compatibles. Pour le calcul avec une densité connue, cet échafaudage est transparent — on travaille directement avec <span class="math inline">\(p\)</span> dans <span class="math inline">\(E\)</span> — mais il devient indispensable dès qu’on aborde des constructions plus riches (processus stochastiques, conditionnement, couplages).</p>
+<p><strong>2. Transport optimal.</strong> On part de <em>deux</em> mesures <span class="math inline">\(\mu\)</span> et <span class="math inline">\(\nu\)</span>, potentiellement sur deux espaces différents, et on cherche la « meilleure » façon de transporter l’une vers l’autre. Dans la formulation originale de Monge, on cherche une application <span class="math inline">\(T\)</span> telle que <span class="math inline">\(\mu \circ T^{-1} = \nu\)</span>, en minimisant <span class="math inline">\(\int c(x, T(x))\, d\mu(x)\)</span>. Kantorovich a reformulé le problème en cherchant non plus une application <span class="math inline">\(T\)</span> mais un <strong>couplage</strong> <span class="math inline">\(\gamma\)</span> — une mesure jointe sur le produit dont les marginales sont <span class="math inline">\(\mu\)</span> et <span class="math inline">\(\nu\)</span> — et en minimisant <span class="math inline">\(\int c(x,y)\,d\gamma(x,y)\)</span>. Cette relaxation rend le problème convexe et garantit l’existence d’un optimum. Ici la mesure est des deux côtés : <span class="math inline">\(\mu\)</span> sur le départ, <span class="math inline">\(\nu\)</span> sur l’arrivée, et c’est leur relation qui est l’objet d’étude.</p>
+<p><em>Exemple.</em> Une chaîne logistique dispose de trois entrepôts <span class="math inline">\(a_1, a_2, a_3\)</span> contenant respectivement 50, 30 et 20 tonnes de marchandise, et doit approvisionner trois magasins <span class="math inline">\(b_1, b_2, b_3\)</span> ayant des demandes de 40, 40 et 20 tonnes. On modélise l’offre par <span class="math inline">\(\mu = 50\,\delta_{a_1} + 30\,\delta_{a_2} + 20\,\delta_{a_3}\)</span> et la demande par <span class="math inline">\(\nu = 40\,\delta_{b_1} + 40\,\delta_{b_2} + 20\,\delta_{b_3}\)</span>, et le coût <span class="math inline">\(c(a_i, b_j)\)</span> est la distance kilométrique entre l’entrepôt <span class="math inline">\(a_i\)</span> et le magasin <span class="math inline">\(b_j\)</span>. Le problème de transport optimal consiste à trouver un plan d’acheminement qui satisfait toutes les demandes tout en minimisant le coût total de livraison. C’est exactement le problème posé par Monge en 1781 sous le nom de « déblais et remblais » : comment déplacer un tas de terre d’une forme à une autre en minimisant l’effort ?</p>
+<p>Le coût optimal de Kantorovich entre <span class="math inline">\(\mu\)</span> et <span class="math inline">\(\nu\)</span> définit la <strong>distance de Wasserstein</strong> <span class="math inline">\(W(\mu, \nu) = \inf_\gamma \int c\,d\gamma\)</span>, qui donne une géométrie à l’espace des mesures de probabilité lui-même : les mesures deviennent des points dans un espace métrique, et l’on peut parler de convergence ou de barycentre dans cet espace. Contrairement à la divergence de Kullback-Leibler, la distance de Wasserstein « voit » la géométrie de l’espace sous-jacent : deux distributions proches spatialement sont proches au sens de Wasserstein, même si leurs supports sont disjoints (ce qui rendrait la KL infinie). C’est cette sensibilité à la géométrie qui a fait le succès du transport optimal en apprentissage génératif (Wasserstein GAN).</p>
+<p><strong>3. Inférence bayésienne.</strong> On veut estimer un paramètre inconnu <span class="math inline">\(\theta\)</span> à partir de données observées. On part avec une croyance initiale sur les valeurs plausibles de <span class="math inline">\(\theta\)</span> — c’est la loi <em>a priori</em>, une mesure sur l’espace des paramètres <span class="math inline">\(\Theta\)</span>. On dispose ensuite d’un modèle qui dit, pour chaque valeur candidate de <span class="math inline">\(\theta\)</span>, quelles observations sont vraisemblables — c’est la <em>vraisemblance</em>, qui pour chaque <span class="math inline">\(\theta\)</span> donne une mesure sur l’espace des observations <span class="math inline">\(X\)</span>. L’inférence bayésienne met à jour la croyance initiale à la lumière des données pour produire la loi <em>a posteriori</em> sur <span class="math inline">\(\Theta\)</span>. Il y a donc des mesures des deux côtés — sur <span class="math inline">\(\Theta\)</span> (ce qu’on croit) et sur <span class="math inline">\(X\)</span> (ce qu’on observe) — et c’est leur interaction qui est l’objet d’étude.</p>
+<p><em>Exemple.</em> Un médecin veut estimer la proportion <span class="math inline">\(\theta \in [0,1]\)</span> de patients répondant à un traitement. Avant tout essai, il a une croyance initiale sur <span class="math inline">\(\theta\)</span> : c’est la mesure <em>a priori</em> <span class="math inline">\(\pi\)</span> sur <span class="math inline">\(\Theta = [0,1]\)</span> — par exemple une loi <span class="math inline">\(\text{Beta}(2,2)\)</span>, qui exprime qu’il s’attend à une efficacité modérée, sans certitude. Puis il observe <span class="math inline">\(n = 20\)</span> patients, dont <span class="math inline">\(k = 14\)</span> répondent au traitement : ce sont les données <span class="math inline">\(x\)</span>, qui vivent dans l’espace des observations <span class="math inline">\(X\)</span>. Le modèle de vraisemblance dit : <em>si</em> la vraie proportion est <span class="math inline">\(\theta\)</span>, la probabilité d’observer exactement <span class="math inline">\(k\)</span> succès sur <span class="math inline">\(n\)</span> est <span class="math inline">\(P_\theta(k) = \binom{n}{k}\theta^k(1-\theta)^{n-k}\)</span> (loi binomiale). L’inférence bayésienne combine <span class="math inline">\(\pi\)</span> et <span class="math inline">\(P_\theta\)</span> via la formule de Bayes pour produire la mesure <em>a posteriori</em> <span class="math inline">\(\pi(\theta \mid x) \propto P_\theta(x) \cdot \pi(\theta)\)</span> — ici une loi <span class="math inline">\(\text{Beta}(2+14, 2+6) = \text{Beta}(16, 8)\)</span>, qui concentre la croyance autour de <span class="math inline">\(\theta \approx 0{,}67\)</span>. Les mesures interagissent : <span class="math inline">\(\pi\)</span> vit sur <span class="math inline">\(\Theta\)</span> (ce qu’on croit sur le paramètre), <span class="math inline">\(P_\theta\)</span> vit sur <span class="math inline">\(X\)</span> (ce qu’on prédit pour les observations), et la mise à jour bayésienne fait circuler l’information de <span class="math inline">\(X\)</span> vers <span class="math inline">\(\Theta\)</span>.</p>
+<p>Le point structurel est que la vraisemblance <span class="math inline">\(\theta \mapsto P_\theta\)</span> n’est pas une mesure unique mais une <em>famille</em> de mesures indexée par <span class="math inline">\(\Theta\)</span> — un <strong>noyau de transition</strong> (ou noyau markovien). Pour que l’intégrale <span class="math inline">\(m(B) = \int_\Theta P_\theta(B)\,d\pi(\theta)\)</span> ait un sens (loi marginale des observations), il faut que <span class="math inline">\(\theta \mapsto P_\theta(B)\)</span> soit mesurable pour tout <span class="math inline">\(B\)</span> : la mesurabilité, thème central de ce chapitre, est ici la condition de cohérence qui permet de faire dialoguer les deux espaces.</p>
+<p>En résumé, le cadre « mesure sur le départ, tribu seule sur l’arrivée » est le point de départ conceptuel — celui qui clarifie le rôle de la mesurabilité et le sens du flux <span class="math inline">\(\mathcal{E} \xrightarrow{f^{-1}} \mathcal{A} \xrightarrow{m} [0, +\infty]\)</span>. Mais dès qu’on fait de l’analyse, de la statistique ou de l’apprentissage, l’arrivée porte presque toujours une mesure de référence, et la relation entre les mesures (densité, divergence, distance de Wasserstein, rapport de vraisemblance) est au cœur du sujet.</p>
+
+
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../probabilités/0000. syllabus.html" class="pagination-link" aria-label="Syllabus">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Syllabus</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../probabilités/0110. lemme-de-factorisation-doob.html" class="pagination-link" aria-label="0110. Lemme de factorisation de Doob">
+        <span class="nav-page-text">0110. Lemme de factorisation de Doob</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

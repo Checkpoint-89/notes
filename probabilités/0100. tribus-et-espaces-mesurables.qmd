@@ -1,0 +1,414 @@
+# Probabilités
+
+## I. Tribus et espaces mesurables
+
+**Vue d'ensemble.** Ce chapitre construit la notion de tribu en six étapes.
+1. La σ-additivité est une propriété essentielle d'une mesure, indispensable pour garantir les raisonnements de passage à la limite. L'exemple des parties finies ou cofinies montre que sans σ-additivité, on peut avoir des comportements pathologiques à la limite.
+2. Le théorème de Vitali montre qu'on ne peut pas définir sur $\mathcal P(\mathbb R)$ une mesure satisfaisant simultanément le prolongement de la longueur, l'invariance par translation et la σ-additivité. Il illustre qu'une mesure, pour respecter les contraintes qu'on lui impose, peut devoir restreindre les parties qu'elle se propose de mesurer. C'est le rôle des tribus.
+3. Les exemples des mesures de Dirac et de comptage montrent que ce n'est pas l'ensemble sous-jacent qui force à restreindre à une tribu, mais les propriétés qu'on exige de la mesure. Ces deux mesures portent sur $\mathbb R$ et restent cohérentes sur $\mathcal P(\mathbb R)$ entier.
+4. La notion de tribu étant motivée, on peut définir formellement un espace mesurable comme un couple $(\Omega, \mathcal A)$ où $\mathcal A$ est une tribu sur $\Omega$. Une mesure sur cet espace est une application $m : \mathcal A \to [0,+\infty]$ telle que $m(\emptyset)=0$ et $m$ soit σ-additive ; le triplet $(\Omega, \mathcal A, m)$ est alors un espace mesuré.
+5. En pratique, on construit une tribu à partir d'une famille génératrice. L'exemple principal est la tribu borélienne, engendrée par les ouverts de $\mathbb R$ (ou, de façon équivalente, par les intervalles ouverts, les demi-droites fermées ou ouvertes, etc.). Sur $\mathbb R^n$, la tribu borélienne coïncide avec la tribu produit $\mathcal B(\mathbb R)^{\otimes n}$.
+6. Une tribu peut aussi être définie par une application $f : \Omega \to (E, \mathcal E)$ en tirant en arrière les parties mesurables de $E$ par $f^{-1}$. Cette construction mène au lemme de factorisation de Doob : $g$ est $\sigma(f)$-mesurable si et seulement si $g$ se factorise à travers $f$, c'est-à-dire $g = \varphi \circ f$ pour une certaine fonction mesurable $\varphi$.
+
+### 1. Le problème de la mesure
+
+#### Cadre du problème
+
+Le point de départ est une question simple : peut-on attribuer une « mesure » à tous les sous-ensembles de ℝ ?
+
+On connaît la longueur d'un intervalle : la longueur de [a, b] est b − a. On voudrait étendre cette notion à des ensembles plus compliqués de ℝ — des unions d'intervalles, des ensembles de Cantor (ensembles fermés, très découpés, non dénombrables, mais de longueur nulle), etc. — sous forme d'une fonction m définie sur les parties de ℝ, à valeurs dans [0, +∞], qui respecte des propriétés raisonnables.
+
+La question qu'on se pose est donc une **question géométrique sur ℝ.** Peut-on définir sur les parties de ℝ une notion de mesure qui prolonge la longueur usuelle des intervalles ?
+
+La **question générale** sous-jacente est : sur un ensemble quelconque Ω, peut-on définir une mesure sur une famille convenable de parties de Ω ?
+
+Sur ℝ, la question est géométrique car on souhaite que la mesure respecte des exigences liées à la géométrie de ℝ. Ce qu'on demande à m, **au minimum** :
+
+- **Additivité.** Si A et B sont disjoints, m(A ∪ B) = m(A) + m(B).
+- **Prolongement.** m([a, b]) = b − a pour tout intervalle.
+- **Invariance par translation.** m(A + t) = m(A) pour tout t ∈ ℝ. (Déplacer un ensemble ne change pas sa taille.)
+
+L'idée d'additivité, puis de σ-additivité, appartient à la notion abstraite de mesure.
+Les deux dernières exigences en revanche sont spécifiques au problème géométrique d'une mesure sur ℝ : on veut que la mesure construite reflète la longueur usuelle.
+
+#### Nécessité de la σ-additivité : l'additivité finie ne garantit pas les convergences
+
+L'additivité finie (pour deux ensembles, ou pour un nombre fini d'ensembles) est naturelle mais insuffisante pour faire de l'analyse. On a besoin d'une propriété plus forte.
+
+**σ-additivité (additivité dénombrable).** Si $(A_n)_{n \geq 1}$ est une suite d'ensembles **deux à deux disjoints**, alors :
+
+$$m\Bigl(\bigcup_{n=1}^{\infty} A_n\Bigr) = \sum_{n=1}^{\infty} m(A_n)$$
+
+**Pourquoi cette propriété est-elle indispensable ?** En analyse et en probabilité, on passe constamment à la limite sur des suites d'ensembles. Voici quatre situations typiques, qui toutes reposent sur des opérations dénombrables.
+
+- _1. Limite inférieure d'ensembles._ L'expression
+
+$$\bigcup_{N=1}^{\infty}\bigcap_{n\ge N} A_n$$
+
+signifie « l'ensemble des $\omega$ tels qu'il existe un rang $N$ à partir duquel, pour tout $n \geq N$, on a $\omega \in A_n$ ».
+
+- _2. Limite supérieure d'ensembles._ L'expression
+
+$$\bigcap_{N=1}^{\infty}\bigcup_{n\ge N} A_n$$
+
+signifie « l'ensemble des $\omega$ tels que $\omega \in A_n$ pour une infinité de valeurs de $n$ ».
+
+Ces deux expressions réapparaîtront plus loin, par exemple dans l'étude des convergences et des lemmes de Borel-Cantelli.
+
+- _3. Continuité par en bas_ (suite croissante). On approche un ensemble par morceaux de plus en plus grands comme au 1 ci-dessus. Si:
+$$A_1 \subset A_2 \subset \cdots \quad \text{et} \quad A = \bigcup_{n=1}^{\infty} A_n,$$
+
+alors on s'attend à ce que la mesure de $A$ soit la limite des mesures des approximations $A_n$, autrement dit que mesure et limite commutent :
+
+$$m(A) = m\Bigl(\underbrace{\bigcup_n A_n}_{\text{limite ensembliste}}\Bigr) = \underbrace{\lim_n m(A_n)}_{\text{limite numérique}}.$$
+
+C'est exactement ce que garantit la σ-additivité : elle autorise à permuter mesure et limite. Pour des $B_n$ disjoints (les « nouvelles parties » ajoutées à chaque étape), la réunion $\bigcup_{n=1}^\infty B_n$ est la limite croissante des réunions partielles $\bigcup_{n=1}^N B_n$, et la σ-additivité dit précisément que
+
+$$m\!\left(\lim_{N\to\infty} \bigcup_{n=1}^{N} B_n\right) = \lim_{N\to\infty}\, m\!\left(\bigcup_{n=1}^{N} B_n\right).$$
+
+- _4. Continuité par en haut_ (suite décroissante). On approche un ensemble par des ensembles de plus en plus petits comme au 2 ci-dessus. Si
+
+$$A_1 \supset A_2 \supset \cdots \quad \text{et} \quad A = \bigcap_{n=1}^{\infty} A_n,$$
+
+alors on s'attend à ce que $m(A_n)$ tende vers $m(A)$. C'est encore vrai, à condition que $m(A_1) < \infty$ :
+
+$$m(A) = m\Bigl(\bigcap_n A_n\Bigr) = \lim_n m(A_n).$$
+
+L'hypothèse $m(A_1)<\infty$ évite les soustractions indéterminées du type $+\infty-+\infty$.
+
+Sans σ-additivité, la mesure ne se comporterait pas bien vis-à-vis de ces deux types de limites. En particulier, on pourrait avoir $A_n \downarrow \emptyset$ et pourtant $m(A_n)$ ne tendant pas vers 0 (voir l'exemple plus bas).
+
+*Exemple.* Sur l'algèbre des parties **finies ou cofinies** de $\mathbb{N}$, définissons
+
+$$
+m(A)=
+\begin{cases}
+0 & \text{si } A \text{ est fini},\\
+1 & \text{si } A^c \text{ est fini.}
+\end{cases}
+$$
+
+Cette fonction est additive finie : si $A$ et $B$ sont disjoints et dans l'algèbre, ils ne peuvent pas être tous deux cofinis (sinon $A^c$ et $B^c$ seraient finis, donc $(A \cap B)^c = A^c \cup B^c$ serait fini, donc $A \cap B$ serait cofini, en particulier infini, donc non vide — contredisant la disjonction). Donc au plus l'un des deux est cofini ; les deux cas se vérifient directement :
+- *Les deux sont finis* : $m(A)=m(B)=0$, $A\cup B$ est fini donc $m(A\cup B)=0=0+0$. ✓
+- *L'un est cofini, l'autre est fini* : par exemple $A$ cofinid, $B$ fini. Alors $(A\cup B)^c = A^c\cap B^c\subseteq A^c$ est fini, donc $A\cup B$ est cofini et $m(A\cup B)=1=1+0$. ✓
+
+En revanche, $m$ n'est pas $\sigma$-additive : les singletons $B_n = \{n\}$ sont deux à deux disjoints, chacun est fini donc $m(B_n)=0$, mais $\bigcup_n B_n = \mathbb{N}$ est cofini (de complémentaire $\emptyset$) donc $m(\mathbb{N})=1 \neq 0 = \sum_n m(B_n)$. Cette défaillance se manifeste concrètement par un échec de la **continuité par en haut**, que la σ-additivité aurait garantie : pour $A_n = \{n,n+1,n+2,\dots\}$, la suite est décroissante et $\bigcap_n A_n = \emptyset$ (tout entier fixé $k$ sort de $A_n$ dès que $n > k$), donc $A_n \downarrow \emptyset$. Pourtant $m(A_n)=1$ pour tout $n$, tandis que $m(\emptyset)=0$ : la mesure ne suit pas la limite.
+
+*Remarque.* La famille des parties finies ou cofinies de $\mathbb N$ est une **algèbre** (stable par complémentaire et par union finie) mais **pas une σ-algèbre** : l'ensemble $\{2,4,6,\dots\} = \bigcup_n \{2n\}$ est une union dénombrable d'ensembles finis (chaque $\{2n\}$ est dans la famille), mais n'est lui-même ni fini ni cofini.
+
+#### Le théorème de Vitali : on ne peut pas toujours mesurer $\mathcal P(\Omega)$
+
+Vitali (1905) a montré qu'aucune fonction $m$ définie sur *tous* les sous-ensembles de ℝ ne peut satisfaire simultanément le prolongement, l'invariance par translation et la σ-additivité.
+
+L'idée de la construction est la suivante.
+
+On définit sur $[0,1)$ la relation $x \sim y \iff x-y \in \mathbb Q$. C'est une relation d'équivalence. Par l'axiome du choix, on sélectionne exactement un représentant dans chaque classe d'équivalence : soit $V$ l'ensemble obtenu.
+
+Pour chaque rationnel $q \in \mathbb Q \cap [0,1)$, on forme le translaté $V+q \pmod{1} = \{(v+q)\bmod 1 : v \in V\}$. Ces translatés sont :
+
+- **deux à deux disjoints** : si $x \in (V+q) \cap (V+q')$ avec $q \neq q'$, alors $x = v_1 + q = v_2 + q' \pmod{1}$ avec $v_1, v_2 \in V$, donc $v_1 - v_2 = q' - q \in \mathbb Q$, ce qui signifie $v_1 \sim v_2$ ; comme $V$ contient un seul représentant par classe, $v_1 = v_2$, d'où $q = q'$, contradiction.
+- **de réunion $[0,1)$** : tout $x \in [0,1)$ est dans une classe d'équivalence, donc $x \sim v$ pour un unique $v \in V$, c'est-à-dire $x - v = r \in \mathbb Q$. Puisque $x, v \in [0,1)$, on a $r \in (-1,1)$, mais $r$ peut être négatif. On pose $q = r \bmod 1 \in \mathbb Q \cap [0,1)$. Alors $x = v + r \equiv v + q \pmod{1}$, i.e. $x = (v+q)\bmod 1$, donc $x \in V+q \pmod{1}$.
+
+Supposons $V$ mesurable, de mesure $m(V)$. Par invariance par translation, tous les ensembles $V+q$ ont même mesure. Par σ-additivité,
+
+$$1 = m\bigl([0,1)\bigr) = \sum_{q \in \mathbb{Q} \cap [0,1)} m(V).$$
+
+Le membre de droite est une somme dénombrable d'un terme constant. Si $m(V)=0$, la somme vaut 0 ; si $m(V)>0$, la somme vaut $+\infty$. Dans les deux cas, on obtient une contradiction.
+
+**Conséquence.** On ne peut donc pas mesurer toutes les parties de ℝ avec une notion de longueur satisfaisant ces propriétés. Il faut choisir une sous-famille de $\mathcal P(\mathbb R)$ — suffisamment riche pour contenir tous les ensembles qu'on utilise en pratique, mais pas trop grosse pour que la mesure géométrique reste cohérente. C'est précisément le rôle de la **σ-algèbre**.
+
+*Remarque culturelle.* En dimension 3, le paradoxe de Banach-Tarski affirme, très schématiquement, qu'on peut découper une boule en un nombre fini de morceaux très pathologiques puis, en les déplaçant seulement par rotations et translations, reconstituer deux boules identiques à la première. Le point décisif est que, si ces morceaux avaient tous un volume géométrique bien défini, invariant par déplacement et additif, on obtiendrait qu'une boule a le même volume que deux copies d'elle-même, ce qui est absurde. Le paradoxe ne contredit donc pas le volume usuel ; il montre qu'on ne peut pas attribuer un volume raisonnable à toutes les parties de l'espace. Comme pour Vitali, il motive la nécessité de restreindre la mesure à une famille convenable d'ensembles.
+
+**Des mesures existent tout de même sur $\mathcal P(\mathbb R)$.** Le théorème de Vitali ne dit donc pas qu'aucune mesure n'existe sur $\mathcal P(\mathbb R)$. Il dit seulement qu'on ne peut pas y définir une mesure satisfaisant simultanément les exigences géométriques imposées plus haut. Autrement dit, la difficulté dépend des propriétés qu'on exige de la mesure.
+
+Au sens de mesure qui sera formalisé à la section suivante, il existe bien des mesures sur $\mathcal P(\mathbb R)$. Deux exemples importants sont les suivants.
+
+- **Mesure de Dirac en $x_0$**, notée $\delta_{x_0}$ :
+
+$$
+\delta_{x_0}(A)=
+\begin{cases}
+1 & \text{si } x_0 \in A,\\
+0 & \text{si } x_0 \notin A.
+\end{cases}
+$$
+
+Elle est bien définie sur toute $\mathcal P(\mathbb R)$. Intuitivement, elle ne mesure pas la longueur d'un ensemble : elle regarde seulement si $x_0$ appartient ou non à cet ensemble. C'est pourquoi $\delta_{x_0}([0,2])$ vaut 0 ou 1, alors que la longueur de $[0,2]$ vaut 2.
+
+- **Mesure de comptage** :
+
+$$
+\#(A)=
+\begin{cases}
+|A| & \text{si } A \text{ est fini},\\
++\infty & \text{si } A \text{ est infini.}
+\end{cases}
+$$
+
+Elle aussi est définie sur toute $\mathcal P(\mathbb R)$. Elle ne mesure pas la longueur mais le nombre de points : un intervalle comme $[0,1]$ a alors mesure $+\infty$. Elle est même invariante par translation, ce qui montre bien que ce n'est pas cette propriété seule qui pose problème.
+
+Ces exemples mettent donc en évidence le point essentiel : **la sous-famille de $\mathcal P(\mathbb R)$ sur laquelle une mesure peut être définie dépend des exigences qu'on lui impose**.
+
+### 2. σ-algèbres : définition et premières propriétés
+
+#### Définition
+
+Soit Ω un ensemble quelconque. On note 𝒫(Ω) l'ensemble de toutes les parties de Ω.
+
+**Définition.** Une **σ-algèbre** (ou **tribu**) sur Ω est une famille 𝒜 ⊂ 𝒫(Ω) qui vérifie :
+
+1. Ω ∈ 𝒜 (l'ensemble « total » est mesurable)
+2. Si A ∈ 𝒜, alors Aᶜ ∈ 𝒜 (stabilité par passage au complémentaire)
+3. Si $(A_n)_{n \geq 1}$ est une suite d'éléments de 𝒜, alors $\bigcup_{n=1}^{\infty} A_n \in \mathcal{A}$ (stabilité par union dénombrable)
+
+Le couple (Ω, 𝒜) s'appelle un **espace mesurable**. Les éléments de 𝒜 sont les ensembles sur lesquels une mesure pourra être définie — on les appelle les **ensembles mesurables**, ou en probabilités, les **événements**.
+
+Attention au vocabulaire : « mesurable » ici veut dire **mesurable relativement à la tribu 𝒜**. Cela ne veut pas encore dire qu'une mesure m est déjà définie sur 𝒜, ni, a fortiori, qu'elle possède des propriétés géométriques particulières comme le prolongement de la longueur sur ℝ ou l'invariance par translation.
+
+#### Mesure et espace mesuré
+
+Une **mesure** sur un espace mesurable $(\Omega, \mathcal A)$ est une application
+
+$$m : \mathcal A \to [0,+\infty]$$
+
+telle que $m(\emptyset)=0$ et telle que $m$ soit σ-additive. Le triplet $(\Omega, \mathcal A, m)$ s'appelle alors un **espace mesuré**.
+
+*Remarque.* La σ-additivité fait intervenir $m\bigl(\bigcup_n A_n\bigr)$ : pour que cette expression ait un sens, il faut que $\bigcup_n A_n$ appartienne au domaine de $m$, c'est-à-dire à la tribu $\mathcal A$. C'est exactement ce que garantit l'axiome (3) de la définition de σ-algèbre. Ainsi, la stabilité par union dénombrable est taillée pour que la σ-additivité puisse pleinement opérer.
+
+#### Conséquences immédiates
+
+- ∅ ∈ 𝒜 (appliquer (2) à Ω : ∅ = Ωᶜ).
+- Stabilité par **intersection dénombrable** : par les lois de De Morgan, $\bigcap_n A_n = \bigl(\bigcup_n A_n^c\bigr)^c$. Le complémentaire des $A_n$ est dans 𝒜 par (2), leur union par (3), le complémentaire de cette union par (2) à nouveau.
+- Stabilité par **différence** : A \ B = A ∩ Bᶜ.
+- Stabilité par union ou intersection **finies** (cas particulier du dénombrable, en complétant la suite par des ∅).
+
+En résumé, une σ-algèbre est stable par toute opération ensembliste dénombrable.
+
+#### Exemples
+
+**Exemples extrêmes.**
+- La plus petite tribu sur Ω : {∅, Ω}. On l'appelle la tribu **grossière**. Elle ne distingue rien.
+- La plus grande tribu sur Ω : 𝒫(Ω). On l'appelle la tribu **discrète**. Elle distingue tout. En particulier, 𝒫(Ω) est toujours une σ-algèbre, quel que soit Ω.
+- Toute σ-algèbre est comprise entre ces deux extrêmes : {∅, Ω} ⊂ 𝒜 ⊂ 𝒫(Ω).
+
+Remarque: il n'y a pas de contradiction avec Vitali : lorsque Ω = ℝ, 𝒫(ℝ) est bien une σ-algèbre. On peut même définir sur 𝒫(ℝ) certaines mesures, comme les mesures de Dirac ou la mesure de comptage. Ce que Vitali montre, c'est qu'on ne peut pas y définir une mesure qui prolonge la longueur, soit invariante par translation et soit σ-additive.
+
+**Exemple concret.** Ω = {1, 2, 3, 4} (un dé à 4 faces). On peut choisir la tribu 𝒜 = {∅, {1,2}, {3,4}, Ω}. Avec cette tribu, on peut distinguer « pair ou impair » (au sens 1,2 vs 3,4) mais pas les faces individuelles. Ajouter {1} à la tribu forcerait à y mettre aussi {1}ᶜ = {2,3,4}, puis {1} ∪ {3,4} = {1,3,4}, puis {1,3,4}ᶜ = {2}, etc. — la tribu s'enrichit par les axiomes.
+
+#### Pourquoi dénombrable
+
+**Pourquoi dénombrable et pas fini, ni quelconque ?** La question *pourquoi pas fini* a déjà été traitée : l'additivité finie est insuffisante pour contrôler les passages à la limite, comme le montre l'exemple de l'algèbre des parties finies ou cofinies. Il reste la question *pourquoi pas quelconque*.
+
+Le dénombrable est le régime naturel de l'analyse : tous les raisonnements de passage à la limite — convergence monotone, limsup, liminf, Borel-Cantelli — reposent sur des opérations dénombrables (suites, séries). La stabilité par union dénombrable est donc suffisante pour garantir ces raisonnements, et exiger davantage serait sans contrepartie utile.
+
+*Illustration sur $\mathbb R$.* On peut voir concrètement que la stabilité par union quelconque serait trop forte : tout singleton $\{x\}$ est dans la tribu borélienne (section 4), et avec des unions quelconques on pourrait former $\bigcup_{x \in A}\{x\} = A$ pour n'importe quel $A \subset \mathbb{R}$ — on retomberait sur $\mathcal{P}(\mathbb{R})$ entier, et l'on perdrait tout contrôle géométrique.
+
+### 3. Tribu engendrée par une famille de parties
+
+#### Idée générale
+
+En pratique, on ne construit jamais une tribu en listant tous ses éléments (elle en a en général beaucoup trop — souvent autant que 𝒫(ℝ)). On part d'une famille « simple » d'ensembles et on laisse les axiomes faire le travail.
+
+#### Définition
+
+**Définition.** Soit ℰ ⊂ 𝒫(Ω) une famille quelconque de parties. La **tribu engendrée** par ℰ, notée σ(ℰ), est la plus petite σ-algèbre contenant ℰ :
+
+$$\sigma(\mathcal{E}) = \bigcap \bigl\{ \mathcal{A} \subset \mathcal{P}(\Omega) : \mathcal{A} \text{ est une σ-algèbre et } \mathcal{E} \subset \mathcal{A} \bigr\}$$
+
+Autrement dit, on prend l'intersection de toutes les σ-algèbres qui contiennent ℰ.
+
+#### Pourquoi cela marche
+
+**Pourquoi ça marche.**
+- L'intersection est bien définie car il existe au moins une σ-algèbre contenant ℰ, à savoir 𝒫(Ω).
+- Une intersection quelconque (même non dénombrable) de σ-algèbres est encore une σ-algèbre. Vérification : si Ω est dans chaque 𝒜ᵢ, il est dans leur intersection ; si A est dans toutes les 𝒜ᵢ, Aᶜ l'est aussi ; si chaque $A_n$ est dans toutes les 𝒜ᵢ, leur union l'est aussi.
+- Donc σ(ℰ) est une σ-algèbre, et c'est la plus petite par construction (elle est incluse dans toute σ-algèbre contenant ℰ).
+
+*Remarque.* Ce raisonnement n'a rien de spécifique aux σ-algèbres : il repose sur un principe général de **système de fermeture** (ou famille de Moore). Une famille $\mathcal F \subseteq \mathcal P(X)$ qui contient $X$ et est stable par intersection quelconque permet de définir, pour tout $G \subseteq X$, l'objet engendré $\langle G \rangle = \bigcap\{F \in \mathcal F : G \subseteq F\}$, qui est le plus petit élément de $\mathcal F$ contenant $G$. Les σ-algèbres, les topologies, les sous-espaces vectoriels, les sous-groupes sont tous des systèmes de fermeture ; la construction de $\sigma(\mathcal E)$ par intersection en est une instance.
+
+#### Intuition
+
+**Ce que σ(ℰ) contient.** Intuitivement : tous les éléments de ℰ, leurs complémentaires, les unions dénombrables de ces éléments, les complémentaires de ces unions, les unions de ces complémentaires, etc. — toutes les combinaisons dénombrables d'opérations ensemblistes appliquées aux éléments de ℰ.
+
+*Approfondissement.* La définition ci-dessus construit $\sigma(\mathcal E)$ **par le haut** (intersection de toutes les σ-algèbres contenant $\mathcal E$). On peut aussi la construire **par le bas**, en itérant les opérations (complémentaire, union dénombrable) de façon transfinale : on pose $\mathcal E_0 = \mathcal E \cup \{\Omega\}$, puis $\mathcal E_{\alpha+1}$ ajoute les complémentaires et unions dénombrables d'éléments de $\mathcal E_\alpha$, et $\mathcal E_\lambda = \bigcup_{\alpha < \lambda} \mathcal E_\alpha$ aux ordinaux limites. Cette construction se stabilise exactement à $\omega_1$ (le premier ordinal non dénombrable) : $\mathcal E_{\omega_1} = \sigma(\mathcal E)$. La preuve repose sur la **régularité de $\omega_1$** : le sup d'une famille dénombrable d'ordinaux dénombrables est encore dénombrable, donc $< \omega_1$. Voir les notes sur les [nombres transfinis et ordinaux](0120.%20nombres-transfinis-et-ordinaux.md). La **strictité** de la hiérarchie $\mathcal E_\alpha \subsetneq \mathcal E_{\alpha+1}$ à chaque niveau $\alpha < \omega_1$ (dans le cas borélien) est un théorème à part entière (Lebesgue-Hausdorff) ; voir la note sur la [strictité de la hiérarchie borélienne](0121.%20strictité-de-la-hiérarchie-borélienne.md). En pratique, la construction par le haut suffit et la hiérarchie transfinale n'est pas nécessaire.
+
+#### Propriété utile
+
+**Propriété utile.** Si ℰ₁ ⊂ ℰ₂, alors σ(ℰ₁) ⊂ σ(ℰ₂). Plus les générateurs sont nombreux, plus la tribu engendrée est riche. Réciproquement, si ℰ₁ ⊂ σ(ℰ₂) et ℰ₂ ⊂ σ(ℰ₁), alors σ(ℰ₁) = σ(ℰ₂) : deux familles qui s'engendrent mutuellement donnent la même tribu.
+
+### 4. Tribu borélienne sur ℝ et sur ℝⁿ
+
+#### Définition
+
+C'est la tribu la plus importante en pratique. Elle capture « tout ce qu'on rencontre en analyse » sans tomber dans les pathologies de Vitali.
+
+**Définition.** La **tribu borélienne** de ℝ, notée ℬ(ℝ), est la tribu engendrée par les ouverts de ℝ :
+
+$$\mathcal{B}(\mathbb{R}) = \sigma\bigl(\{O \subset \mathbb{R} : O \text{ ouvert}\}\bigr)$$
+
+#### Contenu
+
+**Ce qu'elle contient.** Les ouverts, les fermés (complémentaires d'ouverts), les intersections dénombrables d'ouverts (ensembles Gδ), les unions dénombrables de fermés (ensembles Fσ), et ainsi de suite en alternant. Les singletons {x} sont boréliens (comme intersections $\{x\} = \bigcap_n (x - 1/n, x + 1/n)$). Les intervalles de toute forme sont boréliens. Tous les ensembles qu'on manipule en analyse courante sont boréliens. (Construire un ensemble non borélien requiert l'axiome du choix, comme dans Vitali.)
+
+#### Générateurs équivalents
+
+**Générateurs équivalents.** Les familles suivantes engendrent toutes ℬ(ℝ) :
+
+| Famille de générateurs | Pourquoi elle suffit |
+|---|---|
+| Ouverts de ℝ | Définition |
+| Intervalles ouverts (a, b) | Tout ouvert de ℝ est union dénombrable d'intervalles ouverts (car ℚ est dense dans ℝ : pour chaque point d'un ouvert, on trouve un intervalle à bornes rationnelles contenu dans l'ouvert) |
+| Demi-droites (−∞, t], t ∈ ℝ | (a, b) = ⋃ₙ ( (−∞, b − 1/n] \ (−∞, a] ), et réciproquement (−∞, t] = ⋂ₙ (−∞, t + 1/n) |
+| Demi-droites (−∞, t), t ∈ ℝ | (−∞, t] = ⋂ₙ (−∞, t + 1/n), et (−∞, t) = ⋃ₙ (−∞, t − 1/n] |
+
+#### Cas de $\mathbb{R}^n$
+
+**Sur ℝⁿ.** La tribu borélienne ℬ(ℝⁿ) est engendrée par les ouverts de ℝⁿ. On peut aussi l'engendrer par les « pavés » $A_1 \times \cdots \times A_n$ où chaque $A_i \in \mathcal{B}(\mathbb{R})$ — on parle de **tribu produit** :
+
+$$\mathcal{B}(\mathbb{R}^n) = \mathcal{B}(\mathbb{R}) \otimes \cdots \otimes \mathcal{B}(\mathbb{R})$$
+
+Autrement dit, la tribu borélienne du produit est le produit des tribus boréliennes. (C'est un fait non trivial. L'inclusion $\mathcal{B}(\mathbb{R})^{\otimes n} \subseteq \mathcal{B}(\mathbb{R}^n)$ est facile : les projections $\pi_i$ sont continues donc mesurables, et les pavés sont des intersections finies de préimages. L'inclusion réciproque utilise la base dénombrable : tout ouvert de $\mathbb{R}^n$ est union dénombrable de pavés ouverts à coordonnées rationnelles, donc tout ouvert est dans $\mathcal{B}(\mathbb{R})^{\otimes n}$. Pour des espaces topologiques sans base dénombrable, l'égalité peut être fausse.)
+
+### 5. Tribu engendrée par une application
+
+#### Définition
+
+Soient $(\Omega, \mathcal{A})$ et $(E, \mathcal{E})$ deux espaces mesurables, et $f : \Omega \to E$ une application.
+
+**Fonction mesurable.** $f$ est dite **mesurable** (ou $\mathcal{A}/\mathcal{E}$-mesurable) si
+
+$$\forall B \in \mathcal{E},\quad f^{-1}(B) \in \mathcal{A}.$$
+
+**Tribu engendrée.** La **tribu engendrée par f** est $\sigma(f) = f^{-1}(\mathcal{E}) = \{ f^{-1}(B) : B \in \mathcal{E} \}$ : on « tire en arrière » par $f$ tous les ensembles mesurables de $E$. C'est une tribu car les préimages commutent avec toutes les opérations ensemblistes.
+
+$f$ est $\mathcal{A}/\mathcal{E}$-mesurable si et seulement si $\sigma(f) \subseteq \mathcal{A}$. La mesurabilité est donc une condition sur la tribu du départ — elle doit être assez riche pour contenir toutes les préimages dictées par la tribu de l'arrivée. En particulier, $\sigma(f)$ est toujours plus grossière (ou égale) que $\mathcal{A}$ : elle ne discerne jamais plus finement que la tribu ambiante.
+
+**Pourquoi la condition porte sur les préimages — pas sur les images.** Le terme « mesurable » est trompeur : on pourrait croire qu'il s'agit de mesurer les valeurs de $f$, donc de mesurer quelque chose dans l'arrivée $E$. C'est l'inverse. En pratique, la mesure qu'on souhaite exploiter est définie sur l'espace de départ $(\Omega, \mathcal{A})$ — c'est là qu'on sait mesurer. L'espace d'arrivée $(E, \mathcal{E})$ n'est muni que d'une tribu, pas nécessairement d'une mesure. La condition $f^{-1}(B) \in \mathcal{A}$ dit : chaque question posable dans l'arrivée (« $f(\omega) \in B$ ? ») se traduit en une question posable dans le départ (« $\omega \in f^{-1}(B)$ ? ») — là où la mesure opère. La tribu $\mathcal{E}$ fournit le vocabulaire des questions ; la mesurabilité garantit que ce vocabulaire est traduisible dans $\mathcal{A}$. Le flux est :
+
+$$\mathcal{E} \xrightarrow{f^{-1}} \mathcal{A} \xrightarrow{m} [0, +\infty]$$
+
+C'est ce mécanisme qui permet de transporter $m$ vers l'arrivée : on pose $(m \circ f^{-1})(B) = m(f^{-1}(B))$, ce qui définit la **mesure image** (ou **loi** de $f$ en probabilités) — une mesure sur $(E, \mathcal{E})$ construite à partir de la mesure sur $(\Omega, \mathcal{A})$. Mais ce transport n'est possible que si $f^{-1}(B) \in \mathcal{A}$ pour tout $B \in \mathcal{E}$, c'est-à-dire si $f$ est mesurable. En résumé, « mesurable » signifie « compatible avec la mesure du départ », pas « dont on peut mesurer les valeurs ».
+
+#### Analogie : recommandation musicale et embeddings.
+Soit $\Omega$ l'ensemble des utilisateurs d'une plateforme de streaming musical. La plateforme enregistre pour chaque utilisateur des données comportementales : historique d'écoute, taux de skip, playlists créées, appareil utilisé, heure d'écoute. La tribu $\mathcal{A}$ représente la borne supérieure de ce que la plateforme peut *en principe* distinguer à partir de ces logs : ses éléments sont les sous-ensembles d'utilisateurs définissables par des conditions sur les données enregistrées — par exemple « les utilisateurs ayant écouté du jazz après 22h sur mobile ». L'ensemble « les utilisateurs qui sont musiciens professionnels » n'est pas dans $\mathcal{A}$ : cette information ne figure dans aucun log. En pratique, $\mathcal{A}$ n'est pas construite atome par atome ; c'est une borne conceptuelle, la plus grande tribu que les données permettraient d'engendrer.
+
+- La fonction $f : \Omega \to \mathbb{R}^d$ est un **modèle d'embedding** (filtrage collaboratif ou réseau profond) qui projette chaque utilisateur dans $\mathbb{R}^d$ à partir de son historique d'écoute.
+- La tribu $\mathcal{E}$ sur $\mathbb{R}^d$ encode la **granularité du clustering** : un $k$-means en $k = 100$ clusters donne $\mathcal{E} = \sigma(\{C_1, \ldots, C_{100}\})$, la σ-algèbre engendrée par la partition en cellules de Voronoï. Cette tribu est délibérément plus grossière que la tribu borélienne $\mathcal{B}(\mathbb{R}^d)$ : elle ne distingue que 100 régions. Prendre $\mathcal{E} = \mathcal{B}(\mathbb{R}^d)$ conserverait toute l'information de l'embedding ; le choix d'un clustering grossier est une compression supplémentaire, volontaire.
+
+Alors $\sigma(f) = f^{-1}(\mathcal{E})$ est une tribu sur $\Omega$ dont les éléments sont les groupes d'utilisateurs que le couple (embedding, clustering) permet de distinguer. Par exemple, $f^{-1}(C_{42})$ est le « segment 42 » : l'ensemble des utilisateurs dont l'embedding tombe dans la cellule $C_{42}$.
+
+**Minimalité de $\sigma(f)$.** La tribu $\sigma(f)$ n'est pas une tribu commode parmi d'autres : c'est *la plus petite* tribu sur $\Omega$ rendant $f$ mesurable. Chaque élément de $\sigma(f)$ est de la forme $f^{-1}(B)$ pour un $B \in \mathcal{E}$ — il y figure parce que $f$ l'exige, et rien d'autre n'y figure — $\sigma(f)$ ne contient aucun ensemble qu'on ne pourrait pas obtenir comme $f^{-1}(B)$ pour un $B \in \mathcal{E}$.
+
+Concrètement, comparons trois ensembles d'utilisateurs :
+- $f^{-1}(C_{42})$ (le segment 42) est dans $\sigma(f)$. Non par choix de modélisation, mais parce que $C_{42} \in \mathcal{E}$ et que toute tribu rendant $f$ mesurable *doit* contenir $f^{-1}(C_{42})$.
+- « Les utilisateurs ayant écouté du jazz après 22h » est dans $\mathcal{A}$ (les logs le permettent), mais pas dans $\sigma(f)$ : aucun ensemble de $\mathcal{E}$ ne produit ce groupe par préimage. L'embedding ne voit pas cette distinction — la tribu $\sigma(f)$ l'ignore non par limitation technique, mais parce que $f$ n'en a structurellement pas besoin.
+- « Les utilisateurs musiciens professionnels » n'est ni dans $\sigma(f)$ ni dans $\mathcal{A}$ : il échappe au système tout entier.
+
+Autrement dit, $\sigma(f)$ sépare deux éléments $\omega_1, \omega_2 \in \Omega$ (il existe $A \in \sigma(f)$ contenant l'un mais pas l'autre) si et seulement s'il existe $B \in \mathcal{E}$ tel que $f(\omega_1) \in B$ et $f(\omega_2) \notin B$. 
+
+> $\sigma(f)$ encode exactement le pouvoir de distinction de $f$ sur $\omega$ vue à travers $\mathcal{E}$ — ni plus, ni moins. Ou autrement dit: $\sigma(f)$ est la partition de $\Omega$ induite par $f$ à la résolution $\mathcal{E}$
+
+(Le mot « partition » est ici un raccourci : $\sigma(f)$ n'est pas une partition mais une σ-algèbre. Ce qu'on veut dire, c'est que les *atomes* de $\sigma(f)$ — les plus petits ensembles non vides de $\sigma(f)$ — forment une partition de $\Omega$, dont chaque bloc regroupe les $\omega$ que le couple $(f, \mathcal{E})$ ne peut pas distinguer. La σ-algèbre $\sigma(f)$ est alors l'ensemble de toutes les unions de ces blocs.)
+
+**Mesurabilité.** L'embedding est calculé à partir de l'historique d'écoute, qui figure dans les logs : $\sigma(f) \subseteq \mathcal{A}$, donc $f$ est $\mathcal{A}$-mesurable. En revanche, la fonction $g : \Omega \to \{0,1\}$ définie par « est musicien professionnel » n'est pas $\mathcal{A}$-mesurable : $g^{-1}(\{1\}) \notin \mathcal{A}$, car la plateforme n'enregistre pas ce statut.
+
+**Indiscernabilité.** Deux sources se cumulent, et il est utile de les hiérarchiser :
+- **Perte due à $f$.** Deux utilisateurs aux goûts musicaux très différents mais dont les patterns d'écoute (mêmes heures, mêmes taux de skip) produisent le même embedding sont confondus par $f$. Cette perte est intrinsèque au modèle : même en remplaçant le clustering par la tribu borélienne $\mathcal{B}(\mathbb{R}^d)$ entière, ces deux utilisateurs resteraient indiscernables dans $\sigma(f)$.
+- **Perte due à $\mathcal{E}$.** Deux utilisateurs d'embeddings distincts mais tombant dans le même cluster $C_j$ sont confondus par $\mathcal{E}$. Cette perte est due au choix d'un clustering grossier et disparaîtrait si l'on prenait $\mathcal{E} = \mathcal{B}(\mathbb{R}^d)$.
+
+**Mesure et mesure image.** La mesure $m$ vit sur $\Omega$ : c'est par exemple la distribution empirique des utilisateurs (chaque utilisateur a le même poids $1/N$, ou un poids proportionnel à son activité). La plateforme ne dispose pas *a priori* d'une mesure sur l'espace d'embedding $\mathbb{R}^d$ — cet espace est un artefact du modèle, pas un espace qu'on observe directement. Pourtant, elle veut répondre à des questions comme « quelle fraction d'utilisateurs tombe dans le cluster $C_{42}$ ? ». La réponse est $m(f^{-1}(C_{42}))$ : on ramène la question dans $\Omega$ via la préimage, puis on mesure avec $m$. C'est exactement le flux $\mathcal{E} \xrightarrow{f^{-1}} \mathcal{A} \xrightarrow{m} [0,+\infty]$. La fonction $B \mapsto m(f^{-1}(B))$ définit la **mesure image** $m \circ f^{-1}$ sur $(\mathbb{R}^d, \mathcal{E})$ : c'est la distribution des utilisateurs vue à travers l'embedding. Elle n'existe sur l'arrivée que *parce qu'on* l'a transportée depuis le départ — et ce transport exige que $f$ soit mesurable.
+
+**Enrichissement.** En ajoutant d'autres embeddings ($f_1$ = historique d'écoute, $f_2$ = structure des playlists, $f_3$ = graphe social, ...) on enrichit progressivement la tribu $\sigma(f_1, f_2, \ldots)$ sur $\Omega$, sans nécessairement atteindre $\mathcal{A}$ entière. (Attention : $\sigma(f_1, f_2, \ldots)$ n'est pas la simple union des $\sigma(f_i)$ — une union de tribus n'est en général pas une tribu. C'est la plus petite tribu contenant tous les $\sigma(f_i)$, c'est-à-dire $\sigma\bigl(\bigcup_i f_i^{-1}(\mathcal{E}_i)\bigr)$. Elle contient donc aussi toutes les combinaisons d'événements provenant de features *différentes*, comme $f_1^{-1}(B_1) \cap f_3^{-1}(B_3)$ — « les utilisateurs dont l'écoute tombe dans $B_1$ *et* dont le graphe social tombe dans $B_3$ ».) Certains sous-ensembles de $\mathcal{A}$ — par exemple les utilisateurs définis par un pattern de skip très fin — peuvent n'appartenir à aucun des $\sigma(f_i)$, et donc pas à $\sigma(f_1, f_2, \ldots)$ non plus : un générateur absent de la famille ne peut pas engendrer les ensembles qui en dépendent.
+
+#### Exemple concret : le dé et la parité
+
+Vérifions la mécanique sur un cas fini où tout est calculable.
+
+- **Ensemble de départ.** $\Omega = \{1,2,3,4,5,6\}$ (les faces d'un dé).
+- **Ensemble d'arrivée.** $E = \{0,1\}$ (pair ou impair).
+- **Application.** $f(\omega) = \omega \bmod 2$ : elle envoie chaque face sur sa parité.
+- **Tribu sur $E$.** $\mathcal{E} = \mathcal{P}(E) = \{\emptyset, \{0\}, \{1\}, \{0,1\}\}$ (toutes les parties — on ne perd rien côté arrivée).
+- **Tribu engendrée par $f$.** $\sigma(f) = f^{-1}(\mathcal{E}) = \{\emptyset, \{1,3,5\}, \{2,4,6\}, \Omega\}$, obtenue en tirant en arrière chaque élément de $\mathcal{E}$ : $f^{-1}(\emptyset) = \emptyset$, $f^{-1}(\{1\}) = \{1,3,5\}$, $f^{-1}(\{0\}) = \{2,4,6\}$, $f^{-1}(\{0,1\}) = \Omega$.
+
+La tribu $\sigma(f)$ sépare pair et impair, mais pas les faces individuelles. L'événement $\{1,2\} \notin \sigma(f)$ : aucun $B \in \mathcal{E}$ ne donne $f^{-1}(B) = \{1,2\}$, car 1 est impair et 2 est pair — ils ne sont pas du même côté de $f$.
+
+#### Lemme de factorisation (de Doob)
+
+Soit $(\Omega, \mathcal{A})$ un espace mesurable, $f : \Omega \to (E, \mathcal{E})$ une application, et $g : \Omega \to (\mathbb{R}, \mathcal{B}(\mathbb{R}))$. Alors $g$ est $\sigma(f)$-mesurable si et seulement s'il existe une fonction mesurable $\varphi : (E, \mathcal{E}) \to (\mathbb{R}, \mathcal{B}(\mathbb{R}))$ telle que $g = \varphi \circ f$.
+
+**Intuition.** On lance un dé, mais on est derrière un rideau : un assistant regarde le résultat et nous communique seulement la valeur de $f(\omega)$, par exemple la parité. On veut calculer une quantité $g(\omega)$, par exemple un gain, un score. Le lemme dit : **c'est possible si et seulement si $g$ ne dépend de $\omega$ qu'à travers $f(\omega)$**, c'est-à-dire $g = \varphi \circ f$ pour une certaine fonction $\varphi$.
+
+- Si le gain ne dépend que de la parité ($+3$€ si impair, $-1$€ si pair) : on pose $\varphi(1)=3$, $\varphi(0)=-1$, et $g = \varphi \circ f$. Le gain est calculable.
+- Si le gain est la face elle-même ($g(\omega) = \omega$) : impossible de l'écrire comme $\varphi \circ f$, car $\varphi(1)$ devrait valoir à la fois 1, 3 et 5. Le gain n'est pas calculable à partir de la parité seule.
+
+Dans l'analogie de streaming musical : on veut prédire le taux de désabonnement $g(\omega)$ d'un utilisateur $\omega$. Si ce taux ne dépend de $\omega$ qu'à travers son segment $f(\omega) \in \{C_1, \ldots, C_{100}\}$, alors $g = \varphi \circ f$ pour une fonction de scoring $\varphi$ définie sur les segments, et $g$ est $\sigma(f)$-mesurable. Si en revanche le taux dépend d'un pattern fin (heure d'écoute) que l'embedding ne capture pas, $g$ n'est pas $\sigma(f)$-mesurable : aucune fonction $\varphi$ ne peut compenser l'information perdue par $f$.
+
+On dit que « $g$ est une fonction de $f$ » quand $g = \varphi \circ f$. La tribu $\sigma(f)$ formalise cette idée : un événement $A \subseteq \Omega$ appartient à $\sigma(f)$ si et seulement si, pour décider si $\omega \in A$, il suffit de connaître $f(\omega)$ — sans avoir besoin de savoir quel $\omega$ particulier a produit cette valeur. Dans l'exemple du dé : « le résultat est impair » ($A = \{1,3,5\}$) est dans $\sigma(f)$, car il suffit de connaître la parité $f(\omega)$ pour trancher. En revanche, « le résultat est $\leq 2$ » ($A = \{1,2\}$) n'est pas dans $\sigma(f)$ : connaître la parité ne suffit pas.
+
+> Dire que $g$ est $\sigma(f)$-mesurable, c'est dire que $g$ ne requiert pas plus d'information que ce que $f$ fournit : pour chaque $\omega$, la valeur $g(\omega)$ est entièrement déterminée par $f(\omega)$. En termes de discernabilité : $\sigma(g) \subseteq \sigma(f)$, c'est-à-dire que $f$ discerne au moins aussi finement que $g$.
+
+(Rappel : les tribus d'arrivée sont implicites dans cette notation. Ici $f : \Omega \to (E, \mathcal{E})$ et $g : \Omega \to (F, \mathcal{F})$, donc $\sigma(f) = f^{-1}(\mathcal{E})$ et $\sigma(g) = g^{-1}(\mathcal{F})$. L'inclusion $\sigma(g) \subseteq \sigma(f)$ signifie $g^{-1}(\mathcal{F}) \subseteq f^{-1}(\mathcal{E})$ : toute question posable via $g$ et $\mathcal{F}$ est déjà posable via $f$ et $\mathcal{E}$.)
+
+En probabilités, ce lemme est la clé du conditionnement. L'espérance conditionnelle $\mathbb{E}[X \mid f]$ est définie comme une variable aléatoire $\sigma(f)$-mesurable. Être $\sigma(f)$-mesurable, c'est — d'après ce qu'on vient de voir — ne dépendre de $\omega$ qu'à travers $f(\omega)$. Le lemme de Doob rend cette dépendance explicite : il garantit qu'il existe une fonction $\varphi$ telle que $\mathbb{E}[X \mid f](\omega) = \varphi(f(\omega))$. Autrement dit, pour calculer l'espérance conditionnelle, il suffit de connaître la valeur de $f$ — on n'a pas besoin du $\omega$ sous-jacent. La démonstration est donnée dans la note sur le [lemme de factorisation de Doob](0110.%20lemme-de-factorisation-doob.md).
+
+#### Scope de l'énoncé
+
+L'énoncé se formule avec $g$ à valeurs dans $\mathbb R$ : c'est le cas des variables aléatoires en probabilités. 
+
+Le lemme se généralise à $g$ à valeurs dans un espace d'arrivée plus général que $\mathbb R$ (par exemple $\mathbb R^n$ pour un vecteur aléatoire), pourvu que sa tribu ne soit « pas trop grosse » (techniquement, engendrée par une famille dénombrable). Cette condition est automatiquement satisfaite pour tous les espaces qu'on rencontre en probabilités ($\mathbb R^n$, espaces de fonctions, espaces de suites, etc.), donc on n'a jamais à s'en soucier. Elle ne devient un vrai sujet que dans des domaines comme la théorie descriptive des ensembles ou la théorie ergodique.
+
+#### Famille d'applications
+
+**Tribu engendrée par une famille d'applications.** Si $(f_i)_{i \in I}$ est une famille d'applications $f_i : \Omega \to (E_i, \mathcal{E}_i)$, on pose :
+
+$$\sigma\bigl((f_i)_{i \in I}\bigr) = \sigma\Bigl(\bigcup_{i \in I} f_i^{-1}(\mathcal{E}_i)\Bigr)$$
+
+C'est la plus petite tribu rendant toutes les $f_i$ mesurables simultanément. Elle encode l'information conjointe de toutes les $f_i$ : un événement A ∈ σ((fᵢ)) est un événement qu'on peut déterminer en observant les valeurs de toutes les $f_i$.
+
+### Approfondissement : pourquoi transporter la mesure, et le cadre général
+
+On a vu que la mesurabilité de $f$ permet de transporter la mesure $m$ de $(\Omega, \mathcal{A})$ vers l'arrivée $(E, \mathcal{E})$ via la mesure image $m \circ f^{-1}$. Deux questions naturelles se posent alors : pourquoi vouloir transporter la mesure si on sait déjà mesurer dans $\Omega$ ? Et que se passe-t-il quand l'arrivée porte elle aussi une mesure ?
+
+#### Pourquoi passer dans un autre espace si on sait déjà mesurer dans Ω ?
+
+La construction de la mesure image peut sembler paradoxale : si la mesure $m$ est déjà définie sur $(\Omega, \mathcal{A})$, pourquoi se donner la peine de la transporter vers un espace d'arrivée $E$ ? La réponse est qu'on ne passe pas dans $E$ pour y *mesurer* — on y passe pour y *calculer*.
+
+L'espace de départ $\Omega$ peut être un ensemble énorme et amorphe : l'ensemble de tous les utilisateurs, l'ensemble de tous les résultats possibles d'une expérience, l'ensemble de toutes les trajectoires d'un processus stochastique. On sait y mesurer (on a $m$), mais Ω n'a en général **aucune géométrie** : pas de distance, pas de voisinage, pas de direction. On peut calculer $m(A)$ pour n'importe quel $A \in \mathcal{A}$, mais on ne peut pas répondre à « quels éléments de Ω se *ressemblent* ? » ni « quelle *structure* sous-tend les données ? ».
+
+L'application $f : \Omega \to E$ (un embedding, une statistique, une variable aléatoire) projette $\Omega$ dans un espace $E$ — typiquement $\mathbb{R}^d$ — qui est muni d'une **géométrie** : distances, coordonnées, notions de continuité, de convexité, de gradient. La mesure image $m \circ f^{-1}$ sur $E$ est alors une **représentation compacte et structurée** de l'information contenue dans $m$ : elle dit *où* se concentre la masse, quelles régions sont denses ou rares, comment la distribution se décompose spatialement. C'est cette structure géométrique qui rend possibles les opérations de l'analyse et de l'apprentissage : intégration, optimisation, approximation, classification, recommandation.
+
+La formule de transfert résume ce gain :
+
+$$\int_\Omega h(f(\omega))\, dm(\omega) = \int_E h(x)\, d(m \circ f^{-1})(x)$$
+
+Le membre de gauche est un calcul dans Ω — espace potentiellement énorme et sans structure. Le membre de droite est le même calcul, reformulé dans $E$ — espace de faible dimension et géométriquement riche. L'égalité dit qu'on peut remplacer l'un par l'autre sans perte. C'est un gain de *praticité*, pas de *mesurabilité*.
+
+Dans l'analogie du streaming musical : la distribution uniforme $m$ sur les $N$ utilisateurs est triviale à calculer dans Ω (compter). Mais pour regrouper les utilisateurs par goûts similaires, il faut une notion de proximité — qui n'existe pas dans Ω. L'embedding $f : \Omega \to \mathbb{R}^d$ la fournit : deux utilisateurs proches dans $\mathbb{R}^d$ ont des comportements voisins. La mesure image $m \circ f^{-1}$ — la distribution des utilisateurs dans l'espace d'embedding — est l'objet qu'on exploite réellement : les clusters sont ses zones de forte masse, la géométrie de l'espace d'embedding (distances, directions) donne un sens spatial à cette distribution, et ses modes indiquent les profils dominants. Ce sont ces propriétés de la distribution qui nourrissent les algorithmes de recommandation.
+
+#### Le cadre général : mesures des deux côtés
+
+Le cadre présenté dans cette note — mesure sur le départ $(\Omega, \mathcal{A}, m)$, tribu seule sur l'arrivée $(E, \mathcal{E})$ — est le cadre de base. Mais en pratique, l'espace d'arrivée est très souvent muni lui aussi d'une mesure. Voici les trois configurations principales.
+
+**1. Mesure de référence et densité.** L'espace d'arrivée $E = \mathbb{R}$ (ou $\mathbb{R}^n$) porte une mesure de référence canonique : la **mesure de Lebesgue** $\lambda$ (la « longueur », l'« aire », le « volume »). Quand on transporte $m$ vers $E$ via $f$, on obtient la mesure image $m \circ f^{-1}$. La question naturelle est alors : comment cette mesure image se compare-t-elle à $\lambda$ ? Si $m \circ f^{-1}$ est **absolument continue** par rapport à $\lambda$ (c'est-à-dire : tout ensemble de longueur nulle reçoit aussi une masse nulle), il existe une fonction $p \geq 0$ telle que
+
+$$(m \circ f^{-1})(B) = \int_B p(x)\, d\lambda(x) \quad \text{pour tout } B \in \mathcal{B}(\mathbb{R})$$
+
+La fonction $p$ est la **densité de probabilité** — c'est l'objet central des probabilités et de la statistique.  
+Remarquons ce qui se passe : il y a maintenant *deux* mesures sur $E$ — la mesure de Lebesgue $\lambda$ (référence, fixe) et la mesure image $m \circ f^{-1}$ (ce qu'on veut décrire) — et la densité $p$ exprime la seconde en fonction de la première. Et une fois $p$ connue, on n'a plus besoin de revenir à $\Omega$ ni à $m$ : toute espérance se calcule directement dans $E$ par $\mathbb{E}[h(f)] = \int_E h(x)\,p(x)\,d\lambda(x)$.  
+Le passage de $\Omega$ à $E$ ne fournit donc pas seulement une géométrie — il fournit un **cadre probabiliste autonome** : la densité $p$ et la mesure de Lebesgue $\lambda$ suffisent à faire des probabilités dans $E$, sans référence à l'espace de départ. C'est ce que font les probabilités et la statistique en pratique : dès qu'on connaît la loi d'une variable aléatoire — c'est-à-dire sa densité $p$ — on calcule dans $E$ sans jamais revenir à $\Omega$.  
+En pratique, la densité $p$ est rarement *déduite* d'une mesure $m$ connue sur $\Omega$. En statistique, elle est *estimée* à partir de données (échantillons poussés dans $E$ via $f$, puis estimation par maximum de vraisemblance, noyaux, etc.) ; en modélisation probabiliste, elle est *postulée* directement comme hypothèse — « $X \sim \mathcal{N}(\mu, \sigma^2)$ » — sans jamais construire $\Omega$ ni $m$.  
+Le cadre abstrait $(\Omega, \mathcal{A}, m)$ fournit la garantie fondationnelle qu'une telle densité est bien fondée sur un espace de probabilité — les théorèmes d'existence de Kolmogorov garantissent qu'il existe un espace $\Omega$ cohérent dès qu'on se donne des distributions marginales compatibles. Pour le calcul avec une densité connue, cet échafaudage est transparent — on travaille directement avec $p$ dans $E$ — mais il devient indispensable dès qu'on aborde des constructions plus riches (processus stochastiques, conditionnement, couplages).
+
+**2. Transport optimal.** On part de *deux* mesures $\mu$ et $\nu$, potentiellement sur deux espaces différents, et on cherche la « meilleure » façon de transporter l'une vers l'autre. Dans la formulation originale de Monge, on cherche une application $T$ telle que $\mu \circ T^{-1} = \nu$, en minimisant $\int c(x, T(x))\, d\mu(x)$. Kantorovich a reformulé le problème en cherchant non plus une application $T$ mais un **couplage** $\gamma$ — une mesure jointe sur le produit dont les marginales sont $\mu$ et $\nu$ — et en minimisant $\int c(x,y)\,d\gamma(x,y)$. Cette relaxation rend le problème convexe et garantit l'existence d'un optimum. Ici la mesure est des deux côtés : $\mu$ sur le départ, $\nu$ sur l'arrivée, et c'est leur relation qui est l'objet d'étude.
+
+*Exemple.* Une chaîne logistique dispose de trois entrepôts $a_1, a_2, a_3$ contenant respectivement 50, 30 et 20 tonnes de marchandise, et doit approvisionner trois magasins $b_1, b_2, b_3$ ayant des demandes de 40, 40 et 20 tonnes. On modélise l'offre par $\mu = 50\,\delta_{a_1} + 30\,\delta_{a_2} + 20\,\delta_{a_3}$ et la demande par $\nu = 40\,\delta_{b_1} + 40\,\delta_{b_2} + 20\,\delta_{b_3}$, et le coût $c(a_i, b_j)$ est la distance kilométrique entre l'entrepôt $a_i$ et le magasin $b_j$. Le problème de transport optimal consiste à trouver un plan d'acheminement qui satisfait toutes les demandes tout en minimisant le coût total de livraison. C'est exactement le problème posé par Monge en 1781 sous le nom de « déblais et remblais » : comment déplacer un tas de terre d'une forme à une autre en minimisant l'effort ?
+
+Le coût optimal de Kantorovich entre $\mu$ et $\nu$ définit la **distance de Wasserstein** $W(\mu, \nu) = \inf_\gamma \int c\,d\gamma$, qui donne une géométrie à l'espace des mesures de probabilité lui-même : les mesures deviennent des points dans un espace métrique, et l'on peut parler de convergence ou de barycentre dans cet espace. Contrairement à la divergence de Kullback-Leibler, la distance de Wasserstein « voit » la géométrie de l'espace sous-jacent : deux distributions proches spatialement sont proches au sens de Wasserstein, même si leurs supports sont disjoints (ce qui rendrait la KL infinie). C'est cette sensibilité à la géométrie qui a fait le succès du transport optimal en apprentissage génératif (Wasserstein GAN).
+
+**3. Inférence bayésienne.** On veut estimer un paramètre inconnu $\theta$ à partir de données observées. On part avec une croyance initiale sur les valeurs plausibles de $\theta$ — c'est la loi *a priori*, une mesure sur l'espace des paramètres $\Theta$. On dispose ensuite d'un modèle qui dit, pour chaque valeur candidate de $\theta$, quelles observations sont vraisemblables — c'est la *vraisemblance*, qui pour chaque $\theta$ donne une mesure sur l'espace des observations $X$. L'inférence bayésienne met à jour la croyance initiale à la lumière des données pour produire la loi *a posteriori* sur $\Theta$. Il y a donc des mesures des deux côtés — sur $\Theta$ (ce qu'on croit) et sur $X$ (ce qu'on observe) — et c'est leur interaction qui est l'objet d'étude.
+
+*Exemple.* Un médecin veut estimer la proportion $\theta \in [0,1]$ de patients répondant à un traitement. Avant tout essai, il a une croyance initiale sur $\theta$ : c'est la mesure *a priori* $\pi$ sur $\Theta = [0,1]$ — par exemple une loi $\text{Beta}(2,2)$, qui exprime qu'il s'attend à une efficacité modérée, sans certitude. Puis il observe $n = 20$ patients, dont $k = 14$ répondent au traitement : ce sont les données $x$, qui vivent dans l'espace des observations $X$. Le modèle de vraisemblance dit : *si* la vraie proportion est $\theta$, la probabilité d'observer exactement $k$ succès sur $n$ est $P_\theta(k) = \binom{n}{k}\theta^k(1-\theta)^{n-k}$ (loi binomiale). L'inférence bayésienne combine $\pi$ et $P_\theta$ via la formule de Bayes pour produire la mesure *a posteriori* $\pi(\theta \mid x) \propto P_\theta(x) \cdot \pi(\theta)$ — ici une loi $\text{Beta}(2+14, 2+6) = \text{Beta}(16, 8)$, qui concentre la croyance autour de $\theta \approx 0{,}67$. Les mesures interagissent : $\pi$ vit sur $\Theta$ (ce qu'on croit sur le paramètre), $P_\theta$ vit sur $X$ (ce qu'on prédit pour les observations), et la mise à jour bayésienne fait circuler l'information de $X$ vers $\Theta$.
+
+Le point structurel est que la vraisemblance $\theta \mapsto P_\theta$ n'est pas une mesure unique mais une *famille* de mesures indexée par $\Theta$ — un **noyau de transition** (ou noyau markovien). Pour que l'intégrale $m(B) = \int_\Theta P_\theta(B)\,d\pi(\theta)$ ait un sens (loi marginale des observations), il faut que $\theta \mapsto P_\theta(B)$ soit mesurable pour tout $B$ : la mesurabilité, thème central de ce chapitre, est ici la condition de cohérence qui permet de faire dialoguer les deux espaces.
+
+En résumé, le cadre « mesure sur le départ, tribu seule sur l'arrivée » est le point de départ conceptuel — celui qui clarifie le rôle de la mesurabilité et le sens du flux $\mathcal{E} \xrightarrow{f^{-1}} \mathcal{A} \xrightarrow{m} [0, +\infty]$. Mais dès qu'on fait de l'analyse, de la statistique ou de l'apprentissage, l'arrivée porte presque toujours une mesure de référence, et la relation entre les mesures (densité, divergence, distance de Wasserstein, rapport de vraisemblance) est au cœur du sujet.
