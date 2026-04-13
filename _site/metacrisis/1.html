@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>projection-orthogonale-et-produit-scalaire – chekpoint-89</title>
+<title>quarto-inputc2423d51d5d4a4e2 – chekpoint-89</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../maths appliquées/4. variables-aléatoires.html" rel="next">
-<link href="../maths appliquées/2. mesurer-la-proximite.html" rel="prev">
+<link href="../metacrisis/2.html" rel="next">
+<link href="../maths appliquées/4. variables-aléatoires.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -73,35 +73,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -137,7 +108,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../maths appliquées/1. representation-geometrie-et-resolution.html">Maths appliquées</a></li><li class="breadcrumb-item"><a href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html">3. Projection orthogonale et produit scalaire</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../metacrisis/1.html">Meaning Crisis</a></li><li class="breadcrumb-item"><a href="../metacrisis/1.html">1. All Is Fucked Up</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -212,13 +183,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Maths appliquées</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../maths appliquées/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
@@ -233,7 +204,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link active">
+  <a href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3. Projection orthogonale et produit scalaire</span></a>
   </div>
 </li>
@@ -247,16 +218,16 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Meaning Crisis</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../metacrisis/1.html" class="sidebar-item-text sidebar-link">
+  <a href="../metacrisis/1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">1. All Is Fucked Up</span></a>
   </div>
 </li>
@@ -284,98 +255,102 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#projection-orthogonale-et-produit-scalaire" id="toc-projection-orthogonale-et-produit-scalaire" class="nav-link active" data-scroll-target="#projection-orthogonale-et-produit-scalaire">Projection orthogonale et produit scalaire</a>
+  <li><a href="#a-journey-through-john-vervaekes-series-awakening-from-the-meaning-crisis-1" id="toc-a-journey-through-john-vervaekes-series-awakening-from-the-meaning-crisis-1" class="nav-link active" data-scroll-target="#a-journey-through-john-vervaekes-series-awakening-from-the-meaning-crisis-1">A Journey Through John Vervaeke’s Series: Awakening from the Meaning Crisis — 1</a>
   <ul>
-  <li><a href="#cadre" id="toc-cadre" class="nav-link" data-scroll-target="#cadre">Cadre</a></li>
-  <li><a href="#produit-scalaire" id="toc-produit-scalaire" class="nav-link" data-scroll-target="#produit-scalaire">Produit scalaire</a></li>
-  <li><a href="#pythagore" id="toc-pythagore" class="nav-link" data-scroll-target="#pythagore">Pythagore</a></li>
-  <li><a href="#la-projection-orthogonale-est-la-meilleure-estimation" id="toc-la-projection-orthogonale-est-la-meilleure-estimation" class="nav-link" data-scroll-target="#la-projection-orthogonale-est-la-meilleure-estimation">La projection orthogonale est la meilleure estimation</a></li>
-  <li><a href="#la-règle-du-parallélogramme-théorème-de-jordanvon-neumann" id="toc-la-règle-du-parallélogramme-théorème-de-jordanvon-neumann" class="nav-link" data-scroll-target="#la-règle-du-parallélogramme-théorème-de-jordanvon-neumann">La règle du parallélogramme (théorème de Jordan–von Neumann)</a></li>
-  <li><a href="#les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire" id="toc-les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire" class="nav-link" data-scroll-target="#les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire">Les normes Lᵖ et pourquoi seule L² a un produit scalaire</a></li>
+  <li><a href="#all-is-fucked-up" id="toc-all-is-fucked-up" class="nav-link" data-scroll-target="#all-is-fucked-up">All Is Fucked Up</a></li>
+  <li><a href="#shamanism-insights-and-altered-states-of-consciousness" id="toc-shamanism-insights-and-altered-states-of-consciousness" class="nav-link" data-scroll-target="#shamanism-insights-and-altered-states-of-consciousness">Shamanism, Insights, and Altered States of Consciousness</a></li>
+  <li><a href="#the-flow-state-a-cascade-of-insights" id="toc-the-flow-state-a-cascade-of-insights" class="nav-link" data-scroll-target="#the-flow-state-a-cascade-of-insights">The Flow State: A Cascade of Insights</a></li>
+  <li><a href="#the-axial-revolution-or-the-rise-of-metacognition" id="toc-the-axial-revolution-or-the-rise-of-metacognition" class="nav-link" data-scroll-target="#the-axial-revolution-or-the-rise-of-metacognition">The Axial Revolution, or the Rise of Metacognition</a></li>
+  <li><a href="#next-stop-on-the-journey" id="toc-next-stop-on-the-journey" class="nav-link" data-scroll-target="#next-stop-on-the-journey">Next Stop on the Journey</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../maths appliquées/1. representation-geometrie-et-resolution.html">Maths appliquées</a></li><li class="breadcrumb-item"><a href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html">3. Projection orthogonale et produit scalaire</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../metacrisis/1.html">Meaning Crisis</a></li><li class="breadcrumb-item"><a href="../metacrisis/1.html">1. All Is Fucked Up</a></li></ol></nav></header>
 
 
 
 
-<section id="projection-orthogonale-et-produit-scalaire" class="level1">
-<h1>Projection orthogonale et produit scalaire</h1>
-<p>Dans toute la suite, on dit “produit scalaire” au sens large : au sens usuel sur ℝ, au sens hermitien sur ℂ.</p>
-<section id="cadre" class="level2">
-<h2 class="anchored" data-anchor-id="cadre">Cadre</h2>
-<p>On travaille dans un espace vectoriel E (sur ℝ ou ℂ) muni d’un <strong>produit scalaire</strong> ⟨·,·⟩. Tout ce qui suit est valable en dimension finie comme en dimension infinie, à condition que l’espace soit <strong>complet</strong> (toute suite de Cauchy converge dans E) et que les sous-espaces considérés soient <strong>fermés</strong>. Un tel espace est appelé espace de Hilbert. En dimension finie, complétude et fermeture sont automatiques.</p>
-<p><strong>Pourquoi ces conditions.</strong> La complétude garantit qu’on peut passer à la limite sans sortir de l’espace : sans elle, une suite d’approximations de plus en plus proches d’un optimum pourrait converger vers un point qui n’appartient pas à E. La fermeture d’un sous-espace V garantit que la limite reste dans V. En dimension infinie, ces deux conditions doivent être vérifiées ; en dimension finie, elles sont gratuites. Dans toute la suite, “sous-espace” signifie sous-espace fermé.</p>
-<p><strong>Terminologie.</strong> Un espace vectoriel réel de dimension finie muni d’un produit scalaire est un espace euclidien. La généralisation à la dimension infinie et/ou au corps ℂ est un espace de Hilbert.</p>
+<section id="a-journey-through-john-vervaekes-series-awakening-from-the-meaning-crisis-1" class="level1">
+<h1>A Journey Through John Vervaeke’s Series: Awakening from the Meaning Crisis — 1</h1>
+<p>Aside from its engaging core focus, I found the series to provide an excellent scaffolding for further exploration of cognitive science. These notes are that scaffolding. While aiming to be faithful to the series, they also include personal thoughts and reflections, not always explicitly marked as such.</p>
+<section id="all-is-fucked-up" class="level2">
+<h2 class="anchored" data-anchor-id="all-is-fucked-up">All Is Fucked Up</h2>
+<p><em>Episode 1: What Is the Meaning Crisis?</em></p>
+<p>“All is fucked-up” is one way the meaning crisis hits us. As the expression suggests, the world feels:</p>
+<ol type="1">
+<li>broken, damaged, or not working properly;</li>
+<li>stupid and not reasonable;</li>
+<li>emotionally damaging and deeply unsatisfying.</li>
+</ol>
+<p><strong>Causes of the meaning crisis.</strong> This internal machinery that makes us adaptive also makes us prone to self-deception and to bullshitting ourselves. When dysfunctional, it produces a loss of meaning in our lives.</p>
+<p><strong>Effects of the meta-crisis.</strong> These include nihilism (lack of meaning), cynicism (loss of faith in humans), and the pursuit of ways to regain meaning. Some of these are constructive, such as the re-emergence of stoicism and mindfulness; others are pathological, such as totalitarianism and selfish politics.</p>
+<p><strong>Objectives of <em>Awakening from the Meaning Crisis</em>.</strong> The series aims to establish:</p>
+<ol type="1">
+<li>an understanding of how Western culture built and lost its tools for meaning;</li>
+<li>a scientific account of what meaning is and how cognitive science can explain it;</li>
+<li>a starting point for navigating out of the meaning crisis.</li>
+</ol>
 </section>
-<section id="produit-scalaire" class="level2">
-<h2 class="anchored" data-anchor-id="produit-scalaire">Produit scalaire</h2>
-<p>Un <strong>produit scalaire</strong> sur E est une application ⟨·,·⟩ : E × E → 𝕂 (où 𝕂 = ℝ ou ℂ) qui vérifie :</p>
+<section id="shamanism-insights-and-altered-states-of-consciousness" class="level2">
+<h2 class="anchored" data-anchor-id="shamanism-insights-and-altered-states-of-consciousness">Shamanism, Insights, and Altered States of Consciousness</h2>
+<p><em>Episode 1: Primitive Meaning-Making from the Distant Past</em></p>
+<p><strong>Shamanism as a way to connect.</strong> Shamanism was pervasive in the Paleolithic era. It can be understood as a set of practices aimed at establishing connections within the group, with nature, and with the afterlife.</p>
+<p>Reference: <em>Shamanism: Archaic Techniques of Ecstasy</em> — Mircea Eliade and Wendy Doniger, 1951 (French), 1964 (English), 2020 (latest edition).</p>
+<p><strong>Altered states of consciousness.</strong> These are believed to have been a means for shamans to gain insight and healing power, hypothetically through mechanisms such as the placebo effect. Rituals and symbols played a major role in these altered states of consciousness, and they will return as central themes later.</p>
+<p><strong>Relevance for today’s meaning crisis.</strong> We will explore how the following are essential to meaning in life:</p>
+<ol type="1">
+<li>a sense of connectedness;</li>
+<li>the capacity for insight;</li>
+<li>rituals and symbols;</li>
+<li>altered states of consciousness.</li>
+</ol>
+<p>All of these are already present in ancient shamanic practices.</p>
+<p>This raises the question of whether our past might provide tools for meaning, and whether modern minds are capable of discerning what is valuable in those traditions without simply inheriting their superstitions.</p>
+</section>
+<section id="the-flow-state-a-cascade-of-insights" class="level2">
+<h2 class="anchored" data-anchor-id="the-flow-state-a-cascade-of-insights">The Flow State: A Cascade of Insights</h2>
+<p><em>Episode 2: A Present Echo of What We Seek</em></p>
+<p><strong>What is the flow state?</strong> It is a sense of oneness, clarity, effortless action, and ego dissolution. It is produced by a surge in communication between brain regions, and it enhances metaphorical thinking and problem-solving capacity.</p>
+<p>References:</p>
 <ul>
-<li><strong>Sesquilinéarité</strong> : linéaire en une variable, conjugué-linéaire en l’autre. Sur ℝ, la conjugaison est triviale et cela se réduit à la bilinéarité.</li>
-<li><strong>Symétrie hermitienne</strong> : ⟨x,y⟩ = <span class="math inline">\(\overline{⟨y,x⟩}\)</span>. Sur ℝ, cela se réduit à la symétrie ⟨x,y⟩ = ⟨y,x⟩. En conséquence, ⟨x,x⟩ = <span class="math inline">\(\overline{⟨x,x⟩}\)</span>, donc ⟨x,x⟩ est toujours réel.</li>
-<li><strong>Défini positif</strong> : ⟨x,x⟩ ≥ 0 pour tout x et ⟨x,x⟩ = 0 ⟹ x = 0.</li>
+<li><em>Flow: The Psychology of Optimal Experience</em> — Mihaly Csikszentmihalyi, 1990.</li>
+<li><em>The Evolving Self: A Psychology for the Third Millennium</em> — Mihaly Csikszentmihalyi, 1993.</li>
 </ul>
-<p><strong>Convention de linéarité.</strong> En mathématiques, le produit est conventionnellement linéaire en la seconde variable et conjugué-linéaire en la première : ⟨λx, y⟩ = <span class="math inline">\(\bar{λ}\)</span>⟨x, y⟩ et ⟨x, λy⟩ = λ⟨x, y⟩. La convention inverse est courante en physique.</p>
-<p><strong>Représentation matricielle.</strong> En dimension finie, un produit scalaire s’écrit ⟨x,y⟩ = x<em>My, où x</em> est le transposé conjugué de x et M est une matrice définie positive. Sur ℝ, M est symétrique réelle (M = Mᵀ) ; sur ℂ, M est hermitienne (M = <span class="math inline">\(\overline{M}^T\)</span>).</p>
-<p>La condition “défini positif” admet une formulation équivalente, plus naturelle en algèbre linéaire :</p>
-<ul>
-<li><strong>(Non dégénéré positif)</strong> : ⟨x,x⟩ ≥ 0 pour tout x, et si ⟨x,y⟩ = 0 pour tout y, alors x = 0.</li>
-</ul>
-<p>La première formulation regarde le signe : la forme ne s’annule qu’en zéro. La seconde regarde le noyau : aucun vecteur non nul n’est orthogonal à tout l’espace — autrement dit, l’application x ↦ ⟨x,·⟩ est injective. C’est l’analogue du théorème de représentation de Riesz (trivial en dimension finie, profond en dimension infinie).</p>
-<p><strong>Pourquoi ces deux conditions sont équivalentes.</strong> Définie positive ⟹ non dégénérée : si ⟨x,y⟩ = 0 pour tout y, en particulier pour y = x, donc ⟨x,x⟩ = 0, donc x = 0. Non dégénérée ⟹ définie positive : supposons ⟨x,x⟩ = 0 avec x ≠ 0. Par Cauchy-Schwarz (qui ne requiert que sesquilinéarité, symétrie hermitienne et positivité), |⟨x,y⟩|² ≤ ⟨x,x⟩⟨y,y⟩ = 0 pour tout y. Donc ⟨x,y⟩ = 0 pour tout y, ce qui contredit la non-dégénérescence.</p>
+<p><strong>How is it achieved?</strong> Flow tends to be induced by:</p>
+<ol type="1">
+<li>clear goals;</li>
+<li>immediate feedback;</li>
+<li>skin in the game, where error matters.</li>
+</ol>
+<p>Rock climbing is a good example of an environment conducive to the flow state.</p>
+<p><strong>A cascade of insights.</strong> This is a useful way to think about flow. Insights and the flow state can be understood as preliminary stages to altered states of consciousness, which were already part of shamanic practices.</p>
 </section>
-<section id="pythagore" class="level2">
-<h2 class="anchored" data-anchor-id="pythagore">Pythagore</h2>
-<p>Si x = p + e avec ⟨p,e⟩ = 0, alors :</p>
-<p>‖x‖² = ⟨p + e, p + e⟩ = ⟨p,p⟩ + ⟨p,e⟩ + ⟨e,p⟩ + ⟨e,e⟩ = ‖p‖² + ‖e‖²</p>
-<p>(Les termes croisés ⟨p,e⟩ et ⟨e,p⟩ = <span class="math inline">\(\overline{⟨p,e⟩}\)</span> sont tous deux nuls dès que l’un l’est.)</p>
-<p>C’est tout. Pythagore n’est pas un théorème de géométrie ajouté au produit scalaire — c’est une conséquence directe de la sesquilinéarité. Développer le carré d’une somme dans un produit scalaire, c’est exactement la même opération que développer (a+b)² = a² + 2ab + b² : les termes croisés apparaissent, et l’orthogonalité les fait disparaître.</p>
+<section id="the-axial-revolution-or-the-rise-of-metacognition" class="level2">
+<h2 class="anchored" data-anchor-id="the-axial-revolution-or-the-rise-of-metacognition">The Axial Revolution, or the Rise of Metacognition</h2>
+<p><em>Episodes 2 and 3: The key capability of being able to think about how we think</em></p>
+<p><strong>The Bronze Age collapse as a trigger.</strong> The emergence of the Axial Age around 1000 BCE followed the collapse of major civilizations such as Mycenaean Greece, the Kassites in Babylonia, the Hittite Empire in Anatolia, and the New Kingdom of Egypt. The slow recomposition that followed fostered innovations and new psychotechnologies, especially alphabetic literacy and money. Humans increasingly began to think about how they think.</p>
+<p>Reference: <em>1177 B.C.: The Year Civilization Collapsed</em> — Eric Cline, 2015.</p>
+<p><strong>Shamanism as a root of the Axial Age.</strong> One can argue that shamanism participated in the exaptation of our cognitive capacities, eventually contributing to metacognition and second-order thinking: the ability to think about how we think.</p>
+<blockquote class="blockquote">
+<p>Exaptation is the evolutionary phenomenon whereby a trait that originally evolved for one purpose is later used for another.</p>
+</blockquote>
+<p><strong>The axial revolution in Greece.</strong> It is characterized by the emergence of transcendence over immanence. The horizontal worldview of Greek mythology, where individuals, nature, and gods lie on a continuum, is replaced by the vertical worldview of Greek philosophy.</p>
+<p><strong>The axial revolution in the Middle East.</strong> Through the Israelites’ innovation of a monotheistic God, faith becomes a matter of reciprocal realization. Humans and God jointly unfold and realize themselves in history. The role of the prophets is to awaken God’s people when they drift away from that historical task.</p>
 </section>
-<section id="la-projection-orthogonale-est-la-meilleure-estimation" class="level2">
-<h2 class="anchored" data-anchor-id="la-projection-orthogonale-est-la-meilleure-estimation">La projection orthogonale est la meilleure estimation</h2>
-<p>Soit V un sous-espace fermé de E et x ∈ E. On cherche le point de V le plus proche de x : le vecteur p ∈ V qui minimise ‖x − p‖.</p>
-<p><strong>La décomposition existe.</strong> Posons e = x − p.&nbsp;On veut p ∈ V et e ⊥ V. L’orthogonal de V, noté V⊥ = {z ∈ E : ⟨z,v⟩ = 0 pour tout v ∈ V}, est lui-même un sous-espace fermé. En dimension finie, tout sous-espace admet un supplémentaire orthogonal : E = V ⊕ V⊥, et tout vecteur se décompose de façon unique en une composante dans V et une composante dans V⊥. En dimension infinie, c’est le théorème de projection dans les espaces de Hilbert — qui repose sur la complétude de E et la fermeture de V — qui garantit cette décomposition. Dans les deux cas, x = p + e avec p ∈ V et e ∈ V⊥ est bien défini et unique.</p>
-<p><strong>Cette décomposition donne le minimum.</strong> Pour tout autre candidat v ∈ V :</p>
-<p>‖x − v‖² = ‖(p − v) + e‖²</p>
-<p>Le vecteur p − v est dans V, et e est orthogonal à V, donc ⟨p − v, e⟩ = 0. Par Pythagore :</p>
-<p>‖x − v‖² = ‖p − v‖² + ‖e‖²</p>
-<p>Ce terme est minimal quand ‖p − v‖² = 0, c’est-à-dire v = p.&nbsp;Le minimum est ‖e‖², atteint uniquement en p.</p>
-<p><strong>Ce qu’on vient de montrer.</strong> La projection orthogonale p est le meilleur estimateur de x dans V. L’erreur e = x − p est orthogonale à V — elle ne contient aucune composante dans la direction de V qu’on aurait pu exploiter pour réduire la distance. Pythagore garantit que composante utile (dans V) et erreur résiduelle (orthogonale à V) ne se mélangent pas : leurs contributions au carré de la norme s’additionnent indépendamment.</p>
-<p><strong>Pourquoi le produit scalaire est nécessaire.</strong> La preuve repose entièrement sur deux ingrédients : l’orthogonalité (pour définir e ⊥ V) et Pythagore (pour séparer les termes). Les deux viennent du produit scalaire. Sans lui, on ne peut ni décomposer x en composantes indépendantes, ni garantir que l’erreur est incompressible.</p>
-</section>
-<section id="la-règle-du-parallélogramme-théorème-de-jordanvon-neumann" class="level2">
-<h2 class="anchored" data-anchor-id="la-règle-du-parallélogramme-théorème-de-jordanvon-neumann">La règle du parallélogramme (théorème de Jordan–von Neumann)</h2>
-<p><strong>Une norme vient d’un produit scalaire si et seulement si elle vérifie la règle du parallélogramme</strong> :</p>
-<p>‖x + y‖² + ‖x − y‖² = 2(‖x‖² + ‖y‖²)</p>
-<p><strong>Interprétation géométrique.</strong> Dans un parallélogramme de côtés x et y, la somme des carrés des diagonales (‖x+y‖ et ‖x−y‖) égale la somme des carrés des quatre côtés.</p>
-<p><strong>Sens direct (produit scalaire ⟹ règle).</strong> En développant par sesquilinéarité :<br>
-- ‖x + y‖² = ‖x‖² + 2 Re⟨x,y⟩ + ‖y‖²<br>
-- ‖x − y‖² = ‖x‖² − 2 Re⟨x,y⟩ + ‖y‖²</p>
-<p>En sommant, les termes croisés s’annulent. (Sur ℝ, Re⟨x,y⟩ = ⟨x,y⟩.)</p>
-<p><strong>Sens réciproque (règle ⟹ produit scalaire).</strong> Si une norme vérifie la règle, alors la formule de polarisation reconstruit un produit scalaire dont la norme associée est la norme de départ. Sur ℝ :</p>
-<p>⟨x,y⟩ = ¼(‖x + y‖² − ‖x − y‖²)</p>
-<p>Sur ℂ, il faut quatre termes pour récupérer aussi la partie imaginaire :</p>
-<p>⟨x,y⟩ = ¼(‖x + y‖² − ‖x − y‖² + i‖x + iy‖² − i‖x − iy‖²)</p>
-<p><strong>La règle du parallélogramme impose à la boule unité d’être une ellipsoïde.</strong> Si Q(x) = ‖x‖² vérifie la règle, alors Q est nécessairement une forme quadratique (somme de termes de degré 2, sans puissances supérieures). Et réciproquement si Q est une forme quadratique, elle respecte la règle.</p>
-</section>
-<section id="les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire" class="level2">
-<h2 class="anchored" data-anchor-id="les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire">Les normes Lᵖ et pourquoi seule L² a un produit scalaire</h2>
-<p>Les normes Lᵖ (pour 1 ≤ p ≤ ∞) sont définies sur des espaces de fonctions (ou de vecteurs en dimension finie) par :</p>
-<p>‖f‖ₚ = (∫|f|ᵖ)^(1/p)</p>
-<p>Chaque valeur de p donne une géométrie différente — c’est-à-dire une forme de boule unité différente.</p>
-<p><strong>Seule L² vérifie la règle du parallélogramme.</strong> Prenons f et g à supports disjoints (fg = 0 presque partout). Alors :</p>
-<ul>
-<li>‖f + g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ</li>
-<li>‖f − g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ</li>
-</ul>
-<p>Donc ‖f + g‖ₚ = ‖f − g‖ₚ. La règle du parallélogramme exige alors :</p>
-<p>2‖f + g‖² = 2(‖f‖² + ‖g‖²)</p>
-<p>soit ‖f + g‖² = ‖f‖² + ‖g‖². Mais on sait aussi que ‖f + g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ, c’est-à-dire que la puissance p “additionne” les normes. Pour que la puissance 2 les additionne aussi, il faut p = 2. Pour tout autre p, la règle du parallélogramme est violée, et aucun produit scalaire ne peut engendrer la norme Lᵖ.</p>
-<p><strong>Lien avec la géométrie de la boule.</strong> La note précédente (voir <em>Mesurer la proximité de points dans un espace</em>) montrait que le produit scalaire rend la boule unité quadratique — sa frontière est un niveau de ⟨x,x⟩ = 1. En dimension finie, c’est une ellipsoïde. La boule L² est la seule boule Lᵖ qui soit une ellipsoïde : pour p &lt; 2, la boule est pincée (concave sur les diagonales) ; pour p &gt; 2, elle est gonflée (convexe mais trop arrondie aux coins). Seule l’ellipsoïde a la courbure quadratique qui permet projection = plus proche point pour tout sous-espace.</p>
+<section id="next-stop-on-the-journey" class="level2">
+<h2 class="anchored" data-anchor-id="next-stop-on-the-journey">Next Stop on the Journey</h2>
+<p>Both axial revolutions provide a scaffolding of coherence, significance, and purpose that helped sustain meaning within Western culture.</p>
+<p>Questions that follow from this:</p>
+<ol type="1">
+<li>What was this scaffolding?</li>
+<li>How was it lost?</li>
+<li>Is there something worth saving from it and from these ancient traditions?</li>
+<li>If so, how can it be integrated into a modern scientific worldview?</li>
+</ol>
+<p>This journey through John Vervaeke’s series explores those questions with the hope of finding some initial guidance out of the meaning crisis.</p>
+<p>The next stop will turn to Greek thinking about meaning in life and make a first attempt at bridging it with ideas from psychology and the theory of complex dynamical systems.</p>
 
 
 </section>
@@ -784,13 +759,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../maths appliquées/2. mesurer-la-proximite.html" class="pagination-link" aria-label="2. Mesurer la proximite">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2. Mesurer la proximite</span>
+      <a href="../maths appliquées/4. variables-aléatoires.html" class="pagination-link" aria-label="4. Variables aleatoires">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">4. Variables aleatoires</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../maths appliquées/4. variables-aléatoires.html" class="pagination-link" aria-label="4. Variables aleatoires">
-        <span class="nav-page-text">4. Variables aleatoires</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../metacrisis/2.html" class="pagination-link" aria-label="2. Traditions &amp; Meaning">
+        <span class="nav-page-text">2. Traditions &amp; Meaning</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

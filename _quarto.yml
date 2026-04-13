@@ -5,6 +5,7 @@ project:
     - "index.qmd"
     - "maths appliquées/*.md"
     - "probabilités/*.md"
+    - "metacrisis/*.md"
     - "!pronostics/"
 
 website:
@@ -18,8 +19,12 @@ website:
   sidebar:
     style: docked
     search: true
+    collapse-level: 1
     contents:
+      - href: index.qmd
+        text: Accueil
       - section: "Probabilités"
+        collapsed: true
         contents:
           - href: probabilités/0000. syllabus.md
             text: Syllabus
@@ -34,6 +39,7 @@ website:
           - href: probabilités/0200.mesures-et-probabilités.md
             text: "0200. Mesures et probabilités"
       - section: "Maths appliquées"
+        collapsed: true
         contents:
           - href: maths appliquées/1. representation-geometrie-et-resolution.md
             text: "1. Representation geometrie et resolution"
@@ -43,6 +49,15 @@ website:
             text: "3. Projection orthogonale et produit scalaire"
           - href: maths appliquées/4. variables-aléatoires.md
             text: "4. Variables aleatoires"
+      - section: "Meaning Crisis"
+        collapsed: true
+        contents:
+          - href: metacrisis/1.md
+            text: "1. All Is Fucked Up"
+          - href: metacrisis/2.md
+            text: "2. Traditions & Meaning"
+          - href: metacrisis/3.md
+            text: "3. Consciousness"
 
 format:
   html:

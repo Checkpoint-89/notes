@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>projection-orthogonale-et-produit-scalaire – chekpoint-89</title>
+<title>quarto-inputb75f5ff5e4c3bf92 – chekpoint-89</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../maths appliquées/4. variables-aléatoires.html" rel="next">
-<link href="../maths appliquées/2. mesurer-la-proximite.html" rel="prev">
+<link href="../metacrisis/3.html" rel="next">
+<link href="../metacrisis/1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -73,35 +73,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -137,7 +108,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../maths appliquées/1. representation-geometrie-et-resolution.html">Maths appliquées</a></li><li class="breadcrumb-item"><a href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html">3. Projection orthogonale et produit scalaire</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../metacrisis/1.html">Meaning Crisis</a></li><li class="breadcrumb-item"><a href="../metacrisis/2.html">2. Traditions &amp; Meaning</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -212,13 +183,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Maths appliquées</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../maths appliquées/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
@@ -233,7 +204,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link active">
+  <a href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3. Projection orthogonale et produit scalaire</span></a>
   </div>
 </li>
@@ -247,13 +218,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Meaning Crisis</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../metacrisis/1.html" class="sidebar-item-text sidebar-link">
@@ -262,7 +233,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../metacrisis/2.html" class="sidebar-item-text sidebar-link">
+  <a href="../metacrisis/2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">2. Traditions &amp; Meaning</span></a>
   </div>
 </li>
@@ -284,98 +255,86 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#projection-orthogonale-et-produit-scalaire" id="toc-projection-orthogonale-et-produit-scalaire" class="nav-link active" data-scroll-target="#projection-orthogonale-et-produit-scalaire">Projection orthogonale et produit scalaire</a>
+  <li><a href="#a-journey-through-john-vervaekes-series-awakening-from-the-meaning-crisis-2" id="toc-a-journey-through-john-vervaekes-series-awakening-from-the-meaning-crisis-2" class="nav-link active" data-scroll-target="#a-journey-through-john-vervaekes-series-awakening-from-the-meaning-crisis-2">A Journey Through John Vervaeke’s Series: Awakening from the Meaning Crisis — 2</a>
   <ul>
-  <li><a href="#cadre" id="toc-cadre" class="nav-link" data-scroll-target="#cadre">Cadre</a></li>
-  <li><a href="#produit-scalaire" id="toc-produit-scalaire" class="nav-link" data-scroll-target="#produit-scalaire">Produit scalaire</a></li>
-  <li><a href="#pythagore" id="toc-pythagore" class="nav-link" data-scroll-target="#pythagore">Pythagore</a></li>
-  <li><a href="#la-projection-orthogonale-est-la-meilleure-estimation" id="toc-la-projection-orthogonale-est-la-meilleure-estimation" class="nav-link" data-scroll-target="#la-projection-orthogonale-est-la-meilleure-estimation">La projection orthogonale est la meilleure estimation</a></li>
-  <li><a href="#la-règle-du-parallélogramme-théorème-de-jordanvon-neumann" id="toc-la-règle-du-parallélogramme-théorème-de-jordanvon-neumann" class="nav-link" data-scroll-target="#la-règle-du-parallélogramme-théorème-de-jordanvon-neumann">La règle du parallélogramme (théorème de Jordan–von Neumann)</a></li>
-  <li><a href="#les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire" id="toc-les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire" class="nav-link" data-scroll-target="#les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire">Les normes Lᵖ et pourquoi seule L² a un produit scalaire</a></li>
+  <li><a href="#meaning-seeking-for-plato-and-aristotle" id="toc-meaning-seeking-for-plato-and-aristotle" class="nav-link" data-scroll-target="#meaning-seeking-for-plato-and-aristotle">Meaning Seeking for Plato and Aristotle</a></li>
+  <li><a href="#resolving-inner-conflict-cultivation-of-character-living-organisms-and-dynamical-systems" id="toc-resolving-inner-conflict-cultivation-of-character-living-organisms-and-dynamical-systems" class="nav-link" data-scroll-target="#resolving-inner-conflict-cultivation-of-character-living-organisms-and-dynamical-systems">Resolving Inner Conflict: Cultivation of Character, Living Organisms, and Dynamical Systems</a></li>
+  <li><a href="#getting-in-touch-with-reality-the-agent-arena-relationship-and-the-cosmos" id="toc-getting-in-touch-with-reality-the-agent-arena-relationship-and-the-cosmos" class="nav-link" data-scroll-target="#getting-in-touch-with-reality-the-agent-arena-relationship-and-the-cosmos">Getting in Touch with Reality: The Agent-Arena Relationship and the Cosmos</a></li>
+  <li><a href="#next-stop-on-the-journey" id="toc-next-stop-on-the-journey" class="nav-link" data-scroll-target="#next-stop-on-the-journey">Next Stop on the Journey</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../maths appliquées/1. representation-geometrie-et-resolution.html">Maths appliquées</a></li><li class="breadcrumb-item"><a href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html">3. Projection orthogonale et produit scalaire</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../metacrisis/1.html">Meaning Crisis</a></li><li class="breadcrumb-item"><a href="../metacrisis/2.html">2. Traditions &amp; Meaning</a></li></ol></nav></header>
 
 
 
 
-<section id="projection-orthogonale-et-produit-scalaire" class="level1">
-<h1>Projection orthogonale et produit scalaire</h1>
-<p>Dans toute la suite, on dit “produit scalaire” au sens large : au sens usuel sur ℝ, au sens hermitien sur ℂ.</p>
-<section id="cadre" class="level2">
-<h2 class="anchored" data-anchor-id="cadre">Cadre</h2>
-<p>On travaille dans un espace vectoriel E (sur ℝ ou ℂ) muni d’un <strong>produit scalaire</strong> ⟨·,·⟩. Tout ce qui suit est valable en dimension finie comme en dimension infinie, à condition que l’espace soit <strong>complet</strong> (toute suite de Cauchy converge dans E) et que les sous-espaces considérés soient <strong>fermés</strong>. Un tel espace est appelé espace de Hilbert. En dimension finie, complétude et fermeture sont automatiques.</p>
-<p><strong>Pourquoi ces conditions.</strong> La complétude garantit qu’on peut passer à la limite sans sortir de l’espace : sans elle, une suite d’approximations de plus en plus proches d’un optimum pourrait converger vers un point qui n’appartient pas à E. La fermeture d’un sous-espace V garantit que la limite reste dans V. En dimension infinie, ces deux conditions doivent être vérifiées ; en dimension finie, elles sont gratuites. Dans toute la suite, “sous-espace” signifie sous-espace fermé.</p>
-<p><strong>Terminologie.</strong> Un espace vectoriel réel de dimension finie muni d’un produit scalaire est un espace euclidien. La généralisation à la dimension infinie et/ou au corps ℂ est un espace de Hilbert.</p>
+<section id="a-journey-through-john-vervaekes-series-awakening-from-the-meaning-crisis-2" class="level1">
+<h1>A Journey Through John Vervaeke’s Series: Awakening from the Meaning Crisis — 2</h1>
+<p>Aside from its engaging core focus, I found the series to provide an excellent scaffolding for further exploration of cognitive science. These notes are that scaffolding. While aiming to be faithful to the series, they also include personal thoughts and reflections, not always explicitly marked as such.</p>
+<p>Previously on our journey: “All is fucked up” is one way the meaning crisis may hit us. From ancient shamanism to today, altered states of consciousness and the flow state have been ways to reconnect deeply with ourselves, others, and the world. If the present echoes the past, what can be salvaged from Western traditions to illuminate our quest for meaning and provide coherence, significance, and purpose in our lives?</p>
+<section id="meaning-seeking-for-plato-and-aristotle" class="level2">
+<h2 class="anchored" data-anchor-id="meaning-seeking-for-plato-and-aristotle">Meaning Seeking for Plato and Aristotle</h2>
+<p><em>Episodes 4, 5, 6, and 7: Meaning requires us to resolve inner conflicts and connect with reality deeply enough to know it</em></p>
+<p><strong>Self-deception, ignorance, and suffering.</strong> For the ancient Greeks, self-deception is fed by ignorance and leads to suffering.</p>
+<blockquote class="blockquote">
+<p>Self-deception can be understood as fooling oneself, consciously or not, in order to avoid facing reality.</p>
+</blockquote>
+<p>Reason is central to overcoming self-deception, as shown by the Socratic method of critical inquiry, which challenges one’s assumptions through rigorous questioning.</p>
+<p><strong>Plato’s two meta-desires.</strong> Plato identifies two meta-desires underlying all other desires. They aim at escaping suffering by:</p>
+<ol type="1">
+<li>resolving our inner conflicts;</li>
+<li>getting in touch with reality.</li>
+</ol>
+<p>This is also what the flow state seems to achieve: deep integration within ourselves and with the world.</p>
+<p><strong>Preventing inner conflict through character.</strong> For Plato, inner conflict is resolved by teaching Logos (reason), taming Eros (emotion), and training Thymos (the social, status-seeking part of us). Aristotle extends this by emphasizing the development of virtues and character. The next section takes up that issue more directly.</p>
+<p><strong>Getting in touch with reality through anagoge.</strong> In Plato’s myth of the cave, one gets closer to reality through a process of self-realization. It dispels the shadows that cover the true self and obscure vision. This process, called <em>anagoge</em>, is described through the ascent from the cave’s depths to the surface. That ascent transforms the individual, which transforms the worldview, which in turn transforms the individual again. Anagoge is therefore a process of increased participatory knowing between oneself and the world.</p>
+<p><strong>Getting in touch with reality by grasping it more deeply.</strong> Aristotle’s con-formity theory can be illustrated through the craftsman. Through practice and experience, the craftsman has been informed by the form of the object he makes. He knows the object by being able to conform to it: practice gives him an intuitive grasp of the thing itself. This knowledge is partly ineffable, because grasping reality in that way differs from propositional knowledge.</p>
+<p>Reference: <em>The Tacit Dimension</em> — Michael Polanyi, 1966 (first edition), 2009 (later edition).</p>
+<blockquote class="blockquote">
+<p>“We can know more than we can tell.”</p>
+</blockquote>
 </section>
-<section id="produit-scalaire" class="level2">
-<h2 class="anchored" data-anchor-id="produit-scalaire">Produit scalaire</h2>
-<p>Un <strong>produit scalaire</strong> sur E est une application ⟨·,·⟩ : E × E → 𝕂 (où 𝕂 = ℝ ou ℂ) qui vérifie :</p>
-<ul>
-<li><strong>Sesquilinéarité</strong> : linéaire en une variable, conjugué-linéaire en l’autre. Sur ℝ, la conjugaison est triviale et cela se réduit à la bilinéarité.</li>
-<li><strong>Symétrie hermitienne</strong> : ⟨x,y⟩ = <span class="math inline">\(\overline{⟨y,x⟩}\)</span>. Sur ℝ, cela se réduit à la symétrie ⟨x,y⟩ = ⟨y,x⟩. En conséquence, ⟨x,x⟩ = <span class="math inline">\(\overline{⟨x,x⟩}\)</span>, donc ⟨x,x⟩ est toujours réel.</li>
-<li><strong>Défini positif</strong> : ⟨x,x⟩ ≥ 0 pour tout x et ⟨x,x⟩ = 0 ⟹ x = 0.</li>
-</ul>
-<p><strong>Convention de linéarité.</strong> En mathématiques, le produit est conventionnellement linéaire en la seconde variable et conjugué-linéaire en la première : ⟨λx, y⟩ = <span class="math inline">\(\bar{λ}\)</span>⟨x, y⟩ et ⟨x, λy⟩ = λ⟨x, y⟩. La convention inverse est courante en physique.</p>
-<p><strong>Représentation matricielle.</strong> En dimension finie, un produit scalaire s’écrit ⟨x,y⟩ = x<em>My, où x</em> est le transposé conjugué de x et M est une matrice définie positive. Sur ℝ, M est symétrique réelle (M = Mᵀ) ; sur ℂ, M est hermitienne (M = <span class="math inline">\(\overline{M}^T\)</span>).</p>
-<p>La condition “défini positif” admet une formulation équivalente, plus naturelle en algèbre linéaire :</p>
-<ul>
-<li><strong>(Non dégénéré positif)</strong> : ⟨x,x⟩ ≥ 0 pour tout x, et si ⟨x,y⟩ = 0 pour tout y, alors x = 0.</li>
-</ul>
-<p>La première formulation regarde le signe : la forme ne s’annule qu’en zéro. La seconde regarde le noyau : aucun vecteur non nul n’est orthogonal à tout l’espace — autrement dit, l’application x ↦ ⟨x,·⟩ est injective. C’est l’analogue du théorème de représentation de Riesz (trivial en dimension finie, profond en dimension infinie).</p>
-<p><strong>Pourquoi ces deux conditions sont équivalentes.</strong> Définie positive ⟹ non dégénérée : si ⟨x,y⟩ = 0 pour tout y, en particulier pour y = x, donc ⟨x,x⟩ = 0, donc x = 0. Non dégénérée ⟹ définie positive : supposons ⟨x,x⟩ = 0 avec x ≠ 0. Par Cauchy-Schwarz (qui ne requiert que sesquilinéarité, symétrie hermitienne et positivité), |⟨x,y⟩|² ≤ ⟨x,x⟩⟨y,y⟩ = 0 pour tout y. Donc ⟨x,y⟩ = 0 pour tout y, ce qui contredit la non-dégénérescence.</p>
+<section id="resolving-inner-conflict-cultivation-of-character-living-organisms-and-dynamical-systems" class="level2">
+<h2 class="anchored" data-anchor-id="resolving-inner-conflict-cultivation-of-character-living-organisms-and-dynamical-systems">Resolving Inner Conflict: Cultivation of Character, Living Organisms, and Dynamical Systems</h2>
+<p><em>Episode 6: We grow our character and resolve inner conflict by setting up the right internal dynamical systems</em></p>
+<p><strong>Actualizing potential.</strong> Aristotle is helpful for understanding personal growth through his concept of actualizing potential. A piece of wood has the potential to become a table, and the carpenter actualizes that potential by exerting constraints over it. Living organisms are more remarkable still: they can self-actualize, realizing their potential through the constraints they adopt.</p>
+<p><strong>Against a purely linear view of causality.</strong> Aristotle’s understanding of change was later challenged by the linear Newtonian view of causality. The idea that every effect has a cause appears intuitive and powerful, but it becomes inadequate when applied to biology.</p>
+<p>Reference: <em>The Entangled Brain</em> — Luiz Pessoa, 2022.</p>
+<blockquote class="blockquote">
+<p>“A central thesis of the book is that biology does not work like physics, and even less so like engineering.”</p>
+</blockquote>
+<p>The causal view helps us avoid circular explanations, but it becomes perplexing with living organisms, which operate through intrinsic feedback loops: a tree causes the growth of its leaves, which in turn sustain the tree. This issue has been discussed at least since Kant’s reflections on teleology.</p>
+<p><strong>Constraints and dynamical systems.</strong> Returning to the Aristotelian inspiration, emphasizing constraints over effects shifts attention from what actually occurs to what is potential or possible. Living organisms can then be better understood as dynamical systems. They self-regulate in order to fit their environment under two opposing types of constraints:</p>
+<ol type="1">
+<li>selective constraints, which reduce options;</li>
+<li>enabling constraints, which provide options.</li>
+</ol>
+<p>Reference: <em>Dynamics in Action: Intentional Behavior as a Complex System</em> — Alicia Juarrero, 1999.</p>
+<blockquote class="blockquote">
+<p>“Thinking of causes as dynamical constraints makes bottom-up and top-down causal relations, including those involving intentional causes, suddenly tractable.”</p>
+</blockquote>
+<p><strong>Fittedness and growth.</strong> Just as evolution seeks fittedness under the opposing pressures of selection and diversification, living organisms grow by regulating fittedness within their own network of constraints. Arousal, for example, emerges from the opponent processes of the sympathetic and parasympathetic nervous systems, which respectively prepare us for stress and for rest.</p>
+<p><strong>Character as regulated constraint.</strong> Applied to character, Aristotle’s view suggests that foolishness, doing the wrong thing despite knowing better, stems from weaknesses in character. In modern terms, cultivation of character can be expressed as the regulation of dynamical systems of constraints. The constraints we place ourselves under, consciously or not, are decisive for personal growth. Courage, for example, emerges from the right balance between avoiding cowardice and avoiding recklessness.</p>
 </section>
-<section id="pythagore" class="level2">
-<h2 class="anchored" data-anchor-id="pythagore">Pythagore</h2>
-<p>Si x = p + e avec ⟨p,e⟩ = 0, alors :</p>
-<p>‖x‖² = ⟨p + e, p + e⟩ = ⟨p,p⟩ + ⟨p,e⟩ + ⟨e,p⟩ + ⟨e,e⟩ = ‖p‖² + ‖e‖²</p>
-<p>(Les termes croisés ⟨p,e⟩ et ⟨e,p⟩ = <span class="math inline">\(\overline{⟨p,e⟩}\)</span> sont tous deux nuls dès que l’un l’est.)</p>
-<p>C’est tout. Pythagore n’est pas un théorème de géométrie ajouté au produit scalaire — c’est une conséquence directe de la sesquilinéarité. Développer le carré d’une somme dans un produit scalaire, c’est exactement la même opération que développer (a+b)² = a² + 2ab + b² : les termes croisés apparaissent, et l’orthogonalité les fait disparaître.</p>
+<section id="getting-in-touch-with-reality-the-agent-arena-relationship-and-the-cosmos" class="level2">
+<h2 class="anchored" data-anchor-id="getting-in-touch-with-reality-the-agent-arena-relationship-and-the-cosmos">Getting in Touch with Reality: The Agent-Arena Relationship and the Cosmos</h2>
+<p><em>Episode 7: A good fit between how we define ourselves and how we perceive the world grounds closer contact with reality</em></p>
+<p><strong>The agent-arena relationship.</strong> This relationship involves an agent capable of pursuing goals and an arena, the environment that enables the agent. A stadium enables the football player, while the player gives significance to the stadium. We are always engaged or enmeshed in such relationships, perceiving our environment as a particular arena in which we take on particular roles.</p>
+<p><strong>Worldview attunement.</strong> When this process functions well, it contributes to a coherent worldview and a sense of belonging. When it fails, when there is no proper attunement between self and world, things appear absurd, like a tennis player in a football stadium.</p>
+<p><strong>The nomological order.</strong> At the cultural level, John Vervaeke calls a worldview that gives us a sense of fitting in and being connected to the world the <em>nomological order</em>. This sense of connectedness plays a major role in bringing us into closer touch with reality.</p>
+<p><strong>The Greek cosmos.</strong> The Greek cosmos is a strong example of such a worldview: an ordered whole in which everything has a proper place, and therefore a way of fitting and finding meaning.</p>
+<p>Reference: <em>The Embodied Mind: Cognitive Science and Human Experience</em> — Francisco Varela, Eleanor Rosch, and Evan Thompson, 1992 (first edition), 2017 (revised edition).</p>
+<blockquote class="blockquote">
+<p>“The Embodied Mind introduced a new form of cognitive science called enaction, in which both the environment and first-person experience are aspects of embodiment.”</p>
+</blockquote>
 </section>
-<section id="la-projection-orthogonale-est-la-meilleure-estimation" class="level2">
-<h2 class="anchored" data-anchor-id="la-projection-orthogonale-est-la-meilleure-estimation">La projection orthogonale est la meilleure estimation</h2>
-<p>Soit V un sous-espace fermé de E et x ∈ E. On cherche le point de V le plus proche de x : le vecteur p ∈ V qui minimise ‖x − p‖.</p>
-<p><strong>La décomposition existe.</strong> Posons e = x − p.&nbsp;On veut p ∈ V et e ⊥ V. L’orthogonal de V, noté V⊥ = {z ∈ E : ⟨z,v⟩ = 0 pour tout v ∈ V}, est lui-même un sous-espace fermé. En dimension finie, tout sous-espace admet un supplémentaire orthogonal : E = V ⊕ V⊥, et tout vecteur se décompose de façon unique en une composante dans V et une composante dans V⊥. En dimension infinie, c’est le théorème de projection dans les espaces de Hilbert — qui repose sur la complétude de E et la fermeture de V — qui garantit cette décomposition. Dans les deux cas, x = p + e avec p ∈ V et e ∈ V⊥ est bien défini et unique.</p>
-<p><strong>Cette décomposition donne le minimum.</strong> Pour tout autre candidat v ∈ V :</p>
-<p>‖x − v‖² = ‖(p − v) + e‖²</p>
-<p>Le vecteur p − v est dans V, et e est orthogonal à V, donc ⟨p − v, e⟩ = 0. Par Pythagore :</p>
-<p>‖x − v‖² = ‖p − v‖² + ‖e‖²</p>
-<p>Ce terme est minimal quand ‖p − v‖² = 0, c’est-à-dire v = p.&nbsp;Le minimum est ‖e‖², atteint uniquement en p.</p>
-<p><strong>Ce qu’on vient de montrer.</strong> La projection orthogonale p est le meilleur estimateur de x dans V. L’erreur e = x − p est orthogonale à V — elle ne contient aucune composante dans la direction de V qu’on aurait pu exploiter pour réduire la distance. Pythagore garantit que composante utile (dans V) et erreur résiduelle (orthogonale à V) ne se mélangent pas : leurs contributions au carré de la norme s’additionnent indépendamment.</p>
-<p><strong>Pourquoi le produit scalaire est nécessaire.</strong> La preuve repose entièrement sur deux ingrédients : l’orthogonalité (pour définir e ⊥ V) et Pythagore (pour séparer les termes). Les deux viennent du produit scalaire. Sans lui, on ne peut ni décomposer x en composantes indépendantes, ni garantir que l’erreur est incompressible.</p>
-</section>
-<section id="la-règle-du-parallélogramme-théorème-de-jordanvon-neumann" class="level2">
-<h2 class="anchored" data-anchor-id="la-règle-du-parallélogramme-théorème-de-jordanvon-neumann">La règle du parallélogramme (théorème de Jordan–von Neumann)</h2>
-<p><strong>Une norme vient d’un produit scalaire si et seulement si elle vérifie la règle du parallélogramme</strong> :</p>
-<p>‖x + y‖² + ‖x − y‖² = 2(‖x‖² + ‖y‖²)</p>
-<p><strong>Interprétation géométrique.</strong> Dans un parallélogramme de côtés x et y, la somme des carrés des diagonales (‖x+y‖ et ‖x−y‖) égale la somme des carrés des quatre côtés.</p>
-<p><strong>Sens direct (produit scalaire ⟹ règle).</strong> En développant par sesquilinéarité :<br>
-- ‖x + y‖² = ‖x‖² + 2 Re⟨x,y⟩ + ‖y‖²<br>
-- ‖x − y‖² = ‖x‖² − 2 Re⟨x,y⟩ + ‖y‖²</p>
-<p>En sommant, les termes croisés s’annulent. (Sur ℝ, Re⟨x,y⟩ = ⟨x,y⟩.)</p>
-<p><strong>Sens réciproque (règle ⟹ produit scalaire).</strong> Si une norme vérifie la règle, alors la formule de polarisation reconstruit un produit scalaire dont la norme associée est la norme de départ. Sur ℝ :</p>
-<p>⟨x,y⟩ = ¼(‖x + y‖² − ‖x − y‖²)</p>
-<p>Sur ℂ, il faut quatre termes pour récupérer aussi la partie imaginaire :</p>
-<p>⟨x,y⟩ = ¼(‖x + y‖² − ‖x − y‖² + i‖x + iy‖² − i‖x − iy‖²)</p>
-<p><strong>La règle du parallélogramme impose à la boule unité d’être une ellipsoïde.</strong> Si Q(x) = ‖x‖² vérifie la règle, alors Q est nécessairement une forme quadratique (somme de termes de degré 2, sans puissances supérieures). Et réciproquement si Q est une forme quadratique, elle respecte la règle.</p>
-</section>
-<section id="les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire" class="level2">
-<h2 class="anchored" data-anchor-id="les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire">Les normes Lᵖ et pourquoi seule L² a un produit scalaire</h2>
-<p>Les normes Lᵖ (pour 1 ≤ p ≤ ∞) sont définies sur des espaces de fonctions (ou de vecteurs en dimension finie) par :</p>
-<p>‖f‖ₚ = (∫|f|ᵖ)^(1/p)</p>
-<p>Chaque valeur de p donne une géométrie différente — c’est-à-dire une forme de boule unité différente.</p>
-<p><strong>Seule L² vérifie la règle du parallélogramme.</strong> Prenons f et g à supports disjoints (fg = 0 presque partout). Alors :</p>
-<ul>
-<li>‖f + g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ</li>
-<li>‖f − g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ</li>
-</ul>
-<p>Donc ‖f + g‖ₚ = ‖f − g‖ₚ. La règle du parallélogramme exige alors :</p>
-<p>2‖f + g‖² = 2(‖f‖² + ‖g‖²)</p>
-<p>soit ‖f + g‖² = ‖f‖² + ‖g‖². Mais on sait aussi que ‖f + g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ, c’est-à-dire que la puissance p “additionne” les normes. Pour que la puissance 2 les additionne aussi, il faut p = 2. Pour tout autre p, la règle du parallélogramme est violée, et aucun produit scalaire ne peut engendrer la norme Lᵖ.</p>
-<p><strong>Lien avec la géométrie de la boule.</strong> La note précédente (voir <em>Mesurer la proximité de points dans un espace</em>) montrait que le produit scalaire rend la boule unité quadratique — sa frontière est un niveau de ⟨x,x⟩ = 1. En dimension finie, c’est une ellipsoïde. La boule L² est la seule boule Lᵖ qui soit une ellipsoïde : pour p &lt; 2, la boule est pincée (concave sur les diagonales) ; pour p &gt; 2, elle est gonflée (convexe mais trop arrondie aux coins). Seule l’ellipsoïde a la courbure quadratique qui permet projection = plus proche point pour tout sous-espace.</p>
+<section id="next-stop-on-the-journey" class="level2">
+<h2 class="anchored" data-anchor-id="next-stop-on-the-journey">Next Stop on the Journey</h2>
+<p>You might already suspect that cultivating character and getting closer to reality require conscious engagement with the world. That is the right direction.</p>
+<p>The next stops will turn to consciousness and attention: the foundation of our basic agency and of our sense of being fully in the world and connected to it.</p>
 
 
 </section>
@@ -784,13 +743,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../maths appliquées/2. mesurer-la-proximite.html" class="pagination-link" aria-label="2. Mesurer la proximite">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2. Mesurer la proximite</span>
+      <a href="../metacrisis/1.html" class="pagination-link" aria-label="1. All Is Fucked Up">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">1. All Is Fucked Up</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../maths appliquées/4. variables-aléatoires.html" class="pagination-link" aria-label="4. Variables aleatoires">
-        <span class="nav-page-text">4. Variables aleatoires</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../metacrisis/3.html" class="pagination-link" aria-label="3. Consciousness">
+        <span class="nav-page-text">3. Consciousness</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

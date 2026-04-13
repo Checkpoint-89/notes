@@ -2,18 +2,4 @@
 title: "Accueil"
 ---
 
-# Probabilités
-
-- [0000. Syllabus](probabilités/0000. syllabus.md)
-- [0100. Tribus et espaces mesurables](probabilités/0100.%20tribus-et-espaces-mesurables.md)
-- [0110. Lemme de factorisation de Doob](probabilités/0110.%20lemme-de-factorisation-doob.md)
-- [0120. Nombres transfinis et ordinaux](probabilités/0120.%20nombres-transfinis-et-ordinaux.md)
-- [0121. Strictité de la hiérarchie borélienne](probabilités/0121.%20strictité-de-la-hiérarchie-borélienne.md)
-- [0200. Mesures et probabilités](probabilités/0200.mesures-et-probabilités.md)
-
-## Maths appliquées
-
-- [1. Representation geometrie et resolution](maths appliquées/1.%20representation-geometrie-et-resolution.md)
-- [2. Mesurer la proximite](maths appliquées/2.%20mesurer-la-proximite.md)
-- [3. Projection orthogonale et produit scalaire](maths appliquées/3.%20projection-orthogonale-et-produit-scalaire.md)
-- [4. Variables aleatoires](maths appliquées/4.%20variables-aléatoires.md)
+Mes notes sur des sujets divers.
