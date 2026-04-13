@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>mesurer-la-proximite – Notes</title>
+<title>representation-geometrie-et-resolution – chekpoint-89</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../notes/3. projection-orthogonale-et-produit-scalaire.html" rel="next">
-<link href="../notes/1. representation-geometrie-et-resolution.html" rel="prev">
+<link href="../maths appliquées/2. mesurer-la-proximite.html" rel="next">
+<link href="../probabilités/0200.mesures-et-probabilités.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Notes</span>
+    <span class="navbar-title">chekpoint-89</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Accueil</span></a>
+<span class="menu-text">Mes notes</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -108,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1. representation-geometrie-et-resolution.html">Notes</a></li><li class="breadcrumb-item"><a href="../notes/2. mesurer-la-proximite.html">2. Mesurer la proximite</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../maths appliquées/1. representation-geometrie-et-resolution.html">Maths appliquées</a></li><li class="breadcrumb-item"><a href="../maths appliquées/1. representation-geometrie-et-resolution.html">1. Representation geometrie et resolution</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -178,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Notes</span></a>
+ <span class="menu-text">Maths appliquées</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -186,25 +186,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
+  <a href="../maths appliquées/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">1. Representation geometrie et resolution</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/2. mesurer-la-proximite.html" class="sidebar-item-text sidebar-link active">
+  <a href="../maths appliquées/2. mesurer-la-proximite.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2. Mesurer la proximite</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
+  <a href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3. Projection orthogonale et produit scalaire</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link">
+  <a href="../maths appliquées/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">4. Variables aleatoires</span></a>
   </div>
 </li>
@@ -220,33 +220,117 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mesurer-la-proximité-de-points-dans-un-espace" id="toc-mesurer-la-proximité-de-points-dans-un-espace" class="nav-link active" data-scroll-target="#mesurer-la-proximité-de-points-dans-un-espace"><span class="header-section-number">1</span> Mesurer la proximité de points dans un espace</a>
-  <ul class="collapse">
-  <li><a href="#pourquoi-mesurer-sur-un-ensemble" id="toc-pourquoi-mesurer-sur-un-ensemble" class="nav-link" data-scroll-target="#pourquoi-mesurer-sur-un-ensemble"><span class="header-section-number">1.1</span> Pourquoi mesurer sur un ensemble</a></li>
+  <li><a href="#représentation-géométrie-et-résolution" id="toc-représentation-géométrie-et-résolution" class="nav-link active" data-scroll-target="#représentation-géométrie-et-résolution">Représentation, géométrie et résolution</a>
+  <ul>
+  <li><a href="#représentation" id="toc-représentation" class="nav-link" data-scroll-target="#représentation">1) Représentation</a></li>
+  <li><a href="#géométrie-du-problème" id="toc-géométrie-du-problème" class="nav-link" data-scroll-target="#géométrie-du-problème">2) Géométrie du problème</a></li>
+  <li><a href="#méthodes-de-résolution" id="toc-méthodes-de-résolution" class="nav-link" data-scroll-target="#méthodes-de-résolution">3) Méthodes de résolution</a></li>
+  <li><a href="#résumé" id="toc-résumé" class="nav-link" data-scroll-target="#résumé">Résumé</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1. representation-geometrie-et-resolution.html">Notes</a></li><li class="breadcrumb-item"><a href="../notes/2. mesurer-la-proximite.html">2. Mesurer la proximite</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../maths appliquées/1. representation-geometrie-et-resolution.html">Maths appliquées</a></li><li class="breadcrumb-item"><a href="../maths appliquées/1. representation-geometrie-et-resolution.html">1. Representation geometrie et resolution</a></li></ol></nav></header>
 
 
 
 
-<section id="mesurer-la-proximité-de-points-dans-un-espace" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Mesurer la proximité de points dans un espace</h1>
-<section id="pourquoi-mesurer-sur-un-ensemble" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="pourquoi-mesurer-sur-un-ensemble"><span class="header-section-number">1.1</span> Pourquoi mesurer sur un ensemble</h2>
-<p>Pour parler de proximité entre les éléments d’un ensemble, il faut le munir d’une façon de mesurer les écarts. Ce choix impose une géométrie à l’espace — la forme des boules, la régularité des courbes, les opérations isométriques. Avant même de poser un problème d’optimisation, la mesure choisie détermine ce qui est proche, ce qui est simple, et quels outils mathématiques sont disponibles : peut-on seulement parler de voisinage, ou aussi de taille, de direction, d’angle ?</p>
-<p>Il existe trois niveaux de mesure, du plus simple au plus riche :</p>
+<section id="représentation-géométrie-et-résolution" class="level1">
+<h1>Représentation, géométrie et résolution</h1>
+<p>Beaucoup de problèmes en mathématiques appliquées, en statistique, en optimisation ou en apprentissage ne consistent pas seulement à “chercher une solution”. Ils consistent à trouver un <strong>bon compromis</strong> entre trois choix :</p>
+<ol type="1">
+<li>la <strong>représentation</strong> des données du problème,</li>
+<li>la <strong>géométrie</strong> dans laquelle on le formule,</li>
+<li>les <strong>méthodes</strong> utilisées pour le résoudre.</li>
+</ol>
+<p>Ces trois choix se contraignent mutuellement. Une représentation rend certaines géométries naturelles ; une géométrie favorise certaines méthodes ; une contrainte algorithmique peut pousser à changer la représentation elle-même.</p>
+<p><strong>En une ligne</strong> : on cherche une représentation qui rende le problème plus simple, une géométrie adaptée au type de solution cherché, des méthodes efficaces dans cette représentation et cette géométrie.</p>
+<hr>
+<section id="représentation" class="level2">
+<h2 class="anchored" data-anchor-id="représentation">1) Représentation</h2>
+<p>Premier choix : <strong>dans quel espace pose-t-on le problème ?</strong></p>
+<p>La représentation fixe le terrain de travail : les variables, les coordonnées, la dimension, les invariances, les relations qu’on choisit de rendre simples ou visibles.</p>
 <ul>
-<li><strong>Distance</strong> : associe un nombre positif à chaque paire d’éléments. On peut dire “proche” ou “loin”, rien de plus. Aucune structure algébrique n’est requise — les éléments n’ont pas besoin d’être des vecteurs. La distance suffit déjà à donner une forme à l’espace : elle détermine les boules, les voisinages, et donc la topologie.</li>
-<li><strong>Norme</strong> : mesure la taille d’un vecteur, de façon compatible avec l’algèbre linéaire. Dilater par λ multiplie la taille par |λ|. La norme induit une distance compatible avec la structure vectorielle, en particulier invariante par translation : d(x+z, y+z) = ‖x−y‖. On peut poser le problème du plus proche point dans un sous-espace, mais selon la norme choisie, le plus proche point peut ne pas être unique, et même quand il l’est, l’application qui à chaque point associe son plus proche point n’est en général pas linéaire.</li>
-<li><strong>Produit scalaire</strong> : mesure l’angle entre deux vecteurs et définit l’orthogonalité. La norme qui en découle rend la boule unité quadratique — sa frontière est décrite par ⟨x,x⟩ = 1, une équation du second degré en x (en dimension finie, ⟨x,y⟩ = xᵀMy et la boule est une ellipsoïde). C’est le seul cadre où, pour tout sous-espace fermé, le plus proche point est à la fois unique et où l’application qui le calcule — la projection orthogonale — est linéaire (voir <em>Quand est-ce qu’une projection donne le plus proche point ?</em>).</li>
+<li><strong>Changement de variables</strong> : reformule le problème dans un espace plus commode.</li>
+<li><strong>PCA</strong> : projection linéaire, réduit la dimension et met en avant les directions dominantes.</li>
+<li><strong>Kernels</strong> : plongement implicite dans un espace où certaines séparations deviennent linéaires.</li>
+<li><strong>Deep learning</strong> : représentation apprise à partir des données.</li>
 </ul>
-<p><strong>Quand est-ce qu’une projection donne le plus proche point ?</strong> <strong>Projeter</strong> sur V parallèlement à un supplémentaire W, c’est envoyer chaque point sur V en suivant la direction de W — la même pour tous les points. Trouver le <strong>plus proche point</strong>, c’est gonfler la boule unité autour de x jusqu’à ce qu’elle touche V : le point de contact est x₀, et la direction x → x₀ est celle qui réalise le minimum.</p>
-<p>Si la boule n’est pas quadratique (sa frontière n’est pas un niveau de forme quadratique ⟨x,x⟩ = 1), la direction x → x₀ tourne de façon non linéaire quand x se déplace. Un supplémentaire fixe impose une direction unique : il ne peut pas suivre. Si la boule est quadratique — définie par un produit scalaire ⟨·,·⟩ — la direction vers le plus proche point est toujours perpendiculaire à V au sens de ⟨·,·⟩, quel que soit x. Le supplémentaire V⊥ est fixe, et la projection correspondante est linéaire.</p>
-<p><strong>Exiger que projection et plus proche point coïncident pour tout sous-espace fermé, c’est exiger que la boule soit quadratique — c’est-à-dire que la norme provienne d’un produit scalaire.</strong> Cette propriété caractérise les espaces euclidiens (en dimension finie) et hilbertiens (en dimension infinie).</p>
+<p>Une bonne représentation ne résout pas encore le problème, mais elle peut le rendre plus simple, plus régulier, plus séparable, plus parcimonieux, ou plus stable numériquement.</p>
+<hr>
+</section>
+<section id="géométrie-du-problème" class="level2">
+<h2 class="anchored" data-anchor-id="géométrie-du-problème">2) Géométrie du problème</h2>
+<p>Une fois le problème représenté dans un espace, il faut définir ce que signifie <strong>bien le résoudre</strong> dans cet espace.</p>
+<p>C’est le rôle de la géométrie du problème. Elle fixe les notions pertinentes : proximité, taille, régularité, séparation, coût, contrainte, admissibilité. Autrement dit, elle donne au problème sa forme mathématique effective.</p>
+<p>Cette géométrie peut apparaître de plusieurs façons :</p>
+<ul>
+<li>par une <strong>distance</strong> ou une <strong>norme</strong>, qui dit ce que signifie “être proche” ou “être petit” ;</li>
+<li>par une <strong>fonction de coût</strong>, qui donne une hauteur à chaque solution possible ;</li>
+<li>par une <strong>contrainte</strong>, qui restreint l’ensemble des solutions admissibles ;</li>
+<li>par une <strong>régularisation</strong>, qui privilégie certaines solutions plutôt que d’autres.</li>
+</ul>
+<p>Quelques exemples :</p>
+<ul>
+<li>En <strong>clustering</strong>, la distance choisie détermine ce qu’on considère comme un groupe.</li>
+<li>En <strong>k-NN</strong>, la métrique définit les voisins pertinents.</li>
+<li>En <strong>régression</strong>, la fonction de coût définit ce qu’est une bonne approximation.</li>
+<li>En <strong>Ridge</strong> ou <strong>Lasso</strong>, la pénalisation ajoute une structure géométrique supplémentaire : elle favorise soit des coefficients petits, soit des solutions parcimonieuses.</li>
+</ul>
+<p>La géométrie du problème détermine donc non seulement où se trouvent les bonnes solutions, mais aussi ce que “bonne solution” veut dire.</p>
+<hr>
+</section>
+<section id="méthodes-de-résolution" class="level2">
+<h2 class="anchored" data-anchor-id="méthodes-de-résolution">3) Méthodes de résolution</h2>
+<p>Une fois le problème représenté et géométriquement formulé, il faut encore le résoudre effectivement.</p>
+<p>Chaque méthode de résolution fait des hypothèses sur la structure du problème et exploite certaines propriétés géométriques plutôt que d’autres. Le choix de la méthode détermine ce qu’on peut obtenir en pratique : vitesse, stabilité, sensibilité aux mauvaises échelles, qualité de l’approximation, possibilité même de calculer la solution.</p>
+<ul>
+<li><strong>Gradient classique</strong> : suppose une géométrie euclidienne — toutes les directions sont traitées de la même façon.</li>
+<li><strong>Préconditionnement / Newton</strong> : exploite la courbure locale pour corriger les directions mal conditionnées.</li>
+<li><strong>Gradient naturel</strong> : exploite la géométrie statistique du modèle plutôt que celle des coordonnées.</li>
+<li><strong>k-means</strong> : suppose une géométrie euclidienne (centroïdes = moyennes, cellules de Voronoï). Changer la distance change l’algorithme entier.</li>
+<li><strong>k-medoids</strong> : ne suppose pas de structure euclidienne — fonctionne avec une distance quelconque.</li>
+<li><strong>DBSCAN</strong> : exploite la notion de voisinage induite par la métrique. Changer la métrique change les clusters.</li>
+<li><strong>Clustering hiérarchique</strong> : dépend du couple distance + critère de liaison.</li>
+</ul>
+<p>Dans tous les cas, la méthode impose des contraintes sur la géométrie du problème qu’elle est capable d’exploiter. Un décalage entre la géométrie du problème et les hypothèses de la méthode se paie en performance ou en qualité de solution.</p>
+<hr>
+</section>
+<section id="résumé" class="level2">
+<h2 class="anchored" data-anchor-id="résumé">Résumé</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Choix</th>
+<th>Question</th>
+<th>Détermine</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Représentation</strong></td>
+<td>Dans quel espace pose-t-on le problème ?</td>
+<td>Le terrain de travail</td>
+</tr>
+<tr class="even">
+<td><strong>Géométrie du problème</strong></td>
+<td>Que signifie bien résoudre le problème dans cet espace ?</td>
+<td>La forme mathématique du problème</td>
+</tr>
+<tr class="odd">
+<td><strong>Méthodes de résolution</strong></td>
+<td>Comment trouver effectivement une solution ?</td>
+<td>La dynamique et le coût du calcul</td>
+</tr>
+</tbody>
+</table>
+<p><strong>À retenir</strong> : résoudre un problème, ce n’est pas seulement chercher une solution dans un espace donné. C’est trouver un bon compromis entre une représentation des données, une géométrie du problème et des méthodes de résolution adaptées.</p>
 
 
 </section>
@@ -655,13 +739,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../notes/1. representation-geometrie-et-resolution.html" class="pagination-link" aria-label="1. Representation geometrie et resolution">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">1. Representation geometrie et resolution</span>
+      <a href="../probabilités/0200.mesures-et-probabilités.html" class="pagination-link" aria-label="0200. Mesures et probabilités">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">0200. Mesures et probabilités</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../notes/3. projection-orthogonale-et-produit-scalaire.html" class="pagination-link" aria-label="3. Projection orthogonale et produit scalaire">
-        <span class="nav-page-text">3. Projection orthogonale et produit scalaire</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../maths appliquées/2. mesurer-la-proximite.html" class="pagination-link" aria-label="2. Mesurer la proximite">
+        <span class="nav-page-text">2. Mesurer la proximite</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

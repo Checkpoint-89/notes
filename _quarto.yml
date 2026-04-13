@@ -3,20 +3,18 @@ project:
   output-dir: _site
   render:
     - "index.qmd"
-    - "notes/*.md"
+    - "maths appliquées/*.md"
     - "probabilités/*.md"
-    - "probabilités/*.qmd"
     - "!pronostics/"
-    - "!probabilités/0100. tribus-et-espaces-mesurables.md"
 
 website:
-  title: "Notes"
+  title: "chekpoint-89"
   page-navigation: true
   bread-crumbs: true
   navbar:
     left:
       - href: index.qmd
-        text: Accueil
+        text: Mes notes
   sidebar:
     style: docked
     search: true
@@ -25,7 +23,7 @@ website:
         contents:
           - href: probabilités/0000. syllabus.md
             text: Syllabus
-          - href: probabilités/0100. tribus-et-espaces-mesurables.qmd
+          - href: probabilités/0100. tribus-et-espaces-mesurables.md
             text: "0100. Tribus et espaces mesurables"
           - href: probabilités/0110. lemme-de-factorisation-doob.md
             text: "0110. Lemme de factorisation de Doob"
@@ -35,20 +33,22 @@ website:
             text: "0121. Strictité de la hiérarchie borélienne"
           - href: probabilités/0200.mesures-et-probabilités.md
             text: "0200. Mesures et probabilités"
-      - section: "Notes"
+      - section: "Maths appliquées"
         contents:
-          - href: notes/1. representation-geometrie-et-resolution.md
+          - href: maths appliquées/1. representation-geometrie-et-resolution.md
             text: "1. Representation geometrie et resolution"
-          - href: notes/2. mesurer-la-proximite.md
+          - href: maths appliquées/2. mesurer-la-proximite.md
             text: "2. Mesurer la proximite"
-          - href: notes/3. projection-orthogonale-et-produit-scalaire.md
+          - href: maths appliquées/3. projection-orthogonale-et-produit-scalaire.md
             text: "3. Projection orthogonale et produit scalaire"
-          - href: notes/4. variables-aléatoires.md
+          - href: maths appliquées/4. variables-aléatoires.md
             text: "4. Variables aleatoires"
 
 format:
   html:
+    from: markdown+hard_line_breaks
     toc: true
-    number-sections: true
+    toc-depth: 4
+    number-sections: false
     html-math-method: mathjax
     theme: cosmo

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>mesures-et-probabilités – Notes</title>
+<title>mesures-et-probabilités – chekpoint-89</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,7 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../notes/1. representation-geometrie-et-resolution.html" rel="next">
+<link href="../maths appliquées/1. representation-geometrie-et-resolution.html" rel="next">
 <link href="../probabilités/0121. strictité-de-la-hiérarchie-borélienne.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -113,7 +113,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Notes</span>
+    <span class="navbar-title">chekpoint-89</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -124,7 +124,7 @@ window.Quarto = {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Accueil</span></a>
+<span class="menu-text">Mes notes</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -207,7 +207,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Notes</span></a>
+ <span class="menu-text">Maths appliquées</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -215,25 +215,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
+  <a href="../maths appliquées/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">1. Representation geometrie et resolution</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/2. mesurer-la-proximite.html" class="sidebar-item-text sidebar-link">
+  <a href="../maths appliquées/2. mesurer-la-proximite.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2. Mesurer la proximite</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
+  <a href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3. Projection orthogonale et produit scalaire</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link">
+  <a href="../maths appliquées/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">4. Variables aleatoires</span></a>
   </div>
 </li>
@@ -249,15 +249,48 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#probabilités" id="toc-probabilités" class="nav-link active" data-scroll-target="#probabilités"><span class="header-section-number">1</span> Probabilités</a>
+  <li><a href="#probabilités" id="toc-probabilités" class="nav-link active" data-scroll-target="#probabilités">Probabilités</a>
+  <ul>
+  <li><a href="#ii.-mesures-et-probabilités" id="toc-ii.-mesures-et-probabilités" class="nav-link" data-scroll-target="#ii.-mesures-et-probabilités">II. Mesures et probabilités</a>
   <ul class="collapse">
-  <li><a href="#ii.-mesures-et-probabilités" id="toc-ii.-mesures-et-probabilités" class="nav-link" data-scroll-target="#ii.-mesures-et-probabilités"><span class="header-section-number">1.1</span> II. Mesures et probabilités</a>
+  <li><a href="#mesures-positives-définition-et-propriétés" id="toc-mesures-positives-définition-et-propriétés" class="nav-link" data-scroll-target="#mesures-positives-définition-et-propriétés">1. Mesures positives : définition et propriétés</a>
   <ul class="collapse">
-  <li><a href="#mesures-positives-définition-et-propriétés" id="toc-mesures-positives-définition-et-propriétés" class="nav-link" data-scroll-target="#mesures-positives-définition-et-propriétés"><span class="header-section-number">1.1.1</span> 1. Mesures positives : définition et propriétés</a></li>
-  <li><a href="#mesure-de-lebesgue-sur-ℝ" id="toc-mesure-de-lebesgue-sur-ℝ" class="nav-link" data-scroll-target="#mesure-de-lebesgue-sur-ℝ"><span class="header-section-number">1.1.2</span> 2. Mesure de Lebesgue sur ℝ</a></li>
-  <li><a href="#probabilités-axiomes-de-kolmogorov" id="toc-probabilités-axiomes-de-kolmogorov" class="nav-link" data-scroll-target="#probabilités-axiomes-de-kolmogorov"><span class="header-section-number">1.1.3</span> 3. Probabilités : axiomes de Kolmogorov</a></li>
-  <li><a href="#densité-et-mesure-absolument-continue" id="toc-densité-et-mesure-absolument-continue" class="nav-link" data-scroll-target="#densité-et-mesure-absolument-continue"><span class="header-section-number">1.1.4</span> 4. Densité et mesure absolument continue</a></li>
-  <li><a href="#mesures-produit-et-théorème-de-fubini" id="toc-mesures-produit-et-théorème-de-fubini" class="nav-link" data-scroll-target="#mesures-produit-et-théorème-de-fubini"><span class="header-section-number">1.1.5</span> 5. Mesures produit et théorème de Fubini</a></li>
+  <li><a href="#définition" id="toc-définition" class="nav-link" data-scroll-target="#définition">Définition</a></li>
+  <li><a href="#vocabulaire" id="toc-vocabulaire" class="nav-link" data-scroll-target="#vocabulaire">Vocabulaire</a></li>
+  <li><a href="#propriétés-fondamentales" id="toc-propriétés-fondamentales" class="nav-link" data-scroll-target="#propriétés-fondamentales">Propriétés fondamentales</a></li>
+  <li><a href="#exemples-de-mesures" id="toc-exemples-de-mesures" class="nav-link" data-scroll-target="#exemples-de-mesures">Exemples de mesures</a></li>
+  </ul></li>
+  <li><a href="#mesure-de-lebesgue-sur-ℝ" id="toc-mesure-de-lebesgue-sur-ℝ" class="nav-link" data-scroll-target="#mesure-de-lebesgue-sur-ℝ">2. Mesure de Lebesgue sur ℝ</a>
+  <ul class="collapse">
+  <li><a href="#objectif" id="toc-objectif" class="nav-link" data-scroll-target="#objectif">Objectif</a></li>
+  <li><a href="#le-théorème-de-carathéodory-idée" id="toc-le-théorème-de-carathéodory-idée" class="nav-link" data-scroll-target="#le-théorème-de-carathéodory-idée">Le théorème de Carathéodory (idée)</a></li>
+  <li><a href="#énoncé" id="toc-énoncé" class="nav-link" data-scroll-target="#énoncé">Énoncé</a></li>
+  <li><a href="#tribu-de-lebesgue-vs-tribu-borélienne" id="toc-tribu-de-lebesgue-vs-tribu-borélienne" class="nav-link" data-scroll-target="#tribu-de-lebesgue-vs-tribu-borélienne">Tribu de Lebesgue vs tribu borélienne</a></li>
+  <li><a href="#propriétés-de-la-mesure-de-lebesgue" id="toc-propriétés-de-la-mesure-de-lebesgue" class="nav-link" data-scroll-target="#propriétés-de-la-mesure-de-lebesgue">Propriétés de la mesure de Lebesgue</a></li>
+  <li><a href="#ensembles-de-mesure-nulle-et-ensembles-négligeables" id="toc-ensembles-de-mesure-nulle-et-ensembles-négligeables" class="nav-link" data-scroll-target="#ensembles-de-mesure-nulle-et-ensembles-négligeables">Ensembles de mesure nulle et ensembles négligeables</a></li>
+  </ul></li>
+  <li><a href="#probabilités-axiomes-de-kolmogorov" id="toc-probabilités-axiomes-de-kolmogorov" class="nav-link" data-scroll-target="#probabilités-axiomes-de-kolmogorov">3. Probabilités : axiomes de Kolmogorov</a>
+  <ul class="collapse">
+  <li><a href="#dune-mesure-à-une-probabilité" id="toc-dune-mesure-à-une-probabilité" class="nav-link" data-scroll-target="#dune-mesure-à-une-probabilité">D’une mesure à une probabilité</a></li>
+  <li><a href="#les-axiomes-de-kolmogorov" id="toc-les-axiomes-de-kolmogorov" class="nav-link" data-scroll-target="#les-axiomes-de-kolmogorov">Les axiomes de Kolmogorov</a></li>
+  <li><a href="#propriétés-élémentaires" id="toc-propriétés-élémentaires" class="nav-link" data-scroll-target="#propriétés-élémentaires">Propriétés élémentaires</a></li>
+  <li><a href="#exemples-despaces-probabilisés" id="toc-exemples-despaces-probabilisés" class="nav-link" data-scroll-target="#exemples-despaces-probabilisés">Exemples d’espaces probabilisés</a></li>
+  <li><a href="#probabilité-conditionnelle" id="toc-probabilité-conditionnelle" class="nav-link" data-scroll-target="#probabilité-conditionnelle">Probabilité conditionnelle</a></li>
+  </ul></li>
+  <li><a href="#densité-et-mesure-absolument-continue" id="toc-densité-et-mesure-absolument-continue" class="nav-link" data-scroll-target="#densité-et-mesure-absolument-continue">4. Densité et mesure absolument continue</a>
+  <ul class="collapse">
+  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation">Motivation</a></li>
+  <li><a href="#mesure-absolument-continue" id="toc-mesure-absolument-continue" class="nav-link" data-scroll-target="#mesure-absolument-continue">Mesure absolument continue</a></li>
+  <li><a href="#le-théorème-de-radon-nikodym" id="toc-le-théorème-de-radon-nikodym" class="nav-link" data-scroll-target="#le-théorème-de-radon-nikodym">Le théorème de Radon-Nikodym</a></li>
+  <li><a href="#mesures-singulières" id="toc-mesures-singulières" class="nav-link" data-scroll-target="#mesures-singulières">Mesures singulières</a></li>
+  </ul></li>
+  <li><a href="#mesures-produit-et-théorème-de-fubini" id="toc-mesures-produit-et-théorème-de-fubini" class="nav-link" data-scroll-target="#mesures-produit-et-théorème-de-fubini">5. Mesures produit et théorème de Fubini</a>
+  <ul class="collapse">
+  <li><a href="#motivation-1" id="toc-motivation-1" class="nav-link" data-scroll-target="#motivation-1">Motivation</a></li>
+  <li><a href="#tribu-produit" id="toc-tribu-produit" class="nav-link" data-scroll-target="#tribu-produit">Tribu produit</a></li>
+  <li><a href="#mesure-produit" id="toc-mesure-produit" class="nav-link" data-scroll-target="#mesure-produit">Mesure produit</a></li>
+  <li><a href="#le-théorème-de-fubini-tonelli" id="toc-le-théorème-de-fubini-tonelli" class="nav-link" data-scroll-target="#le-théorème-de-fubini-tonelli">Le théorème de Fubini-Tonelli</a></li>
+  </ul></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -269,10 +302,10 @@ window.Quarto = {
 
 
 
-<section id="probabilités" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Probabilités</h1>
-<section id="ii.-mesures-et-probabilités" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="ii.-mesures-et-probabilités"><span class="header-section-number">1.1</span> II. Mesures et probabilités</h2>
+<section id="probabilités" class="level1">
+<h1>Probabilités</h1>
+<section id="ii.-mesures-et-probabilités" class="level2">
+<h2 class="anchored" data-anchor-id="ii.-mesures-et-probabilités">II. Mesures et probabilités</h2>
 <p><strong>Vue d’ensemble.</strong> Ce chapitre formalise la notion de mesure, esquissée au chapitre I, en cinq étapes.</p>
 <ol type="1">
 <li>On définit rigoureusement ce qu’est une mesure positive sur un espace mesurable <span class="math inline">\((\Omega, \mathcal A)\)</span> : une application <span class="math inline">\(m : \mathcal A \to [0,+\infty]\)</span> vérifiant <span class="math inline">\(m(\emptyset) = 0\)</span> et la σ-additivité. On en déduit les propriétés de base — monotonie, σ-sous-additivité, continuité monotone — qui sont les outils de travail quotidiens du calcul des mesures.</li>
@@ -281,10 +314,10 @@ window.Quarto = {
 <li>Étant donné deux mesures <span class="math inline">\(\mu\)</span> et <span class="math inline">\(\nu\)</span> sur le même espace, on peut se demander si <span class="math inline">\(\mu\)</span> est « exprimable » en fonction de <span class="math inline">\(\nu\)</span>. La continuité absolue (<span class="math inline">\(\mu \ll \nu\)</span>) et le théorème de Radon-Nikodym formalisent cette idée : sous des hypothèses raisonnables, <span class="math inline">\(\mu\)</span> s’écrit comme l’intégrale d’une densité par rapport à <span class="math inline">\(\nu\)</span>.</li>
 <li>Pour travailler sur des espaces produits <span class="math inline">\(\Omega_1 \times \Omega_2\)</span>, on construit la mesure produit, qui permet de mesurer des « pavés » <span class="math inline">\(A_1 \times A_2\)</span> par le produit <span class="math inline">\(m_1(A_1) \cdot m_2(A_2)\)</span>. Le théorème de Fubini-Tonelli permet alors de calculer les intégrales sur un espace produit par itération.</li>
 </ol>
-<section id="mesures-positives-définition-et-propriétés" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="mesures-positives-définition-et-propriétés"><span class="header-section-number">1.1.1</span> 1. Mesures positives : définition et propriétés</h3>
-<section id="définition" class="level4" data-number="1.1.1.1">
-<h4 data-number="1.1.1.1" class="anchored" data-anchor-id="définition"><span class="header-section-number">1.1.1.1</span> Définition</h4>
+<section id="mesures-positives-définition-et-propriétés" class="level3">
+<h3 class="anchored" data-anchor-id="mesures-positives-définition-et-propriétés">1. Mesures positives : définition et propriétés</h3>
+<section id="définition" class="level4">
+<h4 class="anchored" data-anchor-id="définition">Définition</h4>
 <p>Le chapitre I a introduit la notion d’espace mesurable <span class="math inline">\((\Omega, \mathcal A)\)</span> et motivé la σ-additivité. On peut maintenant formaliser.</p>
 <p><strong>Définition.</strong> Soit <span class="math inline">\((\Omega, \mathcal A)\)</span> un espace mesurable. Une <strong>mesure positive</strong> (ou simplement <strong>mesure</strong>) sur <span class="math inline">\((\Omega, \mathcal A)\)</span> est une application</p>
 <p><span class="math display">\[m : \mathcal A \to [0, +\infty]\]</span></p>
@@ -297,16 +330,16 @@ window.Quarto = {
 <p>Le triplet <span class="math inline">\((\Omega, \mathcal A, m)\)</span> s’appelle un <strong>espace mesuré</strong>.</p>
 <p><em>Remarque.</em> La σ-additivité entraîne l’additivité finie (poser <span class="math inline">\(A_n = \emptyset\)</span> pour <span class="math inline">\(n\)</span> assez grand). La réciproque est fausse, comme on l’a vu au chapitre I avec l’exemple des parties finies ou cofinies de <span class="math inline">\(\mathbb N\)</span>.</p>
 </section>
-<section id="vocabulaire" class="level4" data-number="1.1.1.2">
-<h4 data-number="1.1.1.2" class="anchored" data-anchor-id="vocabulaire"><span class="header-section-number">1.1.1.2</span> Vocabulaire</h4>
+<section id="vocabulaire" class="level4">
+<h4 class="anchored" data-anchor-id="vocabulaire">Vocabulaire</h4>
 <ul>
 <li><span class="math inline">\(m\)</span> est <strong>finie</strong> si <span class="math inline">\(m(\Omega) &lt; \infty\)</span>.</li>
 <li><span class="math inline">\(m\)</span> est <strong>σ-finie</strong> s’il existe une suite <span class="math inline">\((E_n)\)</span> d’éléments de <span class="math inline">\(\mathcal A\)</span> telle que <span class="math inline">\(\Omega = \bigcup_n E_n\)</span> et <span class="math inline">\(m(E_n) &lt; \infty\)</span> pour tout <span class="math inline">\(n\)</span>. Autrement dit, on peut découper <span class="math inline">\(\Omega\)</span> en morceaux de mesure finie. C’est une hypothèse technique fréquente, vérifiée dans la plupart des situations concrètes.</li>
 </ul>
 <p><em>Exemples.</em> La mesure de Lebesgue sur <span class="math inline">\((\mathbb R, \mathcal B(\mathbb R))\)</span> est σ-finie (prendre <span class="math inline">\(E_n = [-n, n]\)</span>) mais pas finie. Toute probabilité est finie (donc σ-finie). La mesure de comptage sur <span class="math inline">\((\mathbb R, \mathcal P(\mathbb R))\)</span> n’est pas σ-finie : tout ensemble de mesure finie est fini, et <span class="math inline">\(\mathbb R\)</span> n’est pas union dénombrable d’ensembles finis.</p>
 </section>
-<section id="propriétés-fondamentales" class="level4" data-number="1.1.1.3">
-<h4 data-number="1.1.1.3" class="anchored" data-anchor-id="propriétés-fondamentales"><span class="header-section-number">1.1.1.3</span> Propriétés fondamentales</h4>
+<section id="propriétés-fondamentales" class="level4">
+<h4 class="anchored" data-anchor-id="propriétés-fondamentales">Propriétés fondamentales</h4>
 <p>Les propriétés suivantes découlent directement de la définition. Soit <span class="math inline">\(m\)</span> une mesure sur <span class="math inline">\((\Omega, \mathcal A)\)</span>.</p>
 <p><strong>1. Monotonie.</strong> Si <span class="math inline">\(A \subset B\)</span>, alors <span class="math inline">\(m(A) \leq m(B)\)</span>.</p>
 <p><em>Preuve.</em> <span class="math inline">\(B = A \cup (B \setminus A)\)</span>, union disjointe. Par additivité, <span class="math inline">\(m(B) = m(A) + m(B \setminus A) \geq m(A)\)</span>. ∎</p>
@@ -326,8 +359,8 @@ window.Quarto = {
 <p><em>Preuve.</em> On applique la continuité croissante aux complémentaires relatifs <span class="math inline">\(A_1 \setminus A_n \uparrow A_1 \setminus A\)</span>. On obtient <span class="math inline">\(m(A_1 \setminus A_n) \to m(A_1 \setminus A)\)</span>, soit <span class="math inline">\(m(A_1) - m(A_n) \to m(A_1) - m(A)\)</span>. La soustraction est licite car <span class="math inline">\(m(A_1) &lt; \infty\)</span>. ∎</p>
 <p><em>Remarque.</em> L’hypothèse <span class="math inline">\(m(A_1) &lt; \infty\)</span> est indispensable : on a vu au chapitre I que sans elle, on peut avoir <span class="math inline">\(A_n \downarrow \emptyset\)</span> et <span class="math inline">\(m(A_n) = 1\)</span> pour tout <span class="math inline">\(n\)</span>.</p>
 </section>
-<section id="exemples-de-mesures" class="level4" data-number="1.1.1.4">
-<h4 data-number="1.1.1.4" class="anchored" data-anchor-id="exemples-de-mesures"><span class="header-section-number">1.1.1.4</span> Exemples de mesures</h4>
+<section id="exemples-de-mesures" class="level4">
+<h4 class="anchored" data-anchor-id="exemples-de-mesures">Exemples de mesures</h4>
 <p>Des mesures ont déjà été rencontrées au chapitre I. On les rassemble ici, avec quelques compléments.</p>
 <ul>
 <li><p><strong>Mesure de Dirac</strong> <span class="math inline">\(\delta_{x_0}\)</span> en un point <span class="math inline">\(x_0 \in \Omega\)</span> : <span class="math inline">\(\delta_{x_0}(A) = \mathbf{1}_{x_0 \in A}\)</span>. C’est une mesure finie sur <span class="math inline">\((\Omega, \mathcal A)\)</span> pour toute tribu <span class="math inline">\(\mathcal A\)</span> telle que <span class="math inline">\(\{x_0\} \in \mathcal A\)</span>. On a <span class="math inline">\(\delta_{x_0}(\Omega) = 1\)</span>, c’est donc une probabilité.</p></li>
@@ -338,10 +371,10 @@ window.Quarto = {
 <p><em>Exemple.</em> Toute combinaison <span class="math inline">\(\sum_{i} \alpha_i \delta_{x_i}\)</span> avec <span class="math inline">\(\alpha_i \geq 0\)</span> est une mesure. Si de plus <span class="math inline">\(\sum_i \alpha_i = 1\)</span>, c’est une probabilité. On retrouve ainsi les lois discrètes.</p>
 </section>
 </section>
-<section id="mesure-de-lebesgue-sur-ℝ" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" class="anchored" data-anchor-id="mesure-de-lebesgue-sur-ℝ"><span class="header-section-number">1.1.2</span> 2. Mesure de Lebesgue sur ℝ</h3>
-<section id="objectif" class="level4" data-number="1.1.2.1">
-<h4 data-number="1.1.2.1" class="anchored" data-anchor-id="objectif"><span class="header-section-number">1.1.2.1</span> Objectif</h4>
+<section id="mesure-de-lebesgue-sur-ℝ" class="level3">
+<h3 class="anchored" data-anchor-id="mesure-de-lebesgue-sur-ℝ">2. Mesure de Lebesgue sur ℝ</h3>
+<section id="objectif" class="level4">
+<h4 class="anchored" data-anchor-id="objectif">Objectif</h4>
 <p>L’objectif est de construire la mesure qui résout le problème de la mesure posé au chapitre I — dans le cadre restreint de la tribu borélienne. Concrètement, on cherche une mesure <span class="math inline">\(\lambda\)</span> sur <span class="math inline">\((\mathbb R, \mathcal B(\mathbb R))\)</span> qui :</p>
 <ul>
 <li>prolonge la longueur : <span class="math inline">\(\lambda([a,b]) = b - a\)</span> ;</li>
@@ -350,51 +383,51 @@ window.Quarto = {
 </ul>
 <p>Le théorème de Vitali nous dit que ces trois propriétés sont incompatibles sur <span class="math inline">\(\mathcal P(\mathbb R)\)</span>, mais le passage à <span class="math inline">\(\mathcal B(\mathbb R)\)</span> rend la construction possible.</p>
 </section>
-<section id="le-théorème-de-carathéodory-idée" class="level4" data-number="1.1.2.2">
-<h4 data-number="1.1.2.2" class="anchored" data-anchor-id="le-théorème-de-carathéodory-idée"><span class="header-section-number">1.1.2.2</span> Le théorème de Carathéodory (idée)</h4>
+<section id="le-théorème-de-carathéodory-idée" class="level4">
+<h4 class="anchored" data-anchor-id="le-théorème-de-carathéodory-idée">Le théorème de Carathéodory (idée)</h4>
 <p>La construction repose sur un résultat général : le <strong>théorème d’extension de Carathéodory</strong>. L’idée est la suivante.</p>
 <p>On part d’une « pré-mesure » définie sur une famille simple d’ensembles — ici, la longueur sur les intervalles. On l’étend d’abord en une <strong>mesure extérieure</strong> <span class="math inline">\(\lambda^*\)</span> définie sur toutes les parties de <span class="math inline">\(\mathbb R\)</span> :</p>
 <p><span class="math display">\[\lambda^*(A) = \inf \Bigl\{ \sum_{n=1}^{\infty} (b_n - a_n) : A \subset \bigcup_{n=1}^{\infty} (a_n, b_n) \Bigr\}\]</span></p>
 <p>On recouvre <span class="math inline">\(A\)</span> par des intervalles ouverts et on prend la borne inférieure des sommes des longueurs de ces recouvrements. Cette mesure extérieure est définie sur <span class="math inline">\(\mathcal P(\mathbb R)\)</span> tout entier, mais elle n’est pas σ-additive en général (seulement σ-sous-additive). Le théorème de Carathéodory identifie alors une σ-algèbre — la tribu de Lebesgue <span class="math inline">\(\mathcal L\)</span> — sur laquelle <span class="math inline">\(\lambda^*\)</span> est σ-additive. La restriction de <span class="math inline">\(\lambda^*\)</span> à <span class="math inline">\(\mathcal L\)</span> est la <strong>mesure de Lebesgue</strong>.</p>
 </section>
-<section id="énoncé" class="level4" data-number="1.1.2.3">
-<h4 data-number="1.1.2.3" class="anchored" data-anchor-id="énoncé"><span class="header-section-number">1.1.2.3</span> Énoncé</h4>
+<section id="énoncé" class="level4">
+<h4 class="anchored" data-anchor-id="énoncé">Énoncé</h4>
 <p><strong>Théorème (existence et unicité).</strong> Il existe une unique mesure <span class="math inline">\(\lambda\)</span> sur <span class="math inline">\((\mathbb R, \mathcal B(\mathbb R))\)</span> telle que <span class="math inline">\(\lambda([a,b]) = b - a\)</span> pour tout intervalle <span class="math inline">\([a,b]\)</span>.</p>
 <p>L’unicité vient du fait que les intervalles engendrent <span class="math inline">\(\mathcal B(\mathbb R)\)</span> et forment un système « suffisamment stable » (un π-système). Le lemme de classe monotone (ou le théorème d’unicité des mesures) garantit qu’une mesure σ-finie est entièrement déterminée par ses valeurs sur un π-système qui engendre la tribu.</p>
 </section>
-<section id="tribu-de-lebesgue-vs-tribu-borélienne" class="level4" data-number="1.1.2.4">
-<h4 data-number="1.1.2.4" class="anchored" data-anchor-id="tribu-de-lebesgue-vs-tribu-borélienne"><span class="header-section-number">1.1.2.4</span> Tribu de Lebesgue vs tribu borélienne</h4>
+<section id="tribu-de-lebesgue-vs-tribu-borélienne" class="level4">
+<h4 class="anchored" data-anchor-id="tribu-de-lebesgue-vs-tribu-borélienne">Tribu de Lebesgue vs tribu borélienne</h4>
 <p>La construction de Carathéodory produit en fait une tribu <span class="math inline">\(\mathcal L\)</span> plus grande que <span class="math inline">\(\mathcal B(\mathbb R)\)</span> :</p>
 <p><span class="math display">\[\mathcal B(\mathbb R) \subsetneq \mathcal L \subsetneq \mathcal P(\mathbb R).\]</span></p>
 <p>La tribu de Lebesgue <span class="math inline">\(\mathcal L\)</span> contient <span class="math inline">\(\mathcal B(\mathbb R)\)</span> et tous les sous-ensembles d’ensembles de mesure nulle (on dit qu’elle est <strong>complète</strong>). La tribu borélienne, elle, n’est pas complète.</p>
 <p><em>Exemple.</em> L’ensemble de Cantor <span class="math inline">\(C\)</span> est borélien (c’est un fermé) et vérifie <span class="math inline">\(\lambda(C) = 0\)</span>. Or <span class="math inline">\(C\)</span> a la puissance du continu : il contient autant de points que <span class="math inline">\(\mathbb R\)</span>. Tout sous-ensemble de <span class="math inline">\(C\)</span> est Lebesgue-mesurable (de mesure nulle), mais il en existe qui ne sont pas boréliens. Cela fournit un exemple d’ensemble Lebesgue-mesurable non borélien.</p>
 <p>En pratique, la distinction importe rarement : on travaille presque toujours sur <span class="math inline">\(\mathcal B(\mathbb R)\)</span>, et les ensembles qu’on rencontre sont boréliens.</p>
 </section>
-<section id="propriétés-de-la-mesure-de-lebesgue" class="level4" data-number="1.1.2.5">
-<h4 data-number="1.1.2.5" class="anchored" data-anchor-id="propriétés-de-la-mesure-de-lebesgue"><span class="header-section-number">1.1.2.5</span> Propriétés de la mesure de Lebesgue</h4>
+<section id="propriétés-de-la-mesure-de-lebesgue" class="level4">
+<h4 class="anchored" data-anchor-id="propriétés-de-la-mesure-de-lebesgue">Propriétés de la mesure de Lebesgue</h4>
 <p><strong>1. Invariance par translation.</strong> <span class="math inline">\(\lambda(A + t) = \lambda(A)\)</span> pour tout borélien <span class="math inline">\(A\)</span> et tout <span class="math inline">\(t \in \mathbb R\)</span>. C’est la propriété géométrique fondamentale, celle-là même qui posait problème sur <span class="math inline">\(\mathcal P(\mathbb R)\)</span>.</p>
 <p><strong>2. Comportement par changement d’échelle.</strong> <span class="math inline">\(\lambda(\alpha A) = |\alpha| \lambda(A)\)</span> pour tout <span class="math inline">\(\alpha \in \mathbb R\)</span>, où <span class="math inline">\(\alpha A = \{\alpha x : x \in A\}\)</span>. Dilater un ensemble par un facteur <span class="math inline">\(\alpha\)</span> multiplie sa mesure par <span class="math inline">\(|\alpha|\)</span>.</p>
 <p><strong>3. Tout dénombrable est négligeable.</strong> Si <span class="math inline">\(A\)</span> est dénombrable, <span class="math inline">\(\lambda(A) = 0\)</span>. En effet, <span class="math inline">\(A = \bigcup_n \{a_n\}\)</span> et <span class="math inline">\(\lambda(\{a_n\}) = 0\)</span> pour tout <span class="math inline">\(n\)</span>. En particulier, <span class="math inline">\(\lambda(\mathbb Q) = 0\)</span> : les rationnels, bien que denses dans <span class="math inline">\(\mathbb R\)</span>, ont une mesure nulle.</p>
 <p><strong>4. Tout ouvert non vide a une mesure strictement positive.</strong> Un ouvert non vide contient un intervalle <span class="math inline">\((a,b)\)</span> avec <span class="math inline">\(a &lt; b\)</span>, donc sa mesure est au moins <span class="math inline">\(b - a &gt; 0\)</span>.</p>
 <p><strong>5. σ-finitude.</strong> <span class="math inline">\(\lambda\)</span> est σ-finie : <span class="math inline">\(\mathbb R = \bigcup_{n \geq 1} [-n, n]\)</span> et <span class="math inline">\(\lambda([-n,n]) = 2n &lt; \infty\)</span>.</p>
 </section>
-<section id="ensembles-de-mesure-nulle-et-ensembles-négligeables" class="level4" data-number="1.1.2.6">
-<h4 data-number="1.1.2.6" class="anchored" data-anchor-id="ensembles-de-mesure-nulle-et-ensembles-négligeables"><span class="header-section-number">1.1.2.6</span> Ensembles de mesure nulle et ensembles négligeables</h4>
+<section id="ensembles-de-mesure-nulle-et-ensembles-négligeables" class="level4">
+<h4 class="anchored" data-anchor-id="ensembles-de-mesure-nulle-et-ensembles-négligeables">Ensembles de mesure nulle et ensembles négligeables</h4>
 <p><strong>Définition.</strong> Un ensemble <span class="math inline">\(A\)</span> est <strong>négligeable</strong> (pour la mesure <span class="math inline">\(m\)</span>) si <span class="math inline">\(m(A) = 0\)</span>.Un ensemble est <strong><span class="math inline">\(m\)</span>-négligeable</strong> s’il est contenu dans un ensemble mesurable de mesure nulle.</p>
 <p>Les propriétés « qui sont vraies sauf sur un ensemble négligeable » jouent un rôle central en théorie de la mesure. On dit qu’une propriété est vraie <strong>presque partout</strong> (abrégé p.p., ou <strong>presque sûrement</strong> en probabilités, abrégé p.s.) si l’ensemble des points où elle est fausse est négligeable.</p>
 <p><em>Propriétés des ensembles négligeables.</em> Toute partie d’un ensemble négligeable est négligeable (dans la tribu de Lebesgue ; pas nécessairement dans <span class="math inline">\(\mathcal B(\mathbb R)\)</span> — c’est la question de la complétude). Toute union dénombrable d’ensembles négligeables est négligeable (par σ-sous-additivité).</p>
 </section>
 </section>
-<section id="probabilités-axiomes-de-kolmogorov" class="level3" data-number="1.1.3">
-<h3 data-number="1.1.3" class="anchored" data-anchor-id="probabilités-axiomes-de-kolmogorov"><span class="header-section-number">1.1.3</span> 3. Probabilités : axiomes de Kolmogorov</h3>
-<section id="dune-mesure-à-une-probabilité" class="level4" data-number="1.1.3.1">
-<h4 data-number="1.1.3.1" class="anchored" data-anchor-id="dune-mesure-à-une-probabilité"><span class="header-section-number">1.1.3.1</span> D’une mesure à une probabilité</h4>
+<section id="probabilités-axiomes-de-kolmogorov" class="level3">
+<h3 class="anchored" data-anchor-id="probabilités-axiomes-de-kolmogorov">3. Probabilités : axiomes de Kolmogorov</h3>
+<section id="dune-mesure-à-une-probabilité" class="level4">
+<h4 class="anchored" data-anchor-id="dune-mesure-à-une-probabilité">D’une mesure à une probabilité</h4>
 <p>Une probabilité est une mesure de masse totale 1. C’est un cas particulier de la théorie générale, mais c’est le cas le plus important pour ce cours.</p>
 <p><strong>Définition.</strong> Soit <span class="math inline">\((\Omega, \mathcal A)\)</span> un espace mesurable. Une <strong>probabilité</strong> sur <span class="math inline">\((\Omega, \mathcal A)\)</span> est une mesure <span class="math inline">\(P : \mathcal A \to [0, 1]\)</span> telle que <span class="math inline">\(P(\Omega) = 1\)</span>.</p>
 <p>Le triplet <span class="math inline">\((\Omega, \mathcal A, P)\)</span> s’appelle un <strong>espace probabilisé</strong> (ou espace de probabilité). Les éléments de <span class="math inline">\(\Omega\)</span> s’appellent les <strong>issues</strong> (ou résultats, ou états du monde), les éléments de <span class="math inline">\(\mathcal A\)</span> les <strong>événements</strong>, et <span class="math inline">\(P(A)\)</span> la <strong>probabilité de l’événement</strong> <span class="math inline">\(A\)</span>.</p>
 </section>
-<section id="les-axiomes-de-kolmogorov" class="level4" data-number="1.1.3.2">
-<h4 data-number="1.1.3.2" class="anchored" data-anchor-id="les-axiomes-de-kolmogorov"><span class="header-section-number">1.1.3.2</span> Les axiomes de Kolmogorov</h4>
+<section id="les-axiomes-de-kolmogorov" class="level4">
+<h4 class="anchored" data-anchor-id="les-axiomes-de-kolmogorov">Les axiomes de Kolmogorov</h4>
 <p>La définition ci-dessus constitue, en substance, les axiomes posés par Kolmogorov en 1933. Pour les rendre explicites :</p>
 <p><strong>Axiomes.</strong> Un espace de probabilité est un triplet <span class="math inline">\((\Omega, \mathcal A, P)\)</span> où :</p>
 <ol type="1">
@@ -408,8 +441,8 @@ window.Quarto = {
 </ol>
 <p>L’axiomatisation de Kolmogorov fonde les probabilités sur la théorie de la mesure. C’est l’analogue, pour les probabilités, de ce qu’a fait Euclide pour la géométrie : un petit nombre de principes à partir desquels tout le reste se déduit.</p>
 </section>
-<section id="propriétés-élémentaires" class="level4" data-number="1.1.3.3">
-<h4 data-number="1.1.3.3" class="anchored" data-anchor-id="propriétés-élémentaires"><span class="header-section-number">1.1.3.3</span> Propriétés élémentaires</h4>
+<section id="propriétés-élémentaires" class="level4">
+<h4 class="anchored" data-anchor-id="propriétés-élémentaires">Propriétés élémentaires</h4>
 <p>Toutes les propriétés des mesures (section 1) s’appliquent. On les reformule dans le langage probabiliste.</p>
 <p><strong>1. Complémentaire.</strong> <span class="math inline">\(P(A^c) = 1 - P(A)\)</span>.</p>
 <p><em>Preuve.</em> <span class="math inline">\(\Omega = A \cup A^c\)</span>, union disjointe. Par additivité, <span class="math inline">\(1 = P(A) + P(A^c)\)</span>. ∎</p>
@@ -422,16 +455,16 @@ window.Quarto = {
 <p><span class="math display">\[P\Bigl(\bigcup_{i=1}^n A_i\Bigr) = \sum_i P(A_i) - \sum_{i &lt; j} P(A_i \cap A_j) + \sum_{i &lt; j &lt; k} P(A_i \cap A_j \cap A_k) - \cdots + (-1)^{n+1} P(A_1 \cap \cdots \cap A_n).\]</span></p>
 <p><strong>5. Continuité.</strong> Si <span class="math inline">\(A_n \uparrow A\)</span>, alors <span class="math inline">\(P(A_n) \to P(A)\)</span>. Si <span class="math inline">\(A_n \downarrow A\)</span>, alors <span class="math inline">\(P(A_n) \to P(A)\)</span>. (L’hypothèse <span class="math inline">\(m(A_1) &lt; \infty\)</span> de la continuité décroissante est automatiquement vérifiée car <span class="math inline">\(P(A_1) \leq 1\)</span>.)</p>
 </section>
-<section id="exemples-despaces-probabilisés" class="level4" data-number="1.1.3.4">
-<h4 data-number="1.1.3.4" class="anchored" data-anchor-id="exemples-despaces-probabilisés"><span class="header-section-number">1.1.3.4</span> Exemples d’espaces probabilisés</h4>
+<section id="exemples-despaces-probabilisés" class="level4">
+<h4 class="anchored" data-anchor-id="exemples-despaces-probabilisés">Exemples d’espaces probabilisés</h4>
 <p><strong>Espaces finis.</strong> <span class="math inline">\(\Omega = \{\omega_1, \dots, \omega_n\}\)</span>, <span class="math inline">\(\mathcal A = \mathcal P(\Omega)\)</span>, <span class="math inline">\(P\)</span> définie par des poids <span class="math inline">\(p_i = P(\{\omega_i\})\)</span> avec <span class="math inline">\(p_i \geq 0\)</span> et <span class="math inline">\(\sum_i p_i = 1\)</span>. Si tous les poids sont égaux (<span class="math inline">\(p_i = 1/n\)</span>), on parle de <strong>probabilité uniforme</strong>.</p>
 <p><strong>Espaces dénombrables.</strong> <span class="math inline">\(\Omega = \mathbb N\)</span>, <span class="math inline">\(\mathcal A = \mathcal P(\mathbb N)\)</span>, <span class="math inline">\(P(\{n\}) = p_n\)</span> avec <span class="math inline">\(\sum_n p_n = 1\)</span>. C’est le cadre des lois discrètes (Bernoulli, binomiale, Poisson, géométrique, etc.).</p>
 <p><strong>Espaces continus.</strong> <span class="math inline">\(\Omega = \mathbb R\)</span> (ou un sous-ensemble), <span class="math inline">\(\mathcal A = \mathcal B(\mathbb R)\)</span>, <span class="math inline">\(P\)</span> définie par une densité <span class="math inline">\(f \geq 0\)</span> avec <span class="math inline">\(\int_{\mathbb R} f \, d\lambda = 1\)</span> :</p>
 <p><span class="math display">\[P(A) = \int_A f(x) \, dx.\]</span></p>
 <p>C’est le cadre des lois continues (uniforme, exponentielle, gaussienne, etc.). La notion de densité sera précisée à la section 4.</p>
 </section>
-<section id="probabilité-conditionnelle" class="level4" data-number="1.1.3.5">
-<h4 data-number="1.1.3.5" class="anchored" data-anchor-id="probabilité-conditionnelle"><span class="header-section-number">1.1.3.5</span> Probabilité conditionnelle</h4>
+<section id="probabilité-conditionnelle" class="level4">
+<h4 class="anchored" data-anchor-id="probabilité-conditionnelle">Probabilité conditionnelle</h4>
 <p><strong>Définition.</strong> Soit <span class="math inline">\(B\)</span> un événement avec <span class="math inline">\(P(B) &gt; 0\)</span>. La <strong>probabilité conditionnelle</strong> de <span class="math inline">\(A\)</span> sachant <span class="math inline">\(B\)</span> est</p>
 <p><span class="math display">\[P(A \mid B) = \frac{P(A \cap B)}{P(B)}.\]</span></p>
 <p>Pour <span class="math inline">\(B\)</span> fixé, l’application <span class="math inline">\(A \mapsto P(A \mid B)\)</span> est une probabilité sur <span class="math inline">\((\Omega, \mathcal A)\)</span>. Intuitivement, on restreint l’univers à <span class="math inline">\(B\)</span> et on renormalise.</p>
@@ -444,14 +477,14 @@ window.Quarto = {
 <p>La formule de Bayes « inverse » le conditionnement : connaissant les probabilités des causes <span class="math inline">\(B_k\)</span> et les vraisemblances <span class="math inline">\(P(A \mid B_k)\)</span> de l’observation <span class="math inline">\(A\)</span> sous chaque cause, on en déduit les probabilités révisées <span class="math inline">\(P(B_k \mid A)\)</span> des causes à la lumière de l’observation.</p>
 </section>
 </section>
-<section id="densité-et-mesure-absolument-continue" class="level3" data-number="1.1.4">
-<h3 data-number="1.1.4" class="anchored" data-anchor-id="densité-et-mesure-absolument-continue"><span class="header-section-number">1.1.4</span> 4. Densité et mesure absolument continue</h3>
-<section id="motivation" class="level4" data-number="1.1.4.1">
-<h4 data-number="1.1.4.1" class="anchored" data-anchor-id="motivation"><span class="header-section-number">1.1.4.1</span> Motivation</h4>
+<section id="densité-et-mesure-absolument-continue" class="level3">
+<h3 class="anchored" data-anchor-id="densité-et-mesure-absolument-continue">4. Densité et mesure absolument continue</h3>
+<section id="motivation" class="level4">
+<h4 class="anchored" data-anchor-id="motivation">Motivation</h4>
 <p>On rencontre souvent des probabilités sur <span class="math inline">\((\mathbb R, \mathcal B(\mathbb R))\)</span> décrites par une fonction <span class="math inline">\(f \geq 0\)</span> avec <span class="math inline">\(\int f \, d\lambda = 1\)</span> : on pose <span class="math inline">\(P(A) = \int_A f \, d\lambda\)</span>. La fonction <span class="math inline">\(f\)</span> est la <strong>densité</strong> de <span class="math inline">\(P\)</span> par rapport à la mesure de Lebesgue. On veut comprendre quand un tel <span class="math inline">\(f\)</span> existe, et dans quel cadre général.</p>
 </section>
-<section id="mesure-absolument-continue" class="level4" data-number="1.1.4.2">
-<h4 data-number="1.1.4.2" class="anchored" data-anchor-id="mesure-absolument-continue"><span class="header-section-number">1.1.4.2</span> Mesure absolument continue</h4>
+<section id="mesure-absolument-continue" class="level4">
+<h4 class="anchored" data-anchor-id="mesure-absolument-continue">Mesure absolument continue</h4>
 <p><strong>Définition.</strong> Soient <span class="math inline">\(\mu\)</span> et <span class="math inline">\(\nu\)</span> deux mesures sur <span class="math inline">\((\Omega, \mathcal A)\)</span>. On dit que <span class="math inline">\(\mu\)</span> est <strong>absolument continue</strong> par rapport à <span class="math inline">\(\nu\)</span>, et on écrit <span class="math inline">\(\mu \ll \nu\)</span>, si</p>
 <p><span class="math display">\[\forall A \in \mathcal A, \quad \nu(A) = 0 \implies \mu(A) = 0.\]</span></p>
 <p>Autrement dit, <span class="math inline">\(\mu\)</span> ne charge pas les ensembles <span class="math inline">\(\nu\)</span>-négligeables : tout ce qui est invisible pour <span class="math inline">\(\nu\)</span> l’est aussi pour <span class="math inline">\(\mu\)</span>.</p>
@@ -462,8 +495,8 @@ window.Quarto = {
 <li><span class="math inline">\(\lambda\)</span> n’est pas absolument continue par rapport à <span class="math inline">\(\delta_0\)</span> : <span class="math inline">\(\delta_0(\{0\}^c) = 0\)</span> mais <span class="math inline">\(\lambda(\{0\}^c) = +\infty\)</span>.</li>
 </ul>
 </section>
-<section id="le-théorème-de-radon-nikodym" class="level4" data-number="1.1.4.3">
-<h4 data-number="1.1.4.3" class="anchored" data-anchor-id="le-théorème-de-radon-nikodym"><span class="header-section-number">1.1.4.3</span> Le théorème de Radon-Nikodym</h4>
+<section id="le-théorème-de-radon-nikodym" class="level4">
+<h4 class="anchored" data-anchor-id="le-théorème-de-radon-nikodym">Le théorème de Radon-Nikodym</h4>
 <p><strong>Théorème (Radon-Nikodym).</strong> Soient <span class="math inline">\(\mu\)</span> et <span class="math inline">\(\nu\)</span> deux mesures σ-finies sur <span class="math inline">\((\Omega, \mathcal A)\)</span>, avec <span class="math inline">\(\mu \ll \nu\)</span>. Alors il existe une fonction mesurable <span class="math inline">\(f : \Omega \to [0, +\infty)\)</span> telle que</p>
 <p><span class="math display">\[\forall A \in \mathcal A, \quad \mu(A) = \int_A f \, d\nu.\]</span></p>
 <p>La fonction <span class="math inline">\(f\)</span> est unique <span class="math inline">\(\nu\)</span>-presque partout. On l’appelle la <strong>dérivée de Radon-Nikodym</strong> (ou <strong>densité</strong>) de <span class="math inline">\(\mu\)</span> par rapport à <span class="math inline">\(\nu\)</span>, et on la note <span class="math inline">\(\frac{d\mu}{d\nu}\)</span>.</p>
@@ -475,35 +508,35 @@ window.Quarto = {
 <li>En probabilités, la densité d’une loi est toujours relative à une mesure de référence (le plus souvent la mesure de Lebesgue). Dire qu’une variable aléatoire « a une densité » signifie que sa loi est absolument continue par rapport à <span class="math inline">\(\lambda\)</span>.</li>
 </ul>
 </section>
-<section id="mesures-singulières" class="level4" data-number="1.1.4.4">
-<h4 data-number="1.1.4.4" class="anchored" data-anchor-id="mesures-singulières"><span class="header-section-number">1.1.4.4</span> Mesures singulières</h4>
+<section id="mesures-singulières" class="level4">
+<h4 class="anchored" data-anchor-id="mesures-singulières">Mesures singulières</h4>
 <p><strong>Définition.</strong> Deux mesures <span class="math inline">\(\mu\)</span> et <span class="math inline">\(\nu\)</span> sur <span class="math inline">\((\Omega, \mathcal A)\)</span> sont <strong>mutuellement singulières</strong>, noté <span class="math inline">\(\mu \perp \nu\)</span>, s’il existe <span class="math inline">\(A \in \mathcal A\)</span> tel que <span class="math inline">\(\mu(A) = 0\)</span> et <span class="math inline">\(\nu(A^c) = 0\)</span>. Autrement dit, elles « vivent » sur des ensembles disjoints.</p>
 <p><em>Exemple.</em> <span class="math inline">\(\delta_0 \perp \lambda\)</span> : prendre <span class="math inline">\(A = \{0\}^c\)</span>. On a <span class="math inline">\(\delta_0(A) = 0\)</span> et <span class="math inline">\(\lambda(A^c) = \lambda(\{0\}) = 0\)</span>.</p>
 <p><strong>Décomposition de Lebesgue.</strong> Toute mesure σ-finie <span class="math inline">\(\mu\)</span> se décompose de façon unique en <span class="math inline">\(\mu = \mu_{ac} + \mu_s\)</span> où <span class="math inline">\(\mu_{ac} \ll \nu\)</span> et <span class="math inline">\(\mu_s \perp \nu\)</span>. C’est la « partie absolument continue » et la « partie singulière » de <span class="math inline">\(\mu\)</span> par rapport à <span class="math inline">\(\nu\)</span>.</p>
 </section>
 </section>
-<section id="mesures-produit-et-théorème-de-fubini" class="level3" data-number="1.1.5">
-<h3 data-number="1.1.5" class="anchored" data-anchor-id="mesures-produit-et-théorème-de-fubini"><span class="header-section-number">1.1.5</span> 5. Mesures produit et théorème de Fubini</h3>
-<section id="motivation-1" class="level4" data-number="1.1.5.1">
-<h4 data-number="1.1.5.1" class="anchored" data-anchor-id="motivation-1"><span class="header-section-number">1.1.5.1</span> Motivation</h4>
+<section id="mesures-produit-et-théorème-de-fubini" class="level3">
+<h3 class="anchored" data-anchor-id="mesures-produit-et-théorème-de-fubini">5. Mesures produit et théorème de Fubini</h3>
+<section id="motivation-1" class="level4">
+<h4 class="anchored" data-anchor-id="motivation-1">Motivation</h4>
 <p>On veut mesurer des ensembles dans un espace produit <span class="math inline">\(\Omega_1 \times \Omega_2\)</span>. Par exemple, pour deux lancers de dé indépendants, l’espace est <span class="math inline">\(\{1,\dots,6\}^2\)</span> ; pour un point aléatoire dans le plan, c’est <span class="math inline">\(\mathbb R^2\)</span>. La question est : comment construire une mesure sur le produit à partir des mesures sur les facteurs ?</p>
 </section>
-<section id="tribu-produit" class="level4" data-number="1.1.5.2">
-<h4 data-number="1.1.5.2" class="anchored" data-anchor-id="tribu-produit"><span class="header-section-number">1.1.5.2</span> Tribu produit</h4>
+<section id="tribu-produit" class="level4">
+<h4 class="anchored" data-anchor-id="tribu-produit">Tribu produit</h4>
 <p>Au chapitre I, on a vu que <span class="math inline">\(\mathcal B(\mathbb R^n) = \mathcal B(\mathbb R)^{\otimes n}\)</span>. On généralise.</p>
 <p><strong>Définition.</strong> Soient <span class="math inline">\((\Omega_1, \mathcal A_1)\)</span> et <span class="math inline">\((\Omega_2, \mathcal A_2)\)</span> deux espaces mesurables. La <strong>tribu produit</strong> est</p>
 <p><span class="math display">\[\mathcal A_1 \otimes \mathcal A_2 = \sigma\bigl(\{A_1 \times A_2 : A_1 \in \mathcal A_1, \, A_2 \in \mathcal A_2\}\bigr).\]</span></p>
 <p>C’est la tribu engendrée par les « rectangles mesurables ». L’espace mesurable produit est <span class="math inline">\((\Omega_1 \times \Omega_2, \, \mathcal A_1 \otimes \mathcal A_2)\)</span>.</p>
 </section>
-<section id="mesure-produit" class="level4" data-number="1.1.5.3">
-<h4 data-number="1.1.5.3" class="anchored" data-anchor-id="mesure-produit"><span class="header-section-number">1.1.5.3</span> Mesure produit</h4>
+<section id="mesure-produit" class="level4">
+<h4 class="anchored" data-anchor-id="mesure-produit">Mesure produit</h4>
 <p><strong>Théorème (existence et unicité de la mesure produit).</strong> Soient <span class="math inline">\((Ω_1, \mathcal A_1, m_1)\)</span> et <span class="math inline">\((\Omega_2, \mathcal A_2, m_2)\)</span> deux espaces mesurés σ-finis. Il existe une unique mesure <span class="math inline">\(m_1 \otimes m_2\)</span> sur <span class="math inline">\((\Omega_1 \times \Omega_2, \, \mathcal A_1 \otimes \mathcal A_2)\)</span> telle que</p>
 <p><span class="math display">\[\forall A_1 \in \mathcal A_1, \, \forall A_2 \in \mathcal A_2, \quad (m_1 \otimes m_2)(A_1 \times A_2) = m_1(A_1) \cdot m_2(A_2).\]</span></p>
 <p>L’unicité repose, comme pour la mesure de Lebesgue, sur le fait que les rectangles mesurables forment un π-système qui engendre la tribu produit, et le théorème d’unicité des mesures s’applique (les mesures étant σ-finies).</p>
 <p><em>Exemple.</em> La mesure de Lebesgue sur <span class="math inline">\(\mathbb R^2\)</span> est <span class="math inline">\(\lambda \otimes \lambda\)</span> : l’aire d’un rectangle <span class="math inline">\([a,b] \times [c,d]\)</span> est <span class="math inline">\((b-a)(d-c) = \lambda([a,b]) \cdot \lambda([c,d])\)</span>.</p>
 </section>
-<section id="le-théorème-de-fubini-tonelli" class="level4" data-number="1.1.5.4">
-<h4 data-number="1.1.5.4" class="anchored" data-anchor-id="le-théorème-de-fubini-tonelli"><span class="header-section-number">1.1.5.4</span> Le théorème de Fubini-Tonelli</h4>
+<section id="le-théorème-de-fubini-tonelli" class="level4">
+<h4 class="anchored" data-anchor-id="le-théorème-de-fubini-tonelli">Le théorème de Fubini-Tonelli</h4>
 <p>C’est l’outil qui permet de calculer les intégrales doubles par intégrales itérées.</p>
 <p><strong>Théorème (Tonelli).</strong> Soient <span class="math inline">\((Ω_1, \mathcal A_1, m_1)\)</span> et <span class="math inline">\((\Omega_2, \mathcal A_2, m_2)\)</span> deux espaces mesurés σ-finis, et <span class="math inline">\(f : \Omega_1 \times \Omega_2 \to [0, +\infty]\)</span> une fonction mesurable positive. Alors :</p>
 <p><span class="math display">\[\int_{\Omega_1 \times \Omega_2} f \, d(m_1 \otimes m_2) = \int_{\Omega_1} \Bigl(\int_{\Omega_2} f(\omega_1, \omega_2) \, dm_2(\omega_2)\Bigr) dm_1(\omega_1) = \int_{\Omega_2} \Bigl(\int_{\Omega_1} f(\omega_1, \omega_2) \, dm_1(\omega_1)\Bigr) dm_2(\omega_2).\]</span></p>
@@ -930,7 +963,7 @@ window.Quarto = {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../notes/1. representation-geometrie-et-resolution.html" class="pagination-link" aria-label="1. Representation geometrie et resolution">
+      <a href="../maths appliquées/1. representation-geometrie-et-resolution.html" class="pagination-link" aria-label="1. Representation geometrie et resolution">
         <span class="nav-page-text">1. Representation geometrie et resolution</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>projection-orthogonale-et-produit-scalaire – Notes</title>
+<title>mesurer-la-proximite – chekpoint-89</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../notes/4. variables-aléatoires.html" rel="next">
-<link href="../notes/2. mesurer-la-proximite.html" rel="prev">
+<link href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html" rel="next">
+<link href="../maths appliquées/1. representation-geometrie-et-resolution.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -73,35 +73,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -113,7 +84,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Notes</span>
+    <span class="navbar-title">chekpoint-89</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -124,7 +95,7 @@ window.Quarto = {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Accueil</span></a>
+<span class="menu-text">Mes notes</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -137,7 +108,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1. representation-geometrie-et-resolution.html">Notes</a></li><li class="breadcrumb-item"><a href="../notes/3. projection-orthogonale-et-produit-scalaire.html">3. Projection orthogonale et produit scalaire</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../maths appliquées/1. representation-geometrie-et-resolution.html">Maths appliquées</a></li><li class="breadcrumb-item"><a href="../maths appliquées/2. mesurer-la-proximite.html">2. Mesurer la proximite</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -207,7 +178,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Notes</span></a>
+ <span class="menu-text">Maths appliquées</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -215,25 +186,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
+  <a href="../maths appliquées/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">1. Representation geometrie et resolution</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/2. mesurer-la-proximite.html" class="sidebar-item-text sidebar-link">
+  <a href="../maths appliquées/2. mesurer-la-proximite.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">2. Mesurer la proximite</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link active">
+  <a href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3. Projection orthogonale et produit scalaire</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link">
+  <a href="../maths appliquées/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">4. Variables aleatoires</span></a>
   </div>
 </li>
@@ -249,96 +220,33 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#projection-orthogonale-et-produit-scalaire" id="toc-projection-orthogonale-et-produit-scalaire" class="nav-link active" data-scroll-target="#projection-orthogonale-et-produit-scalaire"><span class="header-section-number">1</span> Projection orthogonale et produit scalaire</a>
-  <ul class="collapse">
-  <li><a href="#cadre" id="toc-cadre" class="nav-link" data-scroll-target="#cadre"><span class="header-section-number">1.1</span> Cadre</a></li>
-  <li><a href="#produit-scalaire" id="toc-produit-scalaire" class="nav-link" data-scroll-target="#produit-scalaire"><span class="header-section-number">1.2</span> Produit scalaire</a></li>
-  <li><a href="#pythagore" id="toc-pythagore" class="nav-link" data-scroll-target="#pythagore"><span class="header-section-number">1.3</span> Pythagore</a></li>
-  <li><a href="#la-projection-orthogonale-est-la-meilleure-estimation" id="toc-la-projection-orthogonale-est-la-meilleure-estimation" class="nav-link" data-scroll-target="#la-projection-orthogonale-est-la-meilleure-estimation"><span class="header-section-number">1.4</span> La projection orthogonale est la meilleure estimation</a></li>
-  <li><a href="#la-règle-du-parallélogramme-théorème-de-jordanvon-neumann" id="toc-la-règle-du-parallélogramme-théorème-de-jordanvon-neumann" class="nav-link" data-scroll-target="#la-règle-du-parallélogramme-théorème-de-jordanvon-neumann"><span class="header-section-number">1.5</span> La règle du parallélogramme (théorème de Jordan–von Neumann)</a></li>
-  <li><a href="#les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire" id="toc-les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire" class="nav-link" data-scroll-target="#les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire"><span class="header-section-number">1.6</span> Les normes Lᵖ et pourquoi seule L² a un produit scalaire</a></li>
+  <li><a href="#mesurer-la-proximité-de-points-dans-un-espace" id="toc-mesurer-la-proximité-de-points-dans-un-espace" class="nav-link active" data-scroll-target="#mesurer-la-proximité-de-points-dans-un-espace">Mesurer la proximité de points dans un espace</a>
+  <ul>
+  <li><a href="#pourquoi-mesurer-sur-un-ensemble" id="toc-pourquoi-mesurer-sur-un-ensemble" class="nav-link" data-scroll-target="#pourquoi-mesurer-sur-un-ensemble">Pourquoi mesurer sur un ensemble</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1. representation-geometrie-et-resolution.html">Notes</a></li><li class="breadcrumb-item"><a href="../notes/3. projection-orthogonale-et-produit-scalaire.html">3. Projection orthogonale et produit scalaire</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../maths appliquées/1. representation-geometrie-et-resolution.html">Maths appliquées</a></li><li class="breadcrumb-item"><a href="../maths appliquées/2. mesurer-la-proximite.html">2. Mesurer la proximite</a></li></ol></nav></header>
 
 
 
 
-<section id="projection-orthogonale-et-produit-scalaire" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Projection orthogonale et produit scalaire</h1>
-<p>Dans toute la suite, on dit “produit scalaire” au sens large : au sens usuel sur ℝ, au sens hermitien sur ℂ.</p>
-<section id="cadre" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="cadre"><span class="header-section-number">1.1</span> Cadre</h2>
-<p>On travaille dans un espace vectoriel E (sur ℝ ou ℂ) muni d’un <strong>produit scalaire</strong> ⟨·,·⟩. Tout ce qui suit est valable en dimension finie comme en dimension infinie, à condition que l’espace soit <strong>complet</strong> (toute suite de Cauchy converge dans E) et que les sous-espaces considérés soient <strong>fermés</strong>. Un tel espace est appelé espace de Hilbert. En dimension finie, complétude et fermeture sont automatiques.</p>
-<p><strong>Pourquoi ces conditions.</strong> La complétude garantit qu’on peut passer à la limite sans sortir de l’espace : sans elle, une suite d’approximations de plus en plus proches d’un optimum pourrait converger vers un point qui n’appartient pas à E. La fermeture d’un sous-espace V garantit que la limite reste dans V. En dimension infinie, ces deux conditions doivent être vérifiées ; en dimension finie, elles sont gratuites. Dans toute la suite, “sous-espace” signifie sous-espace fermé.</p>
-<p><strong>Terminologie.</strong> Un espace vectoriel réel de dimension finie muni d’un produit scalaire est un espace euclidien. La généralisation à la dimension infinie et/ou au corps ℂ est un espace de Hilbert.</p>
-</section>
-<section id="produit-scalaire" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="produit-scalaire"><span class="header-section-number">1.2</span> Produit scalaire</h2>
-<p>Un <strong>produit scalaire</strong> sur E est une application ⟨·,·⟩ : E × E → 𝕂 (où 𝕂 = ℝ ou ℂ) qui vérifie :</p>
+<section id="mesurer-la-proximité-de-points-dans-un-espace" class="level1">
+<h1>Mesurer la proximité de points dans un espace</h1>
+<section id="pourquoi-mesurer-sur-un-ensemble" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-mesurer-sur-un-ensemble">Pourquoi mesurer sur un ensemble</h2>
+<p>Pour parler de proximité entre les éléments d’un ensemble, il faut le munir d’une façon de mesurer les écarts. Ce choix impose une géométrie à l’espace — la forme des boules, la régularité des courbes, les opérations isométriques. Avant même de poser un problème d’optimisation, la mesure choisie détermine ce qui est proche, ce qui est simple, et quels outils mathématiques sont disponibles : peut-on seulement parler de voisinage, ou aussi de taille, de direction, d’angle ?</p>
+<p>Il existe trois niveaux de mesure, du plus simple au plus riche :</p>
 <ul>
-<li><strong>Sesquilinéarité</strong> : linéaire en une variable, conjugué-linéaire en l’autre. Sur ℝ, la conjugaison est triviale et cela se réduit à la bilinéarité.</li>
-<li><strong>Symétrie hermitienne</strong> : ⟨x,y⟩ = <span class="math inline">\(\overline{⟨y,x⟩}\)</span>. Sur ℝ, cela se réduit à la symétrie ⟨x,y⟩ = ⟨y,x⟩. En conséquence, ⟨x,x⟩ = <span class="math inline">\(\overline{⟨x,x⟩}\)</span>, donc ⟨x,x⟩ est toujours réel.</li>
-<li><strong>Défini positif</strong> : ⟨x,x⟩ ≥ 0 pour tout x et ⟨x,x⟩ = 0 ⟹ x = 0.</li>
+<li><strong>Distance</strong> : associe un nombre positif à chaque paire d’éléments. On peut dire “proche” ou “loin”, rien de plus. Aucune structure algébrique n’est requise — les éléments n’ont pas besoin d’être des vecteurs. La distance suffit déjà à donner une forme à l’espace : elle détermine les boules, les voisinages, et donc la topologie.</li>
+<li><strong>Norme</strong> : mesure la taille d’un vecteur, de façon compatible avec l’algèbre linéaire. Dilater par λ multiplie la taille par |λ|. La norme induit une distance compatible avec la structure vectorielle, en particulier invariante par translation : d(x+z, y+z) = ‖x−y‖. On peut poser le problème du plus proche point dans un sous-espace, mais selon la norme choisie, le plus proche point peut ne pas être unique, et même quand il l’est, l’application qui à chaque point associe son plus proche point n’est en général pas linéaire.</li>
+<li><strong>Produit scalaire</strong> : mesure l’angle entre deux vecteurs et définit l’orthogonalité. La norme qui en découle rend la boule unité quadratique — sa frontière est décrite par ⟨x,x⟩ = 1, une équation du second degré en x (en dimension finie, ⟨x,y⟩ = xᵀMy et la boule est une ellipsoïde). C’est le seul cadre où, pour tout sous-espace fermé, le plus proche point est à la fois unique et où l’application qui le calcule — la projection orthogonale — est linéaire (voir <em>Quand est-ce qu’une projection donne le plus proche point ?</em>).</li>
 </ul>
-<p><strong>Convention de linéarité.</strong> En mathématiques, le produit est conventionnellement linéaire en la seconde variable et conjugué-linéaire en la première : ⟨λx, y⟩ = <span class="math inline">\(\bar{λ}\)</span>⟨x, y⟩ et ⟨x, λy⟩ = λ⟨x, y⟩. La convention inverse est courante en physique.</p>
-<p><strong>Représentation matricielle.</strong> En dimension finie, un produit scalaire s’écrit ⟨x,y⟩ = x<em>My, où x</em> est le transposé conjugué de x et M est une matrice définie positive. Sur ℝ, M est symétrique réelle (M = Mᵀ) ; sur ℂ, M est hermitienne (M = <span class="math inline">\(\overline{M}^T\)</span>).</p>
-<p>La condition “défini positif” admet une formulation équivalente, plus naturelle en algèbre linéaire :</p>
-<ul>
-<li><strong>(Non dégénéré positif)</strong> : ⟨x,x⟩ ≥ 0 pour tout x, et si ⟨x,y⟩ = 0 pour tout y, alors x = 0.</li>
-</ul>
-<p>La première formulation regarde le signe : la forme ne s’annule qu’en zéro. La seconde regarde le noyau : aucun vecteur non nul n’est orthogonal à tout l’espace — autrement dit, l’application x ↦ ⟨x,·⟩ est injective. C’est l’analogue du théorème de représentation de Riesz (trivial en dimension finie, profond en dimension infinie).</p>
-<p><strong>Pourquoi ces deux conditions sont équivalentes.</strong> Définie positive ⟹ non dégénérée : si ⟨x,y⟩ = 0 pour tout y, en particulier pour y = x, donc ⟨x,x⟩ = 0, donc x = 0. Non dégénérée ⟹ définie positive : supposons ⟨x,x⟩ = 0 avec x ≠ 0. Par Cauchy-Schwarz (qui ne requiert que sesquilinéarité, symétrie hermitienne et positivité), |⟨x,y⟩|² ≤ ⟨x,x⟩⟨y,y⟩ = 0 pour tout y. Donc ⟨x,y⟩ = 0 pour tout y, ce qui contredit la non-dégénérescence.</p>
-</section>
-<section id="pythagore" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="pythagore"><span class="header-section-number">1.3</span> Pythagore</h2>
-<p>Si x = p + e avec ⟨p,e⟩ = 0, alors :</p>
-<p>‖x‖² = ⟨p + e, p + e⟩ = ⟨p,p⟩ + ⟨p,e⟩ + ⟨e,p⟩ + ⟨e,e⟩ = ‖p‖² + ‖e‖²</p>
-<p>(Les termes croisés ⟨p,e⟩ et ⟨e,p⟩ = <span class="math inline">\(\overline{⟨p,e⟩}\)</span> sont tous deux nuls dès que l’un l’est.)</p>
-<p>C’est tout. Pythagore n’est pas un théorème de géométrie ajouté au produit scalaire — c’est une conséquence directe de la sesquilinéarité. Développer le carré d’une somme dans un produit scalaire, c’est exactement la même opération que développer (a+b)² = a² + 2ab + b² : les termes croisés apparaissent, et l’orthogonalité les fait disparaître.</p>
-</section>
-<section id="la-projection-orthogonale-est-la-meilleure-estimation" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="la-projection-orthogonale-est-la-meilleure-estimation"><span class="header-section-number">1.4</span> La projection orthogonale est la meilleure estimation</h2>
-<p>Soit V un sous-espace fermé de E et x ∈ E. On cherche le point de V le plus proche de x : le vecteur p ∈ V qui minimise ‖x − p‖.</p>
-<p><strong>La décomposition existe.</strong> Posons e = x − p.&nbsp;On veut p ∈ V et e ⊥ V. L’orthogonal de V, noté V⊥ = {z ∈ E : ⟨z,v⟩ = 0 pour tout v ∈ V}, est lui-même un sous-espace fermé. En dimension finie, tout sous-espace admet un supplémentaire orthogonal : E = V ⊕ V⊥, et tout vecteur se décompose de façon unique en une composante dans V et une composante dans V⊥. En dimension infinie, c’est le théorème de projection dans les espaces de Hilbert — qui repose sur la complétude de E et la fermeture de V — qui garantit cette décomposition. Dans les deux cas, x = p + e avec p ∈ V et e ∈ V⊥ est bien défini et unique.</p>
-<p><strong>Cette décomposition donne le minimum.</strong> Pour tout autre candidat v ∈ V :</p>
-<p>‖x − v‖² = ‖(p − v) + e‖²</p>
-<p>Le vecteur p − v est dans V, et e est orthogonal à V, donc ⟨p − v, e⟩ = 0. Par Pythagore :</p>
-<p>‖x − v‖² = ‖p − v‖² + ‖e‖²</p>
-<p>Ce terme est minimal quand ‖p − v‖² = 0, c’est-à-dire v = p.&nbsp;Le minimum est ‖e‖², atteint uniquement en p.</p>
-<p><strong>Ce qu’on vient de montrer.</strong> La projection orthogonale p est le meilleur estimateur de x dans V. L’erreur e = x − p est orthogonale à V — elle ne contient aucune composante dans la direction de V qu’on aurait pu exploiter pour réduire la distance. Pythagore garantit que composante utile (dans V) et erreur résiduelle (orthogonale à V) ne se mélangent pas : leurs contributions au carré de la norme s’additionnent indépendamment.</p>
-<p><strong>Pourquoi le produit scalaire est nécessaire.</strong> La preuve repose entièrement sur deux ingrédients : l’orthogonalité (pour définir e ⊥ V) et Pythagore (pour séparer les termes). Les deux viennent du produit scalaire. Sans lui, on ne peut ni décomposer x en composantes indépendantes, ni garantir que l’erreur est incompressible.</p>
-</section>
-<section id="la-règle-du-parallélogramme-théorème-de-jordanvon-neumann" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="la-règle-du-parallélogramme-théorème-de-jordanvon-neumann"><span class="header-section-number">1.5</span> La règle du parallélogramme (théorème de Jordan–von Neumann)</h2>
-<p><strong>Une norme vient d’un produit scalaire si et seulement si elle vérifie la règle du parallélogramme</strong> :</p>
-<p>‖x + y‖² + ‖x − y‖² = 2(‖x‖² + ‖y‖²)</p>
-<p><strong>Interprétation géométrique.</strong> Dans un parallélogramme de côtés x et y, la somme des carrés des diagonales (‖x+y‖ et ‖x−y‖) égale la somme des carrés des quatre côtés.</p>
-<p><strong>Sens direct (produit scalaire ⟹ règle).</strong> En développant par sesquilinéarité : - ‖x + y‖² = ‖x‖² + 2 Re⟨x,y⟩ + ‖y‖² - ‖x − y‖² = ‖x‖² − 2 Re⟨x,y⟩ + ‖y‖²</p>
-<p>En sommant, les termes croisés s’annulent. (Sur ℝ, Re⟨x,y⟩ = ⟨x,y⟩.)</p>
-<p><strong>Sens réciproque (règle ⟹ produit scalaire).</strong> Si une norme vérifie la règle, alors la formule de polarisation reconstruit un produit scalaire dont la norme associée est la norme de départ. Sur ℝ :</p>
-<p>⟨x,y⟩ = ¼(‖x + y‖² − ‖x − y‖²)</p>
-<p>Sur ℂ, il faut quatre termes pour récupérer aussi la partie imaginaire :</p>
-<p>⟨x,y⟩ = ¼(‖x + y‖² − ‖x − y‖² + i‖x + iy‖² − i‖x − iy‖²)</p>
-<p><strong>La règle du parallélogramme impose à la boule unité d’être une ellipsoïde.</strong> Si Q(x) = ‖x‖² vérifie la règle, alors Q est nécessairement une forme quadratique (somme de termes de degré 2, sans puissances supérieures). Et réciproquement si Q est une forme quadratique, elle respecte la règle.</p>
-</section>
-<section id="les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire"><span class="header-section-number">1.6</span> Les normes Lᵖ et pourquoi seule L² a un produit scalaire</h2>
-<p>Les normes Lᵖ (pour 1 ≤ p ≤ ∞) sont définies sur des espaces de fonctions (ou de vecteurs en dimension finie) par :</p>
-<p>‖f‖ₚ = (∫|f|ᵖ)^(1/p)</p>
-<p>Chaque valeur de p donne une géométrie différente — c’est-à-dire une forme de boule unité différente.</p>
-<p><strong>Seule L² vérifie la règle du parallélogramme.</strong> Prenons f et g à supports disjoints (fg = 0 presque partout). Alors :</p>
-<ul>
-<li>‖f + g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ</li>
-<li>‖f − g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ</li>
-</ul>
-<p>Donc ‖f + g‖ₚ = ‖f − g‖ₚ. La règle du parallélogramme exige alors :</p>
-<p>2‖f + g‖² = 2(‖f‖² + ‖g‖²)</p>
-<p>soit ‖f + g‖² = ‖f‖² + ‖g‖². Mais on sait aussi que ‖f + g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ, c’est-à-dire que la puissance p “additionne” les normes. Pour que la puissance 2 les additionne aussi, il faut p = 2. Pour tout autre p, la règle du parallélogramme est violée, et aucun produit scalaire ne peut engendrer la norme Lᵖ.</p>
-<p><strong>Lien avec la géométrie de la boule.</strong> La note précédente (voir <em>Mesurer la proximité de points dans un espace</em>) montrait que le produit scalaire rend la boule unité quadratique — sa frontière est un niveau de ⟨x,x⟩ = 1. En dimension finie, c’est une ellipsoïde. La boule L² est la seule boule Lᵖ qui soit une ellipsoïde : pour p &lt; 2, la boule est pincée (concave sur les diagonales) ; pour p &gt; 2, elle est gonflée (convexe mais trop arrondie aux coins). Seule l’ellipsoïde a la courbure quadratique qui permet projection = plus proche point pour tout sous-espace.</p>
+<p><strong>Quand est-ce qu’une projection donne le plus proche point ?</strong> <strong>Projeter</strong> sur V parallèlement à un supplémentaire W, c’est envoyer chaque point sur V en suivant la direction de W — la même pour tous les points. Trouver le <strong>plus proche point</strong>, c’est gonfler la boule unité autour de x jusqu’à ce qu’elle touche V : le point de contact est x₀, et la direction x → x₀ est celle qui réalise le minimum.</p>
+<p>Si la boule n’est pas quadratique (sa frontière n’est pas un niveau de forme quadratique ⟨x,x⟩ = 1), la direction x → x₀ tourne de façon non linéaire quand x se déplace. Un supplémentaire fixe impose une direction unique : il ne peut pas suivre. Si la boule est quadratique — définie par un produit scalaire ⟨·,·⟩ — la direction vers le plus proche point est toujours perpendiculaire à V au sens de ⟨·,·⟩, quel que soit x. Le supplémentaire V⊥ est fixe, et la projection correspondante est linéaire.</p>
+<p><strong>Exiger que projection et plus proche point coïncident pour tout sous-espace fermé, c’est exiger que la boule soit quadratique — c’est-à-dire que la norme provienne d’un produit scalaire.</strong> Cette propriété caractérise les espaces euclidiens (en dimension finie) et hilbertiens (en dimension infinie).</p>
 
 
 </section>
@@ -747,13 +655,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../notes/2. mesurer-la-proximite.html" class="pagination-link" aria-label="2. Mesurer la proximite">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2. Mesurer la proximite</span>
+      <a href="../maths appliquées/1. representation-geometrie-et-resolution.html" class="pagination-link" aria-label="1. Representation geometrie et resolution">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">1. Representation geometrie et resolution</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../notes/4. variables-aléatoires.html" class="pagination-link" aria-label="4. Variables aleatoires">
-        <span class="nav-page-text">4. Variables aleatoires</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html" class="pagination-link" aria-label="3. Projection orthogonale et produit scalaire">
+        <span class="nav-page-text">3. Projection orthogonale et produit scalaire</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

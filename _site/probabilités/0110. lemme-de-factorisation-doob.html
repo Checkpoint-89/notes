@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>lemme-de-factorisation-doob – Notes</title>
+<title>lemme-de-factorisation-doob – chekpoint-89</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -113,7 +113,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Notes</span>
+    <span class="navbar-title">chekpoint-89</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -124,7 +124,7 @@ window.Quarto = {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Accueil</span></a>
+<span class="menu-text">Mes notes</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -207,7 +207,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Notes</span></a>
+ <span class="menu-text">Maths appliquées</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -215,25 +215,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
+  <a href="../maths appliquées/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">1. Representation geometrie et resolution</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/2. mesurer-la-proximite.html" class="sidebar-item-text sidebar-link">
+  <a href="../maths appliquées/2. mesurer-la-proximite.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2. Mesurer la proximite</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
+  <a href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3. Projection orthogonale et produit scalaire</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link">
+  <a href="../maths appliquées/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">4. Variables aleatoires</span></a>
   </div>
 </li>
@@ -249,19 +249,19 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lemme-de-factorisation-de-doob-démonstration" id="toc-lemme-de-factorisation-de-doob-démonstration" class="nav-link active" data-scroll-target="#lemme-de-factorisation-de-doob-démonstration"><span class="header-section-number">1</span> Lemme de factorisation de Doob — Démonstration</a>
+  <li><a href="#lemme-de-factorisation-de-doob-démonstration" id="toc-lemme-de-factorisation-de-doob-démonstration" class="nav-link active" data-scroll-target="#lemme-de-factorisation-de-doob-démonstration">Lemme de factorisation de Doob — Démonstration</a>
+  <ul>
+  <li><a href="#énoncé" id="toc-énoncé" class="nav-link" data-scroll-target="#énoncé">Énoncé</a></li>
+  <li><a href="#sens-facile" id="toc-sens-facile" class="nav-link" data-scroll-target="#sens-facile">Sens facile (⟸)</a></li>
+  <li><a href="#sens-difficile-la-machine-standard" id="toc-sens-difficile-la-machine-standard" class="nav-link" data-scroll-target="#sens-difficile-la-machine-standard">Sens difficile (⟹) — La machine standard</a>
   <ul class="collapse">
-  <li><a href="#énoncé" id="toc-énoncé" class="nav-link" data-scroll-target="#énoncé"><span class="header-section-number">1.1</span> Énoncé</a></li>
-  <li><a href="#sens-facile" id="toc-sens-facile" class="nav-link" data-scroll-target="#sens-facile"><span class="header-section-number">1.2</span> Sens facile (⟸)</a></li>
-  <li><a href="#sens-difficile-la-machine-standard" id="toc-sens-difficile-la-machine-standard" class="nav-link" data-scroll-target="#sens-difficile-la-machine-standard"><span class="header-section-number">1.3</span> Sens difficile (⟹) — La machine standard</a>
-  <ul class="collapse">
-  <li><a href="#étape-1-indicatrices" id="toc-étape-1-indicatrices" class="nav-link" data-scroll-target="#étape-1-indicatrices"><span class="header-section-number">1.3.1</span> Étape 1 — Indicatrices</a></li>
-  <li><a href="#étape-2-fonctions-étagées-positives" id="toc-étape-2-fonctions-étagées-positives" class="nav-link" data-scroll-target="#étape-2-fonctions-étagées-positives"><span class="header-section-number">1.3.2</span> Étape 2 — Fonctions étagées positives</a></li>
-  <li><a href="#étape-3-fonctions-positives-quelconques" id="toc-étape-3-fonctions-positives-quelconques" class="nav-link" data-scroll-target="#étape-3-fonctions-positives-quelconques"><span class="header-section-number">1.3.3</span> Étape 3 — Fonctions positives quelconques</a></li>
-  <li><a href="#étape-4-cas-général" id="toc-étape-4-cas-général" class="nav-link" data-scroll-target="#étape-4-cas-général"><span class="header-section-number">1.3.4</span> Étape 4 — Cas général</a></li>
+  <li><a href="#étape-1-indicatrices" id="toc-étape-1-indicatrices" class="nav-link" data-scroll-target="#étape-1-indicatrices">Étape 1 — Indicatrices</a></li>
+  <li><a href="#étape-2-fonctions-étagées-positives" id="toc-étape-2-fonctions-étagées-positives" class="nav-link" data-scroll-target="#étape-2-fonctions-étagées-positives">Étape 2 — Fonctions étagées positives</a></li>
+  <li><a href="#étape-3-fonctions-positives-quelconques" id="toc-étape-3-fonctions-positives-quelconques" class="nav-link" data-scroll-target="#étape-3-fonctions-positives-quelconques">Étape 3 — Fonctions positives quelconques</a></li>
+  <li><a href="#étape-4-cas-général" id="toc-étape-4-cas-général" class="nav-link" data-scroll-target="#étape-4-cas-général">Étape 4 — Cas général</a></li>
   </ul></li>
-  <li><a href="#observation-clé-compatibilité-avec-les-fibres" id="toc-observation-clé-compatibilité-avec-les-fibres" class="nav-link" data-scroll-target="#observation-clé-compatibilité-avec-les-fibres"><span class="header-section-number">1.4</span> Observation clé — Compatibilité avec les fibres</a></li>
-  <li><a href="#la-machine-standard-en-résumé" id="toc-la-machine-standard-en-résumé" class="nav-link" data-scroll-target="#la-machine-standard-en-résumé"><span class="header-section-number">1.5</span> La machine standard en résumé</a></li>
+  <li><a href="#observation-clé-compatibilité-avec-les-fibres" id="toc-observation-clé-compatibilité-avec-les-fibres" class="nav-link" data-scroll-target="#observation-clé-compatibilité-avec-les-fibres">Observation clé — Compatibilité avec les fibres</a></li>
+  <li><a href="#la-machine-standard-en-résumé" id="toc-la-machine-standard-en-résumé" class="nav-link" data-scroll-target="#la-machine-standard-en-résumé">La machine standard en résumé</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -272,36 +272,36 @@ window.Quarto = {
 
 
 
-<section id="lemme-de-factorisation-de-doob-démonstration" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Lemme de factorisation de Doob — Démonstration</h1>
-<section id="énoncé" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="énoncé"><span class="header-section-number">1.1</span> Énoncé</h2>
+<section id="lemme-de-factorisation-de-doob-démonstration" class="level1">
+<h1>Lemme de factorisation de Doob — Démonstration</h1>
+<section id="énoncé" class="level2">
+<h2 class="anchored" data-anchor-id="énoncé">Énoncé</h2>
 <p>Soient <span class="math inline">\(f : \Omega \to (E, \mathcal{E})\)</span> une application et <span class="math inline">\(g : \Omega \to \mathbb{R}\)</span>. Alors <span class="math inline">\(g\)</span> est <span class="math inline">\(\sigma(f)\)</span>-mesurable si et seulement s’il existe <span class="math inline">\(\varphi : (E, \mathcal{E}) \to (\mathbb{R}, \mathcal{B}(\mathbb{R}))\)</span> mesurable telle que <span class="math inline">\(g = \varphi \circ f\)</span>.</p>
 </section>
-<section id="sens-facile" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="sens-facile"><span class="header-section-number">1.2</span> Sens facile (⟸)</h2>
+<section id="sens-facile" class="level2">
+<h2 class="anchored" data-anchor-id="sens-facile">Sens facile (⟸)</h2>
 <p>Si <span class="math inline">\(g = \varphi \circ f\)</span>, alors pour tout <span class="math inline">\(B \in \mathcal{B}(\mathbb{R})\)</span> :</p>
 <p><span class="math display">\[g^{-1}(B) = (\varphi \circ f)^{-1}(B) = f^{-1}(\varphi^{-1}(B)).\]</span></p>
 <p>Comme <span class="math inline">\(\varphi\)</span> est mesurable, <span class="math inline">\(\varphi^{-1}(B) \in \mathcal{E}\)</span>, donc <span class="math inline">\(f^{-1}(\varphi^{-1}(B)) \in \sigma(f)\)</span>. Ainsi <span class="math inline">\(g\)</span> est <span class="math inline">\(\sigma(f)\)</span>-mesurable.</p>
 </section>
-<section id="sens-difficile-la-machine-standard" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="sens-difficile-la-machine-standard"><span class="header-section-number">1.3</span> Sens difficile (⟹) — La machine standard</h2>
+<section id="sens-difficile-la-machine-standard" class="level2">
+<h2 class="anchored" data-anchor-id="sens-difficile-la-machine-standard">Sens difficile (⟹) — La machine standard</h2>
 <p>On suppose <span class="math inline">\(g\)</span> mesurable par rapport à <span class="math inline">\(\sigma(f)\)</span> et on construit <span class="math inline">\(\varphi\)</span>.</p>
 <p>La structure de la preuve est la suivante : on traite d’abord les fonctions les plus simples (indicatrices), puis on remonte par linéarité et par passage à la limite croissante. C’est la <strong>machine standard</strong> — elle réapparaît dans toute la théorie de la mesure (théorèmes de transfert, Fubini, etc.).</p>
-<section id="étape-1-indicatrices" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="étape-1-indicatrices"><span class="header-section-number">1.3.1</span> Étape 1 — Indicatrices</h3>
+<section id="étape-1-indicatrices" class="level3">
+<h3 class="anchored" data-anchor-id="étape-1-indicatrices">Étape 1 — Indicatrices</h3>
 <p>Soit <span class="math inline">\(g = \mathbf{1}_A\)</span> avec <span class="math inline">\(A \in \sigma(f)\)</span>. Par définition de <span class="math inline">\(\sigma(f) = f^{-1}(\mathcal{E})\)</span>, il existe <span class="math inline">\(B \in \mathcal{E}\)</span> tel que <span class="math inline">\(A = f^{-1}(B)\)</span>. Alors :</p>
 <p><span class="math display">\[g(\omega) = \mathbf{1}_A(\omega) = \mathbf{1}_B(f(\omega)) = (\mathbf{1}_B \circ f)(\omega).\]</span></p>
 <p>On pose <span class="math inline">\(\varphi = \mathbf{1}_B \in \mathcal{E}\)</span>.</p>
 </section>
-<section id="étape-2-fonctions-étagées-positives" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="étape-2-fonctions-étagées-positives"><span class="header-section-number">1.3.2</span> Étape 2 — Fonctions étagées positives</h3>
+<section id="étape-2-fonctions-étagées-positives" class="level3">
+<h3 class="anchored" data-anchor-id="étape-2-fonctions-étagées-positives">Étape 2 — Fonctions étagées positives</h3>
 <p>Soit <span class="math inline">\(g = \sum_{i=1}^n a_i \mathbf{1}_{A_i} \geq 0\)</span> où les <span class="math inline">\(A_i = g^{-1}(\{a_i\}) \in \sigma(f)\)</span> forment une partition de <span class="math inline">\(\Omega\)</span>. Chaque <span class="math inline">\(A_i = f^{-1}(B_i)\)</span> pour un certain <span class="math inline">\(B_i \in \mathcal{E}\)</span>.</p>
 <p>Les <span class="math inline">\(A_i\)</span> étant disjoints, si <span class="math inline">\(y \in B_i \cap B_j\)</span> pour <span class="math inline">\(i \neq j\)</span>, alors <span class="math inline">\(f^{-1}(\{y\}) \subset A_i \cap A_j = \emptyset\)</span>, donc <span class="math inline">\(y \notin f(\Omega)\)</span>. On peut rendre les <span class="math inline">\(B_i\)</span> disjoints sans changer leurs préimages : poser <span class="math inline">\(B_i' = B_i \setminus \bigcup_{j &lt; i} B_j\)</span> donne <span class="math inline">\(f^{-1}(B_i') = A_i\)</span> et les <span class="math inline">\(B_i'\)</span> sont dans <span class="math inline">\(\mathcal{E}\)</span>, disjoints.</p>
 <p>On pose <span class="math inline">\(\varphi = \sum_{i=1}^n a_i \mathbf{1}_{B_i'}\)</span>, qui vérifie <span class="math inline">\(g = \varphi \circ f\)</span>.</p>
 </section>
-<section id="étape-3-fonctions-positives-quelconques" class="level3" data-number="1.3.3">
-<h3 data-number="1.3.3" class="anchored" data-anchor-id="étape-3-fonctions-positives-quelconques"><span class="header-section-number">1.3.3</span> Étape 3 — Fonctions positives quelconques</h3>
+<section id="étape-3-fonctions-positives-quelconques" class="level3">
+<h3 class="anchored" data-anchor-id="étape-3-fonctions-positives-quelconques">Étape 3 — Fonctions positives quelconques</h3>
 <p>Soit <span class="math inline">\(g \geq 0\)</span> mesurable par rapport à <span class="math inline">\(\sigma(f)\)</span>. Toute fonction mesurable positive est limite croissante de fonctions étagées positives ; on choisit <span class="math inline">\((g_n)\)</span> avec <span class="math inline">\(g_n \uparrow g\)</span>, chaque <span class="math inline">\(g_n\)</span> étant <span class="math inline">\(\sigma(f)\)</span>-mesurable.</p>
 <p>Par l’étape 2, il existe <span class="math inline">\(\varphi_n\)</span> mesurable telle que <span class="math inline">\(g_n = \varphi_n \circ f\)</span>. On pose :</p>
 <p><span class="math display">\[\varphi(y) = \limsup_{n \to \infty} \varphi_n(y).\]</span></p>
@@ -309,20 +309,20 @@ window.Quarto = {
 <p><span class="math display">\[(\varphi \circ f)(\omega) = \limsup_n \varphi_n(f(\omega)) = \limsup_n g_n(\omega) = g(\omega)\]</span></p>
 <p>puisque la suite <span class="math inline">\(g_n(\omega) \uparrow g(\omega)\)</span> converge.</p>
 </section>
-<section id="étape-4-cas-général" class="level3" data-number="1.3.4">
-<h3 data-number="1.3.4" class="anchored" data-anchor-id="étape-4-cas-général"><span class="header-section-number">1.3.4</span> Étape 4 — Cas général</h3>
+<section id="étape-4-cas-général" class="level3">
+<h3 class="anchored" data-anchor-id="étape-4-cas-général">Étape 4 — Cas général</h3>
 <p>Décomposer <span class="math inline">\(g = g^+ - g^-\)</span> où <span class="math inline">\(g^+ = \max(g,0)\)</span> et <span class="math inline">\(g^- = \max(-g,0)\)</span> sont <span class="math inline">\(\sigma(f)\)</span>-mesurables positives. Par l’étape 3, <span class="math inline">\(g^+ = \varphi^+ \circ f\)</span> et <span class="math inline">\(g^- = \varphi^- \circ f\)</span>. On pose <span class="math inline">\(\varphi = \varphi^+ - \varphi^-\)</span>.</p>
 </section>
 </section>
-<section id="observation-clé-compatibilité-avec-les-fibres" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="observation-clé-compatibilité-avec-les-fibres"><span class="header-section-number">1.4</span> Observation clé — Compatibilité avec les fibres</h2>
+<section id="observation-clé-compatibilité-avec-les-fibres" class="level2">
+<h2 class="anchored" data-anchor-id="observation-clé-compatibilité-avec-les-fibres">Observation clé — Compatibilité avec les fibres</h2>
 <p>La preuve révèle une structure fondamentale : <span class="math inline">\(g\)</span> est <span class="math inline">\(\sigma(f)\)</span>-mesurable <strong>si et seulement si</strong> <span class="math inline">\(g\)</span> est constante sur les fibres de <span class="math inline">\(f\)</span>, c’est-à-dire :</p>
 <p><span class="math display">\[f(\omega_1) = f(\omega_2) \implies g(\omega_1) = g(\omega_2).\]</span></p>
 <p>C’est exactement la condition pour qu’il existe une fonction <span class="math inline">\(\varphi\)</span> quelconque telle que <span class="math inline">\(g = \varphi \circ f\)</span>. L’apport du lemme est que la mesurabilité de <span class="math inline">\(g\)</span> entraîne celle de <span class="math inline">\(\varphi\)</span>.</p>
 <p>Intuitivement : <span class="math inline">\(f\)</span> partitionne <span class="math inline">\(\Omega\)</span> en fibres <span class="math inline">\(f^{-1}(\{y\})\)</span>. Une quantité <span class="math inline">\(g\)</span> est « calculable à partir de <span class="math inline">\(f\)</span> » exactement quand elle ne distingue pas les points d’une même fibre.</p>
 </section>
-<section id="la-machine-standard-en-résumé" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="la-machine-standard-en-résumé"><span class="header-section-number">1.5</span> La machine standard en résumé</h2>
+<section id="la-machine-standard-en-résumé" class="level2">
+<h2 class="anchored" data-anchor-id="la-machine-standard-en-résumé">La machine standard en résumé</h2>
 <p>La même structure en quatre étapes — indicatrices → étagées → positives → général — sert à démontrer quasi-systématiquement les résultats intégraux :</p>
 <table class="caption-top table">
 <colgroup>
