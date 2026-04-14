@@ -356,7 +356,7 @@ window.Quarto = {
 <p>Le vecteur p − v est dans V, et e est orthogonal à V, donc ⟨p − v, e⟩ = 0. Par Pythagore :</p>
 <p>‖x − v‖² = ‖p − v‖² + ‖e‖²</p>
 <p>Ce terme est minimal quand ‖p − v‖² = 0, c’est-à-dire v = p.&nbsp;Le minimum est ‖e‖², atteint uniquement en p.</p>
-<p><strong>Ce qu’on vient de montrer.</strong> La projection orthogonale p est le meilleur estimateur de x dans V. L’erreur e = x − p est orthogonale à V — elle ne contient aucune composante dans la direction de V qu’on aurait pu exploiter pour réduire la distance. Pythagore garantit que composante utile (dans V) et erreur résiduelle (orthogonale à V) ne se mélangent pas : leurs contributions au carré de la norme s’additionnent indépendamment.</p>
+<p><strong>Ce qu’on vient de montrer.</strong> La projection orthogonale p est le meilleur estimateur de x dans V au sens de la norme ‖·‖ induite par ⟨·,·⟩. L’erreur e = x − p est orthogonale à V — elle ne contient aucune composante dans la direction de V qu’on aurait pu exploiter pour réduire la distance. Pythagore garantit que composante utile (dans V) et erreur résiduelle (orthogonale à V) ne se mélangent pas : leurs contributions au carré de la norme s’additionnent indépendamment.</p>
 <p><strong>Pourquoi le produit scalaire est nécessaire.</strong> La preuve repose entièrement sur deux ingrédients : l’orthogonalité (pour définir e ⊥ V) et Pythagore (pour séparer les termes). Les deux viennent du produit scalaire. Sans lui, on ne peut ni décomposer x en composantes indépendantes, ni garantir que l’erreur est incompressible.</p>
 </section>
 <section id="la-règle-du-parallélogramme-théorème-de-jordanvon-neumann" class="level2">
@@ -387,7 +387,8 @@ window.Quarto = {
 <p>Donc ‖f + g‖ₚ = ‖f − g‖ₚ. La règle du parallélogramme exige alors :</p>
 <p>2‖f + g‖² = 2(‖f‖² + ‖g‖²)</p>
 <p>soit ‖f + g‖² = ‖f‖² + ‖g‖². Mais on sait aussi que ‖f + g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ, c’est-à-dire que la puissance p “additionne” les normes. Pour que la puissance 2 les additionne aussi, il faut p = 2. Pour tout autre p, la règle du parallélogramme est violée, et aucun produit scalaire ne peut engendrer la norme Lᵖ.</p>
-<p><strong>Lien avec la géométrie de la boule.</strong> La note précédente (voir <em>Mesurer la proximité de points dans un espace</em>) montrait que le produit scalaire rend la boule unité quadratique — sa frontière est un niveau de ⟨x,x⟩ = 1. En dimension finie, c’est une ellipsoïde. La boule L² est la seule boule Lᵖ qui soit une ellipsoïde : pour p &lt; 2, la boule est pincée (concave sur les diagonales) ; pour p &gt; 2, elle est gonflée (convexe mais trop arrondie aux coins). Seule l’ellipsoïde a la courbure quadratique qui permet projection = plus proche point pour tout sous-espace.</p>
+<p><strong>Lien avec la géométrie de la boule.</strong> Le plus proche point d’un sous-espace existe pour toute norme Lᵖ (unique si 1 &lt; p &lt; ∞). Mais la <strong>direction</strong> vers ce point dépend de la courbure de la boule au point de contact — et pour p ≠ 2, cette direction tourne quand x se déplace. Aucun supplémentaire fixe ne peut suivre : la projection linéaire est impossible. Pour p = 2, la boule est quadratique, la direction est toujours V⊥, et projection = plus proche point.</p>
+<p>Ce qu’on perd en quittant L² est développé dans les notes <em><a href="../maths appliquées/5. distance-hyperplan-lp.html">Distance à un hyperplan en norme ℓp</a></em> et <em><a href="../maths appliquées/6. application-de-dualite-et-perte-orthogonalite.html">Application de dualité et perte d’orthogonalité</a></em>.</p>
 
 
 </section>
