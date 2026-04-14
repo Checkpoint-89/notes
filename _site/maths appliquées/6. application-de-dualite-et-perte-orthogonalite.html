@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>variables-aléatoires – chekpoint-89</title>
+<title>application-de-dualite-et-perte-orthogonalite – chekpoint-89</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../maths appliquées/5. distance-hyperplan-lp.html" rel="next">
-<link href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html" rel="prev">
+<link href="../probabilités/0000. syllabus.html" rel="next">
+<link href="../maths appliquées/5. distance-hyperplan-lp.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -137,7 +137,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../maths appliquées/1. representation-geometrie-et-resolution.html">Maths appliquées</a></li><li class="breadcrumb-item"><a href="../maths appliquées/4. variables-aléatoires.html">4. Variables aleatoires</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../maths appliquées/1. representation-geometrie-et-resolution.html">Maths appliquées</a></li><li class="breadcrumb-item"><a href="../maths appliquées/6. application-de-dualite-et-perte-orthogonalite.html">6. Application de dualité et perte d’orthogonalité</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -192,7 +192,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../maths appliquées/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link active">
+  <a href="../maths appliquées/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">4. Variables aleatoires</span></a>
   </div>
 </li>
@@ -204,7 +204,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../maths appliquées/6. application-de-dualite-et-perte-orthogonalite.html" class="sidebar-item-text sidebar-link">
+  <a href="../maths appliquées/6. application-de-dualite-et-perte-orthogonalite.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">6. Application de dualité et perte d’orthogonalité</span></a>
   </div>
 </li>
@@ -296,135 +296,234 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#variables-aléatoires-et-géométrie-de-l2" id="toc-variables-aléatoires-et-géométrie-de-l2" class="nav-link active" data-scroll-target="#variables-aléatoires-et-géométrie-de-l2">Variables aléatoires et géométrie de <span class="math inline">\(L^2\)</span></a>
+  <li><a href="#application-de-dualité-et-perte-de-lorthogonalité-hors-du-cas-hilbertien" id="toc-application-de-dualité-et-perte-de-lorthogonalité-hors-du-cas-hilbertien" class="nav-link active" data-scroll-target="#application-de-dualité-et-perte-de-lorthogonalité-hors-du-cas-hilbertien">Application de dualité et perte de l’orthogonalité hors du cas hilbertien</a>
   <ul>
-  <li><a href="#variable-aléatoire" id="toc-variable-aléatoire" class="nav-link" data-scroll-target="#variable-aléatoire">Variable aléatoire</a></li>
-  <li><a href="#l2omega-mathcala-p-espace-et-norme" id="toc-l2omega-mathcala-p-espace-et-norme" class="nav-link" data-scroll-target="#l2omega-mathcala-p-espace-et-norme"><span class="math inline">\(L^2(\Omega, \mathcal{A}, P)\)</span> : espace et norme</a></li>
-  <li><a href="#lespérance-comme-produit-hermitien" id="toc-lespérance-comme-produit-hermitien" class="nav-link" data-scroll-target="#lespérance-comme-produit-hermitien">L’espérance comme produit hermitien</a></li>
-  <li><a href="#projections-dans-l2" id="toc-projections-dans-l2" class="nav-link" data-scroll-target="#projections-dans-l2">Projections dans <span class="math inline">\(L^2\)</span></a>
+  <li><a href="#i.-lapplication-de-dualité-j_p" id="toc-i.-lapplication-de-dualité-j_p" class="nav-link" data-scroll-target="#i.-lapplication-de-dualité-j_p">I. L’application de dualité <span class="math inline">\(J_p\)</span></a>
   <ul class="collapse">
-  <li><a href="#projection-sur-les-constantes-ex" id="toc-projection-sur-les-constantes-ex" class="nav-link" data-scroll-target="#projection-sur-les-constantes-ex">Projection sur les constantes : <span class="math inline">\(E(X)\)</span></a></li>
-  <li><a href="#projection-sur-les-variables-affines-en-y-la-régression-linéaire" id="toc-projection-sur-les-variables-affines-en-y-la-régression-linéaire" class="nav-link" data-scroll-target="#projection-sur-les-variables-affines-en-y-la-régression-linéaire">Projection sur les variables affines en <span class="math inline">\(Y\)</span> : la régression linéaire</a></li>
-  <li><a href="#projection-sur-les-fonctions-de-y-ex-mid-y" id="toc-projection-sur-les-fonctions-de-y-ex-mid-y" class="nav-link" data-scroll-target="#projection-sur-les-fonctions-de-y-ex-mid-y">Projection sur les fonctions de <span class="math inline">\(Y\)</span> : <span class="math inline">\(E(X \mid Y)\)</span></a></li>
-  <li><a href="#indépendance-en-moyenne-et-complète" id="toc-indépendance-en-moyenne-et-complète" class="nav-link" data-scroll-target="#indépendance-en-moyenne-et-complète">Indépendance en moyenne et complète</a></li>
-  <li><a href="#hiérarchie" id="toc-hiérarchie" class="nav-link" data-scroll-target="#hiérarchie">Hiérarchie</a></li>
+  <li><a href="#définition" id="toc-définition" class="nav-link" data-scroll-target="#définition">Définition</a></li>
+  <li><a href="#pourquoi-j_p-apparaît" id="toc-pourquoi-j_p-apparaît" class="nav-link" data-scroll-target="#pourquoi-j_p-apparaît">Pourquoi <span class="math inline">\(J_p\)</span> apparaît</a></li>
+  <li><a href="#propriétés-clés" id="toc-propriétés-clés" class="nav-link" data-scroll-target="#propriétés-clés">Propriétés clés</a></li>
+  <li><a href="#lien-avec-le-point-le-plus-proche" id="toc-lien-avec-le-point-le-plus-proche" class="nav-link" data-scroll-target="#lien-avec-le-point-le-plus-proche">Lien avec le point le plus proche</a></li>
+  </ul></li>
+  <li><a href="#ii.-le-cas-hilbertien-p-2" id="toc-ii.-le-cas-hilbertien-p-2" class="nav-link" data-scroll-target="#ii.-le-cas-hilbertien-p-2">II. Le cas hilbertien : <span class="math inline">\(p = 2\)</span></a>
+  <ul class="collapse">
+  <li><a href="#orthogonalité-et-projection-linéaire" id="toc-orthogonalité-et-projection-linéaire" class="nav-link" data-scroll-target="#orthogonalité-et-projection-linéaire">Orthogonalité et projection linéaire</a></li>
+  <li><a href="#pourquoi-cest-spécial" id="toc-pourquoi-cest-spécial" class="nav-link" data-scroll-target="#pourquoi-cest-spécial">Pourquoi c’est spécial</a></li>
+  </ul></li>
+  <li><a href="#iii.-le-cas-p-neq-2-la-non-linéarité" id="toc-iii.-le-cas-p-neq-2-la-non-linéarité" class="nav-link" data-scroll-target="#iii.-le-cas-p-neq-2-la-non-linéarité">III. Le cas <span class="math inline">\(p \neq 2\)</span> : la non-linéarité</a>
+  <ul class="collapse">
+  <li><a href="#ce-qui-survit" id="toc-ce-qui-survit" class="nav-link" data-scroll-target="#ce-qui-survit">Ce qui survit</a></li>
+  <li><a href="#ce-qui-casse" id="toc-ce-qui-casse" class="nav-link" data-scroll-target="#ce-qui-casse">Ce qui casse</a></li>
+  <li><a href="#orthogonalité-de-birkhoffjames" id="toc-orthogonalité-de-birkhoffjames" class="nav-link" data-scroll-target="#orthogonalité-de-birkhoffjames">Orthogonalité de Birkhoff–James</a></li>
+  <li><a href="#exemple-en-dimension-2" id="toc-exemple-en-dimension-2" class="nav-link" data-scroll-target="#exemple-en-dimension-2">Exemple en dimension 2</a></li>
+  </ul></li>
+  <li><a href="#iv.-rotation-dun-hyperplan-à-distance-constante" id="toc-iv.-rotation-dun-hyperplan-à-distance-constante" class="nav-link" data-scroll-target="#iv.-rotation-dun-hyperplan-à-distance-constante">IV. Rotation d’un hyperplan à distance constante</a>
+  <ul class="collapse">
+  <li><a href="#le-cadre" id="toc-le-cadre" class="nav-link" data-scroll-target="#le-cadre">Le cadre</a></li>
+  <li><a href="#ce-que-fait-j_p" id="toc-ce-que-fait-j_p" class="nav-link" data-scroll-target="#ce-que-fait-j_p">Ce que fait <span class="math inline">\(J_p\)</span></a></li>
+  </ul></li>
+  <li><a href="#v.-synthèse" id="toc-v.-synthèse" class="nav-link" data-scroll-target="#v.-synthèse">V. Synthèse</a>
+  <ul class="collapse">
+  <li><a href="#le-fil-logique" id="toc-le-fil-logique" class="nav-link" data-scroll-target="#le-fil-logique">Le fil logique</a></li>
+  <li><a href="#la-frontière" id="toc-la-frontière" class="nav-link" data-scroll-target="#la-frontière">La frontière</a></li>
   </ul></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../maths appliquées/1. representation-geometrie-et-resolution.html">Maths appliquées</a></li><li class="breadcrumb-item"><a href="../maths appliquées/4. variables-aléatoires.html">4. Variables aleatoires</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../maths appliquées/1. representation-geometrie-et-resolution.html">Maths appliquées</a></li><li class="breadcrumb-item"><a href="../maths appliquées/6. application-de-dualite-et-perte-orthogonalite.html">6. Application de dualité et perte d’orthogonalité</a></li></ol></nav></header>
 
 
 
 
-<section id="variables-aléatoires-et-géométrie-de-l2" class="level1">
-<h1>Variables aléatoires et géométrie de <span class="math inline">\(L^2\)</span></h1>
-<section id="variable-aléatoire" class="level2">
-<h2 class="anchored" data-anchor-id="variable-aléatoire">Variable aléatoire</h2>
-<p>Une <strong>variable aléatoire</strong> à valeurs dans <span class="math inline">\(\mathbb{K}\)</span> (<span class="math inline">\(\mathbb{R}\)</span> ou <span class="math inline">\(\mathbb{C}\)</span>) est une application mesurable <span class="math inline">\(X : (\Omega, \mathcal{A}, P) \to (\mathbb{K}, \mathcal{B}(\mathbb{K}))\)</span>, où <span class="math inline">\((\Omega, \mathcal{A}, P)\)</span> est un espace probabilisé. La mesurabilité garantit que les préimages de boréliens appartiennent à <span class="math inline">\(\mathcal{A}\)</span> et ont donc une probabilité bien définie. Sur <span class="math inline">\(\mathbb{C}\)</span>, une base de boréliens est donnée par les boules ouvertes : il suffit d’exiger <span class="math inline">\(\{|X - z| &lt; r\} \in \mathcal{A}\)</span> pour tout <span class="math inline">\(z \in \mathbb{C}\)</span>, <span class="math inline">\(r &gt; 0\)</span> — ce qui revient à demander que <span class="math inline">\(\operatorname{Re}(X)\)</span> et <span class="math inline">\(\operatorname{Im}(X)\)</span> soient simultanément mesurables. Sur <span class="math inline">\(\mathbb{R}\)</span>, la topologie d’ordre suffit et la condition se réduit à <span class="math inline">\(\{X \leq t\} \in \mathcal{A}\)</span> pour tout <span class="math inline">\(t\)</span>.</p>
-</section>
-<section id="l2omega-mathcala-p-espace-et-norme" class="level2">
-<h2 class="anchored" data-anchor-id="l2omega-mathcala-p-espace-et-norme"><span class="math inline">\(L^2(\Omega, \mathcal{A}, P)\)</span> : espace et norme</h2>
-<p><strong><span class="math inline">\(L^2\)</span> comme norme.</strong> La norme <span class="math inline">\(L^2\)</span> d’une variable aléatoire est <span class="math inline">\(\|X\|_2 = \sqrt{E(|X|^2)}\)</span>. Elle appartient à la famille des normes <span class="math inline">\(L^p\)</span> : <span class="math inline">\(\|X\|_p = E(|X|^p)^{1/p}\)</span>. Chaque valeur de <span class="math inline">\(p\)</span> donne une géométrie différente sur l’espace des variables aléatoires.</p>
-<p><strong><span class="math inline">\(L^2\)</span> comme espace.</strong> <span class="math inline">\(L^2(\Omega, \mathcal{A}, P)\)</span> est l’espace des variables aléatoires de carré intégrable :</p>
-<p><span class="math display">\[L^2(\Omega, \mathcal{A}, P) = \{ X \text{ variable aléatoire} : E(|X|^2) &lt; +\infty \}\]</span></p>
-<p>(À strictement parler, les éléments de <span class="math inline">\(L^2\)</span> sont des classes d’équivalence de variables aléatoires égales presque sûrement.)</p>
-<p>C’est un espace vectoriel sur <span class="math inline">\(\mathbb{K}\)</span> (si <span class="math inline">\(X\)</span> et <span class="math inline">\(Y\)</span> sont dans <span class="math inline">\(L^2\)</span>, alors <span class="math inline">\(aX + bY\)</span> aussi, car <span class="math inline">\(|aX+bY|^2 \leq 2|a|^2|X|^2 + 2|b|^2|Y|^2\)</span>, d’où <span class="math inline">\(E(|aX+bY|^2) \leq 2|a|^2 E(|X|^2) + 2|b|^2 E(|Y|^2) &lt; \infty\)</span>). On peut montrer que cet espace est <strong>complet</strong> pour la norme <span class="math inline">\(\|\cdot\|_2\)</span> (théorème de Riesz-Fischer) : c’est un espace de Banach.</p>
-<p><strong><span class="math inline">\(L^2\)</span> est le seul <span class="math inline">\(L^p\)</span> qui soit un espace de Hilbert.</strong> Sa norme est la seule de la famille à provenir d’un produit scalaire / hermitien — ce qu’on peut montrer par la règle du parallélogramme. Tous les autres <span class="math inline">\(L^p\)</span> (<span class="math inline">\(p \neq 2\)</span>) sont des espaces de Banach mais pas de Hilbert.</p>
-</section>
-<section id="lespérance-comme-produit-hermitien" class="level2">
-<h2 class="anchored" data-anchor-id="lespérance-comme-produit-hermitien">L’espérance comme produit hermitien</h2>
-<p>Sur <span class="math inline">\(L^2(\Omega, \mathcal{A}, P)\)</span> (réel ou complexe), on définit :</p>
-<p><span class="math inline">\(\langle X, Y \rangle = E(\bar{X}\,Y)\)</span></p>
-<p>C’est un <strong>produit hermitien</strong>.</p>
-<ul>
-<li><strong>Sesquilinéarité</strong> : conjugué-linéaire en <span class="math inline">\(X\)</span> (<span class="math inline">\(\langle aX, Y \rangle = \bar{a}\,\langle X,Y \rangle\)</span>), linéaire en <span class="math inline">\(Y\)</span> (<span class="math inline">\(\langle X, aY \rangle = a\,\langle X,Y \rangle\)</span>). Cela découle directement de la linéarité de l’espérance : <span class="math inline">\(E(\overline{aX} \cdot Y) = \bar{a}\, E(\bar{X}\, Y)\)</span>. Sur <span class="math inline">\(\mathbb{R}\)</span>, la conjugaison est triviale et cela se réduit à la bilinéarité.</li>
-<li><strong>Symétrie hermitienne</strong> : <span class="math inline">\(\langle X,Y \rangle = \overline{\langle Y,X \rangle}\)</span>, car <span class="math inline">\(E(\bar{X}\, Y) = \overline{E(\bar{Y}\,X)}\)</span>. Sur <span class="math inline">\(\mathbb{R}\)</span>, cela se réduit à la symétrie ordinaire <span class="math inline">\(E(XY) = E(YX)\)</span>.</li>
-<li><strong>Défini positif</strong> : <span class="math inline">\(\langle X,X \rangle = E(|X|^2) \geq 0\)</span>, et <span class="math inline">\(E(|X|^2) = 0 \implies X = 0\)</span> presque sûrement. Sur <span class="math inline">\(\mathbb{C}\)</span>, <span class="math inline">\(|X|^2 = X \cdot \bar{X}\)</span>, qui est bien réel et positif ; sur <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\(|X|^2 = X^2\)</span>.</li>
-</ul>
-<p>La norme associée est <span class="math inline">\(\|X\|_2 = \sqrt{\langle X,X \rangle} = \sqrt{E(|X|^2)}\)</span>. L’<strong>orthogonalité</strong> au sens de ce produit hermitien est <span class="math inline">\(\langle X,Y \rangle = 0\)</span>, c’est-à-dire <span class="math inline">\(E(\bar{X}\, Y) = 0\)</span>.</p>
-<p>Muni de ce produit hermitien, <strong><span class="math inline">\(L^2(\Omega, \mathcal{A}, P)\)</span> est un espace de Hilbert</strong>. Tout le formalisme de la projection orthogonale — existence, unicité, caractérisation par l’orthogonalité du résidu — s’applique directement.</p>
-</section>
-<section id="projections-dans-l2" class="level2">
-<h2 class="anchored" data-anchor-id="projections-dans-l2">Projections dans <span class="math inline">\(L^2\)</span></h2>
-<p><span class="math inline">\(L^2\)</span> contient des sous-espaces fermés naturels, emboîtés les uns dans les autres :</p>
-<p><strong>Variables constantes</strong> <span class="math inline">\(\subset\)</span> <strong>Variables affines en <span class="math inline">\(Y\)</span></strong> <span class="math inline">\(\subset\)</span> <strong>Variables mesurables par rapport à <span class="math inline">\(Y\)</span></strong></p>
-<p>Projeter <span class="math inline">\(X\)</span> sur chacun de ces sous-espaces répond à la question : “quelle est la meilleure approximation de <span class="math inline">\(X\)</span>, sachant ce qu’on connaît de <span class="math inline">\(Y\)</span> ?”</p>
-<section id="projection-sur-les-constantes-ex" class="level3">
-<h3 class="anchored" data-anchor-id="projection-sur-les-constantes-ex">Projection sur les constantes : <span class="math inline">\(E(X)\)</span></h3>
-<p>Le sous-espace <span class="math inline">\(V_0 = \{ \omega \mapsto c : c \in \mathbb{K} \}\)</span> des variables aléatoires constantes est un sous-espace fermé de dimension 1. En identifiant une constante <span class="math inline">\(c\)</span> à la variable constante <span class="math inline">\(\omega \mapsto c\)</span>, la projection de <span class="math inline">\(X\)</span> sur <span class="math inline">\(V_0\)</span> minimise <span class="math inline">\(\|X - c\|_2^2 = E(|X - c|^2)\)</span>. La condition d’orthogonalité du résidu exige, pour tout <span class="math inline">\(c_0 \in \mathbb{K}\)</span> :</p>
-<p><span class="math display">\[\langle c_0, X - c \rangle = \bar{c}_0 \cdot E(X - c) = 0 \implies c = E(X)\]</span></p>
+<section id="application-de-dualité-et-perte-de-lorthogonalité-hors-du-cas-hilbertien" class="level1">
+<h1>Application de dualité et perte de l’orthogonalité hors du cas hilbertien</h1>
 <blockquote class="blockquote">
-<p><strong>L’espérance <span class="math inline">\(E(X)\)</span> est la projection orthogonale de <span class="math inline">\(X\)</span> sur l’espace des constantes.</strong> Le résidu <span class="math inline">\(X - E(X)\)</span> est centré et orthogonal à toute constante.</p>
+<p><strong>Idée directrice.</strong> La dualité remplace la perpendicularité dès qu’on quitte le cadre hilbertien. En <span class="math inline">\(\ell_2\)</span>, l’application de dualité <span class="math inline">\(J_2\)</span> est linéaire (c’est Riesz) et la projection sur un hyperplan est linéaire. En <span class="math inline">\(\ell_p\)</span> (<span class="math inline">\(p \neq 2\)</span>), <span class="math inline">\(J_p\)</span> est non linéaire : la direction de projection tourne avec le point, et l’orthogonalité de Birkhoff–James remplace l’orthogonalité du produit hermitien.</p>
 </blockquote>
+<p>On reprend le cadre et les notations de la note précédente (<em>Distance à un hyperplan : convexité, dualité et tangence</em>) : <span class="math inline">\(\mathbb{C}^n\)</span> muni de <span class="math inline">\(\|\cdot\|_p\)</span>, hyperplans <span class="math inline">\(H_{\varphi,r} = \{x : \varphi(x) = r\}\)</span>, norme duale <span class="math inline">\(\|\varphi\|_*\)</span>.</p>
+<section id="i.-lapplication-de-dualité-j_p" class="level2">
+<h2 class="anchored" data-anchor-id="i.-lapplication-de-dualité-j_p">I. L’application de dualité <span class="math inline">\(J_p\)</span></h2>
+<p>C’est l’outil central qui gouverne la direction du point le plus proche. Avant de comparer <span class="math inline">\(p = 2\)</span> et <span class="math inline">\(p \neq 2\)</span>, il faut comprendre cet opérateur.</p>
+<section id="définition" class="level3">
+<h3 class="anchored" data-anchor-id="définition">Définition</h3>
+<p>Pour <span class="math inline">\(1 &lt; p &lt; \infty\)</span> et <span class="math inline">\(x \in \mathbb{C}^n \setminus \{0\}\)</span>, l’<strong>application de dualité</strong> (ou <em>duality map</em>) <span class="math inline">\(J_p\)</span> associe à <span class="math inline">\(x\)</span> la forme linéaire qui “teste” optimalement la norme de <span class="math inline">\(x\)</span> :</p>
+<p><span class="math display">\[J_p(x) = \|x\|_p^{2-p} \bigl(|x_k|^{p-2} \bar{x}_k\bigr)_{k=1}^n.\]</span></p>
+<p>Plus précisément, <span class="math inline">\(J_p(x)\)</span> est l’unique élément <span class="math inline">\(\varphi \in (\mathbb{C}^n)^*\)</span> tel que</p>
+<p><span class="math display">\[\varphi(x) = \|x\|_p^2 \quad \text{et} \quad \|\varphi\|_* = \|x\|_p.\]</span></p>
+<p>(On pose <span class="math inline">\(J_p(0) = 0\)</span>.)</p>
 </section>
-<section id="projection-sur-les-variables-affines-en-y-la-régression-linéaire" class="level3">
-<h3 class="anchored" data-anchor-id="projection-sur-les-variables-affines-en-y-la-régression-linéaire">Projection sur les variables affines en <span class="math inline">\(Y\)</span> : la régression linéaire</h3>
-<p>Le sous-espace <span class="math inline">\(V_1 = \{ aY + b : a, b \in \mathbb{K} \}\)</span> est un sous-espace fermé de dimension au plus 2 (en supposant <span class="math inline">\(Y \in L^2\)</span> non dégénérée). La condition d’orthogonalité du résidu — que <span class="math inline">\(X - (a^*Y + b^*)\)</span> soit orthogonal à tout élément de <span class="math inline">\(V_1\)</span>, c’est-à-dire <span class="math inline">\(\langle v, X - a^*Y - b^* \rangle = 0\)</span> pour tout <span class="math inline">\(v \in V_1\)</span> — donne le système :</p>
+<section id="pourquoi-j_p-apparaît" class="level3">
+<h3 class="anchored" data-anchor-id="pourquoi-j_p-apparaît">Pourquoi <span class="math inline">\(J_p\)</span> apparaît</h3>
+<p><span class="math inline">\(J_p(x)\)</span> est le gradient de <span class="math inline">\(\frac{1}{2}\|x\|_p^2\)</span> : c’est la direction de plus grande pente de la “fonction énergie”. En <span class="math inline">\(\ell_2\)</span>, le gradient de <span class="math inline">\(\frac{1}{2}\|x\|_2^2 = \frac{1}{2}\sum |x_k|^2\)</span> est <span class="math inline">\((\bar{x}_k)_k\)</span>, qui est exactement la forme <span class="math inline">\(y \mapsto \langle x, y \rangle = \sum \bar{x}_k y_k\)</span>. Donc <span class="math inline">\(J_2(x)\)</span> s’identifie à <span class="math inline">\(x\)</span> lui-même via le produit hermitien. En <span class="math inline">\(\ell_p\)</span> général, ce gradient prend la forme non linéaire ci-dessus.</p>
+</section>
+<section id="propriétés-clés" class="level3">
+<h3 class="anchored" data-anchor-id="propriétés-clés">Propriétés clés</h3>
+<ol type="1">
+<li><strong><span class="math inline">\(J_2\)</span> est linéaire</strong> (c’est l’identité, via Riesz). C’est l’exception.</li>
+<li><strong><span class="math inline">\(J_p\)</span> est non linéaire pour <span class="math inline">\(p \neq 2\)</span></strong> : elle envoie la sphère <span class="math inline">\(\ell_p\)</span> sur la sphère <span class="math inline">\(\ell_q\)</span> (avec <span class="math inline">\(1/p + 1/q = 1\)</span>) par un homéomorphisme, mais pas par une application linéaire.</li>
+<li><strong><span class="math inline">\(J_p\)</span> est un homéomorphisme</strong> <span class="math inline">\(\mathbb{C}^n \to (\mathbb{C}^n)^*\)</span> : bijectif, continu, d’inverse continu. L’inverse est (à identification près) <span class="math inline">\(J_q\)</span>.</li>
+<li><strong><span class="math inline">\(J_p\)</span> est homogène de degré 1</strong> : <span class="math inline">\(J_p(\lambda x) = \lambda J_p(x)\)</span> pour <span class="math inline">\(\lambda &gt; 0\)</span>, mais <strong>pas</strong> pour <span class="math inline">\(\lambda \in \mathbb{C}\)</span> quelconque quand <span class="math inline">\(p \neq 2\)</span>.</li>
+</ol>
+</section>
+<section id="lien-avec-le-point-le-plus-proche" class="level3">
+<h3 class="anchored" data-anchor-id="lien-avec-le-point-le-plus-proche">Lien avec le point le plus proche</h3>
+<p>Le plus proche point <span class="math inline">\(x_0 \in H_{\varphi,r}\)</span> de l’origine vérifie : <span class="math inline">\(J_p(x_0)\)</span> est proportionnel à <span class="math inline">\(\varphi\)</span>. Autrement dit, le gradient de l’énergie au point optimal est aligné avec la forme linéaire qui définit l’hyperplan — c’est la condition de Lagrange.</p>
+<p>En <span class="math inline">\(\ell_2\)</span>, <span class="math inline">\(J_2(x_0) \propto \varphi\)</span> donne <span class="math inline">\(x_0 \propto a\)</span> (le vecteur de Riesz de <span class="math inline">\(\varphi\)</span>) : la direction du plus proche point est fixée par <span class="math inline">\(\varphi\)</span>, indépendamment de la position. En <span class="math inline">\(\ell_p\)</span> général, <span class="math inline">\(J_p(x_0) \propto \varphi\)</span> est une équation non linéaire en <span class="math inline">\(x_0\)</span>, et la direction <span class="math inline">\(x_0/\|x_0\|\)</span> dépend non linéairement de l’orientation de <span class="math inline">\(\varphi\)</span>.</p>
+</section>
+</section>
+<section id="ii.-le-cas-hilbertien-p-2" class="level2">
+<h2 class="anchored" data-anchor-id="ii.-le-cas-hilbertien-p-2">II. Le cas hilbertien : <span class="math inline">\(p = 2\)</span></h2>
+<section id="orthogonalité-et-projection-linéaire" class="level3">
+<h3 class="anchored" data-anchor-id="orthogonalité-et-projection-linéaire">Orthogonalité et projection linéaire</h3>
+<p>Quand <span class="math inline">\(\|x\|_2 = \sqrt{x^* M x}\)</span> (avec <span class="math inline">\(M\)</span> hermitienne définie positive), tout fonctionne :</p>
+<ol type="1">
+<li>Le plus proche point de <span class="math inline">\(z\)</span> sur <span class="math inline">\(H_{\varphi,r}\)</span> est</li>
+</ol>
+<p><span class="math display">\[x_0 = z - \frac{\varphi(z) - r}{\varphi(M^{-1}a)} M^{-1}a, \quad \text{où } \varphi(x) = a^* M x = \langle a, x \rangle_M.\]</span></p>
+<ol start="2" type="1">
+<li>Le résidu <span class="math inline">\(z - x_0\)</span> est <strong>proportionnel à <span class="math inline">\(M^{-1}a\)</span></strong>, un vecteur fixé par <span class="math inline">\(\varphi\)</span> et <span class="math inline">\(M\)</span>.</li>
+<li>Ce résidu est <strong>orthogonal à <span class="math inline">\(H\)</span></strong> au sens de <span class="math inline">\(\langle \cdot, \cdot \rangle_M\)</span> : pour tout <span class="math inline">\(h \in \ker \varphi\)</span>, <span class="math inline">\(\langle z - x_0, h \rangle_M = 0\)</span>.</li>
+</ol>
+<p>La projection est donc <strong>linéaire en <span class="math inline">\(z\)</span></strong> (à <span class="math inline">\(H\)</span> fixé), et la direction de projection est <strong>fixe</strong> : c’est <span class="math inline">\(M^{-1}a\)</span>, déterminée par la seule donnée de l’hyperplan.</p>
+</section>
+<section id="pourquoi-cest-spécial" class="level3">
+<h3 class="anchored" data-anchor-id="pourquoi-cest-spécial">Pourquoi c’est spécial</h3>
+<p>Ce qui est exceptionnel n’est pas l’existence du minimum (la convexité suffit) ni son unicité (la stricte convexité suffit). C’est que l’application <span class="math inline">\(z \mapsto x_0\)</span> est <strong>affine</strong> : le point le plus proche dépend linéairement de <span class="math inline">\(z\)</span>. Cela repose entièrement sur le fait que <span class="math inline">\(J_2\)</span> est linéaire — ou, ce qui revient au même, que la norme provient d’un produit scalaire (voir la note 3, <em>Règle du parallélogramme</em>).</p>
+</section>
+</section>
+<section id="iii.-le-cas-p-neq-2-la-non-linéarité" class="level2">
+<h2 class="anchored" data-anchor-id="iii.-le-cas-p-neq-2-la-non-linéarité">III. Le cas <span class="math inline">\(p \neq 2\)</span> : la non-linéarité</h2>
+<section id="ce-qui-survit" class="level3">
+<h3 class="anchored" data-anchor-id="ce-qui-survit">Ce qui survit</h3>
 <ul>
-<li><span class="math inline">\(\langle 1, X - a^*Y - b^* \rangle = 0 \implies b^* = E(X) - a^* E(Y)\)</span></li>
-<li><span class="math inline">\(\langle Y, X - a^*Y - b^* \rangle = 0 \implies a^* = \text{Cov}(Y, X) / \text{Var}(Y) = \overline{\text{Cov}(X,Y)} / \text{Var}(Y)\)</span></li>
+<li>Le minimum <strong>existe</strong> (dimension finie, continuité).</li>
+<li>Pour <span class="math inline">\(1 &lt; p &lt; \infty\)</span>, il est <strong>unique</strong> (stricte convexité).</li>
+<li>La formule de distance <span class="math inline">\(\operatorname{dist}(z, H_{\varphi,r}) = |\varphi(z) - r|/\|\varphi\|_*\)</span> <strong>reste valable</strong>.</li>
+<li>L’interprétation par tangence boule/hyperplan <strong>reste valable</strong>.</li>
+<li>L’application de dualité <span class="math inline">\(J_p\)</span> fournit toujours la condition d’optimalité.</li>
 </ul>
-<p>où <strong><span class="math inline">\(\text{Cov}(X,Y) = E(\overline{(X-EX)} \cdot (Y-EY))\)</span></strong> est la covariance complexe (hermitienne : <span class="math inline">\(\text{Cov}(X,Y) = \overline{\text{Cov}(Y,X)}\)</span>) et <strong><span class="math inline">\(\text{Var}(Y) = E(|Y-EY|^2)\)</span></strong> est réelle.</p>
-<blockquote class="blockquote">
-<p>Le projecteur est donc :</p>
-<p><span class="math display">\[\hat{X}^{\text{lin}} = E(X) + \frac{\text{Cov}(Y,X)}{\text{Var}(Y)}\,(Y - E(Y)) = E(X) + \frac{\overline{\text{Cov}(X,Y)}}{\text{Var}(Y)}\,(Y - E(Y))\]</span></p>
-<p>C’est le <strong>meilleur prédicteur linéaire</strong> de <span class="math inline">\(X\)</span> par <span class="math inline">\(Y\)</span> — obtenu comme projection orthogonale sur <span class="math inline">\(V_1\)</span> dans la géométrie hermitienne de <span class="math inline">\(L^2\)</span>.</p>
-</blockquote>
-<p>En notant <span class="math inline">\(X_c = X-E(X)\)</span> et <span class="math inline">\(Y_c = Y-E(Y)\)</span>, on peut aussi écrire la partie centrée du projecteur sous la forme</p>
-<p><span class="math display">\[\hat{X}^{\text{lin}} - E(X) = \left\langle \frac{Y_c}{\|Y_c\|_2}, X_c \right\rangle \frac{Y_c}{\|Y_c\|_2}\]</span></p>
-<p>ce qui rend explicite qu’il s’agit de la projection orthogonale de <span class="math inline">\(X_c\)</span> sur la droite engendrée par <span class="math inline">\(Y_c\)</span>.</p>
-<p>En particulier, si <span class="math inline">\(\text{Cov}(X,Y) = 0\)</span>, alors <span class="math inline">\(a^* = 0\)</span> et le projecteur se réduit à <span class="math inline">\(E(X)\)</span> : l’absence de corrélation linéaire signifie exactement que connaître <span class="math inline">\(Y\)</span> ne permet pas d’améliorer la prédiction constante.</p>
-<p><strong>Lien avec les moindres carrés sur un échantillon.</strong> La formule <span class="math inline">\(a^* = \text{Cov}(Y,X)/\text{Var}(Y)\)</span> est l’analogue « en population » de la formule matricielle <span class="math inline">\(\hat{\beta} = (\mathbf{Z}^T\mathbf{Z})^{-1}\mathbf{Z}^T\mathbf{x}\)</span> des moindres carrés ordinaires — même principe de projection orthogonale, mais dans <span class="math inline">\(\mathbb{R}^n\)</span> muni du produit scalaire euclidien au lieu de <span class="math inline">\(L^2\)</span>.</p>
-<p><strong>Remarque de convention (statistiques/ML).</strong> En statistique appliquée, en traitement du signal ou en machine learning, on rencontre souvent la convention hermitienne inverse, linéaire en la première variable et conjugué-linéaire en la seconde : <span class="math inline">\(\langle X,Y\rangle = E(X\overline{Y})\)</span>. Avec cette convention, la même projection s’écrit naturellement avec le coefficient <span class="math inline">\(\text{Cov}(X,Y)/\text{Var}(Y)\)</span>, ce qui explique la forme la plus fréquente dans ces ouvrages.</p>
 </section>
-<section id="projection-sur-les-fonctions-de-y-ex-mid-y" class="level3">
-<h3 class="anchored" data-anchor-id="projection-sur-les-fonctions-de-y-ex-mid-y">Projection sur les fonctions de <span class="math inline">\(Y\)</span> : <span class="math inline">\(E(X \mid Y)\)</span></h3>
-<p>Le sous-espace des variables aléatoires de <span class="math inline">\(L^2\)</span> qui dépendent seulement de <span class="math inline">\(Y\)</span> est</p>
-<p><span class="math display">\[
-V_2 = \{ \text{variables de } L^2 \text{ qui dépendent seulement de } Y \}.
-\]</span></p>
-<p><span class="math inline">\(E(X \mid Y)\)</span> est une fonction de <span class="math inline">\(Y\)</span> : elle attribue à chaque valeur possible de <span class="math inline">\(Y\)</span> la meilleure estimation ponctuelle de <span class="math inline">\(X\)</span>.</p>
-<p><strong>Pourquoi c’est une projection.</strong> Le résidu <span class="math inline">\(X - E(X \mid Y)\)</span> a, par construction, une moyenne conditionnelle nulle dans chaque tranche <span class="math inline">\(Y = y\)</span>. Pour tester l’orthogonalité avec un élément quelconque <span class="math inline">\(g(Y) \in V_2\)</span>, on conditionne sur <span class="math inline">\(Y\)</span> :</p>
-<p><span class="math display">\[
-\langle g(Y),\, X - E(X\mid Y) \rangle
-= \int \overline{g(y)}\;\underbrace{E(X - E(X\mid Y) \mid Y\!=\!y)}_{=\,0}\;dP_Y(y)
-= 0.
-\]</span></p>
-<p>Le résidu est donc orthogonal à tout <span class="math inline">\(V_2\)</span>.</p>
-<blockquote class="blockquote">
-<p><strong><span class="math inline">\(E(X \mid Y)\)</span> est la projection orthogonale de <span class="math inline">\(X\)</span> sur <span class="math inline">\(V_2\)</span>.</strong> C’est le meilleur prédicteur de <span class="math inline">\(X\)</span> à partir de <span class="math inline">\(Y\)</span> au sens de l’erreur quadratique.</p>
-</blockquote>
-<p><strong>Note.</strong> La preuve complète repose sur la <span class="math inline">\(\sigma(Y)\)</span>-mesurabilité (<span class="math inline">\(V_2 = \{f(Y) : f \text{ borélienne}, f(Y) \in L^2\}\)</span>), la fermeture de <span class="math inline">\(V_2\)</span> dans <span class="math inline">\(L^2\)</span>, et le théorème de projection hilbertien — voir <em>Espérance conditionnelle et projection : preuve complète</em> (note à écrire).</p>
-</section>
-<section id="indépendance-en-moyenne-et-complète" class="level3">
-<h3 class="anchored" data-anchor-id="indépendance-en-moyenne-et-complète">Indépendance en moyenne et complète</h3>
-<p>Si <span class="math inline">\(E(X \mid Y) = E(X)\)</span>, la projection sur <span class="math inline">\(V_2\)</span> se réduit à la constante <span class="math inline">\(E(X)\)</span> : aucune fonction de <span class="math inline">\(Y\)</span> ne prédit mieux <span class="math inline">\(X\)</span> que sa moyenne. C’est l’<strong>indépendance en moyenne</strong> : la moyenne conditionnelle de <span class="math inline">\(X\)</span> sachant <span class="math inline">\(Y\)</span> ne dépend pas de <span class="math inline">\(Y\)</span>. Cela n’empêche pas <span class="math inline">\(Y\)</span> d’informer sur d’autres aspects de la loi de <span class="math inline">\(X\)</span> (variance, moments d’ordre supérieur…), d’où le qualificatif « en moyenne » — c’est strictement plus faible que l’indépendance complète.</p>
-<p>L’<strong>indépendance complète</strong> <span class="math inline">\(X \perp\!\!\!\perp Y\)</span> renforce la condition en l’imposant à toute fonction de <span class="math inline">\(X\)</span> :</p>
-<p><span class="math display">\[E(f(X) \mid Y) = E(f(X)) \qquad \text{pour toute } f.\]</span></p>
-<p>L’indépendance en moyenne ne teste que <span class="math inline">\(X\)</span> (i.e.&nbsp;<span class="math inline">\(f = \text{id}\)</span>) contre <span class="math inline">\(Y\)</span> ; l’indépendance complète teste toute <span class="math inline">\(f(X)\)</span>. C’est pour cela qu’une relation de type <span class="math inline">\(X = Y^2 Z\)</span> (avec <span class="math inline">\(Z\)</span> indépendant de <span class="math inline">\(Y\)</span>, de moyenne nulle) peut vérifier <span class="math inline">\(E(X \mid Y) = 0 = E(X)\)</span> tout en rendant <span class="math inline">\(X^2 = Y^4 Z^2\)</span> entièrement prévisible à partir de <span class="math inline">\(Y\)</span>.</p>
-<p><strong>Équivalence avec la factorisation des probabilités.</strong> En prenant <span class="math inline">\(f = \mathbf{1}_A\)</span> (<span class="math inline">\(A\)</span> borélien), la condition devient <span class="math inline">\(P(X \in A \mid Y) = P(X \in A)\)</span>. En intégrant contre <span class="math inline">\(\mathbf{1}_B(Y)\)</span> :</p>
-<p><span class="math display">\[P(X \in A,\, Y \in B) = P(X \in A)\,P(Y \in B) \qquad \text{pour tous boréliens } A, B\]</span></p>
-<p>qui est la définition usuelle de l’indépendance. Réciproquement, cette factorisation entraîne que la loi conditionnelle de <span class="math inline">\(X\)</span> sachant <span class="math inline">\(Y\)</span> est la loi marginale de <span class="math inline">\(X\)</span>, d’où <span class="math inline">\(E(f(X) \mid Y) = E(f(X))\)</span> pour toute <span class="math inline">\(f\)</span> intégrable.</p>
-<p><strong>Équivalence avec l’orthogonalité dans <span class="math inline">\(L^2\)</span>.</strong> L’indépendance complète équivaut aussi à ce que les sous-espaces des fonctions centrées de <span class="math inline">\(X\)</span> et de <span class="math inline">\(Y\)</span> soient <strong>orthogonaux</strong> dans <span class="math inline">\(L^2\)</span> :</p>
-<p><span class="math display">\[\langle f(X) - E(f(X)),\; g(Y) - E(g(Y)) \rangle = 0 \qquad \text{pour tous } f, g.\]</span></p>
-<p><span class="math inline">\((\Rightarrow)\)</span> Par la loi des espérances itérées et la <span class="math inline">\(\sigma(Y)\)</span>-mesurabilité de <span class="math inline">\(g(Y)\)</span> :</p>
-<p><span class="math display">\[E\!\Big[\overline{\big(f(X) - E(f(X))\big)} \cdot \big(g(Y) - E(g(Y))\big)\Big] = E\!\Big[(g(Y) - E(g(Y))) \cdot \underbrace{E\!\big(\overline{f(X) - E(f(X))} \mid Y\big)}_{= 0}\Big] = 0\]</span></p>
-<p>puisque l’indépendance donne <span class="math inline">\(E(h(X) \mid Y) = E(h(X))\)</span> pour toute <span class="math inline">\(h\)</span>, donc en particulier pour <span class="math inline">\(h = \bar{f}\)</span>.</p>
-<p><span class="math inline">\((\Leftarrow)\)</span> En développant le produit hermitien :</p>
-<p><span class="math display">\[\langle f(X) - E(f(X)),\; g(Y) - E(g(Y)) \rangle = E\!\big[\overline{f(X)} \cdot g(Y)\big] - E\!\big[\overline{f(X)}\big] \cdot E\!\big[g(Y)\big]\]</span></p>
-<p>La condition « pour tous <span class="math inline">\(f, g\)</span> » donne <span class="math inline">\(E[\overline{f(X)} \cdot g(Y)] = E[\overline{f(X)}] \cdot E[g(Y)]\)</span>. En prenant <span class="math inline">\(f = \overline{\mathbf{1}_A}\)</span> et <span class="math inline">\(g = \mathbf{1}_B\)</span>, on retrouve <span class="math inline">\(P(X \in A,\, Y \in B) = P(X \in A)\,P(Y \in B)\)</span>.</p>
-</section>
-<section id="hiérarchie" class="level3">
-<h3 class="anchored" data-anchor-id="hiérarchie">Hiérarchie</h3>
-<p>La hiérarchie des projections triviales résume le tout :</p>
+<section id="ce-qui-casse" class="level3">
+<h3 class="anchored" data-anchor-id="ce-qui-casse">Ce qui casse</h3>
 <ul>
-<li><span class="math inline">\(\text{Cov}(X,Y) = 0\)</span> (pas de lien linéaire) <span class="math inline">\(\implies\)</span> proj sur <span class="math inline">\(V_1 = E(X)\)</span></li>
-<li><span class="math inline">\(E(X \mid Y) = E(X)\)</span> (pas de lien en moyenne) <span class="math inline">\(\implies\)</span> proj sur <span class="math inline">\(V_2 = E(X)\)</span></li>
-<li><span class="math inline">\(X \perp\!\!\!\perp Y\)</span> (indépendance) <span class="math inline">\(\implies\)</span> proj de <strong><span class="math inline">\(f(X)\)</span></strong> sur <span class="math inline">\(V_2 = E(f(X))\)</span> pour tout <span class="math inline">\(f\)</span></li>
+<li>L’application <span class="math inline">\(z \mapsto x_0\)</span> (point le plus proche) n’est <strong>plus linéaire en <span class="math inline">\(z\)</span></strong>.</li>
+<li>La direction <span class="math inline">\(z - x_0\)</span> n’est <strong>plus fixe</strong> : elle tourne non linéairement avec <span class="math inline">\(z\)</span>.</li>
+<li>Il n’y a <strong>plus de projection linéaire</strong> qui donne le plus proche point.</li>
+<li>Il n’y a <strong>plus d’orthogonalité linéaire</strong> : ce qui la remplace est l’orthogonalité de Birkhoff–James.</li>
 </ul>
+</section>
+<section id="orthogonalité-de-birkhoffjames" class="level3">
+<h3 class="anchored" data-anchor-id="orthogonalité-de-birkhoffjames">Orthogonalité de Birkhoff–James</h3>
+<p>En norme quelconque, on dit que <span class="math inline">\(x\)</span> est <strong>orthogonal à <span class="math inline">\(y\)</span> au sens de Birkhoff–James</strong> si</p>
+<p><span class="math display">\[\|x + \lambda y\| \geq \|x\| \quad \text{pour tout } \lambda \in \mathbb{C}.\]</span></p>
+<p>On note <span class="math inline">\(x \perp_{BJ} y\)</span>. Le plus proche point <span class="math inline">\(x_0 \in H\)</span> de <span class="math inline">\(z\)</span> est exactement caractérisé par <span class="math inline">\((z - x_0) \perp_{BJ} h\)</span> pour tout <span class="math inline">\(h \in \ker \varphi\)</span>.</p>
+<p>En <span class="math inline">\(\ell_2\)</span>, <span class="math inline">\(\perp_{BJ}\)</span> coïncide avec l’orthogonalité du produit hermitien. En <span class="math inline">\(\ell_p\)</span> général, <span class="math inline">\(\perp_{BJ}\)</span> est :</p>
+<ul>
+<li><strong>non symétrique</strong> : <span class="math inline">\(x \perp_{BJ} y\)</span> n’implique pas <span class="math inline">\(y \perp_{BJ} x\)</span> ;</li>
+<li><strong>non linéaire</strong> : <span class="math inline">\(x \perp_{BJ} y\)</span> et <span class="math inline">\(x \perp_{BJ} z\)</span> n’impliquent pas <span class="math inline">\(x \perp_{BJ} (y + z)\)</span>.</li>
+</ul>
+<p>C’est ce qui empêche la projection d’être linéaire.</p>
+</section>
+<section id="exemple-en-dimension-2" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-en-dimension-2">Exemple en dimension 2</h3>
+<p>Considérons <span class="math inline">\(\mathbb{R}^2\)</span> en norme <span class="math inline">\(\ell_p\)</span> et la droite <span class="math inline">\(D = \{(t, t) : t \in \mathbb{R}\}\)</span>.</p>
+<p>Le plus proche point de <span class="math inline">\(z = (1, 0)\)</span> sur <span class="math inline">\(D\)</span> est le point <span class="math inline">\((t_0, t_0)\)</span> qui minimise <span class="math inline">\(|(1-t_0)|^p + |t_0|^p\)</span>. La condition d’optimalité donne</p>
+<p><span class="math display">\[|1-t_0|^{p-2}(1-t_0) = |t_0|^{p-2} t_0.\]</span></p>
+<ul>
+<li>En <span class="math inline">\(\ell_2\)</span> (<span class="math inline">\(p = 2\)</span>) : <span class="math inline">\(1 - t_0 = t_0\)</span>, donc <span class="math inline">\(t_0 = 1/2\)</span>. Le plus proche point est <span class="math inline">\((1/2, 1/2)\)</span>, et la direction <span class="math inline">\(z - x_0 = (1/2, -1/2)\)</span> est perpendiculaire à <span class="math inline">\(D\)</span>.</li>
+<li>En <span class="math inline">\(\ell_4\)</span> (<span class="math inline">\(p = 4\)</span>) : <span class="math inline">\((1-t_0)^3 = t_0^3\)</span>, donc encore <span class="math inline">\(t_0 = 1/2\)</span> — la symétrie du problème force le même résultat.</li>
+</ul>
+<p>Mais prenons <span class="math inline">\(z = (2, 1)\)</span> :</p>
+<ul>
+<li>En <span class="math inline">\(\ell_2\)</span> : <span class="math inline">\(t_0 = 3/2\)</span>, point <span class="math inline">\((3/2, 3/2)\)</span>, direction <span class="math inline">\((1/2, -1/2)\)</span> : <strong>la même direction</strong> que pour <span class="math inline">\(z = (1,0)\)</span>.</li>
+<li>En <span class="math inline">\(\ell_4\)</span> : <span class="math inline">\(t_0\)</span> résout <span class="math inline">\((2-t)^3 = (1-t)^3 + (t)^3 - ...\)</span>, une équation cubique sans solution simple. La direction <span class="math inline">\(z - x_0\)</span> est <strong>différente</strong> de celle pour <span class="math inline">\(z = (1,0)\)</span>.</li>
+</ul>
+<p>En <span class="math inline">\(\ell_2\)</span>, la direction de projection sur <span class="math inline">\(D\)</span> ne dépend que de <span class="math inline">\(D\)</span>. En <span class="math inline">\(\ell_p\)</span> (<span class="math inline">\(p \neq 2\)</span>), elle dépend aussi du point <span class="math inline">\(z\)</span> : la projection n’est pas linéaire.</p>
+</section>
+</section>
+<section id="iv.-rotation-dun-hyperplan-à-distance-constante" class="level2">
+<h2 class="anchored" data-anchor-id="iv.-rotation-dun-hyperplan-à-distance-constante">IV. Rotation d’un hyperplan à distance constante</h2>
+<section id="le-cadre" class="level3">
+<h3 class="anchored" data-anchor-id="le-cadre">Le cadre</h3>
+<p>On fixe <span class="math inline">\(r &gt; 0\)</span> et on fait varier <span class="math inline">\(\varphi\)</span> sur la sphère duale <span class="math inline">\(S_* = \{\varphi : \|\varphi\|_* = 1\}\)</span>. L’hyperplan <span class="math inline">\(H_{\varphi,r}\)</span> est alors à distance <span class="math inline">\(r\)</span> de l’origine.</p>
+<p>La question : quand <span class="math inline">\(\varphi\)</span> parcourt <span class="math inline">\(S_*\)</span>, comment bouge le point le plus proche de l’origine sur <span class="math inline">\(H_{\varphi,r}\)</span> ?</p>
+</section>
+<section id="ce-que-fait-j_p" class="level3">
+<h3 class="anchored" data-anchor-id="ce-que-fait-j_p">Ce que fait <span class="math inline">\(J_p\)</span></h3>
+<p>Le point le plus proche est</p>
+<p><span class="math display">\[x_0(\varphi) = r \cdot \frac{J_q(\varphi)}{\|\varphi\|_q^2}\]</span></p>
+<p>(en identifiant <span class="math inline">\(\varphi\)</span> à son vecteur de composantes <span class="math inline">\(a_k\)</span>, et <span class="math inline">\(J_q\)</span> étant l’application de dualité dans <span class="math inline">\(\ell_q\)</span>). L’application <span class="math inline">\(\varphi \mapsto x_0(\varphi)\)</span> est :</p>
+<ul>
+<li><strong>linéaire</strong> en <span class="math inline">\(\ell_2\)</span> (<span class="math inline">\(q = 2\)</span>, donc <span class="math inline">\(J_2\)</span> est l’identité) ;</li>
+<li><strong>non linéaire</strong> en <span class="math inline">\(\ell_p\)</span> (<span class="math inline">\(p \neq 2\)</span>) : la correspondance orientation <span class="math inline">\(\leftrightarrow\)</span> point de tangence est non linéaire.</li>
+</ul>
+<p>C’est une manifestation géométrique concrète de la non-linéarité de <span class="math inline">\(J_p\)</span>.</p>
+</section>
+</section>
+<section id="v.-synthèse" class="level2">
+<h2 class="anchored" data-anchor-id="v.-synthèse">V. Synthèse</h2>
+<section id="le-fil-logique" class="level3">
+<h3 class="anchored" data-anchor-id="le-fil-logique">Le fil logique</h3>
+<ol type="1">
+<li>Une norme <span class="math inline">\(\ell_p\)</span> définit des boules convexes.</li>
+<li>La convexité rend le problème de distance à un hyperplan bien posé (existence). La stricte convexité (<span class="math inline">\(1 &lt; p &lt; \infty\)</span>) donne l’unicité.</li>
+<li>Un hyperplan est défini par une forme linéaire <span class="math inline">\(\varphi\)</span>, pas par un vecteur : c’est la dualité.</li>
+<li>La norme duale <span class="math inline">\(\|\varphi\|_*\)</span> mesure la “hauteur” de l’hyperplan. La distance est <span class="math inline">\(|\varphi(z) - r|/\|\varphi\|_*\)</span>.</li>
+<li>Le point le plus proche est le point de tangence avec la première boule qui rencontre l’hyperplan.</li>
+<li>L’application de dualité <span class="math inline">\(J_p\)</span> gouverne la direction du point le plus proche. C’est le gradient de l’énergie, l’opérateur qui traduit la géométrie primale en géométrie duale.</li>
+<li>En <span class="math inline">\(\ell_2\)</span>, <span class="math inline">\(J_2\)</span> est linéaire (c’est Riesz) : la direction de projection est fixe, la projection est linéaire, et la dualité se réinterprète comme orthogonalité via le produit hermitien (éventuellement associé à <span class="math inline">\(M \neq I\)</span>).</li>
+<li>En <span class="math inline">\(\ell_p\)</span> (<span class="math inline">\(p \neq 2\)</span>), <span class="math inline">\(J_p\)</span> est non linéaire : la direction tourne avec le point, la projection n’est plus linéaire, et l’orthogonalité de Birkhoff–James remplace l’orthogonalité hilbertienne — elle est non symétrique et non linéaire.</li>
+</ol>
+</section>
+<section id="la-frontière" class="level3">
+<h3 class="anchored" data-anchor-id="la-frontière">La frontière</h3>
+<p>Ces deux notes touchent à la frontière entre deux mondes :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Hilbert</strong> (<span class="math inline">\(p = 2\)</span>)</th>
+<th><strong>Banach</strong> (<span class="math inline">\(p \neq 2\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Structure</td>
+<td>Produit hermitien <span class="math inline">\(\langle \cdot, \cdot \rangle_M\)</span></td>
+<td>Norme seule</td>
+</tr>
+<tr class="even">
+<td>Dualité</td>
+<td>Riesz : <span class="math inline">\((\mathbb{C}^n)^* \cong \mathbb{C}^n\)</span> linéairement</td>
+<td><span class="math inline">\(J_p\)</span> : homéomorphisme non linéaire</td>
+</tr>
+<tr class="odd">
+<td>Orthogonalité</td>
+<td>Linéaire, symétrique</td>
+<td>Birkhoff–James : non linéaire, non symétrique</td>
+</tr>
+<tr class="even">
+<td>Projection</td>
+<td>Linéaire, direction fixe</td>
+<td>Non linéaire, direction variable</td>
+</tr>
+<tr class="odd">
+<td>Normal à <span class="math inline">\(H\)</span></td>
+<td><span class="math inline">\(M^{-1}a\)</span> (vecteur fixe)</td>
+<td>Pas de “normale” canonique</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>En géométrie hilbertienne, connaître l’hyperplan suffit à connaître la direction de projection. En géométrie banachique, il faut aussi connaître le point.</p>
+</blockquote>
 
 
 </section>
@@ -834,13 +933,13 @@ V_2 = \{ \text{variables de } L^2 \text{ qui dépendent seulement de } Y \}.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html" class="pagination-link" aria-label="3. Projection orthogonale et produit scalaire">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">3. Projection orthogonale et produit scalaire</span>
+      <a href="../maths appliquées/5. distance-hyperplan-lp.html" class="pagination-link" aria-label="5. Distance à un hyperplan en norme ℓp">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">5. Distance à un hyperplan en norme ℓp</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../maths appliquées/5. distance-hyperplan-lp.html" class="pagination-link" aria-label="5. Distance à un hyperplan en norme ℓp">
-        <span class="nav-page-text">5. Distance à un hyperplan en norme ℓp</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../probabilités/0000. syllabus.html" class="pagination-link" aria-label="Syllabus">
+        <span class="nav-page-text">Syllabus</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

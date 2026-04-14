@@ -23,6 +23,21 @@ website:
     contents:
       - href: index.qmd
         text: Accueil
+      - section: "Maths appliquées"
+        collapsed: true
+        contents:
+          - href: maths appliquées/1. representation-geometrie-et-resolution.md
+            text: "1. Representation geometrie et resolution"
+          - href: maths appliquées/2. mesurer-la-proximite.md
+            text: "2. Mesurer la proximite"
+          - href: maths appliquées/3. projection-orthogonale-et-produit-scalaire.md
+            text: "3. Projection orthogonale et produit scalaire"
+          - href: maths appliquées/4. variables-aléatoires.md
+            text: "4. Variables aleatoires"
+          - href: maths appliquées/5. distance-hyperplan-lp.md
+            text: "5. Distance à un hyperplan en norme ℓp"
+          - href: maths appliquées/6. application-de-dualite-et-perte-orthogonalite.md
+            text: "6. Application de dualité et perte d'orthogonalité"
       - section: "Probabilités"
         collapsed: true
         contents:
@@ -38,17 +53,6 @@ website:
             text: "0121. Strictité de la hiérarchie borélienne"
           - href: probabilités/0200.mesures-et-probabilités.md
             text: "0200. Mesures et probabilités"
-      - section: "Maths appliquées"
-        collapsed: true
-        contents:
-          - href: maths appliquées/1. representation-geometrie-et-resolution.md
-            text: "1. Representation geometrie et resolution"
-          - href: maths appliquées/2. mesurer-la-proximite.md
-            text: "2. Mesurer la proximite"
-          - href: maths appliquées/3. projection-orthogonale-et-produit-scalaire.md
-            text: "3. Projection orthogonale et produit scalaire"
-          - href: maths appliquées/4. variables-aléatoires.md
-            text: "4. Variables aleatoires"
       - section: "Meaning Crisis"
         collapsed: true
         contents:
