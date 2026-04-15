@@ -6,6 +6,7 @@ project:
     - "maths appliquées/*.md"
     - "probabilités/*.md"
     - "metacrisis/*.md"
+    - "cheat sheets/*.md"
     - "!pronostics/"
 
 website:
@@ -23,6 +24,11 @@ website:
     contents:
       - href: index.qmd
         text: Accueil
+      - section: "Cheat Sheets"
+        collapsed: true
+        contents:
+          - href: cheat sheets/inegalites-fondamentales.md
+            text: "Inégalités fondamentales"
       - section: "Maths appliquées"
         collapsed: true
         contents:
