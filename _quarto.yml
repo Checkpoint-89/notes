@@ -24,7 +24,7 @@ website:
     contents:
       - href: index.qmd
         text: Accueil
-      - section: "Cheat Sheets"
+      - section: "Cheat sheets"
         collapsed: true
         contents:
           - href: cheat sheets/inegalites-fondamentales.md
@@ -59,7 +59,7 @@ website:
             text: "0121. Strictité de la hiérarchie borélienne"
           - href: probabilités/0200.mesures-et-probabilités.md
             text: "0200. Mesures et probabilités"
-      - section: "Meaning Crisis"
+      - section: "Meaning crisis"
         collapsed: true
         contents:
           - href: metacrisis/1.md
