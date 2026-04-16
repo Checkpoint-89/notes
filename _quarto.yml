@@ -3,6 +3,7 @@ project:
   output-dir: _site
   render:
     - "index.qmd"
+    - "essays/*.md"
     - "maths appliquées/*.md"
     - "probabilités/*.md"
     - "metacrisis/*.md"
@@ -24,6 +25,11 @@ website:
     contents:
       - href: index.qmd
         text: Accueil
+      - section: "Essays"
+        collapsed: true
+        contents:
+          - href: essays/les-mathematiques-par-le-geste.md
+            text: "Les mathematiques par le geste"
       - section: "Cheat sheets"
         collapsed: true
         contents:
