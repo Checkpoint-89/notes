@@ -3,6 +3,7 @@ project:
   output-dir: _site
   render:
     - "index.qmd"
+    - "polyglotte/*.md"
     - "essays/*.md"
     - "maths appliquées/*.md"
     - "probabilités/*.md"
@@ -25,6 +26,11 @@ website:
     contents:
       - href: index.qmd
         text: Accueil
+      - section: "Poliglotte"
+        collapsed: true
+        contents:
+          - href: polyglotte/[Russian]-gunpowder-how-it-changed-history.md
+            text: "Порох: как он изменил историю"
       - section: "Essays"
         collapsed: true
         contents:
