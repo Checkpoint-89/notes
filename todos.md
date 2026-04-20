@@ -1,3 +1,5 @@
 [Appartenance versus inclusion](probabilités/0100.%20tribus-et-espaces-mesurables.md#pourquoi-cela-marche): réconcilier les deux notations. => Ma confusion venait de l'étape implicite dans la version sigma algèbre. Au lieu de prendre directement une algèbre dans les parties de omega, on peut d'abord définir la famille des sous-ensembles de $\mathcal{P}(\Omega)$ qui sont des σ-algèbres contenant $\mathcal{E}$, puis prendre une σ-algèbre appartenant à cette famille.
 
 [Produit cartésien de tribus](probabilités/0100.%20tribus-et-espaces-mesurables.md#5.%20Tribu%20engendrée%20par%20une%20application): retravailler les espaces résultants de produits cartésiens.
+
+[Classes monotones et π-systèmes](probabilités/0100.%20tribus-et-espaces-mesurables.md) : ajouter une section dédiée sur la notion de π-système, de classe monotone et le théorème d’unicité des mesures.
