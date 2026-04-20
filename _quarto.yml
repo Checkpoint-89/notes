@@ -26,7 +26,7 @@ website:
     contents:
       - href: index.qmd
         text: Accueil
-      - section: "Poliglotte"
+      - section: "Polyglotte"
         collapsed: true
         contents:
           - href: polyglotte/[Russian]-gunpowder-how-it-changed-history.md
