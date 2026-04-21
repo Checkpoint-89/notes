@@ -479,19 +479,100 @@ window.Quarto = {
 <li>soit invariante par translation : <span class="math inline">\(\lambda(A + t) = \lambda(A)\)</span> ;</li>
 <li>soit σ-additive (c’est dans la définition de mesure).</li>
 </ul>
-<p>Le théorème de Vitali nous dit que ces trois propriétés sont incompatibles sur <span class="math inline">\(\mathcal P(\mathbb R)\)</span>, mais le passage à <span class="math inline">\(\mathcal B(\mathbb R)\)</span> rend la construction possible.</p>
+<p>Le paradoxe de Vitali montre que <span class="math inline">\(\mathcal{P}(\mathbb{R})\)</span> est trop grande : certaines parties de <span class="math inline">\(\mathbb{R}\)</span> ne peuvent recevoir aucune valeur de mesure compatible avec la σ-additivité, l’invariance par translation et la cohérence avec la longueur sur les intervalles. Mais Vitali ne dit pas quels ensembles retenir, ni même si une restriction raisonnable est possible et encore moins comment la construire. Ce sont les deux questions auxquelles Carathéodory répond.</p>
 </section>
 <section id="le-théorème-de-carathéodory-idée" class="level4">
 <h4 class="anchored" data-anchor-id="le-théorème-de-carathéodory-idée">Le théorème de Carathéodory (idée)</h4>
-<p>La construction repose sur un résultat général : le <strong>théorème d’extension de Carathéodory</strong>. L’idée est la suivante.</p>
-<p>On part d’une « pré-mesure » définie sur une famille simple d’ensembles — ici, la longueur sur les intervalles. On l’étend d’abord en une <strong>mesure extérieure</strong> <span class="math inline">\(\lambda^*\)</span> définie sur toutes les parties de <span class="math inline">\(\mathbb R\)</span> :</p>
-<p><span class="math display">\[\lambda^*(A) = \inf \Bigl\{ \sum_{n=1}^{\infty} (b_n - a_n) : A \subset \bigcup_{n=1}^{\infty} (a_n, b_n) \Bigr\}\]</span></p>
-<p>On recouvre <span class="math inline">\(A\)</span> par des intervalles ouverts et on prend la borne inférieure des sommes des longueurs de ces recouvrements. Cette mesure extérieure est définie sur <span class="math inline">\(\mathcal P(\mathbb R)\)</span> tout entier, mais elle n’est pas σ-additive en général (seulement σ-sous-additive). Le théorème de Carathéodory identifie alors une σ-algèbre — la tribu de Lebesgue <span class="math inline">\(\mathcal L\)</span> — sur laquelle <span class="math inline">\(\lambda^*\)</span> est σ-additive. La restriction de <span class="math inline">\(\lambda^*\)</span> à <span class="math inline">\(\mathcal L\)</span> est la <strong>mesure de Lebesgue</strong>.</p>
+<p>Le théorème d’extension de Carathéodory part d’une pré-mesure — qui encode les contraintes souhaitées (par exemple l’invariance par translation) sur des ensembles simples — et construit une mesure σ-additive sur une σ-algèbre qui contient la tribu engendrée par ces ensembles simples. La mesure est unique sur cette tribu engendrée sous hypothèse de σ-finitude.</p>
+<p>La construction repose sur un résultat général : le <strong>théorème d’extension de Carathéodory</strong>. L’idée se déploie en quatre étapes.</p>
+<hr>
+<p><strong>Première idée : encoder les contraintes dans une pré-mesure</strong></p>
+<p>Vitali ayant exclu <span class="math inline">\(\mathcal{P}(\mathbb{R})\)</span>, la question est de trouver la bonne famille d’ensembles sur laquelle construire une mesure. Plutôt que de chercher directement une mesure sur une tribu, on commence par spécifier ce qu’on veut sur une famille simple d’ensembles — typiquement des intervalles ou des rectangles. C’est la <strong>pré-mesure</strong> : une fonction σ-additive sur cette famille, qui encode toutes les contraintes qu’on souhaite imposer à la mesure finale. Dans le cas de Lebesgue, c’est la longueur <span class="math inline">\(b - a\)</span> sur les intervalles. Dans le cas de Stieltjes, c’est les incréments <span class="math inline">\(F(b) - F(a)\)</span> d’une fonction croissante.</p>
+<p>Ce geste est plus important qu’il n’y paraît : Carathéodory ne crée pas les propriétés de la mesure, il les <em>propage</em>. La pré-mesure est l’endroit où on décide de ce que seront ces propriétés de la mesure.</p>
+<blockquote class="blockquote">
+<p><strong>Remarques</strong>: la σ-additivité de la pré-mesure est une condition <em>conditionnelle</em> : si une union dénombrable disjointe de membres de la famille se trouve encore dans la famille, alors la valeur de la pré-mesure sur cette union est la somme des valeurs. La famille elle-même n’a pas besoin d’être stable par unions dénombrables — ni d’ailleurs par complémentation. C’est ce qui fait que son domaine est trop petit pour être une tribu, et c’est pourquoi toute la construction de Carathéodory est nécessaire.</p>
+<p>La σ-additivité implique en particulier la <strong>monotonie</strong> de la pré-mesure. Pour une mesure sur une σ-algèbre, la preuve est immédiate : <span class="math inline">\(B \setminus A\)</span> appartient à la σ-algèbre, donc <span class="math inline">\(m(B) = m(A) + m(B \setminus A) \geq m(A)\)</span>. Pour une pré-mesure, <span class="math inline">\(\mu\)</span> n’est définie que sur <span class="math inline">\(\mathcal{E}\)</span>, et <span class="math inline">\(B \setminus A\)</span> peut ne pas y appartenir — <span class="math inline">\(\mu(B \setminus A)\)</span> n’a alors pas de sens. On montre en général que <span class="math inline">\(B \setminus A\)</span> se décompose en union disjointe finie de membres de <span class="math inline">\(\mathcal{E}\)</span>, ce qui permet d’écrire <span class="math inline">\(\mu(B) = \mu(A) + \sum_k \mu(C_k) \geq \mu(A)\)</span>.</p>
+</blockquote>
+<hr>
+<p><strong>Deuxième idée : approximer par l’extérieur</strong></p>
+<p>À partir de la pré-mesure <span class="math inline">\(\mu\)</span>, on construit une <strong>mesure extérieure</strong> <span class="math inline">\(\mu^*\)</span> définie sur <em>toutes</em> les parties de <span class="math inline">\(\Omega\)</span> :</p>
+<p><span class="math display">\[\mu^*(A) = \inf \Bigl\{ \sum_{n} \mu(E_n) : A \subset \bigcup_{n} E_n, \, E_n \in \mathcal{E} \Bigr\}\]</span></p>
+<p>où <span class="math inline">\(\mathcal{E}\)</span> est la famille simple sur laquelle la pré-mesure est définie. On recouvre <span class="math inline">\(A\)</span> par des ensembles simples et on cherche le recouvrement le plus économique. Dans le cas de Lebesgue, <span class="math inline">\(\mathcal{E}\)</span> est la famille des intervalles ouverts et <span class="math inline">\(\mu^*(A)\)</span> est la borne inférieure des sommes de longueurs des recouvrements de <span class="math inline">\(A\)</span>.</p>
+<blockquote class="blockquote">
+<p><strong>Première zone de complexité.</strong> La difficulté est de montrer que <span class="math inline">\(\mu^*\)</span> coïncide avec <span class="math inline">\(\mu\)</span> sur <span class="math inline">\(\mathcal{E}\)</span> — que pour tout <span class="math inline">\(E \in \mathcal{E}\)</span>, l’inf sur tous les recouvrements redonne bien <span class="math inline">\(\mu(E)\)</span>. L’inégalité <span class="math inline">\(\mu^*(E) \leq \mu(E)\)</span> est immédiate : le recouvrement trivial <span class="math inline">\(\{E\}\)</span> est admissible et coûte <span class="math inline">\(\mu(E)\)</span>, donc l’inf est au plus <span class="math inline">\(\mu(E)\)</span>. L’inégalité <span class="math inline">\(\mu^*(E) \geq \mu(E)\)</span> est le vrai travail : il faut montrer que tout recouvrement de <span class="math inline">\(E\)</span> par des éléments de <span class="math inline">\(\mathcal{E}\)</span> — même chevauchant, même débordant — coûte au moins <span class="math inline">\(\mu(E)\)</span>. On y arrive en rendant le recouvrement disjoint — même technique que dans la preuve de la σ-sous-additivité — puis en appliquant la σ-additivité et la monotonie de <span class="math inline">\(\mu\)</span>. Cette preuve est entièrement générale : elle repose uniquement sur les propriétés abstraites de la pré-mesure, sans faire intervenir sa forme particulière.</p>
+</blockquote>
+<p>Par construction, <span class="math inline">\(\mu^*\)</span> est <strong>σ-sous-additive</strong> sur <span class="math inline">\(\mathcal{P}(\Omega)\)</span> : pour tout recouvrement d’une union, on peut concaténer les recouvrements de chaque partie, donc <span class="math inline">\(\mu^*(\bigcup_n A_n) \leq \sum_n \mu^*(A_n)\)</span>. Mais <span class="math inline">\(\mu^*\)</span> n’est pas σ-additive en général — l’égalité peut tomber en défaut sur des ensembles mal choisis. C’est précisément ce défaut qui motive l’étape suivante.</p>
+<hr>
+<p><strong>Troisième idée : sélectionner les bons ensembles</strong></p>
+<p>C’est le cœur du théorème. <span class="math inline">\(\mu^*\)</span> est définie sur tout <span class="math inline">\(\mathcal{P}(\Omega)\)</span>, mais elle n’est pas une mesure en général : elle vérifie la σ-sous-additivité, pas nécessairement l’égalité. On cherche donc la famille maximale d’ensembles sur laquelle la restriction de <span class="math inline">\(\mu^*\)</span> est σ-additive. Carathéodory propose le critère suivant : un ensemble <span class="math inline">\(A\)</span> est bon s’il découpe sans perte toute partie de <span class="math inline">\(\Omega\)</span>, c’est-à-dire si <span class="math inline">\(\mu^*(E) = \mu^*(E \cap A) + \mu^*(E \cap A^c)\)</span> pour tout <span class="math inline">\(E \subseteq \Omega\)</span>. Ce n’est pas un résultat — c’est une définition, choisie précisément parce qu’elle force la σ-additivité. Comme la sous-additivité donne toujours <span class="math inline">\(\mu^*(E) \leq \mu^*(E \cap A) + \mu^*(E \cap A^c)\)</span>, le critère se réduit à l’inégalité inverse. Le résultat non trivial — et c’est là le cœur de la démonstration du théorème de Carathéodory — est que la famille des ensembles vérifiant ce critère forme une σ-algèbre sur laquelle <span class="math inline">\(\mu^*\)</span> est bien σ-additive.</p>
+<p>Formellement, on dit qu’un ensemble <span class="math inline">\(A \subseteq \Omega\)</span> est <strong>mesurable au sens de Carathéodory</strong> s’il vérifie, pour toute partie <span class="math inline">\(E \subseteq \Omega\)</span> :</p>
+<p><span class="math display">\[\mu^*(E) = \mu^*(E \cap A) + \mu^*(E \cap A^c)\]</span></p>
+<p>On note <span class="math inline">\(\mathcal{A}^*\)</span> la famille de ces ensembles. C’est la plus grande famille sur laquelle <span class="math inline">\(\mu^*\)</span> est σ-additive : tout ensemble hors de <span class="math inline">\(\mathcal{A}^*\)</span> viole le critère, et <span class="math inline">\(\mu^*\)</span> y est strictement sous-additive.</p>
+<blockquote class="blockquote">
+<p><strong>Deuxième zone de complexité — le vrai travail de Carathéodory.</strong> La démonstration que <span class="math inline">\(\mathcal{A}^*\)</span> est bien une σ-algèbre et que <span class="math inline">\(\mu^*|_{\mathcal{A}^*}\)</span> est σ-additive est non triviale : le critère est défini ensemble par ensemble, et il faut vérifier que les opérations ensemblistes (complémentation, union dénombrable) le préservent. Mais il reste une troisième chose à montrer, tout aussi non triviale : que <span class="math inline">\(\mathcal{A}^*\)</span> contient tous les ensembles de la famille génératrice <span class="math inline">\(\mathcal{E}\)</span>, et donc toute la tribu engendrée <span class="math inline">\(\sigma(\mathcal{E})\)</span>. Sans cela, la construction serait vide — on aurait une belle mesure sur une σ-algèbre qui ignore les ensembles qu’on voulait mesurer.</p>
+<p>C’est cette richesse de <span class="math inline">\(\mathcal{A}^*\)</span> qui explique que dans le cas de Lebesgue la tribu de Lebesgue <span class="math inline">\(\mathcal{L} = \mathcal{A}^*\)</span> est strictement plus grande que <span class="math inline">\(\mathcal{B}(\mathbb{R})\)</span> : le critère de Carathéodory retient même certains ensembles non boréliens, sous-ensembles d’ensembles de mesure nulle.</p>
+</blockquote>
+<hr>
+<p><strong>Quatrième idée : l’unicité demande la σ-finitude</strong></p>
+<p>Une fois la mesure construite sur <span class="math inline">\(\mathcal{A}^*\)</span>, il faut montrer qu’elle est unique — qu’aucune autre mesure ne coïncide avec la pré-mesure sur les ensembles simples.</p>
+<blockquote class="blockquote">
+<p><strong>Troisième zone de complexité — propager l’accord jusqu’à la tribu engendrée.</strong> L’idée de la preuve d’unicité est simple : si deux mesures <span class="math inline">\(\mu_1\)</span> et <span class="math inline">\(\mu_2\)</span> coïncident sur tous les ensembles simples de <span class="math inline">\(\mathcal{E}\)</span>, alors elles coïncident sur toute la tribu <span class="math inline">\(\sigma(\mathcal{E})\)</span> engendrée par ces ensembles. On <em>propage</em> l’accord initial à tous les ensembles qu’on peut former par unions et intersections dénombrables.</p>
+<p>Ce passage à la limite — de la famille génératrice à la tribu — n’est valide que si la mesure est <strong>σ-finie</strong> au sens de la section 1 : <span class="math inline">\(\Omega = \bigcup_n E_n\)</span> avec <span class="math inline">\(\mu(E_n) &lt; \infty\)</span>. L’idée est de travailler morceau par morceau sur chaque <span class="math inline">\(E_n\)</span>, où les mesures sont finies et les passages à la limite sans ambiguïté. Sans σ-finitude, on peut se retrouver à soustraire <span class="math inline">\(\infty - \infty\)</span>, et l’unicité peut tomber en défaut.</p>
+<p><em>Remarque.</em> Cette unicité vaut sur <span class="math inline">\(\sigma(\mathcal{E})\)</span>, pas nécessairement sur tout <span class="math inline">\(\mathcal{A}^*\)</span>. La construction de Carathéodory peut produire une σ-algèbre <span class="math inline">\(\mathcal{A}^*\)</span> strictement plus grande que <span class="math inline">\(\sigma(\mathcal{E})\)</span> — c’est le cas de Lebesgue, où <span class="math inline">\(\mathcal{L} \supsetneq \mathcal{B}(\mathbb{R})\)</span> — et sur cet excédent, la mesure est définie de façon canonique par la construction, mais pas nécessairement unique.</p>
+</blockquote>
+<hr>
+<p><strong>Un deuxième exemple : la mesure de Lebesgue-Stieltjes</strong></p>
+<p>Carathéodory s’applique bien au-delà de Lebesgue. Soit <span class="math inline">\(F : \mathbb{R} \to \mathbb{R}\)</span> une fonction croissante et continue à droite. On définit une pré-mesure sur les intervalles semi-ouverts par :</p>
+<p><span class="math display">\[\mu_F((a,b]) = F(b) - F(a)\]</span></p>
+<p>Cette pré-mesure encode une distribution de masse qui n’est plus nécessairement uniforme — <span class="math inline">\(F\)</span> peut s’accumuler sur certaines régions et être plate ailleurs. Carathéodory s’applique exactement de la même façon : on construit la mesure extérieure par recouvrement, le critère de découpage sélectionne les bons ensembles, et on obtient une mesure <span class="math inline">\(\mu_F\)</span> sur <span class="math inline">\(\mathcal{B}(\mathbb{R})\)</span>.</p>
+<p>Ce cadre unifie des cas très différents :<br>
+- Si <span class="math inline">\(F(x) = x\)</span>, on retrouve la mesure de Lebesgue<br>
+- Si <span class="math inline">\(F\)</span> est une fonction de répartition d’une loi continue, on obtient cette loi<br>
+- Si <span class="math inline">\(F\)</span> est un escalier, on obtient une mesure discrète concentrée sur les points de saut</p>
+<p>La mesure <span class="math inline">\(\mu_F\)</span> ainsi construite s’appelle la <strong>mesure de Lebesgue-Stieltjes associée à <span class="math inline">\(F\)</span></strong> : c’est une famille de mesures, une pour chaque <span class="math inline">\(F\)</span> croissante continue à droite. Le fait que ces trois cas relèvent du même théorème montre que Carathéodory n’est pas une construction ad hoc pour Lebesgue — c’est un mécanisme universel de construction de mesures à partir de données simples.</p>
+<hr>
+<p><strong>Le tableau d’ensemble</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Étape</th>
+<th>Outil</th>
+<th>Zone de complexité</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Spécifier les contraintes</td>
+<td>Pré-mesure</td>
+<td>Choix de l’utilisateur</td>
+</tr>
+<tr class="even">
+<td>Étendre à tous les ensembles</td>
+<td>Mesure extérieure</td>
+<td>Cohérence avec la pré-mesure sur les ensembles simples</td>
+</tr>
+<tr class="odd">
+<td>Sélectionner les bons ensembles</td>
+<td>Critère de Carathéodory</td>
+<td>Former une σ-algèbre et garantir la σ-additivité</td>
+</tr>
+<tr class="even">
+<td>Montrer l’unicité</td>
+<td>π-système + σ-finitude</td>
+<td>Contrôler les passages à la limite</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="énoncé" class="level4">
 <h4 class="anchored" data-anchor-id="énoncé">Énoncé</h4>
 <p><strong>Théorème (existence et unicité).</strong> Il existe une unique mesure <span class="math inline">\(\lambda\)</span> sur <span class="math inline">\((\mathbb R, \mathcal B(\mathbb R))\)</span> telle que <span class="math inline">\(\lambda([a,b]) = b - a\)</span> pour tout intervalle <span class="math inline">\([a,b]\)</span>.</p>
-<p>L’unicité vient du fait que les intervalles engendrent <span class="math inline">\(\mathcal B(\mathbb R)\)</span> et forment un système « suffisamment stable » (un π-système). Le lemme de classe monotone (ou le théorème d’unicité des mesures) garantit qu’une mesure σ-finie est entièrement déterminée par ses valeurs sur un π-système qui engendre la tribu.</p>
+<p>C’est exactement ce que la construction de Carathéodory garantit : la pré-mesure longueur sur les intervalles se prolonge en une mesure σ-additive sur <span class="math inline">\(\sigma(\mathcal{E}) = \mathcal{B}(\mathbb{R})\)</span>, et ce prolongement est unique car les intervalles forment un π-système qui engendre <span class="math inline">\(\mathcal{B}(\mathbb{R})\)</span>.</p>
 </section>
 <section id="tribu-de-lebesgue-vs-tribu-borélienne" class="level4">
 <h4 class="anchored" data-anchor-id="tribu-de-lebesgue-vs-tribu-borélienne">Tribu de Lebesgue vs tribu borélienne</h4>
@@ -511,9 +592,9 @@ window.Quarto = {
 </section>
 <section id="ensembles-de-mesure-nulle-et-ensembles-négligeables" class="level4">
 <h4 class="anchored" data-anchor-id="ensembles-de-mesure-nulle-et-ensembles-négligeables">Ensembles de mesure nulle et ensembles négligeables</h4>
-<p><strong>Définition.</strong> Un ensemble <span class="math inline">\(A\)</span> est <strong>négligeable</strong> (pour la mesure <span class="math inline">\(m\)</span>) si <span class="math inline">\(m(A) = 0\)</span>.Un ensemble est <strong><span class="math inline">\(m\)</span>-négligeable</strong> s’il est contenu dans un ensemble mesurable de mesure nulle.</p>
-<p>Les propriétés « qui sont vraies sauf sur un ensemble négligeable » jouent un rôle central en théorie de la mesure. On dit qu’une propriété est vraie <strong>presque partout</strong> (abrégé p.p., ou <strong>presque sûrement</strong> en probabilités, abrégé p.s.) si l’ensemble des points où elle est fausse est négligeable.</p>
-<p><em>Propriétés des ensembles négligeables.</em> Toute partie d’un ensemble négligeable est négligeable (dans la tribu de Lebesgue ; pas nécessairement dans <span class="math inline">\(\mathcal B(\mathbb R)\)</span> — c’est la question de la complétude). Toute union dénombrable d’ensembles négligeables est négligeable (par σ-sous-additivité).</p>
+<p><strong>Définition.</strong> Un ensemble mesurable <span class="math inline">\(A \in \mathcal{A}\)</span> est <strong>de mesure nulle</strong> (pour <span class="math inline">\(m\)</span>) si <span class="math inline">\(m(A) = 0\)</span>. Un ensemble <span class="math inline">\(A \subseteq \Omega\)</span> (pas nécessairement mesurable) est <strong><span class="math inline">\(m\)</span>-négligeable</strong> s’il est contenu dans un ensemble mesurable de mesure nulle.</p>
+<p>Les propriétés « qui sont vraies sauf sur un ensemble négligeable » jouent un rôle central en théorie de la mesure. On dit qu’une propriété est vraie <strong>presque partout</strong> (abrégé p.p., ou <strong>presque sûrement</strong> en probabilités, abrégé p.s.) si l’ensemble des points où elle est fausse est de mesure nulle (ou plus généralement négligeable).</p>
+<p><em>Propriétés.</em> Toute partie d’un ensemble de mesure nulle est négligeable (dans la tribu de Lebesgue, elle est même mesurable de mesure nulle ; pas nécessairement dans <span class="math inline">\(\mathcal B(\mathbb R)\)</span> — c’est précisément la question de la complétude). Toute union dénombrable d’ensembles de mesure nulle est de mesure nulle (par σ-sous-additivité).</p>
 </section>
 </section>
 <section id="probabilités-axiomes-de-kolmogorov" class="level3">
@@ -585,7 +666,7 @@ window.Quarto = {
 <h4 class="anchored" data-anchor-id="mesure-absolument-continue">Mesure absolument continue</h4>
 <p><strong>Définition.</strong> Soient <span class="math inline">\(\mu\)</span> et <span class="math inline">\(\nu\)</span> deux mesures sur <span class="math inline">\((\Omega, \mathcal A)\)</span>. On dit que <span class="math inline">\(\mu\)</span> est <strong>absolument continue</strong> par rapport à <span class="math inline">\(\nu\)</span>, et on écrit <span class="math inline">\(\mu \ll \nu\)</span>, si</p>
 <p><span class="math display">\[\forall A \in \mathcal A, \quad \nu(A) = 0 \implies \mu(A) = 0.\]</span></p>
-<p>Autrement dit, <span class="math inline">\(\mu\)</span> ne charge pas les ensembles <span class="math inline">\(\nu\)</span>-négligeables : tout ce qui est invisible pour <span class="math inline">\(\nu\)</span> l’est aussi pour <span class="math inline">\(\mu\)</span>.</p>
+<p>Autrement dit, <span class="math inline">\(\mu\)</span> ne charge pas les ensembles <span class="math inline">\(\nu\)</span>-négligeables : tout ce qui est invisible pour <span class="math inline">\(\nu\)</span> l’est aussi pour <span class="math inline">\(\mu\)</span>. C’est exactement la condition nécessaire pour qu’une densité existe : si <span class="math inline">\(\mu\)</span> chargeait un ensemble <span class="math inline">\(A\)</span> avec <span class="math inline">\(\nu(A) = 0\)</span>, aucune fonction <span class="math inline">\(f\)</span> ne pourrait rendre compte de cette masse via <span class="math inline">\(\int_A f \, d\nu = 0\)</span>. La continuité absolue est donc non seulement suffisante (c’est ce que dit Radon-Nikodym), mais aussi nécessaire.</p>
 <p><em>Exemples.</em></p>
 <ul>
 <li>Si <span class="math inline">\(P(A) = \int_A f \, d\lambda\)</span> pour une densité <span class="math inline">\(f \geq 0\)</span>, alors <span class="math inline">\(P \ll \lambda\)</span>. En effet, si <span class="math inline">\(\lambda(A) = 0\)</span>, l’intégrale de <span class="math inline">\(f\)</span> sur <span class="math inline">\(A\)</span> est nulle.</li>
