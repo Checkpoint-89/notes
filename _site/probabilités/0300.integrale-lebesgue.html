@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>integrale-lebesgue – chekpoint-89</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-f670ab49fb9634e9dab58972b11477cb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">chekpoint-89</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Mes notes</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Accueil</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Polyglotte</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../polyglotte/[Russian]-gunpowder-how-it-changed-history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Порох: как он изменил историю</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Essays</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../essays/les-mathematiques-par-le-geste.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Les mathematiques par le geste</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Cheat sheets</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cheat sheets/inegalites-fondamentales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inégalités fondamentales</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Maths appliquées</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../maths appliquées/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Representation geometrie et resolution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../maths appliquées/2. mesurer-la-proximite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Mesurer la proximite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Projection orthogonale et produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../maths appliquées/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Variables aleatoires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../maths appliquées/5. distance-hyperplan-lp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Distance à un hyperplan en norme ℓp</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../maths appliquées/6. application-de-dualite-et-perte-orthogonalite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Application de dualité et perte d’orthogonalité</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Probabilités</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0000. syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0100. tribus-et-espaces-mesurables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0100. Tribus et espaces mesurables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0110. lemme-de-factorisation-doob.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0110. Lemme de factorisation de Doob</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0120. nombres-transfinis-et-ordinaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0120. Nombres transfinis et ordinaux</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0121. strictité-de-la-hiérarchie-borélienne.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0121. Strictité de la hiérarchie borélienne</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probabilités/0200.mesures-et-probabilités.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0200. Mesures et probabilités</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Meaning crisis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../metacrisis/1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. All Is Fucked Up</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../metacrisis/2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Traditions &amp; Meaning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../metacrisis/3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Consciousness</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#probabilités" id="toc-probabilités" class="nav-link active" data-scroll-target="#probabilités">Probabilités</a>
+  <ul>
+  <li><a href="#iii.-construction-et-convergence-de-lintégrale-de-lebesgue" id="toc-iii.-construction-et-convergence-de-lintégrale-de-lebesgue" class="nav-link" data-scroll-target="#iii.-construction-et-convergence-de-lintégrale-de-lebesgue">III. Construction et convergence de l’intégrale de Lebesgue</a>
+  <ul class="collapse">
+  <li><a href="#fonctions-mesurables-et-approximation-par-fonctions-étagées" id="toc-fonctions-mesurables-et-approximation-par-fonctions-étagées" class="nav-link" data-scroll-target="#fonctions-mesurables-et-approximation-par-fonctions-étagées">1. Fonctions mesurables et approximation par fonctions étagées</a>
+  <ul class="collapse">
+  <li><a href="#pourquoi-la-mesurabilité" id="toc-pourquoi-la-mesurabilité" class="nav-link" data-scroll-target="#pourquoi-la-mesurabilité">Pourquoi la mesurabilité</a></li>
+  <li><a href="#définition" id="toc-définition" class="nav-link" data-scroll-target="#définition">Définition</a></li>
+  <li><a href="#fonctions-étagées" id="toc-fonctions-étagées" class="nav-link" data-scroll-target="#fonctions-étagées">Fonctions étagées</a></li>
+  <li><a href="#théorème-dapproximation" id="toc-théorème-dapproximation" class="nav-link" data-scroll-target="#théorème-dapproximation">Théorème d’approximation</a></li>
+  </ul></li>
+  <li><a href="#intégrale-de-lebesgue-construction-par-les-fonctions-étagées" id="toc-intégrale-de-lebesgue-construction-par-les-fonctions-étagées" class="nav-link" data-scroll-target="#intégrale-de-lebesgue-construction-par-les-fonctions-étagées">2. Intégrale de Lebesgue : construction par les fonctions étagées</a>
+  <ul class="collapse">
+  <li><a href="#le-problème-de-riemann" id="toc-le-problème-de-riemann" class="nav-link" data-scroll-target="#le-problème-de-riemann">Le problème de Riemann</a></li>
+  <li><a href="#étape-1-intégrale-dune-fonction-étagée-positive" id="toc-étape-1-intégrale-dune-fonction-étagée-positive" class="nav-link" data-scroll-target="#étape-1-intégrale-dune-fonction-étagée-positive">Étape 1 : intégrale d’une fonction étagée positive</a></li>
+  <li><a href="#étape-2-intégrale-dune-fonction-mesurable-positive" id="toc-étape-2-intégrale-dune-fonction-mesurable-positive" class="nav-link" data-scroll-target="#étape-2-intégrale-dune-fonction-mesurable-positive">Étape 2 : intégrale d’une fonction mesurable positive</a></li>
+  <li><a href="#étape-3-intégrale-dune-fonction-quelconque" id="toc-étape-3-intégrale-dune-fonction-quelconque" class="nav-link" data-scroll-target="#étape-3-intégrale-dune-fonction-quelconque">Étape 3 : intégrale d’une fonction quelconque</a></li>
+  <li><a href="#propriétés-de-lintégrale" id="toc-propriétés-de-lintégrale" class="nav-link" data-scroll-target="#propriétés-de-lintégrale">Propriétés de l’intégrale</a></li>
+  </ul></li>
+  <li><a href="#théorème-de-convergence-monotone-beppo-levi" id="toc-théorème-de-convergence-monotone-beppo-levi" class="nav-link" data-scroll-target="#théorème-de-convergence-monotone-beppo-levi">3. Théorème de convergence monotone (Beppo Levi)</a>
+  <ul class="collapse">
+  <li><a href="#lenjeu" id="toc-lenjeu" class="nav-link" data-scroll-target="#lenjeu">L’enjeu</a></li>
+  <li><a href="#énoncé" id="toc-énoncé" class="nav-link" data-scroll-target="#énoncé">Énoncé</a></li>
+  <li><a href="#preuve" id="toc-preuve" class="nav-link" data-scroll-target="#preuve">Preuve</a></li>
+  <li><a href="#premières-applications" id="toc-premières-applications" class="nav-link" data-scroll-target="#premières-applications">Premières applications</a></li>
+  </ul></li>
+  <li><a href="#lemme-de-fatou" id="toc-lemme-de-fatou" class="nav-link" data-scroll-target="#lemme-de-fatou">4. Lemme de Fatou</a>
+  <ul class="collapse">
+  <li><a href="#la-question" id="toc-la-question" class="nav-link" data-scroll-target="#la-question">La question</a></li>
+  <li><a href="#énoncé-1" id="toc-énoncé-1" class="nav-link" data-scroll-target="#énoncé-1">Énoncé</a></li>
+  <li><a href="#preuve-1" id="toc-preuve-1" class="nav-link" data-scroll-target="#preuve-1">Preuve</a></li>
+  <li><a href="#interprétation" id="toc-interprétation" class="nav-link" data-scroll-target="#interprétation">Interprétation</a></li>
+  </ul></li>
+  <li><a href="#théorème-de-convergence-dominée-lebesgue" id="toc-théorème-de-convergence-dominée-lebesgue" class="nav-link" data-scroll-target="#théorème-de-convergence-dominée-lebesgue">5. Théorème de convergence dominée (Lebesgue)</a>
+  <ul class="collapse">
+  <li><a href="#lidée" id="toc-lidée" class="nav-link" data-scroll-target="#lidée">L’idée</a></li>
+  <li><a href="#énoncé-2" id="toc-énoncé-2" class="nav-link" data-scroll-target="#énoncé-2">Énoncé</a></li>
+  <li><a href="#preuve-2" id="toc-preuve-2" class="nav-link" data-scroll-target="#preuve-2">Preuve</a></li>
+  <li><a href="#commentaire" id="toc-commentaire" class="nav-link" data-scroll-target="#commentaire">Commentaire</a></li>
+  <li><a href="#corollaire-convergence-dominée-pour-les-séries" id="toc-corollaire-convergence-dominée-pour-les-séries" class="nav-link" data-scroll-target="#corollaire-convergence-dominée-pour-les-séries">Corollaire : convergence dominée pour les séries</a></li>
+  </ul></li>
+  <li><a href="#intégrales-dépendant-dun-paramètre" id="toc-intégrales-dépendant-dun-paramètre" class="nav-link" data-scroll-target="#intégrales-dépendant-dun-paramètre">6. Intégrales dépendant d’un paramètre</a>
+  <ul class="collapse">
+  <li><a href="#la-question-1" id="toc-la-question-1" class="nav-link" data-scroll-target="#la-question-1">La question</a></li>
+  <li><a href="#continuité-sous-lintégrale" id="toc-continuité-sous-lintégrale" class="nav-link" data-scroll-target="#continuité-sous-lintégrale">Continuité sous l’intégrale</a></li>
+  <li><a href="#dérivation-sous-lintégrale" id="toc-dérivation-sous-lintégrale" class="nav-link" data-scroll-target="#dérivation-sous-lintégrale">Dérivation sous l’intégrale</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="probabilités" class="level1">
+<h1>Probabilités</h1>
+<section id="iii.-construction-et-convergence-de-lintégrale-de-lebesgue" class="level2">
+<h2 class="anchored" data-anchor-id="iii.-construction-et-convergence-de-lintégrale-de-lebesgue">III. Construction et convergence de l’intégrale de Lebesgue</h2>
+<p><strong>Vue d’ensemble.</strong> Ce chapitre construit l’intégrale de Lebesgue en trois étapes, et en tire les trois théorèmes de convergence qui font sa force.</p>
+<ol type="1">
+<li>On ne peut pas intégrer n’importe quelle fonction : il faut d’abord identifier les fonctions qu’on sait approcher par des fonctions simples. Ce sont les <strong>fonctions mesurables</strong> — celles dont les images inverses de boréliens sont mesurables. Le théorème d’approximation dit que toute fonction mesurable positive est limite monotone croissante de <strong>fonctions étagées</strong> (combinaisons linéaires finies d’indicatrices).</li>
+<li>L’intégrale est construite en trois paliers : d’abord pour les fonctions étagées (une somme finie), puis pour les fonctions positives (la borne supérieure des intégrales des étagées en dessous), puis pour les fonctions de signe quelconque (décomposition <span class="math inline">\(f = f^+ - f^-\)</span>). La construction est délibérément ascendante : chaque palier hérite des propriétés du précédent.</li>
+<li>Le cœur du chapitre est le <strong>théorème de convergence monotone</strong> (Beppo Levi) : si <span class="math inline">\(f_n \uparrow f\)</span> partout, alors <span class="math inline">\(\int f_n \to \int f\)</span>. Tout le reste — le lemme de Fatou, le théorème de convergence dominée — en découle. Ces trois théorèmes répondent à la question fondamentale que Riemann laissait sans réponse : quand peut-on intervertir limite et intégrale ?</li>
+</ol>
+<hr>
+<section id="fonctions-mesurables-et-approximation-par-fonctions-étagées" class="level3">
+<h3 class="anchored" data-anchor-id="fonctions-mesurables-et-approximation-par-fonctions-étagées">1. Fonctions mesurables et approximation par fonctions étagées</h3>
+<section id="pourquoi-la-mesurabilité" class="level4">
+<h4 class="anchored" data-anchor-id="pourquoi-la-mesurabilité">Pourquoi la mesurabilité</h4>
+<p>L’intégrale de Riemann exige que la fonction soit « pas trop irrégulière » — continue presque partout suffit. Mais dans les théorèmes de convergence, la limite d’une suite de fonctions continues peut être très irrégulière. On a besoin d’une classe de fonctions stable par passage à la limite, et suffisamment large pour couvrir tout ce qu’on rencontre en pratique.</p>
+<p>La réponse est la notion de <strong>fonction mesurable</strong> : une fonction est mesurable si elle est compatible avec les structures de tribus sur le domaine et le codomaine. C’est une condition sur les images inverses, pas sur les valeurs.</p>
+</section>
+<section id="définition" class="level4">
+<h4 class="anchored" data-anchor-id="définition">Définition</h4>
+<p><strong>Définition.</strong> Soient <span class="math inline">\((\Omega, \mathcal A)\)</span> et <span class="math inline">\((E, \mathcal E)\)</span> deux espaces mesurables. Une fonction <span class="math inline">\(f : \Omega \to E\)</span> est <strong>mesurable</strong> (ou <span class="math inline">\(\mathcal A / \mathcal E\)</span>-mesurable) si</p>
+<p><span class="math display">\[\forall B \in \mathcal E, \quad f^{-1}(B) \in \mathcal A.\]</span></p>
+<p>Autrement dit : les préimages des ensembles mesurables de <span class="math inline">\(E\)</span> sont mesurables dans <span class="math inline">\(\Omega\)</span>.</p>
+<p>Dans la quasi-totalité des cas pratiques, <span class="math inline">\(E = \overline{\mathbb R} = \mathbb R \cup \{-\infty, +\infty\}\)</span> muni de la tribu borélienne <span class="math inline">\(\mathcal B(\overline{\mathbb R})\)</span> (engendrée par les intervalles). On dira alors simplement que <span class="math inline">\(f\)</span> est <strong>mesurable</strong> (sous-entendu : par rapport à la tribu <span class="math inline">\(\mathcal A\)</span> sur <span class="math inline">\(\Omega\)</span>).</p>
+<p><em>Remarque — économie de la définition.</em> Pour vérifier qu’une fonction <span class="math inline">\(f : \Omega \to \mathbb R\)</span> est mesurable, il suffit de vérifier que <span class="math inline">\(f^{-1}(]-\infty, a]) \in \mathcal A\)</span> pour tout <span class="math inline">\(a \in \mathbb R\)</span> — ou de façon équivalente, pour tout <span class="math inline">\(a \in \mathbb Q\)</span>. En effet, les demi-droites <span class="math inline">\(]-\infty, a]\)</span> forment un <span class="math inline">\(\pi\)</span>-système qui engendre <span class="math inline">\(\mathcal B(\mathbb R)\)</span>, et si les préimages de ces générateurs sont dans <span class="math inline">\(\mathcal A\)</span>, la famille <span class="math inline">\(\{B \in \mathcal B(\mathbb R) : f^{-1}(B) \in \mathcal A\}\)</span> est une tribu qui contient les générateurs, donc toute la tribu borélienne.</p>
+<p><strong>Propriétés de stabilité.</strong></p>
+<ul>
+<li>Toute fonction continue <span class="math inline">\(f : \mathbb R \to \mathbb R\)</span> est <span class="math inline">\(\mathcal B(\mathbb R)/\mathcal B(\mathbb R)\)</span>-mesurable (car <span class="math inline">\(f^{-1}(O)\)</span> est ouvert pour tout ouvert <span class="math inline">\(O\)</span>).</li>
+<li>Si <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> sont mesurables à valeurs réelles, les fonctions <span class="math inline">\(f + g\)</span>, <span class="math inline">\(fg\)</span>, <span class="math inline">\(\max(f,g)\)</span>, <span class="math inline">\(\min(f,g)\)</span> sont mesurables.</li>
+<li>Si <span class="math inline">\((f_n)\)</span> est une suite de fonctions mesurables, les fonctions <span class="math inline">\(\sup_n f_n\)</span>, <span class="math inline">\(\inf_n f_n\)</span>, <span class="math inline">\(\limsup_n f_n\)</span> et <span class="math inline">\(\liminf_n f_n\)</span> sont mesurables. En particulier, <strong>la limite simple d’une suite de fonctions mesurables est mesurable</strong>.</li>
+</ul>
+<p>Cette dernière propriété est la raison profonde pour laquelle la mesurabilité est la bonne condition : elle est stable par les opérations de passage à la limite qui apparaissent partout en analyse.</p>
+<p><em>Preuve de la stabilité par limsup.</em> Remarquer que <span class="math inline">\(\{\omega : \sup_n f_n(\omega) \leq a\} = \bigcap_n \{f_n \leq a\}\)</span>, intersection dénombrable de mesurables, donc mesurable. Pour le limsup, <span class="math inline">\(\limsup_n f_n = \inf_N \sup_{n \geq N} f_n\)</span>, ce qui se ramène au cas précédent par itération. ∎</p>
+</section>
+<section id="fonctions-étagées" class="level4">
+<h4 class="anchored" data-anchor-id="fonctions-étagées">Fonctions étagées</h4>
+<p><strong>Définition.</strong> Une <strong>fonction étagée</strong> (ou <strong>fonction simple</strong>) est une fonction mesurable <span class="math inline">\(\varphi : \Omega \to \mathbb R\)</span> ne prenant qu’un nombre fini de valeurs distinctes <span class="math inline">\(c_1, \dots, c_k\)</span>. Elle s’écrit</p>
+<p><span class="math display">\[\varphi = \sum_{i=1}^k c_i \, \mathbf{1}_{A_i}\]</span></p>
+<p>où <span class="math inline">\(A_i = \varphi^{-1}(\{c_i\}) \in \mathcal A\)</span> est la préimage de la <span class="math inline">\(i\)</span>-ème valeur. Les <span class="math inline">\(A_i\)</span> sont deux à deux disjoints et de réunion <span class="math inline">\(\Omega\)</span>.</p>
+<p>Les fonctions étagées positives sont les briques élémentaires de la construction de l’intégrale. Elles sont assez simples pour qu’on puisse leur attribuer une intégrale par une somme finie, et assez nombreuses pour approcher n’importe quelle fonction mesurable positive.</p>
+</section>
+<section id="théorème-dapproximation" class="level4">
+<h4 class="anchored" data-anchor-id="théorème-dapproximation">Théorème d’approximation</h4>
+<p><strong>Théorème.</strong> Soit <span class="math inline">\(f : \Omega \to [0, +\infty]\)</span> une fonction mesurable positive. Il existe une suite <span class="math inline">\((\varphi_n)\)</span> de fonctions étagées positives telle que :</p>
+<ol type="1">
+<li><span class="math inline">\(0 \leq \varphi_n \leq \varphi_{n+1}\)</span> partout (la suite est croissante) ;</li>
+<li><span class="math inline">\(\varphi_n(\omega) \to f(\omega)\)</span> pour tout <span class="math inline">\(\omega \in \Omega\)</span> (convergence simple) ;</li>
+<li>La convergence est uniforme sur tout ensemble où <span class="math inline">\(f\)</span> est bornée.</li>
+</ol>
+<p><em>Construction explicite.</em> Pour chaque <span class="math inline">\(n \geq 1\)</span>, on tranche <span class="math inline">\([0, n]\)</span> en intervalles de longueur <span class="math inline">\(1/2^n\)</span> :</p>
+<p><span class="math display">\[\varphi_n(\omega) = \begin{cases} \dfrac{k-1}{2^n} &amp; \text{si } \dfrac{k-1}{2^n} \leq f(\omega) &lt; \dfrac{k}{2^n}, \quad k = 1, \dots, n \cdot 2^n, \\[6pt] n &amp; \text{si } f(\omega) \geq n. \end{cases}\]</span></p>
+<p>La suite <span class="math inline">\((\varphi_n)\)</span> est croissante car on affine le découpage à chaque étape. Si <span class="math inline">\(f(\omega) &lt; +\infty\)</span>, pour <span class="math inline">\(n &gt; f(\omega)\)</span> on a <span class="math inline">\(|f(\omega) - \varphi_n(\omega)| &lt; 1/2^n\)</span>, donc <span class="math inline">\(\varphi_n(\omega) \to f(\omega)\)</span>. Si <span class="math inline">\(f(\omega) = +\infty\)</span>, alors <span class="math inline">\(\varphi_n(\omega) = n \to +\infty\)</span>. ∎</p>
+<p><em>Ce que dit le théorème.</em> Toute fonction mesurable positive est la limite pointwise monotone d’une suite de fonctions étagées. La construction est canonique et explicite. C’est la clé de voûte : la définition de l’intégrale pour les fonctions positives générales découlera directement de ce résultat.</p>
+<hr>
+</section>
+</section>
+<section id="intégrale-de-lebesgue-construction-par-les-fonctions-étagées" class="level3">
+<h3 class="anchored" data-anchor-id="intégrale-de-lebesgue-construction-par-les-fonctions-étagées">2. Intégrale de Lebesgue : construction par les fonctions étagées</h3>
+<section id="le-problème-de-riemann" class="level4">
+<h4 class="anchored" data-anchor-id="le-problème-de-riemann">Le problème de Riemann</h4>
+<p>L’intégrale de Riemann découpe le domaine <span class="math inline">\([a,b]\)</span> en intervalles et approche <span class="math inline">\(f\)</span> par une valeur constante sur chaque intervalle. Cette approche échoue dès que <span class="math inline">\(f\)</span> est trop irrégulière : la fonction de Dirichlet <span class="math inline">\(\mathbf{1}_{\mathbb Q}\)</span> (valant 1 sur les rationnels, 0 ailleurs) n’est pas Riemann-intégrable car ses oscillations sont maximales sur tout intervalle.</p>
+<p>L’idée de Lebesgue : découper non pas le <strong>domaine</strong> mais le <strong>codomaine</strong>. Plutôt que de fixer <span class="math inline">\(x\)</span> et demander quelle est la valeur de <span class="math inline">\(f(x)\)</span>, on fixe un seuil de valeur <span class="math inline">\(c\)</span> et on demande <em>quelle est la mesure de l’ensemble où <span class="math inline">\(f\)</span> atteint cette valeur</em>. C’est ce que font les fonctions étagées : elles correspondent exactement à ce découpage du codomaine.</p>
+<p>Pour <span class="math inline">\(\mathbf{1}_{\mathbb Q}\)</span> sur <span class="math inline">\([0,1]\)</span> : l’ensemble où <span class="math inline">\(f = 1\)</span> est <span class="math inline">\(\mathbb Q \cap [0,1]\)</span>, de mesure de Lebesgue nulle ; l’ensemble où <span class="math inline">\(f = 0\)</span> est <span class="math inline">\([0,1] \setminus \mathbb Q\)</span>, de mesure 1. L’intégrale de Lebesgue vaut donc <span class="math inline">\(1 \cdot 0 + 0 \cdot 1 = 0\)</span>.</p>
+</section>
+<section id="étape-1-intégrale-dune-fonction-étagée-positive" class="level4">
+<h4 class="anchored" data-anchor-id="étape-1-intégrale-dune-fonction-étagée-positive">Étape 1 : intégrale d’une fonction étagée positive</h4>
+<p><strong>Définition.</strong> Soit <span class="math inline">\(\varphi = \sum_{i=1}^k c_i \, \mathbf{1}_{A_i}\)</span> une fonction étagée positive (<span class="math inline">\(c_i \geq 0\)</span>, <span class="math inline">\(A_i \in \mathcal A\)</span> deux à deux disjoints de réunion <span class="math inline">\(\Omega\)</span>). L’<strong>intégrale de Lebesgue</strong> de <span class="math inline">\(\varphi\)</span> par rapport à la mesure <span class="math inline">\(m\)</span> est</p>
+<p><span class="math display">\[\int \varphi \, dm = \sum_{i=1}^k c_i \, m(A_i) \in [0, +\infty].\]</span></p>
+<p>Avec la convention <span class="math inline">\(0 \cdot (+\infty) = 0\)</span> (un ensemble de mesure nulle ne contribue pas, même si la fonction y vaut <span class="math inline">\(+\infty\)</span>).</p>
+<p>L’intégrale sur un ensemble <span class="math inline">\(A \in \mathcal A\)</span> est <span class="math inline">\(\int_A \varphi \, dm = \int \varphi \, \mathbf{1}_A \, dm\)</span>.</p>
+<p><em>Vérification de cohérence.</em> Cette définition ne dépend pas de la décomposition choisie : si <span class="math inline">\(\varphi = \sum_j d_j \mathbf{1}_{B_j}\)</span> est une autre décomposition (les <span class="math inline">\(B_j\)</span> partitionnant <span class="math inline">\(\Omega\)</span>), alors <span class="math inline">\(\sum_i c_i m(A_i) = \sum_{i,j} c_i m(A_i \cap B_j) = \sum_{i,j} d_j m(A_i \cap B_j) = \sum_j d_j m(B_j)\)</span>, où on utilise <span class="math inline">\(c_i = d_j\)</span> sur <span class="math inline">\(A_i \cap B_j\)</span> si cet ensemble est non vide.</p>
+</section>
+<section id="étape-2-intégrale-dune-fonction-mesurable-positive" class="level4">
+<h4 class="anchored" data-anchor-id="étape-2-intégrale-dune-fonction-mesurable-positive">Étape 2 : intégrale d’une fonction mesurable positive</h4>
+<p><strong>Définition.</strong> Soit <span class="math inline">\(f : \Omega \to [0, +\infty]\)</span> mesurable positive. L’<strong>intégrale de Lebesgue</strong> de <span class="math inline">\(f\)</span> est</p>
+<p><span class="math display">\[\int f \, dm = \sup \Bigl\{ \int \varphi \, dm : \varphi \text{ étagée positive}, \, \varphi \leq f \Bigr\}.\]</span></p>
+<p>Autrement dit, on approche <span class="math inline">\(f\)</span> par en dessous avec des étagées, et on prend la borne supérieure des intégrales. Cette quantité est dans <span class="math inline">\([0, +\infty]\)</span>.</p>
+<p><em>Cohérence avec l’étape 1.</em> Si <span class="math inline">\(f = \varphi\)</span> est elle-même étagée, la définition redonne bien <span class="math inline">\(\int \varphi \, dm\)</span> car <span class="math inline">\(\varphi\)</span> est l’étagée la plus grande <span class="math inline">\(\leq \varphi\)</span>.</p>
+<p><em>Lien avec le théorème d’approximation.</em> Si <span class="math inline">\((\varphi_n)\)</span> est la suite croissante d’étagées convergeant vers <span class="math inline">\(f\)</span>, alors <span class="math inline">\(\int f \, dm = \lim_n \int \varphi_n \, dm\)</span>. C’est le contenu du théorème de convergence monotone (section 3), qui légitimera a posteriori cette définition.</p>
+</section>
+<section id="étape-3-intégrale-dune-fonction-quelconque" class="level4">
+<h4 class="anchored" data-anchor-id="étape-3-intégrale-dune-fonction-quelconque">Étape 3 : intégrale d’une fonction quelconque</h4>
+<p>Pour une fonction <span class="math inline">\(f : \Omega \to \overline{\mathbb R}\)</span> mesurable de signe quelconque, on décompose</p>
+<p><span class="math display">\[f = f^+ - f^-, \quad \text{où} \quad f^+ = \max(f, 0) \geq 0 \quad \text{et} \quad f^- = \max(-f, 0) \geq 0.\]</span></p>
+<p>Les deux parties <span class="math inline">\(f^+\)</span> et <span class="math inline">\(f^-\)</span> sont mesurables positives (comme max de fonctions mesurables).</p>
+<p><strong>Définition.</strong> <span class="math inline">\(f\)</span> est <strong>intégrable</strong> (ou Lebesgue-intégrable) si <span class="math inline">\(\int f^+ \, dm &lt; +\infty\)</span> et <span class="math inline">\(\int f^- \, dm &lt; +\infty\)</span>. On note <span class="math inline">\(L^1(\Omega, \mathcal A, m)\)</span> ou simplement <span class="math inline">\(L^1(m)\)</span> l’ensemble des fonctions intégrables. Pour <span class="math inline">\(f \in L^1(m)\)</span>, on pose</p>
+<p><span class="math display">\[\int f \, dm = \int f^+ \, dm - \int f^- \, dm.\]</span></p>
+<p><em>Pourquoi exiger les deux finies ?</em> Si <span class="math inline">\(\int f^+ = +\infty\)</span> et <span class="math inline">\(\int f^- &lt; +\infty\)</span>, la différence <span class="math inline">\(+\infty - \text{(fini)}\)</span> a un sens et vaut <span class="math inline">\(+\infty\)</span>, mais <span class="math inline">\(f\)</span> n’est pas intégrable. Si <span class="math inline">\(\int f^+ = \int f^- = +\infty\)</span>, la différence <span class="math inline">\(\infty - \infty\)</span> n’a pas de sens : on ne peut rien dire de l’intégrale. L’intégrabilité exclut exactement ce cas.</p>
+<p><em>Critère pratique d’intégrabilité.</em> <span class="math inline">\(f \in L^1(m)\)</span> si et seulement si <span class="math inline">\(|f| = f^+ + f^-\)</span> est intégrable, c’est-à-dire <span class="math inline">\(\int |f| \, dm &lt; +\infty\)</span>.</p>
+</section>
+<section id="propriétés-de-lintégrale" class="level4">
+<h4 class="anchored" data-anchor-id="propriétés-de-lintégrale">Propriétés de l’intégrale</h4>
+<p><strong>1. Linéarité.</strong> Pour <span class="math inline">\(f, g \in L^1(m)\)</span> et <span class="math inline">\(\alpha, \beta \in \mathbb R\)</span> : <span class="math inline">\(\int (\alpha f + \beta g) \, dm = \alpha \int f \, dm + \beta \int g \, dm\)</span>.</p>
+<p><strong>2. Monotonie.</strong> Si <span class="math inline">\(f \leq g\)</span> partout et <span class="math inline">\(f, g \in L^1(m)\)</span>, alors <span class="math inline">\(\int f \, dm \leq \int g \, dm\)</span>.</p>
+<p><strong>3. Borne absolue.</strong> <span class="math inline">\(\Bigl|\int f \, dm\Bigr| \leq \int |f| \, dm\)</span>.</p>
+<p><strong>4. Restriction à un ensemble.</strong> <span class="math inline">\(\int_A f \, dm = \int f \cdot \mathbf{1}_A \, dm\)</span> pour tout <span class="math inline">\(A \in \mathcal A\)</span>.</p>
+<p><strong>5. Nullité sur les négligeables.</strong> Si <span class="math inline">\(m(A) = 0\)</span>, alors <span class="math inline">\(\int_A f \, dm = 0\)</span>, même si <span class="math inline">\(f\)</span> est infinie sur <span class="math inline">\(A\)</span>. En particulier, deux fonctions égales <span class="math inline">\(m\)</span>-presque partout ont la même intégrale. L’intégrale de Lebesgue ne voit pas les ensembles de mesure nulle.</p>
+<p><strong>6. Coïncidence avec Riemann.</strong> Si <span class="math inline">\(f : [a,b] \to \mathbb R\)</span> est Riemann-intégrable, alors <span class="math inline">\(f\)</span> est Lebesgue-intégrable et les deux intégrales coïncident. La réciproque est fausse : <span class="math inline">\(\mathbf{1}_{\mathbb Q}\)</span> est Lebesgue-intégrable (d’intégrale 0) mais n’est pas Riemann-intégrable.</p>
+<p><em>Ce que l’intégrale de Lebesgue apporte.</em> La propriété 5 est cruciale : l’intégrale ne dépend de <span class="math inline">\(f\)</span> qu’à un ensemble de mesure nulle près. Deux fonctions identiques presque partout sont indiscernables par l’intégrale. C’est ce qui permettra de définir les espaces <span class="math inline">\(L^p\)</span> comme des espaces de <em>classes</em> de fonctions, et qui rendra les théorèmes de convergence plus robustes.</p>
+<hr>
+</section>
+</section>
+<section id="théorème-de-convergence-monotone-beppo-levi" class="level3">
+<h3 class="anchored" data-anchor-id="théorème-de-convergence-monotone-beppo-levi">3. Théorème de convergence monotone (Beppo Levi)</h3>
+<section id="lenjeu" class="level4">
+<h4 class="anchored" data-anchor-id="lenjeu">L’enjeu</h4>
+<p>La question fondamentale de ce chapitre : quand peut-on intervertir une limite et une intégrale ?</p>
+<p><span class="math display">\[\lim_{n \to \infty} \int f_n \, dm \stackrel{?}{=} \int \lim_{n \to \infty} f_n \, dm.\]</span></p>
+<p>Cette interversion est la clé de tout raisonnement analytique en théorie de la mesure. Elle permet de calculer des intégrales comme limites de quantités plus simples, de sommer des séries terme à terme sous l’intégrale, de faire passer des dérivées sous l’intégrale. Sans elle, chaque calcul de limite nécessite un argument ad hoc.</p>
+<p>Pour Riemann, cette interversion peut échouer dans des cas très simples. Exemple classique : <span class="math inline">\(f_n = n \, \mathbf{1}_{[0, 1/n]}\)</span> sur <span class="math inline">\([0,1]\)</span>. Chaque <span class="math inline">\(f_n\)</span> est Riemann-intégrable d’intégrale 1. Mais <span class="math inline">\(f_n \to 0\)</span> partout sauf en 0 (qui est un point isolé, sans effet sur l’intégrale). Donc <span class="math inline">\(\int \lim f_n = 0 \neq 1 = \lim \int f_n\)</span>. L’intégrale de Riemann n’est pas fermée par passage à la limite sans conditions fortes.</p>
+<p>L’intégrale de Lebesgue, elle, est conçue pour que l’interversion soit systématiquement vraie sous des conditions naturelles.</p>
+</section>
+<section id="énoncé" class="level4">
+<h4 class="anchored" data-anchor-id="énoncé">Énoncé</h4>
+<p><strong>Théorème (Beppo Levi, ou convergence monotone).</strong> Soit <span class="math inline">\((f_n)\)</span> une suite de fonctions mesurables positives telle que</p>
+<p><span class="math display">\[0 \leq f_n(\omega) \leq f_{n+1}(\omega) \quad \text{pour tout } \omega \in \Omega \text{ et tout } n.\]</span></p>
+<p>Soit <span class="math inline">\(f = \lim_n f_n = \sup_n f_n\)</span> la limite pointwise (qui est mesurable positive). Alors :</p>
+<p><span class="math display">\[\int f \, dm = \lim_{n \to \infty} \int f_n \, dm = \sup_{n} \int f_n \, dm.\]</span></p>
+<p>Les deux membres peuvent être <span class="math inline">\(+\infty\)</span> simultanément.</p>
+</section>
+<section id="preuve" class="level4">
+<h4 class="anchored" data-anchor-id="preuve">Preuve</h4>
+<p><em>Étape 1 : inégalité <span class="math inline">\(\lim \int f_n \leq \int f\)</span>.</em> Puisque <span class="math inline">\(f_n \leq f\)</span> pour tout <span class="math inline">\(n\)</span>, par monotonie de l’intégrale <span class="math inline">\(\int f_n \leq \int f\)</span>. En passant à la limite, <span class="math inline">\(\lim_n \int f_n \leq \int f\)</span>.</p>
+<p><em>Étape 2 : inégalité réciproque <span class="math inline">\(\int f \leq \lim \int f_n\)</span>.</em> Soit <span class="math inline">\(\varphi\)</span> une fonction étagée positive avec <span class="math inline">\(\varphi \leq f\)</span>, et soit <span class="math inline">\(c \in (0,1)\)</span>. Définissons <span class="math inline">\(A_n = \{\omega : f_n(\omega) \geq c \varphi(\omega)\}\)</span>. La suite <span class="math inline">\((A_n)\)</span> est croissante (car <span class="math inline">\(f_n\)</span> est croissante) et <span class="math inline">\(\bigcup_n A_n = \Omega\)</span> (car <span class="math inline">\(f_n \to f \geq \varphi &gt; c\varphi\)</span> sur le support de <span class="math inline">\(\varphi\)</span>, et sur le complémentaire du support, <span class="math inline">\(c\varphi = 0\)</span> donc la condition <span class="math inline">\(f_n \geq 0 = c\varphi\)</span> est immédiate). Alors</p>
+<p><span class="math display">\[\int f_n \, dm \geq \int_{A_n} f_n \, dm \geq c \int_{A_n} \varphi \, dm.\]</span></p>
+<p>Si <span class="math inline">\(\varphi = \sum_i c_i \mathbf{1}_{B_i}\)</span>, alors <span class="math inline">\(\int_{A_n} \varphi \, dm = \sum_i c_i m(A_n \cap B_i) \to \sum_i c_i m(B_i) = \int \varphi \, dm\)</span> par continuité croissante de la mesure (car <span class="math inline">\(A_n \cap B_i \uparrow B_i\)</span>). Donc <span class="math inline">\(\lim_n \int f_n \geq c \int \varphi\)</span>. En faisant tendre <span class="math inline">\(c \to 1\)</span> puis en prenant le sup sur <span class="math inline">\(\varphi\)</span>, on obtient <span class="math inline">\(\lim_n \int f_n \geq \int f\)</span>. ∎</p>
+</section>
+<section id="premières-applications" class="level4">
+<h4 class="anchored" data-anchor-id="premières-applications">Premières applications</h4>
+<p><strong>Interversion série-intégrale.</strong> Soit <span class="math inline">\((g_n)\)</span> une suite de fonctions mesurables positives. Alors</p>
+<p><span class="math display">\[\int \sum_{n=1}^{\infty} g_n \, dm = \sum_{n=1}^{\infty} \int g_n \, dm.\]</span></p>
+<p><em>Preuve.</em> Appliquer le TCM à <span class="math inline">\(f_N = \sum_{n=1}^N g_n \uparrow \sum_{n=1}^\infty g_n\)</span>, et utiliser la linéarité de l’intégrale sur les sommes finies. ∎</p>
+<p>Ce résultat est très utile : il dit qu’on peut sommer une série de fonctions positives et intégrer terme à terme sans vérification préalable de convergence. La contrepartie : si la somme des intégrales diverge, l’intégrale de la série est infinie.</p>
+<p><strong>Contre-exemple de Riemann retrouvé.</strong> Pour <span class="math inline">\(f_n = n \mathbf{1}_{[0,1/n]}\)</span> : la suite n’est <strong>pas</strong> croissante (<span class="math inline">\(f_n(\omega)\)</span> oscille selon <span class="math inline">\(\omega\)</span>), donc le TCM ne s’applique pas. Et effectivement l’interversion échoue. Le TCM requiert la monotonie : c’est un prix modeste pour une conclusion aussi forte.</p>
+<hr>
+</section>
+</section>
+<section id="lemme-de-fatou" class="level3">
+<h3 class="anchored" data-anchor-id="lemme-de-fatou">4. Lemme de Fatou</h3>
+<section id="la-question" class="level4">
+<h4 class="anchored" data-anchor-id="la-question">La question</h4>
+<p>Le théorème de convergence monotone suppose que <span class="math inline">\(f_n\)</span> croît. Que se passe-t-il sans hypothèse de monotonie ?</p>
+<p>Sans aucune condition, l’interversion peut complètement échouer : pour <span class="math inline">\(f_n = \mathbf{1}_{[n, n+1]}\)</span>, <span class="math inline">\(f_n \to 0\)</span> partout mais <span class="math inline">\(\int f_n = 1\)</span> pour tout <span class="math inline">\(n\)</span>. Le lemme de Fatou donne la meilleure inégalité qu’on puisse toujours garantir pour des fonctions positives.</p>
+</section>
+<section id="énoncé-1" class="level4">
+<h4 class="anchored" data-anchor-id="énoncé-1">Énoncé</h4>
+<p><strong>Lemme (Fatou).</strong> Soit <span class="math inline">\((f_n)\)</span> une suite de fonctions mesurables positives. Alors :</p>
+<p><span class="math display">\[\int \liminf_{n \to \infty} f_n \, dm \leq \liminf_{n \to \infty} \int f_n \, dm.\]</span></p>
+</section>
+<section id="preuve-1" class="level4">
+<h4 class="anchored" data-anchor-id="preuve-1">Preuve</h4>
+<p>Posons <span class="math inline">\(g_n = \inf_{k \geq n} f_k\)</span>. La suite <span class="math inline">\((g_n)\)</span> est croissante (l’infimum porte sur un ensemble de plus en plus petit) et <span class="math inline">\(g_n \leq f_n\)</span> pour tout <span class="math inline">\(n\)</span>. Par définition, <span class="math inline">\(g_n \uparrow \liminf_n f_n\)</span>. Par le TCM :</p>
+<p><span class="math display">\[\int \liminf_n f_n \, dm = \lim_n \int g_n \, dm \leq \lim_n \int f_n \, dm = \liminf_n \int f_n \, dm.\]</span></p>
+<p>La dernière inégalité vient de <span class="math inline">\(\int g_n \leq \int f_n\)</span> (monotonie) donc <span class="math inline">\(\liminf \int g_n \leq \liminf \int f_n\)</span>. ∎</p>
+</section>
+<section id="interprétation" class="level4">
+<h4 class="anchored" data-anchor-id="interprétation">Interprétation</h4>
+<p>Le lemme dit : la masse de la limite inférieure ne peut pas dépasser la limite inférieure des masses. L’inégalité est en général stricte : de la masse peut « s’échapper vers l’infini » (cas <span class="math inline">\(f_n = \mathbf{1}_{[n,n+1]}\)</span>) ou « se concentrer et exploser » (cas <span class="math inline">\(f_n = n \mathbf{1}_{[0,1/n]}\)</span>).</p>
+<p><em>Remarque.</em> Le lemme de Fatou n’a pas de version pour <span class="math inline">\(\limsup\)</span> dans ce sens : en général, <span class="math inline">\(\limsup \int f_n \leq \int \limsup f_n\)</span> est faux (l’exemple <span class="math inline">\(f_n = \mathbf{1}_{[n,n+1]}\)</span> donne <span class="math inline">\(\limsup \int f_n = 1\)</span> et <span class="math inline">\(\int \limsup f_n = 0\)</span>, ce qui donnerait <span class="math inline">\(1 \leq 0\)</span>). En revanche, le lemme de Fatou s’applique parfois à <span class="math inline">\(M - f_n\)</span> pour obtenir un résultat sur les <span class="math inline">\(\limsup\)</span> — c’est une technique standard.</p>
+<hr>
+</section>
+</section>
+<section id="théorème-de-convergence-dominée-lebesgue" class="level3">
+<h3 class="anchored" data-anchor-id="théorème-de-convergence-dominée-lebesgue">5. Théorème de convergence dominée (Lebesgue)</h3>
+<section id="lidée" class="level4">
+<h4 class="anchored" data-anchor-id="lidée">L’idée</h4>
+<p>Le lemme de Fatou dit que la masse peut s’échapper. Pour empêcher cela, il faut <strong>dominer</strong> les fonctions par une fonction intégrable fixe : si les <span class="math inline">\(f_n\)</span> sont toutes bornées par la même fonction <span class="math inline">\(g \in L^1\)</span>, la masse ne peut pas « fuir à l’infini » ni « se concentrer de façon non intégrable ». On obtient alors l’égalité pleine.</p>
+</section>
+<section id="énoncé-2" class="level4">
+<h4 class="anchored" data-anchor-id="énoncé-2">Énoncé</h4>
+<p><strong>Théorème (Lebesgue, ou convergence dominée).</strong> Soit <span class="math inline">\((f_n)\)</span> une suite de fonctions mesurables, et supposons qu’il existe <span class="math inline">\(g \in L^1(m)\)</span> telle que</p>
+<p><span class="math display">\[|f_n(\omega)| \leq g(\omega) \quad \text{pour tout } n \text{ et } m\text{-presque tout } \omega.\]</span></p>
+<p>Si <span class="math inline">\(f_n \to f\)</span> <span class="math inline">\(m\)</span>-presque partout, alors <span class="math inline">\(f \in L^1(m)\)</span> et</p>
+<p><span class="math display">\[\lim_{n \to \infty} \int f_n \, dm = \int f \, dm.\]</span></p>
+<p>Autrement dit : <span class="math inline">\(\int |f_n - f| \, dm \to 0\)</span>.</p>
+</section>
+<section id="preuve-2" class="level4">
+<h4 class="anchored" data-anchor-id="preuve-2">Preuve</h4>
+<p>Puisque <span class="math inline">\(|f_n| \leq g\)</span> p.p. et <span class="math inline">\(g \in L^1\)</span>, chaque <span class="math inline">\(f_n\)</span> est intégrable. La limite <span class="math inline">\(f = \lim_n f_n\)</span> vérifie aussi <span class="math inline">\(|f| \leq g\)</span> p.p., donc <span class="math inline">\(f \in L^1\)</span>.</p>
+<p>Posons <span class="math inline">\(h_n = g - f_n\)</span> et <span class="math inline">\(k_n = g + f_n\)</span>. Ce sont des fonctions positives (p.p.) qui convergent respectivement vers <span class="math inline">\(g - f\)</span> et <span class="math inline">\(g + f\)</span>. Par le lemme de Fatou appliqué à <span class="math inline">\((h_n)\)</span> et <span class="math inline">\((k_n)\)</span> :</p>
+<p><span class="math display">\[\int (g - f) \, dm \leq \liminf \int (g - f_n) \, dm = \int g \, dm - \limsup \int f_n \, dm,\]</span></p>
+<p><span class="math display">\[\int (g + f) \, dm \leq \liminf \int (g + f_n) \, dm = \int g \, dm + \liminf \int f_n \, dm.\]</span></p>
+<p>Comme <span class="math inline">\(\int g &lt; +\infty\)</span>, on peut soustraire : les deux inégalités donnent <span class="math inline">\(\limsup \int f_n \leq \int f\)</span> et <span class="math inline">\(\int f \leq \liminf \int f_n\)</span>. Donc <span class="math inline">\(\lim_n \int f_n = \int f\)</span>. ∎</p>
+</section>
+<section id="commentaire" class="level4">
+<h4 class="anchored" data-anchor-id="commentaire">Commentaire</h4>
+<p><em>Ce que « dominé » signifie réellement.</em> La domination <span class="math inline">\(|f_n| \leq g\)</span> avec <span class="math inline">\(g \in L^1\)</span> contrôle deux phénomènes distincts :</p>
+<ul>
+<li><strong>La concentration locale.</strong> Si les <span class="math inline">\(f_n\)</span> s’accumulent sur un ensemble de plus en plus petit, mais <span class="math inline">\(g\)</span> est bornée autour de ce point, la masse totale reste contrôlée.</li>
+<li><strong>La fuite à l’infini.</strong> Si les <span class="math inline">\(f_n\)</span> se déplacent vers <span class="math inline">\(+\infty\)</span>, mais <span class="math inline">\(g\)</span> est intégrable (donc sa masse aux grandes valeurs tend vers 0), les <span class="math inline">\(f_n\)</span> ne peuvent pas exporter de masse hors de portée.</li>
+</ul>
+<p><em>Pourquoi l’hypothèse <span class="math inline">\(g \in L^1\)</span> est nécessaire.</em> Elle ne peut pas être omise. Exemple : <span class="math inline">\(f_n = \mathbf{1}_{[n,n+1]}\)</span>, <span class="math inline">\(g = 1\)</span> (qui n’est pas dans <span class="math inline">\(L^1(\mathbb R)\)</span>). Alors <span class="math inline">\(|f_n| \leq g\)</span>, <span class="math inline">\(f_n \to 0\)</span> partout, mais <span class="math inline">\(\int f_n = 1 \not\to 0 = \int 0\)</span>. La domination par une constante ne suffit pas si l’espace est de mesure infinie.</p>
+</section>
+<section id="corollaire-convergence-dominée-pour-les-séries" class="level4">
+<h4 class="anchored" data-anchor-id="corollaire-convergence-dominée-pour-les-séries">Corollaire : convergence dominée pour les séries</h4>
+<p><strong>Corollaire.</strong> Soit <span class="math inline">\((g_n)\)</span> une suite de fonctions mesurables telle que <span class="math inline">\(\sum_{n=1}^\infty \int |g_n| \, dm &lt; +\infty\)</span>. Alors <span class="math inline">\(\sum_{n=1}^\infty g_n\)</span> converge dans <span class="math inline">\(L^1\)</span>, et</p>
+<p><span class="math display">\[\int \sum_{n=1}^\infty g_n \, dm = \sum_{n=1}^\infty \int g_n \, dm.\]</span></p>
+<p><em>Preuve.</em> Poser <span class="math inline">\(G = \sum_n |g_n|\)</span>. Par interversion série-intégrale pour les positives (TCM), <span class="math inline">\(\int G = \sum_n \int |g_n| &lt; +\infty\)</span>, donc <span class="math inline">\(G \in L^1\)</span>. Les sommes partielles <span class="math inline">\(S_N = \sum_{n=1}^N g_n\)</span> vérifient <span class="math inline">\(|S_N| \leq G\)</span>, convergent presque partout vers <span class="math inline">\(S = \sum_n g_n\)</span>, et <span class="math inline">\(S \in L^1\)</span>. Appliquer le TCD. ∎</p>
+<hr>
+</section>
+</section>
+<section id="intégrales-dépendant-dun-paramètre" class="level3">
+<h3 class="anchored" data-anchor-id="intégrales-dépendant-dun-paramètre">6. Intégrales dépendant d’un paramètre</h3>
+<section id="la-question-1" class="level4">
+<h4 class="anchored" data-anchor-id="la-question-1">La question</h4>
+<p>En pratique, on rencontre souvent des intégrales du type</p>
+<p><span class="math display">\[F(t) = \int_\Omega f(t, \omega) \, dm(\omega),\]</span></p>
+<p>où <span class="math inline">\(t\)</span> est un paramètre réel. On veut savoir si <span class="math inline">\(F\)</span> est continue en <span class="math inline">\(t\)</span>, si elle est dérivable, et si on peut dériver sous l’intégrale :</p>
+<p><span class="math display">\[F'(t) \stackrel{?}{=} \int_\Omega \frac{\partial f}{\partial t}(t, \omega) \, dm(\omega).\]</span></p>
+<p>Les théorèmes de convergence donnent des réponses précises.</p>
+</section>
+<section id="continuité-sous-lintégrale" class="level4">
+<h4 class="anchored" data-anchor-id="continuité-sous-lintégrale">Continuité sous l’intégrale</h4>
+<p><strong>Théorème (continuité).</strong> Supposons que <span class="math inline">\(f(t, \cdot)\)</span> est mesurable pour tout <span class="math inline">\(t\)</span>, que <span class="math inline">\(t \mapsto f(t, \omega)\)</span> est continue en <span class="math inline">\(t_0\)</span> pour <span class="math inline">\(m\)</span>-presque tout <span class="math inline">\(\omega\)</span>, et qu’il existe <span class="math inline">\(g \in L^1(m)\)</span> telle que <span class="math inline">\(|f(t, \omega)| \leq g(\omega)\)</span> pour tout <span class="math inline">\(t\)</span> au voisinage de <span class="math inline">\(t_0\)</span> et <span class="math inline">\(m\)</span>-presque tout <span class="math inline">\(\omega\)</span>. Alors <span class="math inline">\(F\)</span> est continue en <span class="math inline">\(t_0\)</span>.</p>
+<p><em>Preuve.</em> Si <span class="math inline">\(t_n \to t_0\)</span>, alors <span class="math inline">\(f(t_n, \omega) \to f(t_0, \omega)\)</span> p.p. et <span class="math inline">\(|f(t_n, \cdot)| \leq g \in L^1\)</span>. Par le TCD, <span class="math inline">\(F(t_n) = \int f(t_n, \cdot) \, dm \to \int f(t_0, \cdot) \, dm = F(t_0)\)</span>. ∎</p>
+</section>
+<section id="dérivation-sous-lintégrale" class="level4">
+<h4 class="anchored" data-anchor-id="dérivation-sous-lintégrale">Dérivation sous l’intégrale</h4>
+<p><strong>Théorème (dérivation, ou théorème de Leibniz-Lebesgue).</strong> Supposons que <span class="math inline">\(f(t, \cdot)\)</span> est intégrable pour tout <span class="math inline">\(t\)</span>, que <span class="math inline">\(t \mapsto f(t, \omega)\)</span> est dérivable en <span class="math inline">\(t_0\)</span> pour <span class="math inline">\(m\)</span>-presque tout <span class="math inline">\(\omega\)</span>, et qu’il existe <span class="math inline">\(g \in L^1(m)\)</span> telle que</p>
+<p><span class="math display">\[\Bigl|\frac{\partial f}{\partial t}(t, \omega)\Bigr| \leq g(\omega) \quad \text{pour tout } t \text{ au voisinage de } t_0 \text{ et } m\text{-p.p. } \omega.\]</span></p>
+<p>Alors <span class="math inline">\(F\)</span> est dérivable en <span class="math inline">\(t_0\)</span> et</p>
+<p><span class="math display">\[F'(t_0) = \int_\Omega \frac{\partial f}{\partial t}(t_0, \omega) \, dm(\omega).\]</span></p>
+<p><em>Preuve.</em> Considérer les taux d’accroissement <span class="math inline">\(h_n(\omega) = \bigl(f(t_0 + 1/n, \omega) - f(t_0, \omega)\bigr) \cdot n\)</span>. Par hypothèse, <span class="math inline">\(h_n(\omega) \to \partial_t f(t_0, \omega)\)</span> p.p. Par le théorème des accroissements finis, <span class="math inline">\(|h_n(\omega)| \leq g(\omega)\)</span>. Le TCD donne <span class="math inline">\(\int h_n \, dm \to \int \partial_t f(t_0, \omega) \, dm(\omega)\)</span>. Or <span class="math inline">\(\int h_n \, dm = n(F(t_0 + 1/n) - F(t_0))\)</span>, qui tend vers <span class="math inline">\(F'(t_0)\)</span>. ∎</p>
+</section>
+<section id="applications" class="level4">
+<h4 class="anchored" data-anchor-id="applications">Applications</h4>
+<p><em>Transformée de Laplace.</em> Si <span class="math inline">\(f : [0,+\infty) \to \mathbb R\)</span> vérifie <span class="math inline">\(|f(x)| \leq C e^{\alpha x}\)</span>, la transformée de Laplace <span class="math inline">\(\mathcal L f(s) = \int_0^{\infty} f(x) e^{-sx} dx\)</span> est définie et infiniment dérivable pour <span class="math inline">\(s &gt; \alpha\)</span>, avec <span class="math inline">\((\mathcal L f)^{(n)}(s) = (-1)^n \mathcal L[x^n f(x)](s)\)</span>.</p>
+<p><em>Fonctions caractéristiques.</em> La fonction caractéristique d’une variable aléatoire réelle <span class="math inline">\(X\)</span>, définie par <span class="math inline">\(\varphi_X(t) = E[e^{itX}] = \int e^{itx} \, dP_X(x)\)</span>, est continue par le théorème de continuité ci-dessus (avec <span class="math inline">\(g = 1 \in L^1(P_X)\)</span> car <span class="math inline">\(|e^{itx}| = 1\)</span>). Si <span class="math inline">\(E[|X|] &lt; +\infty\)</span>, elle est aussi dérivable et <span class="math inline">\(\varphi_X'(0) = i E[X]\)</span>.</p>
+<p><em>Intégrale de Gaussian.</em> Montrer que <span class="math inline">\(\int_{-\infty}^{+\infty} e^{-x^2} dx = \sqrt{\pi}\)</span> par l’astuce de Laplace (passer en coordonnées polaires sur le carré de l’intégrale) est une application directe du théorème de Fubini-Tonelli — mais cela sera vu au chapitre IV.</p>
+<hr>
+<p><strong>Tableau de synthèse des théorèmes de convergence</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Théorème</th>
+<th>Hypothèse sur <span class="math inline">\((f_n)\)</span></th>
+<th>Hypothèse sur la limite</th>
+<th>Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Convergence monotone</strong> (Beppo Levi)</td>
+<td><span class="math inline">\(0 \leq f_n \uparrow f\)</span> p.p.</td>
+<td><span class="math inline">\(f\)</span> mesurable positive</td>
+<td><span class="math inline">\(\int f_n \to \int f\)</span> (égalité, même <span class="math inline">\(= +\infty\)</span>)</td>
+</tr>
+<tr class="even">
+<td><strong>Lemme de Fatou</strong></td>
+<td><span class="math inline">\(f_n \geq 0\)</span> p.p.</td>
+<td>—</td>
+<td><span class="math inline">\(\int \liminf f_n \leq \liminf \int f_n\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Convergence dominée</strong> (Lebesgue)</td>
+<td><span class="math inline">\(|f_n| \leq g \in L^1\)</span>, <span class="math inline">\(f_n \to f\)</span> p.p.</td>
+<td><span class="math inline">\(f \in L^1\)</span></td>
+<td><span class="math inline">\(\int f_n \to \int f\)</span> et <span class="math inline">\(\int |f_n - f| \to 0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><em>Lecture du tableau.</em> Le TCM est le plus fort dans sa conclusion (il s’applique même quand la limite est infinie) mais le plus restrictif dans ses hypothèses (monotonie). Le lemme de Fatou est le plus faible dans sa conclusion (inégalité seulement) mais requiert le moins : juste la positivité. Le TCD est le plus utile en pratique : il donne la convergence de l’intégrale et l’intégrabilité de la limite, au prix d’une domination.</p>
+
+
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
