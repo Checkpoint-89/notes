@@ -366,25 +366,21 @@ window.Quarto = {
   <ul>
   <li><a href="#évaluer-un-clustering" id="toc-évaluer-un-clustering" class="nav-link active" data-scroll-target="#évaluer-un-clustering">Évaluer un clustering</a>
   <ul>
-  <li><a href="#principe-1-comparer-deux-partitions-métriques-externes" id="toc-principe-1-comparer-deux-partitions-métriques-externes" class="nav-link" data-scroll-target="#principe-1-comparer-deux-partitions-métriques-externes">Principe 1 : comparer deux partitions (métriques externes)</a></li>
-  <li><a href="#ari-et-ami-deux-opérationnalisations" id="toc-ari-et-ami-deux-opérationnalisations" class="nav-link" data-scroll-target="#ari-et-ami-deux-opérationnalisations">ARI et AMI — deux opérationnalisations</a>
+  <li><a href="#i---principe-1-comparer-deux-partitions-métriques-externes" id="toc-i---principe-1-comparer-deux-partitions-métriques-externes" class="nav-link" data-scroll-target="#i---principe-1-comparer-deux-partitions-métriques-externes">I - Principe 1 : comparer deux partitions (métriques externes)</a>
   <ul class="collapse">
-  <li><a href="#lecture-commune" id="toc-lecture-commune" class="nav-link" data-scroll-target="#lecture-commune">Lecture commune</a></li>
+  <li><a href="#i.1---ari-et-ami-deux-opérationnalisations" id="toc-i.1---ari-et-ami-deux-opérationnalisations" class="nav-link" data-scroll-target="#i.1---ari-et-ami-deux-opérationnalisations">I.1 - ARI et AMI — deux opérationnalisations</a></li>
+  <li><a href="#i.2---lecture-commune" id="toc-i.2---lecture-commune" class="nav-link" data-scroll-target="#i.2---lecture-commune">I.2 - Lecture commune</a></li>
   </ul></li>
-  <li><a href="#principe-2-linertie-métriques-internes" id="toc-principe-2-linertie-métriques-internes" class="nav-link" data-scroll-target="#principe-2-linertie-métriques-internes">Principe 2 : l’inertie (métriques internes)</a></li>
-  <li><a href="#silhouette" id="toc-silhouette" class="nav-link" data-scroll-target="#silhouette">Silhouette</a>
+  <li><a href="#ii---principe-2-linertie-métriques-internes" id="toc-ii---principe-2-linertie-métriques-internes" class="nav-link" data-scroll-target="#ii---principe-2-linertie-métriques-internes">II - Principe 2 : l’inertie (métriques internes)</a>
   <ul class="collapse">
-  <li><a href="#point-de-départ-ce-que-linertie-ne-mesure-pas" id="toc-point-de-départ-ce-que-linertie-ne-mesure-pas" class="nav-link" data-scroll-target="#point-de-départ-ce-que-linertie-ne-mesure-pas">Point de départ : ce que l’inertie ne mesure pas</a></li>
-  <li><a href="#construction-pas-à-pas" id="toc-construction-pas-à-pas" class="nav-link" data-scroll-target="#construction-pas-à-pas">Construction pas à pas</a>
+  <li><a href="#ii.1---silhouette" id="toc-ii.1---silhouette" class="nav-link" data-scroll-target="#ii.1---silhouette">II.1 - Silhouette</a>
   <ul class="collapse">
-  <li><a href="#étape-1-reformuler-linertie-sans-centroïde" id="toc-étape-1-reformuler-linertie-sans-centroïde" class="nav-link" data-scroll-target="#étape-1-reformuler-linertie-sans-centroïde">Étape 1 : reformuler l’inertie sans centroïde</a></li>
-  <li><a href="#étape-2-localiser-cette-idée-à-un-point" id="toc-étape-2-localiser-cette-idée-à-un-point" class="nav-link" data-scroll-target="#étape-2-localiser-cette-idée-à-un-point">Étape 2 : localiser cette idée à un point</a></li>
-  <li><a href="#étape-3-introduire-la-séparation" id="toc-étape-3-introduire-la-séparation" class="nav-link" data-scroll-target="#étape-3-introduire-la-séparation">Étape 3 : introduire la séparation</a></li>
-  <li><a href="#étape-4-mettre-les-deux-en-rapport" id="toc-étape-4-mettre-les-deux-en-rapport" class="nav-link" data-scroll-target="#étape-4-mettre-les-deux-en-rapport">Étape 4 : mettre les deux en rapport</a></li>
+  <li><a href="#ii.1.1---point-de-départ-ce-que-linertie-ne-mesure-pas" id="toc-ii.1.1---point-de-départ-ce-que-linertie-ne-mesure-pas" class="nav-link" data-scroll-target="#ii.1.1---point-de-départ-ce-que-linertie-ne-mesure-pas">II.1.1 - Point de départ : ce que l’inertie ne mesure pas</a></li>
+  <li><a href="#ii.1.2---construction-pas-à-pas" id="toc-ii.1.2---construction-pas-à-pas" class="nav-link" data-scroll-target="#ii.1.2---construction-pas-à-pas">II.1.2 - Construction pas à pas</a></li>
   </ul></li>
-  <li><a href="#lecture-de-si" id="toc-lecture-de-si" class="nav-link" data-scroll-target="#lecture-de-si">Lecture de <span class="math inline">\(s(i)\)</span></a></li>
-  <li><a href="#ce-que-la-silhouette-fait-que-linertie-ne-fait-pas" id="toc-ce-que-la-silhouette-fait-que-linertie-ne-fait-pas" class="nav-link" data-scroll-target="#ce-que-la-silhouette-fait-que-linertie-ne-fait-pas">Ce que la silhouette fait que l’inertie ne fait pas</a></li>
-  <li><a href="#remarques-pratiques" id="toc-remarques-pratiques" class="nav-link" data-scroll-target="#remarques-pratiques">Remarques pratiques</a></li>
+  <li><a href="#ii.2---lecture-de-si" id="toc-ii.2---lecture-de-si" class="nav-link" data-scroll-target="#ii.2---lecture-de-si">II.2 - Lecture de <span class="math inline">\(s(i)\)</span></a></li>
+  <li><a href="#ii.3---ce-que-la-silhouette-fait-que-linertie-ne-fait-pas" id="toc-ii.3---ce-que-la-silhouette-fait-que-linertie-ne-fait-pas" class="nav-link" data-scroll-target="#ii.3---ce-que-la-silhouette-fait-que-linertie-ne-fait-pas">II.3 - Ce que la silhouette fait que l’inertie ne fait pas</a></li>
+  <li><a href="#ii.4---remarques-pratiques" id="toc-ii.4---remarques-pratiques" class="nav-link" data-scroll-target="#ii.4---remarques-pratiques">II.4 - Remarques pratiques</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -398,35 +394,32 @@ window.Quarto = {
 
 <section id="évaluer-un-clustering" class="level1">
 <h1>Évaluer un clustering</h1>
-<p>Un algorithme de clustering produit une partition des données. Pour mesurer sa qualité, il faut d’abord se demander si on dispose d’étiquettes vraies ou non :</p>
+<p>Un algorithme de clustering produit une partition des données. Pour mesurer sa qualité, il faut d’abord se demander si on dispose d’étiquettes faisant office de référence ou non.</p>
 <ul>
-<li><strong>Oui</strong> : on compare la partition prédite à la référence. La question est <em>dans quelle mesure les deux partitions s’accordent-elles ?</em></li>
-<li><strong>Non</strong> : on interroge directement la géométrie. La question est <em>les groupes sont-ils compacts et bien séparés ?</em></li>
+<li>Si on dispose d’une partition de référence, la question est <em>dans quelle mesure les deux partitions s’accordent-elles ?</em></li>
+<li>Sinon, on interroge directement la géométrie et la question est <em>les groupes sont-ils compacts et bien séparés ?</em></li>
 </ul>
-<p>Ces deux questions appellent des choix distincts : comment <strong>représenter</strong> une partition mathématiquement, et quelle <strong>mesure d’accord</strong> utiliser dans cette représentation. ARI et AMI répondent à ces deux choix différemment, tout en partageant la même structure de normalisation. La silhouette opère directement sur la géométrie des données, sans comparer deux partitions.</p>
 <hr>
-<section id="principe-1-comparer-deux-partitions-métriques-externes" class="level2">
-<h2 class="anchored" data-anchor-id="principe-1-comparer-deux-partitions-métriques-externes">Principe 1 : comparer deux partitions (métriques externes)</h2>
-<p>ARI et AMI partagent la même structure de normalisation :</p>
-<p><span class="math display">\[\text{score ajusté} = \frac{\text{accord observé} - \text{accord attendu par hasard}}{\text{accord maximal} - \text{accord attendu par hasard}}\]</span></p>
-<p>Ce qui les distingue est double — la <strong>représentation</strong> choisie pour encoder une partition, et la <strong>métrique</strong> choisie pour mesurer l’accord entre deux partitions ainsi encodées.</p>
+<section id="i---principe-1-comparer-deux-partitions-métriques-externes" class="level2">
+<h2 class="anchored" data-anchor-id="i---principe-1-comparer-deux-partitions-métriques-externes">I - Principe 1 : comparer deux partitions (métriques externes)</h2>
+<p>Nous présentons deux approches qui sont semblables dans leur construction mais reposent sur deux façons différentes de représenter le problème. ARI Adjusted Rand Index) et AMI (Adjusted Mutual Information) sont des indices d’accord en la partition produite par le clustering et la partition de référence. Les deux proposent de mesurer cet accord selon le même principe mais avec une représentation et une métrique propre:</p>
+<p>La <strong>mesure de l’accord</strong> entre les partitions:<br>
+<span class="math display">\[\text{score ajusté} = \frac{\text{accord observé} - \text{accord attendu par hasard}}{\text{accord maximal} - \text{accord attendu par hasard}}\]</span></p>
 <ul>
-<li>L’<strong>ARI</strong> encode la partition comme une <strong>relation binaire sur les paires</strong> :</li>
+<li><p>L’<strong>ARI</strong> encode la partition comme une <strong>relation binaire sur les paires</strong> :</p>
+<p><span class="math inline">\(\text{partition} \to \text{relation d'équivalence } (i \sim_U j) \to \text{co-appartenance des paires}\)</span><br>
+<span class="math inline">\(\to \text{matrice } C_U(i,j) = \mathbf{1}[i \sim_U j,\; i \neq j], \quad C_U(i,i) = 0\)</span></p>
+<p>La métrique d’accord est le <strong>produit scalaire de Frobenius</strong> entre <span class="math inline">\(C_U\)</span> et <span class="math inline">\(C_V\)</span>.</p></li>
+<li><p>L’<strong>AMI</strong> encode la partition comme une <strong>variable aléatoire</strong> sur les points :<br>
+<span class="math inline">\(\text{partition} \to \text{variable aléatoire } U(x) \to \text{distribution jointe des clusters}\)</span><br>
+<span class="math inline">\(\to \text{table de contingence } n_{kl}\)</span></p>
+<p>La métrique d’accord est l’<strong>information mutuelle</strong> : <span class="math inline">\(I(U; V) = H(U) - H(U \mid V)\)</span><br>
+où <span class="math inline">\(H(U \mid V) = H(U)\)</span> si les partitions sont indépendantes, et <span class="math inline">\(H(U \mid V) = 0\)</span> si l’une détermine parfaitement l’autre.</p></li>
 </ul>
-<p><span class="math display">\[\text{partition} \to \text{relation d'équivalence } (i \sim_U j) \to \text{co-appartenance des paires} \to \text{matrice } C_U(i,j) = \mathbf{1}[i \sim_U j,\; i \neq j], \quad C_U(i,i) = 0\]</span></p>
-<p>La métrique d’accord est le <strong>produit scalaire de Frobenius</strong> entre <span class="math inline">\(C_U\)</span> et <span class="math inline">\(C_V\)</span>.</p>
-<ul>
-<li>L’<strong>AMI</strong> encode la partition comme une <strong>variable aléatoire</strong> sur les points :</li>
-</ul>
-<p><span class="math display">\[\text{partition} \to \text{variable aléatoire } U(x) \to \text{distribution jointe des clusters} \to \text{table de contingence } n_{kl}\]</span></p>
-<p>La métrique d’accord est l’<strong>information mutuelle</strong> :</p>
-<p><span class="math display">\[I(U; V) = H(U) - H(U \mid V)\]</span></p>
-<p>où <span class="math inline">\(H(U \mid V) = H(U)\)</span> si les partitions sont indépendantes, et <span class="math inline">\(H(U \mid V) = 0\)</span> si l’une détermine parfaitement l’autre.</p>
-<p>La normalisation par rapport au hasard (tailles de clusters fixées, affectations mélangées) est identique dans les deux cas.</p>
+<p>La structure d’ajustement par rapport au hasard est analogue dans les deux cas — mais les modèles nuls sous-jacents diffèrent : permutations indépendantes pour l’ARI, distribution hypergéométrique pour l’AMI.</p>
 <hr>
-</section>
-<section id="ari-et-ami-deux-opérationnalisations" class="level2">
-<h2 class="anchored" data-anchor-id="ari-et-ami-deux-opérationnalisations">ARI et AMI — deux opérationnalisations</h2>
+<section id="i.1---ari-et-ami-deux-opérationnalisations" class="level3">
+<h3 class="anchored" data-anchor-id="i.1---ari-et-ami-deux-opérationnalisations">I.1 - ARI et AMI — deux opérationnalisations</h3>
 <p><span class="math display">\[\text{ARI} : \text{partition} \to \text{relation d'équivalence} \to \text{paires} \qquad\qquad \text{AMI} : \text{partition} \to \text{variable aléatoire} \to \text{entropie}\]</span></p>
 <table class="caption-top table">
 <colgroup>
@@ -472,8 +465,9 @@ window.Quarto = {
 <p><strong>Lecture matricielle.</strong> La matrice <span class="math inline">\(C_U - C_V\)</span> vaut <span class="math inline">\(\pm 1\)</span> exactement sur les paires en désaccord, 0 ailleurs. Donc <span class="math inline">\(\|C_U - C_V\|_F^2 = 2 \times \text{nombre de désaccords}\)</span>, et <span class="math inline">\(RI = 1 - \frac{\|C_U - C_V\|_F^2}{2N}\)</span> est bien la proportion de paires concordantes. Le score brut <span class="math inline">\(I = \frac{1}{2}\langle C_U, C_V\rangle_F\)</span> ne compte que les paires ensemble dans les deux partitions — la correction du hasard absorbe la contribution des paires séparées dans les deux, qui domineraient sinon.</p>
 <p><strong>Baseline de l’ARI.</strong> Sous le modèle de permutations séparées et indépendantes, la probabilité qu’une paire soit intra-cluster dans <span class="math inline">\(U\)</span> est <span class="math inline">\(P/N\)</span>, et dans <span class="math inline">\(V\)</span> est <span class="math inline">\(Q/N\)</span>. Par indépendance, <span class="math inline">\(\mathbb{E}[I] = N \cdot \frac{P}{N} \cdot \frac{Q}{N} = \frac{PQ}{N}\)</span>.</p>
 <p><strong>Normalisation de l’AMI.</strong> Le dénominateur <span class="math inline">\(\frac{H(U)+H(V)}{2}\)</span> est le choix de scikit-learn (moyenne arithmétique). D’autres normalisations (min ou max des entropies) sont possibles et donnent des valeurs légèrement différentes.</p>
-<section id="lecture-commune" class="level3">
-<h3 class="anchored" data-anchor-id="lecture-commune">Lecture commune</h3>
+</section>
+<section id="i.2---lecture-commune" class="level3">
+<h3 class="anchored" data-anchor-id="i.2---lecture-commune">I.2 - Lecture commune</h3>
 <ul>
 <li><strong>Score = 1</strong> : partitions identiques.</li>
 <li><strong>Score ≈ 0</strong> : accord compatible avec deux partitions indépendantes.</li>
@@ -485,74 +479,52 @@ window.Quarto = {
 <hr>
 </section>
 </section>
-<section id="principe-2-linertie-métriques-internes" class="level2">
-<h2 class="anchored" data-anchor-id="principe-2-linertie-métriques-internes">Principe 2 : l’inertie (métriques internes)</h2>
+<section id="ii---principe-2-linertie-métriques-internes" class="level2">
+<h2 class="anchored" data-anchor-id="ii---principe-2-linertie-métriques-internes">II - Principe 2 : l’inertie (métriques internes)</h2>
 <p>Sans étiquettes de référence, on interroge la géométrie des données. Le principe unificateur est l’<strong>inertie intra-cluster</strong> : pour un cluster <span class="math inline">\(C\)</span> de centroïde <span class="math inline">\(\mu\)</span> et de taille <span class="math inline">\(n_C\)</span>,</p>
 <p><span class="math display">\[W(C) = \frac{1}{n_C} \sum_{x \in C} \|x - \mu\|^2\]</span></p>
 <p>Un bon clustering minimise cette quantité — les points sont proches de leur centre. K-means minimise directement <span class="math inline">\(\sum_C W(C)\)</span>.</p>
 <p><strong>Inertie intra vs inertie inter.</strong> L’inertie totale se décompose en deux termes :</p>
 <p><span class="math display">\[\underbrace{\frac{1}{n}\sum_{x} \|x - \mu\|^2}_{\text{inertie totale}} = \underbrace{\sum_C \frac{n_C}{n} W(C)}_{\text{intra}} + \underbrace{\sum_C \frac{n_C}{n} \|\mu_C - \mu\|^2}_{\text{inter}}\]</span></p>
 <p>L’inertie totale est fixe (elle ne dépend que des données). Intra et inter sont donc redondantes : connaître l’une détermine l’autre. Pour discriminer entre deux clusterings, il faut un critère qui mette en rapport la compacité intra-cluster et la séparation inter-cluster — et non l’une ou l’autre séparément. C’est ce que fait la silhouette.</p>
-<p>Il existe également une identité reliant inertie intra et distances entre points :</p>
-<p><span class="math display">\[\frac{1}{n_C} \sum_{x \in C} \|x - \mu\|^2 = \frac{1}{2n_C^2} \sum_{x,y \in C} \|x - y\|^2\]</span></p>
-<p>L’inertie est donc la moitié de la distance quadratique moyenne entre deux points du cluster. C’est cette reformulation qui connecte l’inertie à la silhouette.</p>
 <hr>
-</section>
-<section id="silhouette" class="level2">
-<h2 class="anchored" data-anchor-id="silhouette">Silhouette</h2>
-<section id="point-de-départ-ce-que-linertie-ne-mesure-pas" class="level3">
-<h3 class="anchored" data-anchor-id="point-de-départ-ce-que-linertie-ne-mesure-pas">Point de départ : ce que l’inertie ne mesure pas</h3>
+<section id="ii.1---silhouette" class="level3">
+<h3 class="anchored" data-anchor-id="ii.1---silhouette">II.1 - Silhouette</h3>
+<section id="ii.1.1---point-de-départ-ce-que-linertie-ne-mesure-pas" class="level4">
+<h4 class="anchored" data-anchor-id="ii.1.1---point-de-départ-ce-que-linertie-ne-mesure-pas">II.1.1 - Point de départ : ce que l’inertie ne mesure pas</h4>
 <p>K-means minimise l’inertie intra-cluster :</p>
 <p><span class="math display">\[W = \sum_C \frac{1}{n_C} \sum_{x \in C} \|x - \mu_C\|^2\]</span></p>
 <p>C’est une mesure de <strong>compacité</strong>. Mais un clustering peut être compact et pourtant mauvais : si les clusters sont très proches les uns des autres, des points compacts dans leur cluster restent ambigus quant à leur appartenance.</p>
 <p>L’inertie intra-cluster ignore complètement la <strong>séparation</strong> entre clusters. La silhouette remédie à cela en mettant les deux en rapport — pour chaque point individuellement.</p>
 </section>
-<section id="construction-pas-à-pas" class="level3">
-<h3 class="anchored" data-anchor-id="construction-pas-à-pas">Construction pas à pas</h3>
-<p>L’idée directrice : réécrire l’inertie comme une moyenne de distances entre paires de points, puis la localiser à chaque point individuellement — ce qui permet d’introduire naturellement la distance au cluster voisin. La silhouette est le rapport entre ces deux quantités, normalisé pour être interprétable.</p>
+<section id="ii.1.2---construction-pas-à-pas" class="level4">
+<h4 class="anchored" data-anchor-id="ii.1.2---construction-pas-à-pas">II.1.2 - Construction pas à pas</h4>
+<p>L’idée directrice : réécrire l’inertie comme une moyenne de distances entre paires de points, puis localiser cette quantité à chaque point individuellement, ce qui permet d’introduire naturellement la distance au cluster voisin. La silhouette met alors en regard ces deux quantités en un score normalisé dans <span class="math inline">\([-1, 1]\)</span>. On moyenne ensuite ces scores locaux pour obtenir un score global du clustering.</p>
 <ol type="1">
-<li><strong>Reformuler l’inertie sans centroïde</strong> — montrer que <span class="math inline">\(W(C)\)</span> est une moyenne pairwise.</li>
-<li><strong>Localiser à un point</strong> — fixer un des deux arguments pour obtenir <span class="math inline">\(a(i)\)</span>, la compacité vue de <span class="math inline">\(x_i\)</span>.</li>
-<li><strong>Introduire la séparation</strong> — calculer <span class="math inline">\(b(i)\)</span>, la distance de <span class="math inline">\(x_i\)</span> au cluster voisin le plus proche.</li>
-<li><strong>Mettre les deux en rapport</strong> — normaliser par <span class="math inline">\(\max(a(i), b(i))\)</span> pour obtenir <span class="math inline">\(s(i) \in [-1, 1]\)</span>.</li>
-<li><strong>Revenir à l’ensemble</strong> — moyenner les <span class="math inline">\(s(i)\)</span> sur tous les points pour obtenir <span class="math inline">\(\bar{s}\)</span>, score global du clustering.</li>
-</ol>
-<section id="étape-1-reformuler-linertie-sans-centroïde" class="level4">
-<h4 class="anchored" data-anchor-id="étape-1-reformuler-linertie-sans-centroïde">Étape 1 : reformuler l’inertie sans centroïde</h4>
-<p>L’inertie d’un cluster peut s’écrire de deux façons :</p>
+<li><p><strong>Reformuler l’inertie sans centroïde</strong> — montrer que <span class="math inline">\(W(C)\)</span> est une moyenne pairwise.</p>
 <p><span class="math display">\[\underbrace{\frac{1}{n_C}\sum_{x \in C} \|x - \mu_C\|^2}_{\text{distance moyenne au centroïde}} = \underbrace{\frac{1}{2n_C^2}\sum_{x,y \in C} \|x - y\|^2}_{\text{distance quadratique moyenne entre points}}\]</span></p>
-<p>Cette identité révèle que l’inertie est fondamentalement une quantité <strong>pairwise</strong> : elle mesure à quel point les points d’un cluster sont écartés les uns des autres, sans avoir besoin du centroïde.</p>
-<p>C’est l’idée germinale de la silhouette.</p>
-</section>
-<section id="étape-2-localiser-cette-idée-à-un-point" class="level4">
-<h4 class="anchored" data-anchor-id="étape-2-localiser-cette-idée-à-un-point">Étape 2 : localiser cette idée à un point</h4>
-<p>Au lieu d’une moyenne sur tout le cluster, on regarde chaque point <span class="math inline">\(x_i\)</span> individuellement :</p>
+<p>L’inertie est fondamentalement une quantité <strong>pairwise</strong> : elle mesure l’écartement mutuel des points d’un cluster, sans faire appel au centroïde.</p></li>
+<li><p><strong>Localiser à un point</strong> — fixer un des deux arguments pour obtenir <span class="math inline">\(a(i)\)</span>, la compacité vue de <span class="math inline">\(x_i\)</span>.</p>
 <p><span class="math display">\[a(i) = \frac{1}{|C_i| - 1} \sum_{j \in C_i,\; j \neq i} \|x_i - x_j\|\]</span></p>
-<p><strong><span class="math inline">\(a(i)\)</span> est la distance moyenne du point <span class="math inline">\(x_i\)</span> aux autres membres de son cluster.</strong></p>
-<p>On fixe ici l’un des deux arguments de la somme double à <span class="math inline">\(x_i\)</span> — ce qui ressemble à réintroduire un centre. Mais c’est précisément la liberté gagnée à l’étape 1 : la formulation pairwise ne privilégie aucun point particulier, donc on peut choisir librement le point de référence. En choisissant <span class="math inline">\(x_i\)</span> lui-même — un point réel des données, pas un agrégat — on rend la mesure locale à chaque point, ce qui permettra au pas suivant de la mettre en regard avec la distance au cluster voisin.</p>
+<p>Notons le passage de <span class="math inline">\(\|x - y\|^2\)</span> (dans l’inertie) à <span class="math inline">\(\|x_i - x_j\|\)</span> : c’est un choix de définition, qui donne à <span class="math inline">\(a(i)\)</span> la dimension d’une distance et facilite la lecture de <span class="math inline">\(s(i)\)</span> à l’étape 4. On fixe l’un des deux arguments à <span class="math inline">\(x_i\)</span> pour obtenir une mesure locale — c’est précisément l’opération de localisation annoncée.</p>
 <blockquote class="blockquote">
-<p><strong><span class="math inline">\(a(i)\)</span> petit</strong> → le point est proche des autres membres de son cluster → compacité locale forte.</p>
-</blockquote>
-</section>
-<section id="étape-3-introduire-la-séparation" class="level4">
-<h4 class="anchored" data-anchor-id="étape-3-introduire-la-séparation">Étape 3 : introduire la séparation</h4>
-<p>Pour chaque cluster <span class="math inline">\(C' \neq C_i\)</span>, on calcule la distance moyenne du point <span class="math inline">\(x_i\)</span> aux membres de <span class="math inline">\(C'\)</span> :</p>
-<p><span class="math display">\[d(i, C') = \frac{1}{|C'|} \sum_{j \in C'} \|x_i - x_j\|\]</span></p>
-<p>Puis on retient la distance au cluster voisin le plus proche :</p>
+<p><strong><span class="math inline">\(a(i)\)</span> petit</strong> → compacité locale forte.</p>
+</blockquote></li>
+<li><p><strong>Introduire la séparation</strong> — calculer <span class="math inline">\(b(i)\)</span>, la distance de <span class="math inline">\(x_i\)</span> au cluster voisin le plus proche.</p>
+<p>Pour chaque <span class="math inline">\(C' \neq C_i\)</span> : <span class="math inline">\(d(i, C') = \frac{1}{|C'|} \sum_{j \in C'} \|x_i - x_j\|\)</span>, puis :</p>
 <p><span class="math display">\[b(i) = \min_{C' \neq C_i} d(i, C')\]</span></p>
-<p><strong><span class="math inline">\(b(i)\)</span> est la distance moyenne du point <span class="math inline">\(x_i\)</span> aux membres du cluster voisin le plus proche.</strong></p>
 <blockquote class="blockquote">
-<p><strong><span class="math inline">\(b(i)\)</span> grand</strong> → <span class="math inline">\(i\)</span> est loin de tout autre cluster → l’affectation est sans ambiguïté.</p>
-</blockquote>
-</section>
-<section id="étape-4-mettre-les-deux-en-rapport" class="level4">
-<h4 class="anchored" data-anchor-id="étape-4-mettre-les-deux-en-rapport">Étape 4 : mettre les deux en rapport</h4>
+<p><strong><span class="math inline">\(b(i)\)</span> grand</strong> → <span class="math inline">\(i\)</span> est loin de tout autre cluster → affectation sans ambiguïté.</p>
+</blockquote></li>
+<li><p><strong>Mettre les deux en rapport</strong> — construire <span class="math inline">\(s(i) \in [-1, 1]\)</span>.</p>
 <p><span class="math display">\[\boxed{s(i) = \frac{b(i) - a(i)}{\max(a(i),\; b(i))}}\]</span></p>
-<p>Le dénominateur normalise : <span class="math inline">\(s(i) \in [-1, 1]\)</span> quelle que soit l’échelle des données.</p>
+<p>Le dénominateur normalise le score quelle que soit l’échelle des données.</p></li>
+<li><p><strong>Revenir à l’ensemble</strong> — moyenner les <span class="math inline">\(s(i)\)</span> sur tous les points pour obtenir <span class="math inline">\(\bar{s}\)</span>, score global du clustering.</p></li>
+</ol>
 </section>
 </section>
-<section id="lecture-de-si" class="level3">
-<h3 class="anchored" data-anchor-id="lecture-de-si">Lecture de <span class="math inline">\(s(i)\)</span></h3>
+<section id="ii.2---lecture-de-si" class="level3">
+<h3 class="anchored" data-anchor-id="ii.2---lecture-de-si">II.2 - Lecture de <span class="math inline">\(s(i)\)</span></h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 22%">
@@ -586,8 +558,8 @@ window.Quarto = {
 </table>
 <p>La silhouette d’un clustering est la moyenne des <span class="math inline">\(s(i)\)</span> : <span class="math inline">\(\bar{s} = \frac{1}{n}\sum_i s(i)\)</span>.</p>
 </section>
-<section id="ce-que-la-silhouette-fait-que-linertie-ne-fait-pas" class="level3">
-<h3 class="anchored" data-anchor-id="ce-que-la-silhouette-fait-que-linertie-ne-fait-pas">Ce que la silhouette fait que l’inertie ne fait pas</h3>
+<section id="ii.3---ce-que-la-silhouette-fait-que-linertie-ne-fait-pas" class="level3">
+<h3 class="anchored" data-anchor-id="ii.3---ce-que-la-silhouette-fait-que-linertie-ne-fait-pas">II.3 - Ce que la silhouette fait que l’inertie ne fait pas</h3>
 <p>Considérons deux scénarios avec la même inertie intra :</p>
 <ul>
 <li><strong>Scénario A</strong> : clusters compacts, bien espacés. <span class="math inline">\(a(i)\)</span> petit, <span class="math inline">\(b(i)\)</span> grand → <span class="math inline">\(s(i) \approx 1\)</span>.</li>
@@ -595,10 +567,10 @@ window.Quarto = {
 </ul>
 <p>L’inertie ne distingue pas A de B. La silhouette si.</p>
 </section>
-<section id="remarques-pratiques" class="level3">
-<h3 class="anchored" data-anchor-id="remarques-pratiques">Remarques pratiques</h3>
+<section id="ii.4---remarques-pratiques" class="level3">
+<h3 class="anchored" data-anchor-id="ii.4---remarques-pratiques">II.4 - Remarques pratiques</h3>
 <p><strong>Choisir <span class="math inline">\(k\)</span>.</strong> Tracer <span class="math inline">\(\bar{s}\)</span> en fonction du nombre de clusters <span class="math inline">\(k\)</span> permet de choisir <span class="math inline">\(k\)</span> sans étiquettes — on cherche un pic. C’est l’un des rares critères internes disponibles pour ce choix.</p>
-<p><strong>Dépendance à la métrique.</strong> La silhouette hérite de la métrique choisie pour <span class="math inline">\(\|\cdot\|\)</span>. Changer la distance peut changer radicalement les scores et même le <span class="math inline">\(k\)</span> optimal. Un bon score en distance euclidienne ne garantit pas que la structure découverte est pertinente dans une autre métrique (voir <a href="../../maths appliquées/2. mesurer-la-proximite.html">Mesurer la proximité</a>).</p>
+<p><strong>Dépendance à la métrique.</strong> La silhouette hérite de la métrique choisie pour <span class="math inline">\(\|\cdot\|\)</span>. Changer la distance peut changer radicalement les scores et même le <span class="math inline">\(k\)</span> optimal. Un bon score en distance euclidienne ne garantit pas que la structure découverte est pertinente dans une autre métrique.</p>
 <p><strong>Complexité.</strong> Le calcul naïf est en <span class="math inline">\(O(n^2)\)</span> (toutes les distances pairwise). Pour de grands jeux de données, des approximations sont nécessaires.</p>
 
 
