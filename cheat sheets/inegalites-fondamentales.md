@@ -6,6 +6,10 @@
 
 Soit $\mathbb{K}$ un corps muni d'une valeur absolue $|\cdot| : \mathbb{K} \to \mathbb{R}_+$, et $E$ un espace vectoriel sur $\mathbb{K}$ muni d'une norme $\|\cdot\|$.
 
+**Séparation.**
+
+$$\|x\| = 0 \iff x = 0$$
+
 **Inégalité triangulaire.**
 
 $$\|x + y\| \leq \|x\| + \|y\|$$
@@ -14,15 +18,25 @@ $$\|x + y\| \leq \|x\| + \|y\|$$
 
 $$\|\lambda x\| = |\lambda| \cdot \|x\|, \quad \lambda \in \mathbb{K}$$
 
-**Norme duale.** Pour toute forme linéaire continue $\varphi : E \to \mathbb{K}$ :
+Ces trois propriétés constituent la définition d'une norme. La séparation est utilisée implicitement dès qu'on divise par $\|x\|$ (ce qui suppose $x \neq 0 \Rightarrow \|x\| > 0$).
 
-$$\|\varphi\|_* = \sup_{\|x\| \leq 1} |\varphi(x)|$$
+**Norme duale.**  
+
+Pour toute forme linéaire continue $\varphi : E \to \mathbb{K}$ :
+
+$$\|\varphi\|_* = \sup_{\|x\| \leq 1} |\varphi(x)|\quad (1)$$
 
 et pour tout $x \in E$ :
 
-$$|\varphi(x)| \leq \|\varphi\|_* \cdot \|x\|$$
+$$|\varphi(x)| \leq \|\varphi\|_* \cdot \|x\|\quad (2)$$
 
-Les deux expressions sont équivalentes par homogénéité de $\varphi$.  
+et $\|\varphi\|_*$ est par définition la **plus petite constante** $C$ telle que $|\varphi(x)| \leq C \|x\|$ pour tout $x$.
+
+Ces deux expressions définissent le même nombre :
+
+- $(1) \Rightarrow (2)$ : pour $x \neq 0$, le vecteur $u = x/\|x\|$ est dans la boule unité, donc $|\varphi(u)| \leq \sup_{\|x\| \leq 1} |\varphi(x)|$. Par linéarité, on obtient $|\varphi(x)| \leq \left(\sup_{\|x\| \leq 1} |\varphi(x)|\right) \|x\|$. Donc le sup est une constante admissible.
+- $(2) \Rightarrow (1)$ : si $C$ est une constante admissible (i.e. $|\varphi(x)| \leq C\|x\|$ pour tout $x$), alors sur la boule unité $|\varphi(x)| \leq C$, donc $\sup_{\|x\|\leq 1}|\varphi(x)| \leq C$. Le sup est donc inférieur ou égal à toutes les constantes admissibles : c'est bien la plus petite.
+
 La constante $\|\varphi\|_*$ est finie si et seulement si $\varphi$ est continue (pour une application linéaire, continuité équivaut à être bornée sur la boule unité). En dimension finie, toute forme linéaire est automatiquement continue ; en dimension infinie, il existe des formes linéaires discontinues.
 
 ## II. Inégalité de Young (brique de base sur $\mathbb{R}_+$)
@@ -31,7 +45,7 @@ Pour $a, b \in \mathbb{R}_+$ et $p, q > 1$ avec $\frac{1}{p} + \frac{1}{q} = 1$ 
 
 $$ab \leq \frac{a^p}{p} + \frac{b^q}{q}$$
 
-C'est une inégalité purement réelle : elle repose sur la convexité de l'exponentielle (cas d'égalité de la concavité du logarithme). Les vecteurs n'interviennent pas encore.
+L'inégalité se démontre simplement grâce à la concavité de la fonction logarithme : pour $a,b>0$, on écrit $\ln\left(\frac{1}{p}a^p + \frac{1}{q}b^q\right) \geq \frac{1}{p}\ln(a^p) + \frac{1}{q}\ln(b^q) = \ln(ab)$, puis on passe à l'exponentielle. L'égalité est atteinte si et seulement si $a^p = b^q$ (cas d'égalité de la stricte concavité). Les vecteurs n'interviennent pas encore.
 
 ## III. Passage aux vecteurs dans $\mathbb{K}^n$ (spécifique à $\ell_p$)
 

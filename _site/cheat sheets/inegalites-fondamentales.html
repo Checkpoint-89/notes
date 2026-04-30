@@ -311,12 +311,29 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Meaning crisis</span></a>
+ <span class="menu-text">Machine learning</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../machine_learning/clustering/clustering_metrics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Évaluer un clustering</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Meaning crisis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../metacrisis/1.html" class="sidebar-item-text sidebar-link">
@@ -377,22 +394,31 @@ window.Quarto = {
 <section id="i.-structure-minimale-dun-espace-normé" class="level2">
 <h2 class="anchored" data-anchor-id="i.-structure-minimale-dun-espace-normé">I. Structure minimale d’un espace normé</h2>
 <p>Soit <span class="math inline">\(\mathbb{K}\)</span> un corps muni d’une valeur absolue <span class="math inline">\(|\cdot| : \mathbb{K} \to \mathbb{R}_+\)</span>, et <span class="math inline">\(E\)</span> un espace vectoriel sur <span class="math inline">\(\mathbb{K}\)</span> muni d’une norme <span class="math inline">\(\|\cdot\|\)</span>.</p>
+<p><strong>Séparation.</strong></p>
+<p><span class="math display">\[\|x\| = 0 \iff x = 0\]</span></p>
 <p><strong>Inégalité triangulaire.</strong></p>
 <p><span class="math display">\[\|x + y\| \leq \|x\| + \|y\|\]</span></p>
 <p><strong>Homogénéité.</strong></p>
 <p><span class="math display">\[\|\lambda x\| = |\lambda| \cdot \|x\|, \quad \lambda \in \mathbb{K}\]</span></p>
-<p><strong>Norme duale.</strong> Pour toute forme linéaire continue <span class="math inline">\(\varphi : E \to \mathbb{K}\)</span> :</p>
-<p><span class="math display">\[\|\varphi\|_* = \sup_{\|x\| \leq 1} |\varphi(x)|\]</span></p>
+<p>Ces trois propriétés constituent la définition d’une norme. La séparation est utilisée implicitement dès qu’on divise par <span class="math inline">\(\|x\|\)</span> (ce qui suppose <span class="math inline">\(x \neq 0 \Rightarrow \|x\| &gt; 0\)</span>).</p>
+<p><strong>Norme duale.</strong></p>
+<p>Pour toute forme linéaire continue <span class="math inline">\(\varphi : E \to \mathbb{K}\)</span> :</p>
+<p><span class="math display">\[\|\varphi\|_* = \sup_{\|x\| \leq 1} |\varphi(x)|\quad (1)\]</span></p>
 <p>et pour tout <span class="math inline">\(x \in E\)</span> :</p>
-<p><span class="math display">\[|\varphi(x)| \leq \|\varphi\|_* \cdot \|x\|\]</span></p>
-<p>Les deux expressions sont équivalentes par homogénéité de <span class="math inline">\(\varphi\)</span>.<br>
-La constante <span class="math inline">\(\|\varphi\|_*\)</span> est finie si et seulement si <span class="math inline">\(\varphi\)</span> est continue (pour une application linéaire, continuité équivaut à être bornée sur la boule unité). En dimension finie, toute forme linéaire est automatiquement continue ; en dimension infinie, il existe des formes linéaires discontinues.</p>
+<p><span class="math display">\[|\varphi(x)| \leq \|\varphi\|_* \cdot \|x\|\quad (2)\]</span></p>
+<p>et <span class="math inline">\(\|\varphi\|_*\)</span> est par définition la <strong>plus petite constante</strong> <span class="math inline">\(C\)</span> telle que <span class="math inline">\(|\varphi(x)| \leq C \|x\|\)</span> pour tout <span class="math inline">\(x\)</span>.</p>
+<p>Ces deux expressions définissent le même nombre :</p>
+<ul>
+<li><span class="math inline">\((1) \Rightarrow (2)\)</span> : pour <span class="math inline">\(x \neq 0\)</span>, le vecteur <span class="math inline">\(u = x/\|x\|\)</span> est dans la boule unité, donc <span class="math inline">\(|\varphi(u)| \leq \sup_{\|x\| \leq 1} |\varphi(x)|\)</span>. Par linéarité, on obtient <span class="math inline">\(|\varphi(x)| \leq \left(\sup_{\|x\| \leq 1} |\varphi(x)|\right) \|x\|\)</span>. Donc le sup est une constante admissible.</li>
+<li><span class="math inline">\((2) \Rightarrow (1)\)</span> : si <span class="math inline">\(C\)</span> est une constante admissible (i.e.&nbsp;<span class="math inline">\(|\varphi(x)| \leq C\|x\|\)</span> pour tout <span class="math inline">\(x\)</span>), alors sur la boule unité <span class="math inline">\(|\varphi(x)| \leq C\)</span>, donc <span class="math inline">\(\sup_{\|x\|\leq 1}|\varphi(x)| \leq C\)</span>. Le sup est donc inférieur ou égal à toutes les constantes admissibles : c’est bien la plus petite.</li>
+</ul>
+<p>La constante <span class="math inline">\(\|\varphi\|_*\)</span> est finie si et seulement si <span class="math inline">\(\varphi\)</span> est continue (pour une application linéaire, continuité équivaut à être bornée sur la boule unité). En dimension finie, toute forme linéaire est automatiquement continue ; en dimension infinie, il existe des formes linéaires discontinues.</p>
 </section>
 <section id="ii.-inégalité-de-young-brique-de-base-sur-mathbbr_" class="level2">
 <h2 class="anchored" data-anchor-id="ii.-inégalité-de-young-brique-de-base-sur-mathbbr_">II. Inégalité de Young (brique de base sur <span class="math inline">\(\mathbb{R}_+\)</span>)</h2>
 <p>Pour <span class="math inline">\(a, b \in \mathbb{R}_+\)</span> et <span class="math inline">\(p, q &gt; 1\)</span> avec <span class="math inline">\(\frac{1}{p} + \frac{1}{q} = 1\)</span> :</p>
 <p><span class="math display">\[ab \leq \frac{a^p}{p} + \frac{b^q}{q}\]</span></p>
-<p>C’est une inégalité purement réelle : elle repose sur la convexité de l’exponentielle (cas d’égalité de la concavité du logarithme). Les vecteurs n’interviennent pas encore.</p>
+<p>L’inégalité se démontre simplement grâce à la concavité de la fonction logarithme : pour <span class="math inline">\(a,b&gt;0\)</span>, on écrit <span class="math inline">\(\ln\left(\frac{1}{p}a^p + \frac{1}{q}b^q\right) \geq \frac{1}{p}\ln(a^p) + \frac{1}{q}\ln(b^q) = \ln(ab)\)</span>, puis on passe à l’exponentielle. L’égalité est atteinte si et seulement si <span class="math inline">\(a^p = b^q\)</span> (cas d’égalité de la stricte concavité). Les vecteurs n’interviennent pas encore.</p>
 </section>
 <section id="iii.-passage-aux-vecteurs-dans-mathbbkn-spécifique-à-ell_p" class="level2">
 <h2 class="anchored" data-anchor-id="iii.-passage-aux-vecteurs-dans-mathbbkn-spécifique-à-ell_p">III. Passage aux vecteurs dans <span class="math inline">\(\mathbb{K}^n\)</span> (spécifique à <span class="math inline">\(\ell_p\)</span>)</h2>
