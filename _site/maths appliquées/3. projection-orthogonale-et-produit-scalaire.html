@@ -311,12 +311,29 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Meaning crisis</span></a>
+ <span class="menu-text">Machine learning</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../machine_learning/clustering/clustering_metrics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Évaluer un clustering</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Meaning crisis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../metacrisis/1.html" class="sidebar-item-text sidebar-link">
@@ -354,7 +371,7 @@ window.Quarto = {
   <li><a href="#pythagore" id="toc-pythagore" class="nav-link" data-scroll-target="#pythagore">Pythagore</a></li>
   <li><a href="#la-projection-orthogonale-est-la-meilleure-estimation" id="toc-la-projection-orthogonale-est-la-meilleure-estimation" class="nav-link" data-scroll-target="#la-projection-orthogonale-est-la-meilleure-estimation">La projection orthogonale est la meilleure estimation</a></li>
   <li><a href="#la-règle-du-parallélogramme-théorème-de-jordanvon-neumann" id="toc-la-règle-du-parallélogramme-théorème-de-jordanvon-neumann" class="nav-link" data-scroll-target="#la-règle-du-parallélogramme-théorème-de-jordanvon-neumann">La règle du parallélogramme (théorème de Jordan–von Neumann)</a></li>
-  <li><a href="#les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire" id="toc-les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire" class="nav-link" data-scroll-target="#les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire">Les normes Lᵖ et pourquoi seule L² a un produit scalaire</a></li>
+  <li><a href="#les-normes-lp-et-pourquoi-seule-l2-a-un-produit-scalaire" id="toc-les-normes-lp-et-pourquoi-seule-l2-a-un-produit-scalaire" class="nav-link" data-scroll-target="#les-normes-lp-et-pourquoi-seule-l2-a-un-produit-scalaire">Les normes <span class="math inline">\(L^p\)</span> et pourquoi seule <span class="math inline">\(L^2\)</span> a un produit scalaire</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -367,81 +384,85 @@ window.Quarto = {
 
 <section id="projection-orthogonale-et-produit-scalaire" class="level1">
 <h1>Projection orthogonale et produit scalaire</h1>
-<p>Dans toute la suite, on dit “produit scalaire” au sens large : au sens usuel sur ℝ, au sens hermitien sur ℂ.</p>
+<blockquote class="blockquote">
+<p><strong>Idée directrice.</strong> Le produit scalaire est la structure qui rend la projection sur un sous-espace fermé <span class="math inline">\(V\)</span> <strong>algébriquement linéaire</strong> — c’est un vrai projecteur au sens algébrique : <span class="math inline">\(P_V^2 = P_V\)</span>, <span class="math inline">\(\ker P_V = V^\perp\)</span>. Ce gain est substantiel : sans produit scalaire, le plus proche point d’un sous-espace existe (en dimension finie toujours ; en dimension infinie si l’espace est réflexif) et est unique si la norme est strictement convexe, mais l’application <span class="math inline">\(x \mapsto p\)</span> n’est pas linéaire et en particulier, la notion d’orthogonal n’a pas de sens.</p>
+<p>Avec le produit scalaire, la décomposition <span class="math inline">\(x = p + e\)</span> est <strong>orthogonale</strong> : <span class="math inline">\(p \in V\)</span> et <span class="math inline">\(e \perp V\)</span>. Cela a deux conséquences opérationnelles directes:<br>
+- D’abord, <span class="math inline">\(\|e\| = \inf_{v \in V} \|x - v\|\)</span> : la norme du résidu est la distance de <span class="math inline">\(x\)</span> à <span class="math inline">\(V\)</span>, atteinte uniquement en <span class="math inline">\(p\)</span>.<br>
+- Ensuite, les deux composantes ne se mélangent pas : par Pythagore — conséquence directe de la sesquilinéarité — <span class="math inline">\(\|x\|^2 = \|p\|^2 + \|e\|^2\)</span>. La composante utile et l’erreur contribuent indépendamment au carré de la norme ; on peut les traiter séparément.</p>
+<p>Un produit scalaire est nécessaire pour disposer de la projection orthogonale linéaire — et donc de toutes les facilités qui en découlent. Or parmi les normes <span class="math inline">\(L^p\)</span>, seule <span class="math inline">\(L^2\)</span> admet un produit scalaire — c’est le théorème de Jordan–von Neumann : une norme provient d’un produit scalaire si et seulement si elle vérifie la règle du parallélogramme, et parmi les <span class="math inline">\(L^p\)</span>, seule <span class="math inline">\(L^2\)</span> la vérifie. C’est pourquoi moindres carrés, séries de Fourier, Gram-Schmidt et régression linéaire reposent tous sur <span class="math inline">\(L^2\)</span>.</p>
+</blockquote>
+<p>Dans toute la suite, on dit “produit scalaire” au sens large : au sens usuel sur <span class="math inline">\(\mathbb{R}\)</span>, au sens hermitien sur <span class="math inline">\(\mathbb{C}\)</span>.</p>
 <section id="cadre" class="level2">
 <h2 class="anchored" data-anchor-id="cadre">Cadre</h2>
-<p>On travaille dans un espace vectoriel E (sur ℝ ou ℂ) muni d’un <strong>produit scalaire</strong> ⟨·,·⟩. Tout ce qui suit est valable en dimension finie comme en dimension infinie, à condition que l’espace soit <strong>complet</strong> (toute suite de Cauchy converge dans E) et que les sous-espaces considérés soient <strong>fermés</strong>. Un tel espace est appelé espace de Hilbert. En dimension finie, complétude et fermeture sont automatiques.</p>
-<p><strong>Pourquoi ces conditions.</strong> La complétude garantit qu’on peut passer à la limite sans sortir de l’espace : sans elle, une suite d’approximations de plus en plus proches d’un optimum pourrait converger vers un point qui n’appartient pas à E. La fermeture d’un sous-espace V garantit que la limite reste dans V. En dimension infinie, ces deux conditions doivent être vérifiées ; en dimension finie, elles sont gratuites. Dans toute la suite, “sous-espace” signifie sous-espace fermé.</p>
-<p><strong>Terminologie.</strong> Un espace vectoriel réel de dimension finie muni d’un produit scalaire est un espace euclidien. La généralisation à la dimension infinie et/ou au corps ℂ est un espace de Hilbert.</p>
+<p>On travaille dans un espace vectoriel <span class="math inline">\(E\)</span> (sur <span class="math inline">\(\mathbb{R}\)</span> ou <span class="math inline">\(\mathbb{C}\)</span>) muni d’un <strong>produit scalaire</strong> <span class="math inline">\(\langle \cdot, \cdot \rangle\)</span>. Tout ce qui suit est valable en dimension finie comme en dimension infinie, à condition que l’espace soit <strong>complet</strong> (toute suite de Cauchy converge dans <span class="math inline">\(E\)</span>) et que les sous-espaces considérés soient <strong>fermés</strong>. Un tel espace est appelé espace de Hilbert. En dimension finie, complétude et fermeture sont automatiques.</p>
+<p><strong>Pourquoi ces conditions.</strong> La complétude garantit qu’on peut passer à la limite sans sortir de l’espace : sans elle, une suite d’approximations de plus en plus proches d’un optimum pourrait converger vers un point qui n’appartient pas à <span class="math inline">\(E\)</span>. La fermeture d’un sous-espace <span class="math inline">\(V\)</span> garantit que la limite reste dans <span class="math inline">\(V\)</span>. En dimension infinie, ces deux conditions — complétude de <span class="math inline">\(E\)</span> et fermeture de <span class="math inline">\(V\)</span> — doivent être vérifiées ; en dimension finie, elles sont gratuites. Dans toute la suite, “sous-espace” signifie sous-espace fermé.</p>
+<p><strong>Terminologie.</strong> Un espace vectoriel réel de dimension finie muni d’un produit scalaire est un espace euclidien. La généralisation à la dimension infinie et/ou au corps <span class="math inline">\(\mathbb{C}\)</span> est un espace de Hilbert — à condition que l’espace soit complet pour la norme induite par le produit scalaire.</p>
 </section>
 <section id="produit-scalaire" class="level2">
 <h2 class="anchored" data-anchor-id="produit-scalaire">Produit scalaire</h2>
-<p>Un <strong>produit scalaire</strong> sur E est une application ⟨·,·⟩ : E × E → 𝕂 (où 𝕂 = ℝ ou ℂ) qui vérifie :</p>
+<p>Un <strong>produit scalaire</strong> sur <span class="math inline">\(E\)</span> est une application <span class="math inline">\(\langle \cdot, \cdot \rangle : E \times E \to \mathbb{K}\)</span> (où <span class="math inline">\(\mathbb{K} = \mathbb{R}\)</span> ou <span class="math inline">\(\mathbb{C}\)</span>) qui vérifie :</p>
 <ul>
-<li><strong>Sesquilinéarité</strong> : linéaire en une variable, conjugué-linéaire en l’autre. Sur ℝ, la conjugaison est triviale et cela se réduit à la bilinéarité.</li>
-<li><strong>Symétrie hermitienne</strong> : ⟨x,y⟩ = <span class="math inline">\(\overline{⟨y,x⟩}\)</span>. Sur ℝ, cela se réduit à la symétrie ⟨x,y⟩ = ⟨y,x⟩. En conséquence, ⟨x,x⟩ = <span class="math inline">\(\overline{⟨x,x⟩}\)</span>, donc ⟨x,x⟩ est toujours réel.</li>
-<li><strong>Défini positif</strong> : ⟨x,x⟩ ≥ 0 pour tout x et ⟨x,x⟩ = 0 ⟹ x = 0.</li>
+<li><strong>Sesquilinéarité</strong> : linéaire en une variable, conjugué-linéaire en l’autre — c’est-à-dire que sortir un scalaire de la première variable le conjugue : <span class="math inline">\(\langle \lambda x, y \rangle = \bar{\lambda} \langle x, y \rangle\)</span>. Sur <span class="math inline">\(\mathbb{R}\)</span>, ça se réduit à la bilinéarité.</li>
+<li><strong>Symétrie hermitienne</strong> : <span class="math inline">\(\langle x, y \rangle = \overline{\langle y, x \rangle}\)</span>. Sur <span class="math inline">\(\mathbb{R}\)</span>, cela se réduit à la symétrie <span class="math inline">\(\langle x, y \rangle = \langle y, x \rangle\)</span>. En conséquence, <span class="math inline">\(\langle x, x \rangle = \overline{\langle x, x \rangle}\)</span>, donc <span class="math inline">\(\langle x, x \rangle\)</span> est toujours réel — ce qui est nécessaire pour que <span class="math inline">\(\|x\|^2 = \langle x, x \rangle\)</span> soit une norme.</li>
+<li><strong>Défini positif</strong> : <span class="math inline">\(\langle x, x \rangle \geq 0\)</span> pour tout <span class="math inline">\(x\)</span> et <span class="math inline">\(\langle x, x \rangle = 0 \Rightarrow x = 0\)</span>.</li>
 </ul>
-<p><strong>Convention de linéarité.</strong> En mathématiques, le produit est conventionnellement linéaire en la seconde variable et conjugué-linéaire en la première : ⟨λx, y⟩ = <span class="math inline">\(\bar{λ}\)</span>⟨x, y⟩ et ⟨x, λy⟩ = λ⟨x, y⟩. La convention inverse est courante en physique.</p>
-<p><strong>Représentation matricielle.</strong> En dimension finie, un produit scalaire s’écrit ⟨x,y⟩ = x<em>My, où x</em> est le transposé conjugué de x et M est une matrice définie positive. Sur ℝ, M est symétrique réelle (M = Mᵀ) ; sur ℂ, M est hermitienne (M = <span class="math inline">\(\overline{M}^T\)</span>).</p>
+<p><strong>Convention de linéarité.</strong> En mathématiques, le produit est conventionnellement linéaire en la seconde variable et conjugué-linéaire en la première : <span class="math inline">\(\langle \lambda x, y \rangle = \bar{\lambda} \langle x, y \rangle\)</span> et <span class="math inline">\(\langle x, \lambda y \rangle = \lambda \langle x, y \rangle\)</span>. La convention inverse est courante en physique.</p>
+<p><strong>Représentation matricielle.</strong> En dimension finie, un produit scalaire s’écrit <span class="math inline">\(\langle x, y \rangle = x^* M y\)</span>, où <span class="math inline">\(x^*\)</span> est le transposé conjugué de <span class="math inline">\(x\)</span> et <span class="math inline">\(M\)</span> est une matrice définie positive. Sur <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\(M\)</span> est symétrique réelle (<span class="math inline">\(M = M^\top\)</span>) ; sur <span class="math inline">\(\mathbb{C}\)</span>, <span class="math inline">\(M\)</span> est hermitienne (<span class="math inline">\(M = \overline{M}^T\)</span>).</p>
 <p>La condition “défini positif” admet une formulation équivalente, plus naturelle en algèbre linéaire :</p>
-<ul>
-<li><strong>(Non dégénéré positif)</strong> : ⟨x,x⟩ ≥ 0 pour tout x, et si ⟨x,y⟩ = 0 pour tout y, alors x = 0.</li>
-</ul>
-<p>La première formulation regarde le signe : la forme ne s’annule qu’en zéro. La seconde regarde le noyau : aucun vecteur non nul n’est orthogonal à tout l’espace — autrement dit, l’application x ↦ ⟨x,·⟩ est injective. C’est l’analogue du théorème de représentation de Riesz (trivial en dimension finie, profond en dimension infinie).</p>
-<p><strong>Pourquoi ces deux conditions sont équivalentes.</strong> Définie positive ⟹ non dégénérée : si ⟨x,y⟩ = 0 pour tout y, en particulier pour y = x, donc ⟨x,x⟩ = 0, donc x = 0. Non dégénérée ⟹ définie positive : supposons ⟨x,x⟩ = 0 avec x ≠ 0. Par Cauchy-Schwarz (qui ne requiert que sesquilinéarité, symétrie hermitienne et positivité), |⟨x,y⟩|² ≤ ⟨x,x⟩⟨y,y⟩ = 0 pour tout y. Donc ⟨x,y⟩ = 0 pour tout y, ce qui contredit la non-dégénérescence.</p>
+<p><strong>Non dégénéré positif</strong> : <span class="math inline">\(\langle x, x \rangle \geq 0\)</span> pour tout <span class="math inline">\(x\)</span>, et si <span class="math inline">\(\langle x, y \rangle = 0\)</span> pour tout <span class="math inline">\(y\)</span>, alors <span class="math inline">\(x = 0\)</span>.</p>
+<p>La première formulation regarde le signe : la forme ne s’annule qu’en zéro. La seconde regarde le noyau : aucun vecteur non nul n’est orthogonal à tout l’espace — autrement dit, l’application <span class="math inline">\(x \mapsto \langle x, \cdot \rangle\)</span> est injective. En dimension finie, l’injectivité entraîne automatiquement la bijectivité, donc cette application est un isomorphisme <span class="math inline">\(E \to E^*\)</span>. En dimension infinie, c’est le théorème de représentation de Riesz qui garantit la surjectivité — le fait que toute forme linéaire continue sur <span class="math inline">\(E\)</span> s’écrit <span class="math inline">\(\langle y, \cdot \rangle\)</span> pour un unique <span class="math inline">\(y \in E\)</span>. Ce résultat repose sur la complétude de <span class="math inline">\(E\)</span> : sans elle, il existe des formes linéaires continues qui ne sont représentées par aucun vecteur de l’espace.</p>
+<p><strong>Pourquoi ces deux conditions sont équivalentes.</strong> Définie positive <span class="math inline">\(\Rightarrow\)</span> non dégénérée : si <span class="math inline">\(\langle x, y \rangle = 0\)</span> pour tout <span class="math inline">\(y\)</span>, en particulier pour <span class="math inline">\(y = x\)</span>, donc <span class="math inline">\(\langle x, x \rangle = 0\)</span>, donc <span class="math inline">\(x = 0\)</span>. Non dégénérée <span class="math inline">\(\Rightarrow\)</span> définie positive : supposons <span class="math inline">\(\langle x, x \rangle = 0\)</span> avec <span class="math inline">\(x \neq 0\)</span>. Par Cauchy-Schwarz (qui ne requiert que sesquilinéarité, symétrie hermitienne et positivité), <span class="math inline">\(|\langle x, y \rangle|^2 \leq \langle x, x \rangle \langle y, y \rangle = 0\)</span> pour tout <span class="math inline">\(y\)</span>. Donc <span class="math inline">\(\langle x, y \rangle = 0\)</span> pour tout <span class="math inline">\(y\)</span>, ce qui contredit la non-dégénérescence.</p>
 </section>
 <section id="pythagore" class="level2">
 <h2 class="anchored" data-anchor-id="pythagore">Pythagore</h2>
-<p>Si x = p + e avec ⟨p,e⟩ = 0, alors :</p>
-<p>‖x‖² = ⟨p + e, p + e⟩ = ⟨p,p⟩ + ⟨p,e⟩ + ⟨e,p⟩ + ⟨e,e⟩ = ‖p‖² + ‖e‖²</p>
-<p>(Les termes croisés ⟨p,e⟩ et ⟨e,p⟩ = <span class="math inline">\(\overline{⟨p,e⟩}\)</span> sont tous deux nuls dès que l’un l’est.)</p>
-<p>C’est tout. Pythagore n’est pas un théorème de géométrie ajouté au produit scalaire — c’est une conséquence directe de la sesquilinéarité. Développer le carré d’une somme dans un produit scalaire, c’est exactement la même opération que développer (a+b)² = a² + 2ab + b² : les termes croisés apparaissent, et l’orthogonalité les fait disparaître.</p>
+<p>Si <span class="math inline">\(x = p + e\)</span> avec <span class="math inline">\(\langle p, e \rangle = 0\)</span>, alors :</p>
+<p><span class="math inline">\(\|x\|^2 = \langle p + e, p + e \rangle = \langle p, p \rangle + \langle p, e \rangle + \langle e, p \rangle + \langle e, e \rangle = \|p\|^2 + \|e\|^2\)</span></p>
+<p>(Les termes croisés <span class="math inline">\(\langle p, e \rangle\)</span> et <span class="math inline">\(\langle e, p \rangle = \overline{\langle p, e \rangle}\)</span> sont tous deux nuls dès que l’un l’est.)</p>
+<p>C’est tout. Pythagore n’est pas un théorème de géométrie ajouté au produit scalaire — c’est une conséquence directe de la sesquilinéarité. Développer le carré d’une somme dans un produit scalaire, c’est exactement la même opération que développer <span class="math inline">\((a+b)^2 = a^2 + 2ab + b^2\)</span> : les termes croisés apparaissent, et l’orthogonalité les fait disparaître.</p>
 </section>
 <section id="la-projection-orthogonale-est-la-meilleure-estimation" class="level2">
 <h2 class="anchored" data-anchor-id="la-projection-orthogonale-est-la-meilleure-estimation">La projection orthogonale est la meilleure estimation</h2>
-<p>Soit V un sous-espace fermé de E et x ∈ E. On cherche le point de V le plus proche de x : le vecteur p ∈ V qui minimise ‖x − p‖.</p>
-<p><strong>La décomposition existe.</strong> Posons e = x − p.&nbsp;On veut p ∈ V et e ⊥ V. L’orthogonal de V, noté V⊥ = {z ∈ E : ⟨z,v⟩ = 0 pour tout v ∈ V}, est lui-même un sous-espace fermé. En dimension finie, tout sous-espace admet un supplémentaire orthogonal : E = V ⊕ V⊥, et tout vecteur se décompose de façon unique en une composante dans V et une composante dans V⊥. En dimension infinie, c’est le théorème de projection dans les espaces de Hilbert — qui repose sur la complétude de E et la fermeture de V — qui garantit cette décomposition. Dans les deux cas, x = p + e avec p ∈ V et e ∈ V⊥ est bien défini et unique.</p>
-<p><strong>Cette décomposition donne le minimum.</strong> Pour tout autre candidat v ∈ V :</p>
-<p>‖x − v‖² = ‖(p − v) + e‖²</p>
-<p>Le vecteur p − v est dans V, et e est orthogonal à V, donc ⟨p − v, e⟩ = 0. Par Pythagore :</p>
-<p>‖x − v‖² = ‖p − v‖² + ‖e‖²</p>
-<p>Ce terme est minimal quand ‖p − v‖² = 0, c’est-à-dire v = p.&nbsp;Le minimum est ‖e‖², atteint uniquement en p.</p>
-<p><strong>Ce qu’on vient de montrer.</strong> La projection orthogonale p est le meilleur estimateur de x dans V au sens de la norme ‖·‖ induite par ⟨·,·⟩. L’erreur e = x − p est orthogonale à V — elle ne contient aucune composante dans la direction de V qu’on aurait pu exploiter pour réduire la distance. Pythagore garantit que composante utile (dans V) et erreur résiduelle (orthogonale à V) ne se mélangent pas : leurs contributions au carré de la norme s’additionnent indépendamment.</p>
-<p><strong>Pourquoi le produit scalaire est nécessaire.</strong> La preuve repose entièrement sur deux ingrédients : l’orthogonalité (pour définir e ⊥ V) et Pythagore (pour séparer les termes). Les deux viennent du produit scalaire. Sans lui, on ne peut ni décomposer x en composantes indépendantes, ni garantir que l’erreur est incompressible.</p>
+<p>Soit <span class="math inline">\(V\)</span> un sous-espace fermé de <span class="math inline">\(E\)</span> et <span class="math inline">\(x \in E\)</span>. On cherche le point de <span class="math inline">\(V\)</span> le plus proche de <span class="math inline">\(x\)</span> : le vecteur <span class="math inline">\(p \in V\)</span> qui minimise <span class="math inline">\(\|x - p\|\)</span>.</p>
+<p><strong>La décomposition existe.</strong> Posons <span class="math inline">\(e = x - p\)</span>. On veut <span class="math inline">\(p \in V\)</span> et <span class="math inline">\(e \perp V\)</span>. L’orthogonal de <span class="math inline">\(V\)</span>, noté <span class="math inline">\(V^\perp = \{z \in E : \langle z, v \rangle = 0 \text{ pour tout } v \in V\}\)</span>, est lui-même un sous-espace fermé. En dimension finie, tout sous-espace admet un supplémentaire orthogonal : <span class="math inline">\(E = V \oplus V^\perp\)</span>, et tout vecteur se décompose de façon unique en une composante dans <span class="math inline">\(V\)</span> et une composante dans <span class="math inline">\(V^\perp\)</span>. En dimension infinie, c’est le théorème de projection dans les espaces de Hilbert — qui repose sur la complétude de <span class="math inline">\(E\)</span> et la fermeture de <span class="math inline">\(V\)</span> — qui garantit cette décomposition. Dans les deux cas, <span class="math inline">\(x = p + e\)</span> avec <span class="math inline">\(p \in V\)</span> et <span class="math inline">\(e \in V^\perp\)</span> est bien défini et unique.</p>
+<p><strong>Cette décomposition donne le minimum.</strong> Pour tout autre candidat <span class="math inline">\(v \in V\)</span> :</p>
+<p><span class="math inline">\(\|x - v\|^2 = \|(p - v) + e\|^2\)</span></p>
+<p>Le vecteur <span class="math inline">\(p - v\)</span> est dans <span class="math inline">\(V\)</span>, et <span class="math inline">\(e\)</span> est orthogonal à <span class="math inline">\(V\)</span>, donc <span class="math inline">\(\langle p - v, e \rangle = 0\)</span>. Par Pythagore :</p>
+<p><span class="math inline">\(\|x - v\|^2 = \|p - v\|^2 + \|e\|^2\)</span></p>
+<p>Ce terme est minimal quand <span class="math inline">\(\|p - v\|^2 = 0\)</span>, c’est-à-dire <span class="math inline">\(v = p\)</span>. Le minimum est <span class="math inline">\(\|e\|^2\)</span>, atteint uniquement en <span class="math inline">\(p\)</span>.</p>
+<p><strong>Ce qu’on vient de montrer.</strong> La projection orthogonale <span class="math inline">\(p\)</span> est le meilleur estimateur de <span class="math inline">\(x\)</span> dans <span class="math inline">\(V\)</span> au sens de la norme <span class="math inline">\(\|\cdot\|\)</span> induite par <span class="math inline">\(\langle \cdot, \cdot \rangle\)</span>. L’erreur <span class="math inline">\(e = x - p\)</span> est orthogonale à <span class="math inline">\(V\)</span> — elle ne contient aucune composante dans la direction de <span class="math inline">\(V\)</span> qu’on aurait pu exploiter pour réduire la distance. Pythagore garantit que composante utile (dans <span class="math inline">\(V\)</span>) et erreur résiduelle (orthogonale à <span class="math inline">\(V\)</span>) ne se mélangent pas : leurs contributions au carré de la norme s’additionnent indépendamment.</p>
+<p><strong>Pourquoi le produit scalaire est nécessaire.</strong> La preuve repose entièrement sur deux ingrédients : l’orthogonalité (pour définir <span class="math inline">\(e \perp V\)</span>) et Pythagore (pour séparer les termes). Les deux viennent du produit scalaire. Sans lui, on ne peut ni décomposer <span class="math inline">\(x\)</span> en composantes indépendantes, ni garantir que l’erreur est incompressible.</p>
 </section>
 <section id="la-règle-du-parallélogramme-théorème-de-jordanvon-neumann" class="level2">
 <h2 class="anchored" data-anchor-id="la-règle-du-parallélogramme-théorème-de-jordanvon-neumann">La règle du parallélogramme (théorème de Jordan–von Neumann)</h2>
 <p><strong>Une norme vient d’un produit scalaire si et seulement si elle vérifie la règle du parallélogramme</strong> :</p>
-<p>‖x + y‖² + ‖x − y‖² = 2(‖x‖² + ‖y‖²)</p>
-<p><strong>Interprétation géométrique.</strong> Dans un parallélogramme de côtés x et y, la somme des carrés des diagonales (‖x+y‖ et ‖x−y‖) égale la somme des carrés des quatre côtés.</p>
-<p><strong>Sens direct (produit scalaire ⟹ règle).</strong> En développant par sesquilinéarité :<br>
-- ‖x + y‖² = ‖x‖² + 2 Re⟨x,y⟩ + ‖y‖²<br>
-- ‖x − y‖² = ‖x‖² − 2 Re⟨x,y⟩ + ‖y‖²</p>
-<p>En sommant, les termes croisés s’annulent. (Sur ℝ, Re⟨x,y⟩ = ⟨x,y⟩.)</p>
-<p><strong>Sens réciproque (règle ⟹ produit scalaire).</strong> Si une norme vérifie la règle, alors la formule de polarisation reconstruit un produit scalaire dont la norme associée est la norme de départ. Sur ℝ :</p>
-<p>⟨x,y⟩ = ¼(‖x + y‖² − ‖x − y‖²)</p>
-<p>Sur ℂ, il faut quatre termes pour récupérer aussi la partie imaginaire :</p>
-<p>⟨x,y⟩ = ¼(‖x + y‖² − ‖x − y‖² + i‖x + iy‖² − i‖x − iy‖²)</p>
-<p><strong>La règle du parallélogramme impose à la boule unité d’être une ellipsoïde.</strong> Si Q(x) = ‖x‖² vérifie la règle, alors Q est nécessairement une forme quadratique (somme de termes de degré 2, sans puissances supérieures). Et réciproquement si Q est une forme quadratique, elle respecte la règle.</p>
+<p><span class="math inline">\(\|x + y\|^2 + \|x - y\|^2 = 2(\|x\|^2 + \|y\|^2)\)</span></p>
+<p><em>Interprétation géométrique.</em> Dans un parallélogramme de côtés <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span>, la somme des carrés des diagonales (<span class="math inline">\(\|x+y\|\)</span> et <span class="math inline">\(\|x-y\|\)</span>) égale la somme des carrés des quatre côtés.</p>
+<p><em>Sens direct (produit scalaire <span class="math inline">\(\Rightarrow\)</span> règle).</em> En développant par sesquilinéarité :<br>
+- <span class="math inline">\(\|x + y\|^2 = \|x\|^2 + 2\operatorname{Re}\langle x, y \rangle + \|y\|^2\)</span><br>
+- <span class="math inline">\(\|x - y\|^2 = \|x\|^2 - 2\operatorname{Re}\langle x, y \rangle + \|y\|^2\)</span></p>
+<p>En sommant, les termes croisés s’annulent. (Sur <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\(\operatorname{Re}\langle x, y \rangle = \langle x, y \rangle\)</span>.)</p>
+<p><em>Sens réciproque (règle <span class="math inline">\(\Rightarrow\)</span> produit scalaire).</em> Si une norme vérifie la règle, alors la formule de polarisation reconstruit un produit scalaire dont la norme associée est la norme de départ. Sur <span class="math inline">\(\mathbb{R}\)</span> :</p>
+<p><span class="math inline">\(\langle x, y \rangle = \tfrac{1}{4}(\|x + y\|^2 - \|x - y\|^2)\)</span></p>
+<p>Sur <span class="math inline">\(\mathbb{C}\)</span>, il faut quatre termes pour récupérer aussi la partie imaginaire :</p>
+<p><span class="math inline">\(\langle x, y \rangle = \tfrac{1}{4}(\|x + y\|^2 - \|x - y\|^2 + i\|x + iy\|^2 - i\|x - iy\|^2)\)</span></p>
+<p><strong>La règle du parallélogramme impose à la boule unité d’être une ellipsoïde.</strong> Si <span class="math inline">\(Q(x) = \|x\|^2\)</span> vérifie la règle, alors <span class="math inline">\(Q\)</span> est nécessairement une forme quadratique (somme de termes de degré 2, sans puissances supérieures). Et réciproquement si <span class="math inline">\(Q\)</span> est une forme quadratique, elle respecte la règle.</p>
 </section>
-<section id="les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire" class="level2">
-<h2 class="anchored" data-anchor-id="les-normes-lᵖ-et-pourquoi-seule-l²-a-un-produit-scalaire">Les normes Lᵖ et pourquoi seule L² a un produit scalaire</h2>
-<p>Les normes Lᵖ (pour 1 ≤ p ≤ ∞) sont définies sur des espaces de fonctions par :</p>
-<p>‖f‖ₚ = (∫|f|ᵖ)^(1/p)</p>
-<p>En dimension finie, l’intégrale devient une somme — on parle alors de norme ℓᵖ :</p>
-<p>‖x‖ₚ = (∑|xₖ|ᵖ)^(1/p)</p>
-<p>(Les deux coïncident : ℓᵖ sur 𝕂ⁿ est Lᵖ pour la mesure de comptage sur {1,…,n}.)</p>
-<p>Chaque valeur de p donne une géométrie différente — c’est-à-dire une forme de boule unité différente.</p>
-<p><strong>Seule L² vérifie la règle du parallélogramme.</strong> Prenons f et g à supports disjoints (fg = 0 presque partout). Alors :</p>
-<ul>
-<li>‖f + g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ</li>
-<li>‖f − g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ</li>
-</ul>
-<p>Donc ‖f + g‖ₚ = ‖f − g‖ₚ. La règle du parallélogramme exige alors :</p>
-<p>2‖f + g‖² = 2(‖f‖² + ‖g‖²)</p>
-<p>soit ‖f + g‖² = ‖f‖² + ‖g‖². Mais on sait aussi que ‖f + g‖ₚᵖ = ‖f‖ₚᵖ + ‖g‖ₚᵖ, c’est-à-dire que la puissance p “additionne” les normes. Pour que la puissance 2 les additionne aussi, il faut p = 2. Pour tout autre p, la règle du parallélogramme est violée, et aucun produit scalaire ne peut engendrer la norme Lᵖ.</p>
-<p><strong>Lien avec la géométrie de la boule.</strong> Le plus proche point d’un sous-espace existe pour toute norme Lᵖ (unique si 1 &lt; p &lt; ∞). Mais la <strong>direction</strong> vers ce point dépend de la courbure de la boule au point de contact — et pour p ≠ 2, cette direction tourne quand x se déplace. Aucun supplémentaire fixe ne peut suivre : la projection linéaire est impossible. Pour p = 2, la boule est quadratique, la direction est toujours V⊥, et projection = plus proche point.</p>
+<section id="les-normes-lp-et-pourquoi-seule-l2-a-un-produit-scalaire" class="level2">
+<h2 class="anchored" data-anchor-id="les-normes-lp-et-pourquoi-seule-l2-a-un-produit-scalaire">Les normes <span class="math inline">\(L^p\)</span> et pourquoi seule <span class="math inline">\(L^2\)</span> a un produit scalaire</h2>
+<p>Les normes <span class="math inline">\(L^p\)</span> (pour <span class="math inline">\(1 \leq p \leq \infty\)</span>) sont définies sur des espaces de fonctions par :</p>
+<p><span class="math inline">\(\|f\|_p = \left(\int |f|^p\right)^{1/p}\)</span></p>
+<p>En dimension finie, l’intégrale devient une somme — on parle alors de norme <span class="math inline">\(\ell^p\)</span> :</p>
+<p><span class="math inline">\(\|x\|_p = \left(\sum |x_k|^p\right)^{1/p}\)</span></p>
+<p>(Les deux coïncident : <span class="math inline">\(\ell^p\)</span> sur <span class="math inline">\(\mathbb{K}^n\)</span> est <span class="math inline">\(L^p\)</span> pour la mesure de comptage sur <span class="math inline">\(\{1, \ldots, n\}\)</span>.)</p>
+<p>Chaque valeur de <span class="math inline">\(p\)</span> donne une géométrie différente — c’est-à-dire une forme de boule unité différente.</p>
+<p><strong>Seule <span class="math inline">\(L^2\)</span> vérifie la règle du parallélogramme.</strong> Prenons <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> à supports disjoints (<span class="math inline">\(fg = 0\)</span> presque partout). Comme <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> ne se chevauchent jamais, <span class="math inline">\(|f \pm g|^p = |f|^p + |g|^p\)</span> partout, donc :</p>
+<p><span class="math display">\[\|f \pm g\|_p = \bigl(\|f\|_p^p + \|g\|_p^p\bigr)^{1/p}\]</span></p>
+<p>La règle du parallélogramme exige <span class="math inline">\(\|f+g\|_p^2 + \|f-g\|_p^2 = 2(\|f\|_p^2 + \|g\|_p^2)\)</span>, soit pour tous <span class="math inline">\(f, g\)</span> à supports disjoints :</p>
+<p><span class="math display">\[\bigl(\|f\|_p^p + \|g\|_p^p\bigr)^{2/p} = \|f\|_p^2 + \|g\|_p^2\]</span></p>
+<p>En posant <span class="math inline">\(a = \|f\|_p\)</span> et <span class="math inline">\(b = \|g\|_p\)</span>, cette identité doit tenir pour tous <span class="math inline">\(a, b &gt; 0\)</span> :</p>
+<p><span class="math display">\[(a^p + b^p)^{2/p} = a^2 + b^2\]</span></p>
+<p>Pour <span class="math inline">\(a = b\)</span>, cela donne <span class="math inline">\(2^{2/p} \cdot a^2 = 2a^2\)</span>, d’où <span class="math inline">\(2^{2/p} = 2\)</span> et <span class="math inline">\(p = 2\)</span>. Pour tout autre <span class="math inline">\(p\)</span>, la règle est violée, et aucun produit scalaire ne peut engendrer la norme <span class="math inline">\(L^p\)</span>.</p>
+<p><strong>Lien avec la géométrie de la boule.</strong> Le plus proche point d’un sous-espace existe pour toute norme <span class="math inline">\(L^p\)</span> (unique si <span class="math inline">\(1 &lt; p &lt; \infty\)</span>) — c’est une propriété générale de la convexité stricte, pas de <span class="math inline">\(L^2\)</span>. Ce qui est propre à <span class="math inline">\(L^2\)</span>, c’est la nature de cette projection : elle est <strong>orthogonale</strong>, c’est-à-dire que <span class="math inline">\(x - p \perp V\)</span>. Géométriquement, cela signifie que la direction vers le plus proche point est toujours <span class="math inline">\(V^\perp\)</span>, quelle que soit la position de <span class="math inline">\(x\)</span>. Pour <span class="math inline">\(p \neq 2\)</span>, cette direction tourne avec <span class="math inline">\(x\)</span> — aucun supplémentaire fixe ne peut la capturer, et la projection linéaire est impossible.</p>
 <p>Ce qu’on perd en quittant L² est développé dans les notes <em><a href="../maths appliquées/5. distance-hyperplan-lp.html">Distance à un hyperplan en norme ℓp</a></em> et <em><a href="../maths appliquées/6. application-de-dualite-et-perte-orthogonalite.html">Application de dualité et perte d’orthogonalité</a></em>.</p>
 
 
