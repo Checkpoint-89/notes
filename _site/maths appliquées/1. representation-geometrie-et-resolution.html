@@ -311,12 +311,29 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Meaning crisis</span></a>
+ <span class="menu-text">Machine learning</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../machine_learning/clustering/clustering_metrics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Évaluer un clustering</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Meaning crisis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../metacrisis/1.html" class="sidebar-item-text sidebar-link">
@@ -371,42 +388,44 @@ window.Quarto = {
 <li>la <strong>géométrie</strong> dans laquelle on le formule,</li>
 <li>les <strong>méthodes</strong> utilisées pour le résoudre.</li>
 </ol>
-<p>Ces trois choix se contraignent mutuellement. Une représentation rend certaines géométries naturelles ; une géométrie favorise certaines méthodes ; une contrainte algorithmique peut pousser à changer la représentation elle-même.</p>
+<p>Ces trois choix se contraignent mutuellement. Une représentation rend certaines géométries naturelles ; une géométrie sert tantôt à se forger une intuition sur la structure du problème, tantôt à le placer dans un cadre qui rend certaines méthodes applicables ; une contrainte algorithmique peut pousser à changer la représentation elle-même.</p>
 <p><strong>En une ligne</strong> : on cherche une représentation qui rende le problème plus simple, une géométrie adaptée au type de solution cherché, des méthodes efficaces dans cette représentation et cette géométrie.</p>
 <hr>
 <section id="représentation" class="level2">
 <h2 class="anchored" data-anchor-id="représentation">1) Représentation</h2>
-<p>Premier choix : <strong>dans quel espace pose-t-on le problème ?</strong></p>
+<p>D’abord il faut définir <strong>dans quel espace pose-t-on le problème ?</strong></p>
 <p>La représentation fixe le terrain de travail : les variables, les coordonnées, la dimension, les invariances qu’on choisit de rendre explicites, les relations qu’on choisit de rendre simples ou visibles.</p>
 <p>Une bonne représentation ne résout pas encore le problème, mais elle peut le rendre :</p>
 <ul>
-<li><strong>plus simple</strong> : dans les moindres carrés, le coût <span class="math inline">\(\|Xw - y\|^2\)</span> se réécrit <span class="math inline">\(w^T (X^T X) w - 2(X^T y)^T w + \|y\|^2\)</span>. La matrice <span class="math inline">\(A = X^T X\)</span> (le Gram) couple les variables entre elles. Diagonaliser <span class="math inline">\(A = P\Lambda P^T\)</span> et poser <span class="math inline">\(z = P^T w\)</span> (les coordonnées de <span class="math inline">\(w\)</span> dans la base des vecteurs propres de <span class="math inline">\(A\)</span>) découple le problème : on transforme un problème à p dimension en p problèmes à 1 dimension.</li>
-<li><strong>plus régulier</strong> : le modèle <span class="math inline">\(\hat{y} = ax^b\)</span> est parfaitement lisse en <span class="math inline">\(x\)</span>, mais le coût <span class="math inline">\(\sum(y_i - a x_i^b)^2\)</span> est non convexe en <span class="math inline">\((a,b)\)</span>. Passer en log (<span class="math inline">\(\hat{Y} = \alpha + bX\)</span>, avec <span class="math inline">\(\alpha = \log a\)</span>) rend le modèle linéaire en les paramètres — le coût quadratique associé devient alors convexe, à courbure constante : le paysage d’optimisation n’a plus de minima locaux.</li>
-<li><strong>plus séparable</strong> : un kernel RBF envoie deux nuages de points concentriques (non séparables par une droite en <span class="math inline">\(\mathbb{R}^2\)</span>) dans un espace de plus grande dimension — les classes y deviennent séparables par un hyperplan, ce qu’un classifieur linéaire (SVM) peut alors exploiter.</li>
-<li><strong>plus parcimonieux</strong> : la PCA projette les données sur les directions de variance maximale — on passe de <span class="math inline">\(n\)</span> variables à <span class="math inline">\(k \ll n\)</span>, au prix d’un critère géométrique (la variance expliquée) qui décide ce qu’on garde et ce qu’on jette.</li>
-<li><strong>plus stable numériquement</strong> : diagonaliser <span class="math inline">\(A\)</span> aligne le repère sur les directions propres — chaque direction a sa propre échelle <span class="math inline">\(\lambda_i\)</span>, ce qui supprime le couplage entre échelles qui, dans une méthode itérative comme le gradient, fait zigzaguer la descente.</li>
+<li><strong>plus simple</strong> : la convolution <span class="math inline">\((f * g)(t) = \int f(\tau)\, g(t - \tau)\, d\tau\)</span> est une opération opaque — on ne voit pas ce qu’elle fait structurellement. Dans l’espace de Fourier, elle devient <span class="math inline">\(\widehat{f * g}(\xi) = \hat{f}(\xi) \cdot \hat{g}(\xi)\)</span> : une simple multiplication point à point. La représentation révèle que la convolution agit fréquence par fréquence, indépendamment — ce que la forme temporelle cachait complètement. Aucun calcul n’a été fait ; c’est le choix de représentation qui rend la structure lisible. [PI: méthode issue de l’analyse harmonique / théorie spectrale]</li>
+<li><strong>plus régulier</strong> : le modèle <span class="math inline">\(\hat{y} = ax^b\)</span> est parfaitement lisse en <span class="math inline">\(x\)</span>, mais le coût <span class="math inline">\(\sum(y_i - a x_i^b)^2\)</span> est non convexe en <span class="math inline">\((a,b)\)</span>. Passer en log (<span class="math inline">\(\hat{Y} = \alpha + bX\)</span>, avec <span class="math inline">\(\alpha = \log a\)</span>) rend le modèle linéaire en les paramètres — le coût quadratique associé devient alors convexe, à courbure constante : le paysage d’optimisation n’a plus de minima locaux. [PI: méthode issue de l’optimisation / transformations de variables]</li>
+<li><strong>plus séparable</strong> : deux nuages de points concentriques ne sont pas séparables par une droite en <span class="math inline">\(\mathbb{R}^2\)</span>. On choisit un kernel RBF — dont la structure radiale correspond à la géométrie du problème — pour plonger les données dans un espace de plus grande dimension ; dans cet espace, les classes deviennent séparables par un hyperplan, ce qu’un classifieur linéaire (SVM) peut alors exploiter. [PI: méthode issue de la théorie des RKHS / méthodes à noyau]</li>
+<li><strong>plus parcimonieux</strong> : la PCA projette les données sur les directions de variance maximale — on passe de <span class="math inline">\(n\)</span> variables à <span class="math inline">\(k \ll n\)</span>, au prix d’un critère géométrique (la variance expliquée) qui décide ce qu’on garde et ce qu’on jette. [PI: méthode issue de l’algèbre linéaire numérique / statistique]</li>
+<li><strong>plus stable numériquement</strong> : représenter les variables en coordonnées normalisées (centrage et réduction) supprime les disparités d’échelle — si une variable varie de 1 à <span class="math inline">\(10^6\)</span> et une autre de 0 à 1, les méthodes itératives traitent des gradients de tailles incomparables et convergent très lentement ou divergent. La normalisation est un choix de représentation pur : le problème n’a pas changé, mais il est posé dans un espace où les échelles sont comparables. [PI: méthode issue de l’analyse numérique]</li>
 </ul>
 <hr>
 </section>
 <section id="géométrie-du-problème" class="level2">
 <h2 class="anchored" data-anchor-id="géométrie-du-problème">2) Géométrie du problème</h2>
-<p>Une fois le problème représenté dans un espace, il faut définir ce que signifie <strong>bien le résoudre</strong> dans cet espace.</p>
-<p>C’est le rôle de la géométrie du problème. Elle fixe les notions pertinentes : proximité, taille, régularité, séparation, coût, contrainte, admissibilité. Autrement dit, elle donne au problème sa forme mathématique effective.</p>
-<p>Cette géométrie peut apparaître de plusieurs façons :</p>
-<ul>
-<li>par une <strong>distance</strong> ou une <strong>norme</strong>, qui dit ce que signifie “être proche” ou “être petit” ;</li>
-<li>par une <strong>fonction de coût</strong>, qui donne une hauteur à chaque solution possible ;</li>
-<li>par une <strong>contrainte</strong>, qui restreint l’ensemble des solutions admissibles ;</li>
-<li>par une <strong>régularisation</strong>, qui privilégie certaines solutions plutôt que d’autres.</li>
-</ul>
+<p>Une fois le problème représenté dans un espace, il faut définir ce que signifie <strong>bien le résoudre</strong> dans cet espace. La géométrie joue ici un double rôle : elle peut permettre de <em>lire</em> la structure du problème — construire une intuition sur le problème — ou de <em>placer</em> le problème dans un cadre adapté à sa résolution. Ces deux rôles n’appellent pas nécessairement la même géométrie.</p>
+<p>La géométrie repose le plus souvent sur deux éléments : une <strong>structure de comparaison</strong> — distance, norme, divergence, relation d’ordre — et un <strong>système de contraintes</strong>, au sens large, dans lequel cette structure est mobilisée.</p>
+<p>La <strong>structure de comparaison</strong> fixe les notions de proximité, de taille, de régularité et de séparation. Elle dit ce que signifie “être proche d’une solution”, “avoir une petite erreur”, ou “être régulier”.</p>
+<p>Les <strong>contraintes</strong> donnent sa forme effective au problème. Elles peuvent prendre différentes formes :<br>
+- une <strong>structure sur l’espace des données</strong>, qui contraint la forme des entrées — par exemple que les données vivent sur une variété de faible dimension;<br>
+- une <strong>fonction de coût</strong>, qui donne une hauteur à chaque solution possible ;<br>
+- un <strong>domaine admissible</strong>, qui restreint l’ensemble des solutions accessibles ;<br>
+- une <strong>régularisation</strong>, qui privilégie certaines solutions plutôt que d’autres ;<br>
+- un <strong>groupe de symétries</strong>, qui définit ce que “même solution” signifie sous les transformations admissibles — deux solutions reliées par une symétrie du problème sont géométriquement équivalentes ;<br>
+- une <strong>structure causale ou d’ordre</strong>, qui organise asymétriquement l’espace des solutions en distinguant causes et effets, antécédents et conséquents — comme dans les réseaux bayésiens ou les problèmes d’identification causale.</p>
 <p>Quelques exemples :</p>
 <ul>
-<li>En <strong>clustering</strong>, la distance choisie détermine ce qu’on considère comme un groupe.</li>
-<li>En <strong>k-NN</strong>, la métrique définit les voisins pertinents.</li>
-<li>En <strong>régression</strong>, la fonction de coût définit ce qu’est une bonne approximation.</li>
-<li>En <strong>Ridge</strong> ou <strong>Lasso</strong>, la pénalisation ajoute une structure géométrique supplémentaire : elle favorise soit des coefficients petits, soit des solutions parcimonieuses.</li>
+<li>En <strong>clustering</strong>, la géométrie se lit et se traite principalement dans l’<em>espace des données</em> : on cherche à y reconnaître des groupes selon la manière dont les points sont proches, orientés ou distribués. La distance <span class="math inline">\(\ell^2\)</span>, surtout dans les méthodes à centroïdes, favorise des groupes compacts et isotropes, donc plutôt <em>sphériques</em> ; la similarité cosinus regroupe plutôt les points selon l’<em>orientation</em> des vecteurs, donc selon des directions ou des rayons depuis l’origine ; la distance de Mahalanobis tient compte des échelles et des corrélations entre variables, ce qui favorise des groupes plutôt <em>elliptiques</em>. Changer la métrique peut donc changer fortement la partition.</li>
+<li>En <strong>SVM linéaire</strong>, la géométrie se lit d’abord dans <em>l’espace des données</em> : il s’agit de trouver <em>l’hyperplan</em> qui sépare au mieux deux classes. La qualité de la séparation est mesurée par la <em>marge</em>, c’est-à-dire la distance entre l’hyperplan et les points les plus proches, les <em>vecteurs de support</em>. Cette exigence se traduit ensuite en un <em>problème d’optimisation dans l’espace des paramètres</em> : on cherche les coefficients <span class="math inline">\((w,b)\)</span> qui définissent l’hyperplan de marge maximale. Dans la version souple, cette optimisation combine la maximisation de la marge avec une pénalisation des points mal classés ou trop proches de la frontière. La fonction objectif formalise donc une idée géométrique simple : obtenir la séparation la plus robuste possible.</li>
+<li>En <strong>régression</strong>, la géométrie se lit d’abord dans l’<em>espace des observations</em> : il s’agit de produire une prédiction <span class="math inline">\(\hat y\)</span> proche de la cible <span class="math inline">\(y\)</span>. Cette exigence se traduit ensuite en un <em>problème d’optimisation dans l’espace des paramètres</em> : on cherche les coefficients <span class="math inline">\(w\)</span> qui minimisent une fonction de coût mesurant l’écart entre <span class="math inline">\(y\)</span> et <span class="math inline">\(\hat y\)</span>. Le choix de ce coût donne une géométrie différente au problème : le coût <span class="math inline">\(\ell^2\)</span>, celui des moindres carrés, pénalise quadratiquement les grandes erreurs et produit un paysage lisse, mais il est sensible aux outliers ; le coût <span class="math inline">\(\ell^1\)</span> pénalise les erreurs proportionnellement, ce qui le rend plus robuste, mais sa non-différentiabilité en zéro impose des méthodes d’optimisation adaptées.</li>
+<li>En <strong>Ridge</strong> et en <strong>Lasso</strong>, la géométrie se lit surtout dans l’<em>espace des paramètres</em> : on ne cherche pas seulement à minimiser l’erreur de prédiction, mais aussi à contraindre ou pénaliser la taille des coefficients. Ridge ajoute une pénalisation <span class="math inline">\(\ell^2\)</span> : les coefficients sont incités à rester petits et répartis, sans devenir exactement nuls. Lasso ajoute une pénalisation <span class="math inline">\(\ell^1\)</span> : la géométrie anguleuse de la boule <span class="math inline">\(\ell^1\)</span>, avec ses coins sur les axes, favorise des solutions <em>creuses</em>, où certains coefficients deviennent exactement nuls.</li>
+<li>Dans un <strong>problème inverse mal posé</strong>, la géométrie se lit dans l’<em>espace des paramètres</em> et dans l’<em>espace des observations</em> à travers l’opérateur qui les relie. Plusieurs paramètres peuvent produire la même observation : ils appartiennent alors à une même <em>fibre</em> de l’opérateur. Cette structure explique la non-unicité ou l’instabilité du problème. La régularisation ajoute alors une contrainte géométrique supplémentaire : parmi les solutions compatibles avec les observations, elle privilégie celles qui sont les plus simples, les plus lisses, les plus petites ou les plus parcimonieuses selon la norme ou la pénalisation choisie.</li>
 </ul>
-<p>La géométrie du problème détermine donc non seulement où se trouvent les bonnes solutions, mais aussi ce que “bonne solution” veut dire.</p>
+<p>La géométrie du problème ne détermine donc pas seulement où chercher les bonnes solutions ; elle définit aussi ce qu’une <em>bonne solution</em> signifie et dans quel paysage elle peut émerger.</p>
 <hr>
 </section>
 <section id="méthodes-de-résolution" class="level2">
@@ -415,12 +434,12 @@ window.Quarto = {
 <p>Chaque méthode de résolution fait des hypothèses sur la structure du problème et exploite certaines propriétés géométriques plutôt que d’autres. Le choix de la méthode détermine ce qu’on peut obtenir en pratique : vitesse, stabilité, sensibilité aux mauvaises échelles, qualité de l’approximation, possibilité même de calculer la solution.</p>
 <ul>
 <li><strong>Gradient classique</strong> : suppose une géométrie euclidienne — toutes les directions sont traitées de la même façon.</li>
-<li><strong>Préconditionnement / Newton</strong> : exploite la courbure locale pour corriger les directions mal conditionnées.</li>
-<li><strong>Gradient naturel</strong> : exploite la géométrie statistique du modèle plutôt que celle des coordonnées.</li>
-<li><strong>k-means</strong> : suppose une géométrie euclidienne (centroïdes = moyennes, cellules de Voronoï). Changer la distance change l’algorithme entier.</li>
-<li><strong>k-medoids</strong> : ne suppose pas de structure euclidienne — fonctionne avec une distance quelconque.</li>
-<li><strong>DBSCAN</strong> : exploite la notion de voisinage induite par la métrique. Changer la métrique change les clusters.</li>
-<li><strong>Clustering hiérarchique</strong> : dépend du couple distance + critère de liaison.</li>
+<li><strong>Préconditionnement</strong> : suppose que la courbure du paysage peut être corrigée par une matrice fixe — c’est-à-dire que les mauvaises échelles sont stables au cours de l’optimisation. Il corrige ces échelles en changeant de coordonnées dans l’espace des paramètres, ce qui rend la courbure uniforme sans recalculer le Hessien à chaque itération.</li>
+<li><strong>Méthode de Newton</strong> : suppose que la courbure locale est bien définie et exploitable — elle utilise le Hessien <span class="math inline">\(H\)</span> à chaque itération pour corriger à la fois la direction et le pas : <span class="math inline">\(-H^{-1}\nabla f\)</span>. Contrairement au préconditionnement, elle adapte la correction à chaque point. Dans les moindres carrés, le Hessien est constant (<span class="math inline">\(A = X^TX\)</span>) et Newton converge en une seule itération.</li>
+<li><strong>Gradient naturel</strong> : suppose que l’espace des paramètres a une géométrie statistique portée par la matrice de Fisher <span class="math inline">\(I(\theta)\)</span> — et non une géométrie euclidienne arbitraire. Le pas devient <span class="math inline">\(I(\theta)^{-1}\nabla_\theta \mathcal{L}\)</span>, ce qui rend la descente invariante aux reparamétrages du modèle.</li>
+<li><strong>Gradient proximal</strong> : suppose que la fonction de coût est séparable en une partie lisse et une partie non lisse (typiquement une pénalisation <span class="math inline">\(\ell^1\)</span>). Il exploite la géométrie de la boule <span class="math inline">\(\ell^1\)</span> en appliquant à chaque itération l’opérateur proximal associé, qui produit directement des solutions creuses. Si la géométrie du problème est ℓ¹, cette famille de méthodes s’impose.</li>
+<li><strong>k-means</strong> : suppose que les groupes sont convexes et isotropes — ce que la géométrie euclidienne garantit via les cellules de Voronoï et les centroïdes comme moyennes. Si la géométrie réelle des données ne vérifie pas cette hypothèse (groupes allongés, non convexes, de densités différentes), k-means produit une partition incorrecte.</li>
+<li><strong>DBSCAN</strong> : suppose que les clusters sont des régions denses au sens d’un voisinage <span class="math inline">\(\varepsilon\)</span> — c’est-à-dire que la métrique choisie capture fidèlement la densité locale. Si la métrique ne reflète pas la vraie structure de proximité des données, les régions denses détectées ne correspondent pas aux groupes réels.</li>
 </ul>
 <p>Dans tous les cas, la méthode impose des contraintes sur la géométrie du problème qu’elle est capable d’exploiter. Un décalage entre la géométrie du problème et les hypothèses de la méthode se paie en performance ou en qualité de solution.</p>
 <hr>
