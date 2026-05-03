@@ -311,12 +311,29 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Meaning crisis</span></a>
+ <span class="menu-text">Machine learning</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../machine_learning/clustering/clustering_metrics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Évaluer un clustering</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Meaning crisis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../metacrisis/1.html" class="sidebar-item-text sidebar-link">
@@ -347,10 +364,10 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mesurer-la-proximité-de-points-dans-un-espace" id="toc-mesurer-la-proximité-de-points-dans-un-espace" class="nav-link active" data-scroll-target="#mesurer-la-proximité-de-points-dans-un-espace">Mesurer la proximité de points dans un espace</a>
+  <li><a href="#mesurer-la-proximité-dans-un-espace" id="toc-mesurer-la-proximité-dans-un-espace" class="nav-link active" data-scroll-target="#mesurer-la-proximité-dans-un-espace">Mesurer la proximité dans un espace</a>
   <ul>
-  <li><a href="#mesure" id="toc-mesure" class="nav-link" data-scroll-target="#mesure">Mesure</a></li>
-  <li><a href="#spécificité-du-produit-scalaire-et-de-la-norme-ell_2" id="toc-spécificité-du-produit-scalaire-et-de-la-norme-ell_2" class="nav-link" data-scroll-target="#spécificité-du-produit-scalaire-et-de-la-norme-ell_2">Spécificité du produit scalaire et de la norme <span class="math inline">\(\ell_2\)</span></a></li>
+  <li><a href="#proximité-entre-points" id="toc-proximité-entre-points" class="nav-link" data-scroll-target="#proximité-entre-points">Proximité entre points</a></li>
+  <li><a href="#distance-à-un-plan-la-spécificité-du-produit-scalaire-et-de-la-norme-ell_2" id="toc-distance-à-un-plan-la-spécificité-du-produit-scalaire-et-de-la-norme-ell_2" class="nav-link" data-scroll-target="#distance-à-un-plan-la-spécificité-du-produit-scalaire-et-de-la-norme-ell_2">Distance à un plan: la spécificité du produit scalaire et de la norme <span class="math inline">\(\ell_2\)</span></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -361,10 +378,13 @@ window.Quarto = {
 
 
 
-<section id="mesurer-la-proximité-de-points-dans-un-espace" class="level1">
-<h1>Mesurer la proximité de points dans un espace</h1>
-<section id="mesure" class="level2">
-<h2 class="anchored" data-anchor-id="mesure">Mesure</h2>
+<section id="mesurer-la-proximité-dans-un-espace" class="level1">
+<h1>Mesurer la proximité dans un espace</h1>
+<blockquote class="blockquote">
+<p><strong>Idée directrice.</strong> Le choix d’une mesure impose une géométrie à l’espace : la forme des boules, ce qui est proche, ce qui est simple. Distance, norme et produit scalaire correspondent à trois niveaux de richesse croissante. Le produit scalaire est le seul cadre où l’application “plus proche point sur un sous-espace” est linéaire — c’est-à-dire un vrai projecteur au sens algébrique. Le théorème de Kakutani montre que c’est une caractérisation : toute norme avec cette propriété provient d’un produit scalaire.</p>
+</blockquote>
+<section id="proximité-entre-points" class="level2">
+<h2 class="anchored" data-anchor-id="proximité-entre-points">Proximité entre points</h2>
 <p>Pour parler de proximité entre les éléments d’un ensemble, il faut le munir d’une façon de mesurer les écarts. Ce choix impose une géométrie à l’espace — la forme des boules, la régularité des courbes, les opérations isométriques. Avant même de poser un problème d’optimisation, la mesure choisie détermine ce qui est proche, ce qui est simple, et quels outils mathématiques sont disponibles : peut-on seulement parler de voisinage, ou aussi de taille, de direction, d’angle ?</p>
 <p>Il existe trois niveaux de mesure, du plus simple au plus riche :</p>
 <ul>
@@ -373,13 +393,18 @@ window.Quarto = {
 <li><strong>Produit scalaire</strong> : mesure l’angle entre deux vecteurs et définit l’orthogonalité. La norme qui en découle rend la boule unité quadratique — sa frontière est décrite par ⟨x,x⟩ = 1, une équation du second degré en x (en dimension finie, ⟨x,y⟩ = xᵀMy et la boule est une ellipsoïde). C’est le cadre où le problème du plus proche point dans un plan a les meilleures propriétés possibles.</li>
 </ul>
 </section>
-<section id="spécificité-du-produit-scalaire-et-de-la-norme-ell_2" class="level2">
-<h2 class="anchored" data-anchor-id="spécificité-du-produit-scalaire-et-de-la-norme-ell_2">Spécificité du produit scalaire et de la norme <span class="math inline">\(\ell_2\)</span></h2>
-<p><strong>Unicité.</strong> Chercher le plus proche point de <span class="math inline">\(x\)</span> sur <span class="math inline">\(V\)</span>, c’est gonfler la boule centrée en <span class="math inline">\(x\)</span> jusqu’à ce qu’elle touche <span class="math inline">\(V\)</span>. Si la boule a des faces plates (<span class="math inline">\(p = 1\)</span> ou <span class="math inline">\(p = \infty\)</span>), le contact peut se faire sur un segment entier — le plus proche point n’est pas unique. Pour <span class="math inline">\(1 &lt; p &lt; \infty\)</span>, la boule est strictement convexe : le point de contact est unique.</p>
-<p><strong>Projection et linéarité.</strong> <span class="math inline">\(P_V\)</span> est une projection si et seulement si elle est linéaire (un projecteur est par définition linéaire et idempotent, et <span class="math inline">\(P_V\)</span> est déjà idempotent puisque <span class="math inline">\(P_V(v) = v\)</span> pour tout <span class="math inline">\(v \in V\)</span>).</p>
-<p><strong>Projection et residu.</strong>Si <span class="math inline">\(P_V\)</span> est une projection, le résidu <span class="math inline">\(r_x\)</span> vit dans le supplémentaire <span class="math inline">\(W\)</span> parallèlement auquel on projette. Si la direction de <span class="math inline">\(r_x\)</span> sort de <span class="math inline">\(w\)</span>, <span class="math inline">\(P_V\)</span> n’est pas une projection.</p>
-<p>Or cette direction est gouvernée par le gradient de l’énergie <span class="math inline">\(\frac{1}{2}\|x\|^2\)</span>, qui en norme <span class="math inline">\(\ell_p\)</span> est l’application de dualité <span class="math inline">\(J_p\)</span>. En <span class="math inline">\(\ell_2\)</span>, <span class="math inline">\(J_2\)</span> est linéaire — c’est l’identité via le produit scalaire — et la direction du résidu est perpendiculaire à <span class="math inline">\(V\)</span>, la même pour tout <span class="math inline">\(x\)</span>. En <span class="math inline">\(\ell_p\)</span> avec <span class="math inline">\(p \neq 2\)</span>, <span class="math inline">\(J_p\)</span> est non linéaire : la direction tourne avec <span class="math inline">\(x\)</span>, et <span class="math inline">\(P_V\)</span> n’est plus linéaire (voir <a href="../maths appliquées/6. application-de-dualite-et-perte-orthogonalite.html">Application de dualité et perte de l’orthogonalité hors du cas hilbertien</a> pour le mécanisme détaillé).</p>
-<p><strong>Au-delà des <span class="math inline">\(\ell_p\)</span>.</strong> Ce résultat n’est pas un accident de la famille <span class="math inline">\(\ell_p\)</span>. Le théorème de Kakutani (1939) montre que pour <em>toute</em> norme, si <span class="math inline">\(P_V\)</span> est linéaire pour tout sous-espace fermé <span class="math inline">\(V\)</span>, alors la norme provient d’un produit scalaire. Autrement dit, les espaces euclidiens (dimension finie) et hilbertiens (dimension infinie) sont les seuls où le plus proche point se comporte comme une projection.</p>
+<section id="distance-à-un-plan-la-spécificité-du-produit-scalaire-et-de-la-norme-ell_2" class="level2">
+<h2 class="anchored" data-anchor-id="distance-à-un-plan-la-spécificité-du-produit-scalaire-et-de-la-norme-ell_2">Distance à un plan: la spécificité du produit scalaire et de la norme <span class="math inline">\(\ell_2\)</span></h2>
+<p>Étant donné un sous-espace <span class="math inline">\(V\)</span> et une norme, que peut-on dire de l’application <span class="math inline">\(P_V : x \mapsto \text{plus proche point de } x \text{ dans } V\)</span> ?<br>
+Trois questions se posent naturellement :<br>
+- <span class="math inline">\(P_V\)</span> est-elle bien définie, c’est à dire le plus proche point est il unique ?<br>
+- Est-elle linéaire, c’est à dire elle une projection ?<br>
+- Et si elle est linéaire, comment le résidu se comporte-t-il géométriquement ?</p>
+<p>La norme <span class="math inline">\(\ell_2\)</span> donne à ces trois questions des réponses exceptionnellement bonnes — et le théorème de Kakutani montre que c’est elle, et elle seule, qui parmi les normes <span class="math inline">\(\ell_p\)</span>, les donne toutes les trois.</p>
+<p><strong>Unicité du point le plus proche.</strong> Chercher le plus proche point de <span class="math inline">\(x\)</span> sur <span class="math inline">\(V\)</span>, c’est gonfler la boule centrée en <span class="math inline">\(x\)</span> jusqu’à ce qu’elle touche <span class="math inline">\(V\)</span>. Dans la famille des normes <span class="math inline">\(\ell_p\)</span> — où <span class="math inline">\(p \in [1, +\infty]\)</span> paramètre la forme de la boule unité — si la boule a des faces plates (<span class="math inline">\(p = 1\)</span> ou <span class="math inline">\(p = \infty\)</span>), le contact peut se faire sur un segment entier : le plus proche point n’est pas unique. Pour <span class="math inline">\(1 &lt; p &lt; \infty\)</span>, la boule est strictement convexe : le point de contact est unique.</p>
+<p><strong>Projection et linéarité.</strong> L’application <span class="math inline">\(P_V : x \mapsto \text{plus proche point de } x \text{ dans } V\)</span> est idempotente par construction : si <span class="math inline">\(x \in V\)</span>, alors <span class="math inline">\(P_V(x) = x\)</span>. La question est de savoir si elle est également linéaire — ce qui en ferait un projecteur au sens algébrique (idempotent + linéaire). En <span class="math inline">\(\ell_2\)</span>, c’est toujours le cas, quel que soit le sous-espace <span class="math inline">\(V\)</span>. Pour <span class="math inline">\(p \neq 2\)</span>, c’est possible pour un <span class="math inline">\(V\)</span> particulier par accident de symétrie, mais pas en général.</p>
+<p><strong>Projection et résidu.</strong> Si <span class="math inline">\(P_V\)</span> est une projection, le résidu <span class="math inline">\(r_x = x - P_V(x)\)</span> doit toujours pointer dans la même direction — celle du supplémentaire <span class="math inline">\(W\)</span> selon lequel on projette. En <span class="math inline">\(\ell_2\)</span>, cette direction est perpendiculaire à <span class="math inline">\(V\)</span> pour tout <span class="math inline">\(x\)</span> : c’est la condition de Pythagore, indépendante du point. En <span class="math inline">\(\ell_p\)</span> avec <span class="math inline">\(p \neq 2\)</span>, la direction “optimale” de résidu tourne avec <span class="math inline">\(x\)</span> — le résidu qui minimise la distance n’est plus perpendiculaire au sens usuel, et il change quand <span class="math inline">\(x\)</span> change. <span class="math inline">\(P_V\)</span> ne peut donc plus être linéaire (voir <a href="../maths appliquées/6. application-de-dualite-et-perte-orthogonalite.html">Application de dualité et perte de l’orthogonalité hors du cas hilbertien</a> pour le mécanisme détaillé).</p>
+<p><strong>Au-delà des <span class="math inline">\(\ell_p\)</span>.</strong> Ce résultat n’est pas un accident de la famille <span class="math inline">\(\ell_p\)</span>. Le théorème de Kakutani (1939) montre que pour <em>toute</em> norme, si <span class="math inline">\(P_V\)</span> est linéaire pour tout sous-espace fermé <span class="math inline">\(V\)</span>, alors la norme provient d’un produit scalaire. Autrement dit, les espaces euclidiens (dimension finie) et hilbertiens (dimension infinie) sont les seuls où <span class="math inline">\(P_V\)</span> est un projecteur linéaire quel que soit le sous-espace fermé <span class="math inline">\(V\)</span>.</p>
 
 
 </section>
