@@ -1,6 +1,8 @@
-# Démontrer n'est pas situer
+**Démontrer n'est pas situer**
 
-## La distinction fondamentale
+---
+
+**La distinction fondamentale.**
 
 On peut introduire un objet mathématique de deux façons radicalement différentes.
 
@@ -10,7 +12,7 @@ La **définition relationnelle** dit pourquoi l'objet *devait exister* : quel vi
 
 ---
 
-## La preuve comme béquille
+**La preuve comme béquille.**
 
 Sans définition relationnelle, un théorème flotte. Il est vrai, mais pas motivé — on sait qu'il tient, pas pourquoi il devait être là. Dans ce cas, la seule façon de l'ancrer est de le reconstruire par sa démonstration : la preuve fournit au moins une chaîne causale, même si c'est une causalité logique et non conceptuelle.
 
@@ -20,7 +22,7 @@ Ce mécanisme explique une difficulté d'apprentissage récurrente : non pas un 
 
 ---
 
-## Ce que change la définition relationnelle
+**Ce que change la définition relationnelle.**
 
 Quand un objet est introduit par ce qui l'appelle, la preuve change de statut. Elle ne disparaît pas comme justification formelle — elle justifie toujours. Mais elle cesse d'être l'unique support de compréhension : elle vient stabiliser une intelligibilité déjà construite, plutôt que de la constituer entièrement.
 
@@ -28,7 +30,7 @@ On peut alors admettre un théorème sans perdre pied, parce que l'objet est dé
 
 ---
 
-## Un exemple interne aux mathématiques
+**Un exemple interne aux mathématiques.**
 
 La théorie des catégories offre un exemple particulièrement net de définition relationnelle avec les propriétés universelles.
 
@@ -38,6 +40,6 @@ Autrement dit, l'objet est défini par son rôle. Il n'est pas seulement caract�
 
 ---
 
-## Épilogue
+**Épilogue.**
 
 Comprendre un objet mathématique de façon stable, ce n'est pas seulement en vérifier la vérité — c'est lui donner une place.

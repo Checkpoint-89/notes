@@ -34,7 +34,7 @@ Même retenue : l'exemple réalisateur n'est pas unique. Un autre exemple peut r
 
 ---
 
-**La structure complète.**
+**Epilogue.**
 
 $$\text{définition formelle} \xrightarrow{\text{mouvement régressif}} \text{geste primitif} \xrightarrow{\text{exemple réalisateur}} \text{évidence}$$
 
