@@ -37,6 +37,8 @@ website:
         contents:
           - href: essays/les-mathematiques-par-le-geste.md
             text: "Les mathematiques par le geste"
+          - href: essays\demontrer-n_est-pas-motiver.md
+            text: "Démontrer n'est pas motiver"
       - section: "Cheat sheets"
         collapsed: true
         contents:
