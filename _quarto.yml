@@ -10,6 +10,7 @@ project:
     - "machine_learning/**/*.md"
     - "metacrisis/*.md"
     - "cheat sheets/*.md"
+    - "economics/*.ipynb"
     - "!pronostics/"
 
 website:
@@ -88,6 +89,14 @@ website:
             text: "2. Traditions & Meaning"
           - href: metacrisis/3.md
             text: "3. Consciousness"
+      - section: "Economics"
+        collapsed: true
+        contents:
+          - href: economics/micro.ipynb
+            text: "Micro-economics"
+
+execute:
+  echo: false
 
 format:
   html:
