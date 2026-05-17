@@ -3827,5 +3827,2261 @@
       "Economics",
       "Micro-economics"
     ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-00-intro.html",
+    "href": "economics/micro-economics/micro-00-intro.html",
+    "title": "Microéconomie — Théorie du consommateur",
+    "section": "",
+    "text": "Table des matières\n\nChapitre 0 — Motivation : pourquoi étudier le consommateur ?\nChapitre 1 — Préférences, paniers et axiomes\nChapitre 2 — Fonction d’utilité et courbes d’indifférence\nChapitre 3 — TMS, utilités marginales et formes de préférences\nChapitre 4 — Contrainte budgétaire\nChapitre 5 — Choix optimal du consommateur\nChapitre 6 — Demande individuelle et fonctions de demande\nChapitre 7 — Élasticités\nChapitre 8 — Effet prix, effet revenu, effet substitution\nChapitre 9 — Biens normaux, inférieurs, Giffen, luxe, nécessité\nChapitre 10 — Préférences révélées\nChapitre 11 — Arbitrage travail-loisir\nChapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain\nChapitre 13 — Capital humain et durée d’étude\nChapitre 14 — Choix en univers risqué\nSchémathèque récapitulative\nFormulaire concours\nErreurs fréquentes à éviter\nChecklist de couverture des notes\n\n\n\n\nComment lire ce cours vite\nSi tu manques de temps, garde toujours le même ordre de lecture dans chaque chapitre :\n\nlire l’idée générale ;\nregarder le schéma support ;\nretenir la formule-clé ;\nfinir par l’erreur classique à ne pas faire.\n\nPour un premier passage : l’objectif n’est pas de tout mémoriser d’un coup. Il faut d’abord comprendre le mécanisme économique, puis fixer les formules utiles.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "00. Introduction"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-03-utilite-indifference.html",
+    "href": "economics/micro-economics/micro-03-utilite-indifference.html",
+    "title": "Chapitre 2 — Fonction d’utilité et courbes d’indifférence",
+    "section": "",
+    "text": "Il y a une infinité de paniers possibles. Au chapitre 1, on a vu qu’on pouvait comparer deux paniers grâce aux préférences. Mais comment classer tous les paniers entre eux sans faire cette comparaison deux à deux, panier par panier, à l’infini ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "03. Utilité et indifférence"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-03-utilite-indifference.html#question-du-chapitre",
+    "href": "economics/micro-economics/micro-03-utilite-indifference.html#question-du-chapitre",
+    "title": "Chapitre 2 — Fonction d’utilité et courbes d’indifférence",
+    "section": "",
+    "text": "Il y a une infinité de paniers possibles. Au chapitre 1, on a vu qu’on pouvait comparer deux paniers grâce aux préférences. Mais comment classer tous les paniers entre eux sans faire cette comparaison deux à deux, panier par panier, à l’infini ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "03. Utilité et indifférence"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-03-utilite-indifference.html#idée-à-comprendre-dabord",
+    "href": "economics/micro-economics/micro-03-utilite-indifference.html#idée-à-comprendre-dabord",
+    "title": "Chapitre 2 — Fonction d’utilité et courbes d’indifférence",
+    "section": "Idée à comprendre d’abord",
+    "text": "Idée à comprendre d’abord\nIl suffit d’une seule formule — par exemple \\(U(x_1,x_2)=x_1 x_2\\) — qui produit un nombre pour chaque panier. Deux paniers se comparent alors par leurs nombres : le plus grand est préféré.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "03. Utilité et indifférence"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-03-utilite-indifference.html#fonction-dutilité",
+    "href": "economics/micro-economics/micro-03-utilite-indifference.html#fonction-dutilité",
+    "title": "Chapitre 2 — Fonction d’utilité et courbes d’indifférence",
+    "section": "2.1. Fonction d’utilité",
+    "text": "2.1. Fonction d’utilité\nUne fonction d’utilité associe un nombre réel à chaque panier :\n\\[\nU : \\mathbb{R}_+^n \\to \\mathbb{R}\n\\]\nElle représente les préférences si :\n\\[\nA \\succeq B \\Longleftrightarrow U(A) \\geq U(B)\n\\]\nÀ retenir : un panier est mieux classé si et seulement si son utilité est plus haute. L’utilité classe, elle ne quantifie pas.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "03. Utilité et indifférence"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-03-utilite-indifference.html#utilité-ordinale-et-non-cardinale",
+    "href": "economics/micro-economics/micro-03-utilite-indifference.html#utilité-ordinale-et-non-cardinale",
+    "title": "Chapitre 2 — Fonction d’utilité et courbes d’indifférence",
+    "section": "2.2. Utilité ordinale et non cardinale",
+    "text": "2.2. Utilité ordinale et non cardinale\nEn microéconomie standard, l’utilité est ordinale : elle classe les paniers, mais ne mesure pas une satisfaction absolue (elle n’est pas cardinale).\nSi \\(U\\) représente les préférences, alors toute transformation strictement croissante \\(f(U)\\) les représente aussi.\nExemple : \\(U(x_1,x_2)=x_1x_2\\) et \\(V(x_1,x_2)=\\ln(x_1x_2)\\) représentent les mêmes préférences, car \\(\\ln\\) est croissante.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "03. Utilité et indifférence"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-03-utilite-indifference.html#courbe-dindifférence",
+    "href": "economics/micro-economics/micro-03-utilite-indifference.html#courbe-dindifférence",
+    "title": "Chapitre 2 — Fonction d’utilité et courbes d’indifférence",
+    "section": "2.3. Courbe d’indifférence",
+    "text": "2.3. Courbe d’indifférence\nRepère géométrique. La fonction \\(U(x_1,x_2)\\) est une surface dans l’espace à trois dimensions : les axes horizontaux représentent les quantités \\(x_1\\) et \\(x_2\\), et l’axe vertical représente le niveau d’utilité. Une courbe d’indifférence, c’est la coupe horizontale de cette surface à une hauteur fixée \\(\\bar U\\) — autrement dit, la projection au sol de tous les points de la surface qui ont exactement la même altitude. C’est pourquoi on parle de courbe de niveau de \\(U\\).\nUne courbe d’indifférence regroupe donc tous les paniers donnant le même niveau d’utilité :\n\\[\nU(x_1,x_2)=\\bar U\n\\]\nLe graphique ci-dessous est exactement cette carte de niveaux vue du dessus : chaque courbe est une ligne de niveau de la surface d’utilité, à une altitude fixée \\(\\bar U\\). Une courbe plus éloignée de l’origine correspond à une ligne de niveau plus haute — donc à un niveau d’utilité plus élevé.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "03. Utilité et indifférence"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-03-utilite-indifference.html#propriétés-habituelles-des-courbes-dindifférence",
+    "href": "economics/micro-economics/micro-03-utilite-indifference.html#propriétés-habituelles-des-courbes-dindifférence",
+    "title": "Chapitre 2 — Fonction d’utilité et courbes d’indifférence",
+    "section": "2.4. Propriétés habituelles des courbes d’indifférence",
+    "text": "2.4. Propriétés habituelles des courbes d’indifférence\n\n\n\n\n\n\n\nPropriété\nJustification\n\n\n\n\nDécroissantes\nSi on a moins d’un bien, il faut plus de l’autre pour rester indifférent\n\n\nConvexes vers l’origine\nPréférence pour la diversité (axiome de convexité)\n\n\nNe se croisent pas\nSinon contradiction avec la transitivité (voir l’explication juste après)\n\n\nPlus éloignées de l’origine = plus préférées\n« Éloignée de l’origine » signifie que la courbe passe par des points avec davantage des deux biens (l’origine est le point \\((0,0)\\), quantité nulle partout). Par monotonie, plus de biens = panier préféré. Sur le graphique : U3 &gt; U2 &gt; U1.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "03. Utilité et indifférence"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-03-utilite-indifference.html#pourquoi-deux-courbes-dindifférence-ne-peuvent-pas-se-croiser",
+    "href": "economics/micro-economics/micro-03-utilite-indifference.html#pourquoi-deux-courbes-dindifférence-ne-peuvent-pas-se-croiser",
+    "title": "Chapitre 2 — Fonction d’utilité et courbes d’indifférence",
+    "section": "2.5. Pourquoi deux courbes d’indifférence ne peuvent pas se croiser ?",
+    "text": "2.5. Pourquoi deux courbes d’indifférence ne peuvent pas se croiser ?\nSupposons que deux courbes \\(\\mathcal{C}_1\\) et \\(\\mathcal{C}_2\\) se croisent en un point A. À droite de A, \\(\\mathcal{C}_2\\) passe au-dessus de \\(\\mathcal{C}_1\\).\nChoisissons alors :\n\nB : un point sur \\(\\mathcal{C}_1\\), à droite de A.\nD : le point de \\(\\mathcal{C}_2\\) situé directement au-dessus de B (même quantité de bien 1, mais plus de bien 2). Ce point existe car \\(\\mathcal{C}_2\\) passe au-dessus de \\(\\mathcal{C}_1\\) à droite de A.\n\nOn obtient alors trois faits :\n\nA et B sont sur \\(\\mathcal{C}_1\\) → \\(A \\sim B\\).\nA et D sont sur \\(\\mathcal{C}_2\\) → \\(A \\sim D\\).\nPar transitivité : \\(B \\sim D\\).\n\nMais D contient la même quantité de bien 1 que B, et strictement plus de bien 2. Par monotonie : \\(D \\succ B\\).\nOn a donc à la fois \\(B \\sim D\\) et \\(D \\succ B\\) — c’est impossible. \\(\\mathcal{C}_1\\) et \\(\\mathcal{C}_2\\) ne peuvent donc pas se croiser.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "03. Utilité et indifférence"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-03-utilite-indifference.html#erreur-classique",
+    "href": "economics/micro-economics/micro-03-utilite-indifference.html#erreur-classique",
+    "title": "Chapitre 2 — Fonction d’utilité et courbes d’indifférence",
+    "section": "Erreur classique",
+    "text": "Erreur classique\nLa fonction d’utilité produit bien des nombres — c’est une fonction mathématique. Mais ces nombres ne mesurent pas une intensité psychologique : ils servent uniquement à classer les paniers. \\(U(A) = 10\\) et \\(U(B) = 5\\) signifie seulement que A est préféré à B, pas que A « procure le double de satisfaction ».",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "03. Utilité et indifférence"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-03-utilite-indifference.html#graphique-carte-dindifférence",
+    "href": "economics/micro-economics/micro-03-utilite-indifference.html#graphique-carte-dindifférence",
+    "title": "Chapitre 2 — Fonction d’utilité et courbes d’indifférence",
+    "section": "Graphique — Carte d’indifférence",
+    "text": "Graphique — Carte d’indifférence\nCe qu’il faut voir. Les trois courbes représentent trois niveaux d’utilité différents. Plus une courbe est éloignée de l’origine, plus elle correspond à un panier préféré.\nComment le lire vite. Choisis un point sur une courbe : si tu veux moins du bien 1, il faut plus du bien 2 pour rester au même niveau d’utilité. C’est pour cela que les courbes sont décroissantes.\nCas concret simple. Si tu passes de 4 unités de bien 1 à 2 unités de bien 1, il faut compenser avec davantage de bien 2 pour rester sur la même courbe. Le graphique montre donc un arbitrage, pas un niveau de bonheur mesuré.\nErreur à éviter. Ne lis pas l’utilité comme une grandeur psychologique. Ici, elle sert seulement à classer les paniers.\n\nNote. Les courbes ci-dessous dont l’utilité est 3, 5 et 7 passent respectivement par les points \\((1, 3)\\), \\((1, 5)\\) et \\((1, 7)\\). C’est une conséquence de la fonction utilisée \\(U(x_1,x_2)=x_1 x_2\\), pour laquelle \\(U(1, x_2)=x_2\\). Avec une autre fonction d’utilité, cette coïncidence disparaîtrait.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "03. Utilité et indifférence"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html",
+    "href": "economics/micro-economics/micro-99-annexes.html",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "",
+    "text": "Digest de révision express. Chaque entrée tient en 3 lignes : axes, logique mécanique, formule de poche, piège unique. À lire en moins de 2 minutes.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g1-carte-dindifférence",
+    "href": "economics/micro-economics/micro-99-annexes.html#g1-carte-dindifférence",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G1 · Carte d’indifférence",
+    "text": "G1 · Carte d’indifférence\nAxes \\(x_1\\) (horizontal) / \\(x_2\\) (vertical) — Figure courbes décroissantes et convexes ; plus loin de l’origine = préféré\nFormule \\(U(x_1,x_2)=\\bar U\\) — décroissante car \\(dx_2/dx_1=-U_1'/U_2'&lt;0\\) ; convexe car TMS décroissant\nPiège l’utilité est ordinale ; « \\(U=20\\) est deux fois mieux que \\(U=10\\) » n’a aucun sens",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g2-substituts-parfaits-compléments-parfaits",
+    "href": "economics/micro-economics/micro-99-annexes.html#g2-substituts-parfaits-compléments-parfaits",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G2 · Substituts parfaits / Compléments parfaits",
+    "text": "G2 · Substituts parfaits / Compléments parfaits\nSubstituts droites de pente \\(-a/b\\) — TMS constant — optimum forcément en coin (tout l’un ou tout l’autre)\nCompléments L inversé — optimum au coude : \\(ax_1=bx_2\\) — la condition de tangence ne s’applique pas\nPiège utiliser \\(U_1'/U_2'=p_1/p_2\\) pour ces deux cas ; les solutions analytiques sont différentes",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g3-rotation-de-la-contrainte-budgétaire",
+    "href": "economics/micro-economics/micro-99-annexes.html#g3-rotation-de-la-contrainte-budgétaire",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G3 · Rotation de la contrainte budgétaire",
+    "text": "G3 · Rotation de la contrainte budgétaire\nAxes \\(x_1\\) / \\(x_2\\) — Figure baisse de \\(p_1\\) → pivot vers l’extérieur autour du point \\((0,\\,R/p_2)\\)\nPente \\(-p_1/p_2\\) ; intercepts \\(R/p_1\\) et \\(R/p_2\\) — seul l’intercept horizontal bouge\nPiège confondre translation (variation de \\(R\\) : les deux intercepts bougent) et rotation (variation d’un \\(p_i\\))",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g4-optimum-du-consommateur",
+    "href": "economics/micro-economics/micro-99-annexes.html#g4-optimum-du-consommateur",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G4 · Optimum du consommateur",
+    "text": "G4 · Optimum du consommateur\nAxes \\(x_1\\) / \\(x_2\\) — Figure tangence entre la CI la plus haute atteignable et la droite budgétaire\nFormule \\(U_1'/U_2'=p_1/p_2\\) ; Cobb-Douglas : \\(x_i^*=\\frac{a_i}{a_1+a_2}\\cdot\\frac{R}{p_i}\\)\nPiège appliquer la tangence sans vérifier que l’optimum n’est pas en coin",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g5-demande-et-élasticité-prix",
+    "href": "economics/micro-economics/micro-99-annexes.html#g5-demande-et-élasticité-prix",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G5 · Demande et élasticité-prix",
+    "text": "G5 · Demande et élasticité-prix\nAxes \\(x\\) (horizontal) / \\(p\\) (vertical) — Figure courbe plus plate = demande plus élastique\nFormule \\(\\varepsilon_{x,p}=(\\partial x/\\partial p)\\cdot(p/x)&lt;0\\) — varie le long d’une courbe linéaire\nPiège croire que pente constante = élasticité constante (faux : \\(\\varepsilon\\) change selon le point sur la courbe)",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g6-courbes-dengel",
+    "href": "economics/micro-economics/micro-99-annexes.html#g6-courbes-dengel",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G6 · Courbes d’Engel",
+    "text": "G6 · Courbes d’Engel\nAxes \\(R\\) (horizontal) / \\(x\\) (vertical) — Figure pente positive = normal ; pente négative = inférieur\nFormule \\(\\varepsilon_{x,R}=(\\partial x/\\partial R)\\cdot(R/x)\\) — loi d’Engel agrégée : \\(\\sum_i s_i\\varepsilon_{x_i,R}=1\\)\nPiège une courbe d’Engel décroissante = inférieur, pas forcément Giffen (Giffen exige aussi une réaction au prix)",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g7-préférences-révélées",
+    "href": "economics/micro-economics/micro-99-annexes.html#g7-préférences-révélées",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G7 · Préférences révélées",
+    "text": "G7 · Préférences révélées\nAxes \\(x_1\\) / \\(x_2\\) — Figure A choisi alors que B accessible → \\(A\\succeq^R B\\) ; zone WARP en grisé\nAxiome WARP si \\(A\\) est révélé préféré à \\(B\\), on ne doit jamais observer \\(B\\) choisi quand \\(A\\) est accessible\nPiège inférer une préférence universelle à partir d’un seul contexte budgétaire — les préférences peuvent changer",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g8-décomposition-slutsky-hicks",
+    "href": "economics/micro-economics/micro-99-annexes.html#g8-décomposition-slutsky-hicks",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G8 · Décomposition Slutsky-Hicks",
+    "text": "G8 · Décomposition Slutsky-Hicks\nAxes \\(x_1\\) / \\(x_2\\) — Figure A (initial) \\(\\to\\) B (effet substitution) \\(\\to\\) C (effet revenu)\nFormule \\(\\partial x_i/\\partial p_j=\\partial h_i/\\partial p_j - x_j\\cdot\\partial x_i/\\partial R\\) — effet substitution propre \\(\\partial h_i/\\partial p_i\\leq 0\\) toujours\nPiège croire que les deux effets vont toujours dans le même sens (vrai pour bien normal, faux pour inférieur)",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g9-arbitrage-travail-loisir",
+    "href": "economics/micro-economics/micro-99-annexes.html#g9-arbitrage-travail-loisir",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G9 · Arbitrage travail-loisir",
+    "text": "G9 · Arbitrage travail-loisir\nAxes \\(L\\) loisir (horizontal) / \\(C\\) consommation (vertical) — Figure pente \\(=-w\\) ; dotation en \\((T,R_0)\\)\nFormule \\(C=R_0+w(T-L)\\) ; optimum \\(TMS_{L,C}=w\\) — hausse de \\(w\\) : effet subst. ↑ travail, effet revenu ↓ travail\nPiège conclure qu’une hausse de salaire augmente forcément l’offre de travail — la courbe peut se retourner",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g9b-offre-de-travail-rétro-courbée",
+    "href": "economics/micro-economics/micro-99-annexes.html#g9b-offre-de-travail-rétro-courbée",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G9b · Offre de travail rétro-courbée",
+    "text": "G9b · Offre de travail rétro-courbée\nAxes \\(h\\) heures (horizontal) / \\(w\\) salaire (vertical) — Figure courbe croissante puis décroissante après \\(w^*\\)\nFormule \\(h^*(w)=2+0{,}8w-0{,}025w^2\\) ; \\(\\varepsilon_{h,w}=\\partial h/\\partial w\\cdot w/h\\) — négatif au-delà de \\(w^*\\)\nPiège conclure que l’offre est toujours croissante — l’effet revenu peut dominer à haut salaire",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g10-choix-intertemporel",
+    "href": "economics/micro-economics/micro-99-annexes.html#g10-choix-intertemporel",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G10 · Choix intertemporel",
+    "text": "G10 · Choix intertemporel\nAxes \\(C_1\\) (horizontal) / \\(C_2\\) (vertical) — Figure pente \\(=-(1+r)\\) ; dotation \\((Y_1,Y_2)\\) toujours sur la droite\nFormule \\(C_1+C_2/(1+r)=Y_1+Y_2/(1+r)\\) ; optimum \\(TMS_{C_1,C_2}=1+r\\)\nPiège oublier que l’effet d’une hausse de \\(r\\) est opposé pour un épargnant et un emprunteur",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g10b-courbe-dépargne",
+    "href": "economics/micro-economics/micro-99-annexes.html#g10b-courbe-dépargne",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G10b · Courbe d’épargne",
+    "text": "G10b · Courbe d’épargne\nAxes \\(r\\) taux d’intérêt (horizontal) / \\(S=Y_1-C_1\\) épargne (vertical) — Figure hump-shaped pour l’épargnant\nLogique épargnant : effet subst. \\(S\\uparrow\\) et effet revenu \\(S\\downarrow\\) — résultat ambigu ; emprunteur : \\(\\uparrow r\\) comprime \\(C_1\\)\nPiège supposer que \\(\\uparrow r\\) augmente toujours l’épargne — dépend du statut (épargnant vs emprunteur)",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g11-capital-humain-durée-optimale-détude",
+    "href": "economics/micro-economics/micro-99-annexes.html#g11-capital-humain-durée-optimale-détude",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G11 · Capital humain : durée optimale d’étude",
+    "text": "G11 · Capital humain : durée optimale d’étude\nAxes \\(s\\) durée (horizontal) / valeur marginale (vertical) — Figure \\(s^*\\) à l’intersection \\(CM=RM\\) actualisé\nLogique raisonner à la marge et en valeur actualisée ; coût = direct + opportunité (salaire renoncé)\nPiège comparer des montants bruts sans actualiser, ou oublier le coût d’opportunité",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g11b-variantes-cmrm",
+    "href": "economics/micro-economics/micro-99-annexes.html#g11b-variantes-cmrm",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G11b · Variantes CM/RM",
+    "text": "G11b · Variantes CM/RM\nAxes \\(s\\) durée (horizontal) / valeur marginale (vertical) — Figure trois paires CM/RM → trois \\(s^*\\) différents\nLogique CM\\(\\uparrow\\) → \\(s^*\\downarrow\\) ; RM\\(\\uparrow\\) → \\(s^*\\uparrow\\) ; \\(r\\uparrow\\) → RM actualisé \\(\\downarrow\\) → \\(s^*\\downarrow\\)\nPiège oublier qu’une hausse du taux d’intérêt agit via le RM actualisé, pas via le coût marginal direct",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g12-espérance-dutilité-et-risque",
+    "href": "economics/micro-economics/micro-99-annexes.html#g12-espérance-dutilité-et-risque",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G12 · Espérance d’utilité et risque",
+    "text": "G12 · Espérance d’utilité et risque\nAxes \\(W\\) richesse (horizontal) / \\(U(W)\\) utilité (vertical) — Figure courbe concave → aversion au risque\nFormule \\(U(\\mathbb{E}[W])&gt;\\mathbb{E}[U(W)]\\) ; équivalent certain \\(CE\\) : \\(U(CE)=\\mathbb{E}[U(W)]\\) ; prime \\(\\pi=\\mathbb{E}[W]-CE\\)\nPiège confondre espérance de gain (monétaire) et espérance d’utilité — ce sont deux grandeurs distinctes",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g12b-trois-attitudes-face-au-risque",
+    "href": "economics/micro-economics/micro-99-annexes.html#g12b-trois-attitudes-face-au-risque",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G12b · Trois attitudes face au risque",
+    "text": "G12b · Trois attitudes face au risque\nAxes \\(x\\) richesse (horizontal) / \\(U(x)\\) utilité (vertical) — Figure trois courbes : concave, linéaire, convexe\nLogique concave → aversion (\\(U''&lt;0\\)) ; linéaire → neutralité (\\(U''=0\\)) ; convexe → goût (\\(U''&gt;0\\))\nPiège penser que l’attitude est toujours la même — la théorie des perspectives montre qu’elle dépend du domaine",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g13-quatre-cas-gainspertes-kahneman-tversky",
+    "href": "economics/micro-economics/micro-99-annexes.html#g13-quatre-cas-gainspertes-kahneman-tversky",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G13 · Quatre cas gains/pertes (Kahneman-Tversky)",
+    "text": "G13 · Quatre cas gains/pertes (Kahneman-Tversky)\nAxes montant (horizontal) / valeur ou utilité (vertical) — Figure 4 quadrants selon domaine × probabilité\nLogique gains/forte prob. → aversion ; gains/faible prob. → goût ; pertes/forte prob. → goût ; pertes/faible prob. → aversion\nPiège appliquer une attitude homogène au risque — la théorie EU ne prédit pas ces retournements",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#g14-fonction-de-valeur-kahneman-tversky",
+    "href": "economics/micro-economics/micro-99-annexes.html#g14-fonction-de-valeur-kahneman-tversky",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "G14 · Fonction de valeur (Kahneman-Tversky)",
+    "text": "G14 · Fonction de valeur (Kahneman-Tversky)\nAxes variation de richesse (horizontal) / valeur perçue \\(v(x)\\) (vertical) — Figure courbe en S asymétrique\nFormule \\(v(x)=x^{0.88}\\) si \\(x\\geq 0\\) ; \\(v(x)=-2{,}25\\,(-x)^{0.88}\\) si \\(x&lt;0\\) — aversion aux pertes \\(\\lambda\\approx 2{,}25\\)\nPiège confondre cette fonction de valeur définie sur les variations avec une fonction d’utilité définie sur les niveaux",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#préférences-et-utilité",
+    "href": "economics/micro-economics/micro-99-annexes.html#préférences-et-utilité",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "Préférences et utilité",
+    "text": "Préférences et utilité\n\\[\nA \\succeq B \\Longleftrightarrow U(A) \\geq U(B)\n\\]\n\\[\nTMS_{1,2}=\\frac{U_1'}{U_2'}\n\\]\nPente d’une courbe d’indifférence :\n\\[\n\\frac{dx_2}{dx_1}\\bigg|_{\\bar U}=-\\frac{U_1'}{U_2'}\n\\]",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#budget",
+    "href": "economics/micro-economics/micro-99-annexes.html#budget",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "Budget",
+    "text": "Budget\n\\[\np_1x_1+p_2x_2=R\n\\]\n\\[\nx_2=\\frac{R}{p_2}-\\frac{p_1}{p_2}x_1\n\\qquad\n\\text{pente }=-\\frac{p_1}{p_2}\n\\]",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#optimum",
+    "href": "economics/micro-economics/micro-99-annexes.html#optimum",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "Optimum",
+    "text": "Optimum\n\\[\n\\frac{U_1'}{U_2'}=\\frac{p_1}{p_2}\n\\]\nAvec Cobb-Douglas \\(U=x_1^a x_2^b\\) :\n\\[\nx_1^*=\\frac{a}{a+b}\\frac{R}{p_1}\n\\qquad\nx_2^*=\\frac{b}{a+b}\\frac{R}{p_2}\n\\]\nPart budgétaire constante : \\(p_i x_i^*/R = a_i/(a_1+a_2)\\) — propriété caractéristique de Cobb-Douglas.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#élasticités",
+    "href": "economics/micro-economics/micro-99-annexes.html#élasticités",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "Élasticités",
+    "text": "Élasticités\n\\[\n\\varepsilon_{x,p}=\\frac{\\partial x}{\\partial p}\\frac{p}{x}\n\\qquad\n\\varepsilon_{x,R}=\\frac{\\partial x}{\\partial R}\\frac{R}{x}\n\\qquad\n\\varepsilon_{x_i,p_j}=\\frac{\\partial x_i}{\\partial p_j}\\frac{p_j}{x_i}\n\\]\nLoi d’Engel agrégée : \\(\\displaystyle\\sum_i s_i\\,\\varepsilon_{x_i,R}=1\\) avec \\(s_i=p_ix_i/R\\) (part budgétaire du bien \\(i\\)).\nHomogénéité de degré 0 : \\(x_i(\\lambda p_1,\\lambda p_2,\\lambda R)=x_i(p_1,p_2,R)\\) — seuls les prix relatifs et le revenu réel comptent.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#slutsky",
+    "href": "economics/micro-economics/micro-99-annexes.html#slutsky",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "Slutsky",
+    "text": "Slutsky\n\\[\n\\frac{\\partial x_i}{\\partial p_j}\n=\n\\frac{\\partial h_i}{\\partial p_j}\n-\nx_j \\frac{\\partial x_i}{\\partial R}\n\\]\nPropriétés de la matrice de Slutsky \\(S_{ij}=\\partial h_i/\\partial p_j\\) :\n\nSymétrie : \\(S_{ij}=S_{ji}\\) — les effets substitution croisés sont égaux.\nNégativité propre : \\(S_{ii}=\\partial h_i/\\partial p_i\\leq 0\\) — toujours, quel que soit le type de bien.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#travail-loisir",
+    "href": "economics/micro-economics/micro-99-annexes.html#travail-loisir",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "Travail-loisir",
+    "text": "Travail-loisir\n\\[\nC=R_0+w(T-L)\n\\qquad\nTMS_{L,C}=w\n\\]\nÉlasticité de l’offre de travail :\n\\[\n\\varepsilon_{h,w}=\\frac{\\partial h}{\\partial w}\\cdot\\frac{w}{h}\n\\]\nPositif si effet substitution domine, négatif si effet revenu domine (offre rétro-courbée).",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#intertemporel",
+    "href": "economics/micro-economics/micro-99-annexes.html#intertemporel",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "Intertemporel",
+    "text": "Intertemporel\n\\[\nC_1+\\frac{C_2}{1+r}=Y_1+\\frac{Y_2}{1+r}\n\\qquad\nTMS_{C_1,C_2}=1+r\n\\]\nValeur actualisée d’un flux :\n\\[\nVA=\\sum_{t=0}^{T}\\frac{Y_t}{(1+r)^t}\n\\]\nRevenu permanent (Friedman, 1957) :\n\\[\nY=Y^P+Y^T\n\\qquad\nC=\\alpha Y^P,\\quad 0&lt;\\alpha&lt;1\n\\]\nChoc transitoire → surtout épargne ; hausse permanente → consommation.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#capital-humain",
+    "href": "economics/micro-economics/micro-99-annexes.html#capital-humain",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "Capital humain",
+    "text": "Capital humain\n\\[\ns^*\\text{ tel que } CM(s^*)=RM_{\\text{actualisé}}(s^*)\n\\]\nCondition de rentabilité :\n\\[\n\\sum_{t=1}^{T}\\frac{\\Delta Y_t}{(1+r)^t}\\geq C_0\n\\]",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#risque-espérance-dutilité",
+    "href": "economics/micro-economics/micro-99-annexes.html#risque-espérance-dutilité",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "Risque — Espérance d’utilité",
+    "text": "Risque — Espérance d’utilité\n\\[\nE[U(X)]=\\sum_i p_i U(x_i)\n\\qquad\nU(CE)=E[U(X)]\n\\qquad\n\\pi=E[X]-CE\n\\]\nAversion au risque ⟺ \\(U''&lt;0\\) ⟺ \\(U(\\mathbb{E}[W])&gt;\\mathbb{E}[U(W)]\\).\nIndice d’Arrow-Pratt : \\(r_A(W)=-U''(W)/U'(W)\\) — mesure locale de l’aversion au risque.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-99-annexes.html#risque-théorie-des-perspectives-kahneman-tversky-1979",
+    "href": "economics/micro-economics/micro-99-annexes.html#risque-théorie-des-perspectives-kahneman-tversky-1979",
+    "title": "Synthèse graphique — 21 schémas canoniques",
+    "section": "Risque — Théorie des perspectives (Kahneman-Tversky, 1979)",
+    "text": "Risque — Théorie des perspectives (Kahneman-Tversky, 1979)\nFonction de valeur :\n\\[\nv(x)=\\begin{cases}x^\\alpha & \\text{si }x\\geq 0\\\\ -\\lambda\\,(-x)^\\alpha & \\text{si }x&lt;0\\end{cases}\n\\qquad\n\\alpha\\approx 0{,}88,\\quad\\lambda\\approx 2{,}25\n\\]\n\n\\(\\lambda &gt; 1\\) : aversion aux pertes (\\(|v(-x)|&gt;|v(x)|\\))\nConcave sur les gains, convexe sur les pertes → sensibilité décroissante\nPondération des probabilités : \\(\\pi(p)\\neq p\\) — sur-pondération des événements rares",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "99. Annexes"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-14-capital-humain.html",
+    "href": "economics/micro-economics/micro-14-capital-humain.html",
+    "title": "Chapitre 13 — Capital humain et durée d’étude",
+    "section": "",
+    "text": "Pourquoi peut-on analyser l’éducation comme un investissement ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "14. Capital humain"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-14-capital-humain.html#question-du-chapitre",
+    "href": "economics/micro-economics/micro-14-capital-humain.html#question-du-chapitre",
+    "title": "Chapitre 13 — Capital humain et durée d’étude",
+    "section": "",
+    "text": "Pourquoi peut-on analyser l’éducation comme un investissement ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "14. Capital humain"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-14-capital-humain.html#idée-à-comprendre-dabord",
+    "href": "economics/micro-economics/micro-14-capital-humain.html#idée-à-comprendre-dabord",
+    "title": "Chapitre 13 — Capital humain et durée d’étude",
+    "section": "Idée à comprendre d’abord",
+    "text": "Idée à comprendre d’abord\nFaire des études a un coût aujourd’hui et peut rapporter davantage demain. Le raisonnement économique consiste à comparer des coûts présents et des gains futurs actualisés.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "14. Capital humain"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-14-capital-humain.html#coûts-et-gains",
+    "href": "economics/micro-economics/micro-14-capital-humain.html#coûts-et-gains",
+    "title": "Chapitre 13 — Capital humain et durée d’étude",
+    "section": "13.1. Coûts et gains",
+    "text": "13.1. Coûts et gains\nCoûts principaux :\n\nfrais directs (scolarité, livres, logement) ;\nrevenu auquel on renonce en n’entrant pas tout de suite sur le marché du travail (coût d’opportunité) ;\neffort, temps, incertitude.\n\nGains attendus :\n\nsalaire futur plus élevé ;\ncarrière plus stable ou plus mobile ;\nbénéfices non monétaires possibles.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "14. Capital humain"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-14-capital-humain.html#modèle-de-becker",
+    "href": "economics/micro-economics/micro-14-capital-humain.html#modèle-de-becker",
+    "title": "Chapitre 13 — Capital humain et durée d’étude",
+    "section": "13.2. Modèle de Becker",
+    "text": "13.2. Modèle de Becker\nLe cadre de Becker (1964) formalise l’éducation comme un investissement en capital humain. L’individu arbitre entre entrer immédiatement sur le marché du travail ou prolonger ses études.\nArbitrage central. En étudiant une année de plus, l’individu renonce à un salaire présent mais obtient un surcroît de salaire futur. L’investissement est rentable si la valeur actualisée des gains futurs couvre les coûts totaux :\n\\[\n\\sum_{t=1}^{T}\\frac{\\Delta Y_t}{(1+r)^t} \\geq C_0\n\\]\navec \\(\\Delta Y_t\\) le gain de revenu futur et \\(C_0\\) le coût actualisé initial (frais directs + salaire renoncé).\nRendement privé de l’éducation. Le taux de rendement interne \\(r^*\\) est le taux qui égalise la valeur actualisée des gains et les coûts. Si \\(r^* &gt; r\\) (taux du marché), il est rentable d’investir dans l’éducation.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "14. Capital humain"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-14-capital-humain.html#rôle-du-taux-dactualisation",
+    "href": "economics/micro-economics/micro-14-capital-humain.html#rôle-du-taux-dactualisation",
+    "title": "Chapitre 13 — Capital humain et durée d’étude",
+    "section": "13.3. Rôle du taux d’actualisation",
+    "text": "13.3. Rôle du taux d’actualisation\nPlus \\(r\\) est élevé, moins les gains futurs comptent dans la décision présente. Un individu très impatient ou très contraint financièrement aura donc moins d’incitation à prolonger ses études.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "14. Capital humain"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-14-capital-humain.html#limites-du-modèle",
+    "href": "economics/micro-economics/micro-14-capital-humain.html#limites-du-modèle",
+    "title": "Chapitre 13 — Capital humain et durée d’étude",
+    "section": "13.4. Limites du modèle",
+    "text": "13.4. Limites du modèle\nLe cadre du capital humain est utile, mais il ne suffit pas à tout expliquer :\n\nl’éducation peut aussi signaler des capacités préexistantes (théorie du signal, Spence 1973) ;\nles contraintes de crédit empêchent certains individus de financer des études longues même si elles sont rentables ;\nles informations sont imparfaites : les individus ne connaissent pas exactement leur rendement futur ;\nles trajectoires de revenus sont incertaines.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "14. Capital humain"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-14-capital-humain.html#pourquoi-les-individus-nont-pas-le-même-optimum",
+    "href": "economics/micro-economics/micro-14-capital-humain.html#pourquoi-les-individus-nont-pas-le-même-optimum",
+    "title": "Chapitre 13 — Capital humain et durée d’étude",
+    "section": "13.5. Pourquoi les individus n’ont pas le même optimum",
+    "text": "13.5. Pourquoi les individus n’ont pas le même optimum\nLa durée optimale d’études \\(s^*\\) diffère d’un individu à l’autre selon plusieurs facteurs :\n\ncoûts directs : frais de scolarité et coût de la vie selon la filière ou le territoire ;\ncoût d’opportunité : niveau du salaire auquel on renonce pour étudier ;\nrendement attendu : selon la filière, le diplôme ou les débouchés anticipés ;\ntaux d’actualisation : un individu impatient (fort \\(r\\)) actualise davantage les gains futurs et s’arrête plus tôt ;\ncontraintes de crédit : si l’accès à l’emprunt est limité, l’individu ne peut pas financer des études longues même si elles sont rentables ;\nrisque et incertitude : incertitude sur les rendements futurs, sur l’environnement économique ou sur ses propres capacités ;\norigine sociale et information disponible : les individus issus de milieux défavorisés peuvent sous-estimer les rendements ou surestimer les coûts, faute d’information sur les débouchés ou les aides disponibles.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "14. Capital humain"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-14-capital-humain.html#variantes-graphiques",
+    "href": "economics/micro-economics/micro-14-capital-humain.html#variantes-graphiques",
+    "title": "Chapitre 13 — Capital humain et durée d’étude",
+    "section": "13.6. Variantes graphiques",
+    "text": "13.6. Variantes graphiques\nLe schéma CM/RM permet d’illustrer l’effet de chaque paramètre sur la durée optimale \\(s^*\\) :\n\nHausse du coût des études (déplacement de CM vers le haut) → \\(s^*\\) diminue ;\nHausse du rendement attendu (déplacement de RM vers le haut) → \\(s^*\\) augmente ;\nHausse du taux d’intérêt (RM actualisé se déplace vers le bas) → \\(s^*\\) diminue ;\nMeilleur accès au crédit (réduction du coût marginal de financement, CM vers le bas) → \\(s^*\\) augmente ;\nPréférences temporelles plus patientes (actualisation plus faible, RM actualisé vers le haut) → \\(s^*\\) augmente.\n\nDans tous les cas, la lecture graphique est la même : un déplacement de CM vers le haut ou de RM vers le bas réduit \\(s^*\\) ; l’inverse l’augmente. Le graphique suivant illustre les deux effets les plus courants (hausse du coût, hausse du rendement).",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "14. Capital humain"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-14-capital-humain.html#erreur-classique",
+    "href": "economics/micro-economics/micro-14-capital-humain.html#erreur-classique",
+    "title": "Chapitre 13 — Capital humain et durée d’étude",
+    "section": "Erreur classique",
+    "text": "Erreur classique\nRéduire l’éducation à un calcul purement financier. Le raisonnement économique est utile, mais il n’épuise pas toutes les dimensions du choix d’études. Confondre aussi rendement moyen (revenu total rapporté au coût total) et rendement marginal (gain d’une année d’étude supplémentaire) : c’est le rendement marginal, et non le rendement moyen, qui guide la décision à la marge.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "14. Capital humain"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-14-capital-humain.html#graphique-capital-humain-et-durée-détude",
+    "href": "economics/micro-economics/micro-14-capital-humain.html#graphique-capital-humain-et-durée-détude",
+    "title": "Chapitre 13 — Capital humain et durée d’étude",
+    "section": "Graphique — Capital humain et durée d’étude",
+    "text": "Graphique — Capital humain et durée d’étude\nCe que montre le graphique. La durée d’étude optimale se lit au point \\(s^*\\) où le coût marginal des études rencontre le rendement marginal attendu.\nAvant \\(s^*\\), prolonger les études reste rentable : le gain marginal attendu est supérieur au coût marginal. Après \\(s^*\\), c’est l’inverse.\nLe graphique raisonne donc à la marge : il ne compare pas les revenus totaux, mais le gain et le coût d’une année d’étude supplémentaire.\nLecture rapide : à gauche de \\(s^*\\), étudier plus est avantageux ; à droite de \\(s^*\\), cela ne l’est plus.\n\n\n\n\n\n\n\n\n\ncreated 17 png\n\n\n\nVariantes du schéma CM/RM : effets sur la durée optimale \\(s^*\\)\nTrois chocs déplacent les courbes et modifient la durée optimale d’études :\n\nCM↑ (coût en hausse) → \\(s^*\\) diminue (triangle bleu) ;\nRM↑ (rendement en hausse) → \\(s^*\\) augmente (triangle vert) ;\n\\(r\\)↑ (patience moindre) → le RM actualisé se déplace vers le bas → \\(s^*\\) diminue.\n\nDans tous les cas, lire la comparaison statique : seule la position du croisement CM/RM change.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "14. Capital humain"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-12-travail-loisir.html",
+    "href": "economics/micro-economics/micro-12-travail-loisir.html",
+    "title": "Chapitre 11 — Arbitrage travail-loisir",
+    "section": "",
+    "text": "Comment un individu arbitre-t-il entre temps travaillé, temps libre et consommation ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-12-travail-loisir.html#question-du-chapitre",
+    "href": "economics/micro-economics/micro-12-travail-loisir.html#question-du-chapitre",
+    "title": "Chapitre 11 — Arbitrage travail-loisir",
+    "section": "",
+    "text": "Comment un individu arbitre-t-il entre temps travaillé, temps libre et consommation ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-12-travail-loisir.html#idée-à-comprendre-dabord",
+    "href": "economics/micro-economics/micro-12-travail-loisir.html#idée-à-comprendre-dabord",
+    "title": "Chapitre 11 — Arbitrage travail-loisir",
+    "section": "Idée à comprendre d’abord",
+    "text": "Idée à comprendre d’abord\nLe loisir est un bien particulier : pour en consommer davantage, il faut renoncer à du revenu salarial. Le salaire joue donc le rôle de coût d’opportunité du loisir.\nMême méthodologie\nLa façon d’aborder le problème est la même que dans les chapitres précédents : on étudie un arbitrage entre deux objets, on écrit la contrainte qui borne les choix possibles, on caractérise l’optimum d’utilité sous cette contrainte, puis on analyse la réaction du comportement lorsque les conditions changent. Ici, ces deux objets ne sont plus deux biens ordinaires, mais le loisir et la consommation.\n\n\n\n\n\n\n\n\nÉtape du raisonnement\nChapitres 1–10\nChapitre 11\n\n\n\n\nObjet de l’arbitrage\nCh. 1–2 : choix entre deux biens \\(x_1\\) et \\(x_2\\)\nchoix entre loisir \\(L\\) et consommation \\(C\\)\n\n\nContrainte\nCh. 4 : budget monétaire \\(p_1 x_1 + p_2 x_2 = R\\)\ncontrainte temps-revenu \\(C = R_0 + w(T-L)\\)\n\n\nCondition d’optimum\nCh. 5 : \\(TMS = p_1/p_2\\)\n\\(TMS_{L,C} = w\\)\n\n\nVariations des conditions\nCh. 8 : variation d’un prix ou du revenu, puis décomposition en effet substitution et effet revenu\nvariation du salaire ou du revenu non salarial, puis décomposition en effet substitution et effet revenu (§ 11.4)\n\n\nLecture économique\nCh. 6–9 : demande de biens, élasticités, classification des biens\ndemande de loisir et offre de travail ; possibilité d’offre de travail rétro-courbée si le loisir est normal\n\n\nNature du modèle\narbitrage sans dotation : le revenu monétaire \\(R\\) est donné d’avance\narbitrage avec dotation : l’individu dispose d’un temps total \\(T\\) et éventuellement d’un revenu non salarial \\(R_0\\)\n\n\n\nAutre modèle de problème\nDans les chapitres précédents, on travaillait avec les grandeurs suivantes : \\(x_1\\) et \\(x_2\\) désignaient les quantités de biens consommées, \\(p_1\\) et \\(p_2\\) leurs prix, et \\(R\\) un revenu monétaire donné d’avance. Le consommateur arbitrait alors entre des biens à partir d’une contrainte budgétaire :\n\\[\nR = p_1x_1 + p_2x_2\n\\]\nIci, les grandeurs changent : \\(L\\) désigne le loisir, \\(C\\) la consommation, \\(T\\) le temps total disponible, \\(w\\) le salaire horaire et \\(R_0\\) le revenu non salarial. On passe donc d’un arbitrage sans dotation, où le revenu est exogène, à un arbitrage avec dotation, où l’individu dispose d’abord d’un capital initial, ici, un capital de temps.\nLa contrainte qui s’écrivait auparavant\n\\[\nR = p_1x_1 + p_2x_2\n\\]\ns’écrit maintenant :\n\\[\nR_0 + wT = C + wL\n\\]\nLa dotation introduite ici est le temps total \\(T\\) : c’est la ressource initiale dont dispose l’individu avant tout choix. Le terme \\(wT\\) en est la valeur monétaire au salaire \\(w\\), et \\(R_0 + wT\\) représente donc les ressources initiales totales. Cela explique pourquoi une variation du salaire ne se lit pas exactement comme une simple variation de prix dans les chapitres précédents : elle modifie à la fois le coût d’opportunité du loisir et la valeur monétaire de la dotation en temps. La façon de travailler avec les graphiques pour anticiper les comportements change donc elle aussi : auparavant, on raisonnait surtout en termes de rotation ou de translation de la droite de budget ; ici, il faut aussi raisonner à partir de la dotation initiale.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-12-travail-loisir.html#cadre-de-base",
+    "href": "economics/micro-economics/micro-12-travail-loisir.html#cadre-de-base",
+    "title": "Chapitre 11 — Arbitrage travail-loisir",
+    "section": "11.1. Cadre de base",
+    "text": "11.1. Cadre de base\nL’individu dispose d’un temps total \\(T\\) réparti entre loisir \\(L\\) et travail \\(h\\) :\n\\[\nT=L+h\n\\]\nAvec un salaire horaire \\(w\\) et un revenu non salarial \\(R_0\\), la contrainte budgétaire s’écrit alors :\n\\[\nC=R_0+w(T-L)\n\\]\nsoit :\n\\[\nC=(R_0+wT)-wL\n\\]",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-12-travail-loisir.html#contrainte-de-budget-travail-loisir",
+    "href": "economics/micro-economics/micro-12-travail-loisir.html#contrainte-de-budget-travail-loisir",
+    "title": "Chapitre 11 — Arbitrage travail-loisir",
+    "section": "11.2. Contrainte de budget travail-loisir",
+    "text": "11.2. Contrainte de budget travail-loisir\nDans le plan \\((L,C)\\), la pente de la droite de contrainte budgétaire vaut :\n\\[\n-w\n\\]\nPlus le salaire est élevé, plus une heure de loisir coûte cher en consommation renoncée.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-12-travail-loisir.html#choix-optimal",
+    "href": "economics/micro-economics/micro-12-travail-loisir.html#choix-optimal",
+    "title": "Chapitre 11 — Arbitrage travail-loisir",
+    "section": "11.3. Choix optimal",
+    "text": "11.3. Choix optimal\nL’individu maximise :\n\\[\nU(C,L)\n\\]\nQuand l’optimum est intérieur, l’individu ne choisit ni le loisir complet ni le travail complet : il combine donc un peu de loisir et un peu de travail. Dans ce cas, la courbe d’indifférence est tangente à la droite de contrainte budgétaire. On a alors :\n\\[\nTMS_{L,C}=w\n\\]\nLe taux auquel l’individu est prêt à échanger loisir et consommation s’aligne sur le salaire du marché.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-12-travail-loisir.html#hausse-du-salaire",
+    "href": "economics/micro-economics/micro-12-travail-loisir.html#hausse-du-salaire",
+    "title": "Chapitre 11 — Arbitrage travail-loisir",
+    "section": "11.4. Hausse du salaire",
+    "text": "11.4. Hausse du salaire\nUne hausse de \\(w\\) produit deux effets :\n\neffet substitution : le loisir devient plus cher, donc on travaille davantage ;\neffet revenu : si le loisir est un bien normal, le revenu plus élevé pousse à vouloir plus de loisir.\n\nL’effet total sur l’offre de travail est donc ambigu.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-12-travail-loisir.html#offre-de-travail-rétro-courbée",
+    "href": "economics/micro-economics/micro-12-travail-loisir.html#offre-de-travail-rétro-courbée",
+    "title": "Chapitre 11 — Arbitrage travail-loisir",
+    "section": "11.5. Offre de travail rétro-courbée",
+    "text": "11.5. Offre de travail rétro-courbée\nUne hausse du salaire produit à la fois un effet substitution et un effet revenu.\nÀ bas salaire, l’effet substitution domine souvent : l’individu est incité à travailler davantage. À haut salaire, l’effet revenu peut devenir dominant : l’individu choisit davantage de loisir et réduit son offre de travail.\nL’offre de travail peut donc devenir rétro-courbée.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-12-travail-loisir.html#salaire-de-réserve",
+    "href": "economics/micro-economics/micro-12-travail-loisir.html#salaire-de-réserve",
+    "title": "Chapitre 11 — Arbitrage travail-loisir",
+    "section": "11.6. Salaire de réserve",
+    "text": "11.6. Salaire de réserve\nLe salaire de réserve est le salaire minimal à partir duquel l’individu accepte de travailler.\nSi le salaire de marché est inférieur à ce seuil, l’individu choisit le loisir complet. S’il lui est supérieur, il offre une quantité positive de travail.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-12-travail-loisir.html#construction-de-loffre-individuelle-de-travail",
+    "href": "economics/micro-economics/micro-12-travail-loisir.html#construction-de-loffre-individuelle-de-travail",
+    "title": "Chapitre 11 — Arbitrage travail-loisir",
+    "section": "11.7. Construction de l’offre individuelle de travail",
+    "text": "11.7. Construction de l’offre individuelle de travail\nLa courbe d’offre individuelle de travail se construit en faisant varier le salaire \\(w\\) et en relevant, pour chaque niveau, la quantité optimale de travail :\n\\[\nh^*(w)=T-L^*(w).\n\\]\nOn obtient ainsi, dans le plan \\((h,w)\\), une courbe d’abord croissante lorsque l’effet substitution domine, puis éventuellement décroissante lorsque l’effet revenu domine.\nLe graphique suivant illustre cette construction et fait apparaître le salaire de retournement \\(w^*\\).",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-12-travail-loisir.html#élasticité-de-loffre-de-travail",
+    "href": "economics/micro-economics/micro-12-travail-loisir.html#élasticité-de-loffre-de-travail",
+    "title": "Chapitre 11 — Arbitrage travail-loisir",
+    "section": "11.8. Élasticité de l’offre de travail",
+    "text": "11.8. Élasticité de l’offre de travail\nL’élasticité de l’offre de travail mesure la sensibilité du nombre d’heures offertes à une variation du salaire :\n\\[\n\\varepsilon_{h,w} = \\frac{\\partial h}{\\partial w} \\cdot \\frac{w}{h}\n\\]\n\n\\(\\varepsilon_{h,w} &gt; 0\\) : offre croissante (effet substitution domine) ;\n\\(\\varepsilon_{h,w} &lt; 0\\) : offre décroissante (effet revenu domine) ;\n\\(\\varepsilon_{h,w} \\approx 0\\) : offre rigide, peu sensible au salaire.\n\nLes principaux facteurs qui influencent l’élasticité sont : le niveau du revenu non salarial \\(R_0\\), l’intensité de la préférence pour le loisir, les contraintes institutionnelles (temps partiel, conventions collectives, fiscalité).",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-12-travail-loisir.html#boîte-dedgeworth-appliquée-au-ménage",
+    "href": "economics/micro-economics/micro-12-travail-loisir.html#boîte-dedgeworth-appliquée-au-ménage",
+    "title": "Chapitre 11 — Arbitrage travail-loisir",
+    "section": "11.9. Boîte d’Edgeworth appliquée au ménage",
+    "text": "11.9. Boîte d’Edgeworth appliquée au ménage\nDans un ménage à deux membres, la répartition du temps et des ressources peut se représenter dans une boîte d’Edgeworth. Chaque membre a ses propres préférences entre loisir et consommation. La boîte fait apparaître :\n\nles allocations efficaces au sens de Pareto — la courbe des contrats — le long desquelles on ne peut améliorer le bien-être d’un membre sans réduire celui de l’autre ;\nla zone Pareto-supérieure aux dotations initiales ;\nles possibilités de négociation et de transferts intra-ménage.\n\nInterprétation économique. L’efficacité intra-familiale est atteinte lorsqu’on se place sur la courbe des contrats. Elle dépend des salaires respectifs, des préférences et de la technologie de production domestique.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-12-travail-loisir.html#économie-de-la-famille",
+    "href": "economics/micro-economics/micro-12-travail-loisir.html#économie-de-la-famille",
+    "title": "Chapitre 11 — Arbitrage travail-loisir",
+    "section": "11.10. Économie de la famille",
+    "text": "11.10. Économie de la famille\nBecker (1965) : allocation du temps. Chaque membre du ménage alloue son temps entre travail marchand, production domestique et loisir. L’arbitrage dépend des avantages comparatifs de chaque membre, du niveau des salaires et de la productivité domestique.\nProduction domestique. Certaines activités (cuisine, garde d’enfants, entretien) produisent des biens domestiques qui substituent ou complètent la consommation marchande. L’arbitrage entre internalisation et recours au marché dépend des prix relatifs.\nSpécialisation intra-ménage. Si un membre a un salaire plus élevé, il peut être efficace qu’il se spécialise dans le travail marchand pendant que l’autre se spécialise dans la production domestique — logique des avantages comparatifs appliquée au foyer.\nGronau (1977). Distingue trois usages du temps : travail marchand, travail domestique et loisir pur. Contrairement à Becker, le loisir n’entre pas dans la fonction de production domestique ; il s’agit d’un usage direct du temps par l’individu.\nLimites. Ces modèles supposent une décision coopérative et une information partagée. Ils ne rendent pas compte des conflits d’intérêt, des inégalités de pouvoir intra-ménage ni des dynamiques de négociation.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-12-travail-loisir.html#erreur-classique",
+    "href": "economics/micro-economics/micro-12-travail-loisir.html#erreur-classique",
+    "title": "Chapitre 11 — Arbitrage travail-loisir",
+    "section": "Erreur classique",
+    "text": "Erreur classique\nPenser qu’une hausse de salaire fait toujours travailler davantage. En réalité, tout dépend de l’arbitrage entre effet substitution et effet revenu.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-12-travail-loisir.html#graphique-arbitrage-travail-loisir",
+    "href": "economics/micro-economics/micro-12-travail-loisir.html#graphique-arbitrage-travail-loisir",
+    "title": "Chapitre 11 — Arbitrage travail-loisir",
+    "section": "Graphique — Arbitrage travail-loisir",
+    "text": "Graphique — Arbitrage travail-loisir\nCe qu’il faut voir. Ici, le loisir est sur l’axe horizontal et la consommation sur l’axe vertical. Quand le salaire augmente, la contrainte devient plus pentue et pivote autour du point \\((T,R_0)\\), car le loisir coûte davantage en consommation renoncée tandis que le loisir complet laisse toujours la consommation égale à \\(R_0\\).\nCas concret simple. Si ton salaire horaire passe de 10 à 16, une heure de loisir coûte désormais 16 de consommation potentielle au lieu de 10. En revanche, si tu ne travailles pas du tout, ta consommation reste égale au revenu non salarial \\(R_0\\) : c’est ce qui explique le pivot du graphique.\nComment le lire vite. Repère d’abord le point fixe \\((T,R_0)\\), puis compare la pente des deux droites budgétaires. Ce graphique montre donc surtout comment la contrainte change quand le salaire augmente ; il ne montre pas encore, à lui seul, la décomposition entre effet substitution et effet revenu.\nPoint concours. Ce graphique montre bien le pivot de la contrainte, mais pas encore la séparation entre effet substitution et effet revenu. Pour aller plus loin, il faudrait appliquer une des méthodes de décomposition présentées au chapitre 8.\n\n\n\n\n\n\n\n\n\n\nOffre de travail rétro-courbée\nLe graphique représente l’offre individuelle de travail \\(h^*(w)\\) en fonction du salaire \\(w\\). À bas salaire, l’effet de substitution domine et l’offre croît. Au-delà du salaire de retournement \\(w^*\\), l’effet revenu domine et l’offre diminue : on parle d’offre rétro-courbée (backward bending). L’élasticité de l’offre passe de positive à négative en ce point.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-10-types-de-biens.html",
+    "href": "economics/micro-economics/micro-10-types-de-biens.html",
+    "title": "Chapitre 9 — Biens normaux, inférieurs, Giffen, luxe, nécessité",
+    "section": "",
+    "text": "Comment classer un bien à partir de la réaction de sa demande au revenu ou au prix ?\nAutrement dit, on reprend ici les classifications liées aux élasticités du chapitre 7, en les rassemblant dans une typologie des biens.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "10. Types de biens"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-10-types-de-biens.html#question-du-chapitre",
+    "href": "economics/micro-economics/micro-10-types-de-biens.html#question-du-chapitre",
+    "title": "Chapitre 9 — Biens normaux, inférieurs, Giffen, luxe, nécessité",
+    "section": "",
+    "text": "Comment classer un bien à partir de la réaction de sa demande au revenu ou au prix ?\nAutrement dit, on reprend ici les classifications liées aux élasticités du chapitre 7, en les rassemblant dans une typologie des biens.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "10. Types de biens"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-10-types-de-biens.html#idée-à-comprendre-dabord",
+    "href": "economics/micro-economics/micro-10-types-de-biens.html#idée-à-comprendre-dabord",
+    "title": "Chapitre 9 — Biens normaux, inférieurs, Giffen, luxe, nécessité",
+    "section": "Idée à comprendre d’abord",
+    "text": "Idée à comprendre d’abord\nTous les biens ne réagissent pas de la même façon à une hausse de revenu ou à une hausse de prix. La nature du bien se lit dans le signe et l’intensité des effets précédents.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "10. Types de biens"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-10-types-de-biens.html#bien-normal",
+    "href": "economics/micro-economics/micro-10-types-de-biens.html#bien-normal",
+    "title": "Chapitre 9 — Biens normaux, inférieurs, Giffen, luxe, nécessité",
+    "section": "9.1. Bien normal",
+    "text": "9.1. Bien normal\nUn bien est normal si sa demande augmente avec le revenu :\nIci, on utilise la dérivée \\(\\partial x / \\partial R\\) plutôt que l’élasticité, car pour \\(x&gt;0\\) et \\(R&gt;0\\), elle a le même signe que \\(\\varepsilon_{x,R}\\). Comme on veut seulement savoir si la demande monte ou baisse avec le revenu, cette information de signe suffit.\n\\[\n\\frac{\\partial x}{\\partial R}&gt;0\n\\]\nQuand son prix augmente, effet substitution et effet revenu poussent tous deux à la baisse de la demande.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "10. Types de biens"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-10-types-de-biens.html#bien-inférieur",
+    "href": "economics/micro-economics/micro-10-types-de-biens.html#bien-inférieur",
+    "title": "Chapitre 9 — Biens normaux, inférieurs, Giffen, luxe, nécessité",
+    "section": "9.2. Bien inférieur",
+    "text": "9.2. Bien inférieur\nUn bien est inférieur si sa demande baisse quand le revenu augmente :\n\\[\n\\frac{\\partial x}{\\partial R}&lt;0\n\\]\nQuand son prix augmente, l’effet substitution pousse encore à la baisse, mais l’effet revenu peut jouer en sens inverse.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "10. Types de biens"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-10-types-de-biens.html#bien-giffen",
+    "href": "economics/micro-economics/micro-10-types-de-biens.html#bien-giffen",
+    "title": "Chapitre 9 — Biens normaux, inférieurs, Giffen, luxe, nécessité",
+    "section": "9.3. Bien Giffen",
+    "text": "9.3. Bien Giffen\nUn bien Giffen est un bien inférieur extrême pour lequel l’effet revenu domine l’effet substitution. On peut alors observer :\n\\[\n\\frac{\\partial x}{\\partial p}&gt;0\n\\]\nPoint clé : tout bien Giffen est inférieur, mais tout bien inférieur n’est pas Giffen.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "10. Types de biens"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-10-types-de-biens.html#bien-nécessaire-et-bien-de-luxe",
+    "href": "economics/micro-economics/micro-10-types-de-biens.html#bien-nécessaire-et-bien-de-luxe",
+    "title": "Chapitre 9 — Biens normaux, inférieurs, Giffen, luxe, nécessité",
+    "section": "9.4. Bien nécessaire et bien de luxe",
+    "text": "9.4. Bien nécessaire et bien de luxe\nOn raisonne ici avec l’élasticité-revenu :\n\n\\(0&lt;\\varepsilon_{x,R}&lt;1\\) : bien nécessaire ;\n\\(\\varepsilon_{x,R}&gt;1\\) : bien de luxe.\n\nUn même bien peut changer de statut selon le niveau de revenu considéré.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "10. Types de biens"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-10-types-de-biens.html#comment-ne-pas-se-perdre",
+    "href": "economics/micro-economics/micro-10-types-de-biens.html#comment-ne-pas-se-perdre",
+    "title": "Chapitre 9 — Biens normaux, inférieurs, Giffen, luxe, nécessité",
+    "section": "9.5. Comment ne pas se perdre",
+    "text": "9.5. Comment ne pas se perdre\n\nnormal / inférieur : réaction au revenu ;\nnécessaire / luxe : intensité de la réaction au revenu ;\nGiffen : réaction atypique au prix due à un effet revenu très fort.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "10. Types de biens"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-10-types-de-biens.html#erreur-classique",
+    "href": "economics/micro-economics/micro-10-types-de-biens.html#erreur-classique",
+    "title": "Chapitre 9 — Biens normaux, inférieurs, Giffen, luxe, nécessité",
+    "section": "Erreur classique",
+    "text": "Erreur classique\nConfondre bien inférieur et bien Giffen. Le second est un cas beaucoup plus rare et beaucoup plus exigeant que le premier.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "10. Types de biens"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-10-types-de-biens.html#graphique-courbes-dengel-luxe-nécessité-inférieur",
+    "href": "economics/micro-economics/micro-10-types-de-biens.html#graphique-courbes-dengel-luxe-nécessité-inférieur",
+    "title": "Chapitre 9 — Biens normaux, inférieurs, Giffen, luxe, nécessité",
+    "section": "Graphique — Courbes d’Engel : luxe, nécessité, inférieur",
+    "text": "Graphique — Courbes d’Engel : luxe, nécessité, inférieur\nCe qu’il faut voir. Une courbe d’Engel relie le revenu (axe horizontal) à la quantité demandée (axe vertical). La pente suffit à classer le bien.\n\n\n\nPente de la courbe d’Engel\nType de bien\nÉlasticité-revenu\n\n\n\n\nPositive, très forte\nLuxe\n\\(\\varepsilon_{x,R} &gt; 1\\)\n\n\nPositive, faible\nNormal / nécessité\n\\(0 &lt; \\varepsilon_{x,R} &lt; 1\\)\n\n\nNégative\nInférieur\n\\(\\varepsilon_{x,R} &lt; 0\\)\n\n\n\nCas concret simple. Quand le revenu double : tu vas bien plus souvent au restaurant (luxe) ; tu n’achètes pas vraiment plus de sel (nécessité) ; tu achètes moins de pâtes premier prix et tu passes aux pâtes de qualité (inférieur).\nNote. Un bien normal au sens large recouvre ici les deux cas à pente positive : nécessité et luxe. Le graphique sépare volontairement ces deux sous-cas pour que l’élasticité-revenu soit visuellement plus nette.\nNote sur Giffen. Un bien Giffen a bien une courbe d’Engel décroissante (il est inférieur sur le revenu), mais l’identification Giffen nécessite d’observer la réaction au prix : la demande monte quand le prix monte. Aucune courbe d’Engel seule ne suffit à conclure « ce bien est Giffen ».\nErreur à éviter. Confondre courbe d’Engel (revenu → quantité) et courbe de demande (prix → quantité). Ce sont deux dimensions différentes du comportement du consommateur.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "10. Types de biens"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-08-elasticites.html",
+    "href": "economics/micro-economics/micro-08-elasticites.html",
+    "title": "Chapitre 7 — Élasticités",
+    "section": "",
+    "text": "Comment mesurer proprement la sensibilité de la demande à un prix, à un revenu ou à un autre prix ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "08. Élasticités"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-08-elasticites.html#question-du-chapitre",
+    "href": "economics/micro-economics/micro-08-elasticites.html#question-du-chapitre",
+    "title": "Chapitre 7 — Élasticités",
+    "section": "",
+    "text": "Comment mesurer proprement la sensibilité de la demande à un prix, à un revenu ou à un autre prix ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "08. Élasticités"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-08-elasticites.html#idée-à-comprendre-dabord",
+    "href": "economics/micro-economics/micro-08-elasticites.html#idée-à-comprendre-dabord",
+    "title": "Chapitre 7 — Élasticités",
+    "section": "Idée à comprendre d’abord",
+    "text": "Idée à comprendre d’abord\nUne dérivée mesure comment une variable réagit à la variation d’une autre. Mais elle doit s’interpréter en fonction des unités choisies et du point où on la considère : une hausse de 500 n’a pas le même sens si un bonus passe de 500 à 1 000 couronnes suédoises, ou de 10 000 à 10 500 euros. Une dérivée seule est donc difficile à interpréter et ne permet pas, en général, de comparer proprement des marchés différents.\nL’élasticité corrige cela en rapportant chaque variation à son niveau de départ. On raisonne alors avec des variations relatives : on obtient ainsi une mesure sans unité, ce qui permet de comparer des marchés, des pays ou des périodes de tailles très différentes.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "08. Élasticités"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-08-elasticites.html#définition-générale",
+    "href": "economics/micro-economics/micro-08-elasticites.html#définition-générale",
+    "title": "Chapitre 7 — Élasticités",
+    "section": "7.1. Définition générale",
+    "text": "7.1. Définition générale\n\\[\n\\text{élasticité} = \\frac{\\%\\,\\text{variation de la variable expliquée}}{\\%\\,\\text{variation de la variable explicative}}\n\\]\nAu point considéré, si la variable expliquée \\(y\\) dépend de la variable explicative \\(x\\), cette définition se réécrit aussi :\n\\[\n\\varepsilon_{y,x}=\\frac{dy}{dx}\\frac{x}{y}\n\\]\nAutrement dit, l’élasticité est la dérivée corrigée par le rapport des niveaux \\(x/y\\) au point où l’on se place.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "08. Élasticités"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-08-elasticites.html#élasticité-prix-directe",
+    "href": "economics/micro-economics/micro-08-elasticites.html#élasticité-prix-directe",
+    "title": "Chapitre 7 — Élasticités",
+    "section": "7.2. Élasticité-prix directe",
+    "text": "7.2. Élasticité-prix directe\nPour la demande, la question devient : si le prix augmente de 1 %, de combien de % la quantité demandée varie-t-elle ?\nAu point considéré sur la courbe:\n\\[\n\\varepsilon_{x,p}=\\frac{\\partial x}{\\partial p}\\frac{p}{x}\n\\]\nEn général, elle est négative, car la demande baisse quand le prix augmente.\nOn retient souvent la valeur absolue :\n\n\\(|\\varepsilon|&gt;1\\) : demande élastique ;\n\\(|\\varepsilon|&lt;1\\) : demande peu élastique ;\n\\(|\\varepsilon|=1\\) : élasticité unitaire.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "08. Élasticités"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-08-elasticites.html#élasticité-revenu",
+    "href": "economics/micro-economics/micro-08-elasticites.html#élasticité-revenu",
+    "title": "Chapitre 7 — Élasticités",
+    "section": "7.3. Élasticité-revenu",
+    "text": "7.3. Élasticité-revenu\nPour le revenu, la question devient : si le revenu augmente de 1 %, de combien de % la quantité demandée varie-t-elle ?\nAu point considéré :\n\\[\n\\varepsilon_{x,R}=\\frac{\\partial x}{\\partial R}\\frac{R}{x}\n\\]\nElle sert à classer les biens :\n\n\\(\\varepsilon_{x,R}&gt;0\\) : bien normal ;\n\\(\\varepsilon_{x,R}&lt;0\\) : bien inférieur ; quand le revenu augmente, la demande de ce bien baisse, car le consommateur se reporte vers d’autres biens. Exemple : des pates premier prix ou un produit bas de gamme qu’on achete surtout quand le budget est serre ;\n\\(0&lt;\\varepsilon_{x,R}&lt;1\\) : bien nécessaire ; quand le revenu augmente, la demande augmente aussi, mais moins vite que le revenu. Exemple : le pain, le sel ou l’electricite de base, dont on consomme un peu plus quand on est plus riche, mais pas massivement ;\n\\(\\varepsilon_{x,R}&gt;1\\) : bien de luxe ; quand le revenu augmente, la demande augmente plus vite que le revenu. Exemple : les repas au restaurant, les voyages ou les vetements haut de gamme, sur lesquels on depense beaucoup plus des que le revenu monte.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "08. Élasticités"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-08-elasticites.html#élasticité-prix-croisée",
+    "href": "economics/micro-economics/micro-08-elasticites.html#élasticité-prix-croisée",
+    "title": "Chapitre 7 — Élasticités",
+    "section": "7.4. Élasticité-prix croisée",
+    "text": "7.4. Élasticité-prix croisée\nPour l’élasticité-prix croisée, la question devient : si le prix du bien \\(j\\) augmente de 1 %, de combien de % la quantité demandée du bien \\(i\\) varie-t-elle ?\nAu point considéré :\n\\[\n\\varepsilon_{x_i,p_j}=\\frac{\\partial x_i}{\\partial p_j}\\frac{p_j}{x_i}\n\\]\nSon signe donne une information utile :\n\n\\(&gt;0\\) : biens substituables ;\n\\(&lt;0\\) : biens complémentaires ;\n\\(=0\\) : biens indépendants.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "08. Élasticités"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-08-elasticites.html#lien-avec-la-recette-totale",
+    "href": "economics/micro-economics/micro-08-elasticites.html#lien-avec-la-recette-totale",
+    "title": "Chapitre 7 — Élasticités",
+    "section": "7.5. Lien avec la recette totale",
+    "text": "7.5. Lien avec la recette totale\nSi :\n\\[\nRT(p)=p \\times q(p)\n\\]\nIci, \\(RT(p)\\) désigne la recette totale associée au prix \\(p\\), et \\(q(p)\\) la quantité demandée lorsque ce prix est égal à \\(p\\).\nalors une hausse de prix :\n\nréduit la recette si la demande est élastique ;\naugmente la recette si la demande est inélastique ;\nlaisse la recette stationnaire au voisinage de l’élasticité unitaire.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "08. Élasticités"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-08-elasticites.html#erreur-classique",
+    "href": "economics/micro-economics/micro-08-elasticites.html#erreur-classique",
+    "title": "Chapitre 7 — Élasticités",
+    "section": "Erreur classique",
+    "text": "Erreur classique\nOublier le signe et commenter seulement la valeur absolue. Pour la demande, le signe a un sens économique ; la valeur absolue sert ensuite à juger l’intensité de la réaction.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "08. Élasticités"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-08-elasticites.html#graphique-demande-et-élasticité",
+    "href": "economics/micro-economics/micro-08-elasticites.html#graphique-demande-et-élasticité",
+    "title": "Chapitre 7 — Élasticités",
+    "section": "Graphique — Demande et élasticité",
+    "text": "Graphique — Demande et élasticité\nCe qu’il faut voir. Les deux courbes sont décroissantes. La courbe la plus plate (la moins inclinée) correspond à une demande plus élastique : pour la même variation de prix, la quantité réagit davantage. Avec le prix en ordonnée et la quantité en abscisse, une courbe verticale = demande rigide ; une courbe horizontale = demande infiniment élastique.\nComment le lire vite. Trace mentalement une ligne horizontale à un niveau de prix donné et fais monter ce prix d’un cran. La courbe dont la quantité recule le plus vers la gauche est la plus élastique.\nCas concret simple. L’électricité à domicile a peu de substituts : une hausse de tarif change peu la consommation (courbe raide). L’eau en bouteille d’une marque donnée en a beaucoup : la même hausse de prix fait fuir les consommateurs vers une autre marque (courbe plate = plus élastique).\nErreur à éviter. Ne pas confondre la pente de la courbe et l’élasticité. Sur une même courbe de demande linéaire, l’élasticité \\(\\varepsilon = -b \\cdot p/x\\) varie selon le point : elle est forte (en valeur absolue) en haut à gauche et faible en bas à droite. La pente reste constante.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "08. Élasticités"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-06-choix-optimal.html",
+    "href": "economics/micro-economics/micro-06-choix-optimal.html",
+    "title": "Chapitre 5 — Choix optimal du consommateur",
+    "section": "",
+    "text": "Parmi tous les paniers accessibles, lequel est retenu par le consommateur ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "06. Choix optimal"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-06-choix-optimal.html#question-du-chapitre",
+    "href": "economics/micro-economics/micro-06-choix-optimal.html#question-du-chapitre",
+    "title": "Chapitre 5 — Choix optimal du consommateur",
+    "section": "",
+    "text": "Parmi tous les paniers accessibles, lequel est retenu par le consommateur ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "06. Choix optimal"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-06-choix-optimal.html#idée-à-comprendre-dabord",
+    "href": "economics/micro-economics/micro-06-choix-optimal.html#idée-à-comprendre-dabord",
+    "title": "Chapitre 5 — Choix optimal du consommateur",
+    "section": "Idée à comprendre d’abord",
+    "text": "Idée à comprendre d’abord\nLe consommateur cherche le meilleur panier accessible. Graphiquement, c’est la courbe d’indifférence la plus élevée qu’il peut encore atteindre compte tenu de sa droite de budget.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "06. Choix optimal"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-06-choix-optimal.html#problème-de-maximisation",
+    "href": "economics/micro-economics/micro-06-choix-optimal.html#problème-de-maximisation",
+    "title": "Chapitre 5 — Choix optimal du consommateur",
+    "section": "5.1. Problème de maximisation",
+    "text": "5.1. Problème de maximisation\nLe problème s’écrit :\n\\[\n\\max_{x_1,x_2} U(x_1,x_2)\n\\]\nOn note \\((x_1^*,x_2^*)\\) la solution optimale, c’est-à-dire le panier qui maximise l’utilité sous la contrainte budgétaire.\nsous la contrainte :\n\\[\np_1x_1+p_2x_2 \\leq R\n\\]\nSi les deux biens sont désirables, le consommateur dépense tout son revenu à l’optimum :\n\\[\np_1x_1+p_2x_2=R\n\\]",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "06. Choix optimal"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-06-choix-optimal.html#optimum-intérieur",
+    "href": "economics/micro-economics/micro-06-choix-optimal.html#optimum-intérieur",
+    "title": "Chapitre 5 — Choix optimal du consommateur",
+    "section": "5.2. Optimum intérieur",
+    "text": "5.2. Optimum intérieur\nQuand la solution n’est pas sur un bord, la courbe d’indifférence est tangente à la droite de budget. On obtient :\n\\[\nTMS_{1,2}=\\frac{p_1}{p_2}\n\\]\nou encore :\n\\[\n\\frac{U_1'}{U_2'}=\\frac{p_1}{p_2} \\qquad \\left(=-\\frac{dx_2}{dx_1}\\right)\n\\]\nLecture économique : à l’optimum, le taux d’échange souhaité par le consommateur coïncide avec le taux d’échange imposé par le marché des biens, c’est-à-dire le rapport des prix \\(p_1/p_2\\). Le revenu \\(R\\) détermine jusqu’où s’étend la droite de budget, mais pas sa pente ; deux consommateurs avec des revenus différents font face au même taux d’échange marchand si les prix sont identiques.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "06. Choix optimal"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-06-choix-optimal.html#optimum-en-coin",
+    "href": "economics/micro-economics/micro-06-choix-optimal.html#optimum-en-coin",
+    "title": "Chapitre 5 — Choix optimal du consommateur",
+    "section": "5.3. Optimum en coin",
+    "text": "5.3. Optimum en coin\nL’optimum peut se trouver sur un bord si le consommateur achète un seul bien. C’est fréquent avec les substituts parfaits ou, plus généralement, quand la tangence ne fournit pas de solution admissible.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "06. Choix optimal"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-06-choix-optimal.html#méthode-par-lagrangien",
+    "href": "economics/micro-economics/micro-06-choix-optimal.html#méthode-par-lagrangien",
+    "title": "Chapitre 5 — Choix optimal du consommateur",
+    "section": "5.4. Méthode par Lagrangien",
+    "text": "5.4. Méthode par Lagrangien\nOn peut écrire :\n\\[\n\\mathcal{L}=U(x_1,x_2)+\\lambda(R-p_1x_1-p_2x_2)\n\\]\nLes conditions du premier ordre sont :\n\\[\n\\frac{\\partial U}{\\partial x_1}=\\lambda p_1\n\\]\n\\[\n\\frac{\\partial U}{\\partial x_2}=\\lambda p_2\n\\]\n\\[\np_1x_1+p_2x_2=R\n\\]\nEn divisant les deux premières équations, on retrouve la condition de tangence.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "06. Choix optimal"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-06-choix-optimal.html#exemple-à-savoir-refaire-cobb-douglas",
+    "href": "economics/micro-economics/micro-06-choix-optimal.html#exemple-à-savoir-refaire-cobb-douglas",
+    "title": "Chapitre 5 — Choix optimal du consommateur",
+    "section": "5.5. Exemple à savoir refaire : Cobb-Douglas",
+    "text": "5.5. Exemple à savoir refaire : Cobb-Douglas\nSi :\n\\[\nU(x_1,x_2)=x_1^a x_2^b\n\\]\nalors :\n\\[\nTMS=\\frac{a}{b}\\frac{x_2}{x_1}\n\\]\nAvec la contrainte budgétaire, on obtient :\n\\[\nx_1^*=\\frac{a}{a+b}\\frac{R}{p_1}\n\\]\n\\[\nx_2^*=\\frac{b}{a+b}\\frac{R}{p_2}\n\\]\nÀ retenir : dans Cobb-Douglas, une part constante du revenu est affectée à chaque bien.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "06. Choix optimal"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-06-choix-optimal.html#méthode-rapide-en-exercice",
+    "href": "economics/micro-economics/micro-06-choix-optimal.html#méthode-rapide-en-exercice",
+    "title": "Chapitre 5 — Choix optimal du consommateur",
+    "section": "Méthode rapide en exercice",
+    "text": "Méthode rapide en exercice\n\nÉcrire la contrainte budgétaire.\nCalculer le TMS.\nPoser l’égalité \\(TMS=p_1/p_2\\) si l’optimum est intérieur.\nUtiliser la contrainte pour obtenir les quantités.\nVérifier qu’on n’est pas en coin.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "06. Choix optimal"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-06-choix-optimal.html#erreur-classique",
+    "href": "economics/micro-economics/micro-06-choix-optimal.html#erreur-classique",
+    "title": "Chapitre 5 — Choix optimal du consommateur",
+    "section": "Erreur classique",
+    "text": "Erreur classique\nPrendre la tangence comme une recette universelle. Elle vaut pour un optimum intérieur ; elle ne suffit pas quand les préférences sont particulières ou quand la solution est en coin.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "06. Choix optimal"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-06-choix-optimal.html#graphique-optimum-du-consommateur",
+    "href": "economics/micro-economics/micro-06-choix-optimal.html#graphique-optimum-du-consommateur",
+    "title": "Chapitre 5 — Choix optimal du consommateur",
+    "section": "Graphique — Optimum du consommateur",
+    "text": "Graphique — Optimum du consommateur\nCe qu’il faut voir. Le point optimal est le panier atteignable situé sur la courbe d’indifférence la plus élevée. Sur le graphique, c’est le point de tangence entre la droite budgétaire et une courbe d’indifférence.\nComment le lire vite. Repère d’abord la droite budgétaire, puis la courbe d’indifférence la plus haute encore accessible, puis le point où elles se touchent sans se couper. C’est là que le consommateur n’a plus intérêt à se déplacer.\nCas concret simple. Avec un revenu de 12, un prix du bien 1 égal à 2 et un prix du bien 2 égal à 1, le point retenu est ici \\((3,6)\\). Il utilise tout le budget sans sortir de l’ensemble atteignable.\nPhrase de copie. À l’optimum intérieur, le consommateur égalise le taux auquel il accepte de substituer les biens et le taux auquel le marché permet cette substitution.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "06. Choix optimal"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-04-tms-preferences.html",
+    "href": "economics/micro-economics/micro-04-tms-preferences.html",
+    "title": "Chapitre 3 — TMS, utilités marginales et formes de préférences",
+    "section": "",
+    "text": "Au chapitre 2, on a vu comment comparer des paniers situés sur des courbes d’indifférence différentes : la courbe la plus éloignée de l’origine est préférée. Mais que se passe-t-il entre deux paniers situés sur la même courbe d’indifférence ?\nLe consommateur est indifférent entre eux — par définition. Pourtant, il peut encore exprimer quelque chose : à quel taux est-il prêt à échanger une unité d’un bien contre de l’autre, tout en restant au même niveau de bien-être ? Comment mesurer cet arbitrage ?\n\n\n\nLe taux marginal de substitution mesure le compromis que le consommateur est prêt à faire le long d’une même courbe d’indifférence. Il traduit une logique de préférences, pas encore une logique de marché.\n\n\n\nL’utilité marginale du bien 1 est :\n\\[\nU_1'(x_1,x_2)=\\frac{\\partial U}{\\partial x_1}\n\\]\nElle indique de combien l’utilité varie quand \\(x_1\\) augmente un peu, toutes choses égales par ailleurs.\nDe même :\n\\[\nU_2'(x_1,x_2)=\\frac{\\partial U}{\\partial x_2}\n\\]\n\n\n\nSur une courbe d’indifférence, l’utilité reste constante, donc :\n\\[\ndU=U_1' dx_1+U_2' dx_2=0\n\\]\nD’où :\n\\[\n\\frac{dx_2}{dx_1}=-\\frac{U_1'}{U_2'}\n\\]\nLecture analytique : \\(\\dfrac{dx_2}{dx_1}\\) est la pente de la courbe d’indifférence. Elle est négative (la courbe est décroissante). Le TMS est la valeur absolue de cette pente :\n\\[\nTMS_{1,2}=\\left|\\frac{dx_2}{dx_1}\\right|=\\frac{U_1'}{U_2'}\n\\]\nLecture économique : le TMS dit combien d’unités du bien 2 le consommateur est prêt à sacrifier pour obtenir une unité supplémentaire du bien 1, sans changer de niveau d’utilité.\n\n\n\nAvec des préférences convexes, plus le consommateur possède déjà le bien 1, moins il est prêt à abandonner du bien 2 pour en avoir encore plus.\nC’est l’idée simple de la diversité préférée : un panier équilibré est souvent jugé meilleur qu’un panier très extrême.\n\n\n\n\n\nModèle. Les deux biens sont interchangeables : le consommateur est toujours prêt à en échanger un contre l’autre au même taux fixe, peu importe les quantités déjà détenues. Un bien peut entièrement remplacer l’autre. Exemple typique : un consommateur qui estime qu’une bouteille de vin vaut exactement deux bières — ce taux d’échange reste le même qu’il ait déjà beaucoup ou peu des deux.\n\\[\nU(x_1,x_2)=ax_1+bx_2\n\\]\nLes utilités marginales sont constantes : \\(U_1'=a\\) et \\(U_2'=b\\). Le TMS est donc :\n\\[\nTMS=\\frac{U_1'}{U_2'}=\\frac{a}{b} \\qquad \\left(=-\\frac{dx_2}{dx_1}\\right)\n\\]\nLe TMS est constant : les courbes d’indifférence sont des droites parallèles de pente \\(-a/b\\), et le taux de substitution ne dépend pas du panier consommé.\n\n\n\nModèle. Les deux biens n’ont de valeur qu’ensemble, dans des proportions fixes : consommer davantage de l’un sans consommer davantage de l’autre n’améliore pas la situation. Exemple typique : des cadres de vélo (\\(x_1\\)) et des roues (\\(x_2\\)) — il faut exactement 2 roues par cadre pour assembler un vélo fonctionnel. Un cadre de plus sans roues supplémentaires est inutile, et une troisième roue sans cadre supplémentaire l’est tout autant. La proportion optimale est \\(x_2 = 2x_1\\), soit \\(a=1,\\, b=2\\) dans la formule ci-dessous.\n\\[\nU(x_1,x_2)=\\min(ax_1,bx_2)\n\\]\nLa fonction \\(\\min\\) n’est pas différentiable au coude. Sur chaque branche :\n\nSi \\(ax_1 &lt; bx_2\\) : \\(x_1\\) est le facteur limitant, \\(U=ax_1\\). Alors \\(U_1'=a\\) et \\(U_2'=0\\) : le bien 2 est en excès, son utilité marginale est nulle. Le \\(TMS=\\dfrac{a}{0}\\to+\\infty\\) : aucune quantité de \\(x_2\\) ne peut compenser la perte d’une unité de \\(x_1\\).\nSi \\(ax_1 &gt; bx_2\\) : \\(x_2\\) est le facteur limitant, \\(U=bx_2\\). Alors \\(U_1'=0\\) et \\(U_2'=b\\) : le bien 1 est en excès, son utilité marginale est nulle. Le \\(TMS=\\dfrac{0}{b}=0\\) : le consommateur n’a besoin d’aucun \\(x_2\\) supplémentaire pour compenser la perte d’une unité de \\(x_1\\), car \\(x_1\\) n’apporte rien ici.\n\nLe seul point économiquement pertinent est le coude : \\(ax_1=bx_2\\), soit \\(x_2/x_1=a/b\\). C’est là que le consommateur optimise : dépenser hors de cette proportion serait gaspiller du budget sur un bien qui n’augmente pas l’utilité, alors qu’acheter davantage des deux en proportion fixe permettrait d’atteindre une courbe d’indifférence plus élevée.\n\n\n\nModèle. Le consommateur valorise les deux biens et préfère la diversité : plus il possède déjà d’un bien, moins il est prêt à en sacrifier encore pour obtenir davantage de l’autre. C’est le cas standard des préférences convexes, avec un TMS qui varie le long de la courbe d’indifférence.\n\\[\nU(x_1,x_2)=x_1^\\alpha x_2^\\beta\n\\]\nOn calcule les utilités marginales :\n\\[\nU_1'=\\alpha\\, x_1^{\\alpha-1} x_2^{\\beta}, \\qquad U_2'=\\beta\\, x_1^{\\alpha} x_2^{\\beta-1}\n\\]\nLe TMS vaut :\n\\[\nTMS=\\frac{U_1'}{U_2'}=\\frac{\\alpha\\, x_1^{\\alpha-1} x_2^{\\beta}}{\\beta\\, x_1^{\\alpha} x_2^{\\beta-1}}=\\frac{\\alpha\\, x_2}{\\beta\\, x_1} \\qquad \\left(=-\\frac{dx_2}{dx_1}\\right)\n\\]\nLe TMS est décroissant en \\(x_1\\) : quand le consommateur a déjà beaucoup du bien 1, il est de moins en moins prêt à sacrifier du bien 2. C’est cohérent avec la convexité des courbes d’indifférence.\n\n\n\n\n\nBien neutre : sa quantité n’affecte pas l’utilité.\nBien indésirable : plus en consommer réduit l’utilité.\nSatiété : il existe un point idéal au-delà duquel consommer plus n’améliore plus la situation.\n\n\n\n\nNe pas confondre le TMS avec le rapport des prix. Le premier vient des préférences ; le second vient du marché. Ils ne deviennent égaux qu’au moment de l’optimum intérieur.\n\n\n\n\nCe qu’il faut voir. La première figure montre des substituts parfaits : les courbes d’indifférence sont des droites, donc le consommateur accepte de remplacer un bien par l’autre à taux constant. La seconde montre des compléments parfaits : les courbes sont en L, donc les biens ne valent vraiment que s’ils sont consommés ensemble.\nCas concret simple. Substituts parfaits : deux marques d’eau minérale que tu juges équivalentes. Compléments parfaits : chaussure gauche et chaussure droite, ou café et sucre si tu les consommes toujours ensemble dans la même proportion.\nComment le lire vite. Si les courbes sont des droites, l’optimum est souvent en coin : on achète surtout le bien qui donne le meilleur rapport utilité / prix. Si les courbes sont en L, il faut repérer le coude : c’est là que se lit la bonne proportion.\nErreur à éviter. Ne pas appliquer mécaniquement la tangence partout. Elle est souvent inutile avec ces préférences particulières.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "04. TMS et formes de préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-04-tms-preferences.html#question-du-chapitre",
+    "href": "economics/micro-economics/micro-04-tms-preferences.html#question-du-chapitre",
+    "title": "Chapitre 3 — TMS, utilités marginales et formes de préférences",
+    "section": "",
+    "text": "Au chapitre 2, on a vu comment comparer des paniers situés sur des courbes d’indifférence différentes : la courbe la plus éloignée de l’origine est préférée. Mais que se passe-t-il entre deux paniers situés sur la même courbe d’indifférence ?\nLe consommateur est indifférent entre eux — par définition. Pourtant, il peut encore exprimer quelque chose : à quel taux est-il prêt à échanger une unité d’un bien contre de l’autre, tout en restant au même niveau de bien-être ? Comment mesurer cet arbitrage ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "04. TMS et formes de préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-04-tms-preferences.html#idée-à-comprendre-dabord",
+    "href": "economics/micro-economics/micro-04-tms-preferences.html#idée-à-comprendre-dabord",
+    "title": "Chapitre 3 — TMS, utilités marginales et formes de préférences",
+    "section": "",
+    "text": "Le taux marginal de substitution mesure le compromis que le consommateur est prêt à faire le long d’une même courbe d’indifférence. Il traduit une logique de préférences, pas encore une logique de marché.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "04. TMS et formes de préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-04-tms-preferences.html#utilités-marginales",
+    "href": "economics/micro-economics/micro-04-tms-preferences.html#utilités-marginales",
+    "title": "Chapitre 3 — TMS, utilités marginales et formes de préférences",
+    "section": "",
+    "text": "L’utilité marginale du bien 1 est :\n\\[\nU_1'(x_1,x_2)=\\frac{\\partial U}{\\partial x_1}\n\\]\nElle indique de combien l’utilité varie quand \\(x_1\\) augmente un peu, toutes choses égales par ailleurs.\nDe même :\n\\[\nU_2'(x_1,x_2)=\\frac{\\partial U}{\\partial x_2}\n\\]",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "04. TMS et formes de préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-04-tms-preferences.html#taux-marginal-de-substitution",
+    "href": "economics/micro-economics/micro-04-tms-preferences.html#taux-marginal-de-substitution",
+    "title": "Chapitre 3 — TMS, utilités marginales et formes de préférences",
+    "section": "",
+    "text": "Sur une courbe d’indifférence, l’utilité reste constante, donc :\n\\[\ndU=U_1' dx_1+U_2' dx_2=0\n\\]\nD’où :\n\\[\n\\frac{dx_2}{dx_1}=-\\frac{U_1'}{U_2'}\n\\]\nLecture analytique : \\(\\dfrac{dx_2}{dx_1}\\) est la pente de la courbe d’indifférence. Elle est négative (la courbe est décroissante). Le TMS est la valeur absolue de cette pente :\n\\[\nTMS_{1,2}=\\left|\\frac{dx_2}{dx_1}\\right|=\\frac{U_1'}{U_2'}\n\\]\nLecture économique : le TMS dit combien d’unités du bien 2 le consommateur est prêt à sacrifier pour obtenir une unité supplémentaire du bien 1, sans changer de niveau d’utilité.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "04. TMS et formes de préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-04-tms-preferences.html#pourquoi-le-tms-est-souvent-décroissant",
+    "href": "economics/micro-economics/micro-04-tms-preferences.html#pourquoi-le-tms-est-souvent-décroissant",
+    "title": "Chapitre 3 — TMS, utilités marginales et formes de préférences",
+    "section": "",
+    "text": "Avec des préférences convexes, plus le consommateur possède déjà le bien 1, moins il est prêt à abandonner du bien 2 pour en avoir encore plus.\nC’est l’idée simple de la diversité préférée : un panier équilibré est souvent jugé meilleur qu’un panier très extrême.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "04. TMS et formes de préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-04-tms-preferences.html#formes-de-préférences-à-reconnaître",
+    "href": "economics/micro-economics/micro-04-tms-preferences.html#formes-de-préférences-à-reconnaître",
+    "title": "Chapitre 3 — TMS, utilités marginales et formes de préférences",
+    "section": "",
+    "text": "Modèle. Les deux biens sont interchangeables : le consommateur est toujours prêt à en échanger un contre l’autre au même taux fixe, peu importe les quantités déjà détenues. Un bien peut entièrement remplacer l’autre. Exemple typique : un consommateur qui estime qu’une bouteille de vin vaut exactement deux bières — ce taux d’échange reste le même qu’il ait déjà beaucoup ou peu des deux.\n\\[\nU(x_1,x_2)=ax_1+bx_2\n\\]\nLes utilités marginales sont constantes : \\(U_1'=a\\) et \\(U_2'=b\\). Le TMS est donc :\n\\[\nTMS=\\frac{U_1'}{U_2'}=\\frac{a}{b} \\qquad \\left(=-\\frac{dx_2}{dx_1}\\right)\n\\]\nLe TMS est constant : les courbes d’indifférence sont des droites parallèles de pente \\(-a/b\\), et le taux de substitution ne dépend pas du panier consommé.\n\n\n\nModèle. Les deux biens n’ont de valeur qu’ensemble, dans des proportions fixes : consommer davantage de l’un sans consommer davantage de l’autre n’améliore pas la situation. Exemple typique : des cadres de vélo (\\(x_1\\)) et des roues (\\(x_2\\)) — il faut exactement 2 roues par cadre pour assembler un vélo fonctionnel. Un cadre de plus sans roues supplémentaires est inutile, et une troisième roue sans cadre supplémentaire l’est tout autant. La proportion optimale est \\(x_2 = 2x_1\\), soit \\(a=1,\\, b=2\\) dans la formule ci-dessous.\n\\[\nU(x_1,x_2)=\\min(ax_1,bx_2)\n\\]\nLa fonction \\(\\min\\) n’est pas différentiable au coude. Sur chaque branche :\n\nSi \\(ax_1 &lt; bx_2\\) : \\(x_1\\) est le facteur limitant, \\(U=ax_1\\). Alors \\(U_1'=a\\) et \\(U_2'=0\\) : le bien 2 est en excès, son utilité marginale est nulle. Le \\(TMS=\\dfrac{a}{0}\\to+\\infty\\) : aucune quantité de \\(x_2\\) ne peut compenser la perte d’une unité de \\(x_1\\).\nSi \\(ax_1 &gt; bx_2\\) : \\(x_2\\) est le facteur limitant, \\(U=bx_2\\). Alors \\(U_1'=0\\) et \\(U_2'=b\\) : le bien 1 est en excès, son utilité marginale est nulle. Le \\(TMS=\\dfrac{0}{b}=0\\) : le consommateur n’a besoin d’aucun \\(x_2\\) supplémentaire pour compenser la perte d’une unité de \\(x_1\\), car \\(x_1\\) n’apporte rien ici.\n\nLe seul point économiquement pertinent est le coude : \\(ax_1=bx_2\\), soit \\(x_2/x_1=a/b\\). C’est là que le consommateur optimise : dépenser hors de cette proportion serait gaspiller du budget sur un bien qui n’augmente pas l’utilité, alors qu’acheter davantage des deux en proportion fixe permettrait d’atteindre une courbe d’indifférence plus élevée.\n\n\n\nModèle. Le consommateur valorise les deux biens et préfère la diversité : plus il possède déjà d’un bien, moins il est prêt à en sacrifier encore pour obtenir davantage de l’autre. C’est le cas standard des préférences convexes, avec un TMS qui varie le long de la courbe d’indifférence.\n\\[\nU(x_1,x_2)=x_1^\\alpha x_2^\\beta\n\\]\nOn calcule les utilités marginales :\n\\[\nU_1'=\\alpha\\, x_1^{\\alpha-1} x_2^{\\beta}, \\qquad U_2'=\\beta\\, x_1^{\\alpha} x_2^{\\beta-1}\n\\]\nLe TMS vaut :\n\\[\nTMS=\\frac{U_1'}{U_2'}=\\frac{\\alpha\\, x_1^{\\alpha-1} x_2^{\\beta}}{\\beta\\, x_1^{\\alpha} x_2^{\\beta-1}}=\\frac{\\alpha\\, x_2}{\\beta\\, x_1} \\qquad \\left(=-\\frac{dx_2}{dx_1}\\right)\n\\]\nLe TMS est décroissant en \\(x_1\\) : quand le consommateur a déjà beaucoup du bien 1, il est de moins en moins prêt à sacrifier du bien 2. C’est cohérent avec la convexité des courbes d’indifférence.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "04. TMS et formes de préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-04-tms-preferences.html#cas-particuliers-utiles-en-concours",
+    "href": "economics/micro-economics/micro-04-tms-preferences.html#cas-particuliers-utiles-en-concours",
+    "title": "Chapitre 3 — TMS, utilités marginales et formes de préférences",
+    "section": "",
+    "text": "Bien neutre : sa quantité n’affecte pas l’utilité.\nBien indésirable : plus en consommer réduit l’utilité.\nSatiété : il existe un point idéal au-delà duquel consommer plus n’améliore plus la situation.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "04. TMS et formes de préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-04-tms-preferences.html#erreur-classique",
+    "href": "economics/micro-economics/micro-04-tms-preferences.html#erreur-classique",
+    "title": "Chapitre 3 — TMS, utilités marginales et formes de préférences",
+    "section": "",
+    "text": "Ne pas confondre le TMS avec le rapport des prix. Le premier vient des préférences ; le second vient du marché. Ils ne deviennent égaux qu’au moment de l’optimum intérieur.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "04. TMS et formes de préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-04-tms-preferences.html#graphique-substituts-parfaits-et-compléments-parfaits",
+    "href": "economics/micro-economics/micro-04-tms-preferences.html#graphique-substituts-parfaits-et-compléments-parfaits",
+    "title": "Chapitre 3 — TMS, utilités marginales et formes de préférences",
+    "section": "",
+    "text": "Ce qu’il faut voir. La première figure montre des substituts parfaits : les courbes d’indifférence sont des droites, donc le consommateur accepte de remplacer un bien par l’autre à taux constant. La seconde montre des compléments parfaits : les courbes sont en L, donc les biens ne valent vraiment que s’ils sont consommés ensemble.\nCas concret simple. Substituts parfaits : deux marques d’eau minérale que tu juges équivalentes. Compléments parfaits : chaussure gauche et chaussure droite, ou café et sucre si tu les consommes toujours ensemble dans la même proportion.\nComment le lire vite. Si les courbes sont des droites, l’optimum est souvent en coin : on achète surtout le bien qui donne le meilleur rapport utilité / prix. Si les courbes sont en L, il faut repérer le coude : c’est là que se lit la bonne proportion.\nErreur à éviter. Ne pas appliquer mécaniquement la tangence partout. Elle est souvent inutile avec ces préférences particulières.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "04. TMS et formes de préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-02-preferences.html",
+    "href": "economics/micro-economics/micro-02-preferences.html",
+    "title": "Chapitre 1 — Préférences, paniers et axiomes",
+    "section": "",
+    "text": "Avant de parler de budget et d’optimum, comment dire qu’un panier est préféré à un autre ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "02. Préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-02-preferences.html#question-du-chapitre",
+    "href": "economics/micro-economics/micro-02-preferences.html#question-du-chapitre",
+    "title": "Chapitre 1 — Préférences, paniers et axiomes",
+    "section": "",
+    "text": "Avant de parler de budget et d’optimum, comment dire qu’un panier est préféré à un autre ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "02. Préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-02-preferences.html#idée-à-comprendre-dabord",
+    "href": "economics/micro-economics/micro-02-preferences.html#idée-à-comprendre-dabord",
+    "title": "Chapitre 1 — Préférences, paniers et axiomes",
+    "section": "Idée à comprendre d’abord",
+    "text": "Idée à comprendre d’abord\nLa théorie du consommateur commence par une chose très simple : comparer des paniers de consommation. On ne suppose pas que le consommateur est moralement bon ou psychologiquement transparent. On suppose seulement que ses choix peuvent être représentés de manière cohérente.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "02. Préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-02-preferences.html#panier-de-consommation",
+    "href": "economics/micro-economics/micro-02-preferences.html#panier-de-consommation",
+    "title": "Chapitre 1 — Préférences, paniers et axiomes",
+    "section": "1.1. Panier de consommation",
+    "text": "1.1. Panier de consommation\nUn panier de consommation est un vecteur :\n\\[\nX=(x_1,x_2)\n\\]\noù \\(x_1\\) et \\(x_2\\) sont les quantités consommées des biens 1 et 2.\nAvec \\(n\\) biens :\n\\[\nX=(x_1,x_2,\\dots,x_n) \\in \\mathbb{R}_+^n\n\\]\nL’ensemble \\(\\mathbb{R}_+^n\\) signifie que les quantités ne sont pas négatives.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "02. Préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-02-preferences.html#relation-de-préférence",
+    "href": "economics/micro-economics/micro-02-preferences.html#relation-de-préférence",
+    "title": "Chapitre 1 — Préférences, paniers et axiomes",
+    "section": "1.2. Relation de préférence",
+    "text": "1.2. Relation de préférence\nOn note :\n\n\n\nNotation\nSignification\n\n\n\n\n\\(A \\succ B\\)\nA est strictement préféré à B\n\n\n\\(A \\sim B\\)\nA est indifférent à B\n\n\n\\(A \\succeq B\\)\nA est faiblement préféré à B",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "02. Préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-02-preferences.html#axiomes-classiques-des-préférences",
+    "href": "economics/micro-economics/micro-02-preferences.html#axiomes-classiques-des-préférences",
+    "title": "Chapitre 1 — Préférences, paniers et axiomes",
+    "section": "1.3. Axiomes classiques des préférences",
+    "text": "1.3. Axiomes classiques des préférences\nÀ retenir d’abord : ces axiomes sont des conditions de cohérence. Ils servent à rendre les choix analysables.\n\n1. Complétude\nPour deux paniers \\(A\\) et \\(B\\), le consommateur peut toujours les comparer :\n\\[\nA \\succeq B \\quad \\text{ou} \\quad B \\succeq A\n\\]\nIl peut préférer l’un, l’autre ou être indifférent.\n\n\n2. Réflexivité\nTout panier est au moins aussi bon que lui-même :\n\\[\nA \\succeq A\n\\]\n\n\n3. Transitivité\nSi :\n\\[\nA \\succeq B \\quad \\text{et} \\quad B \\succeq C\n\\]\nalors :\n\\[\nA \\succeq C\n\\]\nC’est l’hypothèse de cohérence minimale. Sans transitivité, le choix devient instable.\n\n\n4. Monotonie (ou non-satiété locale)\nIntuition d’abord. Si on te propose deux paniers identiques sauf que l’un contient en plus un café gratuit, tu préfères celui avec le café — même si tu n’en as pas très envie. Avoir plus d’un bien ne peut pas te rendre plus mal. C’est tout ce que dit cet axiome.\nFormellement. Soient deux paniers \\(A=(a_1,a_2)\\) et \\(B=(b_1,b_2)\\). Si \\(A\\) contient au moins autant de chaque bien que \\(B\\), et strictement plus d’au moins un bien, alors \\(A\\) est strictement préféré à \\(B\\) :\n\\[\n\\bigl(a_1 \\geq b_1 \\text{ et } a_2 \\geq b_2\\bigr) \\text{ avec au moins une inégalité stricte} \\;\\Rightarrow\\; A \\succ B\n\\]\nExemple concret. \\(A = (3 \\text{ cafés},\\; 2 \\text{ livres})\\) et \\(B = (2 \\text{ cafés},\\; 2 \\text{ livres})\\). \\(A\\) contient tout ce que \\(B\\) contient, plus un café. Donc \\(A \\succ B\\).\nCe que ça implique graphiquement. Les courbes d’indifférence sont décroissantes : pour rester au même niveau de satisfaction après avoir renoncé à une unité d’un bien, il faut en recevoir davantage de l’autre. Si elles étaient croissantes, avoir plus des deux biens ne changerait rien — ce qui contredirait la monotonie. (Le graphique de la carte d’indifférence au chapitre 2 illustre cela directement.)\nLimite. Cet axiome suppose que le consommateur n’est jamais saturé. Pour des biens comme la nourriture en très grande quantité, c’est une approximation. On parle alors de non-satiété locale : elle vaut au moins dans un voisinage du panier considéré.\n\n\n5. Convexité des préférences\nAttention : c’est un axiome, pas un résultat. On suppose que les paniers moyens sont préférés aux paniers extrêmes — on ne le démontre pas à partir des axiomes précédents. Formellement, si :\n\\[\nA \\sim B\n\\]\nalors, pour \\(\\lambda \\in [0,1]\\) :\n\\[\n\\lambda A+(1-\\lambda)B \\succeq A\n\\]\nInterprétation : le consommateur apprécie en général la diversité plutôt que de se spécialiser totalement sur un seul bien. Cela produit des courbes d’indifférence convexes vers l’origine — et c’est précisément ce qui garantit l’existence d’un optimum intérieur dans la plupart des cas.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "02. Préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-02-preferences.html#erreur-classique",
+    "href": "economics/micro-economics/micro-02-preferences.html#erreur-classique",
+    "title": "Chapitre 1 — Préférences, paniers et axiomes",
+    "section": "Erreur classique",
+    "text": "Erreur classique\nNe pas confondre ces axiomes avec une description psychologique réaliste du comportement. Ici, ils servent surtout à construire un cadre simple et cohérent.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "02. Préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-01-motivation.html",
+    "href": "economics/micro-economics/micro-01-motivation.html",
+    "title": "Chapitre 0 — Motivation : pourquoi étudier le consommateur ?",
+    "section": "",
+    "text": "Tu as 6 euros. Un café coûte 2 € et un livre coûte 5 €. Tu voudrais les deux — mais ça fait 7 €. Comment choisir ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "01. Motivation"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-01-motivation.html#question-du-chapitre",
+    "href": "economics/micro-economics/micro-01-motivation.html#question-du-chapitre",
+    "title": "Chapitre 0 — Motivation : pourquoi étudier le consommateur ?",
+    "section": "",
+    "text": "Tu as 6 euros. Un café coûte 2 € et un livre coûte 5 €. Tu voudrais les deux — mais ça fait 7 €. Comment choisir ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "01. Motivation"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-01-motivation.html#idée-à-comprendre-dabord",
+    "href": "economics/micro-economics/micro-01-motivation.html#idée-à-comprendre-dabord",
+    "title": "Chapitre 0 — Motivation : pourquoi étudier le consommateur ?",
+    "section": "Idée à comprendre d’abord",
+    "text": "Idée à comprendre d’abord\nDerrière cette question banale se cache le programme de tout ce cours : trouver le meilleur choix possible compte tenu des contraintes. Ce problème a toujours la même structure en deux ingrédients.\n\n\n\n\n\n\n\n\nIngrédient\nCe qu’il représente\nCe qu’on modélise\n\n\n\n\nPréférences\nCe que le consommateur veut\nRelation de préférence → fonction d’utilité\n\n\nContrainte\nCe qu’il peut vraiment acheter\nDroite de budget\n\n\n\nL’optimum est à l’intersection : le meilleur panier parmi ceux qui sont accessibles. Tout le cours décline ce schéma dans différents contextes.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "01. Motivation"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-01-motivation.html#ce-que-ce-cadre-permet-dexpliquer",
+    "href": "economics/micro-economics/micro-01-motivation.html#ce-que-ce-cadre-permet-dexpliquer",
+    "title": "Chapitre 0 — Motivation : pourquoi étudier le consommateur ?",
+    "section": "Ce que ce cadre permet d’expliquer",
+    "text": "Ce que ce cadre permet d’expliquer\n\npourquoi une hausse de prix réduit souvent la demande ;\npourquoi certains biens réagissent plus au revenu que d’autres ;\npourquoi une hausse de salaire peut augmenter ou réduire l’offre de travail ;\npourquoi un individu épargne ou s’endette ;\npourquoi un individu accepte ou refuse un risque ;\npourquoi l’éducation peut être vue comme un investissement en capital humain.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "01. Motivation"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-01-motivation.html#carte-mentale-du-cours",
+    "href": "economics/micro-economics/micro-01-motivation.html#carte-mentale-du-cours",
+    "title": "Chapitre 0 — Motivation : pourquoi étudier le consommateur ?",
+    "section": "Carte mentale du cours",
+    "text": "Carte mentale du cours\n\\[\n\\underbrace{\\text{Préférences}}_{\\text{Ch.\\,1–3}}\n\\;\\longrightarrow\\;\n\\underbrace{\\text{Contrainte}}_{\\text{Ch.\\,4}}\n\\;\\longrightarrow\\;\n\\underbrace{\\text{Optimum}}_{\\text{Ch.\\,5–6}}\n\\;\\longrightarrow\\;\n\\underbrace{\\text{Demande \\& variations}}_{\\text{Ch.\\,7–10}}\n\\;\\longrightarrow\\;\n\\underbrace{\\text{Extensions}}_{\\text{Ch.\\,11–14}}\n\\]",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "01. Motivation"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-01-motivation.html#comment-hiérarchiser-ce-cours",
+    "href": "economics/micro-economics/micro-01-motivation.html#comment-hiérarchiser-ce-cours",
+    "title": "Chapitre 0 — Motivation : pourquoi étudier le consommateur ?",
+    "section": "Comment hiérarchiser ce cours",
+    "text": "Comment hiérarchiser ce cours\n\nLe niveau économique est le fil directeur du notebook : il faut comprendre la logique d’arbitrage entre ce que le consommateur veut et ce qu’il peut faire. C’est ce niveau qui traverse le mieux les chapitres 4 à 9, puis les extensions des chapitres 11 à 14. C’est lui qui permet d’expliquer clairement un effet prix, un effet revenu, un choix intertemporel ou un arbitrage travail-loisir.\nLe niveau graphique sert d’appui immédiat à cette intuition : les chapitres 2 à 5 installent les courbes d’indifférence, la droite de budget et l’optimum ; le chapitre 8 montre ensuite leurs déplacements. Il faut savoir faire parler un schéma, pas seulement le reproduire : pente, tangence, déplacement, coude, coin, translation de la contrainte.\nLe niveau analytique formalise ce que les deux premiers niveaux ont déjà rendu intelligible. Dans ce cours, il apparaît surtout aux chapitres 3, 5, 6, 7 et 8 avec le TMS, la maximisation sous contrainte, les fonctions de demande, les élasticités et la décomposition de Slutsky. Il est indispensable pour calculer et démontrer, mais il doit rester branché sur l’intuition économique et graphique.\n\nOrdre de travail conseillé dans l’état actuel du cours. Commencer par comprendre le mécanisme économique, vérifier qu’on sait le dessiner, puis seulement consolider les formules. Si une expression analytique devient opaque, revenir au schéma et à l’arbitrage qu’elle est censée traduire.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "01. Motivation"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-01-motivation.html#erreur-à-éviter",
+    "href": "economics/micro-economics/micro-01-motivation.html#erreur-à-éviter",
+    "title": "Chapitre 0 — Motivation : pourquoi étudier le consommateur ?",
+    "section": "Erreur à éviter",
+    "text": "Erreur à éviter\nNe pas croire que « rationnel » signifie « égoïste ». La rationalité du modèle est une hypothèse de cohérence des choix : le consommateur sait ce qu’il préfère et ses choix ne se contredisent pas. Elle n’interdit pas la générosité ou l’altruisme — il suffit de les intégrer dans les préférences.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "01. Motivation"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-05-contrainte-budgetaire.html",
+    "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html",
+    "title": "Chapitre 4 — Contrainte budgétaire",
+    "section": "",
+    "text": "Quels paniers le consommateur peut-il effectivement acheter ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "05. Contrainte budgétaire"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-05-contrainte-budgetaire.html#question-du-chapitre",
+    "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html#question-du-chapitre",
+    "title": "Chapitre 4 — Contrainte budgétaire",
+    "section": "",
+    "text": "Quels paniers le consommateur peut-il effectivement acheter ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "05. Contrainte budgétaire"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-05-contrainte-budgetaire.html#idée-à-comprendre-dabord",
+    "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html#idée-à-comprendre-dabord",
+    "title": "Chapitre 4 — Contrainte budgétaire",
+    "section": "Idée à comprendre d’abord",
+    "text": "Idée à comprendre d’abord\nLa contrainte budgétaire ne dit pas ce que le consommateur veut. Elle dit ce qu’il peut faire. Toute la suite du cours repose sur cette rencontre entre préférences et possibilités d’achat.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "05. Contrainte budgétaire"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-05-contrainte-budgetaire.html#équation-de-budget",
+    "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html#équation-de-budget",
+    "title": "Chapitre 4 — Contrainte budgétaire",
+    "section": "4.1. Équation de budget",
+    "text": "4.1. Équation de budget\nSi le revenu est \\(R\\) et les prix sont \\(p_1\\) et \\(p_2\\), alors :\n\\[\np_1x_1+p_2x_2 \\leq R\n\\]\nLa frontière des paniers juste accessibles est :\n\\[\np_1x_1+p_2x_2=R\n\\]",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "05. Contrainte budgétaire"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-05-contrainte-budgetaire.html#intercepts-et-pente",
+    "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html#intercepts-et-pente",
+    "title": "Chapitre 4 — Contrainte budgétaire",
+    "section": "4.2. Intercepts et pente",
+    "text": "4.2. Intercepts et pente\nSi tout le revenu est consacré au bien 1 :\n\\[\nx_1=\\frac{R}{p_1}\n\\]\nSi tout le revenu est consacré au bien 2 :\n\\[\nx_2=\\frac{R}{p_2}\n\\]\nEn isolant \\(x_2\\), on obtient :\n\\[\nx_2=\\frac{R}{p_2}-\\frac{p_1}{p_2}x_1\n\\]\nLa pente vaut donc :\n\\[\n-\\frac{p_1}{p_2}\n\\]\nLecture analytique : la pente de la droite de budget est \\(-p_1/p_2\\) ; elle mesure la quantité de bien 2 à laquelle il faut renoncer pour obtenir une unité supplémentaire de bien 1.\nLecture économique : \\(p_1/p_2\\) est le prix relatif du bien 1 en unités de bien 2.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "05. Contrainte budgétaire"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-05-contrainte-budgetaire.html#comment-la-droite-de-budget-se-déplace",
+    "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html#comment-la-droite-de-budget-se-déplace",
+    "title": "Chapitre 4 — Contrainte budgétaire",
+    "section": "4.3. Comment la droite de budget se déplace",
+    "text": "4.3. Comment la droite de budget se déplace\n\n1. Hausse du revenu\nSi \\(R\\) augmente et que les prix ne changent pas, la droite se déplace parallèlement vers l’extérieur.\n\n\n2. Hausse de \\(p_1\\)\nSi \\(p_1\\) augmente :\n\nl’intercept \\(R/p_1\\) diminue ;\nl’intercept \\(R/p_2\\) ne change pas ;\nla droite pivote vers l’intérieur autour de l’axe vertical.\n\n\n\n3. Hausse de \\(p_2\\)\nLe raisonnement est symétrique : cette fois, c’est l’intercept vertical qui diminue.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "05. Contrainte budgétaire"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-05-contrainte-budgetaire.html#ce-quil-faut-voir-immédiatement-sur-un-graphique",
+    "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html#ce-quil-faut-voir-immédiatement-sur-un-graphique",
+    "title": "Chapitre 4 — Contrainte budgétaire",
+    "section": "4.4. Ce qu’il faut voir immédiatement sur un graphique",
+    "text": "4.4. Ce qu’il faut voir immédiatement sur un graphique\nQuand tu regardes une droite de budget, repère dans cet ordre :\n\nles deux intercepts ;\nla pente ;\nla cause d’un déplacement : revenu ou prix ;\nle sens du mouvement : translation ou rotation.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "05. Contrainte budgétaire"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-05-contrainte-budgetaire.html#erreur-classique",
+    "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html#erreur-classique",
+    "title": "Chapitre 4 — Contrainte budgétaire",
+    "section": "Erreur classique",
+    "text": "Erreur classique\nConfondre une translation de la droite de budget avec une rotation. Le revenu modifie les deux intercepts à la fois ; la variation d’un seul prix fait pivoter la droite.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "05. Contrainte budgétaire"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-05-contrainte-budgetaire.html#graphique-rotation-vs-translation-de-la-contrainte-budgétaire",
+    "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html#graphique-rotation-vs-translation-de-la-contrainte-budgétaire",
+    "title": "Chapitre 4 — Contrainte budgétaire",
+    "section": "Graphique — Rotation vs translation de la contrainte budgétaire",
+    "text": "Graphique — Rotation vs translation de la contrainte budgétaire\nCe qu’il faut voir. Les deux types de déplacement de la droite de budget sont illustrés sur le même graphique :\n\nRotation (baisse de \\(p_1\\)) : la droite pivote autour de l’axe vertical (axe du bien 2), car l’intercept \\(R/p_2\\) ne change pas mais l’intercept \\(R/p_1\\) augmente.\nTranslation (hausse de \\(R\\)) : la droite se déplace parallèlement vers l’extérieur, car les deux intercepts augmentent dans la même proportion.\n\nCas concret. Revenu initial \\(R=12\\), \\(p_1=2\\), \\(p_2=1\\).\n\n\n\n\n\n\n\n\n\n\nScénario\nChangement\nIntercept horizontal (\\(R/p_1\\))\nIntercept vertical (\\(R/p_2\\))\nPente\n\n\n\n\nInitial\n—\n6\n12\n\\(-2\\)\n\n\nBaisse de \\(p_1\\) à 1\nRotation\n12\n12 (inchangé)\n\\(-1\\)\n\n\nHausse de \\(R\\) à 18\nTranslation\n9\n18\n\\(-2\\) (inchangée)\n\n\n\nComment le distinguer au premier coup d’œil. Si un intercept est fixe, c’est une rotation ; si les deux bougent dans la même direction, c’est une translation.\nErreur à éviter. Confondre les deux mouvements en copie : la variation d’un prix fait pivoter la droite, la variation du revenu la translate parallèlement.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "05. Contrainte budgétaire"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-07-demande-individuelle.html",
+    "href": "economics/micro-economics/micro-07-demande-individuelle.html",
+    "title": "Chapitre 6 — Demande individuelle et fonctions de demande",
+    "section": "",
+    "text": "Une fois l’optimum de consommation trouvé, comment décrire la quantité choisie quand les prix ou le revenu changent ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "07. Demande individuelle"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-07-demande-individuelle.html#question-du-chapitre",
+    "href": "economics/micro-economics/micro-07-demande-individuelle.html#question-du-chapitre",
+    "title": "Chapitre 6 — Demande individuelle et fonctions de demande",
+    "section": "",
+    "text": "Une fois l’optimum de consommation trouvé, comment décrire la quantité choisie quand les prix ou le revenu changent ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "07. Demande individuelle"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-07-demande-individuelle.html#idée-à-comprendre-dabord",
+    "href": "economics/micro-economics/micro-07-demande-individuelle.html#idée-à-comprendre-dabord",
+    "title": "Chapitre 6 — Demande individuelle et fonctions de demande",
+    "section": "Idée à comprendre d’abord",
+    "text": "Idée à comprendre d’abord\nJusqu’au chapitre 5, on cherchait l’optimum de consommation pour un revenu et des prix donnés. Ici, on change de question : on ne veut plus seulement un panier de consommation optimal, mais la règle qui donne ce panier quand \\(p_1\\), \\(p_2\\) ou \\(R\\) changent. Cette règle, c’est la fonction de demande.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "07. Demande individuelle"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-07-demande-individuelle.html#fonctions-de-demande",
+    "href": "economics/micro-economics/micro-07-demande-individuelle.html#fonctions-de-demande",
+    "title": "Chapitre 6 — Demande individuelle et fonctions de demande",
+    "section": "6.1. Fonctions de demande",
+    "text": "6.1. Fonctions de demande\nPour le bien 1 :\n\\[\nx_1^*=D_1(p_1,p_2,R)\n\\]\nPour le bien 2 :\n\\[\nx_2^*=D_2(p_1,p_2,R)\n\\]\nÀ retenir : une fonction de demande n’est pas une intention vague ; c’est une règle qui associe à chaque environnement de prix et de revenu une quantité choisie.\nAutrement dit, \\(x_1^*\\) et \\(x_2^*\\) sont les composantes du panier de consommation optimal associé à des prix \\((p_1,p_2)\\) et un revenu \\(R\\) donnés. La nouveauté du chapitre 6 est qu’on les étudie comme des fonctions de ces variables : par exemple, quand \\(p_1\\) varie, à \\(p_2\\) et \\(R\\) fixés, on observe comment \\(x_1^*\\) et \\(x_2^*\\) changent, et non plus seulement un optimum de consommation isolé.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "07. Demande individuelle"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-07-demande-individuelle.html#courbe-de-demande",
+    "href": "economics/micro-economics/micro-07-demande-individuelle.html#courbe-de-demande",
+    "title": "Chapitre 6 — Demande individuelle et fonctions de demande",
+    "section": "6.2. Courbe de demande",
+    "text": "6.2. Courbe de demande\nLa courbe de demande relie le prix d’un bien à la quantité demandée, toutes choses égales par ailleurs.\nEn général :\n\\[\n\\frac{\\partial D_1}{\\partial p_1}&lt;0\n\\]\nAutrement dit, une hausse du prix tend à réduire la quantité demandée.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "07. Demande individuelle"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-07-demande-individuelle.html#courbe-prix-consommation",
+    "href": "economics/micro-economics/micro-07-demande-individuelle.html#courbe-prix-consommation",
+    "title": "Chapitre 6 — Demande individuelle et fonctions de demande",
+    "section": "6.3. Courbe prix-consommation",
+    "text": "6.3. Courbe prix-consommation\nQuand le prix d’un bien varie, à revenu et prix de l’autre bien constants, l’optimum de consommation se déplace. La courbe qui relie ces optimums de consommation successifs est la courbe prix-consommation.\nAttention : cette courbe n’est pas tracée dans un repère prix-quantité, mais dans le plan des paniers \\((x_1,x_2)\\). Ici, c’est \\(p_1\\) qui varie, et chaque point de la courbe représente un panier optimal \\((x_1^*,x_2^*)\\).\nLe graphique ajouté ci-dessous illustre ce déplacement quand le prix du bien 1 varie, à revenu et prix du bien 2 constants.\nElle sert de pont entre l’analyse graphique du consommateur et la construction de la courbe de demande.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "07. Demande individuelle"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-07-demande-individuelle.html#courbe-revenu-consommation",
+    "href": "economics/micro-economics/micro-07-demande-individuelle.html#courbe-revenu-consommation",
+    "title": "Chapitre 6 — Demande individuelle et fonctions de demande",
+    "section": "6.4. Courbe revenu-consommation",
+    "text": "6.4. Courbe revenu-consommation\nQuand le revenu varie à prix constants, les droites de budget se déplacent parallèlement. Les optimums de consommation successifs forment la courbe revenu-consommation.\nCette courbe permet de voir si un bien devient plus ou moins demandé quand le revenu augmente.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "07. Demande individuelle"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-07-demande-individuelle.html#courbe-dengel",
+    "href": "economics/micro-economics/micro-07-demande-individuelle.html#courbe-dengel",
+    "title": "Chapitre 6 — Demande individuelle et fonctions de demande",
+    "section": "6.5. Courbe d’Engel",
+    "text": "6.5. Courbe d’Engel\nLa courbe d’Engel relie directement le revenu à la quantité demandée d’un bien.\n\npente positive : bien normal ;\npente négative : bien inférieur ;\npente très forte : bien de luxe possible.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "07. Demande individuelle"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-07-demande-individuelle.html#méthode-de-lecture",
+    "href": "economics/micro-economics/micro-07-demande-individuelle.html#méthode-de-lecture",
+    "title": "Chapitre 6 — Demande individuelle et fonctions de demande",
+    "section": "Méthode de lecture",
+    "text": "Méthode de lecture\nQuand un exercice parle de demande, demande-toi toujours :\n\nqu’est-ce qui varie : prix ou revenu ?\nest-ce qu’on lit une demande, une courbe prix-consommation ou une courbe d’Engel ?\nquel type de bien cela suggère-t-il ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "07. Demande individuelle"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-07-demande-individuelle.html#erreur-classique",
+    "href": "economics/micro-economics/micro-07-demande-individuelle.html#erreur-classique",
+    "title": "Chapitre 6 — Demande individuelle et fonctions de demande",
+    "section": "Erreur classique",
+    "text": "Erreur classique\nConfondre la courbe de demande avec la courbe d’Engel. La première relie quantité et prix ; la seconde relie quantité et revenu.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "07. Demande individuelle"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html",
+    "href": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html",
+    "title": "Chapitre 8 — Effet prix, effet revenu, effet substitution",
+    "section": "",
+    "text": "Quand le prix d’un bien change, comment décomposer exactement la variation de la quantité demandée entre effet substitution et effet revenu ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "09. Effets prix, revenu et substitution"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#question-du-chapitre",
+    "href": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#question-du-chapitre",
+    "title": "Chapitre 8 — Effet prix, effet revenu, effet substitution",
+    "section": "",
+    "text": "Quand le prix d’un bien change, comment décomposer exactement la variation de la quantité demandée entre effet substitution et effet revenu ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "09. Effets prix, revenu et substitution"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#idée-à-comprendre-dabord",
+    "href": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#idée-à-comprendre-dabord",
+    "title": "Chapitre 8 — Effet prix, effet revenu, effet substitution",
+    "section": "Idée à comprendre d’abord",
+    "text": "Idée à comprendre d’abord\nLe chapitre 7 mesurait l’ampleur de la réaction de la demande avec l’élasticité. Ici, on change de question : on ne cherche plus seulement à savoir de combien la quantité varie, mais pourquoi elle varie.\nUne variation de prix agit de deux façons en même temps :\n\nelle modifie le prix relatif du bien ;\nelle modifie le pouvoir d’achat réel du consommateur.\n\nC’est pourquoi on décompose l’effet total en deux morceaux.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "09. Effets prix, revenu et substitution"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#décomposition-de-base",
+    "href": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#décomposition-de-base",
+    "title": "Chapitre 8 — Effet prix, effet revenu, effet substitution",
+    "section": "8.1. Décomposition de base",
+    "text": "8.1. Décomposition de base\n\\[\n\\text{effet prix} = \\text{effet substitution} + \\text{effet revenu}\n\\]",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "09. Effets prix, revenu et substitution"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#effet-substitution",
+    "href": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#effet-substitution",
+    "title": "Chapitre 8 — Effet prix, effet revenu, effet substitution",
+    "section": "8.2. Effet substitution",
+    "text": "8.2. Effet substitution\nQuand \\(p_1\\) augmente, le bien 1 devient relativement plus cher. Le consommateur tend donc à se reporter vers les autres biens.\nPour le bien dont le prix augmente, l’effet substitution est toujours orienté dans le sens d’une baisse de la demande.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "09. Effets prix, revenu et substitution"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#effet-revenu",
+    "href": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#effet-revenu",
+    "title": "Chapitre 8 — Effet prix, effet revenu, effet substitution",
+    "section": "8.3. Effet revenu",
+    "text": "8.3. Effet revenu\nUne hausse du prix du bien 1 reduit le pouvoir d’achat reel du consommateur.\nPour isoler l’effet revenu, on oublie un instant que le bien 1 est devenu relativement plus cher et on regarde seulement l’effet de cet appauvrissement.\nLa question devient alors : parce qu’il est plus pauvre, le consommateur veut-il acheter plus ou moins du meme bien 1 ?\nSi le bien 1 est normal, il en veut moins ; s’il est inferieur, il peut en vouloir plus parce qu’il renonce a des biens plus chers ; mais, en general, l’effet substitution domine quand meme, sauf dans le cas rare du bien de Giffen.\nExemple d’un bien de Giffen: un menage tres pauvre vit surtout de riz et achete parfois un peu de viande. Si le prix du riz augmente, il n’a presque plus les moyens d’acheter de viande ; pour simplement continuer a se nourrir, il reduit fortement la viande et achete finalement encore plus de riz, meme devenu plus cher.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "09. Effets prix, revenu et substitution"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#décomposition-de-hicks",
+    "href": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#décomposition-de-hicks",
+    "title": "Chapitre 8 — Effet prix, effet revenu, effet substitution",
+    "section": "8.4. Décomposition de Hicks",
+    "text": "8.4. Décomposition de Hicks\nL’intention de Hicks est d’isoler un effet substitution aussi pur que possible.\nConcretement, on part du panier optimal initial A, qui donne un certain niveau de satisfaction. Puis on imagine que le prix change, mais qu’on ajuste fictivement le revenu du consommateur juste assez pour qu’il puisse encore atteindre la meme courbe d’indifference qu’au point A.\nLe “meme niveau d’utilite” designe donc simplement le niveau de satisfaction associe au choix initial, avant la variation de prix. On ne cherche pas a conserver le meme panier : on cherche a conserver la meme satisfaction, avec les nouveaux prix.\nOn peut alors dire : ce qui change d’abord vient du prix relatif seul ; ce qui reste vient de l’effet revenu.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "09. Effets prix, revenu et substitution"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#décomposition-de-slutsky",
+    "href": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#décomposition-de-slutsky",
+    "title": "Chapitre 8 — Effet prix, effet revenu, effet substitution",
+    "section": "8.5. Décomposition de Slutsky",
+    "text": "8.5. Décomposition de Slutsky\nL’intention de Slutsky est de separer les deux effets avec une regle plus concrete.\nOn change le prix relatif, mais on compense le revenu de sorte que l’ancien panier reste achetable aux nouveaux prix.\nLes deux décompositions racontent donc la meme histoire, mais Hicks raisonne en niveau d’utilite, tandis que Slutsky raisonne en pouvoir d’achat de l’ancien panier.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "09. Effets prix, revenu et substitution"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#équation-de-slutsky",
+    "href": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#équation-de-slutsky",
+    "title": "Chapitre 8 — Effet prix, effet revenu, effet substitution",
+    "section": "8.6. Équation de Slutsky",
+    "text": "8.6. Équation de Slutsky\nPour le bien \\(i\\) et le prix du bien \\(j\\) :\n\\[\n\\frac{\\partial x_i}{\\partial p_j} = \\frac{\\partial h_i}{\\partial p_j} - x_j \\frac{\\partial x_i}{\\partial R}\n\\]\n\n\\(x_i\\) : demande marshallienne ;\n\\(h_i\\) : demande compensée ;\npremier terme : effet substitution ;\nsecond terme : effet revenu.\n\nPour le prix propre, l’effet substitution compensé reste négatif :\n\\[\n\\frac{\\partial h_i}{\\partial p_i}&lt;0\n\\]",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "09. Effets prix, revenu et substitution"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#erreur-classique",
+    "href": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#erreur-classique",
+    "title": "Chapitre 8 — Effet prix, effet revenu, effet substitution",
+    "section": "Erreur classique",
+    "text": "Erreur classique\nDire que l’effet substitution et l’effet revenu vont toujours dans le même sens. C’est vrai pour un bien normal, pas pour un bien inférieur.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "09. Effets prix, revenu et substitution"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#graphique-décomposition-de-hicks",
+    "href": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#graphique-décomposition-de-hicks",
+    "title": "Chapitre 8 — Effet prix, effet revenu, effet substitution",
+    "section": "Graphique — Décomposition de Hicks",
+    "text": "Graphique — Décomposition de Hicks\nCe qu’il faut voir. Le passage de A à C est l’effet prix total. On le découpe en deux étapes : de A à B, l’effet substitution ; de B à C, l’effet revenu.\nComment le lire vite. Ici, la droite compensée de Hicks est choisie pour laisser au consommateur le meme niveau d’utilite qu’en A. Le point B reste donc sur la meme courbe d’indifference que A, mais avec la nouvelle pente de budget.\nCas concret simple. Si le prix du bien 1 augmente, le budget devient plus raide. Le consommateur passe d’abord de A vers B parce que le bien 1 est devenu relativement plus cher, puis de B vers C parce que son pouvoir d’achat reel baisse.\nErreur à éviter. Dans Hicks, B doit etre sur la meme courbe d’indifference que A. Si B est sur une autre courbe, on ne voit plus un effet substitution pur.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "09. Effets prix, revenu et substitution"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#graphique-décomposition-de-slutsky",
+    "href": "economics/micro-economics/micro-09-effets-prix-revenu-substitution.html#graphique-décomposition-de-slutsky",
+    "title": "Chapitre 8 — Effet prix, effet revenu, effet substitution",
+    "section": "Graphique — Décomposition de Slutsky",
+    "text": "Graphique — Décomposition de Slutsky\nCe qu’il faut voir. Le point final C est le meme que dans Hicks, mais le point intermediaire B n’est pas defini de la meme facon.\nComment le lire vite. Ici, la droite compensée de Slutsky est choisie pour que l’ancien panier A reste juste achetable apres la hausse de prix. Le point B se lit alors comme le nouvel optimum sur cette droite compensée.\nCas concret simple. Comme le consommateur peut encore acheter A aux nouveaux prix, la compensation est en general plus forte que chez Hicks. B se situe donc souvent sur une courbe d’indifference plus élevée que celle de A.\nErreur à éviter. Dans Slutsky, on ne cherche pas a garder la meme utilite qu’en A. On cherche seulement a garder le meme pouvoir d’achat du panier initial.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "09. Effets prix, revenu et substitution"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-11-preferences-revelees.html",
+    "href": "economics/micro-economics/micro-11-preferences-revelees.html",
+    "title": "Chapitre 10 — Préférences révélées",
+    "section": "",
+    "text": "Jusqu’ici, on a représenté les préférences par une fonction d’utilité ou par des courbes d’indifférence.\nMais, en pratique, on n’observe pas directement cette fonction : on observe surtout des choix.\nPeut-on alors parler de préférences sans supposer directement une fonction d’utilité ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "11. Préférences révélées"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-11-preferences-revelees.html#question-du-chapitre",
+    "href": "economics/micro-economics/micro-11-preferences-revelees.html#question-du-chapitre",
+    "title": "Chapitre 10 — Préférences révélées",
+    "section": "",
+    "text": "Jusqu’ici, on a représenté les préférences par une fonction d’utilité ou par des courbes d’indifférence.\nMais, en pratique, on n’observe pas directement cette fonction : on observe surtout des choix.\nPeut-on alors parler de préférences sans supposer directement une fonction d’utilité ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "11. Préférences révélées"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-11-preferences-revelees.html#idée-à-comprendre-dabord",
+    "href": "economics/micro-economics/micro-11-preferences-revelees.html#idée-à-comprendre-dabord",
+    "title": "Chapitre 10 — Préférences révélées",
+    "section": "Idée à comprendre d’abord",
+    "text": "Idée à comprendre d’abord\nLa théorie des préférences révélées change donc de point de départ. Au lieu de postuler d’abord une utilité, elle part des choix observés et demande : qu’est-ce que le comportement permet d’inférer sur les préférences ?\nLa question n’est pas d’abord d’écrire explicitement une fonction d’utilité a partir des choix observés. La question est d’établir, a partir de ces choix, un classement cohérent des paniers. Si ce classement est suffisamment cohérent, il pourra ensuite etre représenté par une fonction d’utilité ordinale.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "11. Préférences révélées"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-11-preferences-revelees.html#révélation-directe",
+    "href": "economics/micro-economics/micro-11-preferences-revelees.html#révélation-directe",
+    "title": "Chapitre 10 — Préférences révélées",
+    "section": "10.1. Révélation directe",
+    "text": "10.1. Révélation directe\nSi le consommateur choisit \\(A\\) alors que \\(B\\) était accessible avec le même budget, on dit que \\(A\\) est révélé préféré à \\(B\\) :\n\\[\nA \\succeq^R B\n\\]\nL’idée n’est pas psychologique : on n’observe pas les goûts directement, on observe les choix.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "11. Préférences révélées"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-11-preferences-revelees.html#axiome-faible-des-préférences-révélées",
+    "href": "economics/micro-economics/micro-11-preferences-revelees.html#axiome-faible-des-préférences-révélées",
+    "title": "Chapitre 10 — Préférences révélées",
+    "section": "10.2. Axiome faible des préférences révélées",
+    "text": "10.2. Axiome faible des préférences révélées\nSi \\(A\\) est révélé préféré à \\(B\\), alors on ne doit pas observer ensuite \\(B\\) choisi alors que \\(A\\) est accessible dans une situation comparable.\nSinon, le comportement n’est plus cohérent avec l’idée d’une préférence stable.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "11. Préférences révélées"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-11-preferences-revelees.html#pourquoi-cest-utile",
+    "href": "economics/micro-economics/micro-11-preferences-revelees.html#pourquoi-cest-utile",
+    "title": "Chapitre 10 — Préférences révélées",
+    "section": "10.3. Pourquoi c’est utile",
+    "text": "10.3. Pourquoi c’est utile\nCette approche permet :\n\nde raisonner à partir de données observables ;\nd’éviter d’imposer d’emblée une fonction d’utilité ;\nde tester une certaine cohérence des choix.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "11. Préférences révélées"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-11-preferences-revelees.html#limites",
+    "href": "economics/micro-economics/micro-11-preferences-revelees.html#limites",
+    "title": "Chapitre 10 — Préférences révélées",
+    "section": "10.4. Limites",
+    "text": "10.4. Limites\nLa méthode suppose tout de même :\n\ndes préférences suffisamment stables ;\nune information correcte ;\ndes contextes comparables ;\npeu d’erreurs de décision.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "11. Préférences révélées"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-11-preferences-revelees.html#erreur-classique",
+    "href": "economics/micro-economics/micro-11-preferences-revelees.html#erreur-classique",
+    "title": "Chapitre 10 — Préférences révélées",
+    "section": "Erreur classique",
+    "text": "Erreur classique\nCroire qu’une préférence révélée est une preuve psychologique forte. C’est seulement une inférence à partir d’un choix observé dans un contexte donné.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "11. Préférences révélées"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-11-preferences-revelees.html#graphique-préférences-révélées",
+    "href": "economics/micro-economics/micro-11-preferences-revelees.html#graphique-préférences-révélées",
+    "title": "Chapitre 10 — Préférences révélées",
+    "section": "Graphique — Préférences révélées",
+    "text": "Graphique — Préférences révélées\nCe qu’il faut voir. Si le consommateur choisit A alors que B était accessible avec le même budget, on conclut que A est révélé préféré à B.\nComment le lire vite. Regarde d’abord la zone budgétaire accessible, puis le panier effectivement choisi. Tout point dans la zone mais non choisi est, dans cette situation, moins bien classé que le point retenu.\nCas concret simple. Si tu pouvais acheter soit A soit B avec la même somme et que tu choisis A, ton choix révèle au moins que A te convient mieux que B dans ce contexte précis.\nErreur à éviter. Une préférence révélée n’est pas une vérité psychologique absolue : c’est une inférence tirée d’un choix observé dans un budget donné.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "11. Préférences révélées"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "",
+    "text": "Comment un individu arbitre-t-il entre consommation présente et consommation future ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "13. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#question-du-chapitre",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#question-du-chapitre",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "",
+    "text": "Comment un individu arbitre-t-il entre consommation présente et consommation future ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "13. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#idée-à-comprendre-dabord",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#idée-à-comprendre-dabord",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "Idée à comprendre d’abord",
+    "text": "Idée à comprendre d’abord\nLe taux d’intérêt est le prix relatif du présent en unités de futur. Épargner, c’est transférer des ressources vers demain ; emprunter, c’est faire l’inverse.\nOn retrouve ici la logique du chapitre 11 : un arbitrage entre deux usages d’une dotation initiale, puis l’étude de l’optimum et des effets d’une variation des conditions. La différence est qu’ici la dotation n’est plus du temps, mais un profil de revenus dans le temps.\nDans les chapitres précédents, le consommateur arbitrait entre deux biens à partir d’une contrainte budgétaire du type :\n\\[\nR = p_1x_1 + p_2x_2\n\\]\nIci, les grandeurs changent : \\(C_1\\) désigne la consommation présente, \\(C_2\\) la consommation future, \\(Y_1\\) le revenu dont l’individu dispose aujourd’hui, \\(Y_2\\) le revenu dont il disposera demain, et \\(r\\) le taux d’intérêt. \\(Y_1\\) et \\(Y_2\\) sont donc deux sommes distinctes, attachées à deux dates différentes : par exemple, salaire de ce mois-ci pour \\(Y_1\\), salaire du mois prochain pour \\(Y_2\\). \\(Y_2\\) ne contient pas \\(Y_1\\). La contrainte devient alors :\n\\[\nY_1 + \\frac{Y_2}{1+r} = C_1 + \\frac{C_2}{1+r}\n\\]\nou encore, dans le plan \\((C_1,C_2)\\) :\n\\[\nC_2 = (1+r)(Y_1-C_1)+Y_2\n\\]\nLe point \\((Y_1,Y_2)\\) est la dotation intertemporelle initiale. Une variation du taux d’intérêt ne modifie donc pas seulement le prix relatif du présent et du futur ; elle change aussi les possibilités de transfert autour de ce point de dotation.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "13. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#cadre-de-base",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#cadre-de-base",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "12.1. Cadre de base",
+    "text": "12.1. Cadre de base\nL’individu reçoit un revenu \\(Y_1\\) aujourd’hui et un revenu \\(Y_2\\) demain. Il choisit sa consommation présente \\(C_1\\) et sa consommation future \\(C_2\\).\nS’il épargne aujourd’hui, il transfère une partie de ses ressources vers demain. S’il emprunte aujourd’hui, il augmente sa consommation présente au prix d’un remboursement futur.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "13. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#contrainte-budgétaire-intertemporelle",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#contrainte-budgétaire-intertemporelle",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "12.2. Contrainte budgétaire intertemporelle",
+    "text": "12.2. Contrainte budgétaire intertemporelle\nAvec deux périodes et un taux d’intérêt \\(r\\), on a :\n\\[\nC_1+\\frac{C_2}{1+r}=Y_1+\\frac{Y_2}{1+r}\n\\]\nou encore :\n\\[\nC_2=(1+r)(Y_1-C_1)+Y_2\n\\]\nLa pente de la droite dans le plan \\((C_1,C_2)\\) vaut :\n\\[\n-(1+r)\n\\]",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "13. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#épargnant-ou-emprunteur",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#épargnant-ou-emprunteur",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "12.3. Épargnant ou emprunteur",
+    "text": "12.3. Épargnant ou emprunteur\n\nsi \\(C_1&lt;Y_1\\), l’individu épargne ;\nsi \\(C_1&gt;Y_1\\), il emprunte ;\nsi \\(C_1=Y_1\\), il ne transfère pas de ressources entre les deux dates.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "13. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#optimum-intertemporel",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#optimum-intertemporel",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "12.4. Optimum intertemporel",
+    "text": "12.4. Optimum intertemporel\nL’individu maximise :\n\\[\nU(C_1,C_2)\n\\]\nUn optimum intérieur vérifie :\n\\[\nTMS_{C_1,C_2}=1+r\n\\]\nLe consommateur arbitre donc entre présent et futur en comparant ses préférences au rendement de l’épargne.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "13. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#hausse-du-taux-dintérêt",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#hausse-du-taux-dintérêt",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "12.5. Hausse du taux d’intérêt",
+    "text": "12.5. Hausse du taux d’intérêt\nUne hausse de \\(r\\) produit deux effets :\n\neffet substitution : la consommation présente devient plus coûteuse relativement à la consommation future, donc l’individu tend à reporter de la consommation vers demain ;\neffet revenu : il dépend de la position de l’individu par rapport au point de dotation. Un épargnant bénéficie d’une hausse de \\(r\\), tandis qu’un emprunteur en pâtit.\n\nL’effet total sur la consommation présente et sur l’épargne dépend donc du statut initial de l’individu.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "13. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#valeur-actualisée",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#valeur-actualisée",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "12.6. Valeur actualisée",
+    "text": "12.6. Valeur actualisée\nLa valeur actuelle d’une somme future \\(S\\) reçue dans une période est :\n\\[\n\\frac{S}{1+r}\n\\]\nSur plusieurs périodes :\n\\[\nVA=\\sum_{t=0}^{T}\\frac{Y_t}{(1+r)^t}\n\\]",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "13. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#courbe-dépargne",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#courbe-dépargne",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "12.7. Courbe d’épargne",
+    "text": "12.7. Courbe d’épargne\nL’épargne de la période 1 vaut \\(S = Y_1 - C_1\\). En faisant varier \\(r\\), deux effets s’opposent :\n\nl’effet substitution d’une hausse de \\(r\\) incite à reporter la consommation vers demain : \\(S\\) augmente ;\nl’effet revenu dépend de la position de l’agent : pour un épargnant, une hausse de \\(r\\) augmente son revenu implicite, ce qui peut l’amener à consommer davantage aujourd’hui et donc à épargner moins ; pour un emprunteur, la hausse de \\(r\\) alourdit le coût de la dette et le contraint à réduire sa consommation présente.\n\nLa courbe d’épargne individuelle peut donc être croissante à bas taux d’intérêt et se retourner à haut taux. L’effet net sur l’épargne agrégée dépend de la composition de la population et de l’intensité relative des deux effets.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "13. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#théorie-du-revenu-permanent-friedman-1957",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#théorie-du-revenu-permanent-friedman-1957",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "12.8. Théorie du revenu permanent (Friedman, 1957)",
+    "text": "12.8. Théorie du revenu permanent (Friedman, 1957)\nFriedman distingue deux composantes du revenu :\n\nle revenu permanent \\(Y^P\\) : composante stable et anticipée sur le long terme ;\nle revenu transitoire \\(Y^T\\) : composante temporaire et non anticipée (\\(Y = Y^P + Y^T\\)).\n\nLa consommation dépend principalement du revenu permanent :\n\\[\nC = \\alpha Y^P, \\quad 0 &lt; \\alpha &lt; 1\n\\]\nUn choc de revenu transitoire (hausse de \\(Y^T\\)) entraîne surtout de l’épargne, car l’agent sait que ce surcroît est temporaire. Une hausse permanente (hausse de \\(Y^P\\)) entraîne principalement de la consommation supplémentaire. L’agent lisse sa consommation dans le temps en utilisant l’épargne et l’emprunt comme mécanismes de transfert entre périodes.\nCe cadre prolonge directement le modèle à deux périodes : l’individu choisit un profil de consommation aussi régulier que possible, compte tenu de ses anticipations de revenu futur et du taux d’intérêt.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "13. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#cohérence-des-choix-intertemporels",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#cohérence-des-choix-intertemporels",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "12.9. Cohérence des choix intertemporels",
+    "text": "12.9. Cohérence des choix intertemporels\nUn agent est cohérent dans le temps si ses préférences au moment \\(t\\) concernant la période \\(t+1\\) restent les mêmes lorsque la période \\(t+1\\) arrive.\nEn pratique, on observe fréquemment des incohérences :\n\nbiais de présent (present bias) : l’individu surpondère l’utilité immédiate par rapport à l’utilité future, même à court horizon ;\nincohérence temporelle : l’agent planifie d’épargner demain, mais ne le fait pas lorsque demain arrive.\n\nCes biais s’écartent du cadre rationnel standard et constituent le point de départ de l’économie comportementale appliquée à l’épargne. Ils expliquent notamment pourquoi des dispositifs d’épargne forcée ou des engagements préalables peuvent améliorer le bien-être.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "13. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#erreur-classique",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#erreur-classique",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "Erreur classique",
+    "text": "Erreur classique\nOublier que l’effet d’une hausse de taux d’intérêt n’est pas le même pour un épargnant et pour un emprunteur.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "13. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#graphique-choix-intertemporel",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#graphique-choix-intertemporel",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "Graphique — Choix intertemporel",
+    "text": "Graphique — Choix intertemporel\nÀ quoi sert la courbe en pointillés ? Elle représente la courbe d’indifférence qui passe par le point de dotation A.\nElle sert de repère : elle montre le niveau de satisfaction de l’agent s’il garde simplement sa dotation initiale, sans épargner ni emprunter.\nLe point B montre au contraire le choix optimal permis par le marché intertemporel. La comparaison entre A et B fait donc apparaître le gain apporté par la possibilité d’arbitrer entre aujourd’hui et demain.\nLecture rapide : A est le point de départ ; si l’optimum est à gauche de A, l’agent épargne ; s’il est à droite, il emprunte.\n\n\n\n\n\n\n\n\n\n\nCourbe d’épargne individuelle\nLe graphique montre comment l’épargne \\(S = Y_1 - C_1\\) réagit à une variation du taux d’intérêt \\(r\\). Pour un épargnant, les effets de substitution (hausse de \\(r\\) → reporter la consommation → \\(S\\uparrow\\)) et de revenu (hausse de \\(r\\) → plus riche → \\(C_1\\uparrow\\) → \\(S\\downarrow\\)) s’opposent : la courbe peut se retourner. Pour un emprunteur, la hausse de \\(r\\) alourdit le coût de l’emprunt et comprime la consommation présente.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "13. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-15-risque.html",
+    "href": "economics/micro-economics/micro-15-risque.html",
+    "title": "Chapitre 14 — Choix en univers risqué",
+    "section": "",
+    "text": "Comment un individu compare-t-il des gains certains et des gains aléatoires ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "15. Risque"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-15-risque.html#question-du-chapitre",
+    "href": "economics/micro-economics/micro-15-risque.html#question-du-chapitre",
+    "title": "Chapitre 14 — Choix en univers risqué",
+    "section": "",
+    "text": "Comment un individu compare-t-il des gains certains et des gains aléatoires ?",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "15. Risque"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-15-risque.html#idée-à-comprendre-dabord",
+    "href": "economics/micro-economics/micro-15-risque.html#idée-à-comprendre-dabord",
+    "title": "Chapitre 14 — Choix en univers risqué",
+    "section": "Idée à comprendre d’abord",
+    "text": "Idée à comprendre d’abord\nEn univers risqué, il ne suffit plus de regarder l’espérance monétaire. Il faut regarder l’espérance d’utilité — et distinguer \\(U(E[X])\\) de \\(E[U(X)]\\).",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "15. Risque"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-15-risque.html#loterie-et-espérance",
+    "href": "economics/micro-economics/micro-15-risque.html#loterie-et-espérance",
+    "title": "Chapitre 14 — Choix en univers risqué",
+    "section": "14.1. Loterie et espérance",
+    "text": "14.1. Loterie et espérance\nUne loterie est un vecteur de gains et de probabilités :\n\\[\nL=(x_1,p_1;\\ x_2,p_2;\\ \\dots;\\ x_n,p_n), \\quad \\sum_i p_i=1\n\\]\nSon espérance mathématique est \\(E[X]=\\sum_i p_i x_i\\).",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "15. Risque"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-15-risque.html#espérance-dutilité",
+    "href": "economics/micro-economics/micro-15-risque.html#espérance-dutilité",
+    "title": "Chapitre 14 — Choix en univers risqué",
+    "section": "14.2. Espérance d’utilité",
+    "text": "14.2. Espérance d’utilité\nDans le cadre de von Neumann-Morgenstern, l’individu maximise :\n\\[\nE[U(X)]=\\sum_i p_i U(x_i)\n\\]\nPoint essentiel : \\(U(E[X]) \\neq E[U(X)]\\) en général. C’est cet écart qui fonde la théorie du risque.\nLa forme de la fonction d’utilité détermine l’attitude face au risque :\n\n\n\nCourbure de \\(U\\)\n\\(U''\\)\nAttitude\nRelation\n\n\n\n\nConcave\n\\(&lt; 0\\)\nAversion au risque\n\\(U(E[X]) &gt; E[U(X)]\\)\n\n\nLinéaire\n\\(= 0\\)\nNeutralité au risque\n\\(U(E[X]) = E[U(X)]\\)\n\n\nConvexe\n\\(&gt; 0\\)\nGoût pour le risque\n\\(U(E[X]) &lt; E[U(X)]\\)",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "15. Risque"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-15-risque.html#aversion-au-risque",
+    "href": "economics/micro-economics/micro-15-risque.html#aversion-au-risque",
+    "title": "Chapitre 14 — Choix en univers risqué",
+    "section": "14.3. Aversion au risque",
+    "text": "14.3. Aversion au risque\nSi la fonction d’utilité est concave (\\(U''(x)&lt;0\\)), l’inégalité de Jensen donne :\n\\[\nU(E[X]) \\geq E[U(X)]\n\\]\nL’individu préfère donc recevoir l’espérance de façon certaine plutôt que jouer la loterie de même espérance.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "15. Risque"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-15-risque.html#équivalent-certain-et-prime-de-risque",
+    "href": "economics/micro-economics/micro-15-risque.html#équivalent-certain-et-prime-de-risque",
+    "title": "Chapitre 14 — Choix en univers risqué",
+    "section": "14.4. Équivalent certain et prime de risque",
+    "text": "14.4. Équivalent certain et prime de risque\nL’équivalent certain \\(CE\\) est défini par :\n\\[\nU(CE)=E[U(X)]\n\\]\nPour un individu averse au risque : \\(CE &lt; E[X]\\) — la prime de risque est \\(\\pi = E[X] - CE &gt; 0\\).\nPour un individu amateur de risque (utilité convexe) : \\(CE &gt; E[X]\\) — il accepterait de payer pour jouer la loterie.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "15. Risque"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-15-risque.html#assurance",
+    "href": "economics/micro-economics/micro-15-risque.html#assurance",
+    "title": "Chapitre 14 — Choix en univers risqué",
+    "section": "14.5. Assurance",
+    "text": "14.5. Assurance\nUn individu averse au risque est prêt à payer \\(\\pi\\) pour substituer une dépense certaine à une perte aléatoire de même espérance. L’assurance est donc rationnelle dès lors que la prime proposée ne dépasse pas \\(\\pi\\).",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "15. Risque"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-15-risque.html#limites-du-modèle",
+    "href": "economics/micro-economics/micro-15-risque.html#limites-du-modèle",
+    "title": "Chapitre 14 — Choix en univers risqué",
+    "section": "14.6. Limites du modèle",
+    "text": "14.6. Limites du modèle\nLe modèle d’espérance d’utilité est central, mais il ne rend pas compte de tous les comportements observés :\n\nsurestimation des petites probabilités ;\nasymétrie gains/pertes (théorie des perspectives) ;\nparadoxes d’Allais ou d’Ellsberg ;\neffets de cadrage.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "15. Risque"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-15-risque.html#théorie-des-perspectives-kahneman-et-tversky-1979",
+    "href": "economics/micro-economics/micro-15-risque.html#théorie-des-perspectives-kahneman-et-tversky-1979",
+    "title": "Chapitre 14 — Choix en univers risqué",
+    "section": "14.7. Théorie des perspectives (Kahneman et Tversky, 1979)",
+    "text": "14.7. Théorie des perspectives (Kahneman et Tversky, 1979)\nLa théorie des perspectives propose une alternative descriptive au modèle d’espérance d’utilité. Elle repose sur trois mécanismes :\nPoint de référence. L’individu évalue les gains et les pertes par rapport à un point de référence (souvent le statu quo), et non en niveaux absolus de richesse.\nAversion aux pertes. La souffrance ressentie pour une perte d’un montant donné est plus forte que la satisfaction pour un gain équivalent. Formellement : \\(|v(-x)| &gt; |v(x)|\\), avec un coefficient d’aversion aux pertes \\(\\lambda \\approx 2{,}25\\).\nSensibilité décroissante. L’impact marginal d’un gain ou d’une perte diminue avec son ampleur, dans les deux directions. La fonction de valeur \\(v\\) est concave au-dessus du point de référence et convexe en dessous.\nSurpondération des petites probabilités. Les individus sur-pondèrent les événements rares et sous-pondèrent les probabilités élevées, via une fonction de pondération \\(\\pi(p) \\neq p\\).\nLa fonction de valeur a une forme en S asymétrique :\n- concave sur les gains → aversion au risque dans les gains ;\n- convexe sur les pertes → goût pour le risque dans les pertes.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "15. Risque"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-15-risque.html#les-quatre-cas-gainspertes",
+    "href": "economics/micro-economics/micro-15-risque.html#les-quatre-cas-gainspertes",
+    "title": "Chapitre 14 — Choix en univers risqué",
+    "section": "14.8. Les quatre cas gains/pertes",
+    "text": "14.8. Les quatre cas gains/pertes\nLa théorie des perspectives prédit des attitudes différentes selon le domaine et le niveau de probabilité :\n\n\n\n\n\n\n\n\n\nDomaine\nProbabilité\nAttitude\nComportement typique\n\n\n\n\nGains\nForte\nAversion au risque\nPréfère encaisser tôt, vend trop tôt\n\n\nGains\nFaible\nGoût pour le risque\nJoue à la loterie, surpondère le jackpot\n\n\nPertes\nForte\nGoût pour le risque\nGarde trop longtemps une position perdante\n\n\nPertes\nFaible\nAversion au risque\nPaie une surprime d’assurance contre une catastrophe rare",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "15. Risque"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-15-risque.html#erreur-classique",
+    "href": "economics/micro-economics/micro-15-risque.html#erreur-classique",
+    "title": "Chapitre 14 — Choix en univers risqué",
+    "section": "Erreur classique",
+    "text": "Erreur classique\nConfondre espérance de gain et espérance d’utilité. C’est justement l’écart entre les deux qui permet de penser l’aversion au risque.\nConfondre le modèle d’espérance d’utilité (Von Neumann-Morgenstern) et la théorie des perspectives : le premier prédit une attitude homogène face au risque selon la courbure de \\(U\\) ; le second prédit des attitudes opposées selon qu’on est dans le domaine des gains ou des pertes, et dépend d’un point de référence.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "15. Risque"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-15-risque.html#graphique-espérance-dutilité-et-risque",
+    "href": "economics/micro-economics/micro-15-risque.html#graphique-espérance-dutilité-et-risque",
+    "title": "Chapitre 14 — Choix en univers risqué",
+    "section": "Graphique — Espérance d’utilité et risque",
+    "text": "Graphique — Espérance d’utilité et risque\nCe que montre le graphique. La courbe \\(U(W)=\\sqrt{W}\\) est concave. Les deux points marqués à \\(E[W]=50\\) montrent l’écart central de la théorie :\n\n\\(U(E[W])\\) : utilité qu’on obtiendrait si on recevait \\(E[W]\\) de façon certaine — point bleu.\n\\(E[U(W)]\\) : utilité espérée de la loterie elle-même — point rouge.\n\nL’individu averse au risque préfère le gain certain, car \\(U(E[W]) &gt; E[U(W)]\\) (inégalité de Jensen).\nL’équivalent certain \\(CE\\) (vert) est le gain certain qui procure exactement \\(E[U(W)]\\). La prime de risque est \\(\\pi = E[W] - CE &gt; 0\\) : c’est le montant maximal que l’agent accepte de payer pour éviter la loterie.\nLecture rapide : plus la courbe est courbée, plus l’écart entre les deux points est grand et plus l’aversion au risque est forte.\n\n\n\n\n\n\n\n\n\n\nTrois fonctions d’utilité et attitudes face au risque\nCe graphique illustre comment la courbure de la fonction d’utilité détermine l’attitude face au risque. Pour une loterie \\((x_1=1, x_2=3, p=0{,}5)\\) d’espérance \\(E[X]=2\\) :\n\nUtilité concave (\\(U'' &lt; 0\\)) : \\(U(E[X]) &gt; E[U(X)]\\) → aversion au risque ; la prime de risque \\(\\pi = E[X] - CE &gt; 0\\) mesure le coût psychologique du risque.\nUtilité linéaire (\\(U'' = 0\\)) : \\(U(E[X]) = E[U(X)]\\) → neutralité au risque.\nUtilité convexe (\\(U'' &gt; 0\\)) : \\(U(E[X]) &lt; E[U(X)]\\) → goût pour le risque ; l’individu paierait pour jouer.\n\n\n\n\n\n\n\n\n\n\n\n\nLes quatre cas gains/pertes (Théorie des perspectives)\nLa théorie des perspectives prédit des attitudes opposées selon le domaine (gains vs pertes) et le niveau de probabilité (forte vs faible). Ce tableau de quatre quadrants illustre les comportements attendus : aversion au risque dans les gains à forte probabilité (on préfère encaisser plutôt que jouer), goût pour le risque dans les pertes à forte probabilité (on préfère jouer pour éviter la perte certaine), et inversement à faible probabilité.\n\n\nC:\\Users\\cdiet\\AppData\\Local\\Temp\\ipykernel_19564\\3664955462.py:9: UserWarning: The figure layout has changed to tight\n  plt.tight_layout()\n\n\n\n\n\n\n\n\n\n\n\nFonction de valeur — Théorie des perspectives (Kahneman & Tversky, 1979)\nLa fonction de valeur a une forme en S asymétrique : concave au-dessus du point de référence (gains) et convexe en dessous (pertes). Deux propriétés clés :\n\nAversion aux pertes : une perte d’un euro est psychologiquement plus douloureuse qu’un gain d’un euro n’est agréable (\\(\\lambda \\approx 2{,}25\\)) ;\nSensibilité décroissante : l’impact marginal d’un gain ou d’une perte diminue avec son ampleur — dans les deux directions.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "15. Risque"
+    ]
   }
 ]
