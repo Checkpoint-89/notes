@@ -493,9 +493,11 @@ window.Quarto = {
   <li><a href="#valeur-actualisée" id="toc-valeur-actualisée" class="nav-link" data-scroll-target="#valeur-actualisée">12.6. Valeur actualisée</a></li>
   <li><a href="#courbe-dépargne" id="toc-courbe-dépargne" class="nav-link" data-scroll-target="#courbe-dépargne">12.7. Courbe d’épargne</a></li>
   <li><a href="#théorie-du-revenu-permanent-friedman-1957" id="toc-théorie-du-revenu-permanent-friedman-1957" class="nav-link" data-scroll-target="#théorie-du-revenu-permanent-friedman-1957">12.8. Théorie du revenu permanent (Friedman, 1957)</a></li>
-  <li><a href="#cohérence-des-choix-intertemporels" id="toc-cohérence-des-choix-intertemporels" class="nav-link" data-scroll-target="#cohérence-des-choix-intertemporels">12.9. Cohérence des choix intertemporels</a></li>
+  <li><a href="#hypothèse-du-cycle-de-vie-modigliani" id="toc-hypothèse-du-cycle-de-vie-modigliani" class="nav-link" data-scroll-target="#hypothèse-du-cycle-de-vie-modigliani">12.9. Hypothèse du cycle de vie (Modigliani)</a></li>
+  <li><a href="#contraintes-de-liquidité" id="toc-contraintes-de-liquidité" class="nav-link" data-scroll-target="#contraintes-de-liquidité">12.10. Contraintes de liquidité</a></li>
+  <li><a href="#cohérence-des-choix-intertemporels" id="toc-cohérence-des-choix-intertemporels" class="nav-link" data-scroll-target="#cohérence-des-choix-intertemporels">12.11. Cohérence des choix intertemporels</a></li>
   <li><a href="#erreur-classique" id="toc-erreur-classique" class="nav-link" data-scroll-target="#erreur-classique">Erreur classique</a></li>
-  <li><a href="#graphique-choix-intertemporel" id="toc-graphique-choix-intertemporel" class="nav-link" data-scroll-target="#graphique-choix-intertemporel">Graphique — Choix intertemporel</a>
+  <li><a href="#graphique-décomposition-effet-substitution-effet-revenu" id="toc-graphique-décomposition-effet-substitution-effet-revenu" class="nav-link" data-scroll-target="#graphique-décomposition-effet-substitution-effet-revenu">Graphique — Décomposition effet substitution / effet revenu</a>
   <ul>
   <li><a href="#courbe-dépargne-individuelle" id="toc-courbe-dépargne-individuelle" class="nav-link" data-scroll-target="#courbe-dépargne-individuelle">Courbe d’épargne individuelle</a></li>
   </ul></li>
@@ -594,6 +596,7 @@ TMS_{C_1,C_2}=1+r
 <li><strong>effet revenu</strong> : il dépend de la position de l’individu par rapport au point de dotation. Un épargnant bénéficie d’une hausse de <span class="math inline">\(r\)</span>, tandis qu’un emprunteur en pâtit.</li>
 </ol>
 <p>L’effet total sur la consommation présente et sur l’épargne dépend donc du statut initial de l’individu.</p>
+<p>Graphiquement, la droite budgétaire pivote autour du point de dotation <span class="math inline">\((Y_1,Y_2)\)</span>, et non autour d’un point situé sur un axe. Cet <strong>effet dotation</strong> renforce l’effet revenu pour un épargnant, puisque la hausse de <span class="math inline">\(r\)</span> améliore la valeur de sa position initiale, et il le rend défavorable pour un emprunteur, puisque la hausse de <span class="math inline">\(r\)</span> renchérit le transfert de ressources vers aujourd’hui.</p>
 </section>
 <section id="valeur-actualisée" class="level2">
 <h2 class="anchored" data-anchor-id="valeur-actualisée">12.6. Valeur actualisée</h2>
@@ -629,8 +632,28 @@ C = \alpha Y^P, \quad 0 &lt; \alpha &lt; 1
 <p>Un choc de revenu <strong>transitoire</strong> (hausse de <span class="math inline">\(Y^T\)</span>) entraîne surtout de l’épargne, car l’agent sait que ce surcroît est temporaire. Une hausse <strong>permanente</strong> (hausse de <span class="math inline">\(Y^P\)</span>) entraîne principalement de la consommation supplémentaire. L’agent <strong>lisse</strong> sa consommation dans le temps en utilisant l’épargne et l’emprunt comme mécanismes de transfert entre périodes.</p>
 <p>Ce cadre prolonge directement le modèle à deux périodes : l’individu choisit un profil de consommation aussi régulier que possible, compte tenu de ses anticipations de revenu futur et du taux d’intérêt.</p>
 </section>
+<section id="hypothèse-du-cycle-de-vie-modigliani" class="level2">
+<h2 class="anchored" data-anchor-id="hypothèse-du-cycle-de-vie-modigliani">12.9. Hypothèse du cycle de vie (Modigliani)</h2>
+<p>L’hypothèse du cycle de vie ajoute une dimension patrimoniale au lissage intertemporel. L’individu choisit son profil de consommation sur l’ensemble de sa vie, et non plus sur deux périodes seulement.</p>
+<p>Le schéma standard est le suivant :</p>
+<ul>
+<li>jeune, l’individu peut <strong>emprunter</strong> parce que ses revenus sont encore faibles ;</li>
+<li>en milieu de vie, il <strong>épargne</strong> lorsque ses revenus sont plus élevés ;</li>
+<li>à la retraite, il <strong>désépargne</strong> en consommant son patrimoine accumulé.</li>
+</ul>
+<p>Cette théorie complète naturellement Friedman : le revenu permanent explique pourquoi l’on ne réagit pas fortement aux chocs transitoires, tandis que Modigliani explique comment la structure du cycle de vie façonne l’épargne agrégée et la détention de patrimoine.</p>
+</section>
+<section id="contraintes-de-liquidité" class="level2">
+<h2 class="anchored" data-anchor-id="contraintes-de-liquidité">12.10. Contraintes de liquidité</h2>
+<p>Le modèle standard suppose que l’individu peut librement emprunter et prêter au taux <span class="math inline">\(r\)</span>. En pratique, cette hypothèse est souvent fausse : certains ménages voudraient emprunter, mais ne le peuvent pas.</p>
+<p>Dans ce cas, on impose une contrainte du type :</p>
+<p><span class="math display">\[
+C_1 \leq Y_1.
+\]</span></p>
+<p>Un individu qui souhaiterait choisir <span class="math inline">\(C_1 &gt; Y_1\)</span> se retrouve bloqué sur une <strong>solution de coin</strong> avec <span class="math inline">\(C_1 = Y_1\)</span>. Cette contrainte modifie fortement les prédictions du modèle : un choc de revenu transitoire aujourd’hui a alors un effet plus fort sur la consommation présente, et une hausse du taux d’intérêt n’a plus le même effet qu’en présence d’un accès libre au crédit.</p>
+</section>
 <section id="cohérence-des-choix-intertemporels" class="level2">
-<h2 class="anchored" data-anchor-id="cohérence-des-choix-intertemporels">12.9. Cohérence des choix intertemporels</h2>
+<h2 class="anchored" data-anchor-id="cohérence-des-choix-intertemporels">12.11. Cohérence des choix intertemporels</h2>
 <p>Un agent est <strong>cohérent dans le temps</strong> si ses préférences au moment <span class="math inline">\(t\)</span> concernant la période <span class="math inline">\(t+1\)</span> restent les mêmes lorsque la période <span class="math inline">\(t+1\)</span> arrive.</p>
 <p>En pratique, on observe fréquemment des incohérences :</p>
 <ul>
@@ -641,16 +664,20 @@ C = \alpha Y^P, \quad 0 &lt; \alpha &lt; 1
 </section>
 <section id="erreur-classique" class="level2">
 <h2 class="anchored" data-anchor-id="erreur-classique">Erreur classique</h2>
-<p>Oublier que l’effet d’une hausse de taux d’intérêt n’est pas le même pour un épargnant et pour un emprunteur.</p>
+<p>Oublier que l’effet d’une hausse de taux d’intérêt n’est pas le même pour un épargnant et pour un emprunteur, et oublier que la présence éventuelle d’une contrainte de liquidité peut bloquer complètement l’ajustement.</p>
 <hr>
 </section>
-<section id="graphique-choix-intertemporel" class="level2">
-<h2 class="anchored" data-anchor-id="graphique-choix-intertemporel">Graphique — Choix intertemporel</h2>
-<p><strong>À quoi sert la courbe en pointillés ?</strong> Elle représente la courbe d’indifférence qui passe par le point de dotation A.</p>
-<p>Elle sert de repère : elle montre le niveau de satisfaction de l’agent s’il garde simplement sa dotation initiale, sans épargner ni emprunter.</p>
-<p>Le point B montre au contraire le choix optimal permis par le marché intertemporel. La comparaison entre A et B fait donc apparaître le gain apporté par la possibilité d’arbitrer entre aujourd’hui et demain.</p>
-<p>Lecture rapide : A est le point de départ ; si l’optimum est à gauche de A, l’agent épargne ; s’il est à droite, il emprunte.</p>
-<div id="4436d15c" class="cell">
+<section id="graphique-décomposition-effet-substitution-effet-revenu" class="level2">
+<h2 class="anchored" data-anchor-id="graphique-décomposition-effet-substitution-effet-revenu">Graphique — Décomposition effet substitution / effet revenu</h2>
+<p><strong>Ce qu’il faut voir.</strong> Les deux graphiques représentent une hausse du taux d’intérêt pour deux agents de nature différente : le premier pour un <strong>épargnant</strong>, le second pour un <strong>emprunteur</strong>. Dans les deux cas, la droite budgétaire pivote autour du point de dotation <span class="math inline">\(A=(Y_1,Y_2)\)</span>.</p>
+<p><strong>Les quatre points à lire.</strong> <span class="math inline">\(A\)</span> est la dotation initiale. <span class="math inline">\(B\)</span> est l’optimum initial. <span class="math inline">\(C\)</span> est le point compensé : il est obtenu avec la nouvelle pente, mais en maintenant le niveau d’utilité initial. <span class="math inline">\(D\)</span> est l’optimum final après hausse de <span class="math inline">\(r\)</span>.</p>
+<p><strong>Décomposition.</strong> Le passage de <span class="math inline">\(B\)</span> à <span class="math inline">\(C\)</span> mesure l’<strong>effet substitution</strong> : la consommation présente devient relativement plus chère, donc l’agent tend à réduire <span class="math inline">\(C_1\)</span>. Le passage de <span class="math inline">\(C\)</span> à <span class="math inline">\(D\)</span> mesure l’<strong>effet revenu</strong>. Pour un épargnant, cet effet revenu pousse en sens inverse de l’effet substitution. Pour un emprunteur, il va dans le même sens.</p>
+<p><strong>Effet dotation.</strong> C’est le point important de ce chapitre : la droite ne pivote pas autour d’un intercept, mais autour de la dotation <span class="math inline">\(A\)</span>. L’effet revenu dépend donc directement de la position initiale de l’agent par rapport à ce point.</p>
+<p><strong>Lecture rapide.</strong><br>
+- épargnant : ES vers moins de <span class="math inline">\(C_1\)</span>, ER partiellement compensateur ;<br>
+- emprunteur : ES vers moins de <span class="math inline">\(C_1\)</span>, ER dans le même sens ;<br>
+- la différence entre les deux vient du fait que la hausse de <span class="math inline">\(r\)</span> valorise la position d’un épargnant mais détériore celle d’un emprunteur.</p>
+<div id="4436d15c" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -658,11 +685,18 @@ C = \alpha Y^P, \quad 0 &lt; \alpha &lt; 1
 </figure>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="micro-13-choix-intertemporel_files/figure-html/cell-3-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 <section id="courbe-dépargne-individuelle" class="level3">
 <h3 class="anchored" data-anchor-id="courbe-dépargne-individuelle">Courbe d’épargne individuelle</h3>
 <p>Le graphique montre comment l’épargne <span class="math inline">\(S = Y_1 - C_1\)</span> réagit à une variation du taux d’intérêt <span class="math inline">\(r\)</span>. Pour un <strong>épargnant</strong>, les effets de substitution (hausse de <span class="math inline">\(r\)</span> → reporter la consommation → <span class="math inline">\(S\uparrow\)</span>) et de revenu (hausse de <span class="math inline">\(r\)</span> → plus riche → <span class="math inline">\(C_1\uparrow\)</span> → <span class="math inline">\(S\downarrow\)</span>) s’opposent : la courbe peut se retourner. Pour un <strong>emprunteur</strong>, la hausse de <span class="math inline">\(r\)</span> alourdit le coût de l’emprunt et comprime la consommation présente.</p>
-<div id="471d2ea9" class="cell">
+<div id="471d2ea9" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">

@@ -5849,7 +5849,7 @@
     "href": "economics/micro-economics/micro-13-choix-intertemporel.html#hausse-du-taux-dintérêt",
     "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
     "section": "12.5. Hausse du taux d’intérêt",
-    "text": "12.5. Hausse du taux d’intérêt\nUne hausse de \\(r\\) produit deux effets :\n\neffet substitution : la consommation présente devient plus coûteuse relativement à la consommation future, donc l’individu tend à reporter de la consommation vers demain ;\neffet revenu : il dépend de la position de l’individu par rapport au point de dotation. Un épargnant bénéficie d’une hausse de \\(r\\), tandis qu’un emprunteur en pâtit.\n\nL’effet total sur la consommation présente et sur l’épargne dépend donc du statut initial de l’individu.",
+    "text": "12.5. Hausse du taux d’intérêt\nUne hausse de \\(r\\) produit deux effets :\n\neffet substitution : la consommation présente devient plus coûteuse relativement à la consommation future, donc l’individu tend à reporter de la consommation vers demain ;\neffet revenu : il dépend de la position de l’individu par rapport au point de dotation. Un épargnant bénéficie d’une hausse de \\(r\\), tandis qu’un emprunteur en pâtit.\n\nL’effet total sur la consommation présente et sur l’épargne dépend donc du statut initial de l’individu.\nGraphiquement, la droite budgétaire pivote autour du point de dotation \\((Y_1,Y_2)\\), et non autour d’un point situé sur un axe. Cet effet dotation renforce l’effet revenu pour un épargnant, puisque la hausse de \\(r\\) améliore la valeur de sa position initiale, et il le rend défavorable pour un emprunteur, puisque la hausse de \\(r\\) renchérit le transfert de ressources vers aujourd’hui.",
     "crumbs": [
       "Mes notes",
       "Microéconomie",
@@ -5896,8 +5896,8 @@
     "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#cohérence-des-choix-intertemporels",
     "href": "economics/micro-economics/micro-13-choix-intertemporel.html#cohérence-des-choix-intertemporels",
     "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
-    "section": "12.9. Cohérence des choix intertemporels",
-    "text": "12.9. Cohérence des choix intertemporels\nUn agent est cohérent dans le temps si ses préférences au moment \\(t\\) concernant la période \\(t+1\\) restent les mêmes lorsque la période \\(t+1\\) arrive.\nEn pratique, on observe fréquemment des incohérences :\n\nbiais de présent (present bias) : l’individu surpondère l’utilité immédiate par rapport à l’utilité future, même à court horizon ;\nincohérence temporelle : l’agent planifie d’épargner demain, mais ne le fait pas lorsque demain arrive.\n\nCes biais s’écartent du cadre rationnel standard et constituent le point de départ de l’économie comportementale appliquée à l’épargne. Ils expliquent notamment pourquoi des dispositifs d’épargne forcée ou des engagements préalables peuvent améliorer le bien-être.",
+    "section": "12.11. Cohérence des choix intertemporels",
+    "text": "12.11. Cohérence des choix intertemporels\nUn agent est cohérent dans le temps si ses préférences au moment \\(t\\) concernant la période \\(t+1\\) restent les mêmes lorsque la période \\(t+1\\) arrive.\nEn pratique, on observe fréquemment des incohérences :\n\nbiais de présent (present bias) : l’individu surpondère l’utilité immédiate par rapport à l’utilité future, même à court horizon ;\nincohérence temporelle : l’agent planifie d’épargner demain, mais ne le fait pas lorsque demain arrive.\n\nCes biais s’écartent du cadre rationnel standard et constituent le point de départ de l’économie comportementale appliquée à l’épargne. Ils expliquent notamment pourquoi des dispositifs d’épargne forcée ou des engagements préalables peuvent améliorer le bien-être.",
     "crumbs": [
       "Mes notes",
       "Microéconomie",
@@ -5909,7 +5909,7 @@
     "href": "economics/micro-economics/micro-13-choix-intertemporel.html#erreur-classique",
     "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
     "section": "Erreur classique",
-    "text": "Erreur classique\nOublier que l’effet d’une hausse de taux d’intérêt n’est pas le même pour un épargnant et pour un emprunteur.",
+    "text": "Erreur classique\nOublier que l’effet d’une hausse de taux d’intérêt n’est pas le même pour un épargnant et pour un emprunteur, et oublier que la présence éventuelle d’une contrainte de liquidité peut bloquer complètement l’ajustement.",
     "crumbs": [
       "Mes notes",
       "Microéconomie",
@@ -6130,6 +6130,42 @@
       "Mes notes",
       "Microéconomie",
       "11. Arbitrage travail-loisir"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#hypothèse-du-cycle-de-vie-modigliani",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#hypothèse-du-cycle-de-vie-modigliani",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "12.9. Hypothèse du cycle de vie (Modigliani)",
+    "text": "12.9. Hypothèse du cycle de vie (Modigliani)\nL’hypothèse du cycle de vie ajoute une dimension patrimoniale au lissage intertemporel. L’individu choisit son profil de consommation sur l’ensemble de sa vie, et non plus sur deux périodes seulement.\nLe schéma standard est le suivant :\n\njeune, l’individu peut emprunter parce que ses revenus sont encore faibles ;\nen milieu de vie, il épargne lorsque ses revenus sont plus élevés ;\nà la retraite, il désépargne en consommant son patrimoine accumulé.\n\nCette théorie complète naturellement Friedman : le revenu permanent explique pourquoi l’on ne réagit pas fortement aux chocs transitoires, tandis que Modigliani explique comment la structure du cycle de vie façonne l’épargne agrégée et la détention de patrimoine.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#contraintes-de-liquidité",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#contraintes-de-liquidité",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "12.10. Contraintes de liquidité",
+    "text": "12.10. Contraintes de liquidité\nLe modèle standard suppose que l’individu peut librement emprunter et prêter au taux \\(r\\). En pratique, cette hypothèse est souvent fausse : certains ménages voudraient emprunter, mais ne le peuvent pas.\nDans ce cas, on impose une contrainte du type :\n\\[\nC_1 \\leq Y_1.\n\\]\nUn individu qui souhaiterait choisir \\(C_1 &gt; Y_1\\) se retrouve bloqué sur une solution de coin avec \\(C_1 = Y_1\\). Cette contrainte modifie fortement les prédictions du modèle : un choc de revenu transitoire aujourd’hui a alors un effet plus fort sur la consommation présente, et une hausse du taux d’intérêt n’a plus le même effet qu’en présence d’un accès libre au crédit.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Choix intertemporel"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-13-choix-intertemporel.html#graphique-décomposition-effet-substitution-effet-revenu",
+    "href": "economics/micro-economics/micro-13-choix-intertemporel.html#graphique-décomposition-effet-substitution-effet-revenu",
+    "title": "Chapitre 12 — Choix intertemporel : consommer aujourd’hui ou demain",
+    "section": "Graphique — Décomposition effet substitution / effet revenu",
+    "text": "Graphique — Décomposition effet substitution / effet revenu\nCe qu’il faut voir. Les deux graphiques représentent une hausse du taux d’intérêt pour deux agents de nature différente : le premier pour un épargnant, le second pour un emprunteur. Dans les deux cas, la droite budgétaire pivote autour du point de dotation \\(A=(Y_1,Y_2)\\).\nLes quatre points à lire. \\(A\\) est la dotation initiale. \\(B\\) est l’optimum initial. \\(C\\) est le point compensé : il est obtenu avec la nouvelle pente, mais en maintenant le niveau d’utilité initial. \\(D\\) est l’optimum final après hausse de \\(r\\).\nDécomposition. Le passage de \\(B\\) à \\(C\\) mesure l’effet substitution : la consommation présente devient relativement plus chère, donc l’agent tend à réduire \\(C_1\\). Le passage de \\(C\\) à \\(D\\) mesure l’effet revenu. Pour un épargnant, cet effet revenu pousse en sens inverse de l’effet substitution. Pour un emprunteur, il va dans le même sens.\nEffet dotation. C’est le point important de ce chapitre : la droite ne pivote pas autour d’un intercept, mais autour de la dotation \\(A\\). L’effet revenu dépend donc directement de la position initiale de l’agent par rapport à ce point.\nLecture rapide.\n- épargnant : ES vers moins de \\(C_1\\), ER partiellement compensateur ;\n- emprunteur : ES vers moins de \\(C_1\\), ER dans le même sens ;\n- la différence entre les deux vient du fait que la hausse de \\(r\\) valorise la position d’un épargnant mais détériore celle d’un emprunteur.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCourbe d’épargne individuelle\nLe graphique montre comment l’épargne \\(S = Y_1 - C_1\\) réagit à une variation du taux d’intérêt \\(r\\). Pour un épargnant, les effets de substitution (hausse de \\(r\\) → reporter la consommation → \\(S\\uparrow\\)) et de revenu (hausse de \\(r\\) → plus riche → \\(C_1\\uparrow\\) → \\(S\\downarrow\\)) s’opposent : la courbe peut se retourner. Pour un emprunteur, la hausse de \\(r\\) alourdit le coût de l’emprunt et comprime la consommation présente.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "12. Choix intertemporel"
     ]
   }
 ]
