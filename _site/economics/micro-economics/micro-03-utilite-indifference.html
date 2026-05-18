@@ -491,7 +491,8 @@ window.Quarto = {
   <li><a href="#propriétés-habituelles-des-courbes-dindifférence" id="toc-propriétés-habituelles-des-courbes-dindifférence" class="nav-link" data-scroll-target="#propriétés-habituelles-des-courbes-dindifférence">2.4. Propriétés habituelles des courbes d’indifférence</a></li>
   <li><a href="#pourquoi-deux-courbes-dindifférence-ne-peuvent-pas-se-croiser" id="toc-pourquoi-deux-courbes-dindifférence-ne-peuvent-pas-se-croiser" class="nav-link" data-scroll-target="#pourquoi-deux-courbes-dindifférence-ne-peuvent-pas-se-croiser">2.5. Pourquoi deux courbes d’indifférence ne peuvent pas se croiser ?</a></li>
   <li><a href="#erreur-classique" id="toc-erreur-classique" class="nav-link" data-scroll-target="#erreur-classique">Erreur classique</a></li>
-  <li><a href="#graphique-carte-dindifférence" id="toc-graphique-carte-dindifférence" class="nav-link" data-scroll-target="#graphique-carte-dindifférence">Graphique — Carte d’indifférence</a></li>
+  <li><a href="#graphique-courbes-dindifférence" id="toc-graphique-courbes-dindifférence" class="nav-link" data-scroll-target="#graphique-courbes-dindifférence">Graphique — Courbes d’indifférence</a></li>
+  <li><a href="#graphique-surface-dutilité-et-coupes-horizontales" id="toc-graphique-surface-dutilité-et-coupes-horizontales" class="nav-link" data-scroll-target="#graphique-surface-dutilité-et-coupes-horizontales">Graphique — Surface d’utilité et coupes horizontales</a></li>
   </ul>
 </nav>
     </div>
@@ -524,6 +525,9 @@ window.Quarto = {
 <section id="idée-à-comprendre-dabord" class="level2">
 <h2 class="anchored" data-anchor-id="idée-à-comprendre-dabord">Idée à comprendre d’abord</h2>
 <p>Il suffit d’une seule formule — par exemple <span class="math inline">\(U(x_1,x_2)=x_1 x_2\)</span> — qui produit un nombre pour chaque panier. Deux paniers se comparent alors par leurs nombres : le plus grand est préféré.</p>
+<blockquote class="blockquote">
+<p><strong>Note historique.</strong> Les courbes d’indifférence ont été introduites par Edgeworth (<em>Mathematical Psychics</em>, 1881) puis formalisées géométriquement par Pareto (<em>Manuel d’économie politique</em>, 1906). L’apport de Pareto est de montrer que la théorie du consommateur n’a pas besoin de mesurer l’utilité — il suffit de savoir classer les paniers. C’est le passage de l’utilité <strong>cardinale</strong> (école utilitariste) à l’utilité <strong>ordinale</strong>.</p>
+</blockquote>
 </section>
 <section id="fonction-dutilité" class="level2">
 <h2 class="anchored" data-anchor-id="fonction-dutilité">2.1. Fonction d’utilité</h2>
@@ -607,8 +611,8 @@ U(x_1,x_2)=\bar U
 <p>La fonction d’utilité produit bien des nombres — c’est une fonction mathématique. Mais ces nombres ne mesurent pas une intensité psychologique : ils servent uniquement à <strong>classer</strong> les paniers. <span class="math inline">\(U(A) = 10\)</span> et <span class="math inline">\(U(B) = 5\)</span> signifie seulement que A est préféré à B, pas que A « procure le double de satisfaction ».</p>
 <hr>
 </section>
-<section id="graphique-carte-dindifférence" class="level2">
-<h2 class="anchored" data-anchor-id="graphique-carte-dindifférence">Graphique — Carte d’indifférence</h2>
+<section id="graphique-courbes-dindifférence" class="level2">
+<h2 class="anchored" data-anchor-id="graphique-courbes-dindifférence">Graphique — Courbes d’indifférence</h2>
 <p><strong>Ce qu’il faut voir.</strong> Les trois courbes représentent trois niveaux d’utilité différents. Plus une courbe est éloignée de l’origine, plus elle correspond à un panier préféré.</p>
 <p><strong>Comment le lire vite.</strong> Choisis un point sur une courbe : si tu veux moins du bien 1, il faut plus du bien 2 pour rester au même niveau d’utilité. C’est pour cela que les courbes sont décroissantes.</p>
 <p><strong>Cas concret simple.</strong> Si tu passes de 4 unités de bien 1 à 2 unités de bien 1, il faut compenser avec davantage de bien 2 pour rester sur la même courbe. Le graphique montre donc un arbitrage, pas un niveau de bonheur mesuré.</p>
@@ -616,11 +620,24 @@ U(x_1,x_2)=\bar U
 <blockquote class="blockquote">
 <p><strong>Note.</strong> Les courbes ci-dessous dont l’utilité est 3, 5 et 7 passent respectivement par les points <span class="math inline">\((1, 3)\)</span>, <span class="math inline">\((1, 5)\)</span> et <span class="math inline">\((1, 7)\)</span>. C’est une conséquence de la fonction utilisée <span class="math inline">\(U(x_1,x_2)=x_1 x_2\)</span>, pour laquelle <span class="math inline">\(U(1, x_2)=x_2\)</span>. Avec une autre fonction d’utilité, cette coïncidence disparaîtrait.</p>
 </blockquote>
-<div id="VSC-71af4f17" class="cell">
+<div id="VSC-71af4f17" class="cell" data-execution_count="22">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
 <p><img src="micro-03-utilite-indifference_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="graphique-surface-dutilité-et-coupes-horizontales" class="level2">
+<h2 class="anchored" data-anchor-id="graphique-surface-dutilité-et-coupes-horizontales">Graphique — Surface d’utilité et coupes horizontales</h2>
+<p><strong>Ce qu’il faut voir.</strong> La surface représente <span class="math inline">\(U(x_1, x_2) = x_1 x_2\)</span> : chaque point du plan <span class="math inline">\((x_1, x_2)\)</span> est élevé à la hauteur de son utilité. Une courbe d’indifférence est l’<strong>intersection de cette surface avec un plan horizontal</strong> à hauteur <span class="math inline">\(\bar U\)</span> — d’où le terme de <em>courbe de niveau</em>. Les projections en pointillés sur le sol correspondent exactement à la carte d’indifférence vue du dessus.</p>
+<div id="8dfa4e80" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="micro-03-utilite-indifference_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>

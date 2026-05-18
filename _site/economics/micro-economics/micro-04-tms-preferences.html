@@ -489,16 +489,25 @@ window.Quarto = {
   <li><a href="#idée-à-comprendre-dabord" id="toc-idée-à-comprendre-dabord" class="nav-link" data-scroll-target="#idée-à-comprendre-dabord">Idée à comprendre d’abord</a></li>
   <li><a href="#utilités-marginales" id="toc-utilités-marginales" class="nav-link" data-scroll-target="#utilités-marginales">3.1. Utilités marginales</a></li>
   <li><a href="#taux-marginal-de-substitution" id="toc-taux-marginal-de-substitution" class="nav-link" data-scroll-target="#taux-marginal-de-substitution">3.2. Taux marginal de substitution</a></li>
-  <li><a href="#pourquoi-le-tms-est-souvent-décroissant" id="toc-pourquoi-le-tms-est-souvent-décroissant" class="nav-link" data-scroll-target="#pourquoi-le-tms-est-souvent-décroissant">3.3. Pourquoi le TMS est souvent décroissant</a></li>
+  <li><a href="#signe-du-tms-et-nature-des-biens" id="toc-signe-du-tms-et-nature-des-biens" class="nav-link" data-scroll-target="#signe-du-tms-et-nature-des-biens">3.3. Signe du TMS et nature des biens</a>
+  <ul class="collapse">
+  <li><a href="#bien-désirable" id="toc-bien-désirable" class="nav-link" data-scroll-target="#bien-désirable">Bien désirable</a></li>
+  <li><a href="#bien-neutre" id="toc-bien-neutre" class="nav-link" data-scroll-target="#bien-neutre">Bien neutre</a></li>
+  <li><a href="#bien-indésirable-et-dérogation-à-laxiome-de-monotonie" id="toc-bien-indésirable-et-dérogation-à-laxiome-de-monotonie" class="nav-link" data-scroll-target="#bien-indésirable-et-dérogation-à-laxiome-de-monotonie">Bien indésirable et dérogation à l’axiome de monotonie</a></li>
+  </ul></li>
   <li><a href="#formes-de-préférences-à-reconnaître" id="toc-formes-de-préférences-à-reconnaître" class="nav-link" data-scroll-target="#formes-de-préférences-à-reconnaître">3.4. Formes de préférences à reconnaître</a>
   <ul class="collapse">
-  <li><a href="#substituts-parfaits" id="toc-substituts-parfaits" class="nav-link" data-scroll-target="#substituts-parfaits">1. Substituts parfaits</a></li>
-  <li><a href="#compléments-parfaits" id="toc-compléments-parfaits" class="nav-link" data-scroll-target="#compléments-parfaits">2. Compléments parfaits</a></li>
-  <li><a href="#préférences-convexes-cobb-douglas" id="toc-préférences-convexes-cobb-douglas" class="nav-link" data-scroll-target="#préférences-convexes-cobb-douglas">3. Préférences convexes — Cobb-Douglas</a></li>
+  <li><a href="#préférences-convexes-cobb-douglas" id="toc-préférences-convexes-cobb-douglas" class="nav-link" data-scroll-target="#préférences-convexes-cobb-douglas">1. Préférences convexes — Cobb-Douglas</a></li>
+  <li><a href="#préférences-quasi-linéaires" id="toc-préférences-quasi-linéaires" class="nav-link" data-scroll-target="#préférences-quasi-linéaires">2. Préférences quasi-linéaires</a></li>
+  <li><a href="#substituts-parfaits-cas-particulier-quasi-linéaire-à-tms-constant" id="toc-substituts-parfaits-cas-particulier-quasi-linéaire-à-tms-constant" class="nav-link" data-scroll-target="#substituts-parfaits-cas-particulier-quasi-linéaire-à-tms-constant">3. Substituts parfaits — cas particulier quasi-linéaire à TMS constant</a></li>
+  <li><a href="#compléments-parfaits" id="toc-compléments-parfaits" class="nav-link" data-scroll-target="#compléments-parfaits">4. Compléments parfaits</a></li>
   </ul></li>
-  <li><a href="#cas-particuliers-utiles-en-concours" id="toc-cas-particuliers-utiles-en-concours" class="nav-link" data-scroll-target="#cas-particuliers-utiles-en-concours">3.5. Cas particuliers utiles en concours</a></li>
+  <li><a href="#satiété-le-bliss-point" id="toc-satiété-le-bliss-point" class="nav-link" data-scroll-target="#satiété-le-bliss-point">3.5. Satiété — le bliss point</a></li>
   <li><a href="#erreur-classique" id="toc-erreur-classique" class="nav-link" data-scroll-target="#erreur-classique">Erreur classique</a></li>
   <li><a href="#graphique-substituts-parfaits-et-compléments-parfaits" id="toc-graphique-substituts-parfaits-et-compléments-parfaits" class="nav-link" data-scroll-target="#graphique-substituts-parfaits-et-compléments-parfaits">Graphique — Substituts parfaits et compléments parfaits</a></li>
+  <li><a href="#graphique-préférences-quasi-linéaires" id="toc-graphique-préférences-quasi-linéaires" class="nav-link" data-scroll-target="#graphique-préférences-quasi-linéaires">Graphique — Préférences quasi-linéaires</a></li>
+  <li><a href="#graphique-bien-indésirable" id="toc-graphique-bien-indésirable" class="nav-link" data-scroll-target="#graphique-bien-indésirable">Graphique — Bien indésirable</a></li>
+  <li><a href="#graphique-satiété-et-bliss-point" id="toc-graphique-satiété-et-bliss-point" class="nav-link" data-scroll-target="#graphique-satiété-et-bliss-point">Graphique — Satiété et bliss point</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -515,6 +524,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="question-du-chapitre">Question du chapitre</h2>
 <p>Au chapitre 2, on a vu comment comparer des paniers situés sur des courbes d’indifférence <strong>différentes</strong> : la courbe la plus éloignée de l’origine est préférée. Mais que se passe-t-il entre deux paniers situés sur la <strong>même</strong> courbe d’indifférence ?</p>
 <p>Le consommateur est indifférent entre eux — par définition. Pourtant, il peut encore exprimer quelque chose : à quel <strong>taux</strong> est-il prêt à échanger une unité d’un bien contre de l’autre, tout en restant au même niveau de bien-être ? Comment mesurer cet arbitrage ?</p>
+<p>Ce chapitre est aussi l’occasion de voir concrètement comment les axiomes de préférence posés au chapitre 1, notamment la monotonie et la convexité, se traduisent géométriquement sur les courbes d’indifférence, et dans quels cas on y déroge (biens indésirables, satiété, modèles des substituts et compléments parfaits).</p>
 </section>
 <section id="idée-à-comprendre-dabord" class="level2">
 <h2 class="anchored" data-anchor-id="idée-à-comprendre-dabord">Idée à comprendre d’abord</h2>
@@ -542,47 +552,82 @@ dU=U_1' dx_1+U_2' dx_2=0
 <p><span class="math display">\[
 \frac{dx_2}{dx_1}=-\frac{U_1'}{U_2'}
 \]</span></p>
-<p><strong>Lecture analytique</strong> : <span class="math inline">\(\dfrac{dx_2}{dx_1}\)</span> est la pente de la courbe d’indifférence. Elle est négative (la courbe est décroissante). Le TMS est la valeur absolue de cette pente :</p>
+<p>Le TMS est défini comme :</p>
 <p><span class="math display">\[
-TMS_{1,2}=\left|\frac{dx_2}{dx_1}\right|=\frac{U_1'}{U_2'}
+TMS_{1,2}=-\frac{dx_2}{dx_1}=\frac{U_1'}{U_2'}
 \]</span></p>
+<p><strong>Lecture analytique</strong> : le TMS est l’opposé de la pente de la courbe d’indifférence.</p>
 <p><strong>Lecture économique</strong> : le TMS dit combien d’unités du bien 2 le consommateur est prêt à sacrifier pour obtenir une unité supplémentaire du bien 1, sans changer de niveau d’utilité.</p>
 </section>
-<section id="pourquoi-le-tms-est-souvent-décroissant" class="level2">
-<h2 class="anchored" data-anchor-id="pourquoi-le-tms-est-souvent-décroissant">3.3. Pourquoi le TMS est souvent décroissant</h2>
-<p>Avec des préférences convexes, plus le consommateur possède déjà le bien 1, moins il est prêt à abandonner du bien 2 pour en avoir encore plus.</p>
-<p>C’est l’idée simple de la <strong>diversité préférée</strong> : un panier équilibré est souvent jugé meilleur qu’un panier très extrême.</p>
+<section id="signe-du-tms-et-nature-des-biens" class="level2">
+<h2 class="anchored" data-anchor-id="signe-du-tms-et-nature-des-biens">3.3. Signe du TMS et nature des biens</h2>
+<p>Le signe du TMS <span class="math inline">\(= U_1'/U_2'\)</span> dépend directement des utilités marginales, et donc de la <strong>nature</strong> des biens en jeu :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(U_1'\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(U_2'\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(TMS\)</span></th>
+<th style="text-align: left;">Situation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(&gt; 0\)</span></td>
+<td style="text-align: left;">Cas standard — deux biens désirables. La courbe est décroissante.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(&lt; 0\)</span></td>
+<td style="text-align: left;">Bien 1 indésirable (<em>bad</em>). La courbe est croissante.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(&lt; 0\)</span></td>
+<td style="text-align: left;">Bien 2 indésirable. La courbe est croissante.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(&gt; 0\)</span></td>
+<td style="text-align: left;">Les deux biens sont indésirables. La courbe est décroissante, mais l’optimum est en coin (zéro des deux).</td>
+</tr>
+</tbody>
+</table>
+<p>Un TMS positif se traduit géométriquement par une courbe décroissante ; un TMS négatif, par une courbe croissante.</p>
+<section id="bien-désirable" class="level3">
+<h3 class="anchored" data-anchor-id="bien-désirable">Bien désirable</h3>
+<p>Un bien est <strong>désirable</strong> si son utilité marginale est positive : <span class="math inline">\(U_i' &gt; 0\)</span>. Consommer davantage améliore la situation. C’est le cas standard où l’axiome de monotonie des préférences (cf.&nbsp;chapitre 1) est vérifié: un individu préfère plus à moins d’un bien.</p>
+</section>
+<section id="bien-neutre" class="level3">
+<h3 class="anchored" data-anchor-id="bien-neutre">Bien neutre</h3>
+<p>Un bien est <strong>neutre</strong> si sa quantité n’affecte pas l’utilité : <span class="math inline">\(U_i'=0\)</span>. Les courbes d’indifférence sont des droites parallèles à l’axe du bien neutre.</p>
+</section>
+<section id="bien-indésirable-et-dérogation-à-laxiome-de-monotonie" class="level3">
+<h3 class="anchored" data-anchor-id="bien-indésirable-et-dérogation-à-laxiome-de-monotonie">Bien indésirable et dérogation à l’axiome de monotonie</h3>
+<p><strong>Définition.</strong> Un bien est <strong>indésirable</strong> (<em>bad</em>) si son utilité marginale est négative : <span class="math inline">\(\partial U/\partial x_1 &lt; 0\)</span>. Consommer davantage de <span class="math inline">\(x_1\)</span> réduit l’utilité.</p>
+<p><strong>Courbe d’indifférence.</strong> Pour rester au même niveau d’utilité quand <span class="math inline">\(x_1\)</span> augmente (ce qui réduit l’utilité), il faut plus de <span class="math inline">\(x_2\)</span> pour compenser. La courbe est donc <strong>croissante</strong> — à l’inverse du cas standard. Attention ici l’axiome de “monotonie” (cf.&nbsp;chapitre 1), plus c’est mieux, n’est pas respecté, en effet, cet axiome suppose des biens désirables et veut en réalité exprimer une croissance.</p>
+<p><strong>TMS.</strong> Puisque <span class="math inline">\(U_1' &lt; 0\)</span> et <span class="math inline">\(U_2' &gt; 0\)</span>:<br>
+le TMS <span class="math inline">\(= U_1'/U_2'\)</span> est négatif. La pente <span class="math inline">\(dx_2/dx_1 = -U_1'/U_2'\)</span> est positive.</p>
+<p><strong>Exemple canonique.</strong> La pollution <span class="math inline">\(x_1\)</span> et le revenu <span class="math inline">\(x_2\)</span> : pour accepter davantage de pollution, il faut être compensé par davantage de revenu. C’est le principe des prix hédonistes et de la valorisation des externalités négatives.</p>
+<p><strong>Optimum.</strong> Si le consommateur peut librement choisir sa quantité de bien indésirable <span class="math inline">\(x_1\)</span>, il en prend zéro : c’est un optimum en coin, «moins est mieux et zéro est encore mieux». Si <span class="math inline">\(x_1\)</span> est subi — comme la pollution — il n’est pas choisi mais imposé ; le consommateur n’optimise alors que sur <span class="math inline">\(x_2\)</span>.</p>
+</section>
 </section>
 <section id="formes-de-préférences-à-reconnaître" class="level2">
 <h2 class="anchored" data-anchor-id="formes-de-préférences-à-reconnaître">3.4. Formes de préférences à reconnaître</h2>
-<section id="substituts-parfaits" class="level3">
-<h3 class="anchored" data-anchor-id="substituts-parfaits">1. Substituts parfaits</h3>
-<p><strong>Modèle.</strong> Les deux biens sont interchangeables : le consommateur est toujours prêt à en échanger un contre l’autre au même taux fixe, peu importe les quantités déjà détenues. Un bien peut entièrement remplacer l’autre. Exemple typique : un consommateur qui estime qu’une bouteille de vin vaut exactement deux bières — ce taux d’échange reste le même qu’il ait déjà beaucoup ou peu des deux.</p>
-<p><span class="math display">\[
-U(x_1,x_2)=ax_1+bx_2
-\]</span></p>
-<p>Les utilités marginales sont constantes : <span class="math inline">\(U_1'=a\)</span> et <span class="math inline">\(U_2'=b\)</span>. Le TMS est donc :</p>
-<p><span class="math display">\[
-TMS=\frac{U_1'}{U_2'}=\frac{a}{b} \qquad \left(=-\frac{dx_2}{dx_1}\right)
-\]</span></p>
-<p>Le TMS est <strong>constant</strong> : les courbes d’indifférence sont des droites parallèles de pente <span class="math inline">\(-a/b\)</span>, et le taux de substitution ne dépend pas du panier consommé.</p>
-</section>
-<section id="compléments-parfaits" class="level3">
-<h3 class="anchored" data-anchor-id="compléments-parfaits">2. Compléments parfaits</h3>
-<p><strong>Modèle.</strong> Les deux biens n’ont de valeur qu’ensemble, dans des proportions fixes : consommer davantage de l’un sans consommer davantage de l’autre n’améliore pas la situation. Exemple typique : des cadres de vélo (<span class="math inline">\(x_1\)</span>) et des roues (<span class="math inline">\(x_2\)</span>) — il faut exactement <strong>2 roues par cadre</strong> pour assembler un vélo fonctionnel. Un cadre de plus sans roues supplémentaires est inutile, et une troisième roue sans cadre supplémentaire l’est tout autant. La proportion optimale est <span class="math inline">\(x_2 = 2x_1\)</span>, soit <span class="math inline">\(a=1,\, b=2\)</span> dans la formule ci-dessous.</p>
-<p><span class="math display">\[
-U(x_1,x_2)=\min(ax_1,bx_2)
-\]</span></p>
-<p>La fonction <span class="math inline">\(\min\)</span> n’est <strong>pas différentiable</strong> au coude. Sur chaque branche :</p>
-<ul>
-<li>Si <span class="math inline">\(ax_1 &lt; bx_2\)</span> : <span class="math inline">\(x_1\)</span> est le facteur limitant, <span class="math inline">\(U=ax_1\)</span>. Alors <span class="math inline">\(U_1'=a\)</span> et <span class="math inline">\(U_2'=0\)</span> : le bien 2 est en excès, son utilité marginale est nulle. Le <span class="math inline">\(TMS=\dfrac{a}{0}\to+\infty\)</span> : aucune quantité de <span class="math inline">\(x_2\)</span> ne peut compenser la perte d’une unité de <span class="math inline">\(x_1\)</span>.</li>
-<li>Si <span class="math inline">\(ax_1 &gt; bx_2\)</span> : <span class="math inline">\(x_2\)</span> est le facteur limitant, <span class="math inline">\(U=bx_2\)</span>. Alors <span class="math inline">\(U_1'=0\)</span> et <span class="math inline">\(U_2'=b\)</span> : le bien 1 est en excès, son utilité marginale est nulle. Le <span class="math inline">\(TMS=\dfrac{0}{b}=0\)</span> : le consommateur n’a besoin d’aucun <span class="math inline">\(x_2\)</span> supplémentaire pour compenser la perte d’une unité de <span class="math inline">\(x_1\)</span>, car <span class="math inline">\(x_1\)</span> n’apporte rien ici.</li>
-</ul>
-<p>Le seul point économiquement pertinent est le <strong>coude</strong> : <span class="math inline">\(ax_1=bx_2\)</span>, soit <span class="math inline">\(x_2/x_1=a/b\)</span>. C’est là que le consommateur optimise : dépenser hors de cette proportion serait gaspiller du budget sur un bien qui n’augmente pas l’utilité, alors qu’acheter davantage des deux en proportion fixe permettrait d’atteindre une courbe d’indifférence plus élevée.</p>
-</section>
 <section id="préférences-convexes-cobb-douglas" class="level3">
-<h3 class="anchored" data-anchor-id="préférences-convexes-cobb-douglas">3. Préférences convexes — Cobb-Douglas</h3>
-<p><strong>Modèle.</strong> Le consommateur valorise les deux biens et préfère la diversité : plus il possède déjà d’un bien, moins il est prêt à en sacrifier encore pour obtenir davantage de l’autre. C’est le cas standard des préférences convexes, avec un TMS qui varie le long de la courbe d’indifférence.</p>
+<h3 class="anchored" data-anchor-id="préférences-convexes-cobb-douglas">1. Préférences convexes — Cobb-Douglas</h3>
+<p><strong>Modèle.</strong> Le consommateur valorise les deux biens et préfère la diversité : plus il possède déjà d’un bien, moins il est prêt à en sacrifier encore pour obtenir davantage de l’autre. C’est le cas standard, avec un TMS qui varie le long de la courbe d’indifférence. Ce modèle est le cas standard systématiquement utiliser dans les exemples graphiques. Il illustre les axiomes de monotonie et convexité.</p>
 <p><span class="math display">\[
 U(x_1,x_2)=x_1^\alpha x_2^\beta
 \]</span></p>
@@ -592,31 +637,101 @@ U_1'=\alpha\, x_1^{\alpha-1} x_2^{\beta}, \qquad U_2'=\beta\, x_1^{\alpha} x_2^{
 \]</span></p>
 <p>Le TMS vaut :</p>
 <p><span class="math display">\[
-TMS=\frac{U_1'}{U_2'}=\frac{\alpha\, x_1^{\alpha-1} x_2^{\beta}}{\beta\, x_1^{\alpha} x_2^{\beta-1}}=\frac{\alpha\, x_2}{\beta\, x_1} \qquad \left(=-\frac{dx_2}{dx_1}\right)
+TMS=\frac{U_1'}{U_2'}=\frac{\alpha\, x_2}{\beta\, x_1}
 \]</span></p>
-<p>Le TMS est <strong>décroissant</strong> en <span class="math inline">\(x_1\)</span> : quand le consommateur a déjà beaucoup du bien 1, il est de moins en moins prêt à sacrifier du bien 2. C’est cohérent avec la convexité des courbes d’indifférence.</p>
-</section>
-</section>
-<section id="cas-particuliers-utiles-en-concours" class="level2">
-<h2 class="anchored" data-anchor-id="cas-particuliers-utiles-en-concours">3.5. Cas particuliers utiles en concours</h2>
+<p><strong>Pourquoi le TMS est décroissant.</strong> Avec des préférences convexes, <span class="math inline">\(x_1\)</span> augmente et <span class="math inline">\(x_2\)</span> diminue simultanément le long de la courbe. Les deux effets se renforcent : <span class="math inline">\(x_2\)</span> au numérateur baisse, <span class="math inline">\(x_1\)</span> au dénominateur monte — le TMS <span class="math inline">\(= \alpha x_2 / (\beta x_1)\)</span> diminue nécessairement. La traduction économique du TMS décroissant est une <strong>substituabilité décroissante</strong> : plus on possède déjà du bien 1, moins il faut de bien 2 pour compenser l’ajout d’une unité supplémentaire de bien 1 — en restant sur la même courbe d’indifférence.</p>
+<p><strong>Comportement aux extrêmes.</strong> Les courbes s’approchent asymptotiquement des deux axes, ce qui reflète le fait que le TMS varie de <span class="math inline">\(+\infty\)</span> à <span class="math inline">\(0\)</span> :</p>
 <ul>
-<li><strong>Bien neutre</strong> : sa quantité n’affecte pas l’utilité.</li>
-<li><strong>Bien indésirable</strong> : plus en consommer réduit l’utilité.</li>
-<li><strong>Satiété</strong> : il existe un point idéal au-delà duquel consommer plus n’améliore plus la situation.</li>
+<li>Quand <span class="math inline">\(x_1 \to 0\)</span> : <span class="math inline">\(TMS \to +\infty\)</span> — le bien 1 est très rare, le consommateur accepte de sacrifier beaucoup de <span class="math inline">\(x_2\)</span> pour en obtenir une unité supplémentaire.</li>
+<li>Quand <span class="math inline">\(x_1 \to +\infty\)</span> : <span class="math inline">\(TMS \to 0\)</span> — le bien 1 est très abondant, une unité supplémentaire vaut peu. La courbe s’aplatit et se rapproche de l’axe horizontal.</li>
 </ul>
+<p>La convexité, c’est précisément ce passage continu et décroissant du TMS de <span class="math inline">\(+\infty\)</span> à <span class="math inline">\(0\)</span> le long de chaque courbe.</p>
+</section>
+<section id="préférences-quasi-linéaires" class="level3">
+<h3 class="anchored" data-anchor-id="préférences-quasi-linéaires">2. Préférences quasi-linéaires</h3>
+<p><strong>Forme canonique.</strong></p>
+<p><span class="math display">\[
+U(x_1,x_2)=v(x_1)+x_2
+\]</span></p>
+<p>où <span class="math inline">\(v\)</span> est croissante et concave (<span class="math inline">\(v'' &lt; 0\)</span>).</p>
+<p>On calcule les utilités marginales :</p>
+<p><span class="math display">\[
+U_1' = v'(x_1), \qquad U_2' = 1
+\]</span></p>
+<p>Le TMS vaut :</p>
+<p><span class="math display">\[
+TMS = \frac{U_1'}{U_2'} = \frac{v'(x_1)}{1} = v'(x_1)
+\]</span></p>
+<p>Le TMS ne dépend que de <span class="math inline">\(x_1\)</span>, pas de <span class="math inline">\(x_2\)</span>.</p>
+<p><strong>Pourquoi les courbes sont des translations verticales.</strong></p>
+<p>La courbe de niveau à la hauteur <span class="math inline">\(\bar U\)</span> sur la surface d’utilité s’écrit :</p>
+<p><span class="math display">\[
+x_2 = \bar U - v(x_1)
+\]</span></p>
+<p>C’est la fonction fixe <span class="math inline">\(-v\)</span> à laquelle on ajoute la constante <span class="math inline">\(\bar U\)</span>. Ajouter une constante à une fonction la translate verticalement — c’est pourquoi, quand <span class="math inline">\(\bar U\)</span> augmente, la courbe monte sans changer de forme.</p>
+<p>On retrouve le même résultat via le TMS : puisque <span class="math inline">\(TMS = v'(x_1)\)</span> ne dépend que de <span class="math inline">\(x_1\)</span>, la pente de la courbe en tout point <span class="math inline">\(x_1\)</span> est identique quel que soit le niveau <span class="math inline">\(\bar U\)</span>. Des courbes qui ont partout la même pente ont la même forme : elles ne peuvent différer que par une translation verticale.</p>
+<p><strong>Propriété centrale.</strong> Il n’y a pas d’<strong>effet revenu</strong> sur le bien 1 : une variation du revenu ne modifie pas la demande de <span class="math inline">\(x_1\)</span>, seulement celle de <span class="math inline">\(x_2\)</span>.<br>
+&gt; Note (avancée) Cette propriété a une conséquence importante en analyse du bien-être. En général, le surplus du consommateur — l’aire sous la courbe de demande — n’est qu’une approximation de la variation de bien-être réelle, car les effets revenu font diverger la demande marshallienne (observée) de la demande hicksienne (à utilité constante). Ici, l’absence d’effet revenu sur <span class="math inline">\(x_1\)</span> fait coïncider les deux courbes de demande : le surplus devient alors une mesure exacte de la variation d’utilité, sans erreur d’approximation.</p>
+<p><strong>Exemple.</strong> Avec <span class="math inline">\(v(x_1)=\sqrt{x_1}\)</span>, la courbe de niveau <span class="math inline">\(\bar U\)</span> est <span class="math inline">\(x_2 = \bar U - \sqrt{x_1}\)</span>. Changer <span class="math inline">\(\bar U\)</span> translate la courbe vers le haut ou vers le bas, sans en modifier la forme.</p>
+</section>
+<section id="substituts-parfaits-cas-particulier-quasi-linéaire-à-tms-constant" class="level3">
+<h3 class="anchored" data-anchor-id="substituts-parfaits-cas-particulier-quasi-linéaire-à-tms-constant">3. Substituts parfaits — cas particulier quasi-linéaire à TMS constant</h3>
+<p><span class="math display">\[
+U(x_1,x_2)=ax_1+bx_2
+\]</span></p>
+<p>On calcule les utilités marginales :</p>
+<p><span class="math display">\[
+U_1' = a, \qquad U_2' = b
+\]</span></p>
+<p>Le TMS vaut :</p>
+<p><span class="math display">\[
+TMS = \frac{U_1'}{U_2'} = \frac{a}{b}
+\]</span></p>
+<p>C’est une préférence quasi-linéaire avec <span class="math inline">\(v(x_1) = (a/b)\,x_1\)</span> — <strong>linéaire</strong>. Alors <span class="math inline">\(v'(x_1) = a/b\)</span> est une constante : le TMS ne varie ni le long d’une courbe, ni d’une courbe à l’autre. Le consommateur est toujours prêt à échanger les deux biens au même taux fixe, peu importe les quantités déjà détenues.</p>
+<p>Les translations verticales de droites étant des droites parallèles, les courbes d’indifférence sont des <strong>droites parallèles</strong> de pente <span class="math inline">\(-a/b\)</span>.</p>
+<p>On déroge ici à l’axiome de <strong>convexité stricte</strong> (cf.&nbsp;chapitre 1) : le consommateur n’a aucune préférence pour la diversité. Un mélange de deux paniers situés sur la même courbe d’indifférence lui est indifférent — pas strictement préféré — car le TMS constant signifie que les deux biens sont substituables à taux fixe dans toutes les proportions.</p>
+<p><strong>Exemple.</strong> Un consommateur qui estime qu’une bouteille de vin vaut exactement deux bières applique ce taux d’échange quelle que soit la composition de son panier.</p>
+</section>
+<section id="compléments-parfaits" class="level3">
+<h3 class="anchored" data-anchor-id="compléments-parfaits">4. Compléments parfaits</h3>
+<p><strong>Modèle.</strong> Les deux biens n’ont de valeur qu’ensemble, dans des proportions fixes : consommer davantage de l’un sans consommer davantage de l’autre n’améliore pas la situation. Exemple typique : des cadres de vélo (<span class="math inline">\(x_1\)</span>) et des roues (<span class="math inline">\(x_2\)</span>) — il faut exactement <strong>2 roues par cadre</strong> pour assembler un vélo fonctionnel. La proportion optimale est <span class="math inline">\(x_2 = 2x_1\)</span>, soit <span class="math inline">\(a=1,\, b=2\)</span> dans la formule ci-dessous.</p>
+<p><span class="math display">\[
+U(x_1,x_2)=\min(ax_1,bx_2)
+\]</span></p>
+<p>La fonction <span class="math inline">\(\min\)</span> n’est <strong>pas différentiable</strong> au coude. On calcule les utilités marginales sur chaque branche, puis le TMS comme leur rapport :</p>
+<ul>
+<li>Si <span class="math inline">\(ax_1 &lt; bx_2\)</span> : <span class="math inline">\(x_1\)</span> est le facteur limitant, <span class="math inline">\(U=ax_1\)</span>, donc <span class="math inline">\(U_1'=a\)</span> et <span class="math inline">\(U_2'=0\)</span>. Le TMS vaut <span class="math inline">\(\dfrac{U_1'}{U_2'}=\dfrac{a}{0}\to+\infty\)</span> : le bien 2 est en excès, son utilité marginale est nulle, aucune quantité de <span class="math inline">\(x_2\)</span> ne peut compenser la perte d’une unité de <span class="math inline">\(x_1\)</span>.</li>
+<li>Si <span class="math inline">\(ax_1 &gt; bx_2\)</span> : <span class="math inline">\(x_2\)</span> est le facteur limitant, <span class="math inline">\(U=bx_2\)</span>, donc <span class="math inline">\(U_1'=0\)</span> et <span class="math inline">\(U_2'=b\)</span>. Le TMS vaut <span class="math inline">\(\dfrac{U_1'}{U_2'}=\dfrac{0}{b}=0\)</span> : le bien 1 est en excès, son utilité marginale est nulle.</li>
+</ul>
+<p>Le seul point économiquement pertinent est le <strong>coude</strong> : <span class="math inline">\(ax_1=bx_2\)</span>, soit <span class="math inline">\(x_2/x_1=a/b\)</span>. C’est là que le consommateur optimise : dépenser hors de cette proportion serait gaspiller du budget sur un bien qui n’augmente pas l’utilité.</p>
+<p>On déroge ici à la <strong>monotonie stricte</strong> (cf.&nbsp;chapitre 1) : au-delà de la proportion optimale, consommer davantage d’un bien n’augmente pas l’utilité — son utilité marginale tombe à zéro. Plus n’est plus mieux dès lors qu’un bien est en excès par rapport à l’autre.</p>
+</section>
+</section>
+<section id="satiété-le-bliss-point" class="level2">
+<h2 class="anchored" data-anchor-id="satiété-le-bliss-point">3.5. Satiété — le bliss point</h2>
+<p><strong>Idée.</strong> Il existe un panier idéal <span class="math inline">\((\bar x_1, \bar x_2)\)</span> appelé <strong>bliss point</strong>. Au-delà, consommer plus d’un bien réduit l’utilité. On déroge ici au principe de <strong>non-satiabilité</strong> sous-jacent à l’axiome de monotonie (cf.&nbsp;chapitre 1) : contrairement au cas standard, plus n’est pas toujours mieux.</p>
+<p><strong>Forme canonique.</strong></p>
+<p><span class="math display">\[
+U(x_1,x_2)=-(x_1-\bar x_1)^2-(x_2-\bar x_2)^2
+\]</span></p>
+<p><strong>Courbes d’indifférence.</strong> Des cercles (ou ellipses) concentriques centrés sur <span class="math inline">\((\bar x_1, \bar x_2)\)</span>. Plus on est proche du centre, plus l’utilité est élevée — à l’inverse des préférences standard.</p>
+<p><strong>Ce qui change.</strong> Les courbes ne sont plus décroissantes partout. Dans les quadrants où l’on dépasse le bliss point sur un axe, elles redeviennent croissantes. La monotonie ne s’applique plus globalement.</p>
+<p><strong>Optimum.</strong> Si la contrainte budgétaire permet d’atteindre le bliss point, le consommateur s’y trouve. Sinon, il se place sur la courbe d’indifférence la plus haute accessible — optimum intérieur ou en coin selon les cas.</p>
 </section>
 <section id="erreur-classique" class="level2">
 <h2 class="anchored" data-anchor-id="erreur-classique">Erreur classique</h2>
 <p>Ne pas confondre le <strong>TMS</strong> avec le <strong>rapport des prix</strong>. Le premier vient des préférences ; le second vient du marché. Ils ne deviennent égaux qu’au moment de l’optimum intérieur.</p>
+<blockquote class="blockquote">
+<p><strong>Note historique — Loi de Gossen.</strong> La condition d’optimum <span class="math inline">\(TMS = p_1/p_2\)</span> est équivalente à <span class="math inline">\(\dfrac{U_1'}{p_1} = \dfrac{U_2'}{p_2}\)</span> : à l’optimum, l’utilité marginale par euro dépensé est égalisée entre tous les biens. Cette formulation est connue sous le nom de <strong>deuxième loi de Gossen</strong> (1854). Elle est antérieure à la formalisation moderne par les courbes d’indifférence, et constitue la formulation marginale de l’optimum du consommateur.</p>
+</blockquote>
 <hr>
 </section>
 <section id="graphique-substituts-parfaits-et-compléments-parfaits" class="level2">
 <h2 class="anchored" data-anchor-id="graphique-substituts-parfaits-et-compléments-parfaits">Graphique — Substituts parfaits et compléments parfaits</h2>
 <p><strong>Ce qu’il faut voir.</strong> La première figure montre des <strong>substituts parfaits</strong> : les courbes d’indifférence sont des droites, donc le consommateur accepte de remplacer un bien par l’autre à taux constant. La seconde montre des <strong>compléments parfaits</strong> : les courbes sont en L, donc les biens ne valent vraiment que s’ils sont consommés ensemble.</p>
 <p><strong>Cas concret simple.</strong> Substituts parfaits : deux marques d’eau minérale que tu juges équivalentes. Compléments parfaits : chaussure gauche et chaussure droite, ou café et sucre si tu les consommes toujours ensemble dans la même proportion.</p>
-<p><strong>Comment le lire vite.</strong> Si les courbes sont des droites, l’optimum est souvent en coin : on achète surtout le bien qui donne le meilleur rapport utilité / prix. Si les courbes sont en L, il faut repérer le <strong>coude</strong> : c’est là que se lit la bonne proportion.</p>
-<p><strong>Erreur à éviter.</strong> Ne pas appliquer mécaniquement la tangence partout. Elle est souvent inutile avec ces préférences particulières.</p>
-<div id="085b25f1" class="cell">
+<p><strong>Ce qui est frappant.</strong> Les deux figures illustrent des cas limites opposés. Pour les substituts parfaits, le TMS est constant <strong>partout dans le plan</strong> — la valeur relative des deux biens ne dépend jamais des quantités détenues. Pour les compléments parfaits, le TMS vaut soit <span class="math inline">\(0\)</span> soit <span class="math inline">\(+\infty\)</span> — il n’existe aucun taux d’échange fini entre les deux biens. Ces deux modèles encadrent le cas Cobb-Douglas, où le TMS varie continûment et finiment le long de chaque courbe.</p>
+<div id="085b25f1" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -628,6 +743,49 @@ TMS=\frac{U_1'}{U_2'}=\frac{\alpha\, x_1^{\alpha-1} x_2^{\beta}}{\beta\, x_1^{\a
 <div>
 <figure class="figure">
 <p><img src="micro-04-tms-preferences_files/figure-html/cell-3-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="graphique-préférences-quasi-linéaires" class="level2">
+<h2 class="anchored" data-anchor-id="graphique-préférences-quasi-linéaires">Graphique — Préférences quasi-linéaires</h2>
+<p><strong>Ce qu’il faut voir.</strong> Les trois courbes ont exactement la même forme : elles se déduisent les unes des autres par translation verticale. C’est la conséquence directe du fait que <span class="math inline">\(TMS = v'(x_1)\)</span> ne dépend pas de <span class="math inline">\(x_2\)</span>.</p>
+<p><strong>Ce qu’on voit si on regarde bien.</strong> Trace mentalement une ligne verticale à <span class="math inline">\(x_1\)</span> fixé : toutes les courbes ont la <strong>même pente</strong> en ce point, quelle que soit la courbe. C’est la signature visuelle directe de <span class="math inline">\(TMS = v'(x_1)\)</span> — la pente ne dépend que de <span class="math inline">\(x_1\)</span>, pas de la hauteur de la courbe.</p>
+<div id="05c237dc" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="micro-04-tms-preferences_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="graphique-bien-indésirable" class="level2">
+<h2 class="anchored" data-anchor-id="graphique-bien-indésirable">Graphique — Bien indésirable</h2>
+<p><strong>Ce qu’il faut voir.</strong> Les courbes d’indifférence sont <strong>croissantes</strong> : pour consommer davantage du bien 1 (indésirable) sans perdre d’utilité, il faut être compensé par davantage du bien 2. La pente positive est la signature directe d’une utilité marginale négative sur <span class="math inline">\(x_1\)</span>.</p>
+<p><strong>Ce qui change par rapport au cas standard.</strong> Dans le cas standard, l’utilité croît vers le <strong>haut-droite</strong> — plus des deux biens est mieux. Ici, elle croît vers le <strong>haut-gauche</strong> : plus de <span class="math inline">\(x_2\)</span> améliore la situation, mais plus de <span class="math inline">\(x_1\)</span> la détériore. Le sens de préférence s’inverse sur l’axe du bien indésirable.</p>
+<p><strong>Erreur à éviter.</strong> Ne pas interpréter une courbe croissante comme une anomalie du modèle. C’est simplement la traduction géométrique du fait que <span class="math inline">\(U_1' &lt; 0\)</span>.</p>
+<div id="466b6c6a" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="micro-04-tms-preferences_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="graphique-satiété-et-bliss-point" class="level2">
+<h2 class="anchored" data-anchor-id="graphique-satiété-et-bliss-point">Graphique — Satiété et bliss point</h2>
+<p><strong>Ce qu’il faut voir.</strong> Les courbes d’indifférence sont des cercles concentriques. Le centre est le bliss point — c’est le panier optimal. Plus on s’en éloigne, plus l’utilité diminue.</p>
+<p><strong>Ce qui change par rapport au cas standard.</strong> Ici, les courbes les plus proches du centre sont les plus préférées. Les courbes ne sont plus décroissantes partout : dans les quadrants au-delà du bliss point sur un axe, elles redeviennent croissantes.</p>
+<div id="be8337ce" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="micro-04-tms-preferences_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>

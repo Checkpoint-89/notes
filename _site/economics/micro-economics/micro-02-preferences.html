@@ -585,6 +585,9 @@ A \succeq B \quad \text{ou} \quad B \succeq A
 <p><span class="math display">\[
 A \succeq A
 \]</span></p>
+<blockquote class="blockquote">
+<p><strong>Note.</strong> Cet axiome est redondant avec la complétude : si le consommateur peut toujours comparer deux paniers quelconques, alors en particulier pour <span class="math inline">\(A = B\)</span>, on obtient <span class="math inline">\(A \succeq A\)</span>. Il est conservé par convention dans la plupart des présentations.</p>
+</blockquote>
 </section>
 <section id="transitivité" class="level3">
 <h3 class="anchored" data-anchor-id="transitivité">3. Transitivité</h3>
@@ -600,26 +603,31 @@ A \succeq C
 </section>
 <section id="monotonie-ou-non-satiété-locale" class="level3">
 <h3 class="anchored" data-anchor-id="monotonie-ou-non-satiété-locale">4. Monotonie (ou non-satiété locale)</h3>
-<p><strong>Intuition d’abord.</strong> Si on te propose deux paniers identiques sauf que l’un contient en plus un café gratuit, tu préfères celui avec le café — même si tu n’en as pas très envie. Avoir plus d’un bien ne peut pas te rendre plus mal. C’est tout ce que dit cet axiome.</p>
+<p><strong>Intuition d’abord.</strong> Si on te propose deux paniers identiques sauf que l’un contient en plus un café gratuit, tu préfères celui avec le café — même si tu n’en as pas très envie. Avoir plus d’un bien désirable est toujours mieux. C’est tout ce que dit cet axiome.</p>
 <p><strong>Formellement.</strong> Soient deux paniers <span class="math inline">\(A=(a_1,a_2)\)</span> et <span class="math inline">\(B=(b_1,b_2)\)</span>. Si <span class="math inline">\(A\)</span> contient au moins autant de chaque bien que <span class="math inline">\(B\)</span>, et strictement plus d’au moins un bien, alors <span class="math inline">\(A\)</span> est strictement préféré à <span class="math inline">\(B\)</span> :</p>
 <p><span class="math display">\[
 \bigl(a_1 \geq b_1 \text{ et } a_2 \geq b_2\bigr) \text{ avec au moins une inégalité stricte} \;\Rightarrow\; A \succ B
 \]</span></p>
 <p><strong>Exemple concret.</strong> <span class="math inline">\(A = (3 \text{ cafés},\; 2 \text{ livres})\)</span> et <span class="math inline">\(B = (2 \text{ cafés},\; 2 \text{ livres})\)</span>. <span class="math inline">\(A\)</span> contient tout ce que <span class="math inline">\(B\)</span> contient, plus un café. Donc <span class="math inline">\(A \succ B\)</span>.</p>
-<p><strong>Ce que ça implique graphiquement.</strong> Les courbes d’indifférence sont décroissantes : pour rester au même niveau de satisfaction après avoir renoncé à une unité d’un bien, il faut en recevoir davantage de l’autre. Si elles étaient croissantes, avoir plus des deux biens ne changerait rien — ce qui contredirait la monotonie. <em>(Le graphique de la carte d’indifférence au chapitre 2 illustre cela directement.)</em></p>
+<p><strong>Ce que ça implique graphiquement.</strong> Les courbes d’indifférence sont décroissantes : pour rester au même niveau de satisfaction après avoir renoncé à une unité d’un bien, il faut en recevoir davantage de l’autre.</p>
 <p><strong>Limite.</strong> Cet axiome suppose que le consommateur n’est jamais saturé. Pour des biens comme la nourriture en très grande quantité, c’est une approximation. On parle alors de <em>non-satiété locale</em> : elle vaut au moins dans un voisinage du panier considéré.</p>
 </section>
 <section id="convexité-des-préférences" class="level3">
 <h3 class="anchored" data-anchor-id="convexité-des-préférences">5. Convexité des préférences</h3>
-<p><strong>Attention : c’est un axiome, pas un résultat.</strong> On <em>suppose</em> que les paniers moyens sont préférés aux paniers extrêmes — on ne le démontre pas à partir des axiomes précédents. Formellement, si :</p>
+<p><strong>Attention : c’est un axiome, pas un résultat.</strong> On <em>suppose</em> qu’une moyenne de deux paniers est préférée aux paniers extrêmes.Formellement, si :</p>
 <p><span class="math display">\[
 A \sim B
 \]</span></p>
 <p>alors, pour <span class="math inline">\(\lambda \in [0,1]\)</span> :</p>
 <p><span class="math display">\[
-\lambda A+(1-\lambda)B \succeq A
+\lambda A+(1-\lambda)B \succeq A \quad \text{et} \quad \lambda A+(1-\lambda)B \succeq B
 \]</span></p>
-<p>Interprétation : le consommateur apprécie en général la diversité plutôt que de se spécialiser totalement sur un seul bien. Cela produit des courbes d’indifférence convexes vers l’origine — et c’est précisément ce qui garantit l’existence d’un optimum intérieur dans la plupart des cas.</p>
+<blockquote class="blockquote">
+<p><strong>Note (convexité stricte).</strong> L’axiome ci-dessus est la <strong>convexité faible</strong> (<span class="math inline">\(\succeq\)</span>). La <strong>convexité stricte</strong> dit que la combinaison <span class="math inline">\(\lambda A + (1-\lambda)B\)</span> est <em>strictement</em> préférée à <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span>. La convexité stricte est nécessaire pour garantir l’<strong>unicité</strong> de la solution dans les problèmes d’optimisation.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Note (continuité - concept avancé).</strong> Pour garantir l’existence d’une <em>fonction</em> d’utilité représentant les préférences, on ajoute en général un sixième axiome de <strong>continuité</strong> : de petites perturbations d’un panier ne doivent pas renverser le classement. Formellement, les ensembles <span class="math inline">\(\{B : B \succeq A\}\)</span> et <span class="math inline">\(\{B : B \preceq A\}\)</span> sont fermés pour tout <span class="math inline">\(A\)</span>. Sans cet axiome, des préférences cohérentes comme les préférences <strong>lexicographiques</strong> (<span class="math inline">\(A \succ B\)</span> dès que <span class="math inline">\(a_1 &gt; b_1\)</span>, peu importe <span class="math inline">\(a_2\)</span>) ne peuvent pas être représentées par une fonction d’utilité — théorème de Debreu (1954).</p>
+</blockquote>
 </section>
 </section>
 <section id="erreur-classique" class="level2">
