@@ -5345,7 +5345,7 @@
     "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html#comment-la-droite-de-budget-se-déplace",
     "title": "Chapitre 4 — Contrainte budgétaire",
     "section": "4.3. Comment la droite de budget se déplace",
-    "text": "4.3. Comment la droite de budget se déplace\n\n1. Hausse du revenu\nSi \\(R\\) augmente et que les prix ne changent pas, la droite se déplace parallèlement vers l’extérieur.\n\n\n2. Hausse de \\(p_1\\)\nSi \\(p_1\\) augmente :\n\nl’intercept \\(R/p_1\\) diminue ;\nl’intercept \\(R/p_2\\) ne change pas ;\nla droite pivote vers l’intérieur autour de l’axe vertical.\n\n\n\n3. Hausse de \\(p_2\\)\nLe raisonnement est symétrique : cette fois, c’est l’intercept vertical qui diminue.",
+    "text": "4.3. Comment la droite de budget se déplace\n\n1. Hausse du revenu\nSi \\(R\\) augmente et que les prix ne changent pas, la droite se translate parallèlement vers le haut.\n\n\n2. Hausse de \\(p_1\\)\nSi \\(p_1\\) augmente :\n\nl’abscisse à l’origine \\(R/p_1\\) diminue ;\nl’ordonnée à l’origine \\(R/p_2\\) ne change pas ;\nla droite pivote vers l’intérieur autour de l’ordonnée à l’origine.\n\n\n\n3. Hausse de \\(p_2\\)\nLe raisonnement est symétrique : cette fois, c’est l’ordonnée à l’origine qui diminue et on pivote autour de l’abscisse à l’origine.",
     "crumbs": [
       "Mes notes",
       "Microéconomie",
@@ -5357,7 +5357,7 @@
     "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html#ce-quil-faut-voir-immédiatement-sur-un-graphique",
     "title": "Chapitre 4 — Contrainte budgétaire",
     "section": "4.4. Ce qu’il faut voir immédiatement sur un graphique",
-    "text": "4.4. Ce qu’il faut voir immédiatement sur un graphique\nQuand tu regardes une droite de budget, repère dans cet ordre :\n\nles deux intercepts ;\nla pente ;\nla cause d’un déplacement : revenu ou prix ;\nle sens du mouvement : translation ou rotation.",
+    "text": "4.4. Ce qu’il faut voir immédiatement sur un graphique\nQuand tu regardes une droite de budget, repère dans cet ordre :\n\nles deux coordonnées à l’origine ;\nla pente ;\nla cause d’un déplacement : revenu ou prix ;\nle sens du mouvement : translation ou rotation.",
     "crumbs": [
       "Mes notes",
       "Microéconomie",
@@ -5369,7 +5369,7 @@
     "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html#erreur-classique",
     "title": "Chapitre 4 — Contrainte budgétaire",
     "section": "Erreur classique",
-    "text": "Erreur classique\nConfondre une translation de la droite de budget avec une rotation. Le revenu modifie les deux intercepts à la fois ; la variation d’un seul prix fait pivoter la droite.",
+    "text": "Erreur classique\nConfondre une translation de la droite de budget avec une rotation. Le revenu modifie les deux coordonnées à l’origine à la fois ; la variation d’un seul prix fait pivoter la droite.",
     "crumbs": [
       "Mes notes",
       "Microéconomie",
@@ -6250,6 +6250,42 @@
       "Mes notes",
       "Microéconomie",
       "03. TMS et formes de préférences"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-05-contrainte-budgetaire.html#coordonnées-à-lorigine-et-pente",
+    "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html#coordonnées-à-lorigine-et-pente",
+    "title": "Chapitre 4 — Contrainte budgétaire",
+    "section": "4.2. Coordonnées à l’origine et pente",
+    "text": "4.2. Coordonnées à l’origine et pente\nSi tout le revenu est consacré au bien 1 :\n\\[\nx_1=\\frac{R}{p_1}\n\\]\nSi tout le revenu est consacré au bien 2 :\n\\[\nx_2=\\frac{R}{p_2}\n\\]\nEn isolant \\(x_2\\), on obtient :\n\\[\nx_2=\\frac{R}{p_2}-\\frac{p_1}{p_2}x_1\n\\]\nLa pente vaut donc :\n\\[\n-\\frac{p_1}{p_2}\n\\]\nLecture analytique : la pente de la droite de budget est \\(-p_1/p_2\\) ; elle mesure la quantité de bien 2 à laquelle il faut renoncer pour obtenir une unité supplémentaire de bien 1.\nLecture économique : \\(p_1/p_2\\) est le prix relatif du bien 1 en unités de bien 2. C’est une donnée de marché.\nNuméraire. Seuls les prix relatifs comptent. Multiplier tous les prix et le revenu par un même \\(\\lambda &gt; 0\\) ne change pas l’ensemble budgétaire : \\(\\lambda p_1 x_1 + \\lambda p_2 x_2 \\leq \\lambda R\\) est identique à la contrainte initiale. On peut donc toujours normaliser un prix à 1 — c’est le numéraire.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "04. Contrainte budgétaire"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-05-contrainte-budgetaire.html#graphique-5-scénarios-de-variation-de-la-contrainte-budgétaire",
+    "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html#graphique-5-scénarios-de-variation-de-la-contrainte-budgétaire",
+    "title": "Chapitre 4 — Contrainte budgétaire",
+    "section": "Graphique — 5 scénarios de variation de la contrainte budgétaire",
+    "text": "Graphique — 5 scénarios de variation de la contrainte budgétaire\nRéférence commune. \\(R=12\\), \\(p_1=2\\), \\(p_2=3\\) → abscisse à l’origine \\((6)\\), ordonnée à l’origine \\((4)\\), pente \\(-2/3\\).\n\n\n\n\n\n\n\n\n\nScénario\nPente\nAbscisse à l’origine \\(R/p_1\\)\nOrdonnée à l’origine \\(R/p_2\\)\n\n\n\n\n1 — \\(p_1\\downarrow\\), \\(p_2\\) constante\ns’aplatit (\\(-1/3\\))\n↑ (12)\ninchangée (4)\n\n\n2 — \\(p_1\\downarrow\\), \\(p_2\\uparrow\\)\ns’aplatit encore (\\(-1/6\\))\n↑ (12)\n↓ (2)\n\n\n3 — \\(p_1\\uparrow\\), \\(p_2\\downarrow\\)\nse redresse (\\(-8/3\\))\n↓ (3)\n↑ (8)\n\n\n4 — \\(p_1\\uparrow\\), \\(p_2\\uparrow\\)\nambiguë (\\(-3/4\\))\n↓ (4)\n↓ (3)\n\n\n5 — \\(R\\uparrow\\), prix constants\ninchangée (\\(-2/3\\))\n↑ (9)\n↑ (6)\n\n\n\nZones colorées. Vert = gain de pouvoir d’achat (la nouvelle droite est au-dessus : on peut se permettre plus de bien 2 pour tout panier donné) ; rouge = perte. L’aire colorée est une indication qualitative et n’a pas d’autre interprétation économique comme elle peut en avoir dans d’autres graphiques (surplus du consommateur sur un graphique offre-demande, perte sèche d’une taxe, etc.).\nScénarios 2 et 3. Les deux droites se croisent à l’intérieur du plan : l’effet net dépend du panier consommé — gain sur un bien, perte sur l’autre.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "04. Contrainte budgétaire"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-05-contrainte-budgetaire.html#contraintes-budgétaires-non-standard",
+    "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html#contraintes-budgétaires-non-standard",
+    "title": "Chapitre 4 — Contrainte budgétaire",
+    "section": "4.5. Contraintes budgétaires non-standard",
+    "text": "4.5. Contraintes budgétaires non-standard\nDans le cas standard, la contrainte est une droite. Trois dispositifs courants brisent cette linéarité.\n\nRationnement\nUne quantité maximale \\(\\bar x_1\\) est imposée sur le bien 1. La droite de budget est tronquée : elle suit la pente habituelle \\(-p_1/p_2\\) jusqu’à \\(x_1 = \\bar x_1\\), puis devient un segment vertical (le consommateur ne peut pas acheter plus, quelle que soit sa capacité financière). L’ensemble budgétaire est strictement réduit par rapport au cas standard.\n\n\nTaxe ad valorem\nLe prix effectif du bien 1 devient \\(p_1(1+t)\\). La droite pivote vers l’intérieur autour du point d’ancrage \\(R/p_2\\) (l’ordonnée à l’origine, inchangée), exactement comme une hausse de \\(p_1\\). La recette fiscale est lisible sur le graphique comme l’écart horizontal entre la droite sans taxe et la droite avec taxe, évalué à la quantité choisie.\n\n\nSubvention plafonnée\nLe prix effectif est \\(p_1 - s\\) pour les \\(\\bar x_1\\) premières unités, puis \\(p_1\\) au-delà. La droite est coudée en \\(x_1 = \\bar x_1\\) : plus plate (pente \\(-(p_1-s)/p_2\\)) jusqu’au seuil, puis elle reprend sa pente initiale \\(-p_1/p_2\\) à partir du coude. C’est un exemple classique de contrainte budgétaire non-convexe : l’ensemble des paniers accessibles n’est pas convexe.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "04. Contrainte budgétaire"
     ]
   }
 ]

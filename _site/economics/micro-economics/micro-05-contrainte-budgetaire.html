@@ -486,7 +486,7 @@ window.Quarto = {
   <li><a href="#question-du-chapitre" id="toc-question-du-chapitre" class="nav-link active" data-scroll-target="#question-du-chapitre">Question du chapitre</a></li>
   <li><a href="#idée-à-comprendre-dabord" id="toc-idée-à-comprendre-dabord" class="nav-link" data-scroll-target="#idée-à-comprendre-dabord">Idée à comprendre d’abord</a></li>
   <li><a href="#équation-de-budget" id="toc-équation-de-budget" class="nav-link" data-scroll-target="#équation-de-budget">4.1. Équation de budget</a></li>
-  <li><a href="#intercepts-et-pente" id="toc-intercepts-et-pente" class="nav-link" data-scroll-target="#intercepts-et-pente">4.2. Intercepts et pente</a></li>
+  <li><a href="#coordonnées-à-lorigine-et-pente" id="toc-coordonnées-à-lorigine-et-pente" class="nav-link" data-scroll-target="#coordonnées-à-lorigine-et-pente">4.2. Coordonnées à l’origine et pente</a></li>
   <li><a href="#comment-la-droite-de-budget-se-déplace" id="toc-comment-la-droite-de-budget-se-déplace" class="nav-link" data-scroll-target="#comment-la-droite-de-budget-se-déplace">4.3. Comment la droite de budget se déplace</a>
   <ul>
   <li><a href="#hausse-du-revenu" id="toc-hausse-du-revenu" class="nav-link" data-scroll-target="#hausse-du-revenu">1. Hausse du revenu</a></li>
@@ -495,7 +495,13 @@ window.Quarto = {
   </ul></li>
   <li><a href="#ce-quil-faut-voir-immédiatement-sur-un-graphique" id="toc-ce-quil-faut-voir-immédiatement-sur-un-graphique" class="nav-link" data-scroll-target="#ce-quil-faut-voir-immédiatement-sur-un-graphique">4.4. Ce qu’il faut voir immédiatement sur un graphique</a></li>
   <li><a href="#erreur-classique" id="toc-erreur-classique" class="nav-link" data-scroll-target="#erreur-classique">Erreur classique</a></li>
-  <li><a href="#graphique-rotation-vs-translation-de-la-contrainte-budgétaire" id="toc-graphique-rotation-vs-translation-de-la-contrainte-budgétaire" class="nav-link" data-scroll-target="#graphique-rotation-vs-translation-de-la-contrainte-budgétaire">Graphique — Rotation vs translation de la contrainte budgétaire</a></li>
+  <li><a href="#graphique-5-scénarios-de-variation-de-la-contrainte-budgétaire" id="toc-graphique-5-scénarios-de-variation-de-la-contrainte-budgétaire" class="nav-link" data-scroll-target="#graphique-5-scénarios-de-variation-de-la-contrainte-budgétaire">Graphique — 5 scénarios de variation de la contrainte budgétaire</a></li>
+  <li><a href="#contraintes-budgétaires-non-standard" id="toc-contraintes-budgétaires-non-standard" class="nav-link" data-scroll-target="#contraintes-budgétaires-non-standard">4.5. Contraintes budgétaires non-standard</a>
+  <ul>
+  <li><a href="#rationnement" id="toc-rationnement" class="nav-link" data-scroll-target="#rationnement">Rationnement</a></li>
+  <li><a href="#taxe-ad-valorem" id="toc-taxe-ad-valorem" class="nav-link" data-scroll-target="#taxe-ad-valorem">Taxe ad valorem</a></li>
+  <li><a href="#subvention-plafonnée" id="toc-subvention-plafonnée" class="nav-link" data-scroll-target="#subvention-plafonnée">Subvention plafonnée</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -540,8 +546,8 @@ p_1x_1+p_2x_2 \leq R
 p_1x_1+p_2x_2=R
 \]</span></p>
 </section>
-<section id="intercepts-et-pente" class="level2">
-<h2 class="anchored" data-anchor-id="intercepts-et-pente">4.2. Intercepts et pente</h2>
+<section id="coordonnées-à-lorigine-et-pente" class="level2">
+<h2 class="anchored" data-anchor-id="coordonnées-à-lorigine-et-pente">4.2. Coordonnées à l’origine et pente</h2>
 <p>Si tout le revenu est consacré au bien 1 :</p>
 <p><span class="math display">\[
 x_1=\frac{R}{p_1}
@@ -559,33 +565,34 @@ x_2=\frac{R}{p_2}-\frac{p_1}{p_2}x_1
 -\frac{p_1}{p_2}
 \]</span></p>
 <p><strong>Lecture analytique</strong> : la pente de la droite de budget est <span class="math inline">\(-p_1/p_2\)</span> ; elle mesure la quantité de bien 2 à laquelle il faut renoncer pour obtenir une unité supplémentaire de bien 1.</p>
-<p><strong>Lecture économique</strong> : <span class="math inline">\(p_1/p_2\)</span> est le prix relatif du bien 1 en unités de bien 2.</p>
+<p><strong>Lecture économique</strong> : <span class="math inline">\(p_1/p_2\)</span> est le prix relatif du bien 1 en unités de bien 2. C’est une donnée de marché.</p>
+<p><strong>Numéraire.</strong> Seuls les prix relatifs comptent. Multiplier tous les prix et le revenu par un même <span class="math inline">\(\lambda &gt; 0\)</span> ne change pas l’ensemble budgétaire : <span class="math inline">\(\lambda p_1 x_1 + \lambda p_2 x_2 \leq \lambda R\)</span> est identique à la contrainte initiale. On peut donc toujours normaliser un prix à 1 — c’est le <strong>numéraire</strong>.</p>
 </section>
 <section id="comment-la-droite-de-budget-se-déplace" class="level2">
 <h2 class="anchored" data-anchor-id="comment-la-droite-de-budget-se-déplace">4.3. Comment la droite de budget se déplace</h2>
 <section id="hausse-du-revenu" class="level3">
 <h3 class="anchored" data-anchor-id="hausse-du-revenu">1. Hausse du revenu</h3>
-<p>Si <span class="math inline">\(R\)</span> augmente et que les prix ne changent pas, la droite se déplace parallèlement vers l’extérieur.</p>
+<p>Si <span class="math inline">\(R\)</span> augmente et que les prix ne changent pas, la droite se translate parallèlement vers le haut.</p>
 </section>
 <section id="hausse-de-p_1" class="level3">
 <h3 class="anchored" data-anchor-id="hausse-de-p_1">2. Hausse de <span class="math inline">\(p_1\)</span></h3>
 <p>Si <span class="math inline">\(p_1\)</span> augmente :</p>
 <ul>
-<li>l’intercept <span class="math inline">\(R/p_1\)</span> diminue ;</li>
-<li>l’intercept <span class="math inline">\(R/p_2\)</span> ne change pas ;</li>
-<li>la droite pivote vers l’intérieur autour de l’axe vertical.</li>
+<li>l’abscisse à l’origine <span class="math inline">\(R/p_1\)</span> diminue ;</li>
+<li>l’ordonnée à l’origine <span class="math inline">\(R/p_2\)</span> ne change pas ;</li>
+<li>la droite pivote vers l’intérieur autour de l’ordonnée à l’origine.</li>
 </ul>
 </section>
 <section id="hausse-de-p_2" class="level3">
 <h3 class="anchored" data-anchor-id="hausse-de-p_2">3. Hausse de <span class="math inline">\(p_2\)</span></h3>
-<p>Le raisonnement est symétrique : cette fois, c’est l’intercept vertical qui diminue.</p>
+<p>Le raisonnement est symétrique : cette fois, c’est l’ordonnée à l’origine qui diminue et on pivote autour de l’abscisse à l’origine.</p>
 </section>
 </section>
 <section id="ce-quil-faut-voir-immédiatement-sur-un-graphique" class="level2">
 <h2 class="anchored" data-anchor-id="ce-quil-faut-voir-immédiatement-sur-un-graphique">4.4. Ce qu’il faut voir immédiatement sur un graphique</h2>
 <p>Quand tu regardes une droite de budget, repère dans cet ordre :</p>
 <ol type="1">
-<li>les deux intercepts ;</li>
+<li>les deux coordonnées à l’origine ;</li>
 <li>la pente ;</li>
 <li>la cause d’un déplacement : revenu ou prix ;</li>
 <li>le sens du mouvement : translation ou rotation.</li>
@@ -593,61 +600,63 @@ x_2=\frac{R}{p_2}-\frac{p_1}{p_2}x_1
 </section>
 <section id="erreur-classique" class="level2">
 <h2 class="anchored" data-anchor-id="erreur-classique">Erreur classique</h2>
-<p>Confondre une <strong>translation</strong> de la droite de budget avec une <strong>rotation</strong>. Le revenu modifie les deux intercepts à la fois ; la variation d’un seul prix fait pivoter la droite.</p>
+<p>Confondre une <strong>translation</strong> de la droite de budget avec une <strong>rotation</strong>. Le revenu modifie les deux coordonnées à l’origine à la fois ; la variation d’un seul prix fait pivoter la droite.</p>
 <hr>
 </section>
-<section id="graphique-rotation-vs-translation-de-la-contrainte-budgétaire" class="level2">
-<h2 class="anchored" data-anchor-id="graphique-rotation-vs-translation-de-la-contrainte-budgétaire">Graphique — Rotation vs translation de la contrainte budgétaire</h2>
-<p><strong>Ce qu’il faut voir.</strong> Les deux types de déplacement de la droite de budget sont illustrés sur le même graphique :</p>
-<ul>
-<li><strong>Rotation</strong> (baisse de <span class="math inline">\(p_1\)</span>) : la droite pivote autour de l’axe vertical (axe du bien 2), car l’intercept <span class="math inline">\(R/p_2\)</span> ne change pas mais l’intercept <span class="math inline">\(R/p_1\)</span> augmente.</li>
-<li><strong>Translation</strong> (hausse de <span class="math inline">\(R\)</span>) : la droite se déplace parallèlement vers l’extérieur, car les deux intercepts augmentent dans la même proportion.</li>
-</ul>
-<p><strong>Cas concret.</strong> Revenu initial <span class="math inline">\(R=12\)</span>, <span class="math inline">\(p_1=2\)</span>, <span class="math inline">\(p_2=1\)</span>.</p>
+<section id="graphique-5-scénarios-de-variation-de-la-contrainte-budgétaire" class="level2">
+<h2 class="anchored" data-anchor-id="graphique-5-scénarios-de-variation-de-la-contrainte-budgétaire">Graphique — 5 scénarios de variation de la contrainte budgétaire</h2>
+<p><strong>Référence commune.</strong> <span class="math inline">\(R=12\)</span>, <span class="math inline">\(p_1=2\)</span>, <span class="math inline">\(p_2=3\)</span> → abscisse à l’origine <span class="math inline">\((6)\)</span>, ordonnée à l’origine <span class="math inline">\((4)\)</span>, pente <span class="math inline">\(-2/3\)</span>.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Scénario</th>
-<th>Changement</th>
-<th>Intercept horizontal (<span class="math inline">\(R/p_1\)</span>)</th>
-<th>Intercept vertical (<span class="math inline">\(R/p_2\)</span>)</th>
 <th>Pente</th>
+<th>Abscisse à l’origine <span class="math inline">\(R/p_1\)</span></th>
+<th>Ordonnée à l’origine <span class="math inline">\(R/p_2\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Initial</td>
-<td>—</td>
-<td>6</td>
-<td>12</td>
-<td><span class="math inline">\(-2\)</span></td>
+<td>1 — <span class="math inline">\(p_1\downarrow\)</span>, <span class="math inline">\(p_2\)</span> constante</td>
+<td>s’aplatit (<span class="math inline">\(-1/3\)</span>)</td>
+<td>↑ (12)</td>
+<td>inchangée (4)</td>
 </tr>
 <tr class="even">
-<td>Baisse de <span class="math inline">\(p_1\)</span> à 1</td>
-<td>Rotation</td>
-<td>12</td>
-<td>12 (inchangé)</td>
-<td><span class="math inline">\(-1\)</span></td>
+<td>2 — <span class="math inline">\(p_1\downarrow\)</span>, <span class="math inline">\(p_2\uparrow\)</span></td>
+<td>s’aplatit encore (<span class="math inline">\(-1/6\)</span>)</td>
+<td>↑ (12)</td>
+<td>↓ (2)</td>
 </tr>
 <tr class="odd">
-<td>Hausse de <span class="math inline">\(R\)</span> à 18</td>
-<td>Translation</td>
-<td>9</td>
-<td>18</td>
-<td><span class="math inline">\(-2\)</span> (inchangée)</td>
+<td>3 — <span class="math inline">\(p_1\uparrow\)</span>, <span class="math inline">\(p_2\downarrow\)</span></td>
+<td>se redresse (<span class="math inline">\(-8/3\)</span>)</td>
+<td>↓ (3)</td>
+<td>↑ (8)</td>
+</tr>
+<tr class="even">
+<td>4 — <span class="math inline">\(p_1\uparrow\)</span>, <span class="math inline">\(p_2\uparrow\)</span></td>
+<td>ambiguë (<span class="math inline">\(-3/4\)</span>)</td>
+<td>↓ (4)</td>
+<td>↓ (3)</td>
+</tr>
+<tr class="odd">
+<td>5 — <span class="math inline">\(R\uparrow\)</span>, prix constants</td>
+<td>inchangée (<span class="math inline">\(-2/3\)</span>)</td>
+<td>↑ (9)</td>
+<td>↑ (6)</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Comment le distinguer au premier coup d’œil.</strong> Si un intercept est fixe, c’est une rotation ; si les deux bougent dans la même direction, c’est une translation.</p>
-<p><strong>Erreur à éviter.</strong> Confondre les deux mouvements en copie : la variation d’un prix fait <em>pivoter</em> la droite, la variation du revenu la <em>translate</em> parallèlement.</p>
-<div id="16b83da7" class="cell">
+<p><strong>Zones colorées.</strong> Vert = gain de pouvoir d’achat (la nouvelle droite est au-dessus : on peut se permettre plus de bien 2 pour tout panier donné) ; rouge = perte. L’aire colorée est une indication qualitative et n’a pas d’autre interprétation économique comme elle peut en avoir dans d’autres graphiques (surplus du consommateur sur un graphique offre-demande, perte sèche d’une taxe, etc.).</p>
+<p><strong>Scénarios 2 et 3.</strong> Les deux droites se croisent à l’intérieur du plan : l’effet net dépend du panier consommé — gain sur un bien, perte sur l’autre.</p>
+<div id="16b83da7" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -656,8 +665,33 @@ x_2=\frac{R}{p_2}-\frac{p_1}{p_2}x_1
 </div>
 </div>
 </div>
+</section>
+<section id="contraintes-budgétaires-non-standard" class="level2">
+<h2 class="anchored" data-anchor-id="contraintes-budgétaires-non-standard">4.5. Contraintes budgétaires non-standard</h2>
+<p>Dans le cas standard, la contrainte est une droite. Trois dispositifs courants brisent cette linéarité.</p>
+<section id="rationnement" class="level3">
+<h3 class="anchored" data-anchor-id="rationnement">Rationnement</h3>
+<p>Une quantité maximale <span class="math inline">\(\bar x_1\)</span> est imposée sur le bien 1. La droite de budget est tronquée : elle suit la pente habituelle <span class="math inline">\(-p_1/p_2\)</span> jusqu’à <span class="math inline">\(x_1 = \bar x_1\)</span>, puis devient un segment vertical (le consommateur ne peut pas acheter plus, quelle que soit sa capacité financière). L’ensemble budgétaire est strictement réduit par rapport au cas standard.</p>
+</section>
+<section id="taxe-ad-valorem" class="level3">
+<h3 class="anchored" data-anchor-id="taxe-ad-valorem">Taxe ad valorem</h3>
+<p>Le prix effectif du bien 1 devient <span class="math inline">\(p_1(1+t)\)</span>. La droite pivote vers l’intérieur autour du point d’ancrage <span class="math inline">\(R/p_2\)</span> (l’ordonnée à l’origine, inchangée), exactement comme une hausse de <span class="math inline">\(p_1\)</span>. La recette fiscale est lisible sur le graphique comme l’écart horizontal entre la droite sans taxe et la droite avec taxe, évalué à la quantité choisie.</p>
+</section>
+<section id="subvention-plafonnée" class="level3">
+<h3 class="anchored" data-anchor-id="subvention-plafonnée">Subvention plafonnée</h3>
+<p>Le prix effectif est <span class="math inline">\(p_1 - s\)</span> pour les <span class="math inline">\(\bar x_1\)</span> premières unités, puis <span class="math inline">\(p_1\)</span> au-delà. La droite est coudée en <span class="math inline">\(x_1 = \bar x_1\)</span> : plus plate (pente <span class="math inline">\(-(p_1-s)/p_2\)</span>) jusqu’au seuil, puis elle reprend sa pente initiale <span class="math inline">\(-p_1/p_2\)</span> à partir du coude. C’est un exemple classique de contrainte budgétaire <strong>non-convexe</strong> : l’ensemble des paniers accessibles n’est pas convexe.</p>
+<div id="800bbe71" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="micro-05-contrainte-budgetaire_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
