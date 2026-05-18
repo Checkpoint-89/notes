@@ -4901,7 +4901,7 @@
     "href": "economics/micro-economics/micro-06-choix-optimal.html#problème-de-maximisation",
     "title": "Chapitre 5 — Choix optimal du consommateur",
     "section": "5.1. Problème de maximisation",
-    "text": "5.1. Problème de maximisation\nLe problème s’écrit :\n\\[\n\\max_{x_1,x_2} U(x_1,x_2)\n\\]\nOn note \\((x_1^*,x_2^*)\\) la solution optimale, c’est-à-dire le panier qui maximise l’utilité sous la contrainte budgétaire.\nsous la contrainte :\n\\[\np_1x_1+p_2x_2 \\leq R\n\\]\nSi les deux biens sont désirables, le consommateur dépense tout son revenu à l’optimum :\n\\[\np_1x_1+p_2x_2=R\n\\]",
+    "text": "5.1. Problème de maximisation\nLe problème s’écrit :\n\\[\n\\max_{x_1,x_2} U(x_1,x_2)\n\\]\nOn note \\((x_1^*,x_2^*)\\) la solution optimale, c’est-à-dire le panier qui maximise l’utilité sous la contrainte budgétaire.\nsous la contrainte :\n\\[\np_1x_1+p_2x_2 \\leq R\n\\]\nOn suppose que si les deux biens sont désirables, le consommateur dépense tout son revenu à l’optimum :\n\\[\np_1x_1+p_2x_2=R\n\\]",
     "crumbs": [
       "Mes notes",
       "Microéconomie",
@@ -4925,7 +4925,7 @@
     "href": "economics/micro-economics/micro-06-choix-optimal.html#optimum-en-coin",
     "title": "Chapitre 5 — Choix optimal du consommateur",
     "section": "5.3. Optimum en coin",
-    "text": "5.3. Optimum en coin\nL’optimum peut se trouver sur un bord si le consommateur achète un seul bien. C’est fréquent avec les substituts parfaits ou, plus généralement, quand la tangence ne fournit pas de solution admissible.",
+    "text": "5.3. Optimum en coin\nL’optimum peut se trouver sur un bord si le consommateur achète un seul bien. C’est fréquent avec les substituts parfaits ou, plus généralement, quand la tangence ne fournit pas de solution admissible.\nSubstituts parfaits (\\(U = ax_1 + bx_2\\), \\(TMS = a/b\\) constant). La tangence n’est pas une condition suffisante — il faut comparer les pentes :\n\\(a/b\\) est ce que le consommateur est prêt à payer en \\(x_2\\) pour obtenir \\(x_1\\).\n\\(p_1/p_2\\) est ce que le marché demande en \\(x_2\\) pour fournir \\(x_1\\).\nCela induit les comportements suivants:\n- Si \\(p_1/p_2 &lt; a/b\\) → tout en \\(x_1\\) : \\(x_1^* = R/p_1\\), \\(x_2^* = 0\\)\n- Si \\(p_1/p_2 &gt; a/b\\) → tout en \\(x_2\\) : \\(x_1^* = 0\\), \\(x_2^* = R/p_2\\)\n- Si \\(p_1/p_2 = a/b\\) → toute la droite de budget est optimale\nCompléments parfaits (\\(U = \\min(ax_1, bx_2)\\)). Le Lagrangien ne s’applique pas (fonction non différentiable au coude). L’optimum est au coude \\(ax_1 = bx_2\\), combiné à la contrainte budgétaire. On résout le système :\n\\[ax_1 = bx_2 \\quad \\text{et} \\quad p_1x_1 + p_2x_2 = R\\]",
     "crumbs": [
       "Mes notes",
       "Microéconomie",
@@ -4937,7 +4937,7 @@
     "href": "economics/micro-economics/micro-06-choix-optimal.html#méthode-par-lagrangien",
     "title": "Chapitre 5 — Choix optimal du consommateur",
     "section": "5.4. Méthode par Lagrangien",
-    "text": "5.4. Méthode par Lagrangien\nOn peut écrire :\n\\[\n\\mathcal{L}=U(x_1,x_2)+\\lambda(R-p_1x_1-p_2x_2)\n\\]\nLes conditions du premier ordre sont :\n\\[\n\\frac{\\partial U}{\\partial x_1}=\\lambda p_1\n\\]\n\\[\n\\frac{\\partial U}{\\partial x_2}=\\lambda p_2\n\\]\n\\[\np_1x_1+p_2x_2=R\n\\]\nEn divisant les deux premières équations, on retrouve la condition de tangence.",
+    "text": "5.4. Méthode par Lagrangien\nPuisque la contrainte est saturée à l’optimum, on a \\(R - p_1x_1 - p_2x_2 = 0\\) : on peut donc ajouter \\(\\lambda\\) fois cette quantité nulle à l’objectif sans en changer la valeur, quel que soit le scalaire \\(\\lambda\\). On forme ainsi le lagrangien :\n\\[\n\\mathcal{L}=U(x_1,x_2)+\\lambda(R-p_1x_1-p_2x_2)\n\\]\nLes conditions du premier ordre sont :\n\\[\n\\frac{\\partial U}{\\partial x_1}=\\lambda p_1\n\\]\n\\[\n\\frac{\\partial U}{\\partial x_2}=\\lambda p_2\n\\]\n\\[\np_1x_1+p_2x_2=R\n\\]\nEn divisant les deux premières équations, on retrouve la condition de tangence.\nInterprétation de \\(\\lambda\\). Le multiplicateur vaut \\(\\lambda = \\dfrac{\\partial U^*}{\\partial R}\\) (théorème de l’enveloppe) : à l’optimum, une unité supplémentaire de revenu produit \\(\\lambda\\) unités d’utilité supplémentaires — c’est l’utilité marginale du revenu. Les conditions du premier ordre s’écrivent \\(U_i' = \\lambda p_i\\), soit \\(U_i'/p_i = \\lambda\\) pour tout \\(i\\) — c’est la deuxième loi de Gossen : à l’optimum, l’utilité marginale par euro dépensé est égalisée entre tous les biens.",
     "crumbs": [
       "Mes notes",
       "Microéconomie",
@@ -4949,7 +4949,7 @@
     "href": "economics/micro-economics/micro-06-choix-optimal.html#exemple-à-savoir-refaire-cobb-douglas",
     "title": "Chapitre 5 — Choix optimal du consommateur",
     "section": "5.5. Exemple à savoir refaire : Cobb-Douglas",
-    "text": "5.5. Exemple à savoir refaire : Cobb-Douglas\nSi :\n\\[\nU(x_1,x_2)=x_1^a x_2^b\n\\]\nalors :\n\\[\nTMS=\\frac{a}{b}\\frac{x_2}{x_1}\n\\]\nAvec la contrainte budgétaire, on obtient :\n\\[\nx_1^*=\\frac{a}{a+b}\\frac{R}{p_1}\n\\]\n\\[\nx_2^*=\\frac{b}{a+b}\\frac{R}{p_2}\n\\]\nÀ retenir : dans Cobb-Douglas, une part constante du revenu est affectée à chaque bien.",
+    "text": "5.5. Exemple à savoir refaire : Cobb-Douglas\nSi :\n\\[\nU(x_1,x_2)=x_1^a x_2^b\n\\]\nalors :\n\\[\nTMS=\\frac{a}{b}\\frac{x_2}{x_1}\n\\]\nAvec la contrainte budgétaire, on obtient :\n\\[\nx_1^*=\\frac{a}{a+b}\\frac{R}{p_1}\n\\]\n\\[\nx_2^*=\\frac{b}{a+b}\\frac{R}{p_2}\n\\]\nÀ retenir : dans Cobb-Douglas, une part constante du revenu est affectée à chaque bien. Les deux quantités sont toujours strictement positives : l’optimum est toujours intérieur.",
     "crumbs": [
       "Mes notes",
       "Microéconomie",
@@ -4961,7 +4961,7 @@
     "href": "economics/micro-economics/micro-06-choix-optimal.html#méthode-rapide-en-exercice",
     "title": "Chapitre 5 — Choix optimal du consommateur",
     "section": "Méthode rapide en exercice",
-    "text": "Méthode rapide en exercice\n\nÉcrire la contrainte budgétaire.\nCalculer le TMS.\nPoser l’égalité \\(TMS=p_1/p_2\\) si l’optimum est intérieur.\nUtiliser la contrainte pour obtenir les quantités.\nVérifier qu’on n’est pas en coin.",
+    "text": "Méthode rapide en exercice\n\nÉcrire la contrainte budgétaire.\nCalculer le TMS.\nPoser l’égalité \\(TMS=p_1/p_2\\) si l’optimum est intérieur.\nUtiliser la contrainte pour obtenir les quantités.\nVérifier que \\(x_1^*, x_2^* \\geq 0\\) — sinon, basculer en coin.",
     "crumbs": [
       "Mes notes",
       "Microéconomie",
@@ -4985,7 +4985,7 @@
     "href": "economics/micro-economics/micro-06-choix-optimal.html#graphique-optimum-du-consommateur",
     "title": "Chapitre 5 — Choix optimal du consommateur",
     "section": "Graphique — Optimum du consommateur",
-    "text": "Graphique — Optimum du consommateur\nCe qu’il faut voir. Le point optimal est le panier atteignable situé sur la courbe d’indifférence la plus élevée. Sur le graphique, c’est le point de tangence entre la droite budgétaire et une courbe d’indifférence.\nComment le lire vite. Repère d’abord la droite budgétaire, puis la courbe d’indifférence la plus haute encore accessible, puis le point où elles se touchent sans se couper. C’est là que le consommateur n’a plus intérêt à se déplacer.\nCas concret simple. Avec un revenu de 12, un prix du bien 1 égal à 2 et un prix du bien 2 égal à 1, le point retenu est ici \\((3,6)\\). Il utilise tout le budget sans sortir de l’ensemble atteignable.\nPhrase de copie. À l’optimum intérieur, le consommateur égalise le taux auquel il accepte de substituer les biens et le taux auquel le marché permet cette substitution.",
+    "text": "Graphique — Optimum du consommateur\nCe qu’il faut voir. Le point optimal est le panier atteignable situé sur la courbe d’indifférence la plus élevée. Sur le graphique, c’est le point de tangence entre la droite budgétaire et une courbe d’indifférence.\nComment le lire vite. Repère d’abord la droite budgétaire, puis la courbe d’indifférence la plus haute encore accessible, puis le point où elles se touchent sans se couper. C’est là que le consommateur n’a plus intérêt à se déplacer.\nPhrase de copie. À l’optimum intérieur, le consommateur égalise le taux auquel il accepte de substituer les biens et le taux auquel le marché permet cette substitution.",
     "crumbs": [
       "Mes notes",
       "Microéconomie",
@@ -6282,6 +6282,54 @@
     "title": "Chapitre 4 — Contrainte budgétaire",
     "section": "4.5. Contraintes budgétaires non-standard",
     "text": "4.5. Contraintes budgétaires non-standard\nDans le cas standard, la contrainte est une droite. Trois dispositifs courants brisent cette linéarité.\n\nRationnement\nUne quantité maximale \\(\\bar x_1\\) est imposée sur le bien 1. La droite de budget est tronquée : elle suit la pente habituelle \\(-p_1/p_2\\) jusqu’à \\(x_1 = \\bar x_1\\), puis devient un segment vertical (le consommateur ne peut pas acheter plus, quelle que soit sa capacité financière). L’ensemble budgétaire est strictement réduit par rapport au cas standard.\n\n\nTaxe ad valorem\nLe prix effectif du bien 1 devient \\(p_1(1+t)\\). La droite pivote vers l’intérieur autour du point d’ancrage \\(R/p_2\\) (l’ordonnée à l’origine, inchangée), exactement comme une hausse de \\(p_1\\). La recette fiscale est lisible sur le graphique comme l’écart horizontal entre la droite sans taxe et la droite avec taxe, évalué à la quantité choisie.\n\n\nSubvention plafonnée\nLe prix effectif est \\(p_1 - s\\) pour les \\(\\bar x_1\\) premières unités, puis \\(p_1\\) au-delà. La droite est coudée en \\(x_1 = \\bar x_1\\) : plus plate (pente \\(-(p_1-s)/p_2\\)) jusqu’au seuil, puis elle reprend sa pente initiale \\(-p_1/p_2\\) à partir du coude. C’est un exemple classique de contrainte budgétaire non-convexe : l’ensemble des paniers accessibles n’est pas convexe.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "04. Contrainte budgétaire"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-06-choix-optimal.html#bis.-comment-savoir-si-on-est-intérieur-ou-en-coin",
+    "href": "economics/micro-economics/micro-06-choix-optimal.html#bis.-comment-savoir-si-on-est-intérieur-ou-en-coin",
+    "title": "Chapitre 5 — Choix optimal du consommateur",
+    "section": "5.3 bis. Comment savoir si on est intérieur ou en coin ?",
+    "text": "5.3 bis. Comment savoir si on est intérieur ou en coin ?\nC’est une question générale, valable pour toute forme de préférences. La démarche est toujours la même :\n\nSupposer la solution intérieure (\\(x_1^*, x_2^* &gt; 0\\)) et résoudre le système \\(TMS = p_1/p_2\\) + contrainte budgétaire.\nVérifier que les quantités obtenues sont bien positives.\nSi l’une est négative, la solution candidate est hors du domaine admissible : l’optimum est en coin. On pose alors \\(x_i^* = 0\\) et on reporte dans la contrainte budgétaire pour trouver l’autre quantité.\n\nExemple. Avec \\(U = \\ln x_1 + x_2\\), la condition de tangence donne \\(x_1^* = p_2/p_1\\), puis \\(x_2^* = (R - p_2)/p_2\\). Si \\(R &gt; p_2\\), les deux quantités sont positives : solution intérieure. Si \\(R \\leq p_2\\), alors \\(x_2^* \\leq 0\\) : l’optimum est en coin avec \\(x_2^* = 0\\) et \\(x_1^* = R/p_1\\).",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "05. Choix optimal"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-06-choix-optimal.html#bis.-préférences-quasi-linéaires",
+    "href": "economics/micro-economics/micro-06-choix-optimal.html#bis.-préférences-quasi-linéaires",
+    "title": "Chapitre 5 — Choix optimal du consommateur",
+    "section": "5.5 bis. Préférences quasi-linéaires",
+    "text": "5.5 bis. Préférences quasi-linéaires\nSi \\(U(x_1, x_2) = \\ln x_1 + x_2\\), la condition \\(TMS = p_1/p_2\\) donne :\n\\[\n\\frac{1}{x_1} = \\frac{p_1}{p_2} \\implies x_1^* = \\frac{p_2}{p_1}\n\\]\nLa demande de \\(x_1\\) est indépendante du revenu (si \\(R &gt; p_2\\), cf. §5.3 bis). Tout surcroît de revenu va entièrement sur \\(x_2\\) : il n’y a pas d’effet revenu sur le bien 1. C’est la propriété centrale des préférences quasi-linéaires, souvent utilisée pour simplifier les analyses de bien-être.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "05. Choix optimal"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-06-choix-optimal.html#graphique-optimum-en-coin",
+    "href": "economics/micro-economics/micro-06-choix-optimal.html#graphique-optimum-en-coin",
+    "title": "Chapitre 5 — Choix optimal du consommateur",
+    "section": "Graphique — Optimum en coin",
+    "text": "Graphique — Optimum en coin\nCe qu’il faut voir. Deux cas polaires où la condition de tangence ne s’applique pas.\nPanneau gauche : substituts parfaits. Avec \\(U = x_1 + x_2\\) et \\(p_1/p_2 = 3 &gt; 1 = a/b\\), le bien 1 est trop cher. Les courbes d’indifférence (droites de pente \\(-1\\)) sont moins raides que la droite de budget (pente \\(-3\\)). Le consommateur saute directement au coin \\((0, R/p_2)\\) — aucune solution intérieure n’est optimale.\nPanneau droit : compléments parfaits. Avec \\(U = \\min(x_1, x_2)\\), les courbes d’indifférence sont en L. Progresser le long d’une branche sans toucher le coude n’augmente pas l’utilité. L’optimum est nécessairement au coude \\(x_1^* = x_2^*\\), à l’intersection avec la contrainte budgétaire.",
+    "crumbs": [
+      "Mes notes",
+      "Microéconomie",
+      "05. Choix optimal"
+    ]
+  },
+  {
+    "objectID": "economics/micro-economics/micro-05-contrainte-budgetaire.html#graphique---contraintes-budgétaires-non-standard",
+    "href": "economics/micro-economics/micro-05-contrainte-budgetaire.html#graphique---contraintes-budgétaires-non-standard",
+    "title": "Chapitre 4 — Contrainte budgétaire",
+    "section": "Graphique - Contraintes budgétaires non-standard",
+    "text": "Graphique - Contraintes budgétaires non-standard\nDans le cas standard, la contrainte est une droite. Trois dispositifs courants brisent cette linéarité.\n\nRationnement\nUne quantité maximale \\(\\bar x_1\\) est imposée sur le bien 1. La droite de budget est tronquée : elle suit la pente habituelle \\(-p_1/p_2\\) jusqu’à \\(x_1 = \\bar x_1\\), puis devient un segment vertical (le consommateur ne peut pas acheter plus, quelle que soit sa capacité financière). L’ensemble budgétaire est strictement réduit par rapport au cas standard.\n\n\nTaxe ad valorem\nLe prix effectif du bien 1 devient \\(p_1(1+t)\\). La droite pivote vers l’intérieur autour du point d’ancrage \\(R/p_2\\) (l’ordonnée à l’origine, inchangée), exactement comme une hausse de \\(p_1\\). La recette fiscale est lisible sur le graphique comme l’écart horizontal entre la droite sans taxe et la droite avec taxe, évalué à la quantité choisie.\n\n\nSubvention plafonnée\nLe prix effectif est \\(p_1 - s\\) pour les \\(\\bar x_1\\) premières unités, puis \\(p_1\\) au-delà. La droite est coudée en \\(x_1 = \\bar x_1\\) : plus plate (pente \\(-(p_1-s)/p_2\\)) jusqu’au seuil, puis elle reprend sa pente initiale \\(-p_1/p_2\\) à partir du coude. C’est un exemple classique de contrainte budgétaire non-convexe : l’ensemble des paniers accessibles n’est pas convexe.",
     "crumbs": [
       "Mes notes",
       "Microéconomie",

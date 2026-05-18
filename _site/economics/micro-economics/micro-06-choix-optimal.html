@@ -488,11 +488,14 @@ window.Quarto = {
   <li><a href="#problème-de-maximisation" id="toc-problème-de-maximisation" class="nav-link" data-scroll-target="#problème-de-maximisation">5.1. Problème de maximisation</a></li>
   <li><a href="#optimum-intérieur" id="toc-optimum-intérieur" class="nav-link" data-scroll-target="#optimum-intérieur">5.2. Optimum intérieur</a></li>
   <li><a href="#optimum-en-coin" id="toc-optimum-en-coin" class="nav-link" data-scroll-target="#optimum-en-coin">5.3. Optimum en coin</a></li>
+  <li><a href="#bis.-comment-savoir-si-on-est-intérieur-ou-en-coin" id="toc-bis.-comment-savoir-si-on-est-intérieur-ou-en-coin" class="nav-link" data-scroll-target="#bis.-comment-savoir-si-on-est-intérieur-ou-en-coin">5.3 bis. Comment savoir si on est intérieur ou en coin ?</a></li>
   <li><a href="#méthode-par-lagrangien" id="toc-méthode-par-lagrangien" class="nav-link" data-scroll-target="#méthode-par-lagrangien">5.4. Méthode par Lagrangien</a></li>
   <li><a href="#exemple-à-savoir-refaire-cobb-douglas" id="toc-exemple-à-savoir-refaire-cobb-douglas" class="nav-link" data-scroll-target="#exemple-à-savoir-refaire-cobb-douglas">5.5. Exemple à savoir refaire : Cobb-Douglas</a></li>
+  <li><a href="#bis.-préférences-quasi-linéaires" id="toc-bis.-préférences-quasi-linéaires" class="nav-link" data-scroll-target="#bis.-préférences-quasi-linéaires">5.5 bis. Préférences quasi-linéaires</a></li>
   <li><a href="#méthode-rapide-en-exercice" id="toc-méthode-rapide-en-exercice" class="nav-link" data-scroll-target="#méthode-rapide-en-exercice">Méthode rapide en exercice</a></li>
   <li><a href="#erreur-classique" id="toc-erreur-classique" class="nav-link" data-scroll-target="#erreur-classique">Erreur classique</a></li>
   <li><a href="#graphique-optimum-du-consommateur" id="toc-graphique-optimum-du-consommateur" class="nav-link" data-scroll-target="#graphique-optimum-du-consommateur">Graphique — Optimum du consommateur</a></li>
+  <li><a href="#graphique-optimum-en-coin" id="toc-graphique-optimum-en-coin" class="nav-link" data-scroll-target="#graphique-optimum-en-coin">Graphique — Optimum en coin</a></li>
   </ul>
 </nav>
     </div>
@@ -537,7 +540,7 @@ window.Quarto = {
 <p><span class="math display">\[
 p_1x_1+p_2x_2 \leq R
 \]</span></p>
-<p>Si les deux biens sont désirables, le consommateur dépense tout son revenu à l’optimum :</p>
+<p>On suppose que si les deux biens sont désirables, le consommateur dépense tout son revenu à l’optimum :</p>
 <p><span class="math display">\[
 p_1x_1+p_2x_2=R
 \]</span></p>
@@ -557,10 +560,29 @@ TMS_{1,2}=\frac{p_1}{p_2}
 <section id="optimum-en-coin" class="level2">
 <h2 class="anchored" data-anchor-id="optimum-en-coin">5.3. Optimum en coin</h2>
 <p>L’optimum peut se trouver sur un bord si le consommateur achète un seul bien. C’est fréquent avec les substituts parfaits ou, plus généralement, quand la tangence ne fournit pas de solution admissible.</p>
+<p><strong>Substituts parfaits</strong> (<span class="math inline">\(U = ax_1 + bx_2\)</span>, <span class="math inline">\(TMS = a/b\)</span> constant). La tangence n’est pas une condition suffisante — il faut comparer les pentes :<br>
+<span class="math inline">\(a/b\)</span> est ce que le consommateur est prêt à payer en <span class="math inline">\(x_2\)</span> pour obtenir <span class="math inline">\(x_1\)</span>.<br>
+<span class="math inline">\(p_1/p_2\)</span> est ce que le marché demande en <span class="math inline">\(x_2\)</span> pour fournir <span class="math inline">\(x_1\)</span>.<br>
+Cela induit les comportements suivants:<br>
+- Si <span class="math inline">\(p_1/p_2 &lt; a/b\)</span> → tout en <span class="math inline">\(x_1\)</span> : <span class="math inline">\(x_1^* = R/p_1\)</span>, <span class="math inline">\(x_2^* = 0\)</span><br>
+- Si <span class="math inline">\(p_1/p_2 &gt; a/b\)</span> → tout en <span class="math inline">\(x_2\)</span> : <span class="math inline">\(x_1^* = 0\)</span>, <span class="math inline">\(x_2^* = R/p_2\)</span><br>
+- Si <span class="math inline">\(p_1/p_2 = a/b\)</span> → toute la droite de budget est optimale</p>
+<p><strong>Compléments parfaits</strong> (<span class="math inline">\(U = \min(ax_1, bx_2)\)</span>). Le Lagrangien ne s’applique pas (fonction non différentiable au coude). L’optimum est au coude <span class="math inline">\(ax_1 = bx_2\)</span>, combiné à la contrainte budgétaire. On résout le système :</p>
+<p><span class="math display">\[ax_1 = bx_2 \quad \text{et} \quad p_1x_1 + p_2x_2 = R\]</span></p>
+</section>
+<section id="bis.-comment-savoir-si-on-est-intérieur-ou-en-coin" class="level2">
+<h2 class="anchored" data-anchor-id="bis.-comment-savoir-si-on-est-intérieur-ou-en-coin">5.3 bis. Comment savoir si on est intérieur ou en coin ?</h2>
+<p>C’est une question générale, valable pour toute forme de préférences. La démarche est toujours la même :</p>
+<ol type="1">
+<li><strong>Supposer</strong> la solution intérieure (<span class="math inline">\(x_1^*, x_2^* &gt; 0\)</span>) et résoudre le système <span class="math inline">\(TMS = p_1/p_2\)</span> + contrainte budgétaire.</li>
+<li><strong>Vérifier</strong> que les quantités obtenues sont bien positives.</li>
+<li>Si l’une est négative, la solution candidate est hors du domaine admissible : l’optimum est en coin. On pose alors <span class="math inline">\(x_i^* = 0\)</span> et on reporte dans la contrainte budgétaire pour trouver l’autre quantité.</li>
+</ol>
+<p><strong>Exemple.</strong> Avec <span class="math inline">\(U = \ln x_1 + x_2\)</span>, la condition de tangence donne <span class="math inline">\(x_1^* = p_2/p_1\)</span>, puis <span class="math inline">\(x_2^* = (R - p_2)/p_2\)</span>. Si <span class="math inline">\(R &gt; p_2\)</span>, les deux quantités sont positives : solution intérieure. Si <span class="math inline">\(R \leq p_2\)</span>, alors <span class="math inline">\(x_2^* \leq 0\)</span> : l’optimum est en coin avec <span class="math inline">\(x_2^* = 0\)</span> et <span class="math inline">\(x_1^* = R/p_1\)</span>.</p>
 </section>
 <section id="méthode-par-lagrangien" class="level2">
 <h2 class="anchored" data-anchor-id="méthode-par-lagrangien">5.4. Méthode par Lagrangien</h2>
-<p>On peut écrire :</p>
+<p>Puisque la contrainte est saturée à l’optimum, on a <span class="math inline">\(R - p_1x_1 - p_2x_2 = 0\)</span> : on peut donc ajouter <span class="math inline">\(\lambda\)</span> fois cette quantité nulle à l’objectif sans en changer la valeur, quel que soit le scalaire <span class="math inline">\(\lambda\)</span>. On forme ainsi le <strong>lagrangien</strong> :</p>
 <p><span class="math display">\[
 \mathcal{L}=U(x_1,x_2)+\lambda(R-p_1x_1-p_2x_2)
 \]</span></p>
@@ -575,6 +597,7 @@ TMS_{1,2}=\frac{p_1}{p_2}
 p_1x_1+p_2x_2=R
 \]</span></p>
 <p>En divisant les deux premières équations, on retrouve la condition de tangence.</p>
+<p><strong>Interprétation de <span class="math inline">\(\lambda\)</span>.</strong> Le multiplicateur vaut <span class="math inline">\(\lambda = \dfrac{\partial U^*}{\partial R}\)</span> (théorème de l’enveloppe) : <strong>à l’optimum</strong>, une unité supplémentaire de revenu produit <span class="math inline">\(\lambda\)</span> unités d’utilité supplémentaires — c’est l’<strong>utilité marginale du revenu</strong>. Les conditions du premier ordre s’écrivent <span class="math inline">\(U_i' = \lambda p_i\)</span>, soit <span class="math inline">\(U_i'/p_i = \lambda\)</span> pour tout <span class="math inline">\(i\)</span> — c’est la <strong>deuxième loi de Gossen</strong> : à l’optimum, l’utilité marginale par euro dépensé est égalisée entre tous les biens.</p>
 </section>
 <section id="exemple-à-savoir-refaire-cobb-douglas" class="level2">
 <h2 class="anchored" data-anchor-id="exemple-à-savoir-refaire-cobb-douglas">5.5. Exemple à savoir refaire : Cobb-Douglas</h2>
@@ -593,7 +616,15 @@ x_1^*=\frac{a}{a+b}\frac{R}{p_1}
 <p><span class="math display">\[
 x_2^*=\frac{b}{a+b}\frac{R}{p_2}
 \]</span></p>
-<p><strong>À retenir</strong> : dans Cobb-Douglas, une part constante du revenu est affectée à chaque bien.</p>
+<p><strong>À retenir</strong> : dans Cobb-Douglas, une part constante du revenu est affectée à chaque bien. Les deux quantités sont toujours strictement positives : l’optimum est toujours intérieur.</p>
+</section>
+<section id="bis.-préférences-quasi-linéaires" class="level2">
+<h2 class="anchored" data-anchor-id="bis.-préférences-quasi-linéaires">5.5 bis. Préférences quasi-linéaires</h2>
+<p>Si <span class="math inline">\(U(x_1, x_2) = \ln x_1 + x_2\)</span>, la condition <span class="math inline">\(TMS = p_1/p_2\)</span> donne :</p>
+<p><span class="math display">\[
+\frac{1}{x_1} = \frac{p_1}{p_2} \implies x_1^* = \frac{p_2}{p_1}
+\]</span></p>
+<p>La demande de <span class="math inline">\(x_1\)</span> est <strong>indépendante du revenu</strong> (si <span class="math inline">\(R &gt; p_2\)</span>, cf.&nbsp;§5.3 bis). Tout surcroît de revenu va entièrement sur <span class="math inline">\(x_2\)</span> : il n’y a pas d’effet revenu sur le bien 1. C’est la propriété centrale des préférences quasi-linéaires, souvent utilisée pour simplifier les analyses de bien-être.</p>
 </section>
 <section id="méthode-rapide-en-exercice" class="level2">
 <h2 class="anchored" data-anchor-id="méthode-rapide-en-exercice">Méthode rapide en exercice</h2>
@@ -602,7 +633,7 @@ x_2^*=\frac{b}{a+b}\frac{R}{p_2}
 <li>Calculer le TMS.</li>
 <li>Poser l’égalité <span class="math inline">\(TMS=p_1/p_2\)</span> si l’optimum est intérieur.</li>
 <li>Utiliser la contrainte pour obtenir les quantités.</li>
-<li>Vérifier qu’on n’est pas en coin.</li>
+<li>Vérifier que <span class="math inline">\(x_1^*, x_2^* \geq 0\)</span> — sinon, basculer en coin.</li>
 </ol>
 </section>
 <section id="erreur-classique" class="level2">
@@ -614,13 +645,27 @@ x_2^*=\frac{b}{a+b}\frac{R}{p_2}
 <h2 class="anchored" data-anchor-id="graphique-optimum-du-consommateur">Graphique — Optimum du consommateur</h2>
 <p><strong>Ce qu’il faut voir.</strong> Le point optimal est le panier atteignable situé sur la courbe d’indifférence la plus élevée. Sur le graphique, c’est le point de tangence entre la droite budgétaire et une courbe d’indifférence.</p>
 <p><strong>Comment le lire vite.</strong> Repère d’abord la droite budgétaire, puis la courbe d’indifférence la plus haute encore accessible, puis le point où elles se touchent sans se couper. C’est là que le consommateur n’a plus intérêt à se déplacer.</p>
-<p><strong>Cas concret simple.</strong> Avec un revenu de 12, un prix du bien 1 égal à 2 et un prix du bien 2 égal à 1, le point retenu est ici <span class="math inline">\((3,6)\)</span>. Il utilise tout le budget sans sortir de l’ensemble atteignable.</p>
 <p><strong>Phrase de copie.</strong> À l’optimum intérieur, le consommateur égalise le taux auquel il accepte de substituer les biens et le taux auquel le marché permet cette substitution.</p>
-<div id="abf6a43f" class="cell">
+<div id="abf6a43f" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
 <p><img src="micro-06-choix-optimal_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="graphique-optimum-en-coin" class="level2">
+<h2 class="anchored" data-anchor-id="graphique-optimum-en-coin">Graphique — Optimum en coin</h2>
+<p><strong>Ce qu’il faut voir.</strong> Deux cas polaires où la condition de tangence ne s’applique pas.</p>
+<p><strong>Panneau gauche : substituts parfaits.</strong> Avec <span class="math inline">\(U = x_1 + x_2\)</span> et <span class="math inline">\(p_1/p_2 = 3 &gt; 1 = a/b\)</span>, le bien 1 est trop cher. Les courbes d’indifférence (droites de pente <span class="math inline">\(-1\)</span>) sont moins raides que la droite de budget (pente <span class="math inline">\(-3\)</span>). Le consommateur saute directement au coin <span class="math inline">\((0, R/p_2)\)</span> — aucune solution intérieure n’est optimale.</p>
+<p><strong>Panneau droit : compléments parfaits.</strong> Avec <span class="math inline">\(U = \min(x_1, x_2)\)</span>, les courbes d’indifférence sont en L. Progresser le long d’une branche sans toucher le coude n’augmente pas l’utilité. L’optimum est nécessairement au coude <span class="math inline">\(x_1^* = x_2^*\)</span>, à l’intersection avec la contrainte budgétaire.</p>
+<div id="31c5ee4c" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="micro-06-choix-optimal_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
