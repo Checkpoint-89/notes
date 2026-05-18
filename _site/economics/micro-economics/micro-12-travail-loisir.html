@@ -494,6 +494,7 @@ window.Quarto = {
   <li><a href="#élasticité-de-loffre-de-travail" id="toc-élasticité-de-loffre-de-travail" class="nav-link" data-scroll-target="#élasticité-de-loffre-de-travail">11.7. Élasticité de l’offre de travail</a></li>
   <li><a href="#boîte-dedgeworth-appliquée-au-ménage" id="toc-boîte-dedgeworth-appliquée-au-ménage" class="nav-link" data-scroll-target="#boîte-dedgeworth-appliquée-au-ménage">11.8. Boîte d’Edgeworth appliquée au ménage</a></li>
   <li><a href="#économie-de-la-famille" id="toc-économie-de-la-famille" class="nav-link" data-scroll-target="#économie-de-la-famille">11.9. Économie de la famille</a></li>
+  <li><a href="#perspectives-critiques-et-histoire-de-la-pensée" id="toc-perspectives-critiques-et-histoire-de-la-pensée" class="nav-link" data-scroll-target="#perspectives-critiques-et-histoire-de-la-pensée">Perspectives critiques et histoire de la pensée</a></li>
   <li><a href="#erreur-classique" id="toc-erreur-classique" class="nav-link" data-scroll-target="#erreur-classique">Erreur classique</a></li>
   <li><a href="#graphique-arbitrage-travail-loisir" id="toc-graphique-arbitrage-travail-loisir" class="nav-link" data-scroll-target="#graphique-arbitrage-travail-loisir">Graphique — Arbitrage travail-loisir</a>
   <ul>
@@ -632,6 +633,9 @@ U(C,L)
 TMS_{L,C}=w
 \]</span></p>
 <p>Le taux auquel l’individu est prêt à échanger loisir et consommation s’aligne sur le salaire du marché.</p>
+<blockquote class="blockquote">
+<p><strong>Méthode directe.</strong> On peut réécrire le problème en remplaçant <span class="math inline">\(C = R_0 + w(T-L)\)</span> dans la fonction d’utilité, puis maximiser <span class="math inline">\(U(R_0 + w(T-L), L)\)</span> sans contrainte. La condition du premier ordre donne directement <span class="math inline">\(-w \cdot U_C' + U_L' = 0\)</span>, soit <span class="math inline">\(U_L'/U_C' = w\)</span>, c’est-à-dire <span class="math inline">\(TMS = w\)</span>. Cette substitution directe est souvent plus rapide que le Lagrangien en exercice, notamment quand la forme fonctionnelle est simple. Le Lagrangien reste utile pour lire la valeur de <span class="math inline">\(\lambda\)</span> : ici <span class="math inline">\(\lambda = U_C'\)</span>, l’utilité marginale de la consommation, qui est aussi l’utilité marginale du revenu.</p>
+</blockquote>
 </section>
 <section id="hausse-du-salaire" class="level2">
 <h2 class="anchored" data-anchor-id="hausse-du-salaire">11.4. Hausse du salaire</h2>
@@ -670,6 +674,15 @@ h^*(w)=T-L^*(w).
 <li><span class="math inline">\(\varepsilon_{h,w} \approx 0\)</span> : offre rigide, peu sensible au salaire.</li>
 </ul>
 <p>Les principaux facteurs qui influencent l’élasticité sont : le niveau du revenu non salarial <span class="math inline">\(R_0\)</span>, l’intensité de la préférence pour le loisir, les contraintes institutionnelles (temps partiel, conventions collectives, fiscalité).</p>
+<p><strong>Élasticité de la demande de loisir.</strong> L’élasticité de la <strong>demande de loisir</strong> au salaire réel s’écrit :</p>
+<p><span class="math display">\[
+\varepsilon_{L,w} = \frac{\partial L}{\partial w} \cdot \frac{w}{L}
+\]</span></p>
+<p>Elle est reliée à l’élasticité de l’offre de travail par :</p>
+<p><span class="math display">\[
+\varepsilon_{h,w} = -\frac{L}{h} \cdot \varepsilon_{L,w}
+\]</span></p>
+<p>Quand l’offre de travail est rétro-courbée (<span class="math inline">\(\varepsilon_{h,w} &lt; 0\)</span>), la demande de loisir est croissante en <span class="math inline">\(w\)</span> (<span class="math inline">\(\varepsilon_{L,w} &gt; 0\)</span>) : l’effet revenu domine et l’individu “achète” davantage de loisir avec son surcroît de richesse.</p>
 </section>
 <section id="boîte-dedgeworth-appliquée-au-ménage" class="level2">
 <h2 class="anchored" data-anchor-id="boîte-dedgeworth-appliquée-au-ménage">11.8. Boîte d’Edgeworth appliquée au ménage</h2>
@@ -680,6 +693,8 @@ h^*(w)=T-L^*(w).
 <li>les possibilités de négociation et de transferts intra-ménage.</li>
 </ul>
 <p><strong>Interprétation économique.</strong> L’efficacité intra-familiale est atteinte lorsqu’on se place sur la courbe des contrats. Elle dépend des salaires respectifs, des préférences et de la technologie de production domestique.</p>
+<p><strong>La courbe des contrats comme continuum d’optima.</strong> La courbe des contrats n’est pas un point mais un <strong>continuum</strong> d’allocations efficaces. Il existe une infinité d’optima Pareto, du coin de A au coin de B. L’efficacité au sens de Pareto ne sélectionne pas un seul optimum — elle délimite un ensemble. C’est le pouvoir de négociation, les droits de propriété ou les règles institutionnelles qui déterminent lequel est effectivement atteint.</p>
+<p><strong>Salaire réel et répartition de la valeur ajoutée.</strong> Dans la boîte d’Edgeworth, le taux de salaire réel n’est pas seulement un coût d’opportunité du loisir — il détermine aussi comment la valeur ajoutée produite est répartie entre les membres (ou entre travail et capital dans une lecture macro). Un salaire réel plus élevé déplace la solution sur la courbe des contrats en faveur du travailleur. L’enjeu de la négociation salariale est donc précisément de choisir <em>où</em> on se place sur cette courbe, parmi l’<strong>infinité d’optima</strong> qu’elle contient. Le modèle ne tranche pas : il montre l’espace des possibles efficaces, pas le point effectivement retenu.</p>
 </section>
 <section id="économie-de-la-famille" class="level2">
 <h2 class="anchored" data-anchor-id="économie-de-la-famille">11.9. Économie de la famille</h2>
@@ -688,6 +703,11 @@ h^*(w)=T-L^*(w).
 <p><strong>Spécialisation intra-ménage.</strong> Si un membre a un salaire plus élevé, il peut être efficace qu’il se spécialise dans le travail marchand pendant que l’autre se spécialise dans la production domestique — logique des avantages comparatifs appliquée au foyer.</p>
 <p><strong>Gronau (1977).</strong> Distingue trois usages du temps : travail marchand, travail domestique et loisir pur. Contrairement à Becker, le loisir n’entre pas dans la fonction de production domestique ; il s’agit d’un usage direct du temps par l’individu.</p>
 <p><strong>Limites.</strong> Ces modèles supposent une décision coopérative et une information partagée. Ils ne rendent pas compte des conflits d’intérêt, des inégalités de pouvoir intra-ménage ni des dynamiques de négociation.</p>
+</section>
+<section id="perspectives-critiques-et-histoire-de-la-pensée" class="level2">
+<h2 class="anchored" data-anchor-id="perspectives-critiques-et-histoire-de-la-pensée">Perspectives critiques et histoire de la pensée</h2>
+<p><strong>Robinson Crusoé chez les économistes.</strong> Le modèle travail-loisir suppose un agent isolé qui maximise sous contrainte de temps — c’est précisément la figure de Robinson Crusoé, mobilisée par les économistes classiques pour illustrer le comportement rationnel. Marx s’en moque dans <em>Le Capital</em> (1867) : Robinson est une fiction commode qui efface les relations sociales de production en les réduisant à un calcul individuel. Edgeworth reprend lui aussi Robinson dans <em>Mathematical Psychics</em> (1881), mais pour l’opposer à un second individu — c’est l’origine de la boîte — et montrer que dès qu’il y a deux agents, les questions de répartition et de négociation deviennent inévitables.</p>
+<p><strong>Gorz : le loisir colonisé.</strong> Dans <em>Métamorphoses du travail</em> (1988), André Gorz soutient que dans les sociétés marchandes, le loisir lui-même est progressivement colonisé par la logique productive : il se transforme en temps de consommation, de récupération ou de formation, perdant son caractère de fin en soi. Le modèle néoclassique traite le loisir comme un bien parmi d’autres, soumis au même calcul d’utilité — ce que Gorz lit comme une réduction du temps libre à un temps socialement utile pour la reproduction de la force de travail. Cette critique ne réfute pas le modèle, mais en délimite la portée : il décrit un comportement d’arbitrage, pas la valeur du loisir comme expérience vécue.</p>
 </section>
 <section id="erreur-classique" class="level2">
 <h2 class="anchored" data-anchor-id="erreur-classique">Erreur classique</h2>
