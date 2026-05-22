@@ -38,7 +38,7 @@ website:
             collapsed: true
             contents:
               - href: "polyglotte/[German]-Die verlorene Ehre der Katarina Blum/1.md"
-                text: "1. Noms importants"
+                text: "1"
       - section: "Essays"
         collapsed: true
         contents:
