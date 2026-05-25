@@ -21,19 +21,19 @@ class VocabEntry(BaseModel):
     traduction_fr: str = Field(description="Traduction française du mot.")
     exemples: list[Exemple] = Field(description="Liste d'exemples (phrase allemande + traduction française).")
     page: int | None = Field(default=None, description="Numéro de page dans le document source (None si inconnu).")
-    gras: bool = Field(
-        default=False,
-        description=(
-            "Vrai si le mot allemand (l'entrée principale) est typographié en gras dans le document source, "
-            "indépendamment de ses exemples. Pertinent uniquement en mode lexicon."
-        ),
-    )
+
+    @computed_field
+    @property
+    def categorie(self) -> str | None:
+        """Catégorie calculée après récupération du modèle."""
+        return None
 
     @computed_field
     @property
     def id(self) -> str:
-        """Identifiant stable : hash MD5 de (mot_de.lower() + page)."""
-        key = f"{self.mot_de.strip().lower()}{self.page or ''}"
+        """Identifiant stable : hash MD5 du mot allemand et du premier exemple allemand."""
+        exemple_de = self.exemples[0].de.strip().lower() if self.exemples else ""
+        key = f"{self.mot_de.strip().lower()}{exemple_de}"
         return hashlib.md5(key.encode()).hexdigest()[:12]
 
 

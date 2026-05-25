@@ -25,9 +25,6 @@ noms avec article défini et pluriel abrégé, verbes avec prétérit et auxilia
 si ≠ haben, adjectifs/adverbes en forme de base. \
 Pour chaque mot, extrais également TOUS les exemples présents dans le document \
 (phrases allemandes avec leur traduction française). \
-Mets le champ `gras` à true dès que le mot allemand lui-même (l'entrée \
-principale, pas les exemples) est typographié en gras dans \
-le document ; sinon laisse-le à false.
 """
 
 REVIEW_PROMPT = """\
@@ -93,16 +90,14 @@ def sf_extract_vocabulary(
 
 
 def _make_review_model(original: VocabEntry) -> type[VocabEntry]:
-    """Sous-type de VocabEntry qui restaure automatiquement page et gras
-    si le LLM de review les modifie (ces champs sont des métadonnées source)."""
+    """Sous-type de VocabEntry qui restaure automatiquement page
+    si le LLM de review la modifie (ce champ est une métadonnée source)."""
     _page = original.page
-    _gras = original.gras
 
     class _ReviewedEntry(VocabEntry):
         @model_validator(mode="after")
         def _restore_metadata(self) -> "_ReviewedEntry":
             self.page = _page
-            self.gras = _gras
             return self
 
     return _ReviewedEntry

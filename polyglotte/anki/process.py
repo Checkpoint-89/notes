@@ -27,7 +27,7 @@ def write_csv(vocab: Vocabulary, path: Path) -> None:
     """Exporte les fiches en CSV (une ligne par exemple, ou une ligne sans exemple)."""
     with path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["ID", "Mot DE", "Exemple DE", "Traduction FR", "Exemple FR", "Page", "Gras"])
+        writer.writerow(["ID", "Mot DE", "Exemple DE", "Traduction FR", "Exemple FR", "Page", "Categorie"])
         for entry in vocab.mots:
             if entry.exemples:
                 for ex in entry.exemples:
@@ -35,14 +35,14 @@ def write_csv(vocab: Vocabulary, path: Path) -> None:
                         entry.id,
                         entry.mot_de, ex.de, entry.traduction_fr, ex.fr,
                         entry.page if entry.page is not None else "",
-                        entry.gras,
+                        entry.categorie,
                     ])
             else:
                 writer.writerow([
                     entry.id,
                     entry.mot_de, "", entry.traduction_fr, "",
                     entry.page if entry.page is not None else "",
-                    entry.gras,
+                    entry.categorie,
                 ])
 
 
@@ -96,7 +96,7 @@ def build_deck(
             {"name": "Traduction FR"},
             {"name": "Exemple FR"},
             {"name": "page"},
-            {"name": "gras"},
+            {"name": "categorie"},
         ],
         templates=templates,
         css=CSS_DARK if theme == "dark" else CSS_LIGHT,
@@ -113,7 +113,7 @@ def build_deck(
                         fields=[
                             entry.id, entry.mot_de, ex.de, entry.traduction_fr, ex.fr,
                             str(entry.page) if entry.page is not None else "",
-                            "1" if entry.gras else "",
+                            entry.categorie if entry.categorie is not None else "",
                         ],
                         guid=guid,
                     )
@@ -124,7 +124,7 @@ def build_deck(
                     fields=[
                         entry.id, entry.mot_de, "", entry.traduction_fr, "",
                         str(entry.page) if entry.page is not None else "",
-                        "1" if entry.gras else "",
+                        entry.categorie if entry.categorie is not None else "",
                     ],
                     guid=entry.id,
                 )
