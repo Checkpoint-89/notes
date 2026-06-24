@@ -89,7 +89,7 @@ website:
           - href: machine_learning/clustering/clustering_metrics.md
             text: "Évaluer un clustering"
           - href: machine_learning/estimation/linear_regression.md
-            text: "Convergence de vues"
+            text: "Régression linéaire: convergence de vues"
       - section: "Meaning crisis"
         collapsed: true
         contents:

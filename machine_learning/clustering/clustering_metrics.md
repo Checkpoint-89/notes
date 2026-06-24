@@ -9,7 +9,7 @@ Un algorithme de clustering produit une partition des données. Pour mesurer sa 
 
 ## I - Principe 1 : comparer deux partitions (métriques externes)
 
-Nous présentons deux approches qui sont semblables dans leur construction mais reposent sur deux façons différentes de représenter le problème. ARI Adjusted Rand Index) et AMI (Adjusted Mutual Information) sont des indices d'accord en la partition produite par le clustering et la partition de référence. Les deux proposent de mesurer cet accord selon le même principe mais avec une représentation et une métrique propre:
+Nous présentons deux approches qui sont semblables dans leur construction mais reposent sur deux façons différentes de représenter le problème. ARI (Adjusted Rand Index) et AMI (Adjusted Mutual Information) sont des indices d'accord en la partition produite par le clustering et la partition de référence. Les deux proposent de mesurer cet accord selon le même principe mais avec une représentation et une métrique propre:
 
 La **mesure de l'accord** entre les partitions: 
 $$\text{score ajusté} = \frac{\text{accord observé} - \text{accord attendu par hasard}}{\text{accord maximal} - \text{accord attendu par hasard}}$$
