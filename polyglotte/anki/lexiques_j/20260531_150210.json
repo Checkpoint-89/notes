@@ -1,0 +1,273 @@
+{
+  "mots": [
+    {
+      "mot_de": "die Mauer, -n",
+      "traduction_fr": "le mur (extérieur)",
+      "exemples": [],
+      "page": 52,
+      "categorie": null,
+      "id": "be71c0c8ae89"
+    },
+    {
+      "mot_de": "das Dach, -er",
+      "traduction_fr": "le toit",
+      "exemples": [],
+      "page": 52,
+      "categorie": null,
+      "id": "414c1920e0e5"
+    },
+    {
+      "mot_de": "der Keller, -",
+      "traduction_fr": "la cave",
+      "exemples": [],
+      "page": 52,
+      "categorie": null,
+      "id": "1f2aa993a367"
+    },
+    {
+      "mot_de": "die Treppe, -n",
+      "traduction_fr": "l’escalier",
+      "exemples": [
+        {
+          "de": "eine Treppe hinaufgehen",
+          "fr": "monter un escalier"
+        },
+        {
+          "de": "Diese Treppe hat 67 Stufen.",
+          "fr": "Cet escalier a 67 marches."
+        }
+      ],
+      "page": 52,
+      "categorie": null,
+      "id": "77144942b51f"
+    },
+    {
+      "mot_de": "die Stufe, -n",
+      "traduction_fr": "la marche, le degré",
+      "exemples": [
+        {
+          "de": "Diese Treppe hat 67 Stufen.",
+          "fr": "Cet escalier a 67 marches."
+        }
+      ],
+      "page": 52,
+      "categorie": null,
+      "id": "5694c2ecef47"
+    },
+    {
+      "mot_de": "der Stock, die Stockwerke",
+      "traduction_fr": "l’étage",
+      "exemples": [
+        {
+          "de": "Er wohnt im ersten Stock.",
+          "fr": "Il habite au premier étage."
+        }
+      ],
+      "page": 52,
+      "categorie": null,
+      "id": "c6cb32ecc723"
+    },
+    {
+      "mot_de": "der Eingang, -e",
+      "traduction_fr": "l’entrée",
+      "exemples": [
+        {
+          "de": "am Eingang",
+          "fr": "à l’entrée"
+        }
+      ],
+      "page": 52,
+      "categorie": null,
+      "id": "b0d30ff45d21"
+    },
+    {
+      "mot_de": "der Ausgang, -e",
+      "traduction_fr": "la sortie",
+      "exemples": [],
+      "page": 52,
+      "categorie": null,
+      "id": "bea86a9968c0"
+    },
+    {
+      "mot_de": "die Tür, -en",
+      "traduction_fr": "la porte",
+      "exemples": [
+        {
+          "de": "An der Tür hing ein Schild: „Rauchen verboten“.",
+          "fr": "À la porte, il y avait un écriteau : « Défense de fumer »."
+        },
+        {
+          "de": "Machen Sie bitte die Tür zu!",
+          "fr": "Fermez la porte, s’il vous plaît."
+        }
+      ],
+      "page": 52,
+      "categorie": null,
+      "id": "4575599fbc94"
+    },
+    {
+      "mot_de": "das Schild, -er",
+      "traduction_fr": "la plaque, l’écriteau",
+      "exemples": [
+        {
+          "de": "An der Tür hing ein Schild: „Rauchen verboten“.",
+          "fr": "À la porte, il y avait un écriteau : « Défense de fumer »."
+        }
+      ],
+      "page": 52,
+      "categorie": null,
+      "id": "426d12820573"
+    },
+    {
+      "mot_de": "der Schlüssel, -",
+      "traduction_fr": "la clé",
+      "exemples": [],
+      "page": 52,
+      "categorie": null,
+      "id": "5c19ad7c2761"
+    },
+    {
+      "mot_de": "der Schlüsselbund, -e",
+      "traduction_fr": "le trousseau de clés",
+      "exemples": [],
+      "page": 52,
+      "categorie": null,
+      "id": "46a092a43c1d"
+    },
+    {
+      "mot_de": "läuten, klingeln, schellen",
+      "traduction_fr": "sonner",
+      "exemples": [
+        {
+          "de": "Es läutet.",
+          "fr": "On sonne."
+        }
+      ],
+      "page": 52,
+      "categorie": null,
+      "id": "3dc7e7c69a20"
+    },
+    {
+      "mot_de": "die Klingel, -n",
+      "traduction_fr": "la sonnette",
+      "exemples": [
+        {
+          "de": "Es läutet.",
+          "fr": "On sonne."
+        }
+      ],
+      "page": 52,
+      "categorie": null,
+      "id": "ad9416859a66"
+    },
+    {
+      "mot_de": "klopfen (klopfte, hat geklopft)",
+      "traduction_fr": "frapper, taper ; toquer",
+      "exemples": [
+        {
+          "de": "an die Tür klopfen",
+          "fr": "frapper à la porte"
+        }
+      ],
+      "page": 52,
+      "categorie": null,
+      "id": "e1e36f2191ca"
+    },
+    {
+      "mot_de": "aufmachen (öffnen)",
+      "traduction_fr": "ouvrir",
+      "exemples": [
+        {
+          "de": "das Fenster, die Augen aufmachen",
+          "fr": "ouvrir la fenêtre, les yeux"
+        },
+        {
+          "de": "Das Geschäft öffnet um 8 Uhr.",
+          "fr": "Le magasin ouvre à 8 heures."
+        }
+      ],
+      "page": 52,
+      "categorie": null,
+      "id": "76e6610c4ec1"
+    },
+    {
+      "mot_de": "offen",
+      "traduction_fr": "ouvert",
+      "exemples": [
+        {
+          "de": "ein offenes Fenster",
+          "fr": "une fenêtre ouverte"
+        },
+        {
+          "de": "offen reden",
+          "fr": "parler ouvertement"
+        }
+      ],
+      "page": 52,
+      "categorie": null,
+      "id": "87f3a9eb0457"
+    },
+    {
+      "mot_de": "zumachen (machte zu, hat zugemacht)",
+      "traduction_fr": "fermer",
+      "exemples": [
+        {
+          "de": "Machen Sie bitte die Tür zu!",
+          "fr": "Fermez la porte, s’il vous plaît."
+        },
+        {
+          "de": "Das Geschäft schließt um halb sieben.",
+          "fr": "Le magasin ferme à six heures et demie."
+        }
+      ],
+      "page": 52,
+      "categorie": null,
+      "id": "e2a5278d3c84"
+    },
+    {
+      "mot_de": "der Flur, -e",
+      "traduction_fr": "le vestibule, l’entrée",
+      "exemples": [],
+      "page": 52,
+      "categorie": null,
+      "id": "59a7005995e3"
+    },
+    {
+      "mot_de": "der Gang, -e",
+      "traduction_fr": "le couloir, le corridor",
+      "exemples": [],
+      "page": 52,
+      "categorie": null,
+      "id": "dbd02e184975"
+    },
+    {
+      "mot_de": "das Zimmer, -",
+      "traduction_fr": "la pièce",
+      "exemples": [
+        {
+          "de": "ein gemütlicher Abend, ein gemütliches Zimmer",
+          "fr": "une soirée agréable et sympathique, une chambre intime et confortable"
+        }
+      ],
+      "page": 52,
+      "categorie": null,
+      "id": "f9f962022c4b"
+    },
+    {
+      "mot_de": "das Wohnzimmer, -",
+      "traduction_fr": "le salon",
+      "exemples": [],
+      "page": 52,
+      "categorie": null,
+      "id": "b9bbf2c63e16"
+    },
+    {
+      "mot_de": "das Esszimmer, -",
+      "traduction_fr": "la salle à manger",
+      "exemples": [],
+      "page": 52,
+      "categorie": null,
+      "id": "3314149d4f26"
+    }
+  ]
+}

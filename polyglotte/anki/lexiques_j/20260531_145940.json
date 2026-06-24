@@ -1,0 +1,295 @@
+{
+  "mots": [
+    {
+      "mot_de": "das Abendessen, -",
+      "traduction_fr": "le repas du soir",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "14ccf1b86631"
+    },
+    {
+      "mot_de": "die Mahlzeit, -en",
+      "traduction_fr": "le repas",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "311a9e66cdaf"
+    },
+    {
+      "mot_de": "das Frühstück, -e",
+      "traduction_fr": "le petit-déjeuner",
+      "exemples": [
+        {
+          "de": "Haben Sie schon gefrühstückt?",
+          "fr": "Avez-vous déjà pris le petit-déjeuner ?"
+        }
+      ],
+      "page": 41,
+      "categorie": null,
+      "id": "fd78e540ddb0"
+    },
+    {
+      "mot_de": "frühstücken (frühstückte, hat gefrühstückt)",
+      "traduction_fr": "prendre le petit déjeuner",
+      "exemples": [
+        {
+          "de": "Haben Sie schon gefrühstückt?",
+          "fr": "Avez-vous déjà pris le petit déjeuner ?"
+        }
+      ],
+      "page": 41,
+      "categorie": null,
+      "id": "1e85b7fe4391"
+    },
+    {
+      "mot_de": "die Suppe, -n",
+      "traduction_fr": "la soupe",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "adcaf889a3e6"
+    },
+    {
+      "mot_de": "die Kartoffel, -n",
+      "traduction_fr": "la pomme de terre",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "360c26fab17a"
+    },
+    {
+      "mot_de": "die Tomate, -n",
+      "traduction_fr": "la tomate",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "e32d4fc5cf30"
+    },
+    {
+      "mot_de": "die Erbse, -n",
+      "traduction_fr": "le petit pois",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "76fc88a6dd47"
+    },
+    {
+      "mot_de": "die grüne Bohne, -n",
+      "traduction_fr": "le haricot vert",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "5f069f988000"
+    },
+    {
+      "mot_de": "die Karotte, -n",
+      "traduction_fr": "la carotte",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "48fdbab895f7"
+    },
+    {
+      "mot_de": "der Kohl, -e",
+      "traduction_fr": "le chou",
+      "exemples": [
+        {
+          "de": "Das ist doch aufgewärmter Kohl!",
+          "fr": "C’est du réchauffé !"
+        }
+      ],
+      "page": 41,
+      "categorie": null,
+      "id": "f4cfd1aa25d1"
+    },
+    {
+      "mot_de": "das Gemüse, -",
+      "traduction_fr": "le légume",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "b5a75c92bd01"
+    },
+    {
+      "mot_de": "der Reis, -e",
+      "traduction_fr": "le riz",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "bd28c1b02cf5"
+    },
+    {
+      "mot_de": "der Salat, -e",
+      "traduction_fr": "la salade",
+      "exemples": [
+        {
+          "de": "den Salat anmachen",
+          "fr": "préparer, assaisonner la salade"
+        },
+        {
+          "de": "Da haben wir den Salat!",
+          "fr": "Ça, c’est le bouquet !"
+        }
+      ],
+      "page": 41,
+      "categorie": null,
+      "id": "5d3beb4fd71e"
+    },
+    {
+      "mot_de": "das Ei, -er",
+      "traduction_fr": "l’œuf",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "a63c77df8828"
+    },
+    {
+      "mot_de": "das Fleisch, -e",
+      "traduction_fr": "la viande",
+      "exemples": [
+        {
+          "de": "zartes, zähes Fleisch",
+          "fr": "de la viande tendre, dure"
+        },
+        {
+          "de": "gebratenes Fleisch",
+          "fr": "de la viande rôtie"
+        }
+      ],
+      "page": 41,
+      "categorie": null,
+      "id": "a6bb571d857c"
+    },
+    {
+      "mot_de": "die Fleischerei, -en (die Metzgerei, -en)",
+      "traduction_fr": "la boucherie",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "4f54dd32cac1"
+    },
+    {
+      "mot_de": "braten (briet, hat gebraten)",
+      "traduction_fr": "rôtir",
+      "exemples": [
+        {
+          "de": "gebratenes Fleisch",
+          "fr": "de la viande rôtie"
+        }
+      ],
+      "page": 41,
+      "categorie": null,
+      "id": "88d7dc70f25a"
+    },
+    {
+      "mot_de": "der Braten, -",
+      "traduction_fr": "le rôti",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "800036185632"
+    },
+    {
+      "mot_de": "der Schinken, –",
+      "traduction_fr": "le jambon",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "297630123f96"
+    },
+    {
+      "mot_de": "die Wurst, -e",
+      "traduction_fr": "la saucisse, le saucisson",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "60a6fc7730cf"
+    },
+    {
+      "mot_de": "der Fisch, -e",
+      "traduction_fr": "le poisson",
+      "exemples": [
+        {
+          "de": "Freitags gab es bei uns immer Fisch.",
+          "fr": "Le vendredi, on mangeait toujours du poisson."
+        }
+      ],
+      "page": 41,
+      "categorie": null,
+      "id": "6d9951e689ed"
+    },
+    {
+      "mot_de": "das Salz, -e",
+      "traduction_fr": "le sel",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "f164d9be4a56"
+    },
+    {
+      "mot_de": "der Pfeffer, -",
+      "traduction_fr": "le poivre",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "e0c73221e71e"
+    },
+    {
+      "mot_de": "das Öl, -e",
+      "traduction_fr": "l’huile",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "68e95c17358b"
+    },
+    {
+      "mot_de": "der Essig, -e",
+      "traduction_fr": "le vinaigre",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "f04d35ea432c"
+    },
+    {
+      "mot_de": "würzen (würzte, hat gewürzt)",
+      "traduction_fr": "épicer, assaisonner",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "df8036ea0fe6"
+    },
+    {
+      "mot_de": "das Brot, -e",
+      "traduction_fr": "le pain",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "e675e96a9544"
+    },
+    {
+      "mot_de": "das Brötchen, -",
+      "traduction_fr": "le petit pain",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "d7460b26d9b9"
+    },
+    {
+      "mot_de": "die Bäckerei, -en",
+      "traduction_fr": "la boulangerie",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "8eea1e2d9ce2"
+    },
+    {
+      "mot_de": "backen (bäckt, backte, hat gebacken)",
+      "traduction_fr": "cuire au four, frire",
+      "exemples": [],
+      "page": 41,
+      "categorie": null,
+      "id": "f82bc50a62e1"
+    }
+  ]
+}

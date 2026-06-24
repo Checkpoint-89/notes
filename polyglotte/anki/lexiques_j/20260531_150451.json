@@ -1,0 +1,170 @@
+{
+  "mots": [
+    {
+      "mot_de": "wollen (wollte, hat gewollt)",
+      "traduction_fr": "vouloir",
+      "exemples": [
+        {
+          "de": "Gestern habe ich Sie anrufen wollen.",
+          "fr": "Hier, j’ai voulu vous téléphoner."
+        },
+        {
+          "de": "Ich will es Ihnen sagen.",
+          "fr": "Je vais vous le dire."
+        },
+        {
+          "de": "Ich will heute nachmittag in die Stadt.",
+          "fr": "Je veux aller en ville cet après-midi."
+        }
+      ],
+      "page": 68,
+      "categorie": null,
+      "id": "93cab9520c7f"
+    },
+    {
+      "mot_de": "ich möchte",
+      "traduction_fr": "je voudrais, j’aimerais",
+      "exemples": [
+        {
+          "de": "Ich möchte Ihnen noch etwas sagen.",
+          "fr": "Je voudrais vous dire encore quelque chose."
+        },
+        {
+          "de": "Ich möchte gern noch etwas Wein.",
+          "fr": "J’aimerais bien encore un peu de vin."
+        }
+      ],
+      "page": 68,
+      "categorie": null,
+      "id": "a9456f1fbcbc"
+    },
+    {
+      "mot_de": "wünschen (wünschte, hat gewünscht)",
+      "traduction_fr": "désirer, souhaiter",
+      "exemples": [
+        {
+          "de": "Jemand möchte Sie sehen.",
+          "fr": "Quelqu’un souhaite vous voir."
+        },
+        {
+          "de": "Ich wünsche Ihnen viel Glück.",
+          "fr": "Je vous souhaite bonne chance."
+        }
+      ],
+      "page": 68,
+      "categorie": null,
+      "id": "6e63c9c50983"
+    },
+    {
+      "mot_de": "der Wunsch, -e",
+      "traduction_fr": "le désir, le souhait, le vœu",
+      "exemples": [
+        {
+          "de": "einen Wunsch erfüllen",
+          "fr": "exaucer un vœu"
+        },
+        {
+          "de": "Haben Sie sonst noch Wünsche?",
+          "fr": "Désirez-vous autre chose ?"
+        }
+      ],
+      "page": 68,
+      "categorie": null,
+      "id": "ffce49ca8dd0"
+    },
+    {
+      "mot_de": "sich weigern",
+      "traduction_fr": "refuser de faire qqch",
+      "exemples": [
+        {
+          "de": "Er weigert sich zu zahlen.",
+          "fr": "Il refuse de payer."
+        }
+      ],
+      "page": 68,
+      "categorie": null,
+      "id": "ddbd02b30b01"
+    },
+    {
+      "mot_de": "das Ziel, -e",
+      "traduction_fr": "le but",
+      "exemples": [
+        {
+          "de": "ans Ziel kommen, am Ziel sein",
+          "fr": "parvenir au but, être au but"
+        }
+      ],
+      "page": 68,
+      "categorie": null,
+      "id": "fb84a5376df7"
+    },
+    {
+      "mot_de": "das Ideal, -e",
+      "traduction_fr": "l’idéal",
+      "exemples": [],
+      "page": 68,
+      "categorie": null,
+      "id": "5667d3a254b0"
+    },
+    {
+      "mot_de": "die Absicht, -en",
+      "traduction_fr": "l’intention",
+      "exemples": [
+        {
+          "de": "Er hat nicht die Absicht, lange zu bleiben.",
+          "fr": "Il n’a pas l’intention de rester longtemps."
+        }
+      ],
+      "page": 68,
+      "categorie": null,
+      "id": "3e34abd4e128"
+    },
+    {
+      "mot_de": "absichtlich",
+      "traduction_fr": "intentionnel, exprès",
+      "exemples": [
+        {
+          "de": "Er drückte sich absichtlich unklar aus.",
+          "fr": "Il fit exprès de s’exprimer de manière peu claire."
+        }
+      ],
+      "page": 68,
+      "categorie": null,
+      "id": "844e5bd4fe93"
+    },
+    {
+      "mot_de": "vorhaben (hat vor, hat vorgehabt)",
+      "traduction_fr": "avoir l'intention de, se proposer de",
+      "exemples": [
+        {
+          "de": "Hast du morgen Abend schon etwas vor?",
+          "fr": "Est-ce que tu as déjà quelque chose de prévu pour demain soir ?"
+        },
+        {
+          "de": "Er hat vor, in Rom zu studieren.",
+          "fr": "Il se propose d’étudier à Rome."
+        },
+        {
+          "de": "Ich hatte eben vor, Ihnen zu schreiben.",
+          "fr": "J’avais justement l’intention de vous écrire."
+        }
+      ],
+      "page": 68,
+      "categorie": null,
+      "id": "9cbb4da654a4"
+    },
+    {
+      "mot_de": "wozu?",
+      "traduction_fr": "dans quel but, pourquoi ?",
+      "exemples": [
+        {
+          "de": "Wozu benutzt man das?",
+          "fr": "À quoi est-ce que cela sert ?"
+        }
+      ],
+      "page": 68,
+      "categorie": null,
+      "id": "28190d9d751c"
+    }
+  ]
+}

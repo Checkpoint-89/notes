@@ -1,0 +1,406 @@
+{
+  "mots": [
+    {
+      "mot_de": "ausbilden (bildete aus, hat ausgebildet)",
+      "traduction_fr": "former, instruire",
+      "exemples": [
+        {
+          "de": "Viele Firmen bilden ihre Mitarbeiter selber aus.",
+          "fr": "Beaucoup de firmes forment elles-mêmes leurs collaborateurs."
+        },
+        {
+          "de": "Er ist als Informatiker ausgebildet.",
+          "fr": "Il a une formation d’informaticien."
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "4c9314254368"
+    },
+    {
+      "mot_de": "die Ausbildung, -en",
+      "traduction_fr": "la formation",
+      "exemples": [
+        {
+          "de": "Sie hat eine gute Ausbildung als Sekretärin.",
+          "fr": "Elle a une bonne formation de secrétaire."
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "d79cf9de81f1"
+    },
+    {
+      "mot_de": "der Unterricht, -",
+      "traduction_fr": "l’enseignement",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "10c218e63ffb"
+    },
+    {
+      "mot_de": "der Kurs, -e",
+      "traduction_fr": "le cours",
+      "exemples": [
+        {
+          "de": "ein Kurs für Anfänger",
+          "fr": "un cours pour débutants"
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "ece97f8f5581"
+    },
+    {
+      "mot_de": "der Vortrag, -e",
+      "traduction_fr": "la conférence",
+      "exemples": [
+        {
+          "de": "einen Vortrag halten, hören",
+          "fr": "faire, écouter une conférence"
+        },
+        {
+          "de": "ein Vortrag über den Umweltschutz",
+          "fr": "une conférence sur la protection de l’environnement"
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "8071321c248f"
+    },
+    {
+      "mot_de": "die Schule, -n",
+      "traduction_fr": "l’école",
+      "exemples": [
+        {
+          "de": "eine Schule besuchen",
+          "fr": "fréquenter une école"
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "f82d9cdedd7d"
+    },
+    {
+      "mot_de": "die Grundschule, -n",
+      "traduction_fr": "l’école primaire",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "0b7594e1640c"
+    },
+    {
+      "mot_de": "die Realschule, -n",
+      "traduction_fr": "le collège",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "6b5ba902d7a6"
+    },
+    {
+      "mot_de": "der Schüler, -",
+      "traduction_fr": "l’écolier, l’élève",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "a02af1475821"
+    },
+    {
+      "mot_de": "die Schülerin, -nen",
+      "traduction_fr": "l’écolière, l’élève",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "613c77a0edf8"
+    },
+    {
+      "mot_de": "der Lehrer, -",
+      "traduction_fr": "l'enseignant, le professeur",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "abd70bd1d4d2"
+    },
+    {
+      "mot_de": "die Lehrerin, -nen",
+      "traduction_fr": "la maîtresse",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "54f6c2d6f64d"
+    },
+    {
+      "mot_de": "die Klasse, -n",
+      "traduction_fr": "la classe",
+      "exemples": [
+        {
+          "de": "Die Klasse war sehr unruhig.",
+          "fr": "La classe était très agitée."
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "0f680dfce4ae"
+    },
+    {
+      "mot_de": "die Stunde, -n",
+      "traduction_fr": "la leçon, l’heure (de cours)",
+      "exemples": [
+        {
+          "de": "Sie nimmt Fahrstunden.",
+          "fr": "Elle prend des leçons de conduite."
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "080a8f986d07"
+    },
+    {
+      "mot_de": "lernen (lernte, hat gelernt)",
+      "traduction_fr": "apprendre",
+      "exemples": [
+        {
+          "de": "Er lernt Russisch.",
+          "fr": "Il apprend le russe."
+        },
+        {
+          "de": "Das Lernen fällt ihm leicht.",
+          "fr": "Il apprend facilement."
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "798dc76c21c3"
+    },
+    {
+      "mot_de": "üben (übte, hat geübt)",
+      "traduction_fr": "s’exercer",
+      "exemples": [
+        {
+          "de": "Er übt täglich eine Stunde.",
+          "fr": "Il s’exerce une heure par jour."
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "bf4fb1b22cb5"
+    },
+    {
+      "mot_de": "die Übung, -en",
+      "traduction_fr": "l’exercice",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "8654cffef179"
+    },
+    {
+      "mot_de": "zusammenfassen (fasste zusammen, hat zusammengefasst)",
+      "traduction_fr": "résumer",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "12e8a65425c2"
+    },
+    {
+      "mot_de": "formen (formte, hat geformt)",
+      "traduction_fr": "former",
+      "exemples": [
+        {
+          "de": "Beaucoup de firmes forment elles-mêmes leurs collaborateurs.",
+          "fr": "Beaucoup de firmes forment elles-mêmes leurs collaborateurs."
+        },
+        {
+          "de": "Il a une formation d’informaticien.",
+          "fr": "Il a une formation d’informaticien."
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "7b7b8865143a"
+    },
+    {
+      "mot_de": "die Ausbildung, -en",
+      "traduction_fr": "la formation",
+      "exemples": [
+        {
+          "de": "Sie hat eine gute Ausbildung als Sekretärin.",
+          "fr": "Elle a une bonne formation de secrétaire."
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "d79cf9de81f1"
+    },
+    {
+      "mot_de": "l’enseignement",
+      "traduction_fr": "l'enseignement",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "86e622c6b41a"
+    },
+    {
+      "mot_de": "der Kurs, -e",
+      "traduction_fr": "le cours",
+      "exemples": [
+        {
+          "de": "ein Kurs für Anfänger",
+          "fr": "un cours pour débutants"
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "ece97f8f5581"
+    },
+    {
+      "mot_de": "die Konferenz, -en",
+      "traduction_fr": "la conférence",
+      "exemples": [
+        {
+          "de": "eine Konferenz halten, anhören",
+          "fr": "donner, écouter une conférence"
+        },
+        {
+          "de": "eine Konferenz über den Umweltschutz",
+          "fr": "une conférence sur la protection de l’environnement"
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "4d785aa4042c"
+    },
+    {
+      "mot_de": "die Schule, -n",
+      "traduction_fr": "l’école",
+      "exemples": [
+        {
+          "de": "eine Schule besuchen",
+          "fr": "fréquenter une école"
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "f82d9cdedd7d"
+    },
+    {
+      "mot_de": "die Grundschule, -n",
+      "traduction_fr": "l’école primaire",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "0b7594e1640c"
+    },
+    {
+      "mot_de": "das Kolleg, -s",
+      "traduction_fr": "le collège",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "8d94b83239a2"
+    },
+    {
+      "mot_de": "der Schüler, -",
+      "traduction_fr": "l’écolier, l’élève",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "a02af1475821"
+    },
+    {
+      "mot_de": "die Schülerin, -nen",
+      "traduction_fr": "l’écolière, l’élève",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "613c77a0edf8"
+    },
+    {
+      "mot_de": "der Meister, -",
+      "traduction_fr": "le maître",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "8ef187e8a3e9"
+    },
+    {
+      "mot_de": "die Geliebte, -n",
+      "traduction_fr": "la maîtresse, l'amante",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "754ccf482297"
+    },
+    {
+      "mot_de": "die Klasse, -n",
+      "traduction_fr": "la classe",
+      "exemples": [
+        {
+          "de": "Die Klasse war sehr aufgeregt.",
+          "fr": "La classe était très agitée."
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "024ba4528e7e"
+    },
+    {
+      "mot_de": "die Lektion, -en",
+      "traduction_fr": "la leçon, l’heure (de cours)",
+      "exemples": [
+        {
+          "de": "Sie nimmt Fahrstunden.",
+          "fr": "Elle prend des leçons de conduite."
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "6e374425326b"
+    },
+    {
+      "mot_de": "apprendre",
+      "traduction_fr": "apprendre",
+      "exemples": [
+        {
+          "de": "Il apprend le russe.",
+          "fr": "Il apprend le russe."
+        },
+        {
+          "de": "Il apprend facilement.",
+          "fr": "Il apprend facilement."
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "c9cd56237d88"
+    },
+    {
+      "mot_de": "(s’)exercer",
+      "traduction_fr": "s’exercer",
+      "exemples": [
+        {
+          "de": "Il s’exerce une heure par jour.",
+          "fr": "Il s’exerce une heure par jour."
+        }
+      ],
+      "page": 116,
+      "categorie": null,
+      "id": "46fb21ab8e44"
+    },
+    {
+      "mot_de": "der Übung, -en",
+      "traduction_fr": "l’exercice",
+      "exemples": [],
+      "page": 116,
+      "categorie": null,
+      "id": "b972bdb77023"
+    },
+    {
+      "mot_de": "résumer",
+      "traduction_fr": "résumer",
+      "exemples": [],
+      "page": null,
+      "categorie": null,
+      "id": "a619a8b2271f"
+    }
+  ]
+}

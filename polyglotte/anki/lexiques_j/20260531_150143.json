@@ -1,0 +1,291 @@
+{
+  "mots": [
+    {
+      "mot_de": "der Pullover, - (der Pulli, -s)",
+      "traduction_fr": "le pull, le pull-over",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "49077140abf8"
+    },
+    {
+      "mot_de": "die Jacke, -n",
+      "traduction_fr": "la veste",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "ef4246f58498"
+    },
+    {
+      "mot_de": "die Hose, -n",
+      "traduction_fr": "le pantalon",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "896d987daa15"
+    },
+    {
+      "mot_de": "die Leggings, -",
+      "traduction_fr": "le legging",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "c8059001d674"
+    },
+    {
+      "mot_de": "die Bermuda, -s",
+      "traduction_fr": "le bermuda",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "19def806f0bf"
+    },
+    {
+      "mot_de": "der Anzug, -e",
+      "traduction_fr": "le costume, le complet",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "f924b177b6f4"
+    },
+    {
+      "mot_de": "der Schlafanzug, -e",
+      "traduction_fr": "le pyjama",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "73fcc9d0b9b2"
+    },
+    {
+      "mot_de": "der Jogginganzug, -e",
+      "traduction_fr": "le jogging, le survêtement",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "f64e5d47b5d6"
+    },
+    {
+      "mot_de": "der Mantel, -\"-",
+      "traduction_fr": "le manteau",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "a72e256e72a9"
+    },
+    {
+      "mot_de": "der Regenmantel, -",
+      "traduction_fr": "l’imperméable",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "79af16c08ba1"
+    },
+    {
+      "mot_de": "der Bademantel, -",
+      "traduction_fr": "le peignoir de bain",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "bc91ea01146a"
+    },
+    {
+      "mot_de": "das Hemd, -en",
+      "traduction_fr": "la chemise",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "d327abd4e3c3"
+    },
+    {
+      "mot_de": "das Nachthemd, -er",
+      "traduction_fr": "la chemise de nuit",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "9604fa375bd3"
+    },
+    {
+      "mot_de": "die Krawatte, -n (der Schlips, -es, -e)",
+      "traduction_fr": "la cravate",
+      "exemples": [
+        {
+          "de": "eine seidene, gestreifte Krawatte",
+          "fr": "une cravate en soie, rayée"
+        },
+        {
+          "de": "eine Krawatte umhaben",
+          "fr": "avoir une cravate (sur soi)"
+        },
+        {
+          "de": "die Krawatte (um)binden, lockern",
+          "fr": "mettre, desserrer sa cravate"
+        }
+      ],
+      "page": 47,
+      "categorie": null,
+      "id": "6fb534a6ef2e"
+    },
+    {
+      "mot_de": "der Kragen, -",
+      "traduction_fr": "le col",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "68cb44b433a9"
+    },
+    {
+      "mot_de": "der Ärmel, -",
+      "traduction_fr": "la manche",
+      "exemples": [
+        {
+          "de": "die Ärmel hochkrempeln",
+          "fr": "retrousser ses manches"
+        }
+      ],
+      "page": 47,
+      "categorie": null,
+      "id": "b653fa78c8d3"
+    },
+    {
+      "mot_de": "der/die Parka, -s",
+      "traduction_fr": "la parka",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "a7afdbd15566"
+    },
+    {
+      "mot_de": "die Kapuze, -n",
+      "traduction_fr": "la capuche",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "761c42de352e"
+    },
+    {
+      "mot_de": "der Hut, -e",
+      "traduction_fr": "le chapeau",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "d1c9c38ddb21"
+    },
+    {
+      "mot_de": "die Mütze, -n",
+      "traduction_fr": "la casquette, le bonnet",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "39f550702d18"
+    },
+    {
+      "mot_de": "der Handschuh, -e",
+      "traduction_fr": "le gant",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "1ff78caa3bfd"
+    },
+    {
+      "mot_de": "der Schuh, -e",
+      "traduction_fr": "le soulier",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "e89434bc6883"
+    },
+    {
+      "mot_de": "die Pumps, Pl.",
+      "traduction_fr": "les escarpins",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "588fe8156c0f"
+    },
+    {
+      "mot_de": "der Stöckelschuh, -e",
+      "traduction_fr": "la chaussure à talons hauts",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "2e5e29fb53f4"
+    },
+    {
+      "mot_de": "der Stiefel, -",
+      "traduction_fr": "la botte",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "ae33bf23b188"
+    },
+    {
+      "mot_de": "der Strumpf, -e",
+      "traduction_fr": "le bas, la chaussette",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "5d2658c3b95f"
+    },
+    {
+      "mot_de": "die Strumpfhose, -n",
+      "traduction_fr": "les collants",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "f2c0dc5a94cb"
+    },
+    {
+      "mot_de": "die Socke, -n",
+      "traduction_fr": "la chaussette",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "e161e4ba220c"
+    },
+    {
+      "mot_de": "das Taschentuch, -\"er",
+      "traduction_fr": "le mouchoir",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "627076f933a9"
+    },
+    {
+      "mot_de": "der Gürtel, -",
+      "traduction_fr": "la ceinture",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "0ebccd2c70c3"
+    },
+    {
+      "mot_de": "die Tasche, -n",
+      "traduction_fr": "la poche, le sac à main",
+      "exemples": [
+        {
+          "de": "die Hosentasche, eine Handtasche",
+          "fr": "la poche de pantalon, un sac à main"
+        }
+      ],
+      "page": 47,
+      "categorie": null,
+      "id": "75744373e357"
+    },
+    {
+      "mot_de": "der Schirm, -e",
+      "traduction_fr": "le parapluie",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "9920820880e9"
+    },
+    {
+      "mot_de": "der Ring, -e",
+      "traduction_fr": "la bague, l’anneau",
+      "exemples": [],
+      "page": 47,
+      "categorie": null,
+      "id": "e7c011fc55cc"
+    }
+  ]
+}

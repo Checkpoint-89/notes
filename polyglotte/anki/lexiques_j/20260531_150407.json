@@ -1,0 +1,563 @@
+{
+  "mots": [
+    {
+      "mot_de": "geduldig",
+      "traduction_fr": "patient",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "c0d656105a80"
+    },
+    {
+      "mot_de": "ungeduldig",
+      "traduction_fr": "impatient",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "152b3054b89c"
+    },
+    {
+      "mot_de": "vernünftig",
+      "traduction_fr": "raisonnable, judicieux",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "2dac25697733"
+    },
+    {
+      "mot_de": "gleichgültig",
+      "traduction_fr": "indifférent",
+      "exemples": [
+        {
+          "de": "Das ist mir ganz egal.",
+          "fr": "Cela m’est tout à fait égal."
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "f2b821d2106a"
+    },
+    {
+      "mot_de": "egal",
+      "traduction_fr": "égal",
+      "exemples": [
+        {
+          "de": "Das ist mir ganz egal.",
+          "fr": "Cela m’est tout à fait égal."
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "fb544642742e"
+    },
+    {
+      "mot_de": "fleißig",
+      "traduction_fr": "zélé, appliqué",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "d4a9df140dab"
+    },
+    {
+      "mot_de": "faul",
+      "traduction_fr": "paresseux",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "334e551d9925"
+    },
+    {
+      "mot_de": "ernst",
+      "traduction_fr": "sérieux",
+      "exemples": [
+        {
+          "de": "Er sagte das im Ernst.",
+          "fr": "Il a dit cela sérieusement."
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "a9e74f299a69"
+    },
+    {
+      "mot_de": "der Ernst, -e",
+      "traduction_fr": "le sérieux",
+      "exemples": [
+        {
+          "de": "Er sagte das im Ernst.",
+          "fr": "Il a dit cela sérieusement."
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "d660377030f2"
+    },
+    {
+      "mot_de": "stolz (auf + A)",
+      "traduction_fr": "fier",
+      "exemples": [
+        {
+          "de": "Er ist stolz auf seinen Wagen.",
+          "fr": "Il est fier de sa voiture."
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "84ec10615025"
+    },
+    {
+      "mot_de": "bescheiden",
+      "traduction_fr": "modeste",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "a4b3f4392ce0"
+    },
+    {
+      "mot_de": "treu",
+      "traduction_fr": "fidèle",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "c2e95700a3a8"
+    },
+    {
+      "mot_de": "ehrlich",
+      "traduction_fr": "honnête",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "2d24309f4608"
+    },
+    {
+      "mot_de": "höflich",
+      "traduction_fr": "poli",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "50fffe2baed6"
+    },
+    {
+      "mot_de": "unhöflich",
+      "traduction_fr": "impoli",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "656d0ec9a2ff"
+    },
+    {
+      "mot_de": "grob, gröber, der gröbste",
+      "traduction_fr": "grossier",
+      "exemples": [
+        {
+          "de": "eine grobe Antwort",
+          "fr": "une réponse grossière"
+        },
+        {
+          "de": "ein grober Stoff",
+          "fr": "un tissu grossier"
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "73752464ad54"
+    },
+    {
+      "mot_de": "frech",
+      "traduction_fr": "insolent",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "4f4a01c53081"
+    },
+    {
+      "mot_de": "anständig",
+      "traduction_fr": "convenable, correct",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "d9d952dc560d"
+    },
+    {
+      "mot_de": "diskret",
+      "traduction_fr": "discret",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "705830466520"
+    },
+    {
+      "mot_de": "vornehm",
+      "traduction_fr": "distingué",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "7a9365e89074"
+    },
+    {
+      "mot_de": "klug, klüger, der klügste",
+      "traduction_fr": "intelligent, avisé",
+      "exemples": [
+        {
+          "de": "eine kluge Lösung",
+          "fr": "une solution judicieuse"
+        },
+        {
+          "de": "Er hat klug gesprochen.",
+          "fr": "Il a parlé d’une manière sensée."
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "c324477914ae"
+    },
+    {
+      "mot_de": "naiv",
+      "traduction_fr": "naïf",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "8fb67ccf4d47"
+    },
+    {
+      "mot_de": "blöd (familier)",
+      "traduction_fr": "stupide, idiot",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "b8962ea5315b"
+    },
+    {
+      "mot_de": "dumm",
+      "traduction_fr": "bête",
+      "exemples": [
+        {
+          "de": "Du bist gar nicht so dumm, wie du aussiehst!",
+          "fr": "Tu n’es pas aussi bête que tu en as l’air !"
+        },
+        {
+          "de": "sich dumm anstellen",
+          "fr": "faire l’idiot"
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "6102524c2af7"
+    },
+    {
+      "mot_de": "die Dummheit, -en",
+      "traduction_fr": "la bêtise",
+      "exemples": [
+        {
+          "de": "Er hat eine Dummheit gemacht.",
+          "fr": "Il a fait une bêtise."
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "92bc031c2666"
+    },
+    {
+      "mot_de": "toll (familier)",
+      "traduction_fr": "1. fou ; 2. épatant, sensationnel",
+      "exemples": [
+        {
+          "de": "ein tolles Ding",
+          "fr": "quelque chose d’épatant"
+        },
+        {
+          "de": "ein toller Kerl",
+          "fr": "un type extraordinaire"
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "8b4aafe70f51"
+    },
+    {
+      "mot_de": "der Unsinn, -e",
+      "traduction_fr": "le non-sens, l’absurdité",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "efd5686440e1"
+    },
+    {
+      "mot_de": "patient",
+      "traduction_fr": "patient",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "b39024efbc6d"
+    },
+    {
+      "mot_de": "impatient",
+      "traduction_fr": "impatient",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "16446e823584"
+    },
+    {
+      "mot_de": "raisonnable, judicieux",
+      "traduction_fr": "raisonnable, judicieux",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "5b67e5e02d74"
+    },
+    {
+      "mot_de": "indifférent",
+      "traduction_fr": "indifférent",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "9eb0098bc98d"
+    },
+    {
+      "mot_de": "égal",
+      "traduction_fr": "égal",
+      "exemples": [
+        {
+          "de": "Cela m’est tout à fait égal.",
+          "fr": "Cela m’est tout à fait égal."
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "841a1cf91857"
+    },
+    {
+      "mot_de": "zélé, appliqué",
+      "traduction_fr": "zélé, appliqué",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "64a1e3383856"
+    },
+    {
+      "mot_de": "paresseux",
+      "traduction_fr": "paresseux",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "4960dfdc95af"
+    },
+    {
+      "mot_de": "sérieux",
+      "traduction_fr": "sérieux",
+      "exemples": [
+        {
+          "de": "Il a dit cela sérieusement.",
+          "fr": "Il a dit cela sérieusement."
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "bc735eb1bd92"
+    },
+    {
+      "mot_de": "der Ernst, -e",
+      "traduction_fr": "le sérieux",
+      "exemples": [
+        {
+          "de": "Er hat das ernst gesagt.",
+          "fr": "Il a dit cela sérieusement."
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "aa8959d67994"
+    },
+    {
+      "mot_de": "fier",
+      "traduction_fr": "fier",
+      "exemples": [
+        {
+          "de": "Il est fier de sa voiture.",
+          "fr": "Il est fier de sa voiture."
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "16cfd969d285"
+    },
+    {
+      "mot_de": "modeste",
+      "traduction_fr": "modeste",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "1cc415002e23"
+    },
+    {
+      "mot_de": "fidèle",
+      "traduction_fr": "fidèle",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "acf7c18942e6"
+    },
+    {
+      "mot_de": "honnête",
+      "traduction_fr": "honnête",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "26c02b25a83d"
+    },
+    {
+      "mot_de": "poli",
+      "traduction_fr": "poli",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "0a89c133d390"
+    },
+    {
+      "mot_de": "impoli",
+      "traduction_fr": "impoli",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "63a22a04736f"
+    },
+    {
+      "mot_de": "grob, grob-",
+      "traduction_fr": "grossier, rude ; grossier, épais",
+      "exemples": [
+        {
+          "de": "eine grobe Antwort",
+          "fr": "une réponse grossière"
+        },
+        {
+          "de": "ein grobes Gewebe",
+          "fr": "un tissu grossier"
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "07f720ab3a64"
+    },
+    {
+      "mot_de": "insolent",
+      "traduction_fr": "insolent",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "aea0ade54f05"
+    },
+    {
+      "mot_de": "convenable, correct",
+      "traduction_fr": "convenable, correct",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "f56978d759a2"
+    },
+    {
+      "mot_de": "discret",
+      "traduction_fr": "discret",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "ec755c02c83b"
+    },
+    {
+      "mot_de": "distingué",
+      "traduction_fr": "distingué",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "e2e42197e115"
+    },
+    {
+      "mot_de": "intelligent, avisé",
+      "traduction_fr": "intelligent, avisé",
+      "exemples": [
+        {
+          "de": "une solution judicieuse",
+          "fr": "une solution judicieuse"
+        },
+        {
+          "de": "Il a parlé d’une manière sensée.",
+          "fr": "Il a parlé d’une manière sensée."
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "f08032628e0e"
+    },
+    {
+      "mot_de": "naiv",
+      "traduction_fr": "naïf",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "8fb67ccf4d47"
+    },
+    {
+      "mot_de": "stupide, idiot",
+      "traduction_fr": "stupide, idiot",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "6efb9ac597da"
+    },
+    {
+      "mot_de": "bête",
+      "traduction_fr": "bête",
+      "exemples": [
+        {
+          "de": "Tu n’es pas aussi bête que tu en as l’air !",
+          "fr": "Tu n’es pas aussi bête que tu en as l’air !"
+        },
+        {
+          "de": "faire l’idiot",
+          "fr": "faire l’idiot"
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "76809c90ea71"
+    },
+    {
+      "mot_de": "die Dummheit, -en",
+      "traduction_fr": "la bêtise",
+      "exemples": [
+        {
+          "de": "Er hat eine Dummheit gemacht.",
+          "fr": "Il a fait une bêtise."
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "92bc031c2666"
+    },
+    {
+      "mot_de": "1. fou  2. épatant, sensationnel",
+      "traduction_fr": "1. fou  2. épatant, sensationnel",
+      "exemples": [
+        {
+          "de": "quelque chose d’épatant",
+          "fr": "quelque chose d’épatant"
+        },
+        {
+          "de": "un type extraordinaire",
+          "fr": "un type extraordinaire"
+        }
+      ],
+      "page": 64,
+      "categorie": null,
+      "id": "af98fff51d7f"
+    },
+    {
+      "mot_de": "der Unsinn, -e",
+      "traduction_fr": "le non-sens, l’absurdité",
+      "exemples": [],
+      "page": 64,
+      "categorie": null,
+      "id": "efd5686440e1"
+    }
+  ]
+}

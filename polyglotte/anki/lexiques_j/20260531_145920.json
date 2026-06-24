@@ -1,0 +1,261 @@
+{
+  "mots": [
+    {
+      "mot_de": "die Mikrobe, -n",
+      "traduction_fr": "le microbe",
+      "exemples": [],
+      "page": 38,
+      "categorie": null,
+      "id": "a5f129047a1d"
+    },
+    {
+      "mot_de": "das Krankenhaus, -\"er",
+      "traduction_fr": "l’hôpital",
+      "exemples": [],
+      "page": 38,
+      "categorie": null,
+      "id": "9e229919d01f"
+    },
+    {
+      "mot_de": "der Schmerz, -en",
+      "traduction_fr": "la douleur, la souffrance",
+      "exemples": [
+        {
+          "de": "Er hat heftige Kopfschmerzen.",
+          "fr": "Il a de violents maux de tête."
+        }
+      ],
+      "page": 38,
+      "categorie": null,
+      "id": "5aac8e900371"
+    },
+    {
+      "mot_de": "wehtun (tat weh, hat wehgetan)",
+      "traduction_fr": "faire mal",
+      "exemples": [
+        {
+          "de": "Der Rücken tut mir weh.",
+          "fr": "J’ai mal au dos."
+        }
+      ],
+      "page": 38,
+      "categorie": null,
+      "id": "d0ca8d84dd97"
+    },
+    {
+      "mot_de": "leiden (litt, hat gelitten)",
+      "traduction_fr": "souffrir",
+      "exemples": [
+        {
+          "de": "an einer Krankheit, unter dem Lärm leiden",
+          "fr": "souffrir d’une maladie, du bruit"
+        }
+      ],
+      "page": 38,
+      "categorie": null,
+      "id": "73c976d65941"
+    },
+    {
+      "mot_de": "ertragen (ertrug, hat ertragen)",
+      "traduction_fr": "supporter",
+      "exemples": [
+        {
+          "de": "Der Kranke konnte die Schmerzen kaum ertragen.",
+          "fr": "Le malade pouvait à peine supporter ses souffrances."
+        }
+      ],
+      "page": 38,
+      "categorie": null,
+      "id": "3e1c60e53522"
+    },
+    {
+      "mot_de": "schwindlig",
+      "traduction_fr": "sujet au vertige",
+      "exemples": [
+        {
+          "de": "Mir wird leicht schwindlig.",
+          "fr": "J’ai facilement le vertige."
+        }
+      ],
+      "page": 38,
+      "categorie": null,
+      "id": "eb6ab90a9205"
+    },
+    {
+      "mot_de": "frieren (fror, ist gefroren)",
+      "traduction_fr": "avoir froid ; geler",
+      "exemples": [
+        {
+          "de": "Ich fror. (Mich fror.)",
+          "fr": "J’avais froid."
+        },
+        {
+          "de": "Der Boden ist gefroren.",
+          "fr": "Le sol est gelé."
+        }
+      ],
+      "page": 38,
+      "categorie": null,
+      "id": "de68b8beba0b"
+    },
+    {
+      "mot_de": "sich erkälten (erkältete sich, hat sich erkältet)",
+      "traduction_fr": "prendre froid",
+      "exemples": [
+        {
+          "de": "Haben Sie sich erkältet?",
+          "fr": "Avez-vous pris froid ?"
+        }
+      ],
+      "page": 38,
+      "categorie": null,
+      "id": "2fcb6048c118"
+    },
+    {
+      "mot_de": "der Schnupfen, -",
+      "traduction_fr": "le rhume (de cerveau)",
+      "exemples": [],
+      "page": 38,
+      "categorie": null,
+      "id": "938afb23edf8"
+    },
+    {
+      "mot_de": "husten (hustete, hat gehustet)",
+      "traduction_fr": "tousser",
+      "exemples": [],
+      "page": 38,
+      "categorie": null,
+      "id": "9f02cc3ad26a"
+    },
+    {
+      "mot_de": "das Fieber, -",
+      "traduction_fr": "la fièvre",
+      "exemples": [
+        {
+          "de": "Ihn hat das Fieber des Spiels gepackt.",
+          "fr": "La fièvre du jeu l’a saisi."
+        }
+      ],
+      "page": 38,
+      "categorie": null,
+      "id": "5e496553f7c9"
+    },
+    {
+      "mot_de": "fieberhaft",
+      "traduction_fr": "fiévreux",
+      "exemples": [],
+      "page": 38,
+      "categorie": null,
+      "id": "616a59052f59"
+    },
+    {
+      "mot_de": "fiebrig",
+      "traduction_fr": "fiévreux",
+      "exemples": [],
+      "page": 38,
+      "categorie": null,
+      "id": "dbd3548e7599"
+    },
+    {
+      "mot_de": "heiser",
+      "traduction_fr": "enroué",
+      "exemples": [],
+      "page": 38,
+      "categorie": null,
+      "id": "1abd97757fc2"
+    },
+    {
+      "mot_de": "verletzen (verletzte, hat verletzt)",
+      "traduction_fr": "blesser, léser",
+      "exemples": [
+        {
+          "de": "Der Verwundete wurde ins Krankenhaus gebracht.",
+          "fr": "Le blessé fut conduit à l’hôpital."
+        },
+        {
+          "de": "Sie fühlte sich durch seine Worte verletzt.",
+          "fr": "Elle se sentit blessée par ses paroles."
+        }
+      ],
+      "page": 38,
+      "categorie": null,
+      "id": "8a1e31c7507c"
+    },
+    {
+      "mot_de": "die Wunde, -n",
+      "traduction_fr": "la blessure, la plaie",
+      "exemples": [
+        {
+          "de": "Die Wunde blutet, schließt sich.",
+          "fr": "La plaie saigne, se referme."
+        }
+      ],
+      "page": 38,
+      "categorie": null,
+      "id": "7b76e594e616"
+    },
+    {
+      "mot_de": "die Narbe, -n",
+      "traduction_fr": "la cicatrice",
+      "exemples": [],
+      "page": 38,
+      "categorie": null,
+      "id": "7a3688222c56"
+    },
+    {
+      "mot_de": "brechen (brach, hat gebrochen)",
+      "traduction_fr": "rompre, briser, casser",
+      "exemples": [
+        {
+          "de": "Ich habe mir den Arm, einen Knochen gebrochen.",
+          "fr": "Je me suis cassé le bras, un os."
+        }
+      ],
+      "page": 38,
+      "categorie": null,
+      "id": "a34a63ede7c5"
+    },
+    {
+      "mot_de": "bewußtlos",
+      "traduction_fr": "inconscient, évanoui",
+      "exemples": [],
+      "page": 38,
+      "categorie": null,
+      "id": "53bae1cce62f"
+    },
+    {
+      "mot_de": "der Arzt, -e",
+      "traduction_fr": "le médecin",
+      "exemples": [
+        {
+          "de": "zum Arzt gehen, den Arzt holen lassen",
+          "fr": "aller chez le médecin, faire appeler le médecin"
+        }
+      ],
+      "page": 38,
+      "categorie": null,
+      "id": "72dfe6c5eb85"
+    },
+    {
+      "mot_de": "der Zahnarzt, -e",
+      "traduction_fr": "le dentiste",
+      "exemples": [],
+      "page": 38,
+      "categorie": null,
+      "id": "d6738def39a0"
+    },
+    {
+      "mot_de": "pflegen (pflegte, hat gepflegt)",
+      "traduction_fr": "soigner",
+      "exemples": [
+        {
+          "de": "einen Kranken pflegen",
+          "fr": "soigner un malade"
+        }
+      ],
+      "page": 38,
+      "categorie": null,
+      "id": "f1dda3d60cd2"
+    }
+  ]
+}

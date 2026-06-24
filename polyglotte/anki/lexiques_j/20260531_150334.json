@@ -1,0 +1,217 @@
+{
+  "mots": [
+    {
+      "mot_de": "holen, holte, hat geholt",
+      "traduction_fr": "aller chercher",
+      "exemples": [
+        {
+          "de": "Er holte zwei Flaschen aus dem Keller.",
+          "fr": "Il alla chercher deux bouteilles à la cave."
+        }
+      ],
+      "page": 58,
+      "categorie": null,
+      "id": "bd04ae261037"
+    },
+    {
+      "mot_de": "nehmen, nahm, hat genommen",
+      "traduction_fr": "prendre",
+      "exemples": [
+        {
+          "de": "Er nahm seinen Hut.",
+          "fr": "Il prit son chapeau."
+        },
+        {
+          "de": "den Bus, ein Bad, Platz nehmen",
+          "fr": "prendre le bus, prendre un bain, prendre place"
+        },
+        {
+          "de": "Nehmen Sie noch eine Tasse Tee?",
+          "fr": "Prenez-vous encore une tasse de thé ?"
+        }
+      ],
+      "page": 58,
+      "categorie": null,
+      "id": "410a0a25fa70"
+    },
+    {
+      "mot_de": "bringen, brachte, hat gebracht",
+      "traduction_fr": "apporter",
+      "exemples": [
+        {
+          "de": "Er brachte ihr Blumen.",
+          "fr": "Il lui apporta des fleurs."
+        },
+        {
+          "de": "Er brachte mich nach Hause.",
+          "fr": "Il me conduisit à la maison."
+        },
+        {
+          "de": "Das Fernsehen bringt heute nichts Interessantes.",
+          "fr": "Il n’y a rien d’intéressant à la télévision aujourd’hui."
+        }
+      ],
+      "page": 58,
+      "categorie": null,
+      "id": "ec7d61aaa196"
+    },
+    {
+      "mot_de": "geben, gab, hat gegeben",
+      "traduction_fr": "donner",
+      "exemples": [
+        {
+          "de": "eine Auskunft, einen Rat, ein Konzert geben",
+          "fr": "donner un renseignement, un conseil, un concert"
+        }
+      ],
+      "page": 58,
+      "categorie": null,
+      "id": "999259fd83a9"
+    },
+    {
+      "mot_de": "bekommen, bekam, hat bekommen",
+      "traduction_fr": "recevoir, obtenir",
+      "exemples": [
+        {
+          "de": "Sie bekommen das Geld mit der Post.",
+          "fr": "Vous recevrez l’argent par la poste."
+        },
+        {
+          "de": "die Grippe bekommen",
+          "fr": "attraper la grippe"
+        }
+      ],
+      "page": 58,
+      "categorie": null,
+      "id": "8391f3a4e825"
+    },
+    {
+      "mot_de": "erhalten, erhielt, hat erhalten",
+      "traduction_fr": "recevoir, obtenir",
+      "exemples": [
+        {
+          "de": "Endlich erhielt ich das bestellte Buch.",
+          "fr": "Enfin j’ai reçu le livre que j’avais commandé."
+        }
+      ],
+      "page": 58,
+      "categorie": null,
+      "id": "0da8d895f8b9"
+    },
+    {
+      "mot_de": "kriegen (familier), kriegte, hat gekriegt",
+      "traduction_fr": "recevoir, obtenir, attraper",
+      "exemples": [
+        {
+          "de": "Post kriegen",
+          "fr": "recevoir du courrier"
+        },
+        {
+          "de": "Wir werden Regen kriegen.",
+          "fr": "Nous aurons de la pluie."
+        }
+      ],
+      "page": 58,
+      "categorie": null,
+      "id": "dc080362462f"
+    },
+    {
+      "mot_de": "annehmen, nahm an, hat angenommen",
+      "traduction_fr": "accepter",
+      "exemples": [
+        {
+          "de": "Er hat kein Geld annehmen wollen.",
+          "fr": "Il n’a pas voulu accepter d’argent."
+        }
+      ],
+      "page": 58,
+      "categorie": null,
+      "id": "6b2ecd6f721a"
+    },
+    {
+      "mot_de": "behalten, behielt, hat behalten",
+      "traduction_fr": "garder, conserver",
+      "exemples": [
+        {
+          "de": "Sie können den Stadtplan behalten.",
+          "fr": "Vous pouvez garder le plan de la ville."
+        },
+        {
+          "de": "Das Haus hat seinen Wert behalten.",
+          "fr": "La maison a conservé sa valeur."
+        }
+      ],
+      "page": 58,
+      "categorie": null,
+      "id": "70656443be6f"
+    },
+    {
+      "mot_de": "zurückgeben, gab zurück, hat zurückgegeben",
+      "traduction_fr": "rendre",
+      "exemples": [
+        {
+          "de": "Er hat mir das Buch nie zurückgegeben.",
+          "fr": "Il ne m’a jamais rendu le livre."
+        }
+      ],
+      "page": 58,
+      "categorie": null,
+      "id": "13864f744c71"
+    },
+    {
+      "mot_de": "suchen, suchte, hat gesucht",
+      "traduction_fr": "chercher",
+      "exemples": [
+        {
+          "de": "Sie suchen seit Monaten eine Wohnung.",
+          "fr": "Ils cherchent un appartement depuis des mois."
+        }
+      ],
+      "page": 58,
+      "categorie": null,
+      "id": "46ccd58a2c5d"
+    },
+    {
+      "mot_de": "finden, fand, hat gefunden",
+      "traduction_fr": "trouver",
+      "exemples": [
+        {
+          "de": "Ich finde ihn nirgends.",
+          "fr": "Je ne le trouve nulle part."
+        },
+        {
+          "de": "Er findet sie hübsch.",
+          "fr": "Il la trouve jolie."
+        },
+        {
+          "de": "Ich finde auch, daß der Preis zu hoch ist.",
+          "fr": "Je trouve aussi que le prix est trop élevé."
+        }
+      ],
+      "page": 58,
+      "categorie": null,
+      "id": "de2e3b99cffe"
+    },
+    {
+      "mot_de": "verstecken, versteckte, hat versteckt",
+      "traduction_fr": "cacher",
+      "exemples": [
+        {
+          "de": "Er versteckte sich hinter einer Tür.",
+          "fr": "Il se cacha derrière une porte."
+        }
+      ],
+      "page": 58,
+      "categorie": null,
+      "id": "de023fc5eb74"
+    },
+    {
+      "mot_de": "der Haushalt, -e",
+      "traduction_fr": "le ménage",
+      "exemples": [],
+      "page": 58,
+      "categorie": null,
+      "id": "4d58b1c363c4"
+    }
+  ]
+}

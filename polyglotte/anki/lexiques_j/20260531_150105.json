@@ -1,0 +1,279 @@
+{
+  "mots": [
+    {
+      "mot_de": "die Suppe wärmen, sich die Hände wärmen",
+      "traduction_fr": "chauffer la soupe, se réchauffer les mains",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "7cd5f9a032f3"
+    },
+    {
+      "mot_de": "wärmen (wärmte, hat gewärmt)",
+      "traduction_fr": "chauffer, réchauffer",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "000b9be3d42e"
+    },
+    {
+      "mot_de": "der Topf, -e",
+      "traduction_fr": "le pot, la marmite, la casserole",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "195a3c770fc5"
+    },
+    {
+      "mot_de": "der Kochtopf, -e",
+      "traduction_fr": "le faitout",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "6bb503fae77b"
+    },
+    {
+      "mot_de": "der Schnellkochtopf",
+      "traduction_fr": "l’autocuiseur",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "bd5407d4a664"
+    },
+    {
+      "mot_de": "die Pfanne, -n",
+      "traduction_fr": "la poêle (à frire)",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "bda3a6ac3ccd"
+    },
+    {
+      "mot_de": "das Sieb, -e",
+      "traduction_fr": "la passoire",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "199a1bb1a137"
+    },
+    {
+      "mot_de": "die Küchenmaschine, -n",
+      "traduction_fr": "le robot-ménager",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "de221b39d94a"
+    },
+    {
+      "mot_de": "die Schüssel, -n",
+      "traduction_fr": "le plat",
+      "exemples": [
+        {
+          "de": "vor leeren Schüsseln sitzen",
+          "fr": "dancer devant le buffet"
+        }
+      ],
+      "page": 44,
+      "categorie": null,
+      "id": "749733e19f8f"
+    },
+    {
+      "mot_de": "das Gericht, -e",
+      "traduction_fr": "le plat (que l’on mange)",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "b42132b48d5c"
+    },
+    {
+      "mot_de": "das Nationalgericht, -e",
+      "traduction_fr": "le plat national",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "514e62b12c37"
+    },
+    {
+      "mot_de": "die Dose, -n (die Büchse, -n)",
+      "traduction_fr": "la boîte (généralement métallique)",
+      "exemples": [
+        {
+          "de": "eine Dose Orangensaft",
+          "fr": "une boîte de jus d’orange"
+        }
+      ],
+      "page": 44,
+      "categorie": null,
+      "id": "1de11b92073b"
+    },
+    {
+      "mot_de": "der Büchsenöffner",
+      "traduction_fr": "l’ouvre-boîte",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "fd6236aab7ef"
+    },
+    {
+      "mot_de": "das Geschirr",
+      "traduction_fr": "la vaisselle",
+      "exemples": [
+        {
+          "de": "das Geschirr spülen",
+          "fr": "laver la vaisselle"
+        }
+      ],
+      "page": 44,
+      "categorie": null,
+      "id": "e4fa96afd7d4"
+    },
+    {
+      "mot_de": "der Geschirrspüler, -",
+      "traduction_fr": "le lave-vaisselle",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "1c53d9eb856f"
+    },
+    {
+      "mot_de": "der Teller, -",
+      "traduction_fr": "l’assiette",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "be1e9efa95ab"
+    },
+    {
+      "mot_de": "das Besteck",
+      "traduction_fr": "les couverts",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "d07f2fa8f036"
+    },
+    {
+      "mot_de": "die Gabel, -n",
+      "traduction_fr": "la fourchette",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "f562c8f7f635"
+    },
+    {
+      "mot_de": "der Löffel, -",
+      "traduction_fr": "la cuillère",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "051453439a17"
+    },
+    {
+      "mot_de": "das Messer, -",
+      "traduction_fr": "le couteau",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "0fa1d86ae7ff"
+    },
+    {
+      "mot_de": "das Elektromesser, -",
+      "traduction_fr": "le couteau électrique",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "b878434b6b6d"
+    },
+    {
+      "mot_de": "schneiden (schnitt, hat geschnitten)",
+      "traduction_fr": "couper",
+      "exemples": [
+        {
+          "de": "Das Messer schneidet gut.",
+          "fr": "Ce couteau coupe bien."
+        },
+        {
+          "de": "Ich habe mich geschnitten.",
+          "fr": "Je me suis coupé."
+        }
+      ],
+      "page": 44,
+      "categorie": null,
+      "id": "1716e014ffa7"
+    },
+    {
+      "mot_de": "die Tasse, -n",
+      "traduction_fr": "la tasse",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "ae59bfe485f1"
+    },
+    {
+      "mot_de": "das Glas, -\"er",
+      "traduction_fr": "le verre",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "89c05c273529"
+    },
+    {
+      "mot_de": "die Flasche, -n",
+      "traduction_fr": "la bouteille",
+      "exemples": [
+        {
+          "de": "aus der Flasche trinken",
+          "fr": "boire à la bouteille"
+        }
+      ],
+      "page": 44,
+      "categorie": null,
+      "id": "0763c290bda9"
+    },
+    {
+      "mot_de": "der Flaschenöffner, -",
+      "traduction_fr": "l’ouvre-bouteille",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "95191005ea26"
+    },
+    {
+      "mot_de": "voll",
+      "traduction_fr": "plein",
+      "exemples": [
+        {
+          "de": "ein volles Glas",
+          "fr": "un verre plein"
+        },
+        {
+          "de": "eine Flasche voll Wasser",
+          "fr": "une bouteille pleine d’eau"
+        }
+      ],
+      "page": 44,
+      "categorie": null,
+      "id": "646da9731ccb"
+    },
+    {
+      "mot_de": "füllen (füllte, hat gefüllt)",
+      "traduction_fr": "remplir",
+      "exemples": [
+        {
+          "de": "Er füllte die Thermosflasche mit Tee.",
+          "fr": "Il remplit le thermos de thé."
+        }
+      ],
+      "page": 44,
+      "categorie": null,
+      "id": "11234ba3fc09"
+    },
+    {
+      "mot_de": "leer",
+      "traduction_fr": "vide",
+      "exemples": [],
+      "page": 44,
+      "categorie": null,
+      "id": "3f60eb7939d4"
+    }
+  ]
+}

@@ -31,7 +31,7 @@ REVIEW_PROMPT = """\
 Tu es un correcteur expert en allemand et en français. \
 On te donne une fiche de vocabulaire DE→FR. Vérifie et corrige si nécessaire :
 1. Le mot allemand suit les conventions dictionnaire \
-   (article + pluriel pour les noms, prétérit pour les verbes forts, etc.).
+   (article + pluriel pour les noms, prétérit pour les verbes forts, etc.). Le pruriel est correct (n'oublie pas les umlaut)
 2. La phrase exemple allemande est grammaticalement correcte \
    et illustre bien le mot.
 3. La traduction française est juste et naturelle.
@@ -85,7 +85,7 @@ def sf_extract_vocabulary(
         model=model,
         response_model=Vocabulary,
         messages=sf_build_messages(path, system_prompt=system_prompt),
-        temperature=0.2,
+        temperature=0.0,
     )
 
 
@@ -112,5 +112,5 @@ def sf_review_entry(entry: VocabEntry, model: str = "gpt-5.4-mini") -> VocabEntr
             {"role": "system", "content": REVIEW_PROMPT},
             {"role": "user", "content": entry.model_dump_json(indent=2)},
         ],
-        temperature=0.1,
+        temperature=0.0,
     )

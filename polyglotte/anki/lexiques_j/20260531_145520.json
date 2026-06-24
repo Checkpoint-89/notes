@@ -1,0 +1,224 @@
+{
+  "mots": [
+    {
+      "mot_de": "der Mensch, -en",
+      "traduction_fr": "l’homme, l’être humain",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "ef50cbecf380"
+    },
+    {
+      "mot_de": "menschlich",
+      "traduction_fr": "humain",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "7ebbdbf450de"
+    },
+    {
+      "mot_de": "die Menschheit, -",
+      "traduction_fr": "l’humanité",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "f7d4b775419a"
+    },
+    {
+      "mot_de": "die Leute, Pl.",
+      "traduction_fr": "les gens",
+      "exemples": [
+        {
+          "de": "die alten Leute",
+          "fr": "les personnes âgées"
+        }
+      ],
+      "page": 19,
+      "categorie": null,
+      "id": "58a6cf8f3076"
+    },
+    {
+      "mot_de": "die Menge, -n",
+      "traduction_fr": "la foule",
+      "exemples": [
+        {
+          "de": "Ich erblickte ihn in der Menge.",
+          "fr": "Je l’ai aperçu dans la foule."
+        }
+      ],
+      "page": 19,
+      "categorie": null,
+      "id": "ce49d6a6c453"
+    },
+    {
+      "mot_de": "die Person, -en",
+      "traduction_fr": "la personne",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "e0d221817ea6"
+    },
+    {
+      "mot_de": "persönlich",
+      "traduction_fr": "personnel",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "cc5d805c4430"
+    },
+    {
+      "mot_de": "privat",
+      "traduction_fr": "privé",
+      "exemples": [
+        {
+          "de": "Dies sind meine privaten Angelegenheiten.",
+          "fr": "Ce sont mes affaires privées."
+        },
+        {
+          "de": "etwas von Privat an Privat verkaufen",
+          "fr": "vendre quelque chose de particulier à particulier"
+        }
+      ],
+      "page": 19,
+      "categorie": null,
+      "id": "9b0f991db461"
+    },
+    {
+      "mot_de": "die Privatadresse, -n",
+      "traduction_fr": "l’adresse personnelle",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "85497ae8617a"
+    },
+    {
+      "mot_de": "das Privatleben, -",
+      "traduction_fr": "la vie privée",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "387c9e595f85"
+    },
+    {
+      "mot_de": "die Privatschule, -n",
+      "traduction_fr": "l’école privée",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "b5cff28cf816"
+    },
+    {
+      "mot_de": "die Privatstunde, -n",
+      "traduction_fr": "la leçon particulière",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "806c2cf527df"
+    },
+    {
+      "mot_de": "der Herr, -n",
+      "traduction_fr": "le monsieur, le seigneur",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "b883a7acfd6e"
+    },
+    {
+      "mot_de": "die Dame, -n",
+      "traduction_fr": "la dame",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "1509053c9bc9"
+    },
+    {
+      "mot_de": "der Mann, -er",
+      "traduction_fr": "l’homme, le mari",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "79aa3f684cc5"
+    },
+    {
+      "mot_de": "männlich",
+      "traduction_fr": "masculin, viril",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "e171e6b8e060"
+    },
+    {
+      "mot_de": "die Frau, -en",
+      "traduction_fr": "la femme, l’épouse",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "95e4ea1bcca5"
+    },
+    {
+      "mot_de": "die Hausfrau, -en",
+      "traduction_fr": "la maîtresse de maison, la ménagère",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "f861018912b1"
+    },
+    {
+      "mot_de": "weiblich",
+      "traduction_fr": "féminin",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "91bc98ea3c1c"
+    },
+    {
+      "mot_de": "das Fräulein, -",
+      "traduction_fr": "la demoiselle",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "e71281a3c5f8"
+    },
+    {
+      "mot_de": "das Mädchen, -",
+      "traduction_fr": "la jeune fille, la fillette",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "a801d7461db6"
+    },
+    {
+      "mot_de": "das Kind, -er",
+      "traduction_fr": "l’enfant",
+      "exemples": [
+        {
+          "de": "Sie hat gerade ein Kind bekommen.",
+          "fr": "Elle vient d’avoir un enfant."
+        },
+        {
+          "de": "ein Kind adoptieren",
+          "fr": "adopter un enfant"
+        }
+      ],
+      "page": 19,
+      "categorie": null,
+      "id": "a63380c36787"
+    },
+    {
+      "mot_de": "der Junge, -n",
+      "traduction_fr": "le garçon",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "7417478266e8"
+    },
+    {
+      "mot_de": "der Kerl, -e",
+      "traduction_fr": "le gars, le gaillard",
+      "exemples": [],
+      "page": 19,
+      "categorie": null,
+      "id": "abd3cc52161d"
+    }
+  ]
+}

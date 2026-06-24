@@ -1,0 +1,279 @@
+{
+  "mots": [
+    {
+      "mot_de": "das Handgelenk, -e",
+      "traduction_fr": "le poignet",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "6b7ab797ed16"
+    },
+    {
+      "mot_de": "der Finger, -",
+      "traduction_fr": "le doigt",
+      "exemples": [
+        {
+          "de": "im auf die Finger klopfen",
+          "fr": "taper sur les doigts de quelqu’un"
+        }
+      ],
+      "page": 33,
+      "categorie": null,
+      "id": "c736abf86694"
+    },
+    {
+      "mot_de": "die Faust, -e",
+      "traduction_fr": "le poing",
+      "exemples": [
+        {
+          "de": "Er schlug mit der Faust auf den Tisch.",
+          "fr": "Il frappa du poing sur la table."
+        }
+      ],
+      "page": 33,
+      "categorie": null,
+      "id": "edf543c044f1"
+    },
+    {
+      "mot_de": "das Bein, -e",
+      "traduction_fr": "la jambe",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "0171d8a49cb0"
+    },
+    {
+      "mot_de": "das Knie, -",
+      "traduction_fr": "le genou",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "05124e08fe4b"
+    },
+    {
+      "mot_de": "der Fuß, -e",
+      "traduction_fr": "le pied",
+      "exemples": [
+        {
+          "de": "zu Fuß",
+          "fr": "à pied"
+        }
+      ],
+      "page": 33,
+      "categorie": null,
+      "id": "d7eb217c2fce"
+    },
+    {
+      "mot_de": "das Fußgelenk, -e",
+      "traduction_fr": "la cheville",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "07d8566f39ba"
+    },
+    {
+      "mot_de": "(sich) duschen",
+      "traduction_fr": "se doucher",
+      "exemples": [
+        {
+          "de": "unter die Dusche gehen",
+          "fr": "aller sous la douche"
+        }
+      ],
+      "page": 33,
+      "categorie": null,
+      "id": "fa50a6109942"
+    },
+    {
+      "mot_de": "die Dusche, -n",
+      "traduction_fr": "la douche",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "281a27cf361d"
+    },
+    {
+      "mot_de": "baden (badete, hat gebadet)",
+      "traduction_fr": "se baigner, baigner",
+      "exemples": [
+        {
+          "de": "Wir haben im See gebadet.",
+          "fr": "Nous nous sommes baignés dans le lac."
+        }
+      ],
+      "page": 33,
+      "categorie": null,
+      "id": "d9cd6247da6b"
+    },
+    {
+      "mot_de": "das Bad, -s",
+      "traduction_fr": "1. le bain  2. la salle de bains",
+      "exemples": [
+        {
+          "de": "Kann ich ein Bad nehmen?",
+          "fr": "Puis-je prendre un bain ?"
+        },
+        {
+          "de": "Das Bad ist besetzt.",
+          "fr": "La salle de bains est occupée."
+        }
+      ],
+      "page": 33,
+      "categorie": null,
+      "id": "cc904600db68"
+    },
+    {
+      "mot_de": "die Badewanne, -n",
+      "traduction_fr": "la baignoire",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "3f91f0004fbc"
+    },
+    {
+      "mot_de": "das Badmöbel, -",
+      "traduction_fr": "le meuble de salle de bain",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "3c2817ba169f"
+    },
+    {
+      "mot_de": "der Spiegelschrank, -\"e",
+      "traduction_fr": "l’armoire de toilette",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "307547db3bf8"
+    },
+    {
+      "mot_de": "das Medizinschränkchen, -",
+      "traduction_fr": "l’armoire à pharmacie",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "47d350b0db18"
+    },
+    {
+      "mot_de": "das Waschbecken, -",
+      "traduction_fr": "le lavabo",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "69e7bbb6b631"
+    },
+    {
+      "mot_de": "das Handtuch, -e",
+      "traduction_fr": "la serviette de toilette",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "5d246550e350"
+    },
+    {
+      "mot_de": "reiben (rieb, hat gerieben)",
+      "traduction_fr": "frotter",
+      "exemples": [
+        {
+          "de": "Ich rieb mir die Augen.",
+          "fr": "Je me frottai les yeux."
+        }
+      ],
+      "page": 33,
+      "categorie": null,
+      "id": "5dba754cef28"
+    },
+    {
+      "mot_de": "müde",
+      "traduction_fr": "fatigué",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "ff9dfd03a435"
+    },
+    {
+      "mot_de": "die Ruhe, -n",
+      "traduction_fr": "le calme, la tranquillité, le repos",
+      "exemples": [
+        {
+          "de": "Ruhe haben, in Ruhe lassen",
+          "fr": "être tranquille, laisser en paix"
+        }
+      ],
+      "page": 33,
+      "categorie": null,
+      "id": "381d084bb700"
+    },
+    {
+      "mot_de": "ruhig",
+      "traduction_fr": "calme, tranquille",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "cda266b75345"
+    },
+    {
+      "mot_de": "sich ausruhen (ruhte sich aus, hat sich ausgeruht)",
+      "traduction_fr": "se reposer",
+      "exemples": [
+        {
+          "de": "Er hat sich einen Augenblick ausgeruht.",
+          "fr": "Il s’est reposé quelques instants."
+        }
+      ],
+      "page": 33,
+      "categorie": null,
+      "id": "135c2cebe1d1"
+    },
+    {
+      "mot_de": "entspannt",
+      "traduction_fr": "détendu",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "bd6a8d613500"
+    },
+    {
+      "mot_de": "schlafen (schlief, hat geschlafen)",
+      "traduction_fr": "dormir",
+      "exemples": [
+        {
+          "de": "Er ging schlafen.",
+          "fr": "Il est allé se coucher."
+        }
+      ],
+      "page": 33,
+      "categorie": null,
+      "id": "4686710398fc"
+    },
+    {
+      "mot_de": "der Schlaf, -e",
+      "traduction_fr": "le sommeil",
+      "exemples": [
+        {
+          "de": "schläfrig sein",
+          "fr": "avoir sommeil"
+        }
+      ],
+      "page": 33,
+      "categorie": null,
+      "id": "698dc2d5f371"
+    },
+    {
+      "mot_de": "schläfrig sein",
+      "traduction_fr": "avoir sommeil",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "350fbf5f5d50"
+    },
+    {
+      "mot_de": "einschlafen (schlief ein, ist eingeschlafen)",
+      "traduction_fr": "s’endormir",
+      "exemples": [],
+      "page": 33,
+      "categorie": null,
+      "id": "5bc32e0530ec"
+    }
+  ]
+}

@@ -46,6 +46,8 @@ website:
             text: "Les mathematiques par le geste"
           - href: essays\demontrer-n_est-pas-situer.md
             text: "Démontrer n'est pas situer"
+          - href: essays\software-engineering.md
+            text: "Manifesto for Intelligible Software Engineering"
       - section: "Cheat sheets"
         collapsed: true
         contents:
@@ -86,6 +88,8 @@ website:
         contents:
           - href: machine_learning/clustering/clustering_metrics.md
             text: "Évaluer un clustering"
+          - href: machine_learning/estimation/linear_regression.md
+            text: "Convergence de vues"
       - section: "Meaning crisis"
         collapsed: true
         contents:

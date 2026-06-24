@@ -1,0 +1,201 @@
+{
+  "mots": [
+    {
+      "mot_de": "halten, hält, hielt, hat gehalten",
+      "traduction_fr": "tenir, maintenir",
+      "exemples": [
+        {
+          "de": "ein Messer in der Hand halten",
+          "fr": "tenir un couteau à la main"
+        },
+        {
+          "de": "Er hat nicht Wort gehalten.",
+          "fr": "Il n’a pas tenu parole."
+        }
+      ],
+      "page": 57,
+      "categorie": null,
+      "id": "51bab4b8d3d6"
+    },
+    {
+      "mot_de": "tragen, trug, hat getragen",
+      "traduction_fr": "porter",
+      "exemples": [
+        {
+          "de": "Ich kann den Koffer selber tragen.",
+          "fr": "Je peux porter la valise moi-même."
+        },
+        {
+          "de": "Er trägt ein rotes Hemd, eine Brille.",
+          "fr": "Il porte une chemise rouge et des lunettes."
+        }
+      ],
+      "page": 57,
+      "categorie": null,
+      "id": "9579f5a04275"
+    },
+    {
+      "mot_de": "stellen, stellte, hat gestellt",
+      "traduction_fr": "placer, poser",
+      "exemples": [
+        {
+          "de": "Sie stellte die Lampe auf die Kommode, in eine Ecke, vor das Fenster.",
+          "fr": "Elle posa la lampe sur la commode, dans un coin, devant la fenêtre."
+        }
+      ],
+      "page": 57,
+      "categorie": null,
+      "id": "8a8ccbb340f9"
+    },
+    {
+      "mot_de": "stehen (stand, hat gestanden)",
+      "traduction_fr": "être debout ; se trouver",
+      "exemples": [
+        {
+          "de": "Die Flasche steht auf dem Tisch, im Schrank.",
+          "fr": "La bouteille est sur la table, dans l’armoire."
+        },
+        {
+          "de": "Er stand am Fenster.",
+          "fr": "Il se tenait à la fenêtre."
+        }
+      ],
+      "page": 57,
+      "categorie": null,
+      "id": "7588a6f743e3"
+    },
+    {
+      "mot_de": "legen (legte, hat gelegt)",
+      "traduction_fr": "poser, mettre à plat",
+      "exemples": [
+        {
+          "de": "Er legte seine Brille auf den Tisch, neben das Buch.",
+          "fr": "Il posa ses lunettes sur la table, à côté du livre."
+        }
+      ],
+      "page": 57,
+      "categorie": null,
+      "id": "0645de198900"
+    },
+    {
+      "mot_de": "liegen, liegt, lag, hat gelegen",
+      "traduction_fr": "être couché, être étendu, se trouver, être situé",
+      "exemples": [
+        {
+          "de": "Das Buch liegt auf dem Tisch, unter der Zeitung.",
+          "fr": "Le livre est sur la table, sous le journal."
+        },
+        {
+          "de": "Kiel liegt in Norddeutschland.",
+          "fr": "Kiel se trouve dans le nord de l’Allemagne."
+        }
+      ],
+      "page": 57,
+      "categorie": null,
+      "id": "be7ec6908e92"
+    },
+    {
+      "mot_de": "stecken (in + A), steckte, hat gesteckt",
+      "traduction_fr": "mettre dans, introduire",
+      "exemples": [
+        {
+          "de": "Er steckte den Schlüssel in die Tasche.",
+          "fr": "Il mit la clé dans sa poche."
+        }
+      ],
+      "page": 57,
+      "categorie": null,
+      "id": "c8d228dc1cf9"
+    },
+    {
+      "mot_de": "stecken (in + D), steckte, hat gesteckt",
+      "traduction_fr": "être dans",
+      "exemples": [
+        {
+          "de": "Das Geld steckte in einem Briefumschlag.",
+          "fr": "L’argent se trouvait dans une enveloppe."
+        }
+      ],
+      "page": 57,
+      "categorie": null,
+      "id": "9bc731ba6011"
+    },
+    {
+      "mot_de": "hängen, hängt, hing, hat (ist) gehangen",
+      "traduction_fr": "suspendre, pendre",
+      "exemples": [
+        {
+          "de": "Sie hängte das Kleid vor das Fenster, an die Tür, in den Schrank.",
+          "fr": "Elle suspendit la robe devant la fenêtre, à la porte, dans l’armoire."
+        }
+      ],
+      "page": 57,
+      "categorie": null,
+      "id": "c65c79ccc585"
+    },
+    {
+      "mot_de": "hängen, hing, hat gehangen",
+      "traduction_fr": "être suspendu, pendre",
+      "exemples": [
+        {
+          "de": "Das Bild hing immer noch an der Wand.",
+          "fr": "Le tableau était encore accroché au mur."
+        }
+      ],
+      "page": 57,
+      "categorie": null,
+      "id": "d03c01f8a819"
+    },
+    {
+      "mot_de": "die Gardine, -n",
+      "traduction_fr": "le rideau",
+      "exemples": [],
+      "page": 57,
+      "categorie": null,
+      "id": "99e7c3c1fb96"
+    },
+    {
+      "mot_de": "besorgen, besorgte, hat besorgt",
+      "traduction_fr": "se charger de, procurer",
+      "exemples": [
+        {
+          "de": "Können Sie mir Theaterkarten besorgen?",
+          "fr": "Pouvez-vous me procurer des billets pour le théâtre ?"
+        }
+      ],
+      "page": 57,
+      "categorie": null,
+      "id": "9e3a8455db0d"
+    },
+    {
+      "mot_de": "schicken, schickte, hat geschickt",
+      "traduction_fr": "envoyer",
+      "exemples": [
+        {
+          "de": "Er schickte seinen Sohn zur Post.",
+          "fr": "Il a envoyé son fils à la poste."
+        },
+        {
+          "de": "Ich schicke Ihnen den Brief noch heute.",
+          "fr": "Je vous envoie la lettre aujourd’hui même."
+        }
+      ],
+      "page": 57,
+      "categorie": null,
+      "id": "200b1334b984"
+    },
+    {
+      "mot_de": "holen, holte, hat geholt",
+      "traduction_fr": "aller chercher",
+      "exemples": [
+        {
+          "de": "Er hob einen Stein vom Boden auf.",
+          "fr": "Il ramassa un caillou."
+        }
+      ],
+      "page": 57,
+      "categorie": null,
+      "id": "f9e8e2a04f7a"
+    }
+  ]
+}

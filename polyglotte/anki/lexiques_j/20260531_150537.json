@@ -1,0 +1,582 @@
+{
+  "mots": [
+    {
+      "mot_de": "das Gefühl, -e",
+      "traduction_fr": "le sentiment",
+      "exemples": [
+        {
+          "de": "Hast du dein Gefühl verloren?",
+          "fr": "As-tu perdu ton sentiment ?"
+        },
+        {
+          "de": "Gefühlen freien Lauf lassen",
+          "fr": "laisser libre cours à ses sentiments"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "3e52f5539613"
+    },
+    {
+      "mot_de": "fühlen (fühlte, hat gefühlt)",
+      "traduction_fr": "sentir, ressentir",
+      "exemples": [
+        {
+          "de": "Etwas fühlt sich gut an.",
+          "fr": "Quelque chose est agréable au toucher."
+        },
+        {
+          "de": "Ich fühle, dass er mir nicht vertraut.",
+          "fr": "Je sens qu’il ne me fait pas confiance."
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "afe1e479d12e"
+    },
+    {
+      "mot_de": "sich freuen (freute sich, hat sich gefreut)",
+      "traduction_fr": "se réjouir",
+      "exemples": [
+        {
+          "de": "Ich freue mich auf die Ferien.",
+          "fr": "Je me réjouis des vacances."
+        },
+        {
+          "de": "Freuen Sie sich!",
+          "fr": "Réjouissez-vous !"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "fd46c227098c"
+    },
+    {
+      "mot_de": "das Glück, -e",
+      "traduction_fr": "le bonheur, la chance",
+      "exemples": [
+        {
+          "de": "Glückliche Menschen sind oft zufrieden.",
+          "fr": "Les gens heureux sont souvent satisfaits."
+        },
+        {
+          "de": "Glücklicherweise gab es keine Verletzten.",
+          "fr": "Heureusement, il n’y a pas eu de blessés."
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "828d8615b020"
+    },
+    {
+      "mot_de": "glücklich",
+      "traduction_fr": "heureux, heureuse",
+      "exemples": [
+        {
+          "de": "Ich bin glücklich.",
+          "fr": "Je suis heureux."
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "1bab64389aed"
+    },
+    {
+      "mot_de": "glücklicherweise",
+      "traduction_fr": "heureusement",
+      "exemples": [
+        {
+          "de": "Glücklicherweise gab es keine Verletzten.",
+          "fr": "Heureusement, il n’y a pas eu de blessés."
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "3260dd44dc35"
+    },
+    {
+      "mot_de": "die Fröhlichkeit, -en",
+      "traduction_fr": "la gaieté",
+      "exemples": [
+        {
+          "de": "Die Fröhlichkeit ist mir nicht verloren gegangen.",
+          "fr": "Je n’ai pas perdu ma gaieté."
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "e2229466d514"
+    },
+    {
+      "mot_de": "fröhlich",
+      "traduction_fr": "gai, joyeux",
+      "exemples": [
+        {
+          "de": "Die Fröhlichkeit ist mir nicht verloren gegangen.",
+          "fr": "Je n’ai pas perdu ma gaieté."
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "424a2d5848ce"
+    },
+    {
+      "mot_de": "empfindlich",
+      "traduction_fr": "sensible",
+      "exemples": [
+        {
+          "de": "empfindlich gegen Kälte",
+          "fr": "sensible au froid"
+        },
+        {
+          "de": "Sei nicht so empfindlich!",
+          "fr": "Ne sois pas si susceptible !"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "75772c7bee2a"
+    },
+    {
+      "mot_de": "empfindlich sein",
+      "traduction_fr": "être sensible",
+      "exemples": [
+        {
+          "de": "empfindlich gegen Kälte",
+          "fr": "sensible au froid"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "49d562ef1a3a"
+    },
+    {
+      "mot_de": "empfindlich gegenüber",
+      "traduction_fr": "sensible à",
+      "exemples": [
+        {
+          "de": "empfindlich gegenüber Kritik",
+          "fr": "sensible à la critique"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "80f5d163cb8c"
+    },
+    {
+      "mot_de": "die Empfindung, -en",
+      "traduction_fr": "la sensation",
+      "exemples": [
+        {
+          "de": "Was hat ihn so heftig bewegt?",
+          "fr": "Qu’est-ce qui l’a tellement ému ?"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "c2c04092110c"
+    },
+    {
+      "mot_de": "empfinden (empfand, hat empfunden)",
+      "traduction_fr": "éprouver, ressentir",
+      "exemples": [
+        {
+          "de": "Schmerzen, Hunger, Mitleid empfinden",
+          "fr": "ressentir des douleurs, la faim, de la pitié"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "fd7cf4568f2f"
+    },
+    {
+      "mot_de": "Schmerzen, Hunger, Mitleid empfinden",
+      "traduction_fr": "ressentir des douleurs, la faim, de la pitié",
+      "exemples": [
+        {
+          "de": "Schmerzen, Hunger, Mitleid empfinden",
+          "fr": "ressentir des douleurs, la faim, de la pitié"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "2cef4e941c38"
+    },
+    {
+      "mot_de": "was hat ihn so heftig bewegt?",
+      "traduction_fr": "Qu’est-ce qui l’a tellement ému ?",
+      "exemples": [
+        {
+          "de": "Was hat ihn so heftig bewegt?",
+          "fr": "Qu’est-ce qui l’a tellement ému ?"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "5a07410865c4"
+    },
+    {
+      "mot_de": "bewegen (bewegte, hat bewegt)",
+      "traduction_fr": "émouvoir, remuer",
+      "exemples": [
+        {
+          "de": "Was hat ihn so heftig bewegt?",
+          "fr": "Qu’est-ce qui l’a tellement ému ?"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "3ed1450b4d0a"
+    },
+    {
+      "mot_de": "die Empfindung, -en",
+      "traduction_fr": "la sensation",
+      "exemples": [
+        {
+          "de": "Was hat ihn so heftig bewegt?",
+          "fr": "Qu’est-ce qui l’a tellement ému ?"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "c2c04092110c"
+    },
+    {
+      "mot_de": "die Fröhlichkeit, -en",
+      "traduction_fr": "la gaieté",
+      "exemples": [
+        {
+          "de": "Die Fröhlichkeit ist mir nicht verloren gegangen.",
+          "fr": "Je n’ai pas perdu ma gaieté."
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "e2229466d514"
+    },
+    {
+      "mot_de": "fröhlich",
+      "traduction_fr": "joyeux, gai",
+      "exemples": [
+        {
+          "de": "Die Fröhlichkeit ist mir nicht verloren gegangen.",
+          "fr": "Je n’ai pas perdu ma gaieté."
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "424a2d5848ce"
+    },
+    {
+      "mot_de": "glücklich",
+      "traduction_fr": "heureux",
+      "exemples": [
+        {
+          "de": "Glückliche Menschen sind oft zufrieden.",
+          "fr": "Les gens heureux sont souvent satisfaits."
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "1a1479e8b54a"
+    },
+    {
+      "mot_de": "glücklicherweise",
+      "traduction_fr": "heureusement",
+      "exemples": [
+        {
+          "de": "Glücklicherweise gab es keine Verletzten.",
+          "fr": "Heureusement, il n’y a pas eu de blessés."
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "3260dd44dc35"
+    },
+    {
+      "mot_de": "glücklich",
+      "traduction_fr": "heureux",
+      "exemples": [
+        {
+          "de": "Ich bin glücklich.",
+          "fr": "Je suis heureux."
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "1bab64389aed"
+    },
+    {
+      "mot_de": "sich freuen (freute sich, hat sich gefreut)",
+      "traduction_fr": "se réjouir",
+      "exemples": [
+        {
+          "de": "Freuen Sie sich!",
+          "fr": "Réjouissez-vous !"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "107e02de2276"
+    },
+    {
+      "mot_de": "sich freuen (freute sich, hat sich gefreut)",
+      "traduction_fr": "se réjouir",
+      "exemples": [
+        {
+          "de": "Freuen Sie sich!",
+          "fr": "Réjouissez-vous !"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "107e02de2276"
+    },
+    {
+      "mot_de": "das Glück, -e",
+      "traduction_fr": "le bonheur, la chance",
+      "exemples": [
+        {
+          "de": "Glückliche Menschen sind oft zufrieden.",
+          "fr": "Les gens heureux sont souvent satisfaits."
+        },
+        {
+          "de": "Glücklicherweise gab es keine Verletzten.",
+          "fr": "Heureusement, il n’y a pas eu de blessés."
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "828d8615b020"
+    },
+    {
+      "mot_de": "zufrieden",
+      "traduction_fr": "satisfait",
+      "exemples": [
+        {
+          "de": "Glückliche Menschen sind oft zufrieden.",
+          "fr": "Les gens heureux sont souvent satisfaits."
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "01fe4ac751d9"
+    },
+    {
+      "mot_de": "zufrieden (mit + D)",
+      "traduction_fr": "être satisfait de",
+      "exemples": [
+        {
+          "de": "Er ist mit allem zufrieden.",
+          "fr": "Il est satisfait de tout."
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "b766987276ad"
+    },
+    {
+      "mot_de": "die Freude, -n",
+      "traduction_fr": "la joie",
+      "exemples": [
+        {
+          "de": "Jemanden eine Freude machen",
+          "fr": "faire plaisir à quelqu’un"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "9f3dc604a715"
+    },
+    {
+      "mot_de": "jemandem eine Freude machen",
+      "traduction_fr": "faire plaisir à quelqu’un",
+      "exemples": [
+        {
+          "de": "Jemanden eine Freude machen",
+          "fr": "faire plaisir à quelqu’un"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "29fd87d3b281"
+    },
+    {
+      "mot_de": "sich freuen (freute sich, hat sich gefreut)",
+      "traduction_fr": "se réjouir",
+      "exemples": [
+        {
+          "de": "Ich freue mich auf die Ferien.",
+          "fr": "Je me réjouis des vacances."
+        },
+        {
+          "de": "Freuen Sie sich!",
+          "fr": "Réjouissez-vous !"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "fd46c227098c"
+    },
+    {
+      "mot_de": "die Trauer, -n",
+      "traduction_fr": "le chagrin, la tristesse",
+      "exemples": [
+        {
+          "de": "Trauer, traurig",
+          "fr": "deuil, triste"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "3d327396bfc4"
+    },
+    {
+      "mot_de": "traurig",
+      "traduction_fr": "triste",
+      "exemples": [
+        {
+          "de": "Trauer, traurig",
+          "fr": "deuil, triste"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "4ae3d32041b7"
+    },
+    {
+      "mot_de": "sich trauen (traute sich, hat sich getraut)",
+      "traduction_fr": "oser",
+      "exemples": [
+        {
+          "de": "sich etwas zu tun trauen",
+          "fr": "oser faire quelque chose"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "532c7296eda7"
+    },
+    {
+      "mot_de": "sich etwas zu tun trauen",
+      "traduction_fr": "oser faire quelque chose",
+      "exemples": [
+        {
+          "de": "sich etwas zu tun trauen",
+          "fr": "oser faire quelque chose"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "18a9fad02e32"
+    },
+    {
+      "mot_de": "die Angst, -en",
+      "traduction_fr": "la peur",
+      "exemples": [
+        {
+          "de": "Angst haben",
+          "fr": "avoir peur"
+        },
+        {
+          "de": "Angst vor etwas haben",
+          "fr": "avoir peur de quelque chose"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "04910b2d9efe"
+    },
+    {
+      "mot_de": "Angst haben",
+      "traduction_fr": "avoir peur",
+      "exemples": [
+        {
+          "de": "Angst haben",
+          "fr": "avoir peur"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "98e06d405573"
+    },
+    {
+      "mot_de": "ängstlich",
+      "traduction_fr": "anxieux, craintif",
+      "exemples": [
+        {
+          "de": "ängstlich sein",
+          "fr": "être anxieux"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "72e166f933ff"
+    },
+    {
+      "mot_de": "ängstlich sein",
+      "traduction_fr": "être anxieux",
+      "exemples": [
+        {
+          "de": "ängstlich sein",
+          "fr": "être anxieux"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "65ef8ea4c097"
+    },
+    {
+      "mot_de": "sich fürchten",
+      "traduction_fr": "avoir peur",
+      "exemples": [
+        {
+          "de": "sich vor etwas fürchten",
+          "fr": "avoir peur de quelque chose"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "c6392ea5b7b8"
+    },
+    {
+      "mot_de": "sich vor etwas fürchten",
+      "traduction_fr": "avoir peur de quelque chose",
+      "exemples": [
+        {
+          "de": "sich vor etwas fürchten",
+          "fr": "avoir peur de quelque chose"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "027e720dba38"
+    },
+    {
+      "mot_de": "die Furcht, -en",
+      "traduction_fr": "la peur",
+      "exemples": [
+        {
+          "de": "jemanden eine Freude machen",
+          "fr": "faire plaisir à quelqu’un"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "f74ddaeb7f89"
+    },
+    {
+      "mot_de": "sich freuen (freute sich, hat sich gefreut)",
+      "traduction_fr": "se réjouir",
+      "exemples": [
+        {
+          "de": "Freuen Sie sich!",
+          "fr": "Réjouissez-vous !"
+        }
+      ],
+      "page": null,
+      "categorie": null,
+      "id": "107e02de2276"
+    }
+  ]
+}

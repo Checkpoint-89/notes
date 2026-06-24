@@ -1,0 +1,280 @@
+{
+  "mots": [
+    {
+      "mot_de": "die Prüfung, -en",
+      "traduction_fr": "l’examen",
+      "exemples": [
+        {
+          "de": "eine Prüfung ablegen",
+          "fr": "passer un examen"
+        }
+      ],
+      "page": 118,
+      "categorie": null,
+      "id": "a8ee9e25db08"
+    },
+    {
+      "mot_de": "prüfen (prüfte, hat geprüft)",
+      "traduction_fr": "examiner, vérifier",
+      "exemples": [
+        {
+          "de": "eine Rechnung prüfen",
+          "fr": "vérifier une facture"
+        },
+        {
+          "de": "einen Studenten prüfen",
+          "fr": "interroger un étudiant"
+        },
+        {
+          "de": "etwas auf seine Festigkeit prüfen",
+          "fr": "vérifier la solidité de quelque chose"
+        },
+        {
+          "de": "Das Schicksal hat ihn hart geprüft.",
+          "fr": "Le destin l’a cruellement éprouvé."
+        }
+      ],
+      "page": 118,
+      "categorie": null,
+      "id": "d8e81485a84d"
+    },
+    {
+      "mot_de": "bestehen (bestand, hat bestanden)",
+      "traduction_fr": "réussir (un examen)",
+      "exemples": [
+        {
+          "de": "Hat sie die Prüfung bestanden?",
+          "fr": "A-t-elle réussi l’examen ?"
+        }
+      ],
+      "page": 118,
+      "categorie": null,
+      "id": "49b324034323"
+    },
+    {
+      "mot_de": "die Wissenschaft, -en",
+      "traduction_fr": "la science",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "463c619950dd"
+    },
+    {
+      "mot_de": "der Wissenschaftler, -",
+      "traduction_fr": "le scientifique",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "5246cd77b003"
+    },
+    {
+      "mot_de": "wissenschaftlich",
+      "traduction_fr": "scientifique",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "48d8a1b7b21e"
+    },
+    {
+      "mot_de": "das Fach, -er",
+      "traduction_fr": "la matière, la discipline",
+      "exemples": [
+        {
+          "de": "Er beherrscht sein Fach vollkommen.",
+          "fr": "Il domine parfaitement sa matière."
+        }
+      ],
+      "page": 118,
+      "categorie": null,
+      "id": "87c6a34f4496"
+    },
+    {
+      "mot_de": "das Wahlfach, -er",
+      "traduction_fr": "la matière optionnelle",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "b3d391c2ccab"
+    },
+    {
+      "mot_de": "das Pflichtfach, -er",
+      "traduction_fr": "la matière obligatoire",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "83ae8b63d685"
+    },
+    {
+      "mot_de": "der Fachmann, -leute",
+      "traduction_fr": "le spécialiste",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "b2ef89d34e33"
+    },
+    {
+      "mot_de": "der Spezialist, -en",
+      "traduction_fr": "le spécialiste",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "7b3ce488af25"
+    },
+    {
+      "mot_de": "der Laie, -n",
+      "traduction_fr": "le profane",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "55ce8e169622"
+    },
+    {
+      "mot_de": "forschen (forschte, hat geforscht)",
+      "traduction_fr": "faire de la recherche, mener des recherches",
+      "exemples": [
+        {
+          "de": "Man forscht seit langem nach den Ursachen dieser Krankheit.",
+          "fr": "On recherche depuis longtemps les causes de cette maladie."
+        }
+      ],
+      "page": 118,
+      "categorie": null,
+      "id": "4af626e88770"
+    },
+    {
+      "mot_de": "der Forscher, -",
+      "traduction_fr": "le chercheur",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "3090ee66ad29"
+    },
+    {
+      "mot_de": "die Forschung, -en",
+      "traduction_fr": "la recherche (scientifique)",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "802c4ce7a4d7"
+    },
+    {
+      "mot_de": "entdecken",
+      "traduction_fr": "découvrir",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "052afd502ccb"
+    },
+    {
+      "mot_de": "die Entdeckung, -en",
+      "traduction_fr": "la découverte",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "6bac1db25005"
+    },
+    {
+      "mot_de": "die Naturwissenschaften, Pl.",
+      "traduction_fr": "les sciences naturelles",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "2e3977330153"
+    },
+    {
+      "mot_de": "das Experiment, -e",
+      "traduction_fr": "l’expérience (scientifique)",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "551b8594c60b"
+    },
+    {
+      "mot_de": "das Laboratorium, die Laboratorien",
+      "traduction_fr": "le laboratoire",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "f223b615b01d"
+    },
+    {
+      "mot_de": "die Mathematik",
+      "traduction_fr": "les mathématiques",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "0cdc057d181c"
+    },
+    {
+      "mot_de": "die Physik",
+      "traduction_fr": "la physique",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "a80bbdda7fb8"
+    },
+    {
+      "mot_de": "die Chemie",
+      "traduction_fr": "la chimie",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "0185eb7ab8ba"
+    },
+    {
+      "mot_de": "die Medizin",
+      "traduction_fr": "la médecine",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "0b387e117b27"
+    },
+    {
+      "mot_de": "gebildet",
+      "traduction_fr": "cultivé",
+      "exemples": [],
+      "page": 118,
+      "categorie": null,
+      "id": "ebd9b6b14c4f"
+    },
+    {
+      "mot_de": "die Bildung, -",
+      "traduction_fr": "la culture",
+      "exemples": [
+        {
+          "de": "die Allgemeinbildung",
+          "fr": "la culture générale"
+        }
+      ],
+      "page": 118,
+      "categorie": null,
+      "id": "b85459fb66ee"
+    },
+    {
+      "mot_de": "das Gebiet, -e",
+      "traduction_fr": "le domaine",
+      "exemples": [
+        {
+          "de": "Er weiß auf seinem Gebiet hervorragend Bescheid.",
+          "fr": "Il est très calé dans son domaine."
+        }
+      ],
+      "page": 118,
+      "categorie": null,
+      "id": "f71dc7def618"
+    },
+    {
+      "mot_de": "der Bereich, -e",
+      "traduction_fr": "le domaine",
+      "exemples": [
+        {
+          "de": "Das fällt nicht in meinen Bereich.",
+          "fr": "Ça n’est pas de mon domaine."
+        }
+      ],
+      "page": 118,
+      "categorie": null,
+      "id": "27ef28bd3468"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "mots": [
+    {
+      "mot_de": "die Frage, -n",
+      "traduction_fr": "la question",
+      "exemples": [
+        {
+          "de": "Fragen Sie diesen Herrn!",
+          "fr": "Demandez à ce monsieur !"
+        },
+        {
+          "de": "jemanden nach dem Weg fragen",
+          "fr": "demander son chemin à quelqu’un"
+        },
+        {
+          "de": "Ich frage mich, woher er mich kennt.",
+          "fr": "Je me demande d’où il me connaît."
+        }
+      ],
+      "page": 100,
+      "categorie": null,
+      "id": "3f45717b531e"
+    },
+    {
+      "mot_de": "fragen (fragte, hat gefragt)",
+      "traduction_fr": "demander, poser une question à",
+      "exemples": [
+        {
+          "de": "Fragen Sie diesen Herrn!",
+          "fr": "Demandez à ce monsieur !"
+        },
+        {
+          "de": "jemanden nach dem Weg fragen",
+          "fr": "demander son chemin à quelqu’un"
+        },
+        {
+          "de": "Ich frage mich, woher er mich kennt.",
+          "fr": "Je me demande d’où il me connaît."
+        }
+      ],
+      "page": 100,
+      "categorie": null,
+      "id": "15411875e13b"
+    },
+    {
+      "mot_de": "denn",
+      "traduction_fr": "donc",
+      "exemples": [
+        {
+          "de": "Sind Sie denn nie zufrieden?",
+          "fr": "N’êtes-vous donc jamais content ?"
+        }
+      ],
+      "page": 100,
+      "categorie": null,
+      "id": "16db3ee1964f"
+    },
+    {
+      "mot_de": "ob",
+      "traduction_fr": "si (interrogation indirecte)",
+      "exemples": [
+        {
+          "de": "Ich frage mich, ob er kommen wird.",
+          "fr": "Je me demande s’il viendra."
+        }
+      ],
+      "page": 100,
+      "categorie": null,
+      "id": "3ca4bc26a79c"
+    },
+    {
+      "mot_de": "die Antwort, -en",
+      "traduction_fr": "la réponse",
+      "exemples": [
+        {
+          "de": "Zuerst wollte er mir nicht antworten.",
+          "fr": "D’abord, il ne voulut pas me répondre."
+        },
+        {
+          "de": "Er antwortete sofort auf die Frage.",
+          "fr": "Il répondit tout de suite à la question."
+        }
+      ],
+      "page": 100,
+      "categorie": null,
+      "id": "0bbaa508f9f6"
+    },
+    {
+      "mot_de": "antworten (antwortete, hat geantwortet)",
+      "traduction_fr": "répondre",
+      "exemples": [
+        {
+          "de": "Zuerst wollte er mir nicht antworten.",
+          "fr": "D’abord, il ne voulut pas me répondre."
+        },
+        {
+          "de": "Er antwortete sofort auf die Frage.",
+          "fr": "Il répondit tout de suite à la question."
+        }
+      ],
+      "page": 100,
+      "categorie": null,
+      "id": "59a81e84faa4"
+    },
+    {
+      "mot_de": "beantworten (beantwortete, hat beantwortet)",
+      "traduction_fr": "répondre à (qqch.)",
+      "exemples": [
+        {
+          "de": "eine Frage, einen Brief beantworten",
+          "fr": "répondre à une question, à une lettre"
+        }
+      ],
+      "page": 100,
+      "categorie": null,
+      "id": "96488a4c0ed1"
+    },
+    {
+      "mot_de": "einverstanden",
+      "traduction_fr": "d’accord avec",
+      "exemples": [
+        {
+          "de": "Er war mit unserem Vorschlag einverstanden.",
+          "fr": "Il était d’accord avec notre proposition."
+        }
+      ],
+      "page": 100,
+      "categorie": null,
+      "id": "703861b054e6"
+    },
+    {
+      "mot_de": "nicht wahr?",
+      "traduction_fr": "n’est-ce pas ?",
+      "exemples": [
+        {
+          "de": "Sie sind damit einverstanden, nicht wahr?",
+          "fr": "Vous êtes d’accord, n’est-ce pas ?"
+        }
+      ],
+      "page": 100,
+      "categorie": null,
+      "id": "31812945c94d"
+    },
+    {
+      "mot_de": "ja",
+      "traduction_fr": "oui",
+      "exemples": [],
+      "page": 100,
+      "categorie": null,
+      "id": "a78c5bf69b40"
+    },
+    {
+      "mot_de": "bestimmt",
+      "traduction_fr": "certainement, assurément",
+      "exemples": [
+        {
+          "de": "Wird er gewinnen? – Bestimmt.",
+          "fr": "Est-ce qu’il gagnera ? – Certainement."
+        },
+        {
+          "de": "Ich kann es nicht bestimmt sagen.",
+          "fr": "Je ne peux pas le dire avec certitude."
+        }
+      ],
+      "page": 100,
+      "categorie": null,
+      "id": "e81649d995cd"
+    },
+    {
+      "mot_de": "gewiß, sicher",
+      "traduction_fr": "certainement, sûrement",
+      "exemples": [
+        {
+          "de": "Er kommt gewiß.",
+          "fr": "Il viendra sûrement."
+        },
+        {
+          "de": "ein gewisser Herr Vogt",
+          "fr": "un certain Monsieur Vogt"
+        },
+        {
+          "de": "Über gewisse Dinge spricht man nicht.",
+          "fr": "Il y a des choses dont on ne parle pas."
+        },
+        {
+          "de": "Das weiß ich aus sicherer Quelle.",
+          "fr": "Je le sais de source sûre."
+        },
+        {
+          "de": "Das ist sicher richtig.",
+          "fr": "C’est sûrement vrai, juste."
+        }
+      ],
+      "page": 100,
+      "categorie": null,
+      "id": "6fc5a796ab0d"
+    },
+    {
+      "mot_de": "natürlich",
+      "traduction_fr": "naturel, naturellement",
+      "exemples": [
+        {
+          "de": "eine natürliche Grenze",
+          "fr": "une frontière naturelle"
+        },
+        {
+          "de": "Das ist ganz natürlich.",
+          "fr": "C’est tout à fait naturel."
+        },
+        {
+          "de": "Er wollte natürlich nicht zu Fuß gehen.",
+          "fr": "Naturellement, il ne voulut pas aller à pied."
+        }
+      ],
+      "page": 100,
+      "categorie": null,
+      "id": "316eadf26c59"
+    },
+    {
+      "mot_de": "ohne weiteres",
+      "traduction_fr": "sans difficulté, sans hésiter",
+      "exemples": [
+        {
+          "de": "Er glaubte es ohne weiteres.",
+          "fr": "Il le crut sans hésiter."
+        }
+      ],
+      "page": 100,
+      "categorie": null,
+      "id": "1e5e751acc4c"
+    },
+    {
+      "mot_de": "überhaupt",
+      "traduction_fr": "en somme ; d’une façon générale ; de toute façon ; du tout",
+      "exemples": [
+        {
+          "de": "Wie war das überhaupt möglich?",
+          "fr": "Comment cela a-t-il seulement été possible ?"
+        }
+      ],
+      "page": 100,
+      "categorie": null,
+      "id": "8d1a69b7b2e2"
+    }
+  ]
+}

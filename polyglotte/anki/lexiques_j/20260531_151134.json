@@ -1,0 +1,172 @@
+{
+  "mots": [
+    {
+      "mot_de": "die Freizeit, -en",
+      "traduction_fr": "les loisirs",
+      "exemples": [],
+      "page": 155,
+      "categorie": null,
+      "id": "176bca2f0212"
+    },
+    {
+      "mot_de": "der Urlaub, -e",
+      "traduction_fr": "le congé, les vacances",
+      "exemples": [
+        {
+          "de": "Er hat um Urlaub gebeten.",
+          "fr": "Il a demandé un congé."
+        },
+        {
+          "de": "Er verbrachte seinen Urlaub in den Bergen.",
+          "fr": "Il a passé ses vacances à la montagne."
+        }
+      ],
+      "page": 155,
+      "categorie": null,
+      "id": "4b679a5e4b60"
+    },
+    {
+      "mot_de": "der Urlauber, -",
+      "traduction_fr": "le vacancier",
+      "exemples": [],
+      "page": 155,
+      "categorie": null,
+      "id": "40824820bcc8"
+    },
+    {
+      "mot_de": "die Ferien, -",
+      "traduction_fr": "les vacances",
+      "exemples": [
+        {
+          "de": "Er hat vier Wochen Ferien.",
+          "fr": "Il a quatre semaines de vacances."
+        },
+        {
+          "de": "Ferien machen",
+          "fr": "prendre des vacances"
+        },
+        {
+          "de": "Sie fahren nach Spanien in die Ferien.",
+          "fr": "Ils vont en vacances en Espagne."
+        }
+      ],
+      "page": 155,
+      "categorie": null,
+      "id": "d4b9404f8172"
+    },
+    {
+      "mot_de": "verbringen (verbrachte, hat verbracht)",
+      "traduction_fr": "passer (son temps, des vacances, etc.)",
+      "exemples": [
+        {
+          "de": "Sie haben den Sommer in Finnland verbracht.",
+          "fr": "Ils ont passé l'été en Finlande."
+        }
+      ],
+      "page": 155,
+      "categorie": null,
+      "id": "13ef3b7dfe32"
+    },
+    {
+      "mot_de": "ausgehen (ging aus, ist ausgegangen)",
+      "traduction_fr": "sortir, aller au théâtre, au restaurant, etc. ; sortir pour se divertir",
+      "exemples": [
+        {
+          "de": "Gehen Sie heute Abend aus?",
+          "fr": "Est-ce que vous sortez ce soir ?"
+        },
+        {
+          "de": "- Ja, ich gehe in die Stadt, ins Theater.",
+          "fr": "- Oui, je vais en ville, au théâtre."
+        }
+      ],
+      "page": 155,
+      "categorie": null,
+      "id": "84a1cd0a3f38"
+    },
+    {
+      "mot_de": "die Unterhaltung, -en",
+      "traduction_fr": "le divertissement, la conversation",
+      "exemples": [],
+      "page": 155,
+      "categorie": null,
+      "id": "dc8066df91ca"
+    },
+    {
+      "mot_de": "die Unterhaltungsmusik",
+      "traduction_fr": "la musique légère, de variété",
+      "exemples": [],
+      "page": 155,
+      "categorie": null,
+      "id": "b7ffafe2b8b6"
+    },
+    {
+      "mot_de": "tanzen (tanzte, hat getanzt)",
+      "traduction_fr": "danser",
+      "exemples": [],
+      "page": 155,
+      "categorie": null,
+      "id": "8a9090665f22"
+    },
+    {
+      "mot_de": "das Interesse, -n",
+      "traduction_fr": "l’intérêt",
+      "exemples": [
+        {
+          "de": "Sie hat das Buch mit großem Interesse gelesen.",
+          "fr": "Elle a lu le livre avec grand intérêt."
+        },
+        {
+          "de": "Das ist in Ihrem Interesse.",
+          "fr": "C’est dans votre intérêt."
+        }
+      ],
+      "page": 155,
+      "categorie": null,
+      "id": "3f4fcc2d2fd2"
+    },
+    {
+      "mot_de": "Interesse zeigen (für + A)",
+      "traduction_fr": "montrer de l’intérêt pour",
+      "exemples": [
+        {
+          "de": "Er hat lebhaftes Interesse an dieser Frage.",
+          "fr": "Il s’intéresse vivement à la question."
+        },
+        {
+          "de": "Ich bin an diesem Projekt nicht interessiert.",
+          "fr": "Je ne suis pas intéressé par ce projet."
+        }
+      ],
+      "page": 155,
+      "categorie": null,
+      "id": "cf9aab63dc68"
+    },
+    {
+      "mot_de": "der Interessent, -en",
+      "traduction_fr": "la personne intéressée",
+      "exemples": [
+        {
+          "de": "Schicken Sie bitte die Broschüre an alle Interessenten.",
+          "fr": "Vous voudrez bien envoyer la brochure à toutes les personnes intéressées."
+        }
+      ],
+      "page": 155,
+      "categorie": null,
+      "id": "0e4d9ec85fc0"
+    },
+    {
+      "mot_de": "interessieren (interessierte, hat interessiert)",
+      "traduction_fr": "intéresser",
+      "exemples": [
+        {
+          "de": "Ihr Vorschlag interessiert mich sehr.",
+          "fr": "Votre proposition m’intéresse beaucoup."
+        }
+      ],
+      "page": 155,
+      "categorie": null,
+      "id": "8e423dee7c6d"
+    }
+  ]
+}

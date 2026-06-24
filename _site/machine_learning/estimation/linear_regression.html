@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>linear_regression – chekpoint-89</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../metacrisis/1.html" rel="next">
+<link href="../../machine_learning/clustering/clustering_metrics.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f670ab49fb9634e9dab58972b11477cb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">chekpoint-89</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+<span class="menu-text">Mes notes</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../machine_learning/clustering/clustering_metrics.html">Machine learning</a></li><li class="breadcrumb-item"><a href="../../machine_learning/estimation/linear_regression.html">Convergence de vues</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Accueil</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Polyglotte</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../polyglotte/[Russian]-gunpowder-how-it-changed-history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Порох: как он изменил историю</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Die verlorene Ehre der Katarina Blum</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../polyglotte/[German]-Die verlorene Ehre der Katarina Blum/1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Essays</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../essays/les-mathematiques-par-le-geste.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Les mathematiques par le geste</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../essays/demontrer-n_est-pas-situer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Démontrer n’est pas situer</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../essays/software-engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manifesto for Intelligible Software Engineering</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Cheat sheets</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cheat sheets/inegalites-fondamentales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inégalités fondamentales</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Maths appliquées</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../maths appliquées/1. representation-geometrie-et-resolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Representation geometrie et resolution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../maths appliquées/2. mesurer-la-proximite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Mesurer la proximite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../maths appliquées/3. projection-orthogonale-et-produit-scalaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Projection orthogonale et produit scalaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../maths appliquées/4. variables-aléatoires.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Variables aleatoires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../maths appliquées/5. distance-hyperplan-lp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Distance à un hyperplan en norme ℓp</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../maths appliquées/6. application-de-dualite-et-perte-orthogonalite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Application de dualité et perte d’orthogonalité</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Probabilités</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../probabilités/0000. syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../probabilités/0100. tribus-et-espaces-mesurables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0100. Tribus et espaces mesurables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../probabilités/0110. lemme-de-factorisation-doob.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0110. Lemme de factorisation de Doob</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../probabilités/0120. nombres-transfinis-et-ordinaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0120. Nombres transfinis et ordinaux</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../probabilités/0121. strictité-de-la-hiérarchie-borélienne.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0121. Strictité de la hiérarchie borélienne</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../probabilités/0200.mesures-et-probabilités.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">0200. Mesures et probabilités</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Machine learning</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../machine_learning/clustering/clustering_metrics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Évaluer un clustering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../machine_learning/estimation/linear_regression.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Convergence de vues</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Meaning crisis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../metacrisis/1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. All Is Fucked Up</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../metacrisis/2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Traditions &amp; Meaning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../metacrisis/3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Consciousness</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Microéconomie</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-00-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-01-motivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">00. Motivation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-02-preferences.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">01. Préférences</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-03-utilite-indifference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">02. Utilité et indifférence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-04-tms-preferences.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">03. TMS et formes de préférences</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-05-contrainte-budgetaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">04. Contrainte budgétaire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-06-choix-optimal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">05. Choix optimal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-07-demande-individuelle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">06. Demande individuelle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-08-elasticites.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">07. Élasticités</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-09-effets-prix-revenu-substitution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">08. Effets prix, revenu et substitution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-10-types-de-biens.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">09. Types de biens</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-11-preferences-revelees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10. Préférences révélées</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-12-travail-loisir.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11. Arbitrage travail-loisir</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-13-choix-intertemporel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12. Choix intertemporel</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-14-capital-humain.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13. Capital humain</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-15-risque.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">14. Risque</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../economics/micro-economics/micro-99-annexes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">99. Annexes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#la-régression-linéaire-convergence-de-vues" id="toc-la-régression-linéaire-convergence-de-vues" class="nav-link active" data-scroll-target="#la-régression-linéaire-convergence-de-vues">La régression linéaire : convergence de vues</a>
+  <ul>
+  <li><a href="#projection-orthogonale" id="toc-projection-orthogonale" class="nav-link" data-scroll-target="#projection-orthogonale">1. Projection orthogonale</a></li>
+  <li><a href="#décomposition-en-valeurs-singulières" id="toc-décomposition-en-valeurs-singulières" class="nav-link" data-scroll-target="#décomposition-en-valeurs-singulières">2. Décomposition en valeurs singulières</a></li>
+  <li><a href="#minimisation-dune-fonction-de-perte" id="toc-minimisation-dune-fonction-de-perte" class="nav-link" data-scroll-target="#minimisation-dune-fonction-de-perte">3. Minimisation d’une fonction de perte</a></li>
+  <li><a href="#maximum-de-vraisemblance" id="toc-maximum-de-vraisemblance" class="nav-link" data-scroll-target="#maximum-de-vraisemblance">4. Maximum de vraisemblance</a></li>
+  <li><a href="#estimation-map-et-régularisation" id="toc-estimation-map-et-régularisation" class="nav-link" data-scroll-target="#estimation-map-et-régularisation">5. Estimation MAP et régularisation</a></li>
+  <li><a href="#optimalité-gauss-markov-et-cramér-rao" id="toc-optimalité-gauss-markov-et-cramér-rao" class="nav-link" data-scroll-target="#optimalité-gauss-markov-et-cramér-rao">6. Optimalité : Gauss-Markov et Cramér-Rao</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#points-à-consolider" id="toc-points-à-consolider" class="nav-link" data-scroll-target="#points-à-consolider">Points à consolider</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../machine_learning/clustering/clustering_metrics.html">Machine learning</a></li><li class="breadcrumb-item"><a href="../../machine_learning/estimation/linear_regression.html">Convergence de vues</a></li></ol></nav></header>
+
+
+
+
+<section id="la-régression-linéaire-convergence-de-vues" class="level1">
+<h1>La régression linéaire : convergence de vues</h1>
+<blockquote class="blockquote">
+<p><strong>Idée directrice.</strong> La régression linéaire est suffisamment simple pour être résolue par une dizaine de méthodes différentes — et suffisamment riche pour que chacune révèle quelque chose que les autres cachent.</p>
+</blockquote>
+<hr>
+<blockquote class="blockquote">
+<p><strong>Espaces.</strong> On travaille principalement avec deux espaces hermitiens munis du produit scalaire usuel, mais <span class="math inline">\(\mathbb{C}^p\)</span> y joue deux rôles distincts. D’une part, <span class="math inline">\(\mathbb{C}^p\)</span> est l’espace des covariables individuelles : chaque observation peut être identifiée à un vecteur de covariables dans cet espace. D’autre part, <span class="math inline">\(\mathbb{C}^n\)</span> est l’espace des variables indexées par les observations : c’est là que vivent <span class="math inline">\(y\)</span> et les colonnes de <span class="math inline">\(X\)</span>. Enfin, le même espace vectoriel <span class="math inline">\(\mathbb{C}^p\)</span> intervient conceptuellement comme espace des paramètres, dans lequel vit <span class="math inline">\(\beta\)</span>.</p>
+</blockquote>
+<section id="projection-orthogonale" class="level2">
+<h2 class="anchored" data-anchor-id="projection-orthogonale">1. Projection orthogonale</h2>
+<p>On cherche la meilleure approximation de <span class="math inline">\(y\)</span> par un vecteur de la forme <span class="math inline">\(X\beta\)</span>. Tout choix de <span class="math inline">\(\beta \in \mathbb{C}^p\)</span> produit une prédiction <span class="math inline">\(X\beta\)</span> dans le <strong>sous-espace colonne</strong></p>
+<p><span class="math display">\[\operatorname{col}(X) = \{ X\beta : \beta \in \mathbb{C}^p \} \subset \mathbb{C}^n.\]</span></p>
+<p>La solution géométrique est de projeter orthogonalement <span class="math inline">\(y\)</span> sur <span class="math inline">\(\operatorname{col}(X)\)</span>, ce qui entraine un résidu <span class="math inline">\(e = y - X\hat\beta\)</span> orthogonal à <span class="math inline">\(\operatorname{col}(X)\)</span> :</p>
+<p><span class="math display">\[X^*(y - X\hat\beta) = 0 \quad\Longleftrightarrow\quad X^* X\,\hat\beta = X^* y.\]</span></p>
+<p>Ces <strong>équations normales</strong> tirent leur nom précisément de cette condition. Quand <span class="math inline">\(X\)</span> est de rang plein, <span class="math inline">\(X^* X\)</span> est inversible et <span class="math inline">\(\hat\beta = (X^* X)^{-1}X^* y\)</span>. La prédiction <span class="math inline">\(\hat y = Py\)</span> est donnée par le <strong>projecteur orthogonal</strong> <span class="math inline">\(P = X(X^* X)^{-1}X^*\)</span>, hermitien et idempotent.</p>
+<p>Ce cadre est purement géométrique : aucune hypothèse explicite sur le bruit. L’idempotence de <span class="math inline">\(P\)</span> n’est pas une propriété à vérifier mais une tautologie — projeter deux fois un point déjà dans <span class="math inline">\(\operatorname{col}(X)\)</span> ne le déplace pas.</p>
+<p>L’hypothèse de rang plein n’est qu’une condition de confort : elle garantit que <span class="math inline">\(X^* X\)</span> est inversible, mais la projection sur <span class="math inline">\(\operatorname{col}(X)\)</span> existe et est unique quel que soit le rang. C’est le cadre SVD qui rend cela explicite : la pseudo-inverse <span class="math inline">\(X^+ = V\Sigma^+ U^*\)</span> fournit toujours un minimiseur des moindres carrés, et sélectionne, lorsque ce minimiseur n’est pas unique, celui de norme minimale.</p>
+</section>
+<section id="décomposition-en-valeurs-singulières" class="level2">
+<h2 class="anchored" data-anchor-id="décomposition-en-valeurs-singulières">2. Décomposition en valeurs singulières</h2>
+<p>La SVD ne répond pas seulement à la question du rang déficient — elle révèle la structure géométrique du problème dans toute sa généralité. Toute matrice <span class="math inline">\(X \in \mathbb{C}^{n \times p}\)</span> de rang <span class="math inline">\(r\)</span> admet une décomposition</p>
+<p><span class="math display">\[X = U\Sigma V^*\]</span></p>
+<p>où <span class="math inline">\(U \in \mathbb{C}^{n \times n}\)</span> et <span class="math inline">\(V \in \mathbb{C}^{p \times p}\)</span> sont unitaires, et <span class="math inline">\(\Sigma \in \mathbb{R}^{n \times p}\)</span> est diagonale avec des valeurs singulières <span class="math inline">\(\sigma_1 \geq \cdots \geq \sigma_r &gt; 0 = \sigma_{r+1} = \cdots\)</span>.</p>
+<p><strong>Changement de base.</strong> On pose <span class="math inline">\(\tilde y = U^* y \in \mathbb{C}^n\)</span> et <span class="math inline">\(\tilde\beta = V^* \beta \in \mathbb{C}^p\)</span>. Les équations normales <span class="math inline">\(X^* X\hat\beta = X^* y\)</span> deviennent, dans ces nouvelles coordonnées,</p>
+<p><span class="math display">\[\Sigma^* \Sigma\,\tilde\beta = \Sigma^* \tilde y.\]</span></p>
+<p>Le problème est maintenant diagonal : pour chaque indice <span class="math inline">\(i \leq r\)</span>, l’équation se réduit à <span class="math inline">\(\sigma_i^2 \tilde\beta_i = \sigma_i \tilde y_i\)</span>, soit <span class="math inline">\(\tilde\beta_i = \tilde y_i / \sigma_i\)</span>. Pour <span class="math inline">\(i &gt; r\)</span>, la <span class="math inline">\(i\)</span>-ème équation est <span class="math inline">\(0 = 0\)</span> — aucune contrainte sur <span class="math inline">\(\tilde\beta_i\)</span>. La solution de norme minimale impose <span class="math inline">\(\tilde\beta_i = 0\)</span> pour <span class="math inline">\(i &gt; r\)</span>.</p>
+<p><strong>Retour dans la base originale.</strong> On note <span class="math inline">\(\Sigma^+\)</span> la matrice <span class="math inline">\(p \times n\)</span> dont les entrées diagonales valent <span class="math inline">\(1/\sigma_i\)</span> pour <span class="math inline">\(i \leq r\)</span> et <span class="math inline">\(0\)</span> sinon. La solution de norme minimale est</p>
+<p><span class="math display">\[\hat\beta = V\tilde\beta = V\Sigma^+ U^* y =: X^+ y\]</span></p>
+<p>où <span class="math inline">\(X^+ = V\Sigma^+ U^*\)</span> est la <strong>pseudo-inverse de Moore-Penrose</strong> de <span class="math inline">\(X\)</span>.</p>
+<p><strong>Ce que la SVD rend visible.</strong> La prédiction s’écrit d’abord</p>
+<p><span class="math display">\[\hat y = X\hat\beta = XX^+ y = U\Sigma\Sigma^+ U^* y,\]</span></p>
+<p>et n’est autre que la projection orthogonale de <span class="math inline">\(y\)</span> sur <span class="math inline">\(\operatorname{col}(X)\)</span> — ce que la section précédente posait comme point de départ devient ici un résultat. Plus précisément, <span class="math inline">\(XX^+ = U\Sigma\Sigma^+U^*\)</span> est hermitien, car <span class="math inline">\(\Sigma\Sigma^+\)</span> est réelle diagonale et <span class="math inline">\(U\)</span> est unitaire, et idempotent, car <span class="math inline">\((\Sigma\Sigma^+)^2 = \Sigma\Sigma^+\)</span> : c’est bien le projecteur orthogonal sur <span class="math inline">\(\operatorname{col}(X)\)</span>. La prédiction ne retient donc que les composantes de <span class="math inline">\(\tilde y\)</span> associées aux directions singulières non nulles.</p>
+<p>La SVD expose également la sensibilité numérique du problème : une petite valeur singulière <span class="math inline">\(\sigma_i \approx 0\)</span> est amplifiée en <span class="math inline">\(1/\sigma_i\)</span> dans <span class="math inline">\(X^+\)</span>, ce qui amplifie le bruit dans la direction correspondante. La régularisation de Ridge — remplacer <span class="math inline">\(1/\sigma_i\)</span> par <span class="math inline">\(\sigma_i/(\sigma_i^2 + \lambda)\)</span> — est exactement un filtrage spectral qui atténue ces directions instables.</p>
+</section>
+<section id="minimisation-dune-fonction-de-perte" class="level2">
+<h2 class="anchored" data-anchor-id="minimisation-dune-fonction-de-perte">3. Minimisation d’une fonction de perte</h2>
+<p>On se place cette fois dans l’espace des paramètres <span class="math inline">\(\mathbb{C}^p\)</span> et on pose le problème directement comme un problème d’optimisation : trouver <span class="math inline">\(\beta\)</span> qui minimise la fonction de perte</p>
+<p><span class="math display">\[\mathcal{L}(\beta) = \|y - X\beta\|^2 = (y - X\beta)^*(y - X\beta).\]</span></p>
+<p><span class="math inline">\(\mathcal{L}\)</span> est une fonction réelle convexe, différentiable au sens de Wirtinger. En annulant le gradient par rapport à <span class="math inline">\(\overline\beta\)</span>,</p>
+<p><span class="math display">\[\nabla_{\overline\beta} \mathcal{L}(\beta) = -X^*(y - X\beta) = 0,\]</span></p>
+<p>on retrouve exactement les équations normales <span class="math inline">\(X^*X\hat\beta = X^*y\)</span>. Si <span class="math inline">\(X\)</span> n’est pas de rang plein, cette condition décrit plusieurs minimiseurs, et la pseudo-inverse sélectionne parmi eux celui de norme minimale. La solution géométrique de la section 1 et la solution analytique de l’optimisation coïncident — elles décrivent le même objet depuis deux espaces différents.</p>
+<p>Ce cadre rend naturelle une modification : ajouter un terme de régularisation <span class="math inline">\(\lambda\|\beta\|^2\)</span> conduit au problème de <strong>Ridge</strong>,</p>
+<p><span class="math display">\[\mathcal{L}_\lambda(\beta) = \|y - X\beta\|^2 + \lambda\|\beta\|^2, \qquad \lambda &gt; 0,\]</span></p>
+<p>dont la solution est <span class="math inline">\(\hat\beta_\lambda = (X^*X + \lambda I)^{-1}X^*y\)</span>. Dans le cadre SVD, cela revient à remplacer chaque <span class="math inline">\(1/\sigma_i\)</span> par <span class="math inline">\(\sigma_i/(\sigma_i^2 + \lambda)\)</span> : un filtrage spectral qui atténue les directions de faible variance sans les annuler.</p>
+</section>
+<section id="maximum-de-vraisemblance" class="level2">
+<h2 class="anchored" data-anchor-id="maximum-de-vraisemblance">4. Maximum de vraisemblance</h2>
+<p>On note <span class="math inline">\(Y\)</span> le vecteur aléatoire et <span class="math inline">\(y\)</span> sa réalisation observée ; <span class="math inline">\(X\)</span> désigne la matrice de covariables, supposée déterministe.</p>
+<p>On introduit un modèle probabiliste :</p>
+<p><span class="math display">\[Y = X\beta + \varepsilon\]</span></p>
+<p>où <span class="math inline">\(\varepsilon\)</span> désigne l’erreur complexe. Si <span class="math inline">\(p_\varepsilon\)</span> est sa densité, la vraisemblance est la densité de <span class="math inline">\(Y\)</span> évaluée en <span class="math inline">\(y\)</span>, vue comme fonction des paramètres :</p>
+<p><span class="math display">\[L(\beta, \sigma^2; y) = p_{Y\mid \beta,\sigma^2}(y) = p_\varepsilon(y - X\beta).\]</span></p>
+<p>Dans le cas gaussien complexe circulaire <span class="math inline">\(\varepsilon \sim \mathcal{CN}(0, \sigma^2 I_n)\)</span>, on a <span class="math inline">\(Y \mid \beta \sim \mathcal{CN}(X\beta, \sigma^2 I_n)\)</span> et</p>
+<p><span class="math display">\[L(\beta, \sigma^2; y) = \frac{1}{(\pi\sigma^2)^n}\exp\!\left(-\frac{1}{\sigma^2}\|y - X\beta\|^2\right).\]</span></p>
+<p>La log-vraisemblance s’écrit alors</p>
+<p><span class="math display">\[\ell(\beta, \sigma^2) = -n\log(\pi\sigma^2) - \frac{1}{\sigma^2}\|y - X\beta\|^2.\]</span></p>
+<p>À <span class="math inline">\(\sigma^2\)</span> fixé, maximiser <span class="math inline">\(\ell\)</span> en <span class="math inline">\(\beta\)</span> revient à minimiser <span class="math inline">\(\|y - X\beta\|^2\)</span> — on retrouve la fonction de perte de la section 3, et donc le même estimateur <span class="math inline">\(\hat\beta = X^+y\)</span>.</p>
+<p>Ce cadre révèle le lien général entre modèle d’erreur et fonction de perte.</p>
+<p><strong>Distribution de l’erreur → fonction de perte.</strong> On cherche à maximiser <span class="math inline">\(p(y - X\beta) = p(\varepsilon)\)</span> en <span class="math inline">\(\beta\)</span> pour <span class="math inline">\(y\)</span> fixé. Le log étant croissant, c’est équivalent à minimiser <span class="math inline">\(-\log p(\varepsilon)\)</span> — la fonction de perte canonique associée au modèle d’erreur. Toute fonction de perte qui n’en diffère que d’une constante additive définit le même estimateur et le même modèle d’erreur.</p>
+<p><strong>Fonction de perte → distribution de l’erreur.</strong> Réciproquement, toute fonction de perte suppose implicitement un modèle d’erreur : la densité <span class="math inline">\(p(e) = Z^{-1}e^{-\mathcal{L}(e)}\)</span>, définie sous condition d’intégrabilité <span class="math inline">\(Z = \int e^{-\mathcal{L}(e)}\,de &lt; \infty\)</span>, à constante additive près. Cette densité n’est pas nécessairement celle du mécanisme générateur réel — c’est l’hypothèse probabiliste cachée derrière le choix de la perte.</p>
+<p>Trois cas illustrent la correspondance :</p>
+<ul>
+<li><span class="math inline">\(-\log p(e) \propto \|e\|^2\)</span> → gaussienne complexe circulaire <span class="math inline">\(\mathcal{CN}(0, \sigma^2 I)\)</span> — OLS</li>
+<li><span class="math inline">\(-\log p(e) \propto \|e\|_1\)</span> → loi de type Laplace sur <span class="math inline">\(\mathbb{C}^n\)</span> — régression <span class="math inline">\(\ell^1\)</span></li>
+<li><span class="math inline">\(-\log p(e) \propto e^* \Sigma^{-1} e\)</span> → gaussienne complexe corrélée <span class="math inline">\(\mathcal{CN}(0, \Sigma)\)</span> — GLS</li>
+</ul>
+<p>Chaque fonction de perte est la signature d’un modèle d’erreur — explicite ou non.</p>
+</section>
+<section id="estimation-map-et-régularisation" class="level2">
+<h2 class="anchored" data-anchor-id="estimation-map-et-régularisation">5. Estimation MAP et régularisation</h2>
+<p>Dans le cadre fréquentiste de la section précédente, <span class="math inline">\(\beta\)</span> était un paramètre fixe inconnu. On adopte maintenant un point de vue bayésien : <span class="math inline">\(\beta\)</span> est une variable aléatoire, et on lui associe une distribution <em>a priori</em> <span class="math inline">\(p(\beta)\)</span> qui encode nos croyances avant d’observer les données.</p>
+<p>Le théorème de Bayes donne le posterior :</p>
+<p><span class="math display">\[p(\beta \mid y) \propto p(y \mid \beta) \cdot p(\beta).\]</span></p>
+<p>L’estimateur MAP (Maximum A Posteriori) est le mode de ce posterior :</p>
+<p><span class="math display">\[\hat\beta_{\text{MAP}} \in \arg\max_\beta \, p(\beta \mid y) = \arg\max_\beta \left[ \log p(y \mid \beta) + \log p(\beta) \right].\]</span></p>
+<p>Maximiser le posterior revient donc à minimiser <span class="math inline">\(-\log p(y \mid \beta) - \log p(\beta)\)</span> — la log-vraisemblance négative à laquelle s’ajoute un terme <span class="math inline">\(-\log p(\beta)\)</span> qui pénalise les valeurs de <span class="math inline">\(\beta\)</span> peu probables sous le prior.</p>
+<p><strong>Prior gaussien → Ridge.</strong> On pose <span class="math inline">\(\beta \sim \mathcal{CN}(0, \tau^2 I_p)\)</span>, ce qui donne <span class="math inline">\(-\log p(\beta) = \frac{1}{\tau^2}\|\beta\|^2\)</span> à constante près. Le problème MAP devient</p>
+<p><span class="math display">\[\hat\beta_{\text{MAP}} \in \arg\min_\beta \left[ \frac{1}{\sigma^2}\|y - X\beta\|^2 + \frac{1}{\tau^2}\|\beta\|^2 \right],\]</span></p>
+<p>soit exactement Ridge avec <span class="math inline">\(\lambda = \sigma^2/\tau^2\)</span>. Le paramètre de régularisation n’est plus arbitraire — il est le rapport entre la variance du bruit et la variance du prior. Un grand <span class="math inline">\(\lambda\)</span> signifie qu’on fait davantage confiance au prior qu’aux données.</p>
+<p><strong>Prior de type Laplace → Lasso.</strong> On pose un prior <span class="math inline">\(p(\beta) \propto e^{-\|\beta\|_1/b}\)</span>, ce qui donne <span class="math inline">\(-\log p(\beta) = \frac{1}{b}\|\beta\|_1\)</span> à constante près. Le problème MAP devient</p>
+<p><span class="math display">\[\hat\beta_{\text{MAP}} \in \arg\min_\beta \left[ \frac{1}{\sigma^2}\|y - X\beta\|^2 + \frac{1}{b}\|\beta\|_1 \right],\]</span></p>
+<p>soit exactement le Lasso. La parcimonie induite par la pénalisation <span class="math inline">\(\ell^1\)</span> n’est plus un artifice algorithmique — c’est la conséquence d’un prior qui concentre sa masse en zéro et admet des queues lourdes.</p>
+<p><strong>Prior plat → OLS.</strong> Sans information a priori sur <span class="math inline">\(\beta\)</span>, on pose <span class="math inline">\(p(\beta) \propto 1\)</span> — un prior impropre, non normalisable, qui encode l’absence de préférence. On a alors <span class="math inline">\(-\log p(\beta) = \text{cst}\)</span>, le terme de régularisation est nul, et le MAP se réduit à OLS.</p>
+<p>On obtient ainsi une vue unifiée :</p>
+<p><span class="math display">\[\hat\beta_{\text{MAP}} \in \arg\min_\beta \left[ \frac{1}{\sigma^2}\|y - X\beta\|^2 + \lambda\|\beta\|^q \right]\]</span></p>
+<p>avec <span class="math inline">\(q = 2\)</span>, <span class="math inline">\(\lambda = \sigma^2/\tau^2\)</span> pour Ridge ; <span class="math inline">\(q = 1\)</span>, <span class="math inline">\(\lambda = \sigma^2/b\)</span> pour Lasso ; <span class="math inline">\(\lambda = 0\)</span> pour OLS. Le paramètre <span class="math inline">\(\lambda\)</span> est le curseur entre confiance aux données (<span class="math inline">\(\lambda \to 0\)</span>) et confiance au prior (<span class="math inline">\(\lambda \to \infty\)</span>, <span class="math inline">\(\hat\beta \to 0\)</span>).</p>
+<p>La structure est la même que dans la section 4, mais dans l’espace des paramètres : le choix du prior sur <span class="math inline">\(\beta\)</span> est équivalent au choix d’un terme de régularisation, à constante additive près sur <span class="math inline">\(-\log p(\beta)\)</span>.</p>
+</section>
+<section id="optimalité-gauss-markov-et-cramér-rao" class="level2">
+<h2 class="anchored" data-anchor-id="optimalité-gauss-markov-et-cramér-rao">6. Optimalité : Gauss-Markov et Cramér-Rao</h2>
+<p>Les sections 1 à 4 ont construit l’estimateur des moindres carrés <span class="math inline">\(\hat\beta = X^+y\)</span>, tandis que la section 5 a montré comment le point de vue bayésien le modifie de manière contrôlée par régularisation. Une question reste ouverte : dans quel sens statistique l’estimateur des moindres carrés est-il <em>bon</em> ? On suppose désormais que <span class="math inline">\(X\)</span> est de rang colonne plein, afin que <span class="math inline">\(\beta\)</span> soit identifiable ; si ce n’est pas le cas, les énoncés d’optimalité portent sur <span class="math inline">\(X\beta\)</span> ou sur une paramétrisation réduite, non sur <span class="math inline">\(\beta\)</span> lui-même.</p>
+<p><strong>Gauss-Markov.</strong> Sous les seules hypothèses <span class="math inline">\(\mathbb{E}[\varepsilon] = 0\)</span> et <span class="math inline">\(\operatorname{Cov}(\varepsilon) = \sigma^2 I\)</span> — sans aucune hypothèse sur la forme de la distribution — <span class="math inline">\(\hat\beta = (X^*X)^{-1}X^*Y\)</span> est le <strong>meilleur estimateur linéaire non biaisé</strong> (BLUE) : parmi tous les estimateurs de la forme <span class="math inline">\(CY\)</span> avec <span class="math inline">\(CX = I_p\)</span>, il est celui de covariance minimale au sens matriciel,</p>
+<p><span class="math display">\[\operatorname{Cov}(\hat\beta) \preceq \operatorname{Cov}(\tilde\beta)\]</span></p>
+<p>pour tout estimateur linéaire non biaisé <span class="math inline">\(\tilde\beta\)</span>. La gaussianité n’est pas nécessaire — seuls les deux premiers moments de <span class="math inline">\(\varepsilon\)</span> interviennent.</p>
+<p><strong>Cramér-Rao.</strong> Si on lève la contrainte de linéarité et qu’on considère les estimateurs non biaisés réguliers dans le modèle gaussien complexe circulaire, la borne de Cramér-Rao donne la covariance minimale atteignable :</p>
+<p><span class="math display">\[\operatorname{Cov}(\hat\beta) \succeq \mathcal{I}(\beta)^{-1}\]</span></p>
+<p>où, dans ce modèle, <span class="math inline">\(\mathcal{I}(\beta) = \sigma^{-2}X^*X\)</span> est la matrice d’information de Fisher, à convention près sur l’écriture réelle ou complexe de cette information. On a donc <span class="math inline">\(\mathcal{I}(\beta)^{-1} = \sigma^2 (X^*X)^{-1}\)</span>, et l’estimateur des moindres carrés atteint cette borne — il est donc efficace au sens de Fisher.</p>
+<p>La progression est nette : sans gaussianité, l’estimateur des moindres carrés est optimal dans la classe linéaire. Avec gaussianité complexe circulaire, il atteint la borne de Cramér-Rao et est donc efficace parmi les estimateurs non biaisés réguliers. L’hypothèse gaussienne ne change pas l’estimateur — elle élargit le théorème d’optimalité.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Six cadres, un noyau commun. La projection orthogonale, la SVD, l’optimisation et le maximum de vraisemblance conduisent au même estimateur des moindres carrés <span class="math inline">\(\hat\beta = X^+y\)</span>. La régularisation fréquentiste et l’estimation MAP partent du même problème central, mais le modifient de manière contrôlée en Ridge ou en Lasso. Chacun de ces cadres révèle une facette que les autres laissent dans l’ombre.</p>
+<p>La géométrie donne l’existence et l’unicité de la projection. La SVD expose la structure spectrale et la sensibilité numérique. L’optimisation ouvre sur la régularisation. Le MLE révèle que toute fonction de perte est la signature implicite d’un modèle d’erreur. Le MAP montre que toute régularisation est l’expression d’un prior sur <span class="math inline">\(\beta\)</span>. Gauss-Markov établit que l’estimateur des moindres carrés est optimal — dans la classe linéaire sans gaussianité, dans la classe générale avec gaussianité complexe circulaire et sous hypothèse d’identifiabilité.</p>
+<p>Deux directions restent ouvertes. La régression linéaire est un cas particulier des méthodes à noyau — avec le noyau linéaire <span class="math inline">\(k(x, x') = x^*x'\)</span>, le cadre RKHS retrouve <span class="math inline">\(\hat\beta\)</span> par le théorème de représentation, et ouvre sur les SVM et les processus gaussiens. C’est aussi le cas limite d’un réseau de neurones sans non-linéarité, où la descente de gradient converge vers <span class="math inline">\(\hat\beta\)</span> — ce qui relie la régression aux questions de convergence et d’optimisation non convexe du deep learning.</p>
+<p>La régression linéaire n’est pas un modèle simple qu’on enseigne en introduction faute de mieux. C’est le point où toutes les grandes traditions des mathématiques appliquées se rejoignent — et l’endroit idéal pour comprendre ce que chacune apporte vraiment.</p>
+</section>
+<section id="points-à-consolider" class="level2">
+<h2 class="anchored" data-anchor-id="points-à-consolider">Points à consolider</h2>
+<p>Cette note fonctionne comme carte conceptuelle — elle fixe les connexions entre cadres. Les points techniques suivants méritent un traitement plus approfondi pour verrouiller le tout.</p>
+<p><strong>Calcul de Wirtinger.</strong> La dérivation par rapport à <span class="math inline">\(\overline\beta\)</span> reste ici un geste formel. Il faut comprendre pourquoi ce choix est le bon en variables complexes, et vérifier rigoureusement que <span class="math inline">\(\nabla_{\overline\beta}\|y - X\beta\|^2 = -X^*(y - X\beta)\)</span>.</p>
+<p><strong>Gaussienne complexe circulaire.</strong> La densité <span class="math inline">\(\mathcal{CN}(0, \sigma^2 I)\)</span> est utilisée sans que ses conventions soient discutées — facteurs <span class="math inline">\(\pi\)</span>, rôle de la circularité, écriture de la matrice d’information de Fisher. Ces détails varient selon les sources et méritent d’être fixés une fois pour toutes.</p>
+<p><strong>Rang déficient.</strong> La note mentionne la pseudo-inverse mais ne distingue pas clairement deux objets : l’ensemble des minimiseurs des moindres carrés (qui peut être un sous-espace affine entier), et <span class="math inline">\(X^+y\)</span> comme choix particulier parmi eux — celui de norme minimale.</p>
+<p><strong>Ridge et Lasso en complexe.</strong> Ridge se transpose directement. Lasso est plus délicat :<br>
+<span class="math inline">\(\|\beta\|_1 = \sum_i |\beta_i|\)</span> pénalise les modules complexes et non séparément les parties<br>
+réelle et imaginaire. La pénalisation reste parcimonieuse, mais sa géométrie est différente<br>
+du cas réel : elle sélectionne ou annule des coefficients complexes entiers, avec une<br>
+invariance de phase qu’il faut comprendre proprement.</p>
+<p><strong>Borne de Cramér-Rao complexe.</strong> Selon qu’on travaille en variables complexes ou en coordonnées réelles équivalentes, les constantes et la forme de la matrice d’information changent — un point à traiter avec soin avant de conclure à l’efficacité de l’estimateur.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../machine_learning/clustering/clustering_metrics.html" class="pagination-link" aria-label="Évaluer un clustering">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Évaluer un clustering</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../metacrisis/1.html" class="pagination-link" aria-label="1. All Is Fucked Up">
+        <span class="nav-page-text">1. All Is Fucked Up</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

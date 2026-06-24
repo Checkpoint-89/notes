@@ -1,0 +1,435 @@
+{
+  "mots": [
+    {
+      "mot_de": "der Heranwachsende, -n",
+      "traduction_fr": "l’adolescent",
+      "exemples": [],
+      "page": 20,
+      "categorie": null,
+      "id": "10cf03a6c15b"
+    },
+    {
+      "mot_de": "erwachsen",
+      "traduction_fr": "adulte",
+      "exemples": [],
+      "page": 20,
+      "categorie": null,
+      "id": "96153504eb17"
+    },
+    {
+      "mot_de": "die Erwachsenen (plur.)",
+      "traduction_fr": "les adultes, les grandes personnes",
+      "exemples": [],
+      "page": 20,
+      "categorie": null,
+      "id": "1afa1ac29a7c"
+    },
+    {
+      "mot_de": "wer?",
+      "traduction_fr": "qui ?",
+      "exemples": [],
+      "page": 20,
+      "categorie": null,
+      "id": "5eb4d66c1b61"
+    },
+    {
+      "mot_de": "jemand",
+      "traduction_fr": "quelqu’un",
+      "exemples": [
+        {
+          "de": "Haben Sie jemand(en) gesehen?",
+          "fr": "Avez-vous vu quelqu’un ?"
+        },
+        {
+          "de": "jemand anders",
+          "fr": "quelqu’un d’autre"
+        }
+      ],
+      "page": 20,
+      "categorie": null,
+      "id": "8450792741ed"
+    },
+    {
+      "mot_de": "niemand",
+      "traduction_fr": "personne, personne d’autre",
+      "exemples": [
+        {
+          "de": "Ich habe mit niemandem gesprochen.",
+          "fr": "Je n’ai parlé à personne."
+        },
+        {
+          "de": "niemand anders",
+          "fr": "personne d’autre"
+        }
+      ],
+      "page": 20,
+      "categorie": null,
+      "id": "9980542366b7"
+    },
+    {
+      "mot_de": "man",
+      "traduction_fr": "on",
+      "exemples": [],
+      "page": 20,
+      "categorie": null,
+      "id": "39c63ddb96a3"
+    },
+    {
+      "mot_de": "selber (selbst)",
+      "traduction_fr": "soi-même",
+      "exemples": [
+        {
+          "de": "Ich will das selber machen.",
+          "fr": "Je veux faire cela moi-même."
+        }
+      ],
+      "page": 20,
+      "categorie": null,
+      "id": "a28526713d32"
+    },
+    {
+      "mot_de": "heißen (hieß, hat geheißen)",
+      "traduction_fr": "s’appeler",
+      "exemples": [
+        {
+          "de": "Wie heißt eigentlich dieser Herr ?",
+          "fr": "Au fait, comment s’appelle ce monsieur ?"
+        }
+      ],
+      "page": 20,
+      "categorie": null,
+      "id": "8283139d8f49"
+    },
+    {
+      "mot_de": "nennen (nannte, hat genannt)",
+      "traduction_fr": "nommer, appeler, dire",
+      "exemples": [
+        {
+          "de": "Wie wollt ihr das Kind nennen?",
+          "fr": "Comment voulez-vous appeler cet enfant ?"
+        },
+        {
+          "de": "Er nannte seinen Namen.",
+          "fr": "Il a donné son nom."
+        }
+      ],
+      "page": 20,
+      "categorie": null,
+      "id": "804181b06d37"
+    },
+    {
+      "mot_de": "der Name, -n",
+      "traduction_fr": "le nom",
+      "exemples": [
+        {
+          "de": "Wie ist Ihr Name, bitte?",
+          "fr": "Puis-je vous demander votre nom ?"
+        }
+      ],
+      "page": 20,
+      "categorie": null,
+      "id": "0a137dd52528"
+    },
+    {
+      "mot_de": "der Vorname, -ns, -n",
+      "traduction_fr": "le prénom",
+      "exemples": [
+        {
+          "de": "Er nannte mich bei meinem Vornamen.",
+          "fr": "Il m’a appelé par mon prénom."
+        }
+      ],
+      "page": 20,
+      "categorie": null,
+      "id": "ca196ad5f1ef"
+    },
+    {
+      "mot_de": "heiraten (heiratete, hat geheiratet)",
+      "traduction_fr": "épouser, se marier",
+      "exemples": [
+        {
+          "de": "Sie heiratet einen Ausländer.",
+          "fr": "Elle épouse un étranger."
+        },
+        {
+          "de": "Sie haben im Juni geheiratet.",
+          "fr": "Ils se sont mariés en juin."
+        }
+      ],
+      "page": 20,
+      "categorie": null,
+      "id": "6f5658e329a8"
+    },
+    {
+      "mot_de": "verheiratet",
+      "traduction_fr": "marié",
+      "exemples": [
+        {
+          "de": "Er war damals noch nicht verheiratet.",
+          "fr": "À l’époque, il n’était pas encore marié."
+        }
+      ],
+      "page": 20,
+      "categorie": null,
+      "id": "ff5260434ea1"
+    },
+    {
+      "mot_de": "unverheiratet, ledig",
+      "traduction_fr": "célibataire",
+      "exemples": [],
+      "page": 20,
+      "categorie": null,
+      "id": "a73e4aee3719"
+    },
+    {
+      "mot_de": "der Junggeselle, -n",
+      "traduction_fr": "le célibataire",
+      "exemples": [],
+      "page": 20,
+      "categorie": null,
+      "id": "bb65b2998e0c"
+    },
+    {
+      "mot_de": "eine alleinstehende Mutter",
+      "traduction_fr": "une mère célibataire",
+      "exemples": [],
+      "page": 20,
+      "categorie": null,
+      "id": "4568077f26ca"
+    },
+    {
+      "mot_de": "die Scheidung, -en",
+      "traduction_fr": "le divorce",
+      "exemples": [],
+      "page": 20,
+      "categorie": null,
+      "id": "ed798027e9a3"
+    },
+    {
+      "mot_de": "sich scheiden lassen (ließ sich scheiden, hat sich scheiden lassen)",
+      "traduction_fr": "divorcer",
+      "exemples": [
+        {
+          "de": "Sie sind schon lange geschieden.",
+          "fr": "Ils sont divorcés depuis longtemps."
+        }
+      ],
+      "page": 20,
+      "categorie": null,
+      "id": "f183ebdcf68c"
+    },
+    {
+      "mot_de": "getrennt",
+      "traduction_fr": "séparé",
+      "exemples": [],
+      "page": 20,
+      "categorie": null,
+      "id": "62a403a4356b"
+    },
+    {
+      "mot_de": "die Familie, -n",
+      "traduction_fr": "la famille",
+      "exemples": [
+        {
+          "de": "eine Familie gründen",
+          "fr": "fonder une famille, un foyer"
+        },
+        {
+          "de": "eine kinderreiche Familie",
+          "fr": "une famille nombreuse"
+        }
+      ],
+      "page": 20,
+      "categorie": null,
+      "id": "37e01e97a6f1"
+    },
+    {
+      "mot_de": "erziehen (erzog, hat erzogen)",
+      "traduction_fr": "éduquer, élever",
+      "exemples": [],
+      "page": 20,
+      "categorie": null,
+      "id": "adff31c107ff"
+    },
+    {
+      "mot_de": "die Erziehung",
+      "traduction_fr": "l’éducation",
+      "exemples": [
+        {
+          "de": "Er hat eine strenge Erziehung erhalten.",
+          "fr": "Il a reçu une éducation sévère."
+        }
+      ],
+      "page": 20,
+      "categorie": null,
+      "id": "4dbdca4957a6"
+    },
+    {
+      "mot_de": "die Eltern, -",
+      "traduction_fr": "les parents",
+      "exemples": [],
+      "page": 21,
+      "categorie": null,
+      "id": "9b7314bc8385"
+    },
+    {
+      "mot_de": "die Mutter, -",
+      "traduction_fr": "la mère",
+      "exemples": [],
+      "page": 21,
+      "categorie": null,
+      "id": "44e2e1990a03"
+    },
+    {
+      "mot_de": "der Vater, -",
+      "traduction_fr": "le père",
+      "exemples": [],
+      "page": 21,
+      "categorie": null,
+      "id": "02eb0b4fa22a"
+    },
+    {
+      "mot_de": "die Großmutter, -",
+      "traduction_fr": "la grand-mère",
+      "exemples": [],
+      "page": 21,
+      "categorie": null,
+      "id": "ce2f1fbf2265"
+    },
+    {
+      "mot_de": "der Großvater, -",
+      "traduction_fr": "le grand-père",
+      "exemples": [],
+      "page": 21,
+      "categorie": null,
+      "id": "f00c6504e266"
+    },
+    {
+      "mot_de": "die Tochter, -, -n",
+      "traduction_fr": "la fille",
+      "exemples": [],
+      "page": 21,
+      "categorie": null,
+      "id": "295866416c2c"
+    },
+    {
+      "mot_de": "der Sohn, -e",
+      "traduction_fr": "le fils",
+      "exemples": [],
+      "page": 21,
+      "categorie": null,
+      "id": "909a07a444f4"
+    },
+    {
+      "mot_de": "die Schwester, -n",
+      "traduction_fr": "la sœur",
+      "exemples": [],
+      "page": 21,
+      "categorie": null,
+      "id": "a7eabe68d384"
+    },
+    {
+      "mot_de": "der Bruder, -",
+      "traduction_fr": "le frère",
+      "exemples": [],
+      "page": 21,
+      "categorie": null,
+      "id": "b9a325a4540f"
+    },
+    {
+      "mot_de": "die Geschwister",
+      "traduction_fr": "les frères et sœurs",
+      "exemples": [],
+      "page": 21,
+      "categorie": null,
+      "id": "8076fe3a8152"
+    },
+    {
+      "mot_de": "die Tante, -n",
+      "traduction_fr": "la tante",
+      "exemples": [],
+      "page": 21,
+      "categorie": null,
+      "id": "fb2f4eb0e240"
+    },
+    {
+      "mot_de": "der Onkel, -",
+      "traduction_fr": "l’oncle",
+      "exemples": [],
+      "page": 21,
+      "categorie": null,
+      "id": "902c9c1e0d0c"
+    },
+    {
+      "mot_de": "die Kusine, -n",
+      "traduction_fr": "la cousine",
+      "exemples": [],
+      "page": 21,
+      "categorie": null,
+      "id": "e585e6b349db"
+    },
+    {
+      "mot_de": "der Vetter, -n",
+      "traduction_fr": "le cousin",
+      "exemples": [],
+      "page": 21,
+      "categorie": null,
+      "id": "22c886712ffc"
+    },
+    {
+      "mot_de": "verwandt (mit + D)",
+      "traduction_fr": "parent, apparenté (à)",
+      "exemples": [
+        {
+          "de": "Sind Sie mit diesen Leuten verwandt?",
+          "fr": "Êtes-vous apparenté à ces personnes ?"
+        },
+        {
+          "de": "Ja, er ist mein Onkel.",
+          "fr": "Oui, c’est mon oncle."
+        }
+      ],
+      "page": 21,
+      "categorie": null,
+      "id": "5bebba6ccae2"
+    },
+    {
+      "mot_de": "der Erbe, -n",
+      "traduction_fr": "l’héritier",
+      "exemples": [],
+      "page": 21,
+      "categorie": null,
+      "id": "5eb8a3b17e87"
+    },
+    {
+      "mot_de": "erben (erbte, hat geerbt)",
+      "traduction_fr": "hériter",
+      "exemples": [
+        {
+          "de": "Die Musikalität hat sie von ihrer Großmutter geerbt.",
+          "fr": "Le sens de la musique, elle l’a hérité de sa grand-mère."
+        }
+      ],
+      "page": 21,
+      "categorie": null,
+      "id": "cd7d7bdad334"
+    },
+    {
+      "mot_de": "das Erbe, -s, -n / die Erbschaft, -en",
+      "traduction_fr": "l’héritage",
+      "exemples": [
+        {
+          "de": "das väterliche, klassische Erbe",
+          "fr": "l’héritage paternel, classique"
+        },
+        {
+          "de": "Sie hat eine große Erbschaft gemacht.",
+          "fr": "Elle a fait un gros héritage."
+        }
+      ],
+      "page": 21,
+      "categorie": null,
+      "id": "50176693cedb"
+    }
+  ]
+}

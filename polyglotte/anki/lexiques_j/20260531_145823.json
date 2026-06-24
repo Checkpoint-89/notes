@@ -1,0 +1,233 @@
+{
+  "mots": [
+    {
+      "mot_de": "einschlafen (schlief ein, ist eingeschlafen)",
+      "traduction_fr": "s’endormir",
+      "exemples": [
+        {
+          "de": "Ich bin sofort eingeschlafen.",
+          "fr": "Je me suis endormi tout de suite."
+        }
+      ],
+      "page": 34,
+      "categorie": null,
+      "id": "f18ebb8bbaff"
+    },
+    {
+      "mot_de": "träumen (träumte, hat geträumt)",
+      "traduction_fr": "rêver",
+      "exemples": [
+        {
+          "de": "Ich habe letzte Nacht etwas Merkwürdiges geträumt.",
+          "fr": "La nuit dernière, j’ai fait un rêve étrange."
+        },
+        {
+          "de": "Er träumt von einer Reise um die Welt.",
+          "fr": "Il rêve d’un tour du monde."
+        }
+      ],
+      "page": 34,
+      "categorie": null,
+      "id": "ef056f596a11"
+    },
+    {
+      "mot_de": "der Traum, -e",
+      "traduction_fr": "le rêve",
+      "exemples": [],
+      "page": 34,
+      "categorie": null,
+      "id": "b7393e59e9aa"
+    },
+    {
+      "mot_de": "der Alptraum, -e",
+      "traduction_fr": "le cauchemar",
+      "exemples": [],
+      "page": 34,
+      "categorie": null,
+      "id": "077f102939db"
+    },
+    {
+      "mot_de": "aufwachen (wachte auf, ist aufgewacht)",
+      "traduction_fr": "se réveiller",
+      "exemples": [
+        {
+          "de": "Ich wache jeden Morgen um 6 Uhr auf.",
+          "fr": "Je me réveille tous les matins à 6 heures."
+        }
+      ],
+      "page": 34,
+      "categorie": null,
+      "id": "7fe7e07099f4"
+    },
+    {
+      "mot_de": "wecken (weckte, hat geweckt)",
+      "traduction_fr": "réveiller",
+      "exemples": [
+        {
+          "de": "Wecken Sie mich bitte um 6 Uhr!",
+          "fr": "S’il vous plaît, réveillez-moi à 6 heures."
+        }
+      ],
+      "page": 34,
+      "categorie": null,
+      "id": "981480d896f0"
+    },
+    {
+      "mot_de": "aufstehen (stand auf, ist aufgestanden)",
+      "traduction_fr": "se lever",
+      "exemples": [
+        {
+          "de": "Morgen muß ich früh aufstehen.",
+          "fr": "Demain, il faut que je me lève tôt."
+        },
+        {
+          "de": "Er stand von seinem Stuhl auf.",
+          "fr": "Il se leva de sa chaise."
+        }
+      ],
+      "page": 34,
+      "categorie": null,
+      "id": "a92b16cb402e"
+    },
+    {
+      "mot_de": "der Sinn, -e",
+      "traduction_fr": "le sens",
+      "exemples": [
+        {
+          "de": "einen sechsten Sinn haben",
+          "fr": "avoir un sixième sens"
+        }
+      ],
+      "page": 34,
+      "categorie": null,
+      "id": "7a3be8636b54"
+    },
+    {
+      "mot_de": "sehen (sah, hat gesehen)",
+      "traduction_fr": "voir",
+      "exemples": [
+        {
+          "de": "nach rechts sehen",
+          "fr": "regarder à droite"
+        },
+        {
+          "de": "Ich will sehen, was ich für Sie tun kann.",
+          "fr": "Je vais voir ce que je peux faire pour vous."
+        }
+      ],
+      "page": 34,
+      "categorie": null,
+      "id": "e162e4a5fa52"
+    },
+    {
+      "mot_de": "schauen (schaute, hat geschaut)",
+      "traduction_fr": "regarder",
+      "exemples": [
+        {
+          "de": "aus dem Fenster schauen",
+          "fr": "regarder par la fenêtre"
+        }
+      ],
+      "page": 34,
+      "categorie": null,
+      "id": "13481f5e09fc"
+    },
+    {
+      "mot_de": "anschauen (schaute an, hat angeschaut)",
+      "traduction_fr": "regarder, contempler",
+      "exemples": [
+        {
+          "de": "Er schaute mich erstaunt an.",
+          "fr": "Il me regarda avec étonnement."
+        },
+        {
+          "de": "Du mußt dir das Bild genauer ansehen.",
+          "fr": "Il faut que tu regardes le tableau plus attentivement."
+        }
+      ],
+      "page": 34,
+      "categorie": null,
+      "id": "4ae12fbf7ad3"
+    },
+    {
+      "mot_de": "zusehen (sah zu, hat zugesehen) (+ D)",
+      "traduction_fr": "regarder (suivre une activité)",
+      "exemples": [
+        {
+          "de": "Einer arbeitete, und die anderen sahen ihm zu.",
+          "fr": "L’un travaillait et les autres le regardaient."
+        },
+        {
+          "de": "Sehen Sie doch zu, daß Sie mitkommen können !",
+          "fr": "Faites donc en sorte de pouvoir venir !"
+        },
+        {
+          "de": "zusehends (adv.)",
+          "fr": "à vue d’œil"
+        }
+      ],
+      "page": 34,
+      "categorie": null,
+      "id": "b3c547f3a8db"
+    },
+    {
+      "mot_de": "blicken (blickte, hat geblickt)",
+      "traduction_fr": "regarder, jeter un regard",
+      "exemples": [
+        {
+          "de": "Sie blickte von einem zum anderen.",
+          "fr": "Son regard allait de l’un à l’autre."
+        },
+        {
+          "de": "Er blickte ins Leere.",
+          "fr": "Il regardait dans le vide."
+        }
+      ],
+      "page": 34,
+      "categorie": null,
+      "id": "6581806a9f5f"
+    },
+    {
+      "mot_de": "erblicken (erblickte, hat erblickt)",
+      "traduction_fr": "apercevoir",
+      "exemples": [
+        {
+          "de": "Ich erblicke ihn von weitem.",
+          "fr": "Je l’aperçois de loin."
+        }
+      ],
+      "page": 34,
+      "categorie": null,
+      "id": "89ff6452d828"
+    },
+    {
+      "mot_de": "der Blick, -e",
+      "traduction_fr": "le regard, le coup d’œil",
+      "exemples": [
+        {
+          "de": "Er warf einen Blick auf das Programm.",
+          "fr": "Il jeta un coup d’œil sur le programme."
+        }
+      ],
+      "page": 34,
+      "categorie": null,
+      "id": "9187cd5a809e"
+    },
+    {
+      "mot_de": "beobachten (beobachtete, hat beobachtet)",
+      "traduction_fr": "observer",
+      "exemples": [],
+      "page": 34,
+      "categorie": null,
+      "id": "150ffbc5f166"
+    },
+    {
+      "mot_de": "sich sofort einschlafen",
+      "traduction_fr": "s’endormir tout de suite",
+      "exemples": [],
+      "page": 34,
+      "categorie": null,
+      "id": "d75ac4aea054"
+    }
+  ]
+}

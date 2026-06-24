@@ -1,0 +1,279 @@
+{
+  "mots": [
+    {
+      "mot_de": "der Nachtisch, -e",
+      "traduction_fr": "le dessert",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "ce874d885fc1"
+    },
+    {
+      "mot_de": "der Kuchen, -",
+      "traduction_fr": "le gâteau",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "0ee091b51006"
+    },
+    {
+      "mot_de": "die Torte, -n",
+      "traduction_fr": "le gâteau, la tarte",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "bc5c42c46c2b"
+    },
+    {
+      "mot_de": "abschneiden (schnitt ab, hat abgeschnitten)",
+      "traduction_fr": "couper (un morceau)",
+      "exemples": [
+        {
+          "de": "Er schnitt ein großes Stück Brot ab.",
+          "fr": "Il coupa un grand morceau de pain."
+        }
+      ],
+      "page": 42,
+      "categorie": null,
+      "id": "c5ac693c1f2e"
+    },
+    {
+      "mot_de": "der Zucker, -",
+      "traduction_fr": "le sucre",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "1d3fca989778"
+    },
+    {
+      "mot_de": "die Schokolade, -n",
+      "traduction_fr": "le chocolat",
+      "exemples": [
+        {
+          "de": "eine Tafel Schokolade",
+          "fr": "une tablette de chocolat"
+        }
+      ],
+      "page": 42,
+      "categorie": null,
+      "id": "20f858045a37"
+    },
+    {
+      "mot_de": "die Butter, -",
+      "traduction_fr": "le beurre",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "70ac5f2c8414"
+    },
+    {
+      "mot_de": "die Marmelade, -n",
+      "traduction_fr": "la confiture",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "a4a64ec269fb"
+    },
+    {
+      "mot_de": "der Käse, -",
+      "traduction_fr": "le fromage",
+      "exemples": [
+        {
+          "de": "Schweizer Käse",
+          "fr": "du fromage suisse"
+        }
+      ],
+      "page": 42,
+      "categorie": null,
+      "id": "4ff7972a4cc6"
+    },
+    {
+      "mot_de": "das Obst, -e",
+      "traduction_fr": "les fruits (de table)",
+      "exemples": [
+        {
+          "de": "frisches Obst",
+          "fr": "des fruits frais"
+        }
+      ],
+      "page": 42,
+      "categorie": null,
+      "id": "3c7429bfe6af"
+    },
+    {
+      "mot_de": "die Frucht, -e",
+      "traduction_fr": "le fruit",
+      "exemples": [
+        {
+          "de": "Früchte aus dem eigenen Garten",
+          "fr": "des fruits du jardin"
+        }
+      ],
+      "page": 42,
+      "categorie": null,
+      "id": "2a80a867dd7e"
+    },
+    {
+      "mot_de": "der Apfel, -",
+      "traduction_fr": "la pomme",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "2d0e6dce345c"
+    },
+    {
+      "mot_de": "die Birne, -n",
+      "traduction_fr": "la poire",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "1f8c1f3f1d71"
+    },
+    {
+      "mot_de": "die Kirsche, -n",
+      "traduction_fr": "la cerise",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "f94d86e63945"
+    },
+    {
+      "mot_de": "die Traube, -n",
+      "traduction_fr": "le raisin",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "89ca0e23d904"
+    },
+    {
+      "mot_de": "die Banane, -n",
+      "traduction_fr": "la banane",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "91c0a33a3d98"
+    },
+    {
+      "mot_de": "die Aprikose, -n",
+      "traduction_fr": "l’abricot",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "c232ecbb85b7"
+    },
+    {
+      "mot_de": "die Pflaume, -n",
+      "traduction_fr": "la prune",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "36e5d038015a"
+    },
+    {
+      "mot_de": "der Pfirsich, -e",
+      "traduction_fr": "la pêche",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "1174d5bd8ac9"
+    },
+    {
+      "mot_de": "die Erdbeere, -n",
+      "traduction_fr": "la fraise",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "387f3bbd361d"
+    },
+    {
+      "mot_de": "die Orange, -n (die Apfelsine, -n)",
+      "traduction_fr": "l’orange",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "0af35d6dc4d6"
+    },
+    {
+      "mot_de": "der Saft, -e",
+      "traduction_fr": "le jus",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "21bd0c31d9e7"
+    },
+    {
+      "mot_de": "trinken (trinkt, trank, hat getrunken)",
+      "traduction_fr": "boire",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "bdf7e7a74712"
+    },
+    {
+      "mot_de": "das Getränk, -e",
+      "traduction_fr": "la boisson",
+      "exemples": [
+        {
+          "de": "heiße Getränke",
+          "fr": "des boissons chaudes"
+        }
+      ],
+      "page": 42,
+      "categorie": null,
+      "id": "9b601f847fdd"
+    },
+    {
+      "mot_de": "die Milch, -",
+      "traduction_fr": "le lait",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "a3ac385dee9b"
+    },
+    {
+      "mot_de": "der Kaffee, -s",
+      "traduction_fr": "le café",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "587b988b9a70"
+    },
+    {
+      "mot_de": "die Kaffeemaschine, -n",
+      "traduction_fr": "la machine à café",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "387a1c0d1e90"
+    },
+    {
+      "mot_de": "der Kakao, -s",
+      "traduction_fr": "le cacao, le chocolat chaud",
+      "exemples": [
+        {
+          "de": "eine Tasse Kakao",
+          "fr": "une tasse de chocolat chaud"
+        }
+      ],
+      "page": 42,
+      "categorie": null,
+      "id": "151676f91502"
+    },
+    {
+      "mot_de": "der Tee, -s",
+      "traduction_fr": "le thé",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "afd003d18844"
+    },
+    {
+      "mot_de": "der Wein, -e",
+      "traduction_fr": "le vin",
+      "exemples": [],
+      "page": 42,
+      "categorie": null,
+      "id": "ad847ddb69c6"
+    }
+  ]
+}

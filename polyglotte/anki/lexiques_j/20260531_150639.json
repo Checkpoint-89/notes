@@ -1,0 +1,307 @@
+{
+  "mots": [
+    {
+      "mot_de": "die Beeinträchtigung, -en",
+      "traduction_fr": "l’atteinte, la gêne",
+      "exemples": [
+        {
+          "de": "Sie beeinträchtigt die Augen.",
+          "fr": "Elle gêne les yeux."
+        },
+        {
+          "de": "Er war sichtlich behindert.",
+          "fr": "Il était visiblement handicapé."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "d22399ebbce5"
+    },
+    {
+      "mot_de": "beeinträchtigen (beeinträchtigte, hat beeinträchtigt)",
+      "traduction_fr": "gêner, entraver",
+      "exemples": [
+        {
+          "de": "Sie beeinträchtigt die Augen.",
+          "fr": "Elle gêne les yeux."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "48f25d9e0aa8"
+    },
+    {
+      "mot_de": "die Behinderung, -en",
+      "traduction_fr": "le handicap",
+      "exemples": [
+        {
+          "de": "Er war sichtlich behindert.",
+          "fr": "Il était visiblement handicapé."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "85d4a846c754"
+    },
+    {
+      "mot_de": "behindern (behinderte, hat behindert)",
+      "traduction_fr": "handicaper, gêner",
+      "exemples": [
+        {
+          "de": "Er war sichtlich behindert.",
+          "fr": "Il était visiblement handicapé."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "778ae3130cd6"
+    },
+    {
+      "mot_de": "die Beschädigung, -en",
+      "traduction_fr": "le dommage, la détérioration",
+      "exemples": [
+        {
+          "de": "Sie ist beschädigt.",
+          "fr": "Elle est endommagée."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "2fface7884d2"
+    },
+    {
+      "mot_de": "beschädigen (beschädigte, hat beschädigt)",
+      "traduction_fr": "endommager",
+      "exemples": [
+        {
+          "de": "Sie ist beschädigt.",
+          "fr": "Elle est endommagée."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "5de001dc160e"
+    },
+    {
+      "mot_de": "die Beschränkung, -en",
+      "traduction_fr": "la restriction",
+      "exemples": [
+        {
+          "de": "Es gibt keine Beschränkung.",
+          "fr": "Il n’y a aucune restriction."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "5d4e74fdaa85"
+    },
+    {
+      "mot_de": "beschränken (beschränkte, hat beschränkt)",
+      "traduction_fr": "restreindre",
+      "exemples": [
+        {
+          "de": "Es gibt keine Beschränkung.",
+          "fr": "Il n’y a aucune restriction."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "4c5af4119764"
+    },
+    {
+      "mot_de": "die Bestrafung, -en",
+      "traduction_fr": "la punition",
+      "exemples": [
+        {
+          "de": "Fast steht, darf...",
+          "fr": "Presque tout est permis, sauf..."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "cae88181290e"
+    },
+    {
+      "mot_de": "bestrafen (bestrafte, hat bestraft)",
+      "traduction_fr": "punir",
+      "exemples": [
+        {
+          "de": "Fast steht, darf...",
+          "fr": "Presque tout est permis, sauf..."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "157f00698a20"
+    },
+    {
+      "mot_de": "der Gedanke, -n",
+      "traduction_fr": "la pensée",
+      "exemples": [
+        {
+          "de": "Wie bist du auf den Gedanken gekommen?",
+          "fr": "Comment une telle idée t’est-elle venue à l’esprit ?"
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "64a88554deb8"
+    },
+    {
+      "mot_de": "gedankenlos",
+      "traduction_fr": "sans réfléchir",
+      "exemples": [
+        {
+          "de": "Wie bist du auf den Gedanken gekommen?",
+          "fr": "Comment une telle idée t’est-elle venue à l’esprit ?"
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "d61ffd06c7a1"
+    },
+    {
+      "mot_de": "die Überlegung, -en",
+      "traduction_fr": "la réflexion",
+      "exemples": [
+        {
+          "de": "Ich will mir die Sache noch einmal überlegen.",
+          "fr": "Je veux encore réfléchir à cette affaire."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "8e14776324bc"
+    },
+    {
+      "mot_de": "überlegen (überlegte, hat überlegt)",
+      "traduction_fr": "réfléchir",
+      "exemples": [
+        {
+          "de": "Ich will mir die Sache noch einmal überlegen.",
+          "fr": "Je veux encore réfléchir à cette affaire."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "5852504d9f04"
+    },
+    {
+      "mot_de": "die Idee, -n",
+      "traduction_fr": "l’idée",
+      "exemples": [
+        {
+          "de": "Eine Idee ist eine Idee.",
+          "fr": "Une idée reste une idée."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "3e2ed8504b96"
+    },
+    {
+      "mot_de": "eine Idee haben",
+      "traduction_fr": "avoir une idée",
+      "exemples": [
+        {
+          "de": "Eine Idee ist eine Idee.",
+          "fr": "Une idée reste une idée."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "fa06af7451b4"
+    },
+    {
+      "mot_de": "die Idee, -n",
+      "traduction_fr": "l’idée",
+      "exemples": [
+        {
+          "de": "Ich habe keine Idee.",
+          "fr": "Je n’ai aucune idée."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "7df28435e371"
+    },
+    {
+      "mot_de": "die Idee, -n",
+      "traduction_fr": "l’idée",
+      "exemples": [
+        {
+          "de": "Ich will mir die Sache noch einmal überlegen.",
+          "fr": "Je veux encore réfléchir à cette affaire."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "f2632908511e"
+    },
+    {
+      "mot_de": "die Idee, -n",
+      "traduction_fr": "l’idée",
+      "exemples": [
+        {
+          "de": "Comment une telle idée t’est-elle venue à l’esprit ?",
+          "fr": "Comment une telle idée t’est-elle venue à l’esprit ?"
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "c02279b46d62"
+    },
+    {
+      "mot_de": "die Idee, -n",
+      "traduction_fr": "l’idée",
+      "exemples": [
+        {
+          "de": "I. Idee une idée saugrenue, idiote",
+          "fr": "Une idée saugrenue, idiote"
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "b4755fc19ced"
+    },
+    {
+      "mot_de": "die Idee, -n",
+      "traduction_fr": "l’idée",
+      "exemples": [
+        {
+          "de": "le problème soulever un problème",
+          "fr": "soulever un problème"
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "0997b718262b"
+    },
+    {
+      "mot_de": "die Idee, -n",
+      "traduction_fr": "l’idée",
+      "exemples": [
+        {
+          "de": "le mystère en secret",
+          "fr": "en secret"
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "888c2a59d456"
+    },
+    {
+      "mot_de": "die Idee, -n",
+      "traduction_fr": "l’idée",
+      "exemples": [
+        {
+          "de": "la solution comprendre",
+          "fr": "comprendre"
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "9796adc12b96"
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "mots": [
+    {
+      "mot_de": "die Sprache, -n",
+      "traduction_fr": "la langue",
+      "exemples": [],
+      "page": 98,
+      "categorie": null,
+      "id": "35ec327c5003"
+    },
+    {
+      "mot_de": "die Fremdsprache, -n",
+      "traduction_fr": "une langue étrangère",
+      "exemples": [
+        {
+          "de": "Sie beherrscht mehrere Fremdsprachen.",
+          "fr": "Elle parle couramment plusieurs langues étrangères."
+        }
+      ],
+      "page": 98,
+      "categorie": null,
+      "id": "f2f26264e9e9"
+    },
+    {
+      "mot_de": "das Deutsch",
+      "traduction_fr": "l’allemand (la langue allemande)",
+      "exemples": [
+        {
+          "de": "Er lernt, versteht, spricht, schreibt, kann Deutsch.",
+          "fr": "Il apprend, comprend, parle, écrit, sait l’allemand."
+        },
+        {
+          "de": "Sein Deutsch ist schon gut.",
+          "fr": "Son allemand est déjà bon."
+        },
+        {
+          "de": "auf Deutsch",
+          "fr": "en allemand"
+        }
+      ],
+      "page": 98,
+      "categorie": null,
+      "id": "bcd32713f286"
+    },
+    {
+      "mot_de": "der Dialekt, -e (die Mundart, -en)",
+      "traduction_fr": "le dialecte",
+      "exemples": [],
+      "page": 98,
+      "categorie": null,
+      "id": "6dbcfe248935"
+    },
+    {
+      "mot_de": "übersetzen (übersetzte, hat übersetzt)",
+      "traduction_fr": "traduire",
+      "exemples": [
+        {
+          "de": "aus dem Deutschen übersetzen",
+          "fr": "traduire de l’allemand"
+        },
+        {
+          "de": "ins Deutsche übersetzen",
+          "fr": "traduire en allemand"
+        }
+      ],
+      "page": 98,
+      "categorie": null,
+      "id": "25720be9e237"
+    },
+    {
+      "mot_de": "die Übersetzung, -en",
+      "traduction_fr": "la traduction",
+      "exemples": [],
+      "page": 98,
+      "categorie": null,
+      "id": "bb49d62c58c4"
+    },
+    {
+      "mot_de": "sprechen (sprach, hat gesprochen)",
+      "traduction_fr": "parler",
+      "exemples": [
+        {
+          "de": "Ich habe gestern mit ihm gesprochen.",
+          "fr": "Je lui ai parlé hier."
+        },
+        {
+          "de": "Sie sprachen von ihren Ferien.",
+          "fr": "Ils parlaient de leurs vacances."
+        },
+        {
+          "de": "Professor Koch sprach über die Fortschritte der Medizin.",
+          "fr": "Le professeur Koch a parlé des progrès de la médecine."
+        },
+        {
+          "de": "Er spricht fließend Spanisch.",
+          "fr": "Il parle espagnol couramment."
+        },
+        {
+          "de": "Ich möchte dich möglichst schnell sprechen.",
+          "fr": "Je voudrais te parler le plus vite possible."
+        }
+      ],
+      "page": 98,
+      "categorie": null,
+      "id": "41e13a278429"
+    },
+    {
+      "mot_de": "schweigen (schwieg, hat geschwiegen)",
+      "traduction_fr": "se taire",
+      "exemples": [
+        {
+          "de": "Hoffentlich wird er schweigen!",
+          "fr": "Espérons qu’il se taira !"
+        }
+      ],
+      "page": 98,
+      "categorie": null,
+      "id": "831334c8e486"
+    },
+    {
+      "mot_de": "die Stimme, -n",
+      "traduction_fr": "la voix",
+      "exemples": [
+        {
+          "de": "Seine Stimme brach plötzlich.",
+          "fr": "Soudain, sa voix se brisa."
+        },
+        {
+          "de": "seine Stimme verstellen",
+          "fr": "contrefaire sa voix"
+        }
+      ],
+      "page": 98,
+      "categorie": null,
+      "id": "3f15b59449e0"
+    },
+    {
+      "mot_de": "aussprechen (sprach aus, hat ausgesprochen)",
+      "traduction_fr": "prononcer",
+      "exemples": [
+        {
+          "de": "Wie spricht man diesen Namen aus?",
+          "fr": "Comment prononce-t-on ce nom ?"
+        }
+      ],
+      "page": 98,
+      "categorie": null,
+      "id": "244ba18096ad"
+    },
+    {
+      "mot_de": "die Aussprache, -n",
+      "traduction_fr": "la prononciation",
+      "exemples": [],
+      "page": 98,
+      "categorie": null,
+      "id": "d15dae772577"
+    },
+    {
+      "mot_de": "der Ton, -e",
+      "traduction_fr": "le ton",
+      "exemples": [
+        {
+          "de": "Er sprach in freundlichem Ton.",
+          "fr": "Il parla sur un ton aimable."
+        },
+        {
+          "de": "Er sagte es in vorwurfsvollen Ton.",
+          "fr": "Il dit cela d’un ton plein de reproches."
+        },
+        {
+          "de": "Was ist denn das für ein Ton?",
+          "fr": "Qu’est-ce que c’est que ce ton ?"
+        }
+      ],
+      "page": 98,
+      "categorie": null,
+      "id": "6c78d0aee1b5"
+    }
+  ]
+}

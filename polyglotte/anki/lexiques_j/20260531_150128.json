@@ -1,0 +1,176 @@
+{
+  "mots": [
+    {
+      "mot_de": "die Kleidung, -",
+      "traduction_fr": "l’habillement, les vêtements",
+      "exemples": [],
+      "page": 46,
+      "categorie": null,
+      "id": "34877ecb449a"
+    },
+    {
+      "mot_de": "anhaben (hatte an, hat angehabt)",
+      "traduction_fr": "avoir sur soi, porter",
+      "exemples": [
+        {
+          "de": "Du hast noch immer die nassen Sachen an!",
+          "fr": "Tu as gardé tes affaires mouillées !"
+        }
+      ],
+      "page": 46,
+      "categorie": null,
+      "id": "3d7efef96f84"
+    },
+    {
+      "mot_de": "die Mode, -",
+      "traduction_fr": "la mode",
+      "exemples": [],
+      "page": 46,
+      "categorie": null,
+      "id": "46de0786e586"
+    },
+    {
+      "mot_de": "elegant",
+      "traduction_fr": "élégant",
+      "exemples": [
+        {
+          "de": "ein schicker Mantel",
+          "fr": "un manteau élégant"
+        }
+      ],
+      "page": 46,
+      "categorie": null,
+      "id": "853f8c4f67f6"
+    },
+    {
+      "mot_de": "schick",
+      "traduction_fr": "élégant, chic",
+      "exemples": [],
+      "page": 46,
+      "categorie": null,
+      "id": "c954da35a243"
+    },
+    {
+      "mot_de": "anziehen (zog an, hat angezogen)",
+      "traduction_fr": "mettre (un vêtement)",
+      "exemples": [
+        {
+          "de": "Wollen Sie nicht Ihren Mantel anziehen?",
+          "fr": "Ne voulez-vous pas mettre votre manteau ?"
+        },
+        {
+          "de": "Die Kinder sind noch nicht angezogen.",
+          "fr": "Les enfants ne sont pas encore habillés."
+        },
+        {
+          "de": "Er ist immer elegant angezogen.",
+          "fr": "Il est toujours habillé avec élégance."
+        }
+      ],
+      "page": 46,
+      "categorie": null,
+      "id": "6def1ff06925"
+    },
+    {
+      "mot_de": "ausziehen (zog aus, hat ausgezogen)",
+      "traduction_fr": "ôter, enlever (vêtement)",
+      "exemples": [
+        {
+          "de": "Ziehen Sie doch die Jacke aus!",
+          "fr": "Enlevez donc votre veste !"
+        },
+        {
+          "de": "Er legte sich ins Bett, ohne sich auszuziehen.",
+          "fr": "Il se mit au lit sans se déshabiller."
+        }
+      ],
+      "page": 46,
+      "categorie": null,
+      "id": "765d02108781"
+    },
+    {
+      "mot_de": "sich umziehen (zog sich um, hat sich umgezogen)",
+      "traduction_fr": "se changer",
+      "exemples": [
+        {
+          "de": "Bevor sie in die Stadt ging, zog sie sich um.",
+          "fr": "Avant d’aller en ville, elle se changea."
+        }
+      ],
+      "page": 46,
+      "categorie": null,
+      "id": "bbe6662eb73b"
+    },
+    {
+      "mot_de": "die Garderobe, -n",
+      "traduction_fr": "la garde-robe ; le vestiaire",
+      "exemples": [
+        {
+          "de": "Dieses Jahr will ich meine Garderobe auffrischen.",
+          "fr": "Cette année, j’ai décidé de renouveler ma garde-robe."
+        },
+        {
+          "de": "Er besitzt wenig Garderobe.",
+          "fr": "Sa garde-robe n’est pas très fournie."
+        },
+        {
+          "de": "Die Garderobe kostet 50 Pfennig.",
+          "fr": "Le vestiaire coûte 50 Pfennig."
+        }
+      ],
+      "page": 46,
+      "categorie": null,
+      "id": "30e9cf9a101f"
+    },
+    {
+      "mot_de": "aufhängen (hängte auf, hat aufgehängt)",
+      "traduction_fr": "suspendre",
+      "exemples": [
+        {
+          "de": "Dort können Sie Ihren Mantel aufhängen.",
+          "fr": "Vous pouvez suspendre votre manteau ici."
+        }
+      ],
+      "page": 46,
+      "categorie": null,
+      "id": "c156c02068d8"
+    },
+    {
+      "mot_de": "der Bügel, -",
+      "traduction_fr": "le cintre",
+      "exemples": [
+        {
+          "de": "seine Kleider auf den Bügel hängen",
+          "fr": "mettre ses vêtements sur un cintre"
+        }
+      ],
+      "page": 46,
+      "categorie": null,
+      "id": "c521b9bbd53b"
+    },
+    {
+      "mot_de": "das Kleid, -er",
+      "traduction_fr": "la robe",
+      "exemples": [],
+      "page": 46,
+      "categorie": null,
+      "id": "c0493c45b143"
+    },
+    {
+      "mot_de": "der Rock, -e",
+      "traduction_fr": "la jupe",
+      "exemples": [],
+      "page": 46,
+      "categorie": null,
+      "id": "682b30a554ec"
+    },
+    {
+      "mot_de": "die Bluse, -n",
+      "traduction_fr": "le chemisier",
+      "exemples": [],
+      "page": 46,
+      "categorie": null,
+      "id": "77eff53750c5"
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "mots": [
+    {
+      "mot_de": "der Geist, -er",
+      "traduction_fr": "l’esprit",
+      "exemples": [
+        {
+          "de": "Der Geist ist willig, aber das Fleisch ist schwach.",
+          "fr": "L’esprit est prompt, mais la chair est faible."
+        },
+        {
+          "de": "ein Mann von Geist",
+          "fr": "un homme d’esprit"
+        },
+        {
+          "de": "Hier scheiden sich die Geister.",
+          "fr": "Ici, les avis sont partagés."
+        },
+        {
+          "de": "Du siehst ja aus wie ein Geist.",
+          "fr": "Tu es livide, blanc comme un linge."
+        }
+      ],
+      "page": 88,
+      "categorie": null,
+      "id": "88a46b99097f"
+    },
+    {
+      "mot_de": "geistig",
+      "traduction_fr": "intellectuel",
+      "exemples": [
+        {
+          "de": "die geistige Arbeit",
+          "fr": "le travail intellectuel"
+        }
+      ],
+      "page": 88,
+      "categorie": null,
+      "id": "332196fbb035"
+    },
+    {
+      "mot_de": "intelligent",
+      "traduction_fr": "intelligent",
+      "exemples": [
+        {
+          "de": "Sie ist viel intelligenter als er.",
+          "fr": "Elle est beaucoup plus intelligente que lui."
+        }
+      ],
+      "page": 88,
+      "categorie": null,
+      "id": "c6f352d7425e"
+    },
+    {
+      "mot_de": "aufpassen (passte auf, hat aufgepasst)",
+      "traduction_fr": "faire attention",
+      "exemples": [
+        {
+          "de": "Passen Sie bitte auf!",
+          "fr": "Faites attention, s’il vous plaît."
+        }
+      ],
+      "page": 88,
+      "categorie": null,
+      "id": "244583683b39"
+    },
+    {
+      "mot_de": "aufmerksam",
+      "traduction_fr": "attentif",
+      "exemples": [
+        {
+          "de": "Er sah mich aufmerksam an.",
+          "fr": "Il me regarda attentivement."
+        },
+        {
+          "de": "Sie hat mich auf einen höchst interessanten Zeitungsartikel aufmerksam gemacht.",
+          "fr": "Elle a attiré mon attention sur un article de journal extrêmement intéressant."
+        }
+      ],
+      "page": 88,
+      "categorie": null,
+      "id": "5fa2cc7de51b"
+    },
+    {
+      "mot_de": "zerstreut",
+      "traduction_fr": "distrait",
+      "exemples": [],
+      "page": 88,
+      "categorie": null,
+      "id": "d6cc1d0454ab"
+    },
+    {
+      "mot_de": "merken (merkte, hat gemerkt)",
+      "traduction_fr": "s’apercevoir de, remarquer",
+      "exemples": [
+        {
+          "de": "Er merkte, dass man über ihn lachte.",
+          "fr": "Il s’aperçut qu’on se moquait de lui."
+        },
+        {
+          "de": "Merk dir das!",
+          "fr": "Retiens bien ça !"
+        }
+      ],
+      "page": 88,
+      "categorie": null,
+      "id": "22f61f620e41"
+    },
+    {
+      "mot_de": "bemerken (bemerkte, hat bemerkt)",
+      "traduction_fr": "remarquer, s’apercevoir de",
+      "exemples": [
+        {
+          "de": "Er bemerkt jede Einzelheit.",
+          "fr": "Il remarque chaque détail."
+        },
+        {
+          "de": "Er hatte nicht bemerkt, dass jemand eingetreten war.",
+          "fr": "Il ne s’était pas aperçu que quelqu’un était entré."
+        }
+      ],
+      "page": 88,
+      "categorie": null,
+      "id": "7a407abd08d4"
+    },
+    {
+      "mot_de": "auffallen, fiel auf, ist aufgefallen (+ D)",
+      "traduction_fr": "frapper l’attention",
+      "exemples": [
+        {
+          "de": "Ihr Verhalten fiel mir auf.",
+          "fr": "Son comportement m’a frappé."
+        },
+        {
+          "de": "Es ist mir aufgefallen, dass alles im Haus dunkel war.",
+          "fr": "J’ai été frappé de voir que toute la maison était plongée dans l’obscurité."
+        }
+      ],
+      "page": 88,
+      "categorie": null,
+      "id": "5ea5d4362de5"
+    },
+    {
+      "mot_de": "auffallend",
+      "traduction_fr": "voyant, qui se remarque",
+      "exemples": [
+        {
+          "de": "Sie kleidet sich immer sehr auffallend.",
+          "fr": "Elle s’habille toujours de façon voyante."
+        },
+        {
+          "de": "Er war auffallend ruhig.",
+          "fr": "Il était étrangement calme."
+        }
+      ],
+      "page": 88,
+      "categorie": null,
+      "id": "a757230104f4"
+    },
+    {
+      "mot_de": "der Eindruck, -e",
+      "traduction_fr": "l’impression",
+      "exemples": [
+        {
+          "de": "Er hat einen guten Eindruck auf mich gemacht.",
+          "fr": "Il m’a fait bonne impression."
+        }
+      ],
+      "page": 88,
+      "categorie": null,
+      "id": "c2b55d7d0971"
+    },
+    {
+      "mot_de": "beeindrucken, imponieren (+ D)",
+      "traduction_fr": "impressionner",
+      "exemples": [
+        {
+          "de": "Er war sichtlich beeindruckt.",
+          "fr": "Il était manifestement impressionné."
+        },
+        {
+          "de": "Sie imponierte allen durch ihre literarischen Kenntnisse.",
+          "fr": "Elle impressionnait tout le monde par ses connaissances littéraires."
+        },
+        {
+          "de": "Am meisten imponierte an ihm sein hervorragendes Gedächtnis.",
+          "fr": "Ce qui impressionnait le plus chez lui, c’était sa remarquable mémoire."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "690bc3e60d66"
+    },
+    {
+      "mot_de": "untersuchen (untersuchte, hat untersucht)",
+      "traduction_fr": "examiner",
+      "exemples": [
+        {
+          "de": "einen Fall, einen Kranken untersuchen",
+          "fr": "examiner un cas, un malade"
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "76d84d03bc51"
+    },
+    {
+      "mot_de": "feststellen (stellte fest, hat festgestellt)",
+      "traduction_fr": "constater, remarquer",
+      "exemples": [
+        {
+          "de": "Ich stellte fest, dass er allein war.",
+          "fr": "J’ai remarqué qu’il était seul."
+        },
+        {
+          "de": "Ich muss feststellen, dass er erstaunliche Fortschritte gemacht hat.",
+          "fr": "Je dois constater qu’il a fait des progrès étonnants."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "580febbcfae1"
+    },
+    {
+      "mot_de": "die Feststellung, -en",
+      "traduction_fr": "la constatation",
+      "exemples": [
+        {
+          "de": "Fest steht, daß...",
+          "fr": "Ce qui est sûr, c’est que..."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "961fd1c27821"
+    },
+    {
+      "mot_de": "denken (dachte, hat gedacht)",
+      "traduction_fr": "penser",
+      "exemples": [
+        {
+          "de": "Ich denke, dass er recht hat.",
+          "fr": "Je pense qu’il a raison."
+        },
+        {
+          "de": "Ich habe mehrmals an Sie gedacht.",
+          "fr": "J’ai pensé plusieurs fois à vous."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "daa8ff4981a4"
+    },
+    {
+      "mot_de": "der Gedanke, -n",
+      "traduction_fr": "la pensée, l’idée",
+      "exemples": [
+        {
+          "de": "Wie bist du auf den Gedanken gekommen?",
+          "fr": "Comment une telle idée a-t-elle pu te venir à l’esprit ?"
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "64a88554deb8"
+    },
+    {
+      "mot_de": "nachdenken (dachte nach, hat nachgedacht) (über + A)",
+      "traduction_fr": "réfléchir à",
+      "exemples": [
+        {
+          "de": "Er dachte über den Vorschlag nach.",
+          "fr": "Il a réfléchi à la proposition."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "498886a6b79f"
+    },
+    {
+      "mot_de": "(sich) überlegen",
+      "traduction_fr": "réfléchir",
+      "exemples": [
+        {
+          "de": "Ich will mir die Sache noch einmal überlegen.",
+          "fr": "Je vais y réfléchir encore une fois."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "2e9e0c0f8cc0"
+    },
+    {
+      "mot_de": "die Idee, -n",
+      "traduction_fr": "l’idée",
+      "exemples": [],
+      "page": 89,
+      "categorie": null,
+      "id": "66fef5594de5"
+    },
+    {
+      "mot_de": "eine Schnapsidee, -n",
+      "traduction_fr": "une idée saugrenue, idiote",
+      "exemples": [],
+      "page": 89,
+      "categorie": null,
+      "id": "58840fc33829"
+    },
+    {
+      "mot_de": "das Problem, -e",
+      "traduction_fr": "le problème",
+      "exemples": [
+        {
+          "de": "ein Problem aufwerfen (i, a, o)",
+          "fr": "soulever un problème"
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "9b7469677daa"
+    },
+    {
+      "mot_de": "das Rätsel, -e",
+      "traduction_fr": "l’énigme, la devinette",
+      "exemples": [],
+      "page": 89,
+      "categorie": null,
+      "id": "a430db6f307a"
+    },
+    {
+      "mot_de": "das Geheimnis, -se",
+      "traduction_fr": "le secret, le mystère",
+      "exemples": [],
+      "page": 89,
+      "categorie": null,
+      "id": "c4adae73dde4"
+    },
+    {
+      "mot_de": "geheimnisvoll",
+      "traduction_fr": "mystérieux",
+      "exemples": [],
+      "page": 89,
+      "categorie": null,
+      "id": "028f887f589c"
+    },
+    {
+      "mot_de": "heimlich",
+      "traduction_fr": "en secret",
+      "exemples": [],
+      "page": 89,
+      "categorie": null,
+      "id": "38c3093a4377"
+    },
+    {
+      "mot_de": "lösen (löste, hat gelöst)",
+      "traduction_fr": "résoudre",
+      "exemples": [
+        {
+          "de": "ein Problem, ein Rätsel lösen",
+          "fr": "résoudre un problème, une énigme"
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "9959e0b2b4da"
+    },
+    {
+      "mot_de": "die Lösung, -en",
+      "traduction_fr": "la solution",
+      "exemples": [],
+      "page": 89,
+      "categorie": null,
+      "id": "b70cd18d0b0c"
+    },
+    {
+      "mot_de": "verstehen, versteht, verstand, hat verstanden",
+      "traduction_fr": "comprendre",
+      "exemples": [
+        {
+          "de": "Er sprach so leise, daß man kein Wort verstand.",
+          "fr": "Il parlait si doucement qu’on ne comprenait pas un mot."
+        }
+      ],
+      "page": 89,
+      "categorie": null,
+      "id": "46d831bea964"
+    }
+  ]
+}

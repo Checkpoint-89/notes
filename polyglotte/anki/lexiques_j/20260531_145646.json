@@ -1,0 +1,253 @@
+{
+  "mots": [
+    {
+      "mot_de": "der Körper, -",
+      "traduction_fr": "le corps",
+      "exemples": [
+        {
+          "de": "am ganzen Körper schwitzen",
+          "fr": "transpirer de tout son corps"
+        }
+      ],
+      "page": 31,
+      "categorie": null,
+      "id": "1457e95838bf"
+    },
+    {
+      "mot_de": "der Leib, -er",
+      "traduction_fr": "le corps",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "ea1572c0e468"
+    },
+    {
+      "mot_de": "das Skelett, -e",
+      "traduction_fr": "le squelette",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "1efee2fc7b84"
+    },
+    {
+      "mot_de": "der Knochen, -",
+      "traduction_fr": "l’os",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "33355e72e83a"
+    },
+    {
+      "mot_de": "das Gelenk, -e",
+      "traduction_fr": "l’articulation",
+      "exemples": [
+        {
+          "de": "Im Alter bekommt man steife Gelenke.",
+          "fr": "Avec l’âge, les articulations se rouillent."
+        }
+      ],
+      "page": 31,
+      "categorie": null,
+      "id": "9ae571e27404"
+    },
+    {
+      "mot_de": "die Gestalt, -en",
+      "traduction_fr": "la taille, la stature",
+      "exemples": [
+        {
+          "de": "Er ist von eher kleiner Gestalt.",
+          "fr": "Il est plutôt de petite taille."
+        }
+      ],
+      "page": 31,
+      "categorie": null,
+      "id": "e31bf25c6733"
+    },
+    {
+      "mot_de": "schlank",
+      "traduction_fr": "svelte, élancé",
+      "exemples": [
+        {
+          "de": "Obst ist gut für die schlanke Linie.",
+          "fr": "Manger des fruits est bon pour la ligne."
+        }
+      ],
+      "page": 31,
+      "categorie": null,
+      "id": "79ff8dbe4837"
+    },
+    {
+      "mot_de": "mager",
+      "traduction_fr": "maigre",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "b01ab9ba9c30"
+    },
+    {
+      "mot_de": "dick",
+      "traduction_fr": "gros",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "7f55a0ed8b02"
+    },
+    {
+      "mot_de": "die Haut, -e",
+      "traduction_fr": "la peau",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "a4bf5ef00b45"
+    },
+    {
+      "mot_de": "nackt",
+      "traduction_fr": "nu",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "882defec71a4"
+    },
+    {
+      "mot_de": "die Brust, -e",
+      "traduction_fr": "la poitrine",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "c541572ff906"
+    },
+    {
+      "mot_de": "der Busen, -",
+      "traduction_fr": "le sein",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "7921afd413e5"
+    },
+    {
+      "mot_de": "die Hüfte, -n",
+      "traduction_fr": "la hanche",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "6ecdaca29b4c"
+    },
+    {
+      "mot_de": "der Rücken, -",
+      "traduction_fr": "le dos",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "e3aab2d5b0d2"
+    },
+    {
+      "mot_de": "der Magen, -",
+      "traduction_fr": "l’estomac",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "0ec9b5d19349"
+    },
+    {
+      "mot_de": "die Lunge, -n",
+      "traduction_fr": "le poumon",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "884e986f4aa0"
+    },
+    {
+      "mot_de": "das Herz, -en",
+      "traduction_fr": "le cœur",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "907031b91d1d"
+    },
+    {
+      "mot_de": "herzlich",
+      "traduction_fr": "cordial",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "d89dc598d143"
+    },
+    {
+      "mot_de": "das Blut, -",
+      "traduction_fr": "le sang",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "92fff4d76679"
+    },
+    {
+      "mot_de": "bluten (blutete, hat geblutet)",
+      "traduction_fr": "saigner",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "f378bbd8feb0"
+    },
+    {
+      "mot_de": "der Kopf, -e",
+      "traduction_fr": "la tête",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "4ae85b27a23c"
+    },
+    {
+      "mot_de": "das Gesicht, -er",
+      "traduction_fr": "le visage, la figure",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "8f5f1cd0d8e8"
+    },
+    {
+      "mot_de": "das Auge, -n",
+      "traduction_fr": "l’œil",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "6578bc56854b"
+    },
+    {
+      "mot_de": "blind",
+      "traduction_fr": "aveugle",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "6013221752df"
+    },
+    {
+      "mot_de": "die Brille, -n",
+      "traduction_fr": "les lunettes",
+      "exemples": [
+        {
+          "de": "Wo ist meine Brille?",
+          "fr": "Où sont mes lunettes ?"
+        }
+      ],
+      "page": 31,
+      "categorie": null,
+      "id": "8608e1702a10"
+    },
+    {
+      "mot_de": "das Ohr, -en",
+      "traduction_fr": "l’oreille",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "022dc07952cd"
+    },
+    {
+      "mot_de": "taub",
+      "traduction_fr": "sourd",
+      "exemples": [],
+      "page": 31,
+      "categorie": null,
+      "id": "b50ca72bfa69"
+    }
+  ]
+}

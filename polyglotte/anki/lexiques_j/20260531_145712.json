@@ -1,0 +1,281 @@
+{
+  "mots": [
+    {
+      "mot_de": "der Mund, -¨er",
+      "traduction_fr": "la bouche",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "240a651ba85f"
+    },
+    {
+      "mot_de": "der Zahn, -e",
+      "traduction_fr": "la dent",
+      "exemples": [
+        {
+          "de": "sich die Zähne putzen",
+          "fr": "se laver les dents"
+        }
+      ],
+      "page": 32,
+      "categorie": null,
+      "id": "29418b4ac5fc"
+    },
+    {
+      "mot_de": "die Zahnbürste, -n",
+      "traduction_fr": "la brosse à dents",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "dba05a4ff2ed"
+    },
+    {
+      "mot_de": "die Zahnpasta, die Zahnpasten",
+      "traduction_fr": "la pâte dentifrice",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "9cf669f0d2bd"
+    },
+    {
+      "mot_de": "die Nase, -n",
+      "traduction_fr": "le nez",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "c34caab9205f"
+    },
+    {
+      "mot_de": "atmen",
+      "traduction_fr": "respirer",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "ae2f4d8a9766"
+    },
+    {
+      "mot_de": "einatmen (atmete ein, hat eingeatmet)",
+      "traduction_fr": "inspirer, respirer profondément",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "4785c2633fc5"
+    },
+    {
+      "mot_de": "ausatmen (atmete aus, hat ausgeatmet)",
+      "traduction_fr": "expirer, souffler",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "e87816f0db6e"
+    },
+    {
+      "mot_de": "aufatmen (atmete auf, hat aufgeatmet)",
+      "traduction_fr": "soupirer de soulagement ; pousser un soupir de soulagement",
+      "exemples": [
+        {
+          "de": "Ein Aufatmen der Erleichterung ging durch den Saal.",
+          "fr": "Un soupir de soulagement parcourut la salle."
+        }
+      ],
+      "page": 32,
+      "categorie": null,
+      "id": "513cc94c0f60"
+    },
+    {
+      "mot_de": "der Hals, -es, -¨e",
+      "traduction_fr": "le cou",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "dc1f559aef4c"
+    },
+    {
+      "mot_de": "die Kehle, -n",
+      "traduction_fr": "la gorge",
+      "exemples": [
+        {
+          "de": "eine trockene Kehle haben",
+          "fr": "avoir la gorge sèche"
+        }
+      ],
+      "page": 32,
+      "categorie": null,
+      "id": "0215d5332194"
+    },
+    {
+      "mot_de": "das Haar, -e",
+      "traduction_fr": "le cheveu, la chevelure, le poil",
+      "exemples": [
+        {
+          "de": "Sie hat blondes, dunkles, rotes Haar.",
+          "fr": "Elle a les cheveux blonds, bruns, roux."
+        },
+        {
+          "de": "Er hat sich die Haare schneiden lassen.",
+          "fr": "Il s’est fait couper les cheveux."
+        }
+      ],
+      "page": 32,
+      "categorie": null,
+      "id": "86b4cfd77ee4"
+    },
+    {
+      "mot_de": "der Haartrockner, -",
+      "traduction_fr": "le sèche-cheveux",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "112366664aac"
+    },
+    {
+      "mot_de": "langhaarig",
+      "traduction_fr": "à longs cheveux",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "f62b39f6e895"
+    },
+    {
+      "mot_de": "haarig, behaart",
+      "traduction_fr": "poilu, velu",
+      "exemples": [
+        {
+          "de": "haarige Beine haben",
+          "fr": "avoir les jambes poilues"
+        }
+      ],
+      "page": 32,
+      "categorie": null,
+      "id": "7d0470e29c72"
+    },
+    {
+      "mot_de": "der Friseur, -e",
+      "traduction_fr": "le coiffeur",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "ebe1bbdd7a76"
+    },
+    {
+      "mot_de": "der Kamm, -e",
+      "traduction_fr": "le peigne",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "305d9de31f42"
+    },
+    {
+      "mot_de": "der Bart, -e",
+      "traduction_fr": "la barbe",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "9171a0c3025d"
+    },
+    {
+      "mot_de": "der Schnurrbart, -e",
+      "traduction_fr": "la moustache",
+      "exemples": [
+        {
+          "de": "ein gepflegter Schnurrbart",
+          "fr": "une moustache soignée"
+        },
+        {
+          "de": "(einen) Schnurrbart tragen",
+          "fr": "porter (une) moustache"
+        }
+      ],
+      "page": 32,
+      "categorie": null,
+      "id": "c476300083ca"
+    },
+    {
+      "mot_de": "rasieren (rasierte, hat rasiert)",
+      "traduction_fr": "raser",
+      "exemples": [
+        {
+          "de": "Er rasiert sich jeden Morgen.",
+          "fr": "Il se rase tous les matins."
+        }
+      ],
+      "page": 32,
+      "categorie": null,
+      "id": "307703f1083e"
+    },
+    {
+      "mot_de": "das Rasiermesser, -",
+      "traduction_fr": "le rasoir droit",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "aca34c90aa9d"
+    },
+    {
+      "mot_de": "der Rasierer, -",
+      "traduction_fr": "le rasoir (électrique)",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "ca2b4e5539b6"
+    },
+    {
+      "mot_de": "der Rasierschaum, -e",
+      "traduction_fr": "la mousse à raser",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "8f63f3329db4"
+    },
+    {
+      "mot_de": "die After-Shave-Lotion",
+      "traduction_fr": "l’after-shave",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "4cf21f8d0871"
+    },
+    {
+      "mot_de": "sich schminken (schminkte sich, hat sich geschminkt)",
+      "traduction_fr": "se farder, se maquiller",
+      "exemples": [
+        {
+          "de": "Sie hat sich nur leicht geschminkt.",
+          "fr": "Elle ne s’est que légèrement fardée."
+        }
+      ],
+      "page": 32,
+      "categorie": null,
+      "id": "53e7dd89c8bb"
+    },
+    {
+      "mot_de": "das Glied, -er",
+      "traduction_fr": "le membre",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "ee7224afeb40"
+    },
+    {
+      "mot_de": "der Arm, -e",
+      "traduction_fr": "le bras",
+      "exemples": [
+        {
+          "de": "Arm in Arm",
+          "fr": "bras dessus, bras dessous"
+        }
+      ],
+      "page": 32,
+      "categorie": null,
+      "id": "02d97342c8a7"
+    },
+    {
+      "mot_de": "die Hand, -e",
+      "traduction_fr": "la main",
+      "exemples": [],
+      "page": 32,
+      "categorie": null,
+      "id": "cf3bc9fd6194"
+    }
+  ]
+}
