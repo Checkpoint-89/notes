@@ -48,7 +48,27 @@ $$\hat y = X\hat\beta = XX^+ y = U\Sigma\Sigma^+ U^* y,$$
 
 et n'est autre que la projection orthogonale de $y$ sur $\operatorname{col}(X)$ — ce que la section précédente posait comme point de départ devient ici un résultat. Plus précisément, $XX^+ = U\Sigma\Sigma^+U^*$ est hermitien, car $\Sigma\Sigma^+$ est réelle diagonale et $U$ est unitaire, et idempotent, car $(\Sigma\Sigma^+)^2 = \Sigma\Sigma^+$ : c'est bien le projecteur orthogonal sur $\operatorname{col}(X)$. La prédiction ne retient donc que les composantes de $\tilde y$ associées aux directions singulières non nulles.
 
-La SVD expose également la sensibilité numérique du problème : une petite valeur singulière $\sigma_i \approx 0$ est amplifiée en $1/\sigma_i$ dans $X^+$, ce qui amplifie le bruit dans la direction correspondante. La régularisation de Ridge — remplacer $1/\sigma_i$ par $\sigma_i/(\sigma_i^2 + \lambda)$ — est exactement un filtrage spectral qui atténue ces directions instables.
+### 2.1 Vision géométrique de Ridge
+
+**Instabilité.** La SVD expose également la sensibilité numérique du problème. Un $\sigma_i$ petit signifie des colonnes de $X$ quasi liées, et $\hat\beta = \sum_i \frac{\tilde y_i}{\sigma_i}\,v_i$ (où $v_i$ est la $i$-ème colonne de $V$) est instable : le bruit porté par $\tilde y_i$ est amplifié par $1/\sigma_i$.
+
+**Remède : allonger les colonnes.** On augmente le système en ajoutant $\sqrt\lambda\,I_p$ sous $X$ :
+
+$$\tilde X = \begin{pmatrix}X\\\sqrt\lambda\,I_p\end{pmatrix}, \qquad \tilde y = \begin{pmatrix}y\\0\end{pmatrix}.$$
+
+$\tilde X$ est de rang colonne plein quel que soit $X$ : $\tilde X a = 0 \Rightarrow \sqrt\lambda\,a = 0 \Rightarrow a = 0$. On projette alors $\tilde y$ orthogonalement sur $\operatorname{col}(\tilde X)$ — exactement le mécanisme de la section 1, appliqué au système augmenté :
+
+$$\tilde X^*(\tilde y - \tilde X\beta) = 0 \quad\Longleftrightarrow\quad (X^*X + \lambda I)\hat\beta_\lambda = X^*y.$$
+
+Trois conséquences en découlent.
+
+**Inversibilité garantie.** Le spectre de $X^*X + \lambda I$ est minoré par $\lambda > 0$ : l'équation admet toujours une unique solution, même si $X^*X$ est singulière.
+
+**La pénalité est géométrique, non postulée.** La décomposition par blocs du résidu du système augmenté donne directement
+$$\|\tilde y - \tilde X\beta\|^2 = \|y - X\beta\|^2 + \lambda\|\beta\|^2 :$$
+le terme $\lambda\|\beta\|^2$ de la section 3 n'est rien d'autre que le résidu porté par les $p$ dimensions ajoutées, dont la cible est $0$.
+
+**Amortissement spectral, et perte de la projection.** Dans la base de la SVD de $X$, $X^*X + \lambda I = V(\Sigma^*\Sigma + \lambda I)V^*$ (même $V$), d'où $\hat\beta_\lambda = \sum_i \frac{\sigma_i}{\sigma_i^2 + \lambda}\,\tilde y_i\,v_i$ — le filtre spectral déjà annoncé. Le dénominateur reste $\geq \lambda$ même quand $\sigma_i \to 0$ : les directions instables sont amorties continûment, jamais tronquées. En contrepartie, les coefficients $f_i = \sigma_i^2/(\sigma_i^2+\lambda)$ ne sont plus idempotents ($f_i \neq f_i^2$) : $\hat y_\lambda = X\hat\beta_\lambda$ n'est plus la projection orthogonale sur $\operatorname{col}(X)$, mais une version biaisée de celle-ci — le prix de la stabilité.
 
 ## 3. Minimisation d'une fonction de perte
 
