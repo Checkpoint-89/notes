@@ -137,7 +137,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../machine_learning/clustering/clustering_metrics.html">Machine learning</a></li><li class="breadcrumb-item"><a href="../../machine_learning/estimation/linear_regression.html">Convergence de vues</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../machine_learning/clustering/clustering_metrics.html">Machine learning</a></li><li class="breadcrumb-item"><a href="../../machine_learning/estimation/linear_regression.html">Régression linéaire: convergence de vues</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -355,7 +355,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../machine_learning/estimation/linear_regression.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Convergence de vues</span></a>
+ <span class="menu-text">Régression linéaire: convergence de vues</span></a>
   </div>
 </li>
       </ul>
@@ -515,7 +515,10 @@ window.Quarto = {
   <li><a href="#la-régression-linéaire-convergence-de-vues" id="toc-la-régression-linéaire-convergence-de-vues" class="nav-link active" data-scroll-target="#la-régression-linéaire-convergence-de-vues">La régression linéaire : convergence de vues</a>
   <ul>
   <li><a href="#projection-orthogonale" id="toc-projection-orthogonale" class="nav-link" data-scroll-target="#projection-orthogonale">1. Projection orthogonale</a></li>
-  <li><a href="#décomposition-en-valeurs-singulières" id="toc-décomposition-en-valeurs-singulières" class="nav-link" data-scroll-target="#décomposition-en-valeurs-singulières">2. Décomposition en valeurs singulières</a></li>
+  <li><a href="#décomposition-en-valeurs-singulières" id="toc-décomposition-en-valeurs-singulières" class="nav-link" data-scroll-target="#décomposition-en-valeurs-singulières">2. Décomposition en valeurs singulières</a>
+  <ul class="collapse">
+  <li><a href="#vision-géométrique-de-ridge" id="toc-vision-géométrique-de-ridge" class="nav-link" data-scroll-target="#vision-géométrique-de-ridge">2.1 Vision géométrique de Ridge</a></li>
+  </ul></li>
   <li><a href="#minimisation-dune-fonction-de-perte" id="toc-minimisation-dune-fonction-de-perte" class="nav-link" data-scroll-target="#minimisation-dune-fonction-de-perte">3. Minimisation d’une fonction de perte</a></li>
   <li><a href="#maximum-de-vraisemblance" id="toc-maximum-de-vraisemblance" class="nav-link" data-scroll-target="#maximum-de-vraisemblance">4. Maximum de vraisemblance</a></li>
   <li><a href="#estimation-map-et-régularisation" id="toc-estimation-map-et-régularisation" class="nav-link" data-scroll-target="#estimation-map-et-régularisation">5. Estimation MAP et régularisation</a></li>
@@ -527,7 +530,7 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../machine_learning/clustering/clustering_metrics.html">Machine learning</a></li><li class="breadcrumb-item"><a href="../../machine_learning/estimation/linear_regression.html">Convergence de vues</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../machine_learning/clustering/clustering_metrics.html">Machine learning</a></li><li class="breadcrumb-item"><a href="../../machine_learning/estimation/linear_regression.html">Régression linéaire: convergence de vues</a></li></ol></nav></header>
 
 
 
@@ -565,7 +568,20 @@ window.Quarto = {
 <p><strong>Ce que la SVD rend visible.</strong> La prédiction s’écrit d’abord</p>
 <p><span class="math display">\[\hat y = X\hat\beta = XX^+ y = U\Sigma\Sigma^+ U^* y,\]</span></p>
 <p>et n’est autre que la projection orthogonale de <span class="math inline">\(y\)</span> sur <span class="math inline">\(\operatorname{col}(X)\)</span> — ce que la section précédente posait comme point de départ devient ici un résultat. Plus précisément, <span class="math inline">\(XX^+ = U\Sigma\Sigma^+U^*\)</span> est hermitien, car <span class="math inline">\(\Sigma\Sigma^+\)</span> est réelle diagonale et <span class="math inline">\(U\)</span> est unitaire, et idempotent, car <span class="math inline">\((\Sigma\Sigma^+)^2 = \Sigma\Sigma^+\)</span> : c’est bien le projecteur orthogonal sur <span class="math inline">\(\operatorname{col}(X)\)</span>. La prédiction ne retient donc que les composantes de <span class="math inline">\(\tilde y\)</span> associées aux directions singulières non nulles.</p>
-<p>La SVD expose également la sensibilité numérique du problème : une petite valeur singulière <span class="math inline">\(\sigma_i \approx 0\)</span> est amplifiée en <span class="math inline">\(1/\sigma_i\)</span> dans <span class="math inline">\(X^+\)</span>, ce qui amplifie le bruit dans la direction correspondante. La régularisation de Ridge — remplacer <span class="math inline">\(1/\sigma_i\)</span> par <span class="math inline">\(\sigma_i/(\sigma_i^2 + \lambda)\)</span> — est exactement un filtrage spectral qui atténue ces directions instables.</p>
+<section id="vision-géométrique-de-ridge" class="level3">
+<h3 class="anchored" data-anchor-id="vision-géométrique-de-ridge">2.1 Vision géométrique de Ridge</h3>
+<p><strong>Instabilité.</strong> La SVD expose également la sensibilité numérique du problème. Un <span class="math inline">\(\sigma_i\)</span> petit signifie des colonnes de <span class="math inline">\(X\)</span> quasi liées, et <span class="math inline">\(\hat\beta = \sum_i \frac{\tilde y_i}{\sigma_i}\,v_i\)</span> (où <span class="math inline">\(v_i\)</span> est la <span class="math inline">\(i\)</span>-ème colonne de <span class="math inline">\(V\)</span>) est instable : le bruit porté par <span class="math inline">\(\tilde y_i\)</span> est amplifié par <span class="math inline">\(1/\sigma_i\)</span>.</p>
+<p><strong>Remède : allonger les colonnes.</strong> On augmente le système en ajoutant <span class="math inline">\(\sqrt\lambda\,I_p\)</span> sous <span class="math inline">\(X\)</span> :</p>
+<p><span class="math display">\[\tilde X = \begin{pmatrix}X\\\sqrt\lambda\,I_p\end{pmatrix}, \qquad \tilde y = \begin{pmatrix}y\\0\end{pmatrix}.\]</span></p>
+<p><span class="math inline">\(\tilde X\)</span> est de rang colonne plein quel que soit <span class="math inline">\(X\)</span> : <span class="math inline">\(\tilde X a = 0 \Rightarrow \sqrt\lambda\,a = 0 \Rightarrow a = 0\)</span>. On projette alors <span class="math inline">\(\tilde y\)</span> orthogonalement sur <span class="math inline">\(\operatorname{col}(\tilde X)\)</span> — exactement le mécanisme de la section 1, appliqué au système augmenté :</p>
+<p><span class="math display">\[\tilde X^*(\tilde y - \tilde X\beta) = 0 \quad\Longleftrightarrow\quad (X^*X + \lambda I)\hat\beta_\lambda = X^*y.\]</span></p>
+<p>Trois conséquences en découlent.</p>
+<p><strong>Inversibilité garantie.</strong> Le spectre de <span class="math inline">\(X^*X + \lambda I\)</span> est minoré par <span class="math inline">\(\lambda &gt; 0\)</span> : l’équation admet toujours une unique solution, même si <span class="math inline">\(X^*X\)</span> est singulière.</p>
+<p><strong>La pénalité est géométrique, non postulée.</strong> La décomposition par blocs du résidu du système augmenté donne directement<br>
+<span class="math display">\[\|\tilde y - \tilde X\beta\|^2 = \|y - X\beta\|^2 + \lambda\|\beta\|^2 :\]</span><br>
+le terme <span class="math inline">\(\lambda\|\beta\|^2\)</span> de la section 3 n’est rien d’autre que le résidu porté par les <span class="math inline">\(p\)</span> dimensions ajoutées, dont la cible est <span class="math inline">\(0\)</span>.</p>
+<p><strong>Amortissement spectral, et perte de la projection.</strong> Dans la base de la SVD de <span class="math inline">\(X\)</span>, <span class="math inline">\(X^*X + \lambda I = V(\Sigma^*\Sigma + \lambda I)V^*\)</span> (même <span class="math inline">\(V\)</span>), d’où <span class="math inline">\(\hat\beta_\lambda = \sum_i \frac{\sigma_i}{\sigma_i^2 + \lambda}\,\tilde y_i\,v_i\)</span> — le filtre spectral déjà annoncé. Le dénominateur reste <span class="math inline">\(\geq \lambda\)</span> même quand <span class="math inline">\(\sigma_i \to 0\)</span> : les directions instables sont amorties continûment, jamais tronquées. En contrepartie, les coefficients <span class="math inline">\(f_i = \sigma_i^2/(\sigma_i^2+\lambda)\)</span> ne sont plus idempotents (<span class="math inline">\(f_i \neq f_i^2\)</span>) : <span class="math inline">\(\hat y_\lambda = X\hat\beta_\lambda\)</span> n’est plus la projection orthogonale sur <span class="math inline">\(\operatorname{col}(X)\)</span>, mais une version biaisée de celle-ci — le prix de la stabilité.</p>
+</section>
 </section>
 <section id="minimisation-dune-fonction-de-perte" class="level2">
 <h2 class="anchored" data-anchor-id="minimisation-dune-fonction-de-perte">3. Minimisation d’une fonction de perte</h2>
