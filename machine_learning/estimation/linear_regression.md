@@ -42,35 +42,59 @@ $$\hat\beta = V\tilde\beta = V\Sigma^+ U^* y =: X^+ y$$
 
 où $X^+ = V\Sigma^+ U^*$ est la **pseudo-inverse de Moore-Penrose** de $X$.
 
-**Ce que la SVD rend visible.** La prédiction s'écrit d'abord
+**Projection orthogonale.** 
 
-$$\hat y = X\hat\beta = XX^+ y = U\Sigma\Sigma^+ U^* y,$$
+La prédiction $\hat y = X\hat\beta = XX^+ y = U\Sigma\Sigma^+ U^* y,$ n'est autre que la projection orthogonale de $y$ sur $\operatorname{col}(X)$ — ce que la section précédente posait comme point de départ devient ici un résultat démontré. En effet, en notant $P=XX^+=U\Sigma\Sigma^+U^*$, on a $P^*=P$ (auto-adjonction), et $P^2=P$ (idempotence) qui caractérisent un projecteur orthogonal.
 
-et n'est autre que la projection orthogonale de $y$ sur $\operatorname{col}(X)$ — ce que la section précédente posait comme point de départ devient ici un résultat. Plus précisément, $XX^+ = U\Sigma\Sigma^+U^*$ est hermitien, car $\Sigma\Sigma^+$ est réelle diagonale et $U$ est unitaire, et idempotent, car $(\Sigma\Sigma^+)^2 = \Sigma\Sigma^+$ : c'est bien le projecteur orthogonal sur $\operatorname{col}(X)$. La prédiction ne retient donc que les composantes de $\tilde y$ associées aux directions singulières non nulles.
+Concrètement, $\Sigma\Sigma^+ = \operatorname{diag}(1,\dots,1,0,\dots,0)$, avec $r=\operatorname{rang}(X)$ valeurs $1$ suivies de zéros. La projection s'écrit donc, de façon développée :
 
-### 2.1 Vision géométrique de Ridge
+$$Py = U(\Sigma\Sigma^+)U^*y = \sum_{i=1}^{r} \langle u_i, y\rangle\, u_i$$
 
-**Instabilité.** La SVD expose également la sensibilité numérique du problème. Un $\sigma_i$ petit signifie des colonnes de $X$ quasi liées, et $\hat\beta = \sum_i \frac{\tilde y_i}{\sigma_i}\,v_i$ (où $v_i$ est la $i$-ème colonne de $V$) est instable : le bruit porté par $\tilde y_i$ est amplifié par $1/\sigma_i$.
+où $u_i^*y$ est la coordonnée de $y$ selon $u_i$ dans la base $U$ (la $i$-ème composante de $\tilde y = U^*y$). Autrement dit, la prédiction ne retient que les composantes de $\tilde y$ associées aux directions singulières non nulles ($i\le r$) — les autres ($i>r$) sont purement et simplement annulées par $\Sigma\Sigma^+$.
 
-**Remède : allonger les colonnes.** On augmente le système en ajoutant $\sqrt\lambda\,I_p$ sous $X$ :
+## 3. Problèmes mal posés: Tikhonov et Ridge
 
-$$\tilde X = \begin{pmatrix}X\\\sqrt\lambda\,I_p\end{pmatrix}, \qquad \tilde y = \begin{pmatrix}y\\0\end{pmatrix}.$$
+**Le problème, révélé par la SVD.** Le vecteur de coefficients qui réalise la projection $\hat y = X\hat\beta$ sur $\operatorname{col}(X)$ est $\hat\beta = X^+y = \sum_{i=1}^r \frac{\langle u_i,y\rangle}{\sigma_i}\,v_i$. Un $\sigma_i$ petit provoque une instabilité numérique à double titre : division par $\sigma_i$ proche de zéro qui amplifie le bruit, et quasi-dépendance linéaire des colonnes de $X$ visible par $\|Xv_i\| = \sigma_i$. La projection $\hat y$ reste bien définie ; c'est le coefficient qui est instable.
 
-$\tilde X$ est de rang colonne plein quel que soit $X$ : $\tilde X a = 0 \Rightarrow \sqrt\lambda\,a = 0 \Rightarrow a = 0$. On projette alors $\tilde y$ orthogonalement sur $\operatorname{col}(\tilde X)$ — exactement le mécanisme de la section 1, appliqué au système augmenté :
+**Construction augmentée (Tikhonov).** On choisit une matrice de pénalisation $\Gamma\in\mathbb{C}^{q\times p}$ telle que $\ker X\cap\ker\Gamma=\{0\}$, et un *a priori* $\beta_0\in\mathbb{C}^p$. On empile $\Gamma$ sous $X$ et sa cible $\Gamma\beta_0$ sous $y$ :
 
-$$\tilde X^*(\tilde y - \tilde X\beta) = 0 \quad\Longleftrightarrow\quad (X^*X + \lambda I)\hat\beta_\lambda = X^*y.$$
+$$X_{\text{aug}} = \begin{pmatrix}X\\\Gamma\end{pmatrix}, \qquad y_{\text{aug}} = \begin{pmatrix}y\\\Gamma\beta_0\end{pmatrix}.$$
 
-Trois conséquences en découlent.
+La condition sur $\Gamma$ équivaut à $\ker(X_{\text{aug}})=\{0\}$ ($X_{\text{aug}}a=0 \Rightarrow Xa=0$ et $\Gamma a=0 \Rightarrow a=0$) : $X_{\text{aug}}$ est de rang plein colonne. 
 
-**Inversibilité garantie.** Le spectre de $X^*X + \lambda I$ est minoré par $\lambda > 0$ : l'équation admet toujours une unique solution, même si $X^*X$ est singulière.
+Les équations normales donnent $X_{\text{aug}}^*X_{\text{aug}}\hat\beta=X_{\text{aug}}^*y_{\text{aug}}$ et ont donc une solution unique et fermée. En décomposant l'expression par blocs, on obtient :
 
-**La pénalité est géométrique, non postulée.** La décomposition par blocs du résidu du système augmenté donne directement
-$$\|\tilde y - \tilde X\beta\|^2 = \|y - X\beta\|^2 + \lambda\|\beta\|^2 :$$
-le terme $\lambda\|\beta\|^2$ de la section 3 n'est rien d'autre que le résidu porté par les $p$ dimensions ajoutées, dont la cible est $0$.
+$$\boxed{(X^*X+\Gamma^*\Gamma)\,\hat\beta = X^*y+\Gamma^*\Gamma\beta_0.}$$
 
-**Amortissement spectral, et perte de la projection.** Dans la base de la SVD de $X$, $X^*X + \lambda I = V(\Sigma^*\Sigma + \lambda I)V^*$ (même $V$), d'où $\hat\beta_\lambda = \sum_i \frac{\sigma_i}{\sigma_i^2 + \lambda}\,\tilde y_i\,v_i$ — le filtre spectral déjà annoncé. Le dénominateur reste $\geq \lambda$ même quand $\sigma_i \to 0$ : les directions instables sont amorties continûment, jamais tronquées. En contrepartie, les coefficients $f_i = \sigma_i^2/(\sigma_i^2+\lambda)$ ne sont plus idempotents ($f_i \neq f_i^2$) : $\hat y_\lambda = X\hat\beta_\lambda$ n'est plus la projection orthogonale sur $\operatorname{col}(X)$, mais une version biaisée de celle-ci — le prix de la stabilité.
+**Lecture variationnelle.** Le résidu augmenté $r = y_{\text{aug}}-X_{\text{aug}}\beta$ se scinde en deux morceaux logés dans des coordonnées disjointes. Ces deux morceaux étant orthogonaux, Pythagore donne
 
-## 3. Minimisation d'une fonction de perte
+$$\|r\|^2 = \|y-X\beta\|^2 + \|\Gamma(\beta-\beta_0)\|^2.$$
+
+$X_{\text{aug}}\hat\beta$ étant la projection de $y_{\text{aug}}$, le coefficient $\hat\beta$ minimise $\|r\|^2$ (section 1), donc la **fonctionnelle de Tikhonov** $\|y-X\beta\|^2+\|\Gamma(\beta-\beta_0)\|^2$.
+
+**Ridge : le cas isotrope sans ancrage**
+
+- $\Gamma=\sqrt\lambda\,I_p$ et $\beta_0=0$, donc $\Gamma^*\Gamma=\lambda I$,
+- l'équation devient $(X^*X+\lambda I)\hat\beta_\lambda=X^*y$,
+- et la fonctionnelle $\|y-X\beta\|^2+\lambda\|\beta\|^2$.
+
+En reprenant $X=U\Sigma V^*$ et $(X^*X+\lambda I)^{-1}=V(\Sigma^*\Sigma+\lambda I)^{-1}V^*$ (même argument qu'en section 2, $V^*V=I_p$ diagonalisant simultanément les deux termes), on obtient
+
+$$\hat\beta_\lambda=\sum_{i=1}^r \frac{\sigma_i}{\sigma_i^2+\lambda}\,\langle u_i,y\rangle\,v_i,$$
+
+où le gain $1/\sigma_i$ de la projection exacte devient $\sigma_i/(\sigma_i^2+\lambda)$, borné même quand $\sigma_i\to0$. 
+
+En notant $P_\lambda := X(X^*X+\lambda I)^{-1}X^*= U\Sigma_\lambda U^*$, où $\Sigma_\lambda$ est diagonale de coefficients
+
+$$d_i=\frac{\sigma_i^2}{\sigma_i^2+\lambda}\in(0,1),$$
+
+on a toujours $P_\lambda^*=P_\lambda$ (auto-adjonction, même argument qu'en section 2). Mais l'idempotence échoue : $P_\lambda^2=U\Sigma_\lambda^2U^*$ requiert $d_i^2=d_i$, or
+
+$$d_i^2=\left(\frac{\sigma_i^2}{\sigma_i^2+\lambda}\right)^{\!2}<\frac{\sigma_i^2}{\sigma_i^2+\lambda}=d_i \qquad\text{dès que }\lambda>0\text{ et }\sigma_i>0.$$
+
+$P_\lambda$ n'est donc plus idempotent : ce n'est plus la projection orthogonale sur $\operatorname{col}(X)$, mais une contraction symétrique de celle-ci — chaque composante $\langle u_i,y\rangle$ est rétrécie d'un facteur $d_i$ strictement entre $0$ et $1$, plutôt que conservée ($d_i=1$) ou annulée ($d_i=0$).
+
+## 4. Minimisation d'une fonction de perte
 
 On se place cette fois dans l'espace des paramètres $\mathbb{C}^p$ et on pose le problème directement comme un problème d'optimisation : trouver $\beta$ qui minimise la fonction de perte
 
@@ -88,7 +112,7 @@ $$\mathcal{L}_\lambda(\beta) = \|y - X\beta\|^2 + \lambda\|\beta\|^2, \qquad \la
 
 dont la solution est $\hat\beta_\lambda = (X^*X + \lambda I)^{-1}X^*y$. Dans le cadre SVD, cela revient à remplacer chaque $1/\sigma_i$ par $\sigma_i/(\sigma_i^2 + \lambda)$ : un filtrage spectral qui atténue les directions de faible variance sans les annuler.
 
-## 4. Maximum de vraisemblance
+## 5. Maximum de vraisemblance
 
 On note $Y$ le vecteur aléatoire et $y$ sa réalisation observée ; $X$ désigne la matrice de covariables, supposée déterministe.
 
@@ -124,7 +148,7 @@ Trois cas illustrent la correspondance :
 
 Chaque fonction de perte est la signature d'un modèle d'erreur — explicite ou non.
 
-## 5. Estimation MAP et régularisation
+## 6. Estimation MAP et régularisation
 
 Dans le cadre fréquentiste de la section précédente, $\beta$ était un paramètre fixe inconnu. On adopte maintenant un point de vue bayésien : $\beta$ est une variable aléatoire, et on lui associe une distribution *a priori* $p(\beta)$ qui encode nos croyances avant d'observer les données.
 
@@ -160,7 +184,7 @@ avec $q = 2$, $\lambda = \sigma^2/\tau^2$ pour Ridge ; $q = 1$, $\lambda = \sigm
 
 La structure est la même que dans la section 4, mais dans l'espace des paramètres : le choix du prior sur $\beta$ est équivalent au choix d'un terme de régularisation, à constante additive près sur $-\log p(\beta)$.
 
-## 6. Optimalité : Gauss-Markov et Cramér-Rao
+## 7. Optimalité : Gauss-Markov et Cramér-Rao
 
 Les sections 1 à 4 ont construit l'estimateur des moindres carrés $\hat\beta = X^+y$, tandis que la section 5 a montré comment le point de vue bayésien le modifie de manière contrôlée par régularisation. Une question reste ouverte : dans quel sens statistique l'estimateur des moindres carrés est-il *bon* ? On suppose désormais que $X$ est de rang colonne plein, afin que $\beta$ soit identifiable ; si ce n'est pas le cas, les énoncés d'optimalité portent sur $X\beta$ ou sur une paramétrisation réduite, non sur $\beta$ lui-même.
 
