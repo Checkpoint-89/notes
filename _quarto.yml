@@ -10,8 +10,6 @@ project:
     - "machine_learning/**/*.md"
     - "metacrisis/*.md"
     - "cheat sheets/*.md"
-    - "economics/micro-economics/*.ipynb"
-    - "!economics/micro-economics/micro.ipynb"
     - "!pronostics/"
 
 website:
@@ -99,43 +97,6 @@ website:
             text: "2. Traditions & Meaning"
           - href: metacrisis/3.md
             text: "3. Consciousness"
-      - section: "Microéconomie"
-        collapsed: true
-        contents:
-          - href: economics/micro-economics/micro-00-intro.ipynb
-            text: "Introduction"
-          - href: economics/micro-economics/micro-01-motivation.ipynb
-            text: "00. Motivation"
-          - href: economics/micro-economics/micro-02-preferences.ipynb
-            text: "01. Préférences"
-          - href: economics/micro-economics/micro-03-utilite-indifference.ipynb
-            text: "02. Utilité et indifférence"
-          - href: economics/micro-economics/micro-04-tms-preferences.ipynb
-            text: "03. TMS et formes de préférences"
-          - href: economics/micro-economics/micro-05-contrainte-budgetaire.ipynb
-            text: "04. Contrainte budgétaire"
-          - href: economics/micro-economics/micro-06-choix-optimal.ipynb
-            text: "05. Choix optimal"
-          - href: economics/micro-economics/micro-07-demande-individuelle.ipynb
-            text: "06. Demande individuelle"
-          - href: economics/micro-economics/micro-08-elasticites.ipynb
-            text: "07. Élasticités"
-          - href: economics/micro-economics/micro-09-effets-prix-revenu-substitution.ipynb
-            text: "08. Effets prix, revenu et substitution"
-          - href: economics/micro-economics/micro-10-types-de-biens.ipynb
-            text: "09. Types de biens"
-          - href: economics/micro-economics/micro-11-preferences-revelees.ipynb
-            text: "10. Préférences révélées"
-          - href: economics/micro-economics/micro-12-travail-loisir.ipynb
-            text: "11. Arbitrage travail-loisir"
-          - href: economics/micro-economics/micro-13-choix-intertemporel.ipynb
-            text: "12. Choix intertemporel"
-          - href: economics/micro-economics/micro-14-capital-humain.ipynb
-            text: "13. Capital humain"
-          - href: economics/micro-economics/micro-15-risque.ipynb
-            text: "14. Risque"
-          - href: economics/micro-economics/micro-99-annexes.ipynb
-            text: "99. Annexes"
 
 execute:
   echo: false
