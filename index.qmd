@@ -1,10 +1,5 @@
 ---
 title: "Accueil"
-format:
-  html:
-    include-in-header:
-      text: |
-        <meta name="google-site-verification" content="Z6qL4Se4vjHd5VWvX339eFPTi9Ia-Qvmws8dJlSPl3g" />
 ---
 
 Mes notes sur des sujets divers.

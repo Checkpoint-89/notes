@@ -14,7 +14,6 @@ project:
 
 website:
   title: "chekpoint-89"
-  google-analytics: "G-YEK743MN2T"
   page-navigation: true
   bread-crumbs: true
   navbar:
@@ -110,3 +109,7 @@ format:
     number-sections: false
     html-math-method: mathjax
     theme: cosmo
+    include-in-header:
+      text: |
+        <meta name="google-site-verification" content="Z6qL4Se4vjHd5VWvX339eFPTi9Ia-Qvmws8dJlSPl3g" />
+        <script data-goatcounter="https://checkpoint-89.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
